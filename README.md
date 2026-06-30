@@ -30,7 +30,7 @@ Grouped by function:
 | --- | --- |
 | `core` | [entelecheia](https://github.com/celestia-island/entelecheia) — multi-agent collaboration platform |
 | `webui` | [shittim-chest](https://github.com/celestia-island/shittim-chest) — user-facing shell |
-| `platforms` | [arona](https://github.com/celestia-island/arona) (protocol types) · [malkuth](https://github.com/celestia-island/malkuth) (service supervision) · [evernight](https://github.com/celestia-island/evernight) (remote control & protocols) · [noa](https://github.com/celestia-island/noa) (DVCS) |
+| `platforms` | [arona](https://github.com/celestia-island/arona) (protocol types) · [evernight](https://github.com/celestia-island/evernight) (remote control & protocols) · [noa](https://github.com/celestia-island/noa) (DVCS) |
 
 ## Structure
 

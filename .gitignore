@@ -1,0 +1,25 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# mdBook
+/target/
+.mdbook/
+
+dist/
+
+# celestia-devtools: staged-on-demand shared justfile recipes (just fetch)
+/.just/
+/celestia-devtools.just

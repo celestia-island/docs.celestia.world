@@ -7,7 +7,7 @@
 
 **Centralized documentation & blog hub for the celestia-island ecosystem**
 
-[![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-CC0%201.0-blue.svg)](LICENSE)
 [![GitHub](https://img.shields.io/badge/github-celestia--island%2Fdocs.celestia.world-blue.svg)](https://github.com/celestia-island/docs.celestia.world)
 
 </div>
@@ -53,5 +53,8 @@ links.
 
 ## License
 
-Business Source License 1.1 (BSL-1.1); converts to Apache-2.0 / MIT on
-2030-01-01. See [LICENSE](LICENSE).
+CC0 1.0 Universal (public domain dedication). The documentation here is
+released into the public domain — you may copy, modify, distribute and
+perform the work, even for commercial purposes, without asking permission.
+See [LICENSE](LICENSE) and
+[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).

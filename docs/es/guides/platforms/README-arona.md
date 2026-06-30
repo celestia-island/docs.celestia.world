@@ -1,9 +1,9 @@
+# Arona
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../../res/logo/entelecheia.webp" alt="Arona" width="200"/>
 
-# Arona
 
 **Tipos de protocolo compartidos para la plataforma celestia-island**
 

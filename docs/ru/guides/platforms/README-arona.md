@@ -1,9 +1,9 @@
+# Arona
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../../res/logo/entelecheia.webp" alt="Arona" width="200"/>
 
-# Arona
 
 **Общие типы протоколов для платформы celestia-island**
 

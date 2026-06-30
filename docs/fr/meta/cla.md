@@ -1,6 +1,6 @@
+# Accord de licence contributeur (CLA)
 > Il s'agit d'une traduction de référence fournie par la communauté pour plus de commodité. Le seul texte juridiquement contraignant est la version anglaise du fichier `CLA.md` à la racine du dépôt. En cas de conflit, la version anglaise prévaut.
 
-# Accord de licence contributeur (CLA)
 
 Le présent Accord de licence contributeur (« CLA ») s'applique à toute contribution acceptée et intégrée au projet **Arona** (« le Projet »), y compris tous les dépôts relevant de l'organisation Celestia Island qui adoptent la présente CLA. Le Projet est concédé sous la Business Source License 1.1 avec une date de changement fixée au 2030-01-01, à l'issue de laquelle il passe au choix du destinataire entre Apache-2.0 ou MIT (voir `LICENSE`).
 

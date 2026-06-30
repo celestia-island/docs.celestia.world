@@ -1,9 +1,9 @@
+# Shittim Chest
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../../res/logo/entelecheia.webp" alt="Shittim Chest" width="200"/>
 
-# Shittim Chest
 
 **entelecheia マルチエージェントプラットフォーム向けのユーザー向けシェル**
 

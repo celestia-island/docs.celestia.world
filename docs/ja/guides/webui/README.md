@@ -1,10 +1,10 @@
 
+# Shittim Chest（什亭之匣）
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="docs/logo.webp" alt="Shittim Chest ロゴ" width="200"/>
 
-# Shittim Chest（什亭之匣）
 
 **[entelecheia](https://github.com/celestia-island/entelecheia) マルチエージェントプラットフォームのユーザー向けシェル**
 

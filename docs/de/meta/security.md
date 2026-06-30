@@ -1,6 +1,6 @@
+# Sicherheitsrichtlinie
 > **Hinweis**: Dies ist eine Community-Referenzübersetzung. Bei Unstimmigkeiten ist die englische Version `SECURITY.md` im Wurzelverzeichnis des Repositorys maßgeblich.
 
-# Sicherheitsrichtlinie
 
 ## Melden einer Schwachstelle
 

@@ -1,10 +1,10 @@
 
+# Shittim Chest (什亭之匣)
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../logo.webp" alt="Shittim Chest logo" width="200"/>
 
-# Shittim Chest (什亭之匣)
 
 **User-facing shell for the [entelecheia](https://github.com/celestia-island/entelecheia) multi-agent platform**
 

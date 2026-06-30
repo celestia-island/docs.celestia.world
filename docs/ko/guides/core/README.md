@@ -1,10 +1,10 @@
 
+# Entelecheia
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../logo.webp" alt="Entelecheia logo" width="200"/>
 
-# Entelecheia
 
 **Rust 기반 다중 에이전트 협업 플랫폼**
 

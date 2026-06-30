@@ -1,6 +1,6 @@
+# Politique de sécurité
 > **Remarque** : Ceci est une traduction communautaire de référence. En cas de divergence, la version anglaise `SECURITY.md` à la racine du dépôt fait foi.
 
-# Politique de sécurité
 
 ## Signaler une vulnérabilité
 

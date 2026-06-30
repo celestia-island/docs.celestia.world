@@ -1,6 +1,6 @@
+# Contributor License Agreement (CLA) (Beiträger-Lizenzvereinbarung)
 > Dies ist eine von der Community bereitgestellte Referenzübersetzung, die der Bequemlichkeit dient. Der einzig rechtsverbindliche Text ist die englische Fassung der Datei `CLA.md` im Stammverzeichnis des Repositorys. Bei Widersprüchen ist die englische Fassung maßgeblich.
 
-# Contributor License Agreement (CLA) (Beiträger-Lizenzvereinbarung)
 
 Diese Contributor License Agreement („CLA") gilt für jeden Beitrag, der in das Projekt **Arona** („das Projekt") aufgenommen wird, einschließlich aller Repositories unter der Organisation Celestia Island, die diese CLA anwenden. Das Projekt ist unter der Business Source License 1.1 mit einem Änderungsdatum vom 2030-01-01 lizenziert, wonach es nach Wahl des Empfängers in Apache-2.0 oder MIT übergeht (siehe `LICENSE`).
 

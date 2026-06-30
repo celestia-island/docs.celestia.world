@@ -1,9 +1,9 @@
+# Noa
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../logo.webp" alt="Noa" width="200"/>
 
-# Noa
 
 **AI-native distributed version control system**
 

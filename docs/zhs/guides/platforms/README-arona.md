@@ -1,9 +1,9 @@
+# Arona
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../../res/logo/entelecheia.webp" alt="Arona" width="200"/>
 
-# Arona
 
 **celestia-island 平台的共享协议类型**
 

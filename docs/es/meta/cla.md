@@ -1,6 +1,6 @@
+# Acuerdo de Licencia de Colaborador (CLA)
 > Esta es una traducción de referencia proporcionada por la comunidad para mayor comodidad. El único texto con fuerza legal es la versión en inglés del archivo `CLA.md` en la raíz del repositorio. En caso de conflicto, prevalecerá la versión en inglés.
 
-# Acuerdo de Licencia de Colaborador (CLA)
 
 El presente Acuerdo de Licencia de Colaborador (el «CLA») se aplica a toda contribución aceptada e incorporada al proyecto **Arona** (el «Proyecto»), incluidos todos los repositorios de la organización Celestia Island que adopten este CLA. El Proyecto se encuentra bajo la Business Source License 1.1 con una Fecha de Cambio del 2030-01-01, a partir de la cual se convierte, a elección del receptor, en Apache-2.0 o MIT (véase `LICENSE`).
 

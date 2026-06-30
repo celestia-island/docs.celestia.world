@@ -1,9 +1,9 @@
+# Entelecheia
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../../res/logo/entelecheia.webp" alt="Entelecheia" width="200"/>
 
-# Entelecheia
 
 **Rust 기반 멀티 에이전트 협업 플랫폼**
 

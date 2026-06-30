@@ -1,10 +1,10 @@
 
+# Entelecheia
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../logo.webp" alt="Entelecheia logo" width="200"/>
 
-# Entelecheia
 
 **基於 Rust 的多智慧體協作平台**
 

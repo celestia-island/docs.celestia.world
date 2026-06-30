@@ -1,10 +1,10 @@
 
+# Entelecheia
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
 <img src="../../logo.webp" alt="Entelecheia logo" width="200"/>
 
-# Entelecheia
 
 **Plataforma de colaboración multi-agente basada en Rust**
 

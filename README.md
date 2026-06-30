@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="res/logo.webp" alt="docs.celestia.world logo" width="200"/>
+<img src="res/logo/entelecheia.webp" alt="docs.celestia.world logo" width="200"/>
 
 # docs.celestia.world
 

@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="../../../res/logo.webp" alt="Entelecheia" width="200"/>
+<img src="../../../res/logo/entelecheia.webp" alt="Entelecheia" width="200"/>
 
 # Entelecheia
 

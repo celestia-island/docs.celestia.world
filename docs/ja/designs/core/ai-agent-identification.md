@@ -1,10 +1,3 @@
-+++
-title = "AIエージェント識別とコミット共著者戦略"
-description = """このドキュメントは、celestia-islandプロジェクト全体でAIによって生成されたコミットに、どのモデルが変更を作成したか、どのプロバイダ/プラットフォームを通じてアクセスされたか、消費さ"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # AIエージェント識別とコミット共著者戦略
 

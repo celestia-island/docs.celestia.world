@@ -1,10 +1,3 @@
-+++
-title = "TerminalBackend / ViewportBackend / FileBackend Trait Abstractions"
-description = """Architecture decision record — TerminalBackend / ViewportBackend / FileBackend Trait Abstractions."""
-lang = "en"
-category = "design"
-subcategory = "router"
-+++
 
 # TerminalBackend / ViewportBackend / FileBackend Trait Abstractions
 

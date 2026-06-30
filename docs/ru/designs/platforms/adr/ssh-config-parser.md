@@ -1,10 +1,3 @@
-+++
-title = "Парсер конфигурации SSH"
-description = """Запись архитектурного решения — Парсер конфигурации SSH."""
-lang = "ru"
-category = "design"
-subcategory = "router"
-+++
 
 # Парсер конфигурации SSH
 

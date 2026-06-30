@@ -1,10 +1,3 @@
-+++
-title = "듀얼 프론트엔드 WASM 마이그레이션 전략"
-description = """shittim-chest는 "Vue 3 우선, WASM 이후" 2단계 프론트엔드 전략을 채택한다. Vue 3 버전은 프로덕션급 참조 구현으로 먼저 제공되며, Rust/WASM 버전은 조건이 성숙할 때 마이그레이션된다. 두 버전이 병렬로 실행"""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # 듀얼 프론트엔드 WASM 마이그레이션 전략
 

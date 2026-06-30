@@ -1,10 +1,3 @@
-+++
-title = "Arquitectura en Profundidad"
-description = """> Audiencia: Desarrolladores que necesitan entender cómo funciona shittim-chest internamente."""
-lang = "es"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Arquitectura en Profundidad
 

@@ -1,10 +1,3 @@
-+++
-title = "Screen Capture Architecture"
-description = """Architecture decision record — Screen Capture Architecture."""
-lang = "en"
-category = "design"
-subcategory = "router"
-+++
 
 # Screen Capture Architecture
 

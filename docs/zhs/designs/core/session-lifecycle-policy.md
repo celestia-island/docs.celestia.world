@@ -1,10 +1,3 @@
-+++
-title = "ADR-004：Session 存储生命周期管理"
-description = """> 状态：已接受（2026-06-10）"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004：Session 存储生命周期管理
 

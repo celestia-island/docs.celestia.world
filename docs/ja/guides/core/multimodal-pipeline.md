@@ -1,10 +1,3 @@
-+++
-title = "マルチモーダルパイプライン"
-description = """> ⚠️ アーカイブ済み Agent リファレンス — 開発パイプライン外"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # マルチモーダルパイプライン
 

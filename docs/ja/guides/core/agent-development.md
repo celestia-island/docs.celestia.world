@@ -1,10 +1,3 @@
-+++
-title = "Agent 開発チュートリアル"
-description = """> 現在のリポジトリの実態に基づく Agent 開発ガイド"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # Agent 開発チュートリアル
 

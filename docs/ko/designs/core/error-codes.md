@@ -1,10 +1,3 @@
-+++
-title = "오류 코드 참조"
-description = """> 중요: 아래 문서화된 "오류 코드"(예: `DB_CONNECT_FAILED`, """
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 오류 코드 참조
 

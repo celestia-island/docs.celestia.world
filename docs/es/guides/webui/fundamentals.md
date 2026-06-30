@@ -1,10 +1,3 @@
-+++
-title = "Conceptos Fundamentales"
-description = """> Audiencia: Desarrolladores que quieren una comprensión conceptual del diseño de shittim-chest."""
-lang = "es"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Conceptos Fundamentales
 

@@ -1,10 +1,3 @@
-+++
-title = "Tutorial de desarrollo de Agent"
-description = """> Instrucciones de desarrollo de Agent basadas en la realidad actual del repositorio"""
-lang = "es"
-category = "guides"
-subcategory = "core"
-+++
 
 # Tutorial de desarrollo de Agent
 

@@ -1,9 +1,3 @@
-+++
-title = "贡献指南"
-description = """感谢您对贡献的兴趣！本指南涵盖了您需要了解的全部内容"""
-lang = "zhs"
-category = "meta"
-+++
 
 # 为 Arona 做贡献
 

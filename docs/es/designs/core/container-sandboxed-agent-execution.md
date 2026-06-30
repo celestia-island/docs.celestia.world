@@ -1,10 +1,3 @@
-+++
-title = "ADR-005: Ejecución de Agentes en Contenedores Aislados con COSMOS"
-description = """Fecha: 2026-02"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-005: Ejecución de Agentes en Contenedores Aislados con COSMOS
 

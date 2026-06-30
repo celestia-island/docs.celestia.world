@@ -1,10 +1,3 @@
-+++
-title = "Интеграция отслеживания Issue"
-description = """> Подключение внешних систем отслеживания Issue к рабочему процессу агентов Entelecheia (玄枢)"""
-lang = "ru"
-category = "guides"
-subcategory = "core"
-+++
 
 # Интеграция отслеживания Issue
 

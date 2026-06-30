@@ -1,10 +1,3 @@
-+++
-title = "Container Runtime Client (Docker/Podman)"
-description = """Architecture decision record — Container Runtime Client (Docker/Podman)."""
-lang = "en"
-category = "design"
-subcategory = "router"
-+++
 
 # Container Runtime Client (Docker/Podman)
 

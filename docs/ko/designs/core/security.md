@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia 보안 아키텍처"
-description = """> Entelecheia 다중 에이전트 오케스트레이션 플랫폼을 위한 포괄적인 심층 방어 모델."""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # Entelecheia 보안 아키텍처
 

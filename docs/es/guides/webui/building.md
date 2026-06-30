@@ -1,10 +1,3 @@
-+++
-title = "Guía de Construcción y Desarrollo"
-description = """> Audiencia: Contribuyentes configurando un entorno de desarrollo local de shittim-chest."""
-lang = "es"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Guía de Construcción y Desarrollo
 

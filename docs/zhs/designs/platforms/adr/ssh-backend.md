@@ -1,10 +1,3 @@
-+++
-title = "SSH 后端 -- russh 共享连接"
-description = """架构决策记录 —— SSH 后端 -- russh 共享连接。"""
-lang = "zhs"
-category = "design"
-subcategory = "router"
-+++
 
 # SSH 后端 -- russh 共享连接
 

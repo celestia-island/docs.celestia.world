@@ -1,10 +1,3 @@
-+++
-title = "Backend SSH — russh avec connexion partagée"
-description = """Enregistrement de décision d'architecture — Backend SSH — russh avec connexion partagée."""
-lang = "fr"
-category = "design"
-subcategory = "router"
-+++
 
 # Backend SSH — russh avec connexion partagée
 

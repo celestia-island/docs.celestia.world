@@ -1,10 +1,3 @@
-+++
-title = "クイックスタート — Evernight"
-description = """evernight のはじめ方 —— ビルド、実行、最初のコマンド。"""
-lang = "ja"
-category = "guides"
-subcategory = "router"
-+++
 
 # クイックスタート — Evernight
 

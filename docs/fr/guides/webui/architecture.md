@@ -1,10 +1,3 @@
-+++
-title = "Plongée dans l'Architecture"
-description = """> Public : Développeurs ayant besoin de comprendre comment shittim-chest fonctionne en interne."""
-lang = "fr"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Plongée dans l'Architecture
 

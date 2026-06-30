@@ -1,10 +1,3 @@
-+++
-title = "Tutorial de desarrollo de herramientas MCP"
-description = """> Cómo crear y registrar herramientas MCP en la plataforma Entelecheia (玄枢)"""
-lang = "es"
-category = "guides"
-subcategory = "core"
-+++
 
 # Tutorial de desarrollo de herramientas MCP
 

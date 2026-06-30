@@ -1,10 +1,3 @@
-+++
-title = "独立 LLM 架构"
-description = """shittim-chest 拥有完全独立的 LLM 路由层，不依赖 entelecheia。用户可以配置多个 LLM Provider，内置路由器根据优先级和可用性自动选择。这是 shittim-chest 与 Open WebUI 的核心差异化能力。"""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # 独立 LLM 架构
 

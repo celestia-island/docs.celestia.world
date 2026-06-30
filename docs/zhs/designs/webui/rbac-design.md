@@ -1,10 +1,3 @@
-+++
-title = "RBAC 系统详细设计文档"
-description = """为 Shittim Chest 实现完整的基于角色的访问控制系统，支持："""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # RBAC 系统详细设计文档
 

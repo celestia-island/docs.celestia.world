@@ -1,10 +1,3 @@
-+++
-title = "기여 가이드 (Entelecheia)"
-description = """> 본 파일은 기여 정책의 한국어 버전입니다. 빌드 명령 및 상세 설치 단계는 저장소 루트의 영문 문서를 참조하십시오"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # 기여 가이드 (Entelecheia)
 

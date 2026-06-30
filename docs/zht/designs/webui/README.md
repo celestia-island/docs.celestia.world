@@ -1,10 +1,3 @@
-+++
-title = "設計文件"
-description = """> 注意：這些設計文件描述了預期的架構和行為——部分功能可能仍在開發中。"""
-lang = "zht"
-category = "design"
-subcategory = "webui"
-+++
 
 # 設計文件
 

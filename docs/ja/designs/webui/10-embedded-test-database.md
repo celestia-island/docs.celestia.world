@@ -1,10 +1,3 @@
-+++
-title = "組み込みテストデータベース（pglite-oxide）"
-description = """shittim-chestはすべての統合テストとE2Eテストに[pglite-oxide](https://crates.io/crates/pglite-oxide)を組み込みPostgreSQLとして使用します。外部のPostgres、Docker、`testcontainer"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # 組み込みテストデータベース（pglite-oxide）
 

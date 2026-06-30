@@ -1,10 +1,3 @@
-+++
-title = "PostgreSQL 健康檢查策略"
-description = """CLI 封裝器必須在啟動應用容器之前確保 PostgreSQL 已就緒。本文件定義了被動輪詢健康檢查策略背後的設計決策——拒絕 Docker 事件（不可靠）和固定逾時（不靈活）。"""
-lang = "zht"
-category = "design"
-subcategory = "webui"
-+++
 
 # PostgreSQL 健康檢查策略
 

@@ -1,10 +1,3 @@
-+++
-title = "ADR-004: Arquitectura de Espacio de Trabajo en Capas de 60+ Crates"
-description = """Fecha: 2026-03"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004: Arquitectura de Espacio de Trabajo en Capas de 60+ Crates
 

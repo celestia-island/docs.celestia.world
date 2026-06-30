@@ -1,10 +1,3 @@
-+++
-title = "跨 Agent 技能路由架构"
-description = """技能链（`execute_skill_chain`）使用仅执行微内核架构。LLM 仅看到三个工具：`exec`、`write_to_var`、`write_to_var_json`——无每 agent 工具白名单、无每技能工具定义。所有 MCP 工具调用通过 ES 模块导入和跨 agent TS API（如 `file_read()`）在 TypeScript 运行时（IEPL 引擎）内部发生。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 跨 Agent 技能路由架构
 

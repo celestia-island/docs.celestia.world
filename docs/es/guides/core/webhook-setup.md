@@ -1,10 +1,3 @@
-+++
-title = "Configuración de plataforma Webhook"
-description = """> Descripción del diseño actual de webhook y el alcance de integración"""
-lang = "es"
-category = "guides"
-subcategory = "core"
-+++
 
 # Configuración de plataforma Webhook
 

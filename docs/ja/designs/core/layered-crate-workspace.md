@@ -1,10 +1,3 @@
-+++
-title = "ADR-004: 60以上のクレートによる階層化ワークスペースアーキテクチャ"
-description = """日付: 2026-03"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004: 60以上のクレートによる階層化ワークスペースアーキテクチャ
 

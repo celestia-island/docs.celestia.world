@@ -1,10 +1,3 @@
-+++
-title = "Вклад в Evernight"
-description = """Руководство по участию для evernight."""
-lang = "ru"
-category = "guides"
-subcategory = "router"
-+++
 
 # Вклад в Evernight
 

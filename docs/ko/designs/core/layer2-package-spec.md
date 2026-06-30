@@ -1,10 +1,3 @@
-+++
-title = "레이어 2/3 에이전트 패키지 명세"
-description = """> 상태: 초안 v1 — 2026-06-26"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 레이어 2/3 에이전트 패키지 명세
 

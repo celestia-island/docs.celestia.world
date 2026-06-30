@@ -1,10 +1,3 @@
-+++
-title = "25 — WASI 插件系统设计"
-description = "WASI 插件系统以 WASM 组件模型插件替代了之前的 Python/TypeScript webhook 脚手架，提供沙箱化、语言无关的平台集成（Layer 2）和业务逻辑扩展（Layer 3）。"
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 25 — WASI 插件系统设计
 

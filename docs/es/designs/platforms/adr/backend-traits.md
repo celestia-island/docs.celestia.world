@@ -1,10 +1,3 @@
-+++
-title = "Abstracciones de Traits TerminalBackend / ViewportBackend / FileBackend"
-description = """Registro de decisión arquitectónica — Abstracciones de Traits TerminalBackend / ViewportBackend / FileBackend."""
-lang = "es"
-category = "design"
-subcategory = "router"
-+++
 
 # Abstracciones de Traits TerminalBackend / ViewportBackend / FileBackend
 

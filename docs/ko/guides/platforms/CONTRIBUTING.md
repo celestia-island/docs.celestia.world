@@ -1,10 +1,3 @@
-+++
-title = "Evernight 기여 가이드"
-description = """evernight 기여 지침."""
-lang = "ko"
-category = "guides"
-subcategory = "router"
-+++
 
 # Evernight 기여 가이드
 

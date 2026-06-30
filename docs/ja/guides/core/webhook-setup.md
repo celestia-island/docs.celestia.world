@@ -1,10 +1,3 @@
-+++
-title = "Webhook プラットフォーム設定"
-description = """> 現在の webhook レイアウトと統合範囲の説明"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # Webhook プラットフォーム設定
 

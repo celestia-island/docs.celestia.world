@@ -1,10 +1,3 @@
-+++
-title = "Diseño de Orquestación de Conversaciones (HubRis + ApoRia)"
-description = """HubRis es un "Agente de Habilidad Pura" — todas las capacidades son habilidades solo de prompt"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Diseño de Orquestación de Conversaciones (HubRis + ApoRia)
 

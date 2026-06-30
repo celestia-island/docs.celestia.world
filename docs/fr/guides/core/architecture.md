@@ -1,10 +1,3 @@
-+++
-title = "Architecture"
-description = """> Basé sur la structure d'exécution actuelle, pas sur une vision idéalisée"""
-lang = "fr"
-category = "guides"
-subcategory = "core"
-+++
 
 # Architecture
 

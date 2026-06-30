@@ -1,10 +1,3 @@
-+++
-title = "關於 Shittim Chest"
-description = """版本 0.1.0"""
-lang = "zht"
-category = "architecture"
-subcategory = "webui"
-+++
 
 # Shittim Chest（什亭之匣）
 

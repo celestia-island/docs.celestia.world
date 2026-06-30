@@ -1,10 +1,3 @@
-+++
-title = "Shittim Chest 아키텍처 개요"
-description = """> 버전: 0.1.0 — 활발한 개발 중."""
-lang = "ko"
-category = "architecture"
-subcategory = "webui"
-+++
 
 # 아키텍처
 

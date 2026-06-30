@@ -1,10 +1,3 @@
-+++
-title = "Architecture de capture d'écran"
-description = """Enregistrement de décision d'architecture — Architecture de capture d'écran."""
-lang = "fr"
-category = "design"
-subcategory = "router"
-+++
 
 # Architecture de capture d'écran
 

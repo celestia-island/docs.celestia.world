@@ -1,10 +1,3 @@
-+++
-title = "VNC (RFB) 协议客户端"
-description = """架构决策记录 —— VNC (RFB) 协议客户端。"""
-lang = "zhs"
-category = "design"
-subcategory = "router"
-+++
 
 # VNC (RFB) 协议客户端
 

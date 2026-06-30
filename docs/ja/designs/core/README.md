@@ -1,10 +1,3 @@
-+++
-title = "設計ドキュメント"
-description = """> 重要: これらは理想的な設計ドキュメントです。意図されたアーキテクチャと機能セットを説明しており"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # 設計ドキュメント
 

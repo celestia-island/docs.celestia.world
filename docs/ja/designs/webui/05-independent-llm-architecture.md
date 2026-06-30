@@ -1,10 +1,3 @@
-+++
-title = "独立LLMアーキテクチャ"
-description = """shittim-chestはentelecheiaに依存しない完全に独立したLLMルーティングレイヤーを持ちます。ユーザーは複数のLLMプロバイダーを設定でき、組み込みルーターが優先度と可用性に基づいて自動的に選"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # 独立LLMアーキテクチャ
 

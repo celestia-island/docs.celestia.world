@@ -1,10 +1,3 @@
-+++
-title = "Layer 2/3 Agent Package Specification"
-description = """> Status: Draft v1 — 2026-06-26"""
-lang = "en"
-category = "design"
-subcategory = "core"
-+++
 
 # Layer 2/3 Agent Package Specification
 

@@ -1,10 +1,3 @@
-+++
-title = "Evernight Architecture"
-description = """evernight — cross-platform remote control library and daemon: module map, protocol layer, connection model."""
-lang = "en"
-category = "architecture"
-subcategory = "router"
-+++
 
 # Evernight Architecture
 

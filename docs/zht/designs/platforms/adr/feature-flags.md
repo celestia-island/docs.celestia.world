@@ -1,10 +1,3 @@
-+++
-title = "功能標誌架構"
-description = """架構決策記錄 —— 功能標誌架構。"""
-lang = "zht"
-category = "design"
-subcategory = "router"
-+++
 
 # 功能標誌架構
 

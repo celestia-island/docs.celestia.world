@@ -1,10 +1,3 @@
-+++
-title = "架構"
-description = """> 以當前執行時結構為準，而不是目標態想像圖"""
-lang = "zht"
-category = "guides"
-subcategory = "core"
-+++
 
 # 架構
 

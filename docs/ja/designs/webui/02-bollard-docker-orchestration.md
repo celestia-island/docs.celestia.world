@@ -1,10 +1,3 @@
-+++
-title = "CLIラッパーアーキテクチャ: BollardベースのDockerオーケストレーション"
-description = """`packages/cli/`は、Bollard Docker APIを介してコンテナのライフサイクルを直接管理するRustバイナリであり、docker-composeとシェルスクリプトを完全に置き換えます。CLIはホストマシン上で実行され、サーバーバイナリ（"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # CLIラッパーアーキテクチャ: BollardベースのDockerオーケストレーション
 

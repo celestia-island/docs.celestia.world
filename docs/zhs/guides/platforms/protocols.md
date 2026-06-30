@@ -1,10 +1,3 @@
-+++
-title = "工业协议接入指南 — Evernight"
-description = """evernight 工业协议集成指南（Modbus、S7comm、OPC UA）。"""
-lang = "zhs"
-category = "guides"
-subcategory = "router"
-+++
 
 # 工业协议接入指南 — Evernight
 

@@ -1,10 +1,3 @@
-+++
-title = "Чек-лист производственного развёртывания Entelecheia"
-description = """> Чек-лист из 12 шагов для развёртывания Entelecheia в production."""
-lang = "ru"
-category = "design"
-subcategory = "core"
-+++
 
 # Чек-лист производственного развёртывания Entelecheia
 

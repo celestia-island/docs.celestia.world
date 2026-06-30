@@ -1,10 +1,3 @@
-+++
-title = "Plan de Integración del Corredor Industrial"
-description = """> Objetivo: El sistema debe demostrar auto-interconexión autónoma con un corredor de demostración industrial"""
-lang = "es"
-category = "architecture"
-subcategory = "core"
-+++
 
 # Plan de Integración Autónoma del Corredor Industrial
 

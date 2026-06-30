@@ -1,10 +1,3 @@
-+++
-title = "與 entelecheia 的鬆耦合設計"
-description = """shittim-chest 與 entelecheia 之間的整合基於 JWT 認證的 HTTP/WebSocket 代理橋接。此設計允許 shittim-chest 在沒有 entelecheia 的情況下完全獨立運作，同時在需要時按需啟用 Agent 編排能力。"""
-lang = "zht"
-category = "design"
-subcategory = "webui"
-+++
 
 # 與 entelecheia 的鬆耦合設計
 

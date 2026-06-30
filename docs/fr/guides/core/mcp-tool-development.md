@@ -1,10 +1,3 @@
-+++
-title = "Tutoriel de développement d'outils MCP"
-description = """> Comment créer et enregistrer des outils MCP dans la plateforme Entelecheia"""
-lang = "fr"
-category = "guides"
-subcategory = "core"
-+++
 
 # Tutoriel de développement d'outils MCP
 

@@ -1,10 +1,3 @@
-+++
-title = "Guide de construction"
-description = """- [Prérequis](#prérequis)"""
-lang = "fr"
-category = "guides"
-subcategory = "core"
-+++
 
 # Guide de construction
 

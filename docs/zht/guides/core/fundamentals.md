@@ -1,10 +1,3 @@
-+++
-title = "基礎概念"
-description = """> 以當前程式碼現實為準的概念說明"""
-lang = "zht"
-category = "guides"
-subcategory = "core"
-+++
 
 # 基礎概念
 

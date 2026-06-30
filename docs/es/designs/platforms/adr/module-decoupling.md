@@ -1,10 +1,3 @@
-+++
-title = "Desacoplamiento de Módulos y Propiedad de Tipos"
-description = """Registro de decisión arquitectónica — Desacoplamiento de Módulos y Propiedad de Tipos."""
-lang = "es"
-category = "design"
-subcategory = "router"
-+++
 
 # Desacoplamiento de Módulos y Propiedad de Tipos
 

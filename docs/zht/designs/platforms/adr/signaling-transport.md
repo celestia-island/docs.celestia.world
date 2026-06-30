@@ -1,10 +1,3 @@
-+++
-title = "信令傳輸 — 雙重 Unix Socket / TCP"
-description = """架構決策記錄 —— 信令傳輸 — 雙重 Unix Socket / TCP。"""
-lang = "zht"
-category = "design"
-subcategory = "router"
-+++
 
 # 信令傳輸 — 雙重 Unix Socket / TCP
 

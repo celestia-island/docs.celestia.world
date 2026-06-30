@@ -1,9 +1,3 @@
-+++
-title = "貢獻指南"
-description = """感謝您有興趣貢獻！本指南涵蓋了您入門所需的一切"""
-lang = "zht"
-category = "meta"
-+++
 
 # 貢獻 Arona
 

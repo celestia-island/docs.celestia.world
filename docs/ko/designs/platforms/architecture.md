@@ -1,10 +1,3 @@
-+++
-title = "Evernight 아키텍처"
-description = """evernight —— 크로스 플랫폼 원격 제어 라이브러리 및 데몬: 모듈 맵, 프로토콜 계층, 연결 모델."""
-lang = "ko"
-category = "architecture"
-subcategory = "router"
-+++
 
 # Evernight 아키텍처
 

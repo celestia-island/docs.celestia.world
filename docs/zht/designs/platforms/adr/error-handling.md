@@ -1,10 +1,3 @@
-+++
-title = "錯誤處理 — thiserror 搭配 crate Result"
-description = """架構決策記錄 —— 錯誤處理 — thiserror 搭配 crate Result。"""
-lang = "zht"
-category = "design"
-subcategory = "router"
-+++
 
 # 錯誤處理 — thiserror 搭配 crate Result
 

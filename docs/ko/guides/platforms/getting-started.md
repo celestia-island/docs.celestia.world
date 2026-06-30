@@ -1,10 +1,3 @@
-+++
-title = "빠른 시작 — Evernight"
-description = """evernight 시작하기 —— 빌드, 실행, 첫 명령."""
-lang = "ko"
-category = "guides"
-subcategory = "router"
-+++
 
 # 빠른 시작 — Evernight
 

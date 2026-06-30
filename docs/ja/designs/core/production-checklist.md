@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia プロダクションデプロイメントチェックリスト"
-description = """> Entelecheiaをプロダクションにデプロイするための12ステップチェックリスト。"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # Entelecheia プロダクションデプロイメントチェックリスト
 

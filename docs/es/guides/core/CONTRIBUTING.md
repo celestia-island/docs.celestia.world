@@ -1,10 +1,3 @@
-+++
-title = "Guía de contribución (Entelecheia)"
-description = """> Este documento es la versión en español de la política de contribución. Para comandos de construcción e instrucciones detalladas de instalación, consulta el documento en inglés en la raíz del repositorio"""
-lang = "es"
-category = "guides"
-subcategory = "core"
-+++
 
 # Guía de contribución (Entelecheia)
 

@@ -1,10 +1,3 @@
-+++
-title = "基本概念"
-description = """> 現在のコード実態に基づく概念説明"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # 基本概念
 

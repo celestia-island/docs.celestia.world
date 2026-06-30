@@ -1,10 +1,3 @@
-+++
-title = "Architecture Decision Records (ADR)"
-description = """evernight のアーキテクチャ意思決定記録の索引。"""
-lang = "ja"
-category = "design"
-subcategory = "router"
-+++
 
 # Architecture Decision Records (ADR)
 

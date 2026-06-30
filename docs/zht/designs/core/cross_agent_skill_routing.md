@@ -1,10 +1,3 @@
-+++
-title = "跨代理技能路由架構"
-description = """技能鏈（`execute_skill_chain`）使用僅執行微核心架構。LLM 僅看到三個工具：`exec`、`write_to_var`、`write_to_var_json` — 無每代理工具白名單、無每技能工具定義。所有 MCP 工具呼叫都發生"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 跨代理技能路由架構
 

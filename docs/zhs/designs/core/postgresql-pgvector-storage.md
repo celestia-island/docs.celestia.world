@@ -1,10 +1,3 @@
-+++
-title = "ADR-003：PostgreSQL + PgVector 统一数据存储"
-description = """日期：2026-02"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-003：PostgreSQL + PgVector 统一数据存储
 

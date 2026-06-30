@@ -1,10 +1,3 @@
-+++
-title = "アーキテクチャ決定記録 (ADR)"
-description = """このディレクトリはEntelecheiaの開発中に行われた主要なアーキテクチャ決定を記録します。各ADRは、何が決定されたか、なぜ決定されたか、どのようなトレードオフが検討されたかを説明します。"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # アーキテクチャ決定記録 (ADR)
 

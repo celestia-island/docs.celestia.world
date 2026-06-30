@@ -1,10 +1,3 @@
-+++
-title = "模型分级系统设计"
-description = "模型分级系统是一个智能模型选择机制，根据任务复杂度匹配适当的模型等级，在保证质量的同时最大化资源利用效率。"
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 模型分级系统设计
 

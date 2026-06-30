@@ -1,10 +1,3 @@
-+++
-title = "Pipeline multimodal"
-description = """> ⚠️ Référence d'Agent archivée — hors du pipeline de développement"""
-lang = "fr"
-category = "guides"
-subcategory = "core"
-+++
 
 # Pipeline multimodal
 

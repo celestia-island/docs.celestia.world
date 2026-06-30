@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia Security Architecture"
-description = """> Comprehensive defense-in-depth model for the Entelecheia Multi-Agent Orchestration Platform."""
-lang = "en"
-category = "design"
-subcategory = "core"
-+++
 
 # Entelecheia Security Architecture
 

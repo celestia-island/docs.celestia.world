@@ -1,10 +1,3 @@
-+++
-title = "Cosmos 容器排程與 Token 路由設計"
-description = """本文件描述 Cosmos 容器排程架構：如何將標記為 `ToolLocation::Cosmos` 的 MCP 工具透過 Unix Socket JSON-RPC 路由到對應的容器，以及 Token（代理編號）系統如何綁定容器"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # Cosmos 容器排程與 Token 路由設計
 

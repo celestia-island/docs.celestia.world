@@ -1,10 +1,3 @@
-+++
-title = "Arquitectura de Namespaces: `vars`, `refs`, `env`"
-description = """> Nota (2026-06): La superficie de herramientas visible para el LLM se redujo de 5 a 3 primitivas. `ref_add` y `ref_remove` ya no se exponen al LLM — `agent_allowed_tools()` devuelve solo `exec`, `write_to_"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Arquitectura de Namespaces: `vars`, `refs`, `env`
 

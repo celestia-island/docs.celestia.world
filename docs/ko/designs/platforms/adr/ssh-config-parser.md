@@ -1,10 +1,3 @@
-+++
-title = "SSH 구성 파일 파서"
-description = """아키텍처 결정 기록 —— SSH 구성 파일 파서."""
-lang = "ko"
-category = "design"
-subcategory = "router"
-+++
 
 # SSH 구성 파일 파서
 

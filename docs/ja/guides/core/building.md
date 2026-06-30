@@ -1,10 +1,3 @@
-+++
-title = "ビルドガイド"
-description = """- [前提条件](#前提条件)"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # ビルドガイド
 

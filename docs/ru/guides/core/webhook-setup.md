@@ -1,10 +1,3 @@
-+++
-title = "Настройка платформы Webhook"
-description = """> Описание текущей компоновки webhook и объёма интеграции"""
-lang = "ru"
-category = "guides"
-subcategory = "core"
-+++
 
 # Настройка платформы Webhook
 

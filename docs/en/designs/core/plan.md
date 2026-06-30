@@ -1,10 +1,3 @@
-+++
-title = "Industrial Corridor Integration Plan"
-description = """> Goal: The system must demonstrate autonomous self-interfacing with a completely"""
-lang = "en"
-category = "architecture"
-subcategory = "core"
-+++
 
 # Industrial Corridor Autonomous Integration Plan
 

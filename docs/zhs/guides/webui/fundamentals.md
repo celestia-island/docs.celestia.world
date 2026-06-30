@@ -1,10 +1,3 @@
-+++
-title = "核心概念"
-description = """目标读者：希望从概念层面理解 shittim-chest 设计的开发者。"""
-lang = "zhs"
-category = "guides"
-subcategory = "webui"
-+++
 
 # 核心概念
 

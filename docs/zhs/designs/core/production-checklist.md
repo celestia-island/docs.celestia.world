@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia 生产部署检查清单"
-description = """> 将 Entelecheia 部署到生产的 12 步检查清单。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # Entelecheia 生产部署检查清单
 

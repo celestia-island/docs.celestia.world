@@ -1,10 +1,3 @@
-+++
-title = "TIA Portal 사전 준비 —— evernight 연결"
-description = """TIA Portal에서 S7-1200/1500 PLC를 한 번만 설정하여, evernight가 연결·자가 조직망 구성·읽기/쓰기를 이후 사람의 개입 없이 모두 자동으로 수행하도록 하는 절차."""
-lang = "ko"
-category = "guides"
-subcategory = "router"
-+++
 
 # TIA Portal 사전 준비 —— evernight 연결
 

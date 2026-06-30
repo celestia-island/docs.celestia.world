@@ -1,10 +1,3 @@
-+++
-title = "Convenciones de Logging del CLI"
-description = """La salida de logs del CLI wrapper de shittim-chest sigue convenciones consistentes con entelecheia, usando el ecosistema `tracing`, emitiendo a stderr en un formato compacto legible por humanos."""
-lang = "es"
-category = "design"
-subcategory = "webui"
-+++
 
 # Convenciones de Logging del CLI
 

@@ -1,10 +1,3 @@
-+++
-title = "SSH 백엔드 — russh와 공유 연결"
-description = """아키텍처 결정 기록 —— SSH 백엔드 — russh와 공유 연결."""
-lang = "ko"
-category = "design"
-subcategory = "router"
-+++
 
 # SSH 백엔드 — russh와 공유 연결
 

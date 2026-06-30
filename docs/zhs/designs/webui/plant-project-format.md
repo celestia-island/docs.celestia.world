@@ -1,10 +1,3 @@
-+++
-title = "工厂项目文件格式（`.plant.json`）"
-description = """> 工程文件格式设计 — 类似西门子博图 (TIA Portal) 的工程文件，统一描述工业节点拓扑、2D 面板、3D 场景。"""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # 工厂项目文件格式（`.plant.json`）
 

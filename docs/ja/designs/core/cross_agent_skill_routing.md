@@ -1,10 +1,3 @@
-+++
-title = "クロスエージェントスキルルーティングアーキテクチャ"
-description = """スキルチェーン（execute_skill_chain）はexec-onlyマイクロカーネルアーキテクチャを使用します。LLMが見るのはexec、write_to_var、write_to_var_jsonの3つのツールのみで、エージェントごとのツー"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # クロスエージェントスキルルーティングアーキテクチャ
 

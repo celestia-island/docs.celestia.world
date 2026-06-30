@@ -1,10 +1,3 @@
-+++
-title = "ADR-005: COSMOS를 통한 컨테이너 샌드박스 에이전트 실행"
-description = """일자: 2026-02"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-005: COSMOS를 통한 컨테이너 샌드박스 에이전트 실행
 

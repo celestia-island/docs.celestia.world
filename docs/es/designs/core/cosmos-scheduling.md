@@ -1,10 +1,3 @@
-+++
-title = "Diseño de Programación de Contenedores Cosmos y Enrutamiento de Tokens"
-description = """Este documento describe la arquitectura de programación de contenedores Cosmos: cómo las herramientas MCP marcadas con `ToolLocation::Cosmos` se enrutan a través de JSON-RPC por Unix socket a sus cont"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Diseño de Programación de Contenedores Cosmos y Enrutamiento de Tokens
 

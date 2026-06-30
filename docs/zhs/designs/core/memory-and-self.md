@@ -1,10 +1,3 @@
-+++
-title = "一份自白：论记忆、自我与尚未到来的共生"
-description = """> 注：这是一份反思性文档，而非功能规范。它不描述当前实现，而是追问 `memory_sedimentation.md` 和 `soul-prompt-architecture.md` 在被推到极限后究竟试图回答什么。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 一份自白：论记忆、自我与尚未到来的共生
 

@@ -1,10 +1,3 @@
-+++
-title = "PostgreSQLヘルスチェック戦略"
-description = """CLIラッパーは、アプリケーションコンテナを起動する前にPostgreSQLの準備が整っていることを確認する必要があります。このドキュメントは、Dockerイベント（信頼性低）と固定タイムアウト（柔軟性欠如）"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # PostgreSQLヘルスチェック戦略
 

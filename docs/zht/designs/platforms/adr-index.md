@@ -1,10 +1,3 @@
-+++
-title = "Architecture Decision Records (ADR)"
-description = """evernight 架構決策記錄索引。"""
-lang = "zht"
-category = "design"
-subcategory = "router"
-+++
 
 # Architecture Decision Records (ADR)
 

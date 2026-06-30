@@ -1,10 +1,3 @@
-+++
-title = "Document de Conception Détaillée du Système RBAC"
-description = """Implémenter un système complet de contrôle d'accès basé sur les rôles pour Shittim Chest, prenant en charge :"""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Document de Conception Détaillée du Système RBAC
 

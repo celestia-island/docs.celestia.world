@@ -1,10 +1,3 @@
-+++
-title = "通过 aoba 进行串口通信"
-description = """架构决策记录 —— 通过 aoba 进行串口通信。"""
-lang = "zhs"
-category = "design"
-subcategory = "router"
-+++
 
 # 通过 aoba 进行串口通信
 

@@ -1,10 +1,3 @@
-+++
-title = "RBAC システム詳細設計ドキュメント"
-description = """Shittim Chestに完全なロールベースアクセス制御システムを実装し、以下をサポートします："""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # RBAC システム詳細設計ドキュメント
 

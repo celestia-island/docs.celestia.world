@@ -1,10 +1,3 @@
-+++
-title = "Architecture de Synchronisation Incrémentielle"
-description = """Un mécanisme de synchronisation incrémentielle d'état multi-client basé sur Automerge CRDT, prenant en charge les mises à jour incrémentielles en temps réel et la synchronisation complète lors de la"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Architecture de Synchronisation Incrémentielle
 

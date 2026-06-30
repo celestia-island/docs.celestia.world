@@ -1,10 +1,3 @@
-+++
-title = "Shittim Chest への貢献"
-description = """貢献に関心をお寄せいただきありがとうございます。本ガイドでは、開始に必要なすべての情報を網羅しています。"""
-lang = "ja"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Shittim Chest への貢献
 

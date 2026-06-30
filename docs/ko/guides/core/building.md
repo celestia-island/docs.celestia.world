@@ -1,10 +1,3 @@
-+++
-title = "빌드 가이드"
-description = """- [전제 조건](#전제-조건)"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # 빌드 가이드
 

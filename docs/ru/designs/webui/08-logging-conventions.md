@@ -1,10 +1,3 @@
-+++
-title = "Соглашения логирования CLI"
-description = """Лог-вывод обёртки CLI shittim-chest следует соглашениям, согласованным с entelecheia, используя экосистему `tracing`, выводя в stderr в компактном человекочитаемом формате."""
-lang = "ru"
-category = "design"
-subcategory = "webui"
-+++
 
 # Соглашения логирования CLI
 

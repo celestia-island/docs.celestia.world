@@ -1,10 +1,3 @@
-+++
-title = "デュアルフロントエンドWASM移行戦略"
-description = """shittim-chestは「Vue 3を先に、WASMは後で」という2フェーズのフロントエンド戦略を採用しています。Vue 3バージョンは本番グレードのリファレンス実装として最初に提供され、条件が整った時点でRust/W"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # デュアルフロントエンドWASM移行戦略
 

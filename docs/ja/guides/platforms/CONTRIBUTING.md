@@ -1,10 +1,3 @@
-+++
-title = "Evernight へのコントリビュート"
-description = """evernight のコントリビューションガイドライン。"""
-lang = "ja"
-category = "guides"
-subcategory = "router"
-+++
 
 # Evernight へのコントリビュート
 

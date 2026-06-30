@@ -1,10 +1,3 @@
-+++
-title = "CLIログ規約"
-description = """shittim-chest CLIラッパーのログ出力は、entelecheiaと一貫した規約に従い、`tracing`エコシステムを使用し、コンパクトで人間が読める形式でstderrに出力します。"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # CLIログ規約
 

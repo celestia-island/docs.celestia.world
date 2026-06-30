@@ -1,10 +1,3 @@
-+++
-title = "錯誤代碼參考"
-description = """> 重要提示：以下記錄的「錯誤代碼」（例如 `DB_CONNECT_FAILED`、"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 錯誤代碼參考
 

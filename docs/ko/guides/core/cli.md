@@ -1,10 +1,3 @@
-+++
-title = "CLI 사용 가이드"
-description = """`entelecheia-cli`는 Entelecheia(현추) 다중 에이전트 협업 플랫폼의 명령줄 인터페이스입니다. Unix socket JSON-RPC를 통해 scepter 서버와 통신하며, 채팅 상호작용, 서비스 수명 주기 관리, 에이전트 제어, 구성 등의 기능을 제공합니다."""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # CLI 사용 가이드
 

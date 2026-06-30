@@ -1,10 +1,3 @@
-+++
-title = "Module Decoupling and Type Ownership"
-description = """Architecture decision record — Module Decoupling and Type Ownership."""
-lang = "en"
-category = "design"
-subcategory = "router"
-+++
 
 # Module Decoupling and Type Ownership
 

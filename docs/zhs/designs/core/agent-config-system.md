@@ -1,10 +1,3 @@
-+++
-title = "Agent 配置系统设计"
-description = """Agent 配置系统提供统一的配置管理机制，支持 TOML 文件存储和数据库持久化，实现配置版本管理和热重载。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # Agent 配置系统设计
 

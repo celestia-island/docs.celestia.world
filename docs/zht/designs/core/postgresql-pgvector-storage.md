@@ -1,10 +1,3 @@
-+++
-title = "ADR-003：以 PostgreSQL + PgVector 實作統一資料儲存"
-description = """日期：2026-02"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-003：以 PostgreSQL + PgVector 實作統一資料儲存
 

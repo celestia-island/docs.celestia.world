@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia セキュリティアーキテクチャ"
-description = """> Entelecheiaマルチエージェントオーケストレーションプラットフォームのための包括的な多層防御モデル。"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # Entelecheia セキュリティアーキテクチャ
 

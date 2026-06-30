@@ -1,10 +1,3 @@
-+++
-title = "Architecture LLM Indépendante"
-description = """shittim-chest possède une couche de routage LLM entièrement indépendante qui ne dépend pas d'entelecheia. Les utilisateurs peuvent configurer plusieurs fournisseurs LLM, et le routeur intégré sélectionne autom"""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Architecture LLM Indépendante
 

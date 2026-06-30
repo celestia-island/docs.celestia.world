@@ -1,10 +1,3 @@
-+++
-title = "Conception du Système de Configuration TOML des Fournisseurs"
-description = """Le Système de Configuration TOML des Fournisseurs migre toute la configuration des Fournisseurs LLM de valeurs codées en dur vers des fichiers de configuration TOML, réalisant la séparation de la confi"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Conception du Système de Configuration TOML des Fournisseurs
 

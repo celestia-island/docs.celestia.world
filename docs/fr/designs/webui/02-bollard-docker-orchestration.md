@@ -1,10 +1,3 @@
-+++
-title = "Architecture du Wrapper CLI : Orchestration Docker Basée sur Bollard"
-description = """`packages/cli/` est un binaire Rust qui gère les cycles de vie des conteneurs directement via l'API Docker Bollard, remplaçant entièrement docker-compose et les scripts shell. Le CLI s'exécute sur la machi"""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Architecture du Wrapper CLI : Orchestration Docker Basée sur Bollard
 

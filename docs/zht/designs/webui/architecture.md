@@ -1,10 +1,3 @@
-+++
-title = "Shittim Chest 架構總覽"
-description = """> 版本：0.1.0 — 開發進行中。"""
-lang = "zht"
-category = "architecture"
-subcategory = "webui"
-+++
 
 # 架構
 

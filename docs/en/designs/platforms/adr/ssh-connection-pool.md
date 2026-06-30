@@ -1,10 +1,3 @@
-+++
-title = "SSH Connection Pool"
-description = """Architecture decision record — SSH Connection Pool."""
-lang = "en"
-category = "design"
-subcategory = "router"
-+++
 
 # SSH Connection Pool
 

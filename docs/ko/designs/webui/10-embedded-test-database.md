@@ -1,10 +1,3 @@
-+++
-title = "내장형 테스트 데이터베이스 (pglite-oxide)"
-description = """shittim-chest는 모든 통합 및 E2E 테스트에 [pglite-oxide](https://crates.io/crates/pglite-oxide)를 내장 PostgreSQL로 사용한다. 외부 Postgres, Docker, `testcontainers`가 필요하지 않으며, 어떤 머신에서"""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # 내장형 테스트 데이터베이스 (pglite-oxide)
 

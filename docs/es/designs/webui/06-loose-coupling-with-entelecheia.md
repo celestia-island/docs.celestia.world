@@ -1,10 +1,3 @@
-+++
-title = "Acoplamiento Débil con entelecheia"
-description = """La integración entre shittim-chest y entelecheia se basa en un puente proxy HTTP/WebSocket autenticado con JWT. Este diseño permite que shittim-chest se ejecute de forma completamente independiente sin entelecheia,"""
-lang = "es"
-category = "design"
-subcategory = "webui"
-+++
 
 # Acoplamiento Débil con entelecheia
 

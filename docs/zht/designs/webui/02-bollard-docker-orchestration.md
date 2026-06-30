@@ -1,10 +1,3 @@
-+++
-title = "CLI 封裝器架構：基於 Bollard 的 Docker 容器編排"
-description = """`packages/cli/` 是一個 Rust 二進位檔，透過 Bollard Docker API 直接管理容器生命週期，完全取代 docker-compose 和 shell 指令稿。CLI 在主機上執行，而伺服器二進位檔 (`shittim_chest`) 在容器內執行。"""
-lang = "zht"
-category = "design"
-subcategory = "webui"
-+++
 
 # CLI 封裝器架構：基於 Bollard 的 Docker 容器編排
 

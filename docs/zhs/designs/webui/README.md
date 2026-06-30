@@ -1,10 +1,3 @@
-+++
-title = "设计文档"
-description = """> 注意：这些设计文档描述了预期的架构和行为——部分功能可能仍在开发中。"""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # 设计文档
 

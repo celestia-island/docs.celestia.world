@@ -1,10 +1,3 @@
-+++
-title = "共识验证机制"
-description = """共识验证机制是多 Agent 协作系统的核心组件，用于验证和评估多个 Agent 形成的共识的可靠性和准确性，确保系统输出质量。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 共识验证机制
 

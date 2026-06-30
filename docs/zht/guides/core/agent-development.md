@@ -1,10 +1,3 @@
-+++
-title = "Agent 開發教學"
-description = """> 以當前倉庫現實為準的 Agent 開發說明"""
-lang = "zht"
-category = "guides"
-subcategory = "core"
-+++
 
 # Agent 開發教學
 

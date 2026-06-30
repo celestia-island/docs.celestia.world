@@ -1,10 +1,3 @@
-+++
-title = "コアコンセプト"
-description = """> 対象: shittim-chestの設計を概念的に理解したい開発者。"""
-lang = "ja"
-category = "guides"
-subcategory = "webui"
-+++
 
 # コアコンセプト
 

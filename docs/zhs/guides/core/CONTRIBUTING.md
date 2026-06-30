@@ -1,10 +1,3 @@
-+++
-title = "贡献指南（Entelecheia）"
-description = """> 本文件是贡献政策的简体中文版本。构建命令与详细安装步骤请见仓库根目录的英文"""
-lang = "zhs"
-category = "guides"
-subcategory = "core"
-+++
 
 # 贡献指南（Entelecheia）
 

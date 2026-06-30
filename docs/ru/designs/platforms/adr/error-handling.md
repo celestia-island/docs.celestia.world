@@ -1,10 +1,3 @@
-+++
-title = "Обработка ошибок — thiserror с крейтовым Result"
-description = """Запись архитектурного решения — Обработка ошибок — thiserror с крейтовым Result."""
-lang = "ru"
-category = "design"
-subcategory = "router"
-+++
 
 # Обработка ошибок — thiserror с крейтовым Result
 

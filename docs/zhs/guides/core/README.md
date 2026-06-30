@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia"
-description = """基于 Rust 的多智能体协作平台"""
-lang = "zhs"
-category = "guides"
-subcategory = "core"
-+++
 
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">

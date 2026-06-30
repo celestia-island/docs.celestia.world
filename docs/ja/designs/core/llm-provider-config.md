@@ -1,10 +1,3 @@
-+++
-title = "プロバイダTOML設定システム設計"
-description = """プロバイダTOML設定システムは、すべてのLLMプロバイダ設定をハードコード値からTOML設定ファイルに移行し、設定とコードの分離を実現し、保守性と拡張性を向上させる。"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # プロバイダTOML設定システム設計
 

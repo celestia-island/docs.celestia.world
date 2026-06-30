@@ -1,10 +1,3 @@
-+++
-title = "Guide de contribution (Entelecheia)"
-description = """> Ce fichier est la version française de la politique de contribution. Pour les commandes de construction et les instructions d'installation détaillées, consultez la version anglaise à la racine du dépôt"""
-lang = "fr"
-category = "guides"
-subcategory = "core"
-+++
 
 # Guide de contribution (Entelecheia)
 

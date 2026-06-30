@@ -1,10 +1,3 @@
-+++
-title = "Industrial Protocol Integration — Evernight"
-description = """Industrial protocol integration guide for evernight (Modbus, S7comm, OPC UA)."""
-lang = "en"
-category = "guides"
-subcategory = "router"
-+++
 
 # Industrial Protocol Integration — Evernight
 

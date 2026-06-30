@@ -1,10 +1,3 @@
-+++
-title = "Primeros pasos — Evernight"
-description = """Introducción a evernight — compilación, ejecución y primeros comandos."""
-lang = "es"
-category = "guides"
-subcategory = "router"
-+++
 
 # Primeros pasos — Evernight
 

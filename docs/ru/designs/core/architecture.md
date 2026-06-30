@@ -1,10 +1,3 @@
-+++
-title = "Обзор архитектуры Entelecheia"
-description = """> Версия: 0.2.0 — ранняя разработка, не готова к продакшену."""
-lang = "ru"
-category = "architecture"
-subcategory = "core"
-+++
 
 # Архитектура
 

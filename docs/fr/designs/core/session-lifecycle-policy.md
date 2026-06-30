@@ -1,10 +1,3 @@
-+++
-title = "ADR-004 : Gestion du Cycle de Vie du Stockage de Session"
-description = """> Statut : Accepté (2026-06-10)"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004 : Gestion du Cycle de Vie du Stockage de Session
 

@@ -1,10 +1,3 @@
-+++
-title = "Reflection Architecture: Continuous Self-Doubt in the Skill Chain"
-description = """A three-tier reflection system that inserts structured self-doubt into the agent pipeline, turning isolated single-pass execution into a recursive quality loop."""
-lang = "en"
-category = "design"
-subcategory = "core"
-+++
 
 # Reflection Architecture: Continuous Self-Doubt in the Skill Chain
 

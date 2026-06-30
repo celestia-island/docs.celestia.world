@@ -1,10 +1,3 @@
-+++
-title = "ADR-002 : Boa comme Moteur JavaScript Embarqué"
-description = """Date : 2026-02"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-002 : Boa comme Moteur JavaScript Embarqué
 

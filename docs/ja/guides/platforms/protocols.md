@@ -1,10 +1,3 @@
-+++
-title = "産業プロトコル接続ガイド — Evernight"
-description = """evernight の工業プロトコル統合ガイド（Modbus、S7comm、OPC UA）。"""
-lang = "ja"
-category = "guides"
-subcategory = "router"
-+++
 
 # 産業プロトコル接続ガイド — Evernight
 

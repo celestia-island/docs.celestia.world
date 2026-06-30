@@ -1,10 +1,3 @@
-+++
-title = "RBAC System Design"
-description = "Comprehensive role-based access control system for Shittim Chest"
-lang = "en"
-category = "design"
-subcategory = "webui"
-+++
 
 # RBAC System Design
 

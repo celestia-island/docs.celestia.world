@@ -1,10 +1,3 @@
-+++
-title = "Архитектура пространств имён: `vars`, `refs`, `env`"
-description = """> Примечание (2026-06): Поверхность инструментов, видимая LLM, сокращена с 5 до 3 примитивов. `ref_add` и `ref_remove` больше не доступны LLM — `agent_allowed_tools()` возвращает только `exec`, `write_to_"""
-lang = "ru"
-category = "design"
-subcategory = "core"
-+++
 
 # Архитектура пространств имён: `vars`, `refs`, `env`
 

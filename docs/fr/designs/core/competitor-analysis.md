@@ -1,10 +1,3 @@
-+++
-title = "Analyse Concurrentielle des Frameworks Multi-Agents"
-description = """Date : 12 mai 2026 (mise à jour après audit complet du code source de 43 crates × 1500+ fichiers source)"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Analyse Concurrentielle des Frameworks Multi-Agents
 

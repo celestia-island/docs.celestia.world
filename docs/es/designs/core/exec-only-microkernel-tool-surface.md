@@ -1,10 +1,3 @@
-+++
-title = "ADR-001: Superficie de Herramientas de Microkernel Solo-Ejecución"
-description = """Fecha: 2026-02"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-001: Superficie de Herramientas de Microkernel Solo-Ejecución
 

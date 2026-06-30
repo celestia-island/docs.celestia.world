@@ -1,10 +1,3 @@
-+++
-title = "Base de Datos de Prueba Incrustada (pglite-oxide)"
-description = """shittim-chest usa [pglite-oxide](https://crates.io/crates/pglite-oxide) como PostgreSQL incrustado para todas las pruebas de integración y E2E. No se necesita Postgres externo, Docker ni `testcontainers` — las p"""
-lang = "es"
-category = "design"
-subcategory = "webui"
-+++
 
 # Base de Datos de Prueba Incrustada (pglite-oxide)
 

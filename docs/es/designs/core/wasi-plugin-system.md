@@ -1,10 +1,3 @@
-+++
-title = "25 — Diseño del Sistema de Plugins WASI"
-description = """El Sistema de Plugins WASI reemplaza el andamiaje anterior de webhooks Python/TypeScript con plugins del modelo de componentes WASM, proporcionando integraciones de plataforma en sandbox e independientes"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # 25 — Diseño del Sistema de Plugins WASI
 

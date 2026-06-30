@@ -1,10 +1,3 @@
-+++
-title = "MCP ツール開発チュートリアル"
-description = """> Entelecheia（玄枢）プラットフォームで MCP ツールを作成・登録する方法"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # MCP ツール開発チュートリアル
 

@@ -1,10 +1,3 @@
-+++
-title = "エラーコードリファレンス"
-description = """> 重要: 以下に文書化された「エラーコード」（例：DB_CONNECT_FAILED、LLM_CALL_FAILED）は、ソースコードから抽出された文字列ベースのメッ"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # エラーコードリファレンス
 

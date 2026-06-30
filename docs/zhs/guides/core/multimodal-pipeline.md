@@ -1,10 +1,3 @@
-+++
-title = "多模态流水线"
-description = """> ⚠️ 已归档 Agent 参考 — 不在开发管线中"""
-lang = "zhs"
-category = "guides"
-subcategory = "core"
-+++
 
 # 多模态流水线
 

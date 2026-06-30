@@ -1,10 +1,3 @@
-+++
-title = "듀얼 모드 배포 경로: Dev vs Release"
-description = """shittim-chest는 두 가지 배포 모드를 지원한다: Dev(로컬 빠른 반복, Node 불필요, 이미지 빌드 불필요) 및 Release(프론트엔드 정적 파일이 내장된 전체 Docker 이미지). 두 모드는 동일한 컨테이너 토폴로지와 네트워"""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # 듀얼 모드 배포 경로: Dev vs Release
 

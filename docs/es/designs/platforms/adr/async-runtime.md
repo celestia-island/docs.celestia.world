@@ -1,10 +1,3 @@
-+++
-title = "Tiempo de ejecución asíncrono — tokio"
-description = """Registro de decisión arquitectónica — Tiempo de ejecución asíncrono — tokio."""
-lang = "es"
-category = "design"
-subcategory = "router"
-+++
 
 # Tiempo de ejecución asíncrono — tokio
 

@@ -1,10 +1,3 @@
-+++
-title = "Arquitectura LLM Independiente"
-description = """shittim-chest tiene una capa de enrutamiento LLM completamente independiente que no depende de entelecheia. Los usuarios pueden configurar múltiples proveedores LLM, y el enrutador integrado selecciona automáticamente basándose en"""
-lang = "es"
-category = "design"
-subcategory = "webui"
-+++
 
 # Arquitectura LLM Independiente
 

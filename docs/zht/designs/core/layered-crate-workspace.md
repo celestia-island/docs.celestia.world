@@ -1,10 +1,3 @@
-+++
-title = "ADR-004：60+ Crate 分層工作區架構"
-description = """日期：2026-03"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004：60+ Crate 分層工作區架構
 

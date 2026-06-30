@@ -1,10 +1,3 @@
-+++
-title = "エラーハンドリング — thiserror とクレート Result"
-description = """アーキテクチャ意思決定記録 —— エラーハンドリング — thiserror とクレート Result。"""
-lang = "ja"
-category = "design"
-subcategory = "router"
-+++
 
 # エラーハンドリング — thiserror とクレート Result
 

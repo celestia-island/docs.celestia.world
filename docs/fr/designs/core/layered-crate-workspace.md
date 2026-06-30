@@ -1,10 +1,3 @@
-+++
-title = "ADR-004 : Architecture d'Espace de Travail en 60+ Crates Superposées"
-description = """Date : 2026-03"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004 : Architecture d'Espace de Travail en 60+ Crates Superposées
 

@@ -1,10 +1,3 @@
-+++
-title = "Spécification du Paquet d'Agent Couche 2/3"
-description = """> Statut : Brouillon v1 — 2026-06-26"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Spécification du Paquet d'Agent Couche 2/3
 

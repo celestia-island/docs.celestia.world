@@ -1,10 +1,3 @@
-+++
-title = "Интеграция промышленных протоколов — Evernight"
-description = """Руководство по интеграции промышленных протоколов evernight (Modbus, S7comm, OPC UA)."""
-lang = "ru"
-category = "guides"
-subcategory = "router"
-+++
 
 # Интеграция промышленных протоколов — Evernight
 

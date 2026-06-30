@@ -1,10 +1,3 @@
-+++
-title = "Architecture du Prompt d'Âme"
-description = """Chaque Agent a des compétences (quoi faire) et une âme (qui il est). Le prompt d'âme est la couche d'identité fondamentale préfixée à chaque requête LLM, établissant un cadre comportemental persistant pour"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Architecture du Prompt d'Âme
 

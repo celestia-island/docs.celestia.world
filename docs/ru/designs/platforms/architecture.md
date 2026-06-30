@@ -1,10 +1,3 @@
-+++
-title = "Архитектура Evernight"
-description = """evernight — кроссплатформенная библиотека и демон удалённого управления: карта модулей, слой протоколов, модель соединений."""
-lang = "ru"
-category = "architecture"
-subcategory = "router"
-+++
 
 # Архитектура Evernight
 

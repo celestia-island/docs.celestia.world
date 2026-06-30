@@ -1,10 +1,3 @@
-+++
-title = "ADR-005: COSMOSによるコンテナサンドボックス化エージェント実行"
-description = """日付: 2026-02"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-005: COSMOSによるコンテナサンドボックス化エージェント実行
 

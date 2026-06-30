@@ -1,10 +1,3 @@
-+++
-title = "Основные концепции"
-description = """> Аудитория: Разработчики, которым нужно концептуальное понимание дизайна shittim-chest."""
-lang = "ru"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Основные концепции
 

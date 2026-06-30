@@ -1,10 +1,3 @@
-+++
-title = "セッションストレージライフサイクル管理"
-description = """> ステータス: 承認済み (2026-06-10)"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004: セッションストレージライフサイクル管理
 

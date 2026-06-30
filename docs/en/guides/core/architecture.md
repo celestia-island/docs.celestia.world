@@ -1,10 +1,3 @@
-+++
-title = "Architecture"
-description = """> Based on the current runtime structure, not the target-state imagination"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 # Architecture
 

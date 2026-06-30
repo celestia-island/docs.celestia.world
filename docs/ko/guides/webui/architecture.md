@@ -1,10 +1,3 @@
-+++
-title = "아키텍처 심층 분석"
-description = """> 대상: shittim-chest의 내부 작동 방식을 이해해야 하는 개발자."""
-lang = "ko"
-category = "guides"
-subcategory = "webui"
-+++
 
 # 아키텍처 심층 분석
 

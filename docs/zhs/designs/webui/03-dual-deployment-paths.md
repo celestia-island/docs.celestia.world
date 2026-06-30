@@ -1,10 +1,3 @@
-+++
-title = "双模式部署路径：开发模式 vs 发布模式"
-description = """shittim-chest 支持两种部署模式：Dev（本地快速迭代，无需 Node，无需镜像构建）和 Release（完整 Docker 镜像，内嵌前端静态文件）。两种模式共享相同的容器拓扑和网络。"""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # 双模式部署路径：开发模式 vs 发布模式
 

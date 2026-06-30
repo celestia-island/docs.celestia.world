@@ -1,10 +1,3 @@
-+++
-title = "Una Confesión: Sobre la Memoria, el Yo y una Simbiosis Que Aún No Ha Llegado"
-description = """> Nota: Este es un documento reflexivo, no una especificación de funcionalidad. No describe"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Una Confesión: Sobre la Memoria, el Yo y una Simbiosis Que Aún No Ha Llegado
 

@@ -1,10 +1,3 @@
-+++
-title = "Prérequis TIA Portal — Connecter evernight"
-description = """Comment préparer une fois un automate S7-1200/1500 dans TIA Portal afin qu'evernight puisse se connecter, s'auto-organiser et lire/écrire l'appareil sans aucune intervention humaine ultérieure."""
-lang = "fr"
-category = "guides"
-subcategory = "router"
-+++
 
 # Prérequis TIA Portal — Connecter evernight
 

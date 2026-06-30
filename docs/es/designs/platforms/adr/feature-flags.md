@@ -1,10 +1,3 @@
-+++
-title = "Arquitectura de Feature Flags"
-description = """Registro de decisión arquitectónica — Arquitectura de Feature Flags."""
-lang = "es"
-category = "design"
-subcategory = "router"
-+++
 
 # Arquitectura de Feature Flags
 

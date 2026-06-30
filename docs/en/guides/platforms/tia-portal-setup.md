@@ -1,10 +1,3 @@
-+++
-title = "TIA Portal Prerequisites — Connecting evernight"
-description = """How to prepare an S7-1200/1500 PLC once in TIA Portal so evernight can connect, self-network, and read/write the device with no further human intervention."""
-lang = "en"
-category = "guides"
-subcategory = "router"
-+++
 
 # TIA Portal Prerequisites — Connecting evernight
 

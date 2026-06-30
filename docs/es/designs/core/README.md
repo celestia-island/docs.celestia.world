@@ -1,10 +1,3 @@
-+++
-title = "Documentos de Diseño"
-description = """> IMPORTANTE: Estos son documentos de diseño aspiracionales. Describen la arquitectura"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Documentos de Diseño
 

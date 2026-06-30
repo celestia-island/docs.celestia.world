@@ -1,10 +1,3 @@
-+++
-title = "Conception du Système de Hiérarchisation des Modèles"
-description = """Le Système de Hiérarchisation des Modèles est un mécanisme de sélection intelligente de modèles qui attribue des niveaux de modèle appropriés en fonction de la complexité de la tâche, maximisant l'util"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Conception du Système de Hiérarchisation des Modèles
 

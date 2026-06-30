@@ -1,10 +1,3 @@
-+++
-title = "산업 프로토콜 연동 가이드 — Evernight"
-description = """evernight 산업 프로토콜 통합 가이드(Modbus, S7comm, OPC UA)."""
-lang = "ko"
-category = "guides"
-subcategory = "router"
-+++
 
 # 산업 프로토콜 연동 가이드 — Evernight
 

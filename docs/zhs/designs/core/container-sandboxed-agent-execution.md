@@ -1,10 +1,3 @@
-+++
-title = "ADR-005：使用 COSMOS 实现容器沙箱 Agent 执行"
-description = """日期：2026-02"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-005：使用 COSMOS 实现容器沙箱 Agent 执行
 

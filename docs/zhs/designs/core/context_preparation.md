@@ -1,10 +1,3 @@
-+++
-title = "上下文准备机制"
-description = """上下文准备是一种主动提取机制，取代了传统的上下文压缩。它不是有损地压缩旧的对话历史，而是分析现有上下文、生成定向查询，并精确提取为新的上下文窗口播种所需的信息。该机制由 PhiLia agent 拥有，并通过 `$.agent.PhiLia.context_prepare()` 暴露。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 上下文准备机制
 

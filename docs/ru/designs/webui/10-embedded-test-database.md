@@ -1,10 +1,3 @@
-+++
-title = "Встроенная тестовая база данных (pglite-oxide)"
-description = """shittim-chest использует [pglite-oxide](https://crates.io/crates/pglite-oxide) как встроенный PostgreSQL для всех интеграционных и E2E-тестов. Не требуется внешний Postgres, Docker или `testcontainers` — тесты"""
-lang = "ru"
-category = "design"
-subcategory = "webui"
-+++
 
 # Встроенная тестовая база данных (pglite-oxide)
 

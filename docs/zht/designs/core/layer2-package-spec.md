@@ -1,10 +1,3 @@
-+++
-title = "第 2/3 層 Agent 套件規範"
-description = """> 狀態：草案 v1 — 2026-06-26"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 第 2/3 層 Agent 套件規範
 

@@ -1,10 +1,3 @@
-+++
-title = "Resumen de Arquitectura de Entelecheia"
-description = """> Versión: 0.2.0 — desarrollo temprano, no listo para producción."""
-lang = "es"
-category = "architecture"
-subcategory = "core"
-+++
 
 # Arquitectura
 

@@ -1,10 +1,3 @@
-+++
-title = "Provider TOML 配置系統設計"
-description = """Provider TOML 配置系統將所有 LLM Provider 配置從硬編碼值遷移至 TOML 配置檔案，實現配置與程式碼分離，提升可維護性與可擴充性"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # Provider TOML 配置系統設計
 

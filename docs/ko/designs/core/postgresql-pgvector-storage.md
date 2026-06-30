@@ -1,10 +1,3 @@
-+++
-title = "ADR-003: 통합 데이터 저장소를 위한 PostgreSQL + PgVector"
-description = """일자: 2026-02"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-003: 통합 데이터 저장소를 위한 PostgreSQL + PgVector
 

@@ -1,10 +1,3 @@
-+++
-title = "Evernight 架構"
-description = """evernight —— 跨平台遠端控制函式庫與常駐程式：模組圖、協定層、連線模型。"""
-lang = "zht"
-category = "architecture"
-subcategory = "router"
-+++
 
 # Evernight 架構
 

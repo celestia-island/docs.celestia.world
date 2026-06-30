@@ -1,10 +1,3 @@
-+++
-title = "増分同期アーキテクチャ"
-description = """Automerge CRDTに基づくマルチクライアント状態増分同期機構。リアルタイム増分更新と接続/再接続時の完全同期をサポートし、全TUIパネルをカバーする"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # 増分同期アーキテクチャ
 

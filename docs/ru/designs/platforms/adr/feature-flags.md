@@ -1,10 +1,3 @@
-+++
-title = "Архитектура feature-флагов"
-description = """Запись архитектурного решения — Архитектура feature-флагов."""
-lang = "ru"
-category = "design"
-subcategory = "router"
-+++
 
 # Архитектура feature-флагов
 

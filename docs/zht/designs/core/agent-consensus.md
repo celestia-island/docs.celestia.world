@@ -1,10 +1,3 @@
-+++
-title = "共識驗證機制"
-description = """共識驗證機制是多代理協作系統的核心組件，用於驗證和評估多個代理形成的共識之可靠性與準確性，確保系統輸出品質"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 共識驗證機制
 

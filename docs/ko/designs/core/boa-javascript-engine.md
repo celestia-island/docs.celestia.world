@@ -1,10 +1,3 @@
-+++
-title = "ADR-002: 임베디드 JavaScript 엔진으로서의 Boa"
-description = """일자: 2026-02"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-002: 임베디드 JavaScript 엔진으로서의 Boa
 

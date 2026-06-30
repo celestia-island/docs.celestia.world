@@ -1,10 +1,3 @@
-+++
-title = "Arquitectura de Seguridad de Entelecheia"
-description = """> Modelo integral de defensa en profundidad para la Plataforma de Orquestación Multi-Agente Entelecheia."""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Arquitectura de Seguridad de Entelecheia
 

@@ -1,10 +1,3 @@
-+++
-title = "産業回廊統合計画"
-description = """> 目標: 本システムは、完全に未知の産業用実証回廊に対して、自律的な自己インターフェースを実証しなければなりません"""
-lang = "ja"
-category = "architecture"
-subcategory = "core"
-+++
 
 # 産業回廊自律統合計画
 

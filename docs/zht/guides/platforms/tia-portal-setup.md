@@ -1,10 +1,3 @@
-+++
-title = "TIA Portal 前置準備 —— 接入 evernight"
-description = """如何在 TIA Portal 中對 S7-1200/1500 PLC 做一次性設定，使 evernight 能夠連線、自組網、讀寫裝置，且此後無需任何人工介入。"""
-lang = "zht"
-category = "guides"
-subcategory = "router"
-+++
 
 # TIA Portal 前置準備 —— 接入 evernight
 

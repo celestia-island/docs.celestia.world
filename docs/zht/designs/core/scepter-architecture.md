@@ -1,10 +1,3 @@
-+++
-title = "使用週期統計系統設計"
-description = """使用週期統計系統基於時間週期管理與追蹤 LLM token 使用量，支援多種週期類型（5 小時、7 天、30 天、自訂），為成本控制與配額管理提供資料基礎。"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 使用週期統計系統設計
 

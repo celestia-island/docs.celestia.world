@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia 架構總覽"
-description = """> 版本：0.2.0 — 早期開發，尚未準備好用於生產。"""
-lang = "zht"
-category = "architecture"
-subcategory = "core"
-+++
 
 # 架構
 

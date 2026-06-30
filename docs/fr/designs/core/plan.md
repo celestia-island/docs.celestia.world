@@ -1,10 +1,3 @@
-+++
-title = "Plan d'Intégration du Corridor Industriel"
-description = """> Objectif : Le système doit démontrer une auto-interfaçage autonome avec un corridor"""
-lang = "fr"
-category = "architecture"
-subcategory = "core"
-+++
 
 # Plan d'Intégration Autonome du Corridor Industriel
 

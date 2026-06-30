@@ -1,10 +1,3 @@
-+++
-title = "アーキテクチャ詳細"
-description = """> 対象: shittim-chestが内部的にどのように動作するかを理解する必要がある開発者。"""
-lang = "ja"
-category = "guides"
-subcategory = "webui"
-+++
 
 # アーキテクチャ詳細
 

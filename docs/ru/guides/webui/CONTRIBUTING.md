@@ -1,10 +1,3 @@
-+++
-title = "Участие в разработке Shittim Chest"
-description = """Спасибо за интерес к участию в проекте! Это руководство охватывает всё, что вам нужно для начала работы."""
-lang = "ru"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Участие в разработке Shittim Chest
 

@@ -1,10 +1,3 @@
-+++
-title = "內嵌前端策略"
-description = """shittim-chest 支援兩種前端託管模式：在開發模式下，`dev.py` 監視前端原始碼並在變更時觸發 `pnpm build`，後端在 `:3000` 埠上同時提供靜態檔案和 API；在發布模式下，前端靜態檔案在編譯時嵌入到 Rust 二進位檔中，並在 `:80` 上提供服務。兩種模式透過 `embedded-frontend` Cargo 功能切換，使用 `#[cfg(feature = "embedded-frontend")]` 進行程式碼層級的條件編譯。"""
-lang = "zht"
-category = "design"
-subcategory = "webui"
-+++
 
 # 內嵌前端策略
 

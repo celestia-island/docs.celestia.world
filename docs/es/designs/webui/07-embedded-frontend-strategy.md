@@ -1,10 +1,3 @@
-+++
-title = "Estrategia de Frontend Incrustado"
-description = """shittim-chest soporta dos modos de alojamiento del frontend: en modo Dev, `dev.py` vigila las fuentes del frontend y dispara `pnpm build` ante cambios, con el backend sirviendo tanto archivos estáticos como API en `:3000`; e"""
-lang = "es"
-category = "design"
-subcategory = "webui"
-+++
 
 # Estrategia de Frontend Incrustado
 

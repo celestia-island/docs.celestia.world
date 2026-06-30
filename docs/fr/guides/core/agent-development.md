@@ -1,10 +1,3 @@
-+++
-title = "Tutoriel de développement d'Agent"
-description = """> Guide de développement d'Agent basé sur la réalité actuelle du dépôt"""
-lang = "fr"
-category = "guides"
-subcategory = "core"
-+++
 
 # Tutoriel de développement d'Agent
 

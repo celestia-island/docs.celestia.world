@@ -1,10 +1,3 @@
-+++
-title = "CLI 로깅 규칙"
-description = """shittim-chest CLI 래퍼의 로그 출력은 entelecheia와 일관된 규칙을 따르며, `tracing` 생태계를 사용하여 압축된 사람이 읽기 쉬운 형식으로 stderr에 출력한다."""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # CLI 로깅 규칙
 

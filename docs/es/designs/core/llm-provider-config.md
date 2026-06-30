@@ -1,10 +1,3 @@
-+++
-title = "Diseño del Sistema de Configuración TOML de Proveedores"
-description = """El Sistema de Configuración TOML de Proveedores migra toda la configuración de Proveedores LLM de valores hardcodeados a archivos de configuración TOML, logrando la separación de configuración y código, mejorando la mantenibilidad"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Diseño del Sistema de Configuración TOML de Proveedores
 

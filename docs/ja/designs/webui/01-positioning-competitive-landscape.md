@@ -1,10 +1,3 @@
-+++
-title = "製品ポジショニングと競合状況"
-description = """shittim-chestは疎結合のLLM WebUIプラットフォームであり、直接の競合はOpen WebUIやLobeChatなどです。entelecheiaとの統合はオプション機能であり、アーキテクチャ上の前提条件ではありません。"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # 製品ポジショニングと競合状況
 

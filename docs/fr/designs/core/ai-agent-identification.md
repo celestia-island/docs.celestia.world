@@ -1,10 +1,3 @@
-+++
-title = "Identification des Agents IA et Stratégie de Co-auteur de Commit"
-description = """Ce document spécifie comment les commits générés par l'IA dans les projets celestia-island"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Identification des Agents IA et Stratégie de Co-auteur de Commit
 

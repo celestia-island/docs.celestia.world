@@ -1,10 +1,3 @@
-+++
-title = "对话编排设计（HubRis + ApoRia）"
-description = """HubRis 是一个"纯技能 Agent"——所有能力都是通过 ApoRia `llm_chat` 调用的纯提示技能。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 对话编排设计（HubRis + ApoRia）
 

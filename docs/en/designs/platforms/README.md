@@ -1,10 +1,3 @@
-+++
-title = "Platform Design Documents"
-description = """Cross-project (platform-level) design documents. Unlike the per-project core/webui/router subcategories, documents here cover concerns that span all three projects (entelecheia, shittim-chest, evernight) — for example the unified supervision, rolling-update and replication architecture they share."""
-lang = "en"
-category = "design"
-subcategory = "platform"
-+++
 
 # Platform Design Documents
 

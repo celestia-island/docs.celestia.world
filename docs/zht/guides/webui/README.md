@@ -1,10 +1,3 @@
-+++
-title = "Shittim Chest（什亭之匣）"
-description = """[entelecheia](https://github.com/celestia-island/entelecheia) 多代理平台的使用者面向外殼"""
-lang = "zht"
-category = "guides"
-subcategory = "webui"
-+++
 
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">

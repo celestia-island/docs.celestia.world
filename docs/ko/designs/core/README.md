@@ -1,10 +1,3 @@
-+++
-title = "설계 문서"
-description = """> 중요: 본 문서들은 열망적 설계 문서입니다. 의도된"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 설계 문서
 

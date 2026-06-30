@@ -1,10 +1,3 @@
-+++
-title = "Agent 개발 튜토리얼"
-description = """> 현재 저장소의 실제 구현을 기준으로 한 Agent 개발 설명"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # Agent 개발 튜토리얼
 

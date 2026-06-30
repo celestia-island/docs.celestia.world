@@ -1,10 +1,3 @@
-+++
-title = "架构深入解析"
-description = """目标读者：需要了解 shittim-chest 内部工作方式的开发者。"""
-lang = "zhs"
-category = "guides"
-subcategory = "webui"
-+++
 
 # 架构深入解析
 

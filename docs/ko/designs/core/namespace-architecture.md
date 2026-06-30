@@ -1,10 +1,3 @@
-+++
-title = "네임스페이스 아키텍처: `vars`, `refs`, `env`"
-description = """> 참고 (2026-06): LLM에 노출되는 도구 표면이 5개에서 3개의 프리미티브로 축소되었습니다. `ref_add`와 `ref_remove`는 더 이상 LLM에 노출되지 않습니다 — `agent_allowed_tools()`는 `exec`, `write_to_"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 네임스페이스 아키텍처: `vars`, `refs`, `env`
 

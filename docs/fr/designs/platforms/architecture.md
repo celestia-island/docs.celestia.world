@@ -1,10 +1,3 @@
-+++
-title = "Architecture d'Evernight"
-description = """evernight — bibliothèque et démon de contrôle à distance multiplateforme : carte des modules, couche protocole, modèle de connexion."""
-lang = "fr"
-category = "architecture"
-subcategory = "router"
-+++
 
 # Architecture d'Evernight
 

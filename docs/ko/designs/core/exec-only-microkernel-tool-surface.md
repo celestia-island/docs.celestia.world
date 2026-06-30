@@ -1,10 +1,3 @@
-+++
-title = "ADR-001: Exec-Only 마이크로커널 도구 표면"
-description = """일자: 2026-02"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-001: Exec-Only 마이크로커널 도구 표면
 

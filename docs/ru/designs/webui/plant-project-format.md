@@ -1,10 +1,3 @@
-+++
-title = "Формат файла проекта Plant (`.plant.json`)"
-description = """> Дизайн формата инженерного файла — аналогично инженерному файлу Siemens TIA Portal, унифицированное описание топологии промышленных узлов, 2D-панелей, 3D-сцен."""
-lang = "ru"
-category = "design"
-subcategory = "webui"
-+++
 
 # Формат файла проекта Plant (`.plant.json`)
 

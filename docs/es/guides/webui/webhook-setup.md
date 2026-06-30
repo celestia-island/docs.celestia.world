@@ -1,10 +1,3 @@
-+++
-title = "Guía de Configuración de Webhooks"
-description = """> Audiencia: Administradores que integran servicios externos con shittim-chest."""
-lang = "es"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Guía de Configuración de Webhooks
 

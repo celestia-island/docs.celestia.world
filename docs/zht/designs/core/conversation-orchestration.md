@@ -1,10 +1,3 @@
-+++
-title = "對話編排設計（HubRis + ApoRia）"
-description = """HubRis 是一個「純技能代理」— 所有能力都是透過 ApoRia llm_chat 呼叫的僅提示技能"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 對話編排設計（HubRis + ApoRia）
 

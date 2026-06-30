@@ -1,10 +1,3 @@
-+++
-title = "Resumen de Arquitectura de Shittim Chest"
-description = """> Versión: 0.1.0 — En desarrollo activo."""
-lang = "es"
-category = "architecture"
-subcategory = "webui"
-+++
 
 # Arquitectura
 

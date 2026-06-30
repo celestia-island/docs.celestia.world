@@ -1,10 +1,3 @@
-+++
-title = "Cosmos 容器调度与 Token 路由设计"
-description = """本文档描述了 Cosmos 容器调度架构：标记为 `ToolLocation::Cosmos` 的 MCP 工具如何通过 unix-socket JSON-RPC 路由到其对应容器，以及 token（agent 编号）系统如何与容器身份和路由关联。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # Cosmos 容器调度与 Token 路由设计
 

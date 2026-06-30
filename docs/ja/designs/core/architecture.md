@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia アーキテクチャ概要"
-description = """> バージョン: 0.2.0 — 初期開発段階、プロダクション対応ではありません。"""
-lang = "ja"
-category = "architecture"
-subcategory = "core"
-+++
 
 # アーキテクチャ
 

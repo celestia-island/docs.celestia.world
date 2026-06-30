@@ -1,10 +1,3 @@
-+++
-title = "Contributing to Shittim Chest"
-description = """Thank you for your interest in contributing! This guide covers everything you need to get started."""
-lang = "en"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Contributing to Shittim Chest
 

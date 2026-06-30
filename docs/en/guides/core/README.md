@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia"
-description = """A Rust-based multi-agent collaboration platform"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">

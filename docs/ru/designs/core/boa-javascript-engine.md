@@ -1,10 +1,3 @@
-+++
-title = "ADR-002: Boa как Встроенный Движок JavaScript"
-description = """Дата: 2026-02"""
-lang = "ru"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-002: Boa как Встроенный Движок JavaScript
 

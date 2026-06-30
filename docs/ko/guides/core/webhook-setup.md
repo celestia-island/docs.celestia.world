@@ -1,10 +1,3 @@
-+++
-title = "Webhook 플랫폼 설정"
-description = """> 현재 webhook 레이아웃 및 통합 범위 설명"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # Webhook 플랫폼 설정
 

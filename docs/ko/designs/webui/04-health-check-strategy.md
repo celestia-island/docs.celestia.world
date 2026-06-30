@@ -1,10 +1,3 @@
-+++
-title = "PostgreSQL 헬스 체크 전략"
-description = """CLI 래퍼는 애플리케이션 컨테이너를 시작하기 전에 PostgreSQL이 준비되었는지 확인해야 한다. 이 문서는 Docker 이벤트(신뢰할 수 없음)와 고정 타임아웃(유연하지 않음)을 거부하는 수동 폴링 헬스 체크 전략의 설계 결정을 정"""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # PostgreSQL 헬스 체크 전략
 

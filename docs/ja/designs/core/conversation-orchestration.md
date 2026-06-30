@@ -1,10 +1,3 @@
-+++
-title = "会話オーケストレーション設計 (HubRis + ApoRia)"
-description = """HubRisは「純粋スキルエージェント」です — すべての機能はApoRia llm_chatを通じて呼び出されるプロンプトのみのスキルです。"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # 会話オーケストレーション設計 (HubRis + ApoRia)
 

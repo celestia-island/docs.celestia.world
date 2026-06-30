@@ -1,10 +1,3 @@
-+++
-title = "Error Code Reference"
-description = """> IMPORTANT: The "error codes" documented below (e.g. `DB_CONNECT_FAILED`,"""
-lang = "en"
-category = "design"
-subcategory = "core"
-+++
 
 # Error Code Reference
 

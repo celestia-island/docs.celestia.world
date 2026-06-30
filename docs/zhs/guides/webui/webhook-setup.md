@@ -1,10 +1,3 @@
-+++
-title = "Webhook 配置指南"
-description = """目标读者：将外部服务与 shittim-chest 集成的管理员。"""
-lang = "zhs"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Webhook 配置指南
 

@@ -1,10 +1,3 @@
-+++
-title = "Guide de Construction et Développement"
-description = """> Public : Contributeurs configurant un environnement de développement local shittim-chest."""
-lang = "fr"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Guide de Construction et Développement
 

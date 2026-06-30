@@ -1,10 +1,3 @@
-+++
-title = "Diseño del Sistema de Niveles de Modelo"
-description = """El Sistema de Niveles de Modelo es un mecanismo inteligente de selección de modelos que asigna niveles de modelo apropiados basados en la complejidad de la tarea, maximizando la utilización de recurs"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Diseño del Sistema de Niveles de Modelo
 

@@ -1,10 +1,3 @@
-+++
-title = "Architecture de Routage de Compétences Inter-Agents"
-description = """La chaîne de compétences (`execute_skill_chain`) utilise une architecture de micro-noyau exec-only. Le LLM ne voit que trois outils : `exec`, `write_to_var`, `write_to_var_json` — pas de listes blan"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Architecture de Routage de Compétences Inter-Agents
 

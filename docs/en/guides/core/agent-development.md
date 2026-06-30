@@ -1,10 +1,3 @@
-+++
-title = "Agent Development Guide"
-description = """> Agent development instructions based on the current reality of this repository"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 # Agent Development Guide
 

@@ -1,10 +1,3 @@
-+++
-title = "Fundamentals"
-description = """> Concept explanations based on the current reality of the code"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 # Fundamentals
 

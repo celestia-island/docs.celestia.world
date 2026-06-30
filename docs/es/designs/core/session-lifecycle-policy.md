@@ -1,10 +1,3 @@
-+++
-title = "ADR-004: Gestión del Ciclo de Vida de Almacenamiento de Sesiones"
-description = """> Estado: Aceptado (2026-06-10)"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004: Gestión del Ciclo de Vida de Almacenamiento de Sesiones
 

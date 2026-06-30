@@ -1,10 +1,3 @@
-+++
-title = "Асинхронная среда выполнения — tokio"
-description = """Запись архитектурного решения — Асинхронная среда выполнения — tokio."""
-lang = "ru"
-category = "design"
-subcategory = "router"
-+++
 
 # Асинхронная среда выполнения — tokio
 

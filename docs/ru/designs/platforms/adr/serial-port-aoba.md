@@ -1,10 +1,3 @@
-+++
-title = "Последовательный порт через aoba"
-description = """Запись архитектурного решения — Последовательный порт через aoba."""
-lang = "ru"
-category = "design"
-subcategory = "router"
-+++
 
 # Последовательный порт через aoba
 

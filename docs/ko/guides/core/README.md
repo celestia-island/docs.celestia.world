@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia"
-description = """Rust 기반 다중 에이전트 협업 플랫폼"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">

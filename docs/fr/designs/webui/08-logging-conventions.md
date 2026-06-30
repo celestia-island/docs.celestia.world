@@ -1,10 +1,3 @@
-+++
-title = "Conventions de Journalisation du CLI"
-description = """La sortie de log du wrapper CLI shittim-chest suit des conventions cohérentes avec entelecheia, utilisant l'écosystème `tracing`, avec sortie vers stderr dans un format compact lisible par l'humain."""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Conventions de Journalisation du CLI
 

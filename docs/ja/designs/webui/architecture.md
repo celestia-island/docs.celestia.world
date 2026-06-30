@@ -1,10 +1,3 @@
-+++
-title = "Shittim Chest アーキテクチャ概要"
-description = """> バージョン: 0.1.0 — 活発に開発中。"""
-lang = "ja"
-category = "architecture"
-subcategory = "webui"
-+++
 
 # アーキテクチャ
 

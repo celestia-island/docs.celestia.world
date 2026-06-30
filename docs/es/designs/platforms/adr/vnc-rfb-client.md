@@ -1,10 +1,3 @@
-+++
-title = "Cliente de Protocolo VNC (RFB)"
-description = """Registro de decisión arquitectónica — Cliente de Protocolo VNC (RFB)."""
-lang = "es"
-category = "design"
-subcategory = "router"
-+++
 
 # Cliente de Protocolo VNC (RFB)
 

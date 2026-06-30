@@ -1,10 +1,3 @@
-+++
-title = "Обзор архитектуры Shittim Chest"
-description = """> Версия: 0.1.0 — Активная разработка."""
-lang = "ru"
-category = "architecture"
-subcategory = "webui"
-+++
 
 # Архитектура
 

@@ -1,10 +1,3 @@
-+++
-title = "Estrategia de Health Check de PostgreSQL"
-description = """El CLI wrapper debe asegurar que PostgreSQL esté listo antes de iniciar el contenedor de la aplicación. Este documento define las decisiones de diseño detrás de la estrategia de health check por sondeo pasivo — rechazando los eve"""
-lang = "es"
-category = "design"
-subcategory = "webui"
-+++
 
 # Estrategia de Health Check de PostgreSQL
 

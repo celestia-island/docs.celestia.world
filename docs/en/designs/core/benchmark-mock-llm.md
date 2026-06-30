@@ -27,7 +27,7 @@ Entelecheia **已有**完整的 env-var 驱动 provider 发现系统：
 | base_url | entrypoint api.base_url | 真实远端 API |
 | api_key | 环境变量（entrypoint api.env_var） | 运行时读取 |
 | protocol | entrypoint api.protocol | GenProtocol 枚举值 |
-| context_window | model card | 从 models/<provider>/<model>.toml 读取 |
+| context_window | model card | 从 `models/<provider>/<model>.toml` 读取 |
 | max_output_tokens | model card | 同上 |
 | supports_function_calling | model card | 决定工具调用方式 |
 

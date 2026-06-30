@@ -1,10 +1,3 @@
-+++
-title = "Documentos de Diseño de Plataforma"
-description = """Documentos de diseño entre proyectos (de nivel plataforma). A diferencia de las subcategorías core/webui/router por proyecto, los documentos de aquí cubren preocupaciones que abarcan los tres proyectos (entelecheia, shittim-chest, evernight) — por ejemplo la arquitectura unificada de supervisión, rolling update y replicación que comparten."""
-lang = "es"
-category = "design"
-subcategory = "platform"
-+++
 
 # Documentos de Diseño de Plataforma
 

@@ -1,10 +1,3 @@
-+++
-title = "ADR-004: 세션 저장소 수명 주기 관리"
-description = """> 상태: 승인됨 (2026-06-10)"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004: 세션 저장소 수명 주기 관리
 

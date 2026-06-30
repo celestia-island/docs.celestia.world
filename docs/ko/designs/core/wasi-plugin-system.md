@@ -1,10 +1,3 @@
-+++
-title = "25 — WASI 플러그인 시스템 설계"
-description = """WASI 플러그인 시스템은 이전 Python/TypeScript 웹훅 스캐폴딩을 WASM 컴포넌트 모델 플러그인으로 대체하여, 샌드박스형 언어 독립적 플랫폼 통합(레이어 2) 및 비즈니스 로직 확장(레이어 3)을 제공합니다"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 25 — WASI 플러그인 시스템 설계
 

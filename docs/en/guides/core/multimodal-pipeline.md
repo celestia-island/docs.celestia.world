@@ -1,10 +1,3 @@
-+++
-title = "Multimodal Pipeline"
-description = """> Archived agent reference — not in the development pipeline"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 # Multimodal Pipeline
 

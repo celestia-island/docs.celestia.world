@@ -1,10 +1,3 @@
-+++
-title = "多代理框架競爭分析"
-description = """日期：2026 年 5 月 12 日（對 43 個 crate × 1500+ 個原始檔進行完整原始碼稽核後更新）"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 多代理框架競爭分析
 

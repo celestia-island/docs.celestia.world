@@ -1,10 +1,3 @@
-+++
-title = "Especificación de Paquete de Agente de Capa 2/3"
-description = """> Estado: Borrador v1 — 2026-06-26"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Especificación de Paquete de Agente de Capa 2/3
 

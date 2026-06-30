@@ -1,10 +1,3 @@
-+++
-title = "Layer 2/3 Agent 包规范"
-description = """> 状态：草案 v1 — 2026-06-26"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # Layer 2/3 Agent 包规范
 

@@ -1,10 +1,3 @@
-+++
-title = "Couplage Lâche avec entelecheia"
-description = """L'intégration entre shittim-chest et entelecheia est basée sur un pont proxy HTTP/WebSocket authentifié par JWT. Cette conception permet à shittim-chest de fonctionner de manière totalement indépendante sans"""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Couplage Lâche avec entelecheia
 

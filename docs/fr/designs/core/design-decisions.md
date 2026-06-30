@@ -1,10 +1,3 @@
-+++
-title = "Registres de Décisions Architecturales (ADR)"
-description = """Ce répertoire enregistre les décisions architecturales clés prises pendant le développement d'Entelecheia. Chaque ADR explique ce qui a été décidé, pourquoi cela a été décidé et quels compromis ont été"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Registres de Décisions Architecturales (ADR)
 

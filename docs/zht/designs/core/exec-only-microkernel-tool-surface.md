@@ -1,10 +1,3 @@
-+++
-title = "ADR-001：僅執行微核心工具表面"
-description = """日期：2026-02"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-001：僅執行微核心工具表面
 

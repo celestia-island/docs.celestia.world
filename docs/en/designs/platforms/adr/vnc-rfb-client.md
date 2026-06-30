@@ -1,10 +1,3 @@
-+++
-title = "VNC (RFB) Protocol Client"
-description = """Architecture decision record — VNC (RFB) Protocol Client."""
-lang = "en"
-category = "design"
-subcategory = "router"
-+++
 
 # VNC (RFB) Protocol Client
 

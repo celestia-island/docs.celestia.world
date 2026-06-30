@@ -1,10 +1,3 @@
-+++
-title = "프로바이더 TOML 설정 시스템 설계"
-description = """프로바이더 TOML 설정 시스템은 모든 LLM 프로바이더 구성을 하드코딩된 값에서 TOML 설정 파일로 마이그레이션하여, 설정과 코드를 분리하고 유지보수성과 확장성을 향상시킵니다"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 프로바이더 TOML 설정 시스템 설계
 

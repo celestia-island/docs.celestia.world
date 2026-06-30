@@ -1,10 +1,3 @@
-+++
-title = "平台级设计文档"
-description = """跨项目（平台级）设计文档。与按项目划分的 core/webui/router 子分类不同，这里的文档覆盖横跨三个项目（entelecheia、shittim-chest、evernight）的关切——例如三者共享的统一监督、滚动更新与副本架构。"""
-lang = "zhs"
-category = "design"
-subcategory = "platform"
-+++
 
 # 平台级设计文档
 

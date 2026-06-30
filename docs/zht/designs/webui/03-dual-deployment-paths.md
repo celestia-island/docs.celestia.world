@@ -1,10 +1,3 @@
-+++
-title = "雙模式部署路徑：開發模式 vs 發布模式"
-description = """shittim-chest 支援兩種部署模式：開發模式（本機快速迭代，無需 Node，無需映像建置）和發布模式（完整 Docker 映像，內嵌前端靜態檔案）。兩種模式共用相同的容器拓撲和網路。"""
-lang = "zht"
-category = "design"
-subcategory = "webui"
-+++
 
 # 雙模式部署路徑：開發模式 vs 發布模式
 

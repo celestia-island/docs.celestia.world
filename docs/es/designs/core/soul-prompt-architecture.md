@@ -1,10 +1,3 @@
-+++
-title = "Arquitectura del Soul Prompt"
-description = """Cada Agente tiene habilidades (qué hacer) y un alma (quién es). El soul prompt es la capa de identidad fundamental que se antepone a cada solicitud LLM, estableciendo un marco conductual persistente para que un Agen"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Arquitectura del Soul Prompt
 

@@ -1,10 +1,3 @@
-+++
-title = "組み込みフロントエンド戦略"
-description = """shittim-chestは2つのフロントエンドホスティングモードをサポートします：開発モードでは、`dev.py`がフロントエンドソースを監視し、変更時に`pnpm build`をトリガーし、バックエンドが静的ファイルとA"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # 組み込みフロントエンド戦略
 

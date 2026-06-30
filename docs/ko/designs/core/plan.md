@@ -1,10 +1,3 @@
-+++
-title = "산업 회랑 통합 계획"
-description = """> 목표: 시스템은 완전히 알려지지 않은 산업 실증 회랑에 대해 자율적 자가 인터페이스를 시연해야 합니다"""
-lang = "ko"
-category = "architecture"
-subcategory = "core"
-+++
 
 # 산업 회랑 자율 통합 계획
 

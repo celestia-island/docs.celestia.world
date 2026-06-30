@@ -1,10 +1,3 @@
-+++
-title = "レイヤー2/3 エージェントパッケージ仕様"
-description = """> ステータス: ドラフト v1 — 2026-06-26"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # レイヤー2/3 エージェントパッケージ仕様
 

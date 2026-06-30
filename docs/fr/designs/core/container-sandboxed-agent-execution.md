@@ -1,10 +1,3 @@
-+++
-title = "ADR-005 : Exécution d'Agent en Bac à Sable par Conteneur avec COSMOS"
-description = """Date : 2026-02"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-005 : Exécution d'Agent en Bac à Sable par Conteneur avec COSMOS
 

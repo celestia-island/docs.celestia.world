@@ -1,10 +1,3 @@
-+++
-title = "빌드 및 개발 가이드"
-description = """> 대상: 로컬 shittim-chest 개발 환경을 설정하는 기여자."""
-lang = "ko"
-category = "guides"
-subcategory = "webui"
-+++
 
 # 빌드 및 개발 가이드
 

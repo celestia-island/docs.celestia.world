@@ -1,10 +1,3 @@
-+++
-title = "SSH 连接池"
-description = """架构决策记录 —— SSH 连接池。"""
-lang = "zhs"
-category = "design"
-subcategory = "router"
-+++
 
 # SSH 连接池
 

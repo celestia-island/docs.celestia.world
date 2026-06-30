@@ -1,10 +1,3 @@
-+++
-title = "Issue Tracking Integration"
-description = """> Connect external issue tracking systems to Entelecheia's agent workflow"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 # Issue Tracking Integration
 

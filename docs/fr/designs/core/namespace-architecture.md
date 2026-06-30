@@ -1,10 +1,3 @@
-+++
-title = "Architecture des Espaces de Noms : `vars`, `refs`, `env`"
-description = """> Note (2026-06) : La surface d'outils visible par le LLM a été réduite de 5 à 3 primitives. `ref_add` et `ref_remove` ne sont plus exposés au LLM — `agent_allowed_tools()` retourne uniquement `exec`, `wr"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Architecture des Espaces de Noms : `vars`, `refs`, `env`
 

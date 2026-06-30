@@ -1,10 +1,3 @@
-+++
-title = "Integración de seguimiento de Issues"
-description = """> Conectar sistemas externos de seguimiento de Issues a los flujos de trabajo de Agent de Entelecheia (玄枢)"""
-lang = "es"
-category = "guides"
-subcategory = "core"
-+++
 
 # Integración de seguimiento de Issues
 

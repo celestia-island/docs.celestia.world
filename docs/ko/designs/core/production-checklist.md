@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia 프로덕션 배포 체크리스트"
-description = """> Entelecheia를 프로덕션에 배포하기 위한 12단계 체크리스트."""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # Entelecheia 프로덕션 배포 체크리스트
 

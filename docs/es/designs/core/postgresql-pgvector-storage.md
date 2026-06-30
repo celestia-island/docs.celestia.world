@@ -1,10 +1,3 @@
-+++
-title = "ADR-003: PostgreSQL + PgVector para Almacenamiento de Datos Unificado"
-description = """Fecha: 2026-02"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-003: PostgreSQL + PgVector para Almacenamiento de Datos Unificado
 

@@ -1,10 +1,3 @@
-+++
-title = "Stratégie de Migration Double Frontend WASM"
-description = """shittim-chest emploie une stratégie frontend en deux phases « Vue 3 d'abord, WASM ensuite ». La version Vue 3 est livrée d'abord comme implémentation de référence de qualité production, la version Rust/WASM mig"""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Stratégie de Migration Double Frontend WASM
 

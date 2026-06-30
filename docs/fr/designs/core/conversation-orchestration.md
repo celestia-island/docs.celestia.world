@@ -1,10 +1,3 @@
-+++
-title = "Conception de l'Orchestration de Conversation (HubRis + ApoRia)"
-description = """HubRis est un \"Agent de Compétence Pure\" — toutes les capacités sont des compétences de prompt uniquement"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Conception de l'Orchestration de Conversation (HubRis + ApoRia)
 

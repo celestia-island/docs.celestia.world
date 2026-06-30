@@ -1,10 +1,3 @@
-+++
-title = "TerminalBackend / ViewportBackend / FileBackend Trait 抽象"
-description = """架構決策記錄 —— TerminalBackend / ViewportBackend / FileBackend Trait 抽象。"""
-lang = "zht"
-category = "design"
-subcategory = "router"
-+++
 
 # TerminalBackend / ViewportBackend / FileBackend Trait 抽象
 

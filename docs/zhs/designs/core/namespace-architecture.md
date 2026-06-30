@@ -1,10 +1,3 @@
-+++
-title = "命名空间架构：`vars`、`refs`、`env`"
-description = """> 注（2026-06）：LLM 可见的工具面已从 5 个原语缩减为 3 个。`ref_add` 和 `ref_remove` 不再暴露给 LLM——`agent_allowed_tools()` 仅返回 `exec`、`write_to_""""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 命名空间架构：`vars`、`refs`、`env`
 

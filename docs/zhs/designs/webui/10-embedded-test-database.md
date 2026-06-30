@@ -1,10 +1,3 @@
-+++
-title = "内嵌测试数据库（pglite-oxide）"
-description = """shittim-chest 使用 [pglite-oxide](https://crates.io/crates/pglite-oxide) 作为内嵌 PostgreSQL 用于所有集成和端到端测试。无需外部 Postgres、Docker 或 `testcontainers`——测试只需在任意机器上执行 `cargo test` 即可运行。"""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # 内嵌测试数据库（pglite-oxide）
 

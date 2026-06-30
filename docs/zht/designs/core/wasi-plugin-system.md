@@ -1,10 +1,3 @@
-+++
-title = "25 — WASI 外掛系統設計"
-description = """WASI 外掛系統以 WASM 元件模型外掛取代先前的 Python/TypeScript webhook 鷹架，提供沙箱化、語言無關的平台整合（第 2 層）與業務邏輯擴充（第 3 層）。"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 25 — WASI 外掛系統設計
 

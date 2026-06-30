@@ -1,10 +1,3 @@
-+++
-title = "Documents de Conception"
-description = """> IMPORTANT : Ce sont des documents de conception ambitieux. Ils décrivent l'architecture"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Documents de Conception
 

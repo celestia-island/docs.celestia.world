@@ -1,10 +1,3 @@
-+++
-title = "ADR-002：Boa 作为嵌入式 JavaScript 引擎"
-description = """日期：2026-02"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-002：Boa 作为嵌入式 JavaScript 引擎
 

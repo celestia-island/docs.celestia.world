@@ -1,10 +1,3 @@
-+++
-title = "Conception de l'Ordonnancement de Conteneurs et du Routage de Jetons Cosmos"
-description = """Ce document décrit l'architecture d'ordonnancement des conteneurs Cosmos : comment les outils MCP marqués avec `ToolLocation::Cosmos` sont routés via JSON-RPC sur socket Unix vers leurs conteneurs"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Conception de l'Ordonnancement de Conteneurs et du Routage de Jetons Cosmos
 

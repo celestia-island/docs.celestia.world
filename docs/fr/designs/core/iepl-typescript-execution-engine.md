@@ -1,10 +1,3 @@
-+++
-title = "22 — Conception du Moteur d'Exécution TypeScript IEPL"
-description = """IEPL (In-Execution Prompt Language) est une mise à niveau architecturale du runtime JS Cosmos/SkeMma existant, faisant évoluer le code d'exécution généré par LLM de JavaScript à TypeScript. Les modific"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # 22 — Conception du Moteur d'Exécution TypeScript IEPL
 

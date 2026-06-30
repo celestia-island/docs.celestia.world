@@ -1,10 +1,3 @@
-+++
-title = "シグナリングトランスポート — デュアル Unix ソケット / TCP"
-description = """アーキテクチャ意思決定記録 —— シグナリングトランスポート — デュアル Unix ソケット / TCP。"""
-lang = "ja"
-category = "design"
-subcategory = "router"
-+++
 
 # シグナリングトランスポート — デュアル Unix ソケット / TCP
 

@@ -1,10 +1,3 @@
-+++
-title = "Positionnement Produit & Paysage Concurrentiel"
-description = """shittim-chest est une plateforme WebUI LLM faiblement couplée, avec des concurrents directs comme Open WebUI, LobeChat et similaires. Son intégration avec entelecheia est une fonctionnalité optionnelle, pas un p"""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Positionnement Produit & Paysage Concurrentiel
 

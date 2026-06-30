@@ -1,10 +1,3 @@
-+++
-title = "22 — IEPL TypeScript 执行引擎设计"
-description = """IEPL（In-Execution Prompt Language）执行引擎是对现有 Cosmos/SkeMma JS 运行时的架构升级，将 LLM 生成的执行代码从 JavaScript 升级到 TypeScript。核心变更包括："""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 22 — IEPL TypeScript 执行引擎设计
 

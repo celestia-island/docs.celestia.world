@@ -1,10 +1,3 @@
-+++
-title = "Mécanisme de Préparation de Contexte"
-description = """La Préparation de Contexte est un mécanisme d'extraction proactive qui remplace la compression de contexte traditionnelle. Au lieu de compresser de manière lossy l'historique de conversation ancien, el"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Mécanisme de Préparation de Contexte
 

@@ -1,10 +1,3 @@
-+++
-title = "Shittim Chest에 기여하기"
-description = """기여에 관심을 가져 주셔서 감사합니다! 본 가이드는 시작하는 데 필요한 모든 것을 다룹니다."""
-lang = "ko"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Shittim Chest에 기여하기
 

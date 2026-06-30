@@ -1,10 +1,3 @@
-+++
-title = "Plant 專案檔案格式 (`.plant.json`)"
-description = """> 工程檔案格式設計——類似西門子博圖 (TIA Portal) 的工程檔案，統一描述工業節點拓撲、2D 面板、3D 場景。"""
-lang = "zht"
-category = "design"
-subcategory = "webui"
-+++
 
 # Plant 專案檔案格式 (`.plant.json`)
 

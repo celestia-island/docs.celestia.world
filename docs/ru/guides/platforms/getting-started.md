@@ -1,10 +1,3 @@
-+++
-title = "Начало работы — Evernight"
-description = """Начало работы с evernight — сборка, запуск и первые команды."""
-lang = "ru"
-category = "guides"
-subcategory = "router"
-+++
 
 # Начало работы — Evernight
 

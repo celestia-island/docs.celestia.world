@@ -1,10 +1,3 @@
-+++
-title = "Issue 추적 통합"
-description = """> 외부 Issue 추적 시스템을 Entelecheia(현추)의 Agent 워크플로에 연결"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # Issue 추적 통합
 

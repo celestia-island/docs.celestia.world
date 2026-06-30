@@ -1,10 +1,3 @@
-+++
-title = "贡献指南（Evernight）"
-description = """evernight 贡献指南。"""
-lang = "zhs"
-category = "guides"
-subcategory = "router"
-+++
 
 # 贡献指南（Evernight）
 

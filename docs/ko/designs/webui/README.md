@@ -1,10 +1,3 @@
-+++
-title = "설계 문서"
-description = """> 참고: 이 설계 문서들은 의도된 아키텍처와 동작을 설명하며, 일부 기능은 아직 구현 중일 수 있습니다."""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # 설계 문서
 

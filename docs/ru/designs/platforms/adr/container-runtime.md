@@ -1,10 +1,3 @@
-+++
-title = "Клиент контейнерной среды выполнения (Docker/Podman)"
-description = """Запись архитектурного решения — Клиент контейнерной среды выполнения (Docker/Podman)."""
-lang = "ru"
-category = "design"
-subcategory = "router"
-+++
 
 # Клиент контейнерной среды выполнения (Docker/Podman)
 

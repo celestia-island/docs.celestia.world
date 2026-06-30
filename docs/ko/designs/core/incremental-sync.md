@@ -1,10 +1,3 @@
-+++
-title = "증분 동기화 아키텍처"
-description = """Automerge CRDT 기반의 다중 클라이언트 상태 증분 동기화 메커니즘으로, 연결/재연결 시 실시간 증분 업데이트 및 전체 동기화를 지원하며 모든 TUI 패널을 포괄합니다"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 증분 동기화 아키텍처
 

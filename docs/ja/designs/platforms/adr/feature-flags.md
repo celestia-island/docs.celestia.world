@@ -1,10 +1,3 @@
-+++
-title = "フィーチャフラグアーキテクチャ"
-description = """アーキテクチャ意思決定記録 —— フィーチャフラグアーキテクチャ。"""
-lang = "ja"
-category = "design"
-subcategory = "router"
-+++
 
 # フィーチャフラグアーキテクチャ
 

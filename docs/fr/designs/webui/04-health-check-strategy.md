@@ -1,10 +1,3 @@
-+++
-title = "Stratégie de Vérification de Santé PostgreSQL"
-description = """Le wrapper CLI doit s'assurer que PostgreSQL est prêt avant de démarrer le conteneur d'application. Ce document définit les décisions de conception derrière la stratégie de sondage passif — rejetant les év"""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Stratégie de Vérification de Santé PostgreSQL
 

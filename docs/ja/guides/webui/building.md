@@ -1,10 +1,3 @@
-+++
-title = "ビルドと開発ガイド"
-description = """> 対象: ローカルのshittim-chest開発環境をセットアップするコントリビューター。"""
-lang = "ja"
-category = "guides"
-subcategory = "webui"
-+++
 
 # ビルドと開発ガイド
 

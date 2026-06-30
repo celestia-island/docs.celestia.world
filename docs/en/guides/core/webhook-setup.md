@@ -1,10 +1,3 @@
-+++
-title = "Webhook Platform Setup"
-description = """> Description of the current webhook layout and integration scope"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 # Webhook Platform Setup
 

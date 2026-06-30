@@ -1,10 +1,3 @@
-+++
-title = "ADR-001 : Surface d'Outils Micro-Noyau Exec-Only"
-description = """Date : 2026-02"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-001 : Surface d'Outils Micro-Noyau Exec-Only
 

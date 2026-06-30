@@ -1,10 +1,3 @@
-+++
-title = "아키텍처"
-description = """> 현재 런타임 구조를 기준으로 한 설명으로, 목표 상태의 상상도가 아닙니다"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # 아키텍처
 

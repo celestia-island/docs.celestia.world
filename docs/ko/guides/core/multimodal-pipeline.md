@@ -1,10 +1,3 @@
-+++
-title = "멀티모달 파이프라인"
-description = """> ⚠️ 아카이브된 Agent 참조 — 개발 파이프라인에 없음"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # 멀티모달 파이프라인
 

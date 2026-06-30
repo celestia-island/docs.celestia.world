@@ -1,10 +1,3 @@
-+++
-title = "Architecture Decision Records (ADR)"
-description = """This directory records the key architectural decisions made during the development of Entelecheia. Each ADR explains what was decided, why it was decided, and what trade-offs were considered."""
-lang = "en"
-category = "design"
-subcategory = "core"
-+++
 
 # Architecture Decision Records (ADR)
 

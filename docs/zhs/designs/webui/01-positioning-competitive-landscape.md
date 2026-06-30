@@ -1,10 +1,3 @@
-+++
-title = "产品定位与竞争优势"
-description = """shittim-chest 是一个松耦合的 LLM WebUI 平台，直接竞品包括 Open WebUI、LobeChat 等。其与 entelecheia 的集成是可选特性，而非架构前提。"""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # 产品定位与竞争优势
 

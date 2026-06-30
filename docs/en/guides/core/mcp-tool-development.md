@@ -1,10 +1,3 @@
-+++
-title = "MCP Tool Development Guide"
-description = """> How to create and register MCP tools in the Entelecheia platform"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 # MCP Tool Development Guide
 

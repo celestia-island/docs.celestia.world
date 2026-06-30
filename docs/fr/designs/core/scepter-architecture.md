@@ -1,10 +1,3 @@
-+++
-title = "Conception du Système de Statistiques de Période d'Utilisation"
-description = """Le Système de Statistiques de Période d'Utilisation gère et suit l'utilisation des jetons LLM en fonction des périodes de temps, prenant en charge plusieurs types de périodes (5 heures, 7 jours, 30 j"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Conception du Système de Statistiques de Période d'Utilisation
 

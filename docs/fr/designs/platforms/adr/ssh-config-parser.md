@@ -1,10 +1,3 @@
-+++
-title = "Analyseur de configuration SSH"
-description = """Enregistrement de décision d'architecture — Analyseur de configuration SSH."""
-lang = "fr"
-category = "design"
-subcategory = "router"
-+++
 
 # Analyseur de configuration SSH
 

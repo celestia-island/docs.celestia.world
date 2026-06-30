@@ -1,10 +1,3 @@
-+++
-title = "Issue 追跡統合"
-description = """> 外部 Issue 追跡システムを Entelecheia（玄枢）の Agent ワークフローに接続する"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # Issue 追跡統合
 

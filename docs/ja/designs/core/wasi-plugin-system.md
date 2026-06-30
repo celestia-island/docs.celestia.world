@@ -1,10 +1,3 @@
-+++
-title = "25 — WASIプラグインシステム設計"
-description = """WASIプラグインシステムは、以前のPython/TypeScript WebhookスキャフォールディングをWASMコンポーネントモデルプラグインに置き換え、サンドボックス化された言語非依存のプラットフォーム統合（レイヤー2）とビジネスロジック拡張（レイヤー3）を提供する。"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # 25 — WASIプラグインシステム設計
 

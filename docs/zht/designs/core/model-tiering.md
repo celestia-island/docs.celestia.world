@@ -1,10 +1,3 @@
-+++
-title = "模型分層系統設計"
-description = """模型分層系統是一個智慧模型選擇機制，根據任務複雜度分配適當的模型層級，最大化資源利用率同時確保品質。"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 模型分層系統設計
 

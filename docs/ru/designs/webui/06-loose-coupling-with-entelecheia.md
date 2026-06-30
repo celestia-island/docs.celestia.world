@@ -1,10 +1,3 @@
-+++
-title = "Слабая связь с entelecheia"
-description = """Интеграция между shittim-chest и entelecheia основана на JWT-аутентифицированном прокси-мосту HTTP/WebSocket. Этот дизайн позволяет shittim-chest работать полностью независимо без entelecheia,"""
-lang = "ru"
-category = "design"
-subcategory = "webui"
-+++
 
 # Слабая связь с entelecheia
 

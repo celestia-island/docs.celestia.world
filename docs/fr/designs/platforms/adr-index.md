@@ -1,10 +1,3 @@
-+++
-title = "Architecture Decision Records (ADR)"
-description = """Index des enregistrements de décisions d'architecture pour evernight."""
-lang = "fr"
-category = "design"
-subcategory = "router"
-+++
 
 # Architecture Decision Records (ADR)
 

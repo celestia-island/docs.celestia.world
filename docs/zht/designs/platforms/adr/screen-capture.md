@@ -1,10 +1,3 @@
-+++
-title = "螢幕擷取架構"
-description = """架構決策記錄 —— 螢幕擷取架構。"""
-lang = "zht"
-category = "design"
-subcategory = "router"
-+++
 
 # 螢幕擷取架構
 

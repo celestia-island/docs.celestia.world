@@ -1,10 +1,3 @@
-+++
-title = "設計文件"
-description = """> 重要提示：這些是願景性的設計文件。它們描述的是預期的"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 設計文件
 

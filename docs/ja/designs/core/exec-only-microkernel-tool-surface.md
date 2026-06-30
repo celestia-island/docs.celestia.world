@@ -1,10 +1,3 @@
-+++
-title = "ADR-001: Exec-Onlyマイクロカーネルツールサーフェス"
-description = """日付: 2026-02"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-001: Exec-Onlyマイクロカーネルツールサーフェス
 

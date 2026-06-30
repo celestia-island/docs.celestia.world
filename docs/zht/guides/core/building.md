@@ -1,10 +1,3 @@
-+++
-title = "構建指南"
-description = """- [先決條件](#先決條件)"""
-lang = "zht"
-category = "guides"
-subcategory = "core"
-+++
 
 # 構建指南
 

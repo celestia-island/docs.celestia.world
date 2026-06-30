@@ -1,10 +1,3 @@
-+++
-title = "SSH 設定パーサー"
-description = """アーキテクチャ意思決定記録 —— SSH 設定パーサー。"""
-lang = "ja"
-category = "design"
-subcategory = "router"
-+++
 
 # SSH 設定パーサー
 

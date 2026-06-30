@@ -1,10 +1,3 @@
-+++
-title = "架构决策记录（ADR）"
-description = """本目录记录了 Entelecheia 开发过程中做出的关键架构决策。每个 ADR 解释了决定了什么、为什么决定以及考虑了哪些权衡。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 架构决策记录（ADR）
 

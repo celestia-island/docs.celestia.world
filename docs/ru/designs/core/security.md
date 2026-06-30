@@ -1,10 +1,3 @@
-+++
-title = "Архитектура безопасности Entelecheia"
-description = """> Комплексная модель эшелонированной защиты для платформы мульти-агентной оркестрации Entelecheia."""
-lang = "ru"
-category = "design"
-subcategory = "core"
-+++
 
 # Архитектура безопасности Entelecheia
 

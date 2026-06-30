@@ -1,10 +1,3 @@
-+++
-title = "내장형 프론트엔드 전략"
-description = """shittim-chest는 두 가지 프론트엔드 호스팅 모드를 지원한다: Dev 모드에서는 `dev.py`가 프론트엔드 소스를 감시하고 변경 시 `pnpm build`를 트리거하며, 백엔드가 `:3000`에서 정적 파일과 API를 모두 제"""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # 내장형 프론트엔드 전략
 

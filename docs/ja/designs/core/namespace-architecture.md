@@ -1,10 +1,3 @@
-+++
-title = "名前空間アーキテクチャ: `vars`、`refs`、`env`"
-description = """> 注記 (2026-06): LLM可視ツール表面は5から3プリミティブに削減された。`ref_add` と `ref_remove` は LLMに公開されなくなった — `agent_allowed_tools()` は `exec`、`write_to_"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # 名前空間アーキテクチャ: `vars`、`refs`、`env`
 

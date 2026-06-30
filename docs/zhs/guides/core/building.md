@@ -1,10 +1,3 @@
-+++
-title = "构建指南"
-description = """- [先决条件](#先决条件)"""
-lang = "zhs"
-category = "guides"
-subcategory = "core"
-+++
 
 # 构建指南
 

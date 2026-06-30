@@ -1,10 +1,3 @@
-+++
-title = "プラットフォーム設計ドキュメント"
-description = """クロスプロジェクト (プラットフォームレベル) の設計ドキュメント。プロジェクト別の core/webui/router サブカテゴリとは異なり、ここにある文書は三つのプロジェクト (entelecheia、shittim-chest、evernight) すべてにまたがる関心事を扱う——例えば三者が共有する統合スーパビジョン、ローリングアップデート、レプリケーションアーキテクチャなど。"""
-lang = "ja"
-category = "design"
-subcategory = "platform"
-+++
 
 # プラットフォーム設計ドキュメント
 

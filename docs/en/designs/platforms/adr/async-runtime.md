@@ -1,10 +1,3 @@
-+++
-title = "Async Runtime — tokio"
-description = """Architecture decision record — Async Runtime — tokio."""
-lang = "en"
-category = "design"
-subcategory = "router"
-+++
 
 # Async Runtime — tokio
 

@@ -1,10 +1,3 @@
-+++
-title = "CLI 래퍼 아키텍처: Bollard 기반 Docker 오케스트레이션"
-description = """`packages/cli/`는 Bollard Docker API를 통해 컨테이너 수명 주기를 직접 관리하는 Rust 바이너리로, docker-compose와 셸 스크립트를 완전히 대체한다. CLI는 호스트 머신에서 실행되며, 서버 바이너리(`shitt"""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # CLI 래퍼 아키텍처: Bollard 기반 Docker 오케스트레이션
 

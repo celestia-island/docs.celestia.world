@@ -1,10 +1,3 @@
-+++
-title = "工业走廊集成计划"
-description = """> 目标：系统必须展示对完全未知的工业示范走廊的自主自适应——
-lang = "zhs"
-category = "architecture"
-subcategory = "core"
-+++
 
 # 工业走廊自主集成计划
 

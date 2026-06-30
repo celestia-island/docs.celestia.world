@@ -1,10 +1,3 @@
-+++
-title = "ADR-003: 統合データストレージのためのPostgreSQL + PgVector"
-description = """日付: 2026-02"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-003: 統合データストレージのためのPostgreSQL + PgVector
 

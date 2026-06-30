@@ -1,10 +1,3 @@
-+++
-title = "RBAC 시스템 상세 설계 문서"
-description = """Shittim Chest를 위한 완전한 역할 기반 접근 제어 시스템을 구현하며, 다음을 지원한다:"""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # RBAC 시스템 상세 설계 문서
 

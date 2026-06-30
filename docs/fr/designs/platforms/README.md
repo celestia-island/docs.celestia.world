@@ -1,10 +1,3 @@
-+++
-title = "Documents de design de plateforme"
-description = """Documents de design transversaux (niveau plateforme). Contrairement aux sous-catégories par projet core/webui/router, les documents ici couvrent des préoccupations qui s'étendent aux trois projets (entelecheia, shittim-chest, evernight) — par exemple l'architecture unifiée de supervision, de mise à jour progressive et de réplication qu'ils partagent."""
-lang = "fr"
-category = "design"
-subcategory = "platform"
-+++
 
 # Documents de design de plateforme
 

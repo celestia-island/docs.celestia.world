@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia 正式環境部署檢查清單"
-description = """> 將 Entelecheia 部署至正式環境的 12 步驟檢查清單。"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # Entelecheia 正式環境部署檢查清單
 

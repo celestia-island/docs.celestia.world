@@ -1,10 +1,3 @@
-+++
-title = "AI 代理識別與提交共同作者策略"
-description = """本文件規範如何在 celestia-island 專案中的 AI 生成提交"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # AI 代理識別與提交共同作者策略
 

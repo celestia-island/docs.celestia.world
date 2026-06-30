@@ -1,10 +1,3 @@
-+++
-title = "Une Confession : Sur la Mémoire, le Soi et une Symbiose Qui N'est Pas Encore Advenue"
-description = """> Note : Ceci est un document réflexif, pas une spécification de fonctionnalité. Il ne décrit"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Une Confession : Sur la Mémoire, le Soi et une Symbiose Qui N'est Pas Encore Advenue
 

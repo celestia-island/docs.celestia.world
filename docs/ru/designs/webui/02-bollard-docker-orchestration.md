@@ -1,10 +1,3 @@
-+++
-title = "Архитектура обёртки CLI: Оркестрация Docker на основе Bollard"
-description = """`packages/cli/` — это бинарник Rust, который управляет жизненным циклом контейнеров напрямую через Docker API Bollard, полностью заменяя docker-compose и shell-скрипты. CLI работает на хост-машине, в то время как се"""
-lang = "ru"
-category = "design"
-subcategory = "webui"
-+++
 
 # Архитектура обёртки CLI: Оркестрация Docker на основе Bollard
 

@@ -1,10 +1,3 @@
-+++
-title = "Webhook 設定指南"
-description = """> 目標讀者：將外部服務與 shittim-chest 整合的管理員。"""
-lang = "zht"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Webhook 設定指南
 

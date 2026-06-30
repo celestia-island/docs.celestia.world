@@ -1,10 +1,3 @@
-+++
-title = "CLI 使用指南"
-description = """`entelecheia-cli` 是 Entelecheia（玄樞）多智慧體協作平台的命令列介面。它透過 Unix socket JSON-RPC 與 scepter 伺服器通訊，提供聊天互動、服務生命週期管理、智慧體控制、組態等功能。"""
-lang = "zht"
-category = "guides"
-subcategory = "core"
-+++
 
 # CLI 使用指南
 

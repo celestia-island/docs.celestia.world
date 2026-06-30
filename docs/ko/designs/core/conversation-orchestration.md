@@ -1,10 +1,3 @@
-+++
-title = "대화 오케스트레이션 설계 (HubRis + ApoRia)"
-description = """HubRis는 "순수 스킬 에이전트"입니다 — 모든 기능은 프롬프트 전용 스킬"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 대화 오케스트레이션 설계 (HubRis + ApoRia)
 

@@ -1,10 +1,3 @@
-+++
-title = "Contributing Guide (Entelecheia)"
-description = """> This file is the English version of the contribution policy. For build commands and detailed installation steps, see the English"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 # Contributing Guide (Entelecheia)
 

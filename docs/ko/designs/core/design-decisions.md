@@ -1,10 +1,3 @@
-+++
-title = "아키텍처 결정 기록 (ADR)"
-description = """이 디렉터리는 Entelecheia 개발 과정에서 이루어진 주요 아키텍처 결정을 기록합니다. 각 ADR은 무엇이 결정되었는지, 왜 그렇게 결정되었는지, 그리고 어떤 절충이 고려되었는지�"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 아키텍처 결정 기록 (ADR)
 

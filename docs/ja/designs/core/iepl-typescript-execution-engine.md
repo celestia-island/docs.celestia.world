@@ -1,10 +1,3 @@
-+++
-title = "22 — IEPL TypeScript実行エンジン設計"
-description = """IEPL（In-Execution Prompt Language）実行エンジンは、既存のCosmos/SkeMma JSランタイムに対するアーキテクチャアップグレードであり、LLM生成実行コードをJavaScriptからTypeScriptにアップグレードします。主な"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # 22 — IEPL TypeScript実行エンジン設計
 

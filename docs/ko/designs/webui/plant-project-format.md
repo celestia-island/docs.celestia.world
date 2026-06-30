@@ -1,10 +1,3 @@
-+++
-title = "플랜트 프로젝트 파일 형식 (`.plant.json`)"
-description = """> 공정 파일 형식 설계 — 지멘스 TIA Portal과 유사한 공정 파일로, 산업 노드 토폴로지, 2D 패널, 3D 장면을 통합 기술한다."""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # 플랜트 프로젝트 파일 형식 (`.plant.json`)
 

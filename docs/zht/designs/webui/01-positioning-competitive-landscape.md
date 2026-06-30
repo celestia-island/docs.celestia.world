@@ -1,10 +1,3 @@
-+++
-title = "產品定位與競爭格局"
-description = """shittim-chest 是一個鬆耦合的 LLM WebUI 平台，直接競爭對手為 Open WebUI、LobeChat 等。其與 entelecheia 的整合為可選功能，而非架構先決條件。"""
-lang = "zht"
-category = "design"
-subcategory = "webui"
-+++
 
 # 產品定位與競爭格局
 

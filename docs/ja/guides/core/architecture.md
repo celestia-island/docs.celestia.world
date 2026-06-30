@@ -1,10 +1,3 @@
-+++
-title = "アーキテクチャ"
-description = """> 現在のランタイム構造に基づく説明であり、目標状態の想像図ではありません"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # アーキテクチャ
 

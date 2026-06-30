@@ -1,10 +1,3 @@
-+++
-title = "貢獻指南（Entelecheia）"
-description = """> 本文件是貢獻政策的繁體中文版本。構建命令與詳細安裝步驟請見倉庫根目錄的英文"""
-lang = "zht"
-category = "guides"
-subcategory = "core"
-+++
 
 # 貢獻指南（Entelecheia）
 

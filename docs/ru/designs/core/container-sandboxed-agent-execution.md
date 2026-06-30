@@ -1,10 +1,3 @@
-+++
-title = "ADR-005: Изолированное в Контейнере Выполнение Агентов с COSMOS"
-description = """Дата: 2026-02"""
-lang = "ru"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-005: Изолированное в Контейнере Выполнение Агентов с COSMOS
 

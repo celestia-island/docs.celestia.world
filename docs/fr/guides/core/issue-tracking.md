@@ -1,10 +1,3 @@
-+++
-title = "Intégration du suivi d'issues"
-description = """> Connecter les systèmes externes de suivi d'issues aux flux de travail d'Agent d'Entelecheia"""
-lang = "fr"
-category = "guides"
-subcategory = "core"
-+++
 
 # Intégration du suivi d'issues
 

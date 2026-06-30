@@ -1,10 +1,3 @@
-+++
-title = "핵심 개념"
-description = """> 대상: shittim-chest의 설계에 대한 개념적 이해를 원하는 개발자."""
-lang = "ko"
-category = "guides"
-subcategory = "webui"
-+++
 
 # 핵심 개념
 

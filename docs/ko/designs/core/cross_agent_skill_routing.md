@@ -1,10 +1,3 @@
-+++
-title = "크로스 에이전트 스킬 라우팅 아키텍처"
-description = """스킬 체인(`execute_skill_chain`)은 exec-only 마이크로커널 아키텍처를 사용합니다. LLM은 `exec`, `write_to_var`, `write_to_var_json`의 세 가지 도구만 볼 뿐, 에이전트별 도구 �"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # 크로스 에이전트 스킬 라우팅 아키텍처
 

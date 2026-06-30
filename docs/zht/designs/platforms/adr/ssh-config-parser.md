@@ -1,10 +1,3 @@
-+++
-title = "SSH 設定解析器"
-description = """架構決策記錄 —— SSH 設定解析器。"""
-lang = "zht"
-category = "design"
-subcategory = "router"
-+++
 
 # SSH 設定解析器
 

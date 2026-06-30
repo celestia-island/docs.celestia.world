@@ -1,10 +1,3 @@
-+++
-title = "コンテナランタイムクライアント（Docker/Podman）"
-description = """アーキテクチャ意思決定記録 —— コンテナランタイムクライアント（Docker/Podman）。"""
-lang = "ja"
-category = "design"
-subcategory = "router"
-+++
 
 # コンテナランタイムクライアント（Docker/Podman）
 

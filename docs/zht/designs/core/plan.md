@@ -1,10 +1,3 @@
-+++
-title = "工業走廊整合計畫"
-description = """> 目標：系統必須展示對一個完全未知的工業示範走廊的自主自我介接"""
-lang = "zht"
-category = "architecture"
-subcategory = "core"
-+++
 
 # 工業走廊自主整合計畫
 

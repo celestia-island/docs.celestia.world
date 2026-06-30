@@ -1,10 +1,3 @@
-+++
-title = "RBAC 系統詳細設計文件"
-description = """為 Shittim Chest 實作完整的基於角色的存取控制系統，支援："""
-lang = "zht"
-category = "design"
-subcategory = "webui"
-+++
 
 # RBAC 系統詳細設計文件
 

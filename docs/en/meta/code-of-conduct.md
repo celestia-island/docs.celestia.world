@@ -1,9 +1,3 @@
-+++
-title = "Code of Conduct"
-description = """We as members, contributors, and leaders pledge to make participation in our"""
-lang = "en"
-category = "meta"
-+++
 
 # Code of Conduct
 

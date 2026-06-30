@@ -1,10 +1,3 @@
-+++
-title = "构建与开发指南"
-description = """目标读者：搭建本地 shittim-chest 开发环境的贡献者。"""
-lang = "zhs"
-category = "guides"
-subcategory = "webui"
-+++
 
 # 构建与开发指南
 

@@ -1,9 +1,3 @@
-+++
-title = "Contributor License Agreement"
-description = """This Contributor License Agreement ("CLA") applies to every contribution accepted"""
-lang = "en"
-category = "meta"
-+++
 
 # Contributor License Agreement (CLA)
 

@@ -1,10 +1,3 @@
-+++
-title = "플랫폼 설계 문서"
-description = """크로스 프로젝트(플랫폼 수준) 설계 문서. 프로젝트별 core/webui/router 하위 카테고리와 달리, 이곳의 문서들은 세 프로젝트(entelecheia, shittim-chest, evernight)에 걸친 관심사를 다룹니다 — 예를 들어 세 프로젝트가 공유하는 통합 감독, 롤링 업데이트 및 복제 아키텍처."""
-lang = "ko"
-category = "design"
-subcategory = "platform"
-+++
 
 # 플랫폼 설계 문서
 

@@ -1,10 +1,3 @@
-+++
-title = "Chemins de Déploiement Double Mode : Dev vs Release"
-description = """shittim-chest prend en charge deux modes de déploiement : Dev (itération rapide locale, sans Node, sans construction d'image) et Release (image Docker complète avec fichiers statiques frontend int"""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Chemins de Déploiement Double Mode : Dev vs Release
 

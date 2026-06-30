@@ -1,10 +1,3 @@
-+++
-title = "ADR-001：仅执行微内核工具表面"
-description = """日期：2026-02"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-001：仅执行微内核工具表面
 

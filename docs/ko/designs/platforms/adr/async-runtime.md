@@ -1,10 +1,3 @@
-+++
-title = "비동기 런타임 — tokio"
-description = """아키텍처 결정 기록 —— 비동기 런타임 — tokio."""
-lang = "ko"
-category = "design"
-subcategory = "router"
-+++
 
 # 비동기 런타임 — tokio
 

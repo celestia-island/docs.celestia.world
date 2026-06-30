@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia 安全架構"
-description = """> Entelecheia 多 Agent 編排平台的全面縱深防禦模型。"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # Entelecheia 安全架構
 

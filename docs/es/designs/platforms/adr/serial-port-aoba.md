@@ -1,10 +1,3 @@
-+++
-title = "Comunicación por Puerto Serie mediante aoba"
-description = """Registro de decisión arquitectónica — Comunicación por Puerto Serie mediante aoba."""
-lang = "es"
-category = "design"
-subcategory = "router"
-+++
 
 # Comunicación por Puerto Serie mediante aoba
 

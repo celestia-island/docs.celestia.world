@@ -1,10 +1,3 @@
-+++
-title = "Arquitectura de Enrutamiento de Habilidades entre Agentes"
-description = """La cadena de habilidades (`execute_skill_chain`) utiliza una arquitectura de microkernel solo-ejecución. El LLM ve solo tres herramientas: `exec`, `write_to_var`, `write_to_var_json` — sin listas bla"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Arquitectura de Enrutamiento de Habilidades entre Agentes
 

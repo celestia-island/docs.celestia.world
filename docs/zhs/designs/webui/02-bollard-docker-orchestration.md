@@ -1,10 +1,3 @@
-+++
-title = "CLI 封装架构：基于 Bollard 的 Docker 编排"
-description = """`packages/cli/` 是一个 Rust 二进制程序，通过 Bollard Docker API 直接管理容器生命周期，完全替代 docker-compose 和 Shell 脚本。CLI 运行在宿主机上，而服务端二进制（`shittim_chest`）运行在容器内。"""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # CLI 封装架构：基于 Bollard 的 Docker 编排
 

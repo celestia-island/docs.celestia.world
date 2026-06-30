@@ -1,10 +1,3 @@
-+++
-title = "双前端 WASM 迁移策略"
-description = """shittim-chest 采用"Vue 3 先行，WASM 后续"的两阶段前端策略。Vue 3 版本作为生产级参考实现先行交付，Rust/WASM 版本在条件成熟时迁移。在双版本并行运行期间，相同的用户交互必须产生相同的结果。"""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # 双前端 WASM 迁移策略
 

@@ -1,10 +1,3 @@
-+++
-title = "ADR-002: Boa como Motor JavaScript Embebido"
-description = """Fecha: 2026-02"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-002: Boa como Motor JavaScript Embebido
 

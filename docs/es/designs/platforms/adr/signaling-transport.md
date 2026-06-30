@@ -1,10 +1,3 @@
-+++
-title = "Transporte de Señalización — Socket Unix Dual / TCP"
-description = """Registro de decisión arquitectónica — Transporte de Señalización — Socket Unix Dual / TCP."""
-lang = "es"
-category = "design"
-subcategory = "router"
-+++
 
 # Transporte de Señalización — Socket Unix Dual / TCP
 

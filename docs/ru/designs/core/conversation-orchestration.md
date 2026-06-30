@@ -1,10 +1,3 @@
-+++
-title = "Проект Оркестровки Разговоров (HubRis + ApoRia)"
-description = """HubRis — это «Агент Чистого Навыка» — все возможности являются навыками на основе промптов"""
-lang = "ru"
-category = "design"
-subcategory = "core"
-+++
 
 # Проект Оркестровки Разговоров (HubRis + ApoRia)
 

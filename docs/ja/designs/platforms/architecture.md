@@ -1,10 +1,3 @@
-+++
-title = "Evernight アーキテクチャ"
-description = """evernight —— クロスプラットフォーム遠隔制御ライブラリとデーモン：モジュールマップ、プロトコル層、接続モデル。"""
-lang = "ja"
-category = "architecture"
-subcategory = "router"
-+++
 
 # Evernight アーキテクチャ
 

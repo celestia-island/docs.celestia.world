@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia"
-description = """Rustベースのマルチエージェント協調プラットフォーム"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">

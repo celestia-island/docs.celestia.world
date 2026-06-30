@@ -1,10 +1,3 @@
-+++
-title = "Diseño del Sistema de Estadísticas de Período de Uso"
-description = """El Sistema de Estadísticas de Período de Uso gestiona y rastrea el uso de tokens LLM basado en períodos de tiempo, soportando múltiples tipos de período (5 horas, 7 días, 30 días, personalizado), proporcionando una base de datos para el control de cost"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # Diseño del Sistema de Estadísticas de Período de Uso
 

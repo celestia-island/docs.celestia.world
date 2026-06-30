@@ -1,10 +1,3 @@
-+++
-title = "灵魂 Prompt 架构"
-description = "每个 Agent 拥有技能（做什么）和灵魂（它是谁）。灵魂 Prompt 是附加到每个 LLM 请求的基础身份层，建立持久的行为框架，使 Agent 在跨对话和技能执行中展现一致的人格。没有它，同一个 Agent 可能因执行不同技能提示词而产生巨大漂移。"
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 灵魂 Prompt 架构
 

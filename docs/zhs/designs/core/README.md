@@ -1,10 +1,3 @@
-+++
-title = "设计文档"
-description = """> 重要提示：这些是愿景设计文档。它们描述的是**预期**"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 设计文档
 

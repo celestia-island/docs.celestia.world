@@ -1,10 +1,3 @@
-+++
-title = "モジュール分離と型の所有権"
-description = """アーキテクチャ意思決定記録 —— モジュール分離と型の所有権。"""
-lang = "ja"
-category = "design"
-subcategory = "router"
-+++
 
 # モジュール分離と型の所有権
 

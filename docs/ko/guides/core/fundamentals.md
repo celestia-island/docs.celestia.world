@@ -1,10 +1,3 @@
-+++
-title = "기본 개념"
-description = """> 현재 코드 현실을 기준으로 한 개념 설명"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # 기본 개념
 

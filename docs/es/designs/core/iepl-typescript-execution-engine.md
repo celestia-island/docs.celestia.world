@@ -1,10 +1,3 @@
-+++
-title = "22 — Diseño del Motor de Ejecución TypeScript IEPL"
-description = """El Motor de Ejecución IEPL (In-Execution Prompt Language) es una actualización arquitectónica del runtime JS existente de Cosmos/SkeMma, mejorando el código de ejecución generado por LLM de JavaScript a TypeScript. El núcle"""
-lang = "es"
-category = "design"
-subcategory = "core"
-+++
 
 # 22 — Diseño del Motor de Ejecución TypeScript IEPL
 

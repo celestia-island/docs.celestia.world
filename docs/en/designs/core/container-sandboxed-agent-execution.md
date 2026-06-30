@@ -1,10 +1,3 @@
-+++
-title = "ADR-005: Container-Sandboxed Agent Execution with COSMOS"
-description = """Date: 2026-02"""
-lang = "en"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-005: Container-Sandboxed Agent Execution with COSMOS
 

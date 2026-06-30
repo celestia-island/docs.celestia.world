@@ -1,10 +1,3 @@
-+++
-title = "MCP 도구 개발 튜토리얼"
-description = """> Entelecheia(현추) 플랫폼에서 MCP 도구를 생성하고 등록하는 방법"""
-lang = "ko"
-category = "guides"
-subcategory = "core"
-+++
 
 # MCP 도구 개발 튜토리얼
 

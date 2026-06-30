@@ -1,10 +1,3 @@
-+++
-title = "22 — Проект Движка Выполнения IEPL TypeScript"
-description = """Движок Выполнения IEPL (In-Execution Prompt Language) — это архитектурное обновление существующей среды выполнения Cosmos/SkeMma JS, повышающее код выполнения, сгенерированный LLM, с JavaScript до Ty"""
-lang = "ru"
-category = "design"
-subcategory = "core"
-+++
 
 # 22 — Проект Движка Выполнения IEPL TypeScript
 

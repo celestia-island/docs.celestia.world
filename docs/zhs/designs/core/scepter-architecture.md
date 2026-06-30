@@ -1,10 +1,3 @@
-+++
-title = "用量周期统计系统设计"
-description = "用量周期统计系统基于时间周期管理和追踪 LLM Token 用量，支持多种周期类型（5 小时、7 天、30 天、自定义），为成本控制和配额管理提供数据基础。"
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 用量周期统计系统设计
 

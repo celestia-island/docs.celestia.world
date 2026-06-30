@@ -1,10 +1,3 @@
-+++
-title = "ADR-004: 60개 이상 크레이트 계층형 워크스페이스 아키텍처"
-description = """일자: 2026-03"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004: 60개 이상 크레이트 계층형 워크스페이스 아키텍처
 

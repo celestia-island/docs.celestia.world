@@ -1,10 +1,3 @@
-+++
-title = "Rutas de Despliegue de Modo Dual: Dev vs Release"
-description = """shittim-chest soporta dos modos de despliegue: Dev (iteración rápida local, sin Node, sin build de imagen) y Release (imagen Docker completa con archivos estáticos del frontend incrustados). Ambos modos comparten la misma topo"""
-lang = "es"
-category = "design"
-subcategory = "webui"
-+++
 
 # Rutas de Despliegue de Modo Dual: Dev vs Release
 

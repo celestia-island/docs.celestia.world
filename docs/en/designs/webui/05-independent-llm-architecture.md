@@ -1,10 +1,3 @@
-+++
-title = "Independent LLM Architecture"
-description = """shittim-chest has a fully independent LLM routing layer that does not depend on entelecheia. Users can configure multiple LLM Providers, and the built-in router automatically selects based on priority"""
-lang = "en"
-category = "design"
-subcategory = "webui"
-+++
 
 # Independent LLM Architecture
 

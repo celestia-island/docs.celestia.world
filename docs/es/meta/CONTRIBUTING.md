@@ -1,9 +1,3 @@
-+++
-title = "Guía de Contribución"
-description = """¡Gracias por tu interés en contribuir! Esta guía cubre todo lo que necesitas"""
-lang = "es"
-category = "meta"
-+++
 
 # Contribuir a Arona
 

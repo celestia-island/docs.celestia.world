@@ -1,10 +1,3 @@
-+++
-title = "CLI 使用ガイド"
-description = """`entelecheia-cli` は Entelecheia（玄枢）マルチエージェント協調プラットフォームのコマンドラインインターフェースです。Unix ソケット JSON-RPC を通じて scepter サーバーと通信し、チャットインタラクション、サービスライフサイクル管理、エージェント制御、設定などの機能を提供します。"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # CLI 使用ガイド
 

@@ -1,10 +1,3 @@
-+++
-title = "Documents de Conception"
-description = """> Note : Ces documents de conception décrivent l'architecture et le comportement prévus — certaines fonctionnalités peuvent encore être en cours."""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Documents de Conception
 

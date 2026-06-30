@@ -1,10 +1,3 @@
-+++
-title = "Evernight 架构"
-description = """evernight —— 跨平台远程控制库与守护进程：模块图、协议层、连接模型。"""
-lang = "zhs"
-category = "architecture"
-subcategory = "router"
-+++
 
 # Evernight 架构
 

@@ -1,10 +1,3 @@
-+++
-title = "시그널링 전송 — Unix 소켓 / TCP 이중 전송"
-description = """아키텍처 결정 기록 —— 시그널링 전송 — Unix 소켓 / TCP 이중 전송."""
-lang = "ko"
-category = "design"
-subcategory = "router"
-+++
 
 # 시그널링 전송 — Unix 소켓 / TCP 이중 전송
 

@@ -1,10 +1,3 @@
-+++
-title = "增量同步架构"
-description = "基于 Automerge CRDT 的多客户端状态增量同步机制，支持实时增量更新与连接/重连时的全量同步，覆盖所有 TUI 面板。"
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # 增量同步架构
 

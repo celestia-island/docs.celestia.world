@@ -1,10 +1,3 @@
-+++
-title = "プラントプロジェクトファイル形式 (`.plant.json`)"
-description = """> 工程ファイル形式設計 — シーメンスのTIA Portalに類似した工程ファイルで、工業ノードトポロジー、2Dパネル、3Dシーンを統一的に記述します。"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # プラントプロジェクトファイル形式 (`.plant.json`)
 

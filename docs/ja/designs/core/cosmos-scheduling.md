@@ -1,10 +1,3 @@
-+++
-title = "Cosmosコンテナスケジューリングとトークンルーティング設計"
-description = """このドキュメントはCosmosコンテナスケジューリングアーキテクチャについて説明します：ToolLocation::CosmosでマークされたMCPツールがどのようにunix-socket JSON-RPCを通じて対応するコンテナにルーティング"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # Cosmosコンテナスケジューリングとトークンルーティング設計
 

@@ -1,10 +1,3 @@
-+++
-title = "Webhook設定ガイド"
-description = """> 対象: 外部サービスをshittim-chestと統合する管理者。"""
-lang = "ja"
-category = "guides"
-subcategory = "webui"
-+++
 
 # Webhook設定ガイド
 

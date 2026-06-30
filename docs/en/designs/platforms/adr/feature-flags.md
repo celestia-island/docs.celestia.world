@@ -1,10 +1,3 @@
-+++
-title = "Feature Flag Architecture"
-description = """Architecture decision record — Feature Flag Architecture."""
-lang = "en"
-category = "design"
-subcategory = "router"
-+++
 
 # Feature Flag Architecture
 

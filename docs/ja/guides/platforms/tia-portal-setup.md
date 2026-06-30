@@ -1,10 +1,3 @@
-+++
-title = "TIA Portal の前提準備 —— evernight への接続"
-description = """TIA Portal で S7-1200/1500 PLC を一度だけ設定し、evernight が接続・自己組網・デバイスの読み書きを、以後すべて自動で行えるようにする手順。"""
-lang = "ja"
-category = "guides"
-subcategory = "router"
-+++
 
 # TIA Portal の前提準備 —— evernight へ接続する
 

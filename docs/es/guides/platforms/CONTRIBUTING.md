@@ -1,10 +1,3 @@
-+++
-title = "Contribuir a Evernight"
-description = """Directrices de contribución para evernight."""
-lang = "es"
-category = "guides"
-subcategory = "router"
-+++
 
 # Contribuir a Evernight
 

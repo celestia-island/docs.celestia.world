@@ -1,10 +1,3 @@
-+++
-title = "構建與開發指南"
-description = """> 目標讀者：正在設定本機 shittim-chest 開發環境的貢獻者。"""
-lang = "zht"
-category = "guides"
-subcategory = "webui"
-+++
 
 # 構建與開發指南
 

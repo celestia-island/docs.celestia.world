@@ -1,10 +1,3 @@
-+++
-title = "Stratégie de Frontend Intégré"
-description = """shittim-chest prend en charge deux modes d'hébergement frontend : en mode Dev, `dev.py` surveille les sources frontend et déclenche `pnpm build` lors des modifications, le backend servant à la fois les"""
-lang = "fr"
-category = "design"
-subcategory = "webui"
-+++
 
 # Stratégie de Frontend Intégré
 

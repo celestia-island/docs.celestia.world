@@ -1,10 +1,3 @@
-+++
-title = "Agent 开发教程"
-description = """> 以当前仓库现实为准的 Agent 开发说明"""
-lang = "zhs"
-category = "guides"
-subcategory = "core"
-+++
 
 # Agent 开发教程
 

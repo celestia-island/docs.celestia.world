@@ -1,10 +1,3 @@
-+++
-title = "Feature Flag 架构"
-description = """架构决策记录 —— Feature Flag 架构。"""
-lang = "zhs"
-category = "design"
-subcategory = "router"
-+++
 
 # Feature Flag 架构
 

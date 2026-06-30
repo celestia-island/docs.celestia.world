@@ -1,10 +1,3 @@
-+++
-title = "Cosmos 컨테이너 스케줄링 및 토큰 라우팅 설계"
-description = """본 문서는 Cosmos 컨테이너 스케줄링 아키텍처를 기술합니다: `ToolLocation::Cosmos`로 표시된 MCP 도구가 Unix 소켓 JSON-RPC를 통해 해당 컨테이너로 라우팅되는 방식과, 토큰("""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # Cosmos 컨테이너 스케줄링 및 토큰 라우팅 설계
 

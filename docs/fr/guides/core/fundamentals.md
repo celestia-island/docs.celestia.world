@@ -1,10 +1,3 @@
-+++
-title = "Concepts fondamentaux"
-description = """> Explication des concepts basée sur la réalité actuelle du code"""
-lang = "fr"
-category = "guides"
-subcategory = "core"
-+++
 
 # Concepts fondamentaux
 

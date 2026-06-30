@@ -1,10 +1,3 @@
-+++
-title = "Plant Project File Format (`.plant.json`)"
-description = "Project file format design — similar to Siemens TIA Portal project files, unifying industrial node topology, 2D panels, and 3D scenes."
-lang = "en"
-category = "design"
-subcategory = "webui"
-+++
 
 # Plant Project File Format (`.plant.json`)
 

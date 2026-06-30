@@ -1,10 +1,3 @@
-+++
-title = "웹훅 설정 가이드"
-description = """> 대상: 외부 서비스를 shittim-chest와 통합하는 관리자."""
-lang = "ko"
-category = "guides"
-subcategory = "webui"
-+++
 
 # 웹훅 설정 가이드
 

@@ -1,10 +1,3 @@
-+++
-title = "貢献ガイド（Entelecheia）"
-description = """> 本ファイルは貢献ポリシーの日本語版です。ビルドコマンドと詳細なインストール手順については、リポジトリルートの英語版を参照してください"""
-lang = "ja"
-category = "guides"
-subcategory = "core"
-+++
 
 # 貢献ガイド（Entelecheia）
 

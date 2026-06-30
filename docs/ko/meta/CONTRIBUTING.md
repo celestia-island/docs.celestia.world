@@ -1,9 +1,3 @@
-+++
-title = "기여 가이드"
-description = """기여에 관심을 가져 주셔서 감사합니다! 본 가이드는 시작하는 데 필요한 모든 것을 다룹니다"""
-lang = "ko"
-category = "meta"
-+++
 
 # Arona에 기여하기
 

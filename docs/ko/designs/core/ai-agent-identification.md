@@ -1,10 +1,3 @@
-+++
-title = "AI 에이전트 식별 및 커밋 공동 저자 전략"
-description = """본 문서는 celestia-island 프로젝트 전반에서 AI 생성 커밋에"""
-lang = "ko"
-category = "design"
-subcategory = "core"
-+++
 
 # AI 에이전트 식별 및 커밋 공동 저자 전략
 

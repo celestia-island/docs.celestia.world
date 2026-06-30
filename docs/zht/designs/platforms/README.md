@@ -1,10 +1,3 @@
-+++
-title = "平臺級設計文件"
-description = """跨專案（平臺級）設計文件。與按專案劃分的 core/webui/router 子分類不同，這裡的文件覆蓋橫跨三個專案（entelecheia、shittim-chest、evernight）的關切——例如三者共享的統一監督、滾動更新與副本架構。"""
-lang = "zht"
-category = "design"
-subcategory = "platform"
-+++
 
 # 平臺級設計文件
 

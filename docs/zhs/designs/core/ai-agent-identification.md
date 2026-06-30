@@ -1,10 +1,3 @@
-+++
-title = "AI Agent 身份识别与提交共同作者策略"
-description = """本文档规定了 celestia-island 项目中所有跨项目 AI 生成的提交如何标注来源元数据。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # AI Agent 身份识别与提交共同作者策略
 

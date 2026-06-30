@@ -1,10 +1,3 @@
-+++
-title = "Shittim Chest (什亭之匣)"
-description = """Interfaz de usuario para la plataforma multi-agente [entelecheia](https://github.com/celestia-island/entelecheia)"""
-lang = "es"
-category = "guides"
-subcategory = "webui"
-+++
 
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">

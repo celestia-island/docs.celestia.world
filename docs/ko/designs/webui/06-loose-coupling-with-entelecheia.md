@@ -1,10 +1,3 @@
-+++
-title = "entelecheia와의 느슨한 결합"
-description = """shittim-chest와 entelecheia의 통합은 JWT 인증 HTTP/WebSocket 프록시 브리지를 기반으로 한다. 이 설계는 shittim-chest가 entelecheia 없이 완전히 독립적으로 실행될 수 있도록 하면서, 필요 시 Agent 오케스트레이"""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # entelecheia와의 느슨한 결합
 

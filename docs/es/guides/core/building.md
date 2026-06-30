@@ -1,10 +1,3 @@
-+++
-title = "Guía de construcción"
-description = """- [Requisitos previos](#requisitos-previos)"""
-lang = "es"
-category = "guides"
-subcategory = "core"
-+++
 
 # Guía de construcción
 

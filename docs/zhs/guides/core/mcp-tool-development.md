@@ -1,10 +1,3 @@
-+++
-title = "MCP 工具开发教程"
-description = """> 如何在 Entelecheia（玄枢） 平台中创建和注册 MCP 工具"""
-lang = "zhs"
-category = "guides"
-subcategory = "core"
-+++
 
 # MCP 工具开发教程
 

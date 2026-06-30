@@ -1,10 +1,3 @@
-+++
-title = "Webhook 平台設定"
-description = """> 當前 webhook 佈局與整合範圍說明"""
-lang = "zht"
-category = "guides"
-subcategory = "core"
-+++
 
 # Webhook 平台設定
 

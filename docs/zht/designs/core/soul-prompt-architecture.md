@@ -1,10 +1,3 @@
-+++
-title = "靈魂提示架構"
-description = """每個 Agent 擁有技能（做什麼）和靈魂（它是誰）。靈魂提示是在每個 LLM 請求前附加的基礎身份層，建立一個持存的行為框架，使 Agent 在跨對話和技能間表現出"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 靈魂提示架構
 

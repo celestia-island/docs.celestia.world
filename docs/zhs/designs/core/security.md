@@ -1,10 +1,3 @@
-+++
-title = "Entelecheia 安全架构"
-description = """> Entelecheia 多 Agent 编排平台的全方位纵深防御模型。"""
-lang = "zhs"
-category = "design"
-subcategory = "core"
-+++
 
 # Entelecheia 安全架构
 

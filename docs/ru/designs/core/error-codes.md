@@ -1,10 +1,3 @@
-+++
-title = "Справочник Кодов Ошибок"
-description = """> ВАЖНО: «Коды ошибок», документированные ниже (например, `DB_CONNECT_FAILED`,"""
-lang = "ru"
-category = "design"
-subcategory = "core"
-+++
 
 # Справочник Кодов Ошибок
 

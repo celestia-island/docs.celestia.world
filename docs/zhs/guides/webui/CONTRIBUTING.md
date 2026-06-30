@@ -1,10 +1,3 @@
-+++
-title = "为 Shittim Chest 贡献"
-description = """感谢您的贡献兴趣！本指南涵盖了您入门所需的一切。"""
-lang = "zhs"
-category = "guides"
-subcategory = "webui"
-+++
 
 # 为 Shittim Chest 贡献
 

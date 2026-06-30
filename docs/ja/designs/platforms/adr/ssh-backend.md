@@ -1,10 +1,3 @@
-+++
-title = "SSH バックエンド — russh と共有接続"
-description = """アーキテクチャ意思決定記録 —— SSH バックエンド — russh と共有接続。"""
-lang = "ja"
-category = "design"
-subcategory = "router"
-+++
 
 # SSH バックエンド — russh と共有接続
 

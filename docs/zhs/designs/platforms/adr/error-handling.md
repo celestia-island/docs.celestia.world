@@ -1,10 +1,3 @@
-+++
-title = "Error Handling — thiserror with crate Result"
-description = """架构决策记录 —— Error Handling — thiserror with crate Result。"""
-lang = "zhs"
-category = "design"
-subcategory = "router"
-+++
 
 # Error Handling — thiserror with crate Result
 

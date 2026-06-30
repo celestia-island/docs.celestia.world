@@ -1,10 +1,3 @@
-+++
-title = "Абстракции типажей TerminalBackend / ViewportBackend / FileBackend"
-description = """Запись архитектурного решения — Абстракции типажей TerminalBackend / ViewportBackend / FileBackend."""
-lang = "ru"
-category = "design"
-subcategory = "router"
-+++
 
 # Абстракции типажей TerminalBackend / ViewportBackend / FileBackend
 

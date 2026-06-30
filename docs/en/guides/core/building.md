@@ -1,10 +1,3 @@
-+++
-title = "Building Guide"
-description = """- [Prerequisites](#prerequisites)"""
-lang = "en"
-category = "guides"
-subcategory = "core"
-+++
 
 # Building Guide
 

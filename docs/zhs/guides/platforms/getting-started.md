@@ -1,10 +1,3 @@
-+++
-title = "快速上手 — Evernight"
-description = """evernight 快速上手 —— 构建、运行与首批命令。"""
-lang = "zhs"
-category = "guides"
-subcategory = "router"
-+++
 
 # 快速上手 — Evernight
 

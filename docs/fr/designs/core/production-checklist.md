@@ -1,10 +1,3 @@
-+++
-title = "Liste de Vérification de Déploiement en Production d'Entelecheia"
-description = """> Liste de vérification en 12 étapes pour déployer Entelecheia en production."""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Liste de Vérification de Déploiement en Production d'Entelecheia
 

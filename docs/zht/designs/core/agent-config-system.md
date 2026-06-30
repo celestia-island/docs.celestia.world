@@ -1,10 +1,3 @@
-+++
-title = "代理配置系統設計"
-description = """代理配置系統提供統一的配置管理機制，支援 TOML 檔案儲存與資料庫持久化，實作配置版本管理與熱重載"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # 代理配置系統設計
 

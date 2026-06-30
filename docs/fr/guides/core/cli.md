@@ -1,10 +1,3 @@
-+++
-title = "Guide d'utilisation du CLI"
-description = """`entelecheia-cli` est l'interface en ligne de commande de la plateforme de collaboration multi-agent Entelecheia. Elle communique avec le serveur scepter via JSON-RPC sur socket Unix, offrant des fonctionnalités d'interaction par chat, de gestion du cycle de vie des services, de contrôle des agents, de configuration, etc."""
-lang = "fr"
-category = "guides"
-subcategory = "core"
-+++
 
 # Guide d'utilisation du CLI
 

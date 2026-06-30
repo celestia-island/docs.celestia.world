@@ -1,10 +1,3 @@
-+++
-title = "Mécanisme de Validation du Consensus"
-description = """Le Mécanisme de Validation du Consensus est un composant central du système de collaboration multi-Agent, utilisé pour valider et évaluer la fiabilité et la précision du consensus formé par plusieur"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Mécanisme de Validation du Consensus
 

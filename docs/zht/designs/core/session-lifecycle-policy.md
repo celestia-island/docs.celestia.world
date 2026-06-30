@@ -1,10 +1,3 @@
-+++
-title = "ADR-004：對話儲存生命週期管理"
-description = """> 狀態：已接受（2026-06-10）"""
-lang = "zht"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-004：對話儲存生命週期管理
 

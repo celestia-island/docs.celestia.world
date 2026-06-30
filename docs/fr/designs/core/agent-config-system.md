@@ -1,10 +1,3 @@
-+++
-title = "Conception du Système de Configuration des Agents"
-description = """Le Système de Configuration des Agents fournit un mécanisme unifié de gestion de configuration, prenant en charge le stockage en fichier TOML et la persistance en base de données, implémentant la gest"""
-lang = "fr"
-category = "design"
-subcategory = "core"
-+++
 
 # Conception du Système de Configuration des Agents
 

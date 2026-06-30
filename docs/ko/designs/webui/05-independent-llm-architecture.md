@@ -1,10 +1,3 @@
-+++
-title = "독립형 LLM 아키텍처"
-description = """shittim-chest는 entelecheia에 의존하지 않는 완전히 독립적인 LLM 라우팅 계층을 갖추고 있다. 사용자는 여러 LLM Provider를 구성할 수 있으며, 내장 라우터가 우선순위와 가용성에 따라 자동으로 선택한"""
-lang = "ko"
-category = "design"
-subcategory = "webui"
-+++
 
 # 독립형 LLM 아키텍처
 

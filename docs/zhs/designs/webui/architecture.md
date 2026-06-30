@@ -1,10 +1,3 @@
-+++
-title = "什亭之匣架构概览"
-description = """> 版本：0.1.0 — 活跃开发中。"""
-lang = "zhs"
-category = "architecture"
-subcategory = "webui"
-+++
 
 # 架构
 

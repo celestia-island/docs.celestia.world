@@ -1,10 +1,3 @@
-+++
-title = "ADR-002: 組込みJavaScriptエンジンとしてのBoa"
-description = """日付: 2026-02"""
-lang = "ja"
-category = "design"
-subcategory = "core"
-+++
 
 # ADR-002: 組込みJavaScriptエンジンとしてのBoa
 

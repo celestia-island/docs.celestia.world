@@ -1,10 +1,3 @@
-+++
-title = "entelecheiaとの疎結合"
-description = """shittim-chestとentelecheiaの統合は、JWT認証されたHTTP/WebSocketプロキシブリッジに基づいています。この設計により、shittim-chestはentelecheiaなしで完全に独立して実行でき、必要に応じて"""
-lang = "ja"
-category = "design"
-subcategory = "webui"
-+++
 
 # entelecheiaとの疎結合
 

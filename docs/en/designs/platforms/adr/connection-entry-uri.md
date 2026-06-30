@@ -1,10 +1,3 @@
-+++
-title = "Connection Entry URI Scheme"
-description = """Architecture decision record — Connection Entry URI Scheme."""
-lang = "en"
-category = "design"
-subcategory = "router"
-+++
 
 # Connection Entry URI Scheme
 

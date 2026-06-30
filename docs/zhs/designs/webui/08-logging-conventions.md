@@ -1,10 +1,3 @@
-+++
-title = "CLI 日志规范"
-description = """shittim-chest CLI 封装器的日志输出遵循与 entelecheia 一致的规范，使用 `tracing` 生态，以紧凑的人类可读格式输出到 stderr。"""
-lang = "zhs"
-category = "design"
-subcategory = "webui"
-+++
 
 # CLI 日志规范
 

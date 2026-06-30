@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="docs/logo.webp" alt="Shittim Chest 로고" width="200"/>
+<img src="../../logo.webp" alt="Shittim Chest 로고" width="200"/>
 
 
 **[entelecheia](https://github.com/celestia-island/entelecheia) 멀티 에이전트 플랫폼을 위한 사용자 대면 셸**

@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="docs/logo.webp" alt="Shittim Chest logo" width="200"/>
+<img src="../../logo.webp" alt="Shittim Chest logo" width="200"/>
 
 
 **[entelecheia](https://github.com/celestia-island/entelecheia) 多智能体平台的面向用户外壳**

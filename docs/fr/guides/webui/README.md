@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="docs/logo.webp" alt="Logo Shittim Chest" width="200"/>
+<img src="../../logo.webp" alt="Logo Shittim Chest" width="200"/>
 
 
 **Coque utilisateur pour la plateforme multi-agent [entelecheia](https://github.com/celestia-island/entelecheia)**

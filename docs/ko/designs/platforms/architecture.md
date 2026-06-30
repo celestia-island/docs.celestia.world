@@ -57,7 +57,7 @@ let profile = auto_provision("192.168.1.10").await?;
 
 프로브 → 연결 → DB 스캔 → 구조 프로브 파이프라인이 `S7DeviceProfile`을 반환하
 고, 기호 수동 입력은 제로. 일회성 PLC 준비는
-[TIA Portal 사전 준비 가이드](../../guides/router/tia-portal-setup.md) 참조.
+[TIA Portal 사전 준비 가이드](../../guides/platforms/tia-portal-setup.md) 참조.
 
 ## 연결 모델
 

@@ -58,7 +58,7 @@ let profile = auto_provision("192.168.1.10").await?;
 
 Конвейер probe → connect → scan-DB → structure-probe возвращает
 `S7DeviceProfile` без ручного ввода символов. Одноразовую подготовку ПЛК см. в
-[руководстве по предварительной подготовке TIA Portal](../../guides/router/tia-portal-setup.md).
+[руководстве по предварительной подготовке TIA Portal](../../guides/platforms/tia-portal-setup.md).
 
 ## Модель соединений
 

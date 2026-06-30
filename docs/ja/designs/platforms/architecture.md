@@ -57,7 +57,7 @@ let profile = auto_provision("192.168.1.10").await?;
 
 プローブ → 接続 → DB スキャン → 構造プローブのパイプラインが
 `S7DeviceProfile` を返し、シンボルの手入力はゼロ。一回限りの PLC 準備は
-[TIA Portal 前提準備ガイド](../../guides/router/tia-portal-setup.md) 参照。
+[TIA Portal 前提準備ガイド](../../guides/platforms/tia-portal-setup.md) 参照。
 
 ## 接続モデル
 

@@ -58,7 +58,7 @@ let profile = auto_provision("192.168.1.10").await?;
 
 Le pipeline probe → connect → scan-DB → structure-probe renvoie un
 `S7DeviceProfile` sans saisie manuelle de symboles. Voir le
-[guide de préparation TIA Portal](../../guides/router/tia-portal-setup.md)
+[guide de préparation TIA Portal](../../guides/platforms/tia-portal-setup.md)
 pour la préparation unique du PLC.
 
 ## Modèle de connexion

@@ -56,7 +56,7 @@ let profile = auto_provision("192.168.1.10").await?;
 
 探測 → 連線 → 掃描 DB → 結構探測的流水線回傳一個 `S7DeviceProfile`，零人工錄
 符號。一次性 PLC 準備見
-[TIA Portal 前置準備指南](../../guides/router/tia-portal-setup.md)。
+[TIA Portal 前置準備指南](../../guides/platforms/tia-portal-setup.md)。
 
 ## 連線模型
 

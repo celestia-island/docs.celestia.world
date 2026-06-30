@@ -1,4 +1,3 @@
-
 # Comunicación por Puerto Serie mediante aoba
 
 - **Estado**: Aceptada

@@ -1,4 +1,3 @@
-
 # Tutoriel de développement d'outils MCP
 
 > Comment créer et enregistrer des outils MCP dans la plateforme Entelecheia

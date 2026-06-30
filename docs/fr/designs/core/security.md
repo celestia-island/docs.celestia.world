@@ -1,4 +1,3 @@
-
 # Architecture de Sécurité d'Entelecheia
 
 > Modèle complet de défense en profondeur pour la Plateforme d'Orchestration Multi-Agent Entelecheia.

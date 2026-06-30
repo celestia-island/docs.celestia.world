@@ -1,4 +1,3 @@
-
 # Plan de Integración Autónoma del Corredor Industrial
 
 > **Objetivo**: El sistema debe demostrar **auto-interconexión autónoma** con un

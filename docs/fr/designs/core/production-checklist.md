@@ -1,4 +1,3 @@
-
 # Liste de Vérification de Déploiement en Production d'Entelecheia
 
 > Liste de vérification en 12 étapes pour déployer Entelecheia en production.

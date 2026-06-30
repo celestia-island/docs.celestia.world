@@ -1,4 +1,3 @@
-
 # ADR-002: Boa as Embedded JavaScript Engine
 
 **Date**: 2026-02

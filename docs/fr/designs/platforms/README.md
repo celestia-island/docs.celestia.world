@@ -1,4 +1,3 @@
-
 # Documents de design de plateforme
 
 > **Périmètre.** Ces documents sont de *niveau plateforme* : ils traversent

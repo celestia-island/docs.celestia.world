@@ -1,4 +1,3 @@
-
 # Requisitos previos de TIA Portal — Conectar evernight
 
 > **Objetivo**: preparar **una vez** su PLC Siemens S7-1200/1500 en TIA Portal

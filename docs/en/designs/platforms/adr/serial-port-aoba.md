@@ -1,4 +1,3 @@
-
 # Serial Port Communication via aoba
 
 - **Status**: Accepted

@@ -1,4 +1,3 @@
-
 # Documents de Conception
 
 > **Note** : Ces documents de conception décrivent l'architecture et le comportement prévus — certaines fonctionnalités peuvent encore être en cours.

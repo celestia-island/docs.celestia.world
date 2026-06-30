@@ -1,4 +1,3 @@
-
 # Design Documents
 
 > **IMPORTANT**: These are aspirational design documents. They describe the intended

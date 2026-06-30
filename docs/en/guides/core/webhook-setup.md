@@ -1,4 +1,3 @@
-
 # Webhook Platform Setup
 
 > Description of the current webhook layout and integration scope

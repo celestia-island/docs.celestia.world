@@ -1,4 +1,3 @@
-
 # Consensus Validation Mechanism
 
 ## Overview

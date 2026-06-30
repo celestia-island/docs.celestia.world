@@ -1,4 +1,3 @@
-
 # Format de Fichier de Projet d'Usine (`.plant.json`)
 
 > Conception du format de fichier d'ingénierie — similaire aux fichiers de projet Siemens TIA Portal, décrivant de manière unifiée la topologie des nœuds industriels, les panneaux 2D et les scènes 3D.

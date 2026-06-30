@@ -1,4 +1,3 @@
-
 # Webhook 配置指南
 
 > **目标读者**：将外部服务与 shittim-chest 集成的管理员。

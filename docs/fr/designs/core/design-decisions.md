@@ -1,4 +1,3 @@
-
 # Registres de Décisions Architecturales (ADR)
 
 Ce répertoire enregistre les décisions architecturales clés prises pendant le développement d'Entelecheia. Chaque ADR explique **ce qui** a été décidé, **pourquoi** cela a été décidé et quels **compromis** ont été envisagés.

@@ -1,4 +1,3 @@
-
 # VNC (RFB) Protocol Client
 
 - **Status**: Accepted

@@ -1,4 +1,3 @@
-
 # Product Positioning & Competitive Landscape
 
 ## Overview

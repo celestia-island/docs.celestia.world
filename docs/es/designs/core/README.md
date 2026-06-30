@@ -1,4 +1,3 @@
-
 # Documentos de Diseño
 
 > **IMPORTANTE**: Estos son documentos de diseño aspiracionales. Describen la

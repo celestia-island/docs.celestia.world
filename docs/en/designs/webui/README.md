@@ -1,4 +1,3 @@
-
 # Design Documents
 
 > **Note**: These design documents describe the intended architecture and behavior — some features may still be in progress.

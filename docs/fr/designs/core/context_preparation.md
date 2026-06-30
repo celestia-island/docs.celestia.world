@@ -1,4 +1,3 @@
-
 # Mécanisme de Préparation de Contexte
 
 ## Aperçu

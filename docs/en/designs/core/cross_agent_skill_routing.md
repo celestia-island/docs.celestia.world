@@ -1,4 +1,3 @@
-
 # Cross-Agent Skill Routing Architecture
 
 ## Problem

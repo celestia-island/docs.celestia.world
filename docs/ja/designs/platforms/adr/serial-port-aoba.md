@@ -1,4 +1,3 @@
-
 # シリアルポート通信 — aoba による実装
 
 - **Status**: Accepted

@@ -1,4 +1,3 @@
-
 # Arquitectura de Evernight
 
 > **evernight** es una biblioteca y demonio de control remoto multiplataforma.

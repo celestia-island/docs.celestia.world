@@ -1,4 +1,3 @@
-
 # Guide de Configuration des Webhooks
 
 > **Public** : Administrateurs intégrant des services externes avec shittim-chest.

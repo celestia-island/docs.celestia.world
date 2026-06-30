@@ -1,4 +1,3 @@
-
 # Feature Flag 아키텍처
 
 - **상태**: Accepted

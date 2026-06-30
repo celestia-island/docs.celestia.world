@@ -1,4 +1,3 @@
-
 # Positionnement Produit & Paysage Concurrentiel
 
 ## Aperçu

@@ -1,4 +1,3 @@
-
 # Tiempo de ejecución asíncrono — tokio
 
 - **Estado**: Aceptada

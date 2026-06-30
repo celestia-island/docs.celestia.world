@@ -1,4 +1,3 @@
-
 # Diseño de Programación de Contenedores Cosmos y Enrutamiento de Tokens
 
 ## Descripción General

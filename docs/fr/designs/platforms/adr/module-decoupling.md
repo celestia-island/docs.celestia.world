@@ -1,4 +1,3 @@
-
 # Découplage des modules et propriété des types
 
 - **Statut** : Acceptée

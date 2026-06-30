@@ -1,4 +1,3 @@
-
 # Diseño del Sistema de Niveles de Modelo
 
 ## Descripción General

@@ -1,4 +1,3 @@
-
 # Diseño del Sistema de Configuración TOML de Proveedores
 
 ## Descripción General

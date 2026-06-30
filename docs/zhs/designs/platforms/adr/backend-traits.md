@@ -1,4 +1,3 @@
-
 # TerminalBackend / ViewportBackend / FileBackend Trait 抽象
 
 - **状态**：已采纳

@@ -1,4 +1,3 @@
-
 # Fundamentals
 
 > Concept explanations based on the current reality of the code

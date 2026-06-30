@@ -1,4 +1,3 @@
-
 # Conception du Système de Statistiques de Période d'Utilisation
 
 ## Aperçu

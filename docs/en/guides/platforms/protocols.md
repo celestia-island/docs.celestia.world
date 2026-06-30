@@ -1,4 +1,3 @@
-
 # Industrial Protocol Integration — Evernight
 
 Evernight is the **mandatory hardware capability broker** for the celestia-island

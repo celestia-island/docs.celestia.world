@@ -1,4 +1,3 @@
-
 # Base de Données de Test Intégrée (pglite-oxide)
 
 ## Aperçu

@@ -1,4 +1,3 @@
-
 # TIA Portal 前置準備 —— 接入 evernight
 
 > **目標**：在 TIA Portal 中對西門子 S7-1200/1500 PLC 做**一次性**設定，使

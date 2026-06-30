@@ -1,4 +1,3 @@
-
 # Estrategia de Health Check de PostgreSQL
 
 ## Resumen

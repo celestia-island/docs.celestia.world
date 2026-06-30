@@ -1,4 +1,3 @@
-
 # Especificación de Paquete de Agente de Capa 2/3
 
 > **Estado**: Borrador v1 — 2026-06-26

@@ -1,4 +1,3 @@
-
 # Issue 追蹤整合
 
 > 將外部 Issue 追蹤系統連接到 Entelecheia（玄樞） 的 Agent 工作流

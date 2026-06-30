@@ -1,4 +1,3 @@
-
 # Abstracciones de Traits TerminalBackend / ViewportBackend / FileBackend
 
 - **Estado**: Aceptada

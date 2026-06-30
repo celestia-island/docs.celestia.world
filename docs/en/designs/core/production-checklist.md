@@ -1,4 +1,3 @@
-
 # Entelecheia Production Deployment Checklist
 
 > 12-step checklist for deploying Entelecheia to production.

@@ -1,4 +1,3 @@
-
 # Абстракции типажей TerminalBackend / ViewportBackend / FileBackend
 
 - **Статус**: Принято

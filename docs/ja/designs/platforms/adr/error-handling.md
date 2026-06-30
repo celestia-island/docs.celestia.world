@@ -1,4 +1,3 @@
-
 # エラーハンドリング — thiserror とクレート Result
 
 - **Status**: Accepted

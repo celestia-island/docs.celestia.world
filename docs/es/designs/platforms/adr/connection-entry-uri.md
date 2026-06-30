@@ -1,4 +1,3 @@
-
 # Esquema URI de Entradas de Conexión
 
 - **Estado**: Aceptada

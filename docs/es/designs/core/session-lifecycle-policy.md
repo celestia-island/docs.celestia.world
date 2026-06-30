@@ -1,4 +1,3 @@
-
 # ADR-004: Gestión del Ciclo de Vida de Almacenamiento de Sesiones
 
 > **Estado**: Aceptado (2026-06-10)

@@ -1,4 +1,3 @@
-
 # Abstractions de traits TerminalBackend / ViewportBackend / FileBackend
 
 - **Statut** : Acceptée

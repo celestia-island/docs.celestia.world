@@ -1,4 +1,3 @@
-
 # Architecture
 
 > **Version** : 0.2.0 — développement précoce, pas prêt pour la production.

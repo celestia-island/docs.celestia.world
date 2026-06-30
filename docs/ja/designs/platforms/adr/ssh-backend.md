@@ -1,4 +1,3 @@
-
 # SSH バックエンド — russh と共有接続
 
 - **Status**: Accepted

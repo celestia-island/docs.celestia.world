@@ -1,4 +1,3 @@
-
 # Analyseur de configuration SSH
 
 - **Statut** : Acceptée

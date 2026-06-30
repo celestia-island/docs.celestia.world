@@ -1,4 +1,3 @@
-
 # Diseño del Sistema de Configuración de Agentes
 
 ## Descripción General

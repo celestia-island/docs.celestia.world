@@ -1,4 +1,3 @@
-
 # Arquitectura de Sincronización Incremental
 
 ## Descripción General

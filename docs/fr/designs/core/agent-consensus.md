@@ -1,4 +1,3 @@
-
 # Mécanisme de Validation du Consensus
 
 ## Aperçu

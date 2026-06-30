@@ -1,4 +1,3 @@
-
 # Conversation Orchestration Design (HubRis + ApoRia)
 
 ## Background

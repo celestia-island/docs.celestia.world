@@ -1,4 +1,3 @@
-
 # Conceptos Fundamentales
 
 > **Audiencia**: Desarrolladores que quieren una comprensión conceptual del diseño de shittim-chest.

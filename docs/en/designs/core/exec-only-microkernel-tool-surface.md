@@ -1,4 +1,3 @@
-
 # ADR-001: Exec-Only Microkernel Tool Surface
 
 **Date**: 2026-02

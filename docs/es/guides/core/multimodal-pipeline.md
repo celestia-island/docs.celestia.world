@@ -1,4 +1,3 @@
-
 # Pipeline multimodal
 
 > **⚠️ Referencia de Agent archivado — no está en el pipeline de desarrollo**

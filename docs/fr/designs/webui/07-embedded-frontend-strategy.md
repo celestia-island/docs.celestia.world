@@ -1,4 +1,3 @@
-
 # Stratégie de Frontend Intégré
 
 ## Aperçu

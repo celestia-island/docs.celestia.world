@@ -1,4 +1,3 @@
-
 # Contribuer à Evernight
 
 > Ceci est la version française de la politique de contribution. Les commandes

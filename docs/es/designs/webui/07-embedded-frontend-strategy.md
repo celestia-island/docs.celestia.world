@@ -1,4 +1,3 @@
-
 # Estrategia de Frontend Incrustado
 
 ## Resumen

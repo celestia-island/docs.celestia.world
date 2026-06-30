@@ -1,4 +1,3 @@
-
 # Issue Tracking Integration
 
 > Connect external issue tracking systems to Entelecheia's agent workflow

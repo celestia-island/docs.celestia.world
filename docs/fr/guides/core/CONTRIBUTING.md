@@ -1,4 +1,3 @@
-
 # Guide de contribution (Entelecheia)
 
 > Ce fichier est la version française de la politique de contribution. Pour les commandes de construction et les instructions d'installation détaillées, consultez la version anglaise

@@ -1,4 +1,3 @@
-
 # Conventions de Journalisation du CLI
 
 ## Aperçu

@@ -1,4 +1,3 @@
-
 # Conception de l'Ordonnancement de Conteneurs et du Routage de Jetons Cosmos
 
 ## Aperçu

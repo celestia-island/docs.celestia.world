@@ -1,4 +1,3 @@
-
 # Module Decoupling and Type Ownership
 
 - **Status**: Accepted

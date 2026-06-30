@@ -1,4 +1,3 @@
-
 # Architecture Deep Dive
 
 > **Audience**: Developers who need to understand how shittim-chest works internally.

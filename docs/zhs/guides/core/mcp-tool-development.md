@@ -1,4 +1,3 @@
-
 # MCP 工具开发教程
 
 > 如何在 Entelecheia（玄枢） 平台中创建和注册 MCP 工具

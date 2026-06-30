@@ -1,4 +1,3 @@
-
 # Contributing Guide (Entelecheia)
 
 > This file is the English version of the contribution policy. For build commands and detailed installation steps, see

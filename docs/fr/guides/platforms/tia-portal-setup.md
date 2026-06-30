@@ -1,4 +1,3 @@
-
 # Prérequis TIA Portal — Connecter evernight
 
 > **Objectif** : préparer **une fois** votre automate Siemens S7-1200/1500 dans

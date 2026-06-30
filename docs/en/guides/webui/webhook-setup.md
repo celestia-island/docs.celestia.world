@@ -1,4 +1,3 @@
-
 # Webhook Configuration Guide
 
 > **Audience**: Administrators integrating external services with shittim-chest.

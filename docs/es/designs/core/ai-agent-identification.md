@@ -1,4 +1,3 @@
-
 # Identificación de Agentes IA y Estrategia de Co-autoría en Commits
 
 ## Descripción General

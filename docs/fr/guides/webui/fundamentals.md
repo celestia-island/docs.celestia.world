@@ -1,4 +1,3 @@
-
 # Concepts Fondamentaux
 
 > **Public** : Développeurs souhaitant une compréhension conceptuelle de la conception de shittim-chest.

@@ -1,4 +1,3 @@
-
 # Integration Guide — Evernight
 
 How to connect evernight to each supported protocol, what server software to

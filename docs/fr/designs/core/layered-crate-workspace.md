@@ -1,4 +1,3 @@
-
 # ADR-004 : Architecture d'Espace de Travail en 60+ Crates Superposées
 
 **Date** : 2026-03

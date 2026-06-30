@@ -1,4 +1,3 @@
-
 # CLI 래퍼 아키텍처: Bollard 기반 Docker 오케스트레이션
 
 ## 개요

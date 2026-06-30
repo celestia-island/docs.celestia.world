@@ -1,4 +1,3 @@
-
 # Arquitectura
 
 > Basada en la estructura actual de tiempo de ejecución, no en una visión imaginaria del estado objetivo

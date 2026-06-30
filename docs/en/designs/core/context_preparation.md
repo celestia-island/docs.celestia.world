@@ -1,4 +1,3 @@
-
 # Context Preparation Mechanism
 
 ## Overview

@@ -1,4 +1,3 @@
-
 # 25 — Diseño del Sistema de Plugins WASI
 
 ## Descripción General

@@ -1,4 +1,3 @@
-
 # Soul Prompt Architecture
 
 ## Background

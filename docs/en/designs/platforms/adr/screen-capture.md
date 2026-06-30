@@ -1,4 +1,3 @@
-
 # Screen Capture Architecture
 
 - **Status**: Accepted

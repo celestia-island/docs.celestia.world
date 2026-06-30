@@ -1,4 +1,3 @@
-
 # Plan d'Intégration Autonome du Corridor Industriel
 
 > **Objectif** : Le système doit démontrer un **auto-interfaçage autonome** avec un

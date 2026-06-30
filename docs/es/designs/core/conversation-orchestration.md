@@ -1,4 +1,3 @@
-
 # Diseño de Orquestación de Conversaciones (HubRis + ApoRia)
 
 ## Antecedentes

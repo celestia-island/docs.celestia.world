@@ -1,4 +1,3 @@
-
 # Conception du Système de Configuration TOML des Fournisseurs
 
 ## Aperçu

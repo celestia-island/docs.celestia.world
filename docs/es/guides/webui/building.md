@@ -1,4 +1,3 @@
-
 # Guía de Construcción y Desarrollo
 
 > **Audiencia**: Contribuyentes configurando un entorno de desarrollo local de shittim-chest.

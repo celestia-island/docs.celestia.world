@@ -1,4 +1,3 @@
-
 # TIA Portal 사전 준비 —— evernight 연결
 
 > **목표**: TIA Portal에서 지멘스 S7-1200/1500 PLC를 **한 번만** 설정하여,

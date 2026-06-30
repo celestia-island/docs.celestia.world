@@ -1,4 +1,3 @@
-
 # Getting Started — Evernight
 
 Evernight (长夜月) is a cross-platform remote control library and daemon written in Rust. It bundles screen capture, WebRTC streaming, SSH remote shell, remote terminal access, file transfer, hardware telemetry, industrial protocol support (Modbus, S7comm, OPC-UA probing), and NAT traversal into a single reusable crate and standalone CLI binary.

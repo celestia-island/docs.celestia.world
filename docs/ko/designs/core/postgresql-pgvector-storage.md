@@ -1,4 +1,3 @@
-
 # ADR-003: 통합 데이터 저장소를 위한 PostgreSQL + PgVector
 
 **일자**: 2026-02

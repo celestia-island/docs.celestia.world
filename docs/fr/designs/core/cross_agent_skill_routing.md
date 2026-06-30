@@ -1,4 +1,3 @@
-
 # Architecture de Routage de Compétences Inter-Agents
 
 ## Problème

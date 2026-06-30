@@ -1,4 +1,3 @@
-
 # 오류 처리 — thiserror와 크레이트 Result
 
 - **상태**: Accepted

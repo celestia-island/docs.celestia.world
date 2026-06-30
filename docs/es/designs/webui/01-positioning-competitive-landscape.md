@@ -1,4 +1,3 @@
-
 # Posicionamiento del Producto y Panorama Competitivo
 
 ## Resumen

@@ -1,4 +1,3 @@
-
 # Guía de uso de CLI
 
 `entelecheia-cli` es la interfaz de línea de comandos de la plataforma de colaboración multi-agente Entelecheia (玄枢). Se comunica con el servidor scepter a través de Unix socket JSON-RPC, proporcionando interacción de chat, gestión del ciclo de vida de servicios, control de agentes, configuración y más.

@@ -1,4 +1,3 @@
-
 # Provider TOML 配置系統設計
 
 ## 概述

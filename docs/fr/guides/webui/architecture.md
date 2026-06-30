@@ -1,4 +1,3 @@
-
 # Plongée dans l'Architecture
 
 > **Public** : Développeurs ayant besoin de comprendre comment shittim-chest fonctionne en interne.

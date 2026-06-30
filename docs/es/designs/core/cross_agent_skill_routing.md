@@ -1,4 +1,3 @@
-
 # Arquitectura de Enrutamiento de Habilidades entre Agentes
 
 ## Problema

@@ -1,4 +1,3 @@
-
 # ADR-005: Container-Sandboxed Agent Execution with COSMOS
 
 **Date**: 2026-02

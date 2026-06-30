@@ -1,4 +1,3 @@
-
 # 22 — IEPL TypeScript Execution Engine Design
 
 ## Overview

@@ -1,4 +1,3 @@
-
 # CLI Usage Guide
 
 `entelecheia-cli` is the command-line interface for the Entelecheia multi-agent collaboration platform. It communicates with the scepter server over a Unix socket JSON-RPC, providing chat interaction, service lifecycle management, agent control, configuration, and more.

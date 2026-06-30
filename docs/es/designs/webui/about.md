@@ -1,4 +1,3 @@
-
 # Shittim Chest (什亭之匣)
 
 **Versión 0.1.0**

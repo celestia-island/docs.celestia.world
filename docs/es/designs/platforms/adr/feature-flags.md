@@ -1,4 +1,3 @@
-
 # Arquitectura de Feature Flags
 
 - **Estado**: Aceptada

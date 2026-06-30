@@ -1,4 +1,3 @@
-
 # ADR-003：以 PostgreSQL + PgVector 實作統一資料儲存
 
 **日期**：2026-02

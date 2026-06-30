@@ -1,4 +1,3 @@
-
 # 22 — Conception du Moteur d'Exécution TypeScript IEPL
 
 ## Aperçu

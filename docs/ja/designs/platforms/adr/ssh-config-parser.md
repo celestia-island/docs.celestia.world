@@ -1,4 +1,3 @@
-
 # SSH 設定パーサー
 
 - **Status**: Accepted

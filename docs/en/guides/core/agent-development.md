@@ -1,4 +1,3 @@
-
 # Agent Development Guide
 
 > Agent development instructions based on the current reality of this repository

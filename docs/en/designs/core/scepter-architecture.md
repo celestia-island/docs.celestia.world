@@ -1,4 +1,3 @@
-
 # Usage Period Statistics System Design
 
 ## Overview

@@ -1,4 +1,3 @@
-
 # Schéma URI des entrées de connexion
 
 - **Statut** : Acceptée

@@ -1,4 +1,3 @@
-
 # 25 — WASI Plugin System Design
 
 ## Overview

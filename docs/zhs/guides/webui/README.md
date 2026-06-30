@@ -1,4 +1,3 @@
-
 # Shittim Chest（什亭之匣）
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">

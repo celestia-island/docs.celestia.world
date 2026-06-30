@@ -1,4 +1,3 @@
-
 # ADR-001: Superficie de Herramientas de Microkernel Solo-Ejecución
 
 **Fecha**: 2026-02

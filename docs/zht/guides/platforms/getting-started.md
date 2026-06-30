@@ -1,4 +1,3 @@
-
 # 快速上手 — Evernight
 
 Evernight（長夜月）是一套以 Rust 撰寫的跨平臺遠端控制函式庫與常駐服務。它將螢幕擷取、WebRTC 推流、SSH 遠端 shell、遠端終端機、檔案傳輸、硬體遙測、工業協定支援（Modbus、S7comm、OPC-UA 探測）與 NAT 穿透整合到一個可重複使用的 crate 與獨立的 CLI 二進位中。

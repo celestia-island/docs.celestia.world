@@ -1,4 +1,3 @@
-
 # Documento de Diseño Detallado del Sistema RBAC
 
 ## 1. Objetivo

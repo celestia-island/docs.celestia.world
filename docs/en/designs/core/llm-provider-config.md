@@ -1,4 +1,3 @@
-
 # Provider TOML Configuration System Design
 
 ## Overview

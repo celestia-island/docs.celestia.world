@@ -1,4 +1,3 @@
-
 # Independent LLM Architecture
 
 ## Overview

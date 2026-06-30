@@ -1,4 +1,3 @@
-
 # Reflection Architecture: Continuous Self-Doubt in the Skill Chain
 
 > **Status**: Design specification. Implementation in progress.

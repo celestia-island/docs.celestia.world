@@ -1,4 +1,3 @@
-
 # Arquitectura de Namespaces: `vars`, `refs`, `env`
 
 > **Nota (2026-06)**: La superficie de herramientas visible para el LLM se redujo de 5 a 3 primitivas. `ref_add` y `ref_remove` **ya no se exponen al LLM** — `agent_allowed_tools()` devuelve solo `exec`, `write_to_var`, `write_to_var_json`. El namespace `__refs` todavía existe como estructura de datos interna (instantánea/restauración, inyección de prompt) pero ya no es mutado directamente por el modelo. Las secciones a continuación que describen el despacho de `ref_add`/`ref_remove` documentan la fontanería interna residual, no la superficie de herramientas del LLM.

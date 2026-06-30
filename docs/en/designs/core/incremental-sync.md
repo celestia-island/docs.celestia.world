@@ -1,4 +1,3 @@
-
 # Incremental Sync Architecture
 
 ## Overview

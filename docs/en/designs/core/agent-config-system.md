@@ -1,4 +1,3 @@
-
 # Agent Configuration System Design
 
 ## Overview

@@ -1,4 +1,3 @@
-
 # CLI Wrapper Architecture: Bollard-Based Docker Orchestration
 
 ## Overview

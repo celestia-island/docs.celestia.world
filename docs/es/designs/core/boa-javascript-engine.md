@@ -1,4 +1,3 @@
-
 # ADR-002: Boa como Motor JavaScript Embebido
 
 **Fecha**: 2026-02

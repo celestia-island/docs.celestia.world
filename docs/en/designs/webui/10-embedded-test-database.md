@@ -1,4 +1,3 @@
-
 # Embedded Test Database (pglite-oxide)
 
 ## Overview

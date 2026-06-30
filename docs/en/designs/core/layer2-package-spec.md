@@ -1,4 +1,3 @@
-
 # Layer 2/3 Agent Package Specification
 
 > **Status**: Draft v1 — 2026-06-26

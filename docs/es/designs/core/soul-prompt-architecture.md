@@ -1,4 +1,3 @@
-
 # Arquitectura del Soul Prompt
 
 ## Antecedentes

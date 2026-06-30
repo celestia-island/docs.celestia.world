@@ -1,4 +1,3 @@
-
 # Guide de Construction et Développement
 
 > **Public** : Contributeurs configurant un environnement de développement local shittim-chest.

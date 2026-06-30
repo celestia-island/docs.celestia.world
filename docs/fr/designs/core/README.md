@@ -1,4 +1,3 @@
-
 # Documents de Conception
 
 > **IMPORTANT** : Ce sont des documents de conception ambitieux. Ils décrivent l'architecture

@@ -1,4 +1,3 @@
-
 # SSH Backend — russh with Shared Connection
 
 - **Status**: Accepted

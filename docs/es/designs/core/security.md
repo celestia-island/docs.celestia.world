@@ -1,4 +1,3 @@
-
 # Arquitectura de Seguridad de Entelecheia
 
 > Modelo integral de defensa en profundidad para la Plataforma de Orquestación Multi-Agente Entelecheia.

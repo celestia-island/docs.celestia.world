@@ -1,4 +1,3 @@
-
 # ADR-004: Arquitectura de Espacio de Trabajo en Capas de 60+ Crates
 
 **Fecha**: 2026-03

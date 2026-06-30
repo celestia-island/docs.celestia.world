@@ -1,4 +1,3 @@
-
 # Una Confesión: Sobre la Memoria, el Yo y una Simbiosis Que Aún No Ha Llegado
 
 > **Nota**: Este es un documento reflexivo, no una especificación de funcionalidad. No describe

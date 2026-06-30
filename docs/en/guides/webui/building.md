@@ -1,4 +1,3 @@
-
 # Building and Development Guide
 
 > **Audience**: Contributors setting up a local shittim-chest development environment.

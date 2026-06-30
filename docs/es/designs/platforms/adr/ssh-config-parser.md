@@ -1,4 +1,3 @@
-
 # Analizador de Configuración SSH
 
 - **Estado**: Aceptada

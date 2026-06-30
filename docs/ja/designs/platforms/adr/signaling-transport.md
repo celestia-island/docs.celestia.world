@@ -1,4 +1,3 @@
-
 # シグナリングトランスポート — デュアル Unix ソケット / TCP
 
 - **Status**: Accepted

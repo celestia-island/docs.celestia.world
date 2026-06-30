@@ -1,4 +1,3 @@
-
 # Integración de Protocolos Industriales — Evernight
 
 Evernight es el **broker obligatorio de capacidades de hardware** para el

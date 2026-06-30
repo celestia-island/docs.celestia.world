@@ -1,4 +1,3 @@
-
 # Lista de Verificación de Despliegue en Producción de Entelecheia
 
 > Lista de verificación de 12 pasos para desplegar Entelecheia en producción.

@@ -1,4 +1,3 @@
-
 # Communication par port série via aoba
 
 - **Statut** : Acceptée

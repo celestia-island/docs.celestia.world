@@ -1,4 +1,3 @@
-
 # 非同期ランタイム — tokio
 
 - **Status**: Accepted

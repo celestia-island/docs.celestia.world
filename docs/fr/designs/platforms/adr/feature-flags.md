@@ -1,4 +1,3 @@
-
 # Architecture des feature flags
 
 - **Statut** : Acceptée

@@ -1,4 +1,3 @@
-
 # Contribuer à Arona
 
 Merci de votre intérêt pour contribuer ! Ce guide couvre tout ce dont vous

@@ -1,4 +1,3 @@
-
 # Stratégie de Vérification de Santé PostgreSQL
 
 ## Aperçu

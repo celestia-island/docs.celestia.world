@@ -1,4 +1,3 @@
-
 # Architecture d'Evernight
 
 > **evernight** est une bibliothèque et un démon de contrôle à distance

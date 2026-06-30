@@ -1,4 +1,3 @@
-
 # Guía de contribución (Entelecheia)
 
 > Este documento es la versión en español de la política de contribución. Para comandos de construcción e instrucciones detalladas de instalación, consulta el documento en inglés en la raíz del repositorio

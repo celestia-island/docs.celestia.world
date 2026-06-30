@@ -1,4 +1,3 @@
-
 # Architecture de capture d'écran
 
 - **Statut** : Acceptée

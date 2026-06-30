@@ -1,4 +1,3 @@
-
 # Architecture
 
 > Basé sur la structure d'exécution actuelle, pas sur une vision idéalisée

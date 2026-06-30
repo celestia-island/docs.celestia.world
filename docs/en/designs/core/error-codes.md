@@ -1,4 +1,3 @@
-
 # Error Code Reference
 
 > **IMPORTANT**: The "error codes" documented below (e.g. `DB_CONNECT_FAILED`,

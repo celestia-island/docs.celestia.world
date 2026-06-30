@@ -1,4 +1,3 @@
-
 # 接続エントリ URI スキーム
 
 - **Status**: Accepted

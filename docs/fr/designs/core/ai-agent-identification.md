@@ -1,4 +1,3 @@
-
 # Identification des Agents IA et Stratégie de Co-auteur de Commit
 
 ## Aperçu

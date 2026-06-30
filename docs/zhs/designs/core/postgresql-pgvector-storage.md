@@ -1,4 +1,3 @@
-
 # ADR-003：PostgreSQL + PgVector 统一数据存储
 
 **日期**：2026-02

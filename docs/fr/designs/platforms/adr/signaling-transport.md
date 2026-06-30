@@ -1,4 +1,3 @@
-
 # Transport de signalisation — Double socket Unix / TCP
 
 - **Statut** : Acceptée

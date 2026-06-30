@@ -1,4 +1,3 @@
-
 # SSH Connection Pool
 
 - **Status**: Accepted

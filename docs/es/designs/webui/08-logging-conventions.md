@@ -1,4 +1,3 @@
-
 # Convenciones de Logging del CLI
 
 ## Resumen

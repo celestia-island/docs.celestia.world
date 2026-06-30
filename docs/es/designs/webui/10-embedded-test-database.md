@@ -1,4 +1,3 @@
-
 # Base de Datos de Prueba Incrustada (pglite-oxide)
 
 ## Resumen

@@ -1,4 +1,3 @@
-
 # Cosmos Container Scheduling and Token Routing Design
 
 ## Overview

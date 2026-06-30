@@ -1,4 +1,3 @@
-
 # Contribuer à Shittim Chest
 
 Merci de votre intérêt pour contribuer ! Ce guide couvre tout ce dont vous avez besoin pour commencer.

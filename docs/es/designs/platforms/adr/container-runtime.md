@@ -1,4 +1,3 @@
-
 # Cliente de Tiempo de Ejecución de Contenedores (Docker/Podman)
 
 - **Estado**: Aceptada

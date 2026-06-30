@@ -1,4 +1,3 @@
-
 # Model Tiering System Design
 
 ## Overview

@@ -1,4 +1,3 @@
-
 # Contribuir a Evernight
 
 > Esta es la versión en español de la política de contribución. Los comandos de

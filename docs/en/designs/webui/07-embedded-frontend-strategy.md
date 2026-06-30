@@ -1,4 +1,3 @@
-
 # Embedded Frontend Strategy
 
 ## Overview

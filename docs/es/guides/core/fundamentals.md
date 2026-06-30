@@ -1,4 +1,3 @@
-
 # Conceptos fundamentales
 
 > Explicación de conceptos basada en la realidad actual del código

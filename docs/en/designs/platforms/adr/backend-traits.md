@@ -1,4 +1,3 @@
-
 # TerminalBackend / ViewportBackend / FileBackend Trait Abstractions
 
 - **Status**: Accepted

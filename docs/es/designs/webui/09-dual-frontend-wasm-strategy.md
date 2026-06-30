@@ -1,4 +1,3 @@
-
 # Estrategia de Migración WASM de Frontend Dual
 
 ## Resumen

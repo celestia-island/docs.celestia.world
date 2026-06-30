@@ -1,4 +1,3 @@
-
 # Loose Coupling with entelecheia
 
 ## Overview

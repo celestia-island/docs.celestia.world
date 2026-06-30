@@ -1,4 +1,3 @@
-
 # Análisis Competitivo de Frameworks Multi-Agente
 
 **Fecha**: 12 de mayo de 2026 (actualizado tras auditoría completa del código fuente de 43 crates × 1500+ archivos fuente)

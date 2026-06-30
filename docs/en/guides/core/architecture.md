@@ -1,4 +1,3 @@
-
 # Architecture
 
 > Based on the current runtime structure, not the target-state imagination

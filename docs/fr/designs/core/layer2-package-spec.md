@@ -1,4 +1,3 @@
-
 # Spécification du Paquet d'Agent Couche 2/3
 
 > **Statut** : Brouillon v1 — 2026-06-26

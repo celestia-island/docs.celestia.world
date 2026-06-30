@@ -1,4 +1,3 @@
-
 # ADR-005 : Exécution d'Agent en Bac à Sable par Conteneur avec COSMOS
 
 **Date** : 2026-02

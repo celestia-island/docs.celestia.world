@@ -1,4 +1,3 @@
-
 # Configuration de plateforme Webhook
 
 > Description de la disposition actuelle des webhooks et de l'étendue de l'intégration

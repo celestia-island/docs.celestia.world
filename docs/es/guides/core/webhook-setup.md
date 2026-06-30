@@ -1,4 +1,3 @@
-
 # Configuración de plataforma Webhook
 
 > Descripción del diseño actual de webhook y el alcance de integración

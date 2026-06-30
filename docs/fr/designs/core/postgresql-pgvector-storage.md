@@ -1,4 +1,3 @@
-
 # ADR-003 : PostgreSQL + PgVector pour le Stockage de Données Unifié
 
 **Date** : 2026-02

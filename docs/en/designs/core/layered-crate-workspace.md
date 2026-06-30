@@ -1,4 +1,3 @@
-
 # ADR-004: 60+ Crate Layered Workspace Architecture
 
 **Date**: 2026-03

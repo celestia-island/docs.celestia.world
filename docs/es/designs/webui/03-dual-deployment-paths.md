@@ -1,4 +1,3 @@
-
 # Rutas de Despliegue de Modo Dual: Dev vs Release
 
 ## Resumen

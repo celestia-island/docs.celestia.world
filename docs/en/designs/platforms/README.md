@@ -1,4 +1,3 @@
-
 # Platform Design Documents
 
 > **Scope.** These documents are *platform-level*: they cut across

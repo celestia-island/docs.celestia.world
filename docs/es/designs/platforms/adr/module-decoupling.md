@@ -1,4 +1,3 @@
-
 # Desacoplamiento de Módulos y Propiedad de Tipos
 
 - **Estado**: Aceptada

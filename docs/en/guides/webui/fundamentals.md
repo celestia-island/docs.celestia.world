@@ -1,4 +1,3 @@
-
 # Core Concepts
 
 > **Audience**: Developers who want a conceptual understanding of shittim-chest's design.

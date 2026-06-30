@@ -1,4 +1,3 @@
-
 # Architecture Decision Records (ADR)
 
 This directory records the key architectural decisions made during the development of Evernight. Each ADR explains **what** was decided, **why** it was decided, and what **trade-offs** were considered.

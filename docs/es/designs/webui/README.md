@@ -1,4 +1,3 @@
-
 # Documentos de Diseño
 
 > **Nota**: Estos documentos de diseño describen la arquitectura y comportamiento previstos — algunas características pueden estar aún en progreso.

@@ -1,4 +1,3 @@
-
 # Arquitectura de Captura de Pantalla
 
 - **Estado**: Aceptada

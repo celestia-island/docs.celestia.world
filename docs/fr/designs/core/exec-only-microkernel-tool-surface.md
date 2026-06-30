@@ -1,4 +1,3 @@
-
 # ADR-001 : Surface d'Outils Micro-Noyau Exec-Only
 
 **Date** : 2026-02

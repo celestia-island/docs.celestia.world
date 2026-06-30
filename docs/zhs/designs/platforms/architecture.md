@@ -1,4 +1,3 @@
-
 # Evernight 架构
 
 > **evernight** 是一个跨平台远程控制库与守护进程。它是 celestia-island 生态的

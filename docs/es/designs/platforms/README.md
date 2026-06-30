@@ -1,4 +1,3 @@
-
 # Documentos de Diseño de Plataforma
 
 > **Alcance.** Estos documentos son de *nivel plataforma*: atraviesan

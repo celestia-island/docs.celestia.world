@@ -1,4 +1,3 @@
-
 # Multi-Agent Framework Competitive Analysis
 
 **Date**: May 12, 2026 (updated after full source code audit of 43 crates × 1500+ source files)

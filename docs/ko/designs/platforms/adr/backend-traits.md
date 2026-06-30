@@ -1,4 +1,3 @@
-
 # TerminalBackend / ViewportBackend / FileBackend 트레이트 추상화
 
 - **상태**: Accepted

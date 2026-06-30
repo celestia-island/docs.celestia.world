@@ -1,4 +1,3 @@
-
 # Acoplamiento Débil con entelecheia
 
 ## Resumen

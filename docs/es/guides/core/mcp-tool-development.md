@@ -1,4 +1,3 @@
-
 # Tutorial de desarrollo de herramientas MCP
 
 > Cómo crear y registrar herramientas MCP en la plataforma Entelecheia (玄枢)

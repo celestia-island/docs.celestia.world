@@ -1,4 +1,3 @@
-
 # Pool de Conexiones SSH
 
 - **Estado**: Aceptada

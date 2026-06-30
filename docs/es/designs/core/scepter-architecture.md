@@ -1,4 +1,3 @@
-
 # Diseño del Sistema de Estadísticas de Período de Uso
 
 ## Descripción General

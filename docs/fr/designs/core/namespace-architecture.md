@@ -1,4 +1,3 @@
-
 # Architecture des Espaces de Noms : `vars`, `refs`, `env`
 
 > **Note (2026-06)** : La surface d'outils visible par le LLM a été réduite de 5 à 3 primitives. `ref_add` et `ref_remove` ne sont **plus exposés au LLM** — `agent_allowed_tools()` retourne uniquement `exec`, `write_to_var`, `write_to_var_json`. L'espace de noms `__refs` existe toujours comme structure de données interne (instantané/restauration, injection de prompt) mais n'est plus directement muté par le modèle. Les sections ci-dessous qui décrivent la distribution `ref_add`/`ref_remove` documentent la plomberie interne résiduelle, pas la surface d'outils LLM.

@@ -1,4 +1,3 @@
-
 # entelecheiaとの疎結合
 
 ## 概要

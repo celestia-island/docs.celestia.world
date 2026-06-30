@@ -1,4 +1,3 @@
-
 # コンテナランタイムクライアント（Docker/Podman）
 
 - **Status**: Accepted

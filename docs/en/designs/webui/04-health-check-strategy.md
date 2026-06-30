@@ -1,4 +1,3 @@
-
 # PostgreSQL Health Check Strategy
 
 ## Overview

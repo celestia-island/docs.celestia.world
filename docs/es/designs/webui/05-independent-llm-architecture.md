@@ -1,4 +1,3 @@
-
 # Arquitectura LLM Independiente
 
 ## Resumen

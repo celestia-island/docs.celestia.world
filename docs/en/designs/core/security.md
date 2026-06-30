@@ -1,4 +1,3 @@
-
 # Entelecheia Security Architecture
 
 > Comprehensive defense-in-depth model for the Entelecheia Multi-Agent Orchestration Platform.

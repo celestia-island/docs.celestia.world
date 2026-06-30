@@ -1,4 +1,3 @@
-
 # ADR-005: Ejecución de Agentes en Contenedores Aislados con COSMOS
 
 **Fecha**: 2026-02

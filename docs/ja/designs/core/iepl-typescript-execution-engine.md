@@ -1,4 +1,3 @@
-
 # 22 — IEPL TypeScript実行エンジン設計
 
 ## 概要

@@ -1,4 +1,3 @@
-
 # TerminalBackend / ViewportBackend / FileBackend トレイト抽象化
 
 - **Status**: Accepted

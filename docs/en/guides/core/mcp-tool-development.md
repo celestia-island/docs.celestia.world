@@ -1,4 +1,3 @@
-
 # MCP Tool Development Guide
 
 > How to create and register MCP tools in the Entelecheia platform

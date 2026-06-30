@@ -1,4 +1,3 @@
-
 # Transporte de Señalización — Socket Unix Dual / TCP
 
 - **Estado**: Aceptada

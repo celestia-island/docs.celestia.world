@@ -1,4 +1,3 @@
-
 # Evernight Architecture
 
 > **evernight** is a cross-platform remote-control library and daemon. It is the

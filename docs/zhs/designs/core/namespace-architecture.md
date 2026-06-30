@@ -1,4 +1,3 @@
-
 # 命名空间架构：`vars`、`refs`、`env`
 
 > **注（2026-06）**：LLM 可见的工具面已从 5 个原语缩减为 3 个。`ref_add` 和 `ref_remove` **不再暴露给 LLM**——`agent_allowed_tools()` 仅返回 `exec`、`write_to_var`、`write_to_var_json`。`__refs` 命名空间仍然作为内部数据结构存在（快照/恢复、Prompt 注入），但不再由模型直接修改。以下描述 `ref_add`/`ref_remove` 派发的章节记录下来的是残留的内部管道，而非 LLM 工具面。

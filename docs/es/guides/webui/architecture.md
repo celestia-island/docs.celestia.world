@@ -1,4 +1,3 @@
-
 # Arquitectura en Profundidad
 
 > **Audiencia**: Desarrolladores que necesitan entender cómo funciona shittim-chest internamente.

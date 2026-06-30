@@ -1,4 +1,3 @@
-
 # Signaling Transport — Dual Unix Socket / TCP
 
 - **Status**: Accepted

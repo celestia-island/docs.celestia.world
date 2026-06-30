@@ -1,4 +1,3 @@
-
 # CLI Logging Conventions
 
 ## Overview

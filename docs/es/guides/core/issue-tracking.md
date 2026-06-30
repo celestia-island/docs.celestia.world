@@ -1,4 +1,3 @@
-
 # Integración de seguimiento de Issues
 
 > Conectar sistemas externos de seguimiento de Issues a los flujos de trabajo de Agent de Entelecheia (玄枢)

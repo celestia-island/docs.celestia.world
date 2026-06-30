@@ -1,4 +1,3 @@
-
 # Building Guide
 
 ---

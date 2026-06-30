@@ -1,4 +1,3 @@
-
 # Intégration du suivi d'issues
 
 > Connecter les systèmes externes de suivi d'issues aux flux de travail d'Agent d'Entelecheia

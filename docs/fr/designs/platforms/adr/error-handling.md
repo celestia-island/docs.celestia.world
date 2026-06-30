@@ -1,4 +1,3 @@
-
 # Gestion des erreurs — thiserror avec Result de crate
 
 - **Statut** : Acceptée

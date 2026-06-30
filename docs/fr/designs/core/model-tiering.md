@@ -1,4 +1,3 @@
-
 # Conception du Système de Hiérarchisation des Modèles
 
 ## Aperçu

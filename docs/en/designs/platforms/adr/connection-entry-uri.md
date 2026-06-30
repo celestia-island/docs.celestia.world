@@ -1,4 +1,3 @@
-
 # Connection Entry URI Scheme
 
 - **Status**: Accepted

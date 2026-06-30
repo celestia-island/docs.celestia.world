@@ -1,4 +1,3 @@
-
 # Error Handling — thiserror with crate Result
 
 - **Status**: Accepted

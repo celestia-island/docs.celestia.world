@@ -1,4 +1,3 @@
-
 # Issue 跟踪集成
 
 > 将外部 Issue 跟踪系统连接到 Entelecheia（玄枢） 的 Agent 工作流

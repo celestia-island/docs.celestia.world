@@ -1,4 +1,3 @@
-
 # ADR-004: Session Storage Lifecycle Management
 
 > **Status**: Accepted (2026-06-10)

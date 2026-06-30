@@ -1,4 +1,3 @@
-
 # Couplage Lâche avec entelecheia
 
 ## Aperçu

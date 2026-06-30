@@ -1,4 +1,3 @@
-
 # ADR-004 : Gestion du Cycle de Vie du Stockage de Session
 
 > **Statut** : Accepté (10-06-2026)

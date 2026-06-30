@@ -1,4 +1,3 @@
-
 # Guía de Configuración de Webhooks
 
 > **Audiencia**: Administradores que integran servicios externos con shittim-chest.

@@ -1,4 +1,3 @@
-
 # 22 — Diseño del Motor de Ejecución TypeScript IEPL
 
 ## Descripción General

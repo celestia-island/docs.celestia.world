@@ -1,4 +1,3 @@
-
 # RBAC System Design
 
 ## 1. Objectives

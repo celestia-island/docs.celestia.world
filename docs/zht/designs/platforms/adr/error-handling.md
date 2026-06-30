@@ -1,4 +1,3 @@
-
 # 錯誤處理 — thiserror 搭配 crate Result
 
 - **狀態**：已接受

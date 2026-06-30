@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="../../../res/logo/entelecheia.webp" alt="Evernight" width="200"/>
+<img src="../../logo.webp" alt="Evernight" width="200"/>
 
 
 **크로스 플랫폼 원격 제어 및 산업 프로토콜 브로커**

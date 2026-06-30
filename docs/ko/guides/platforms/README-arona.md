@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="../../../res/logo/entelecheia.webp" alt="Arona" width="200"/>
+<img src="../../logo.webp" alt="Arona" width="200"/>
 
 
 **celestia-island 플랫폼용 공유 프로토콜 타입**

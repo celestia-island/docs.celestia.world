@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="../../../res/logo/entelecheia.webp" alt="Shittim Chest" width="200"/>
+<img src="../../logo.webp" alt="Shittim Chest" width="200"/>
 
 
 **Interfaz de usuario para la plataforma multiagente entelecheia**

@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="../../../res/logo/entelecheia.webp" alt="Noa" width="200"/>
+<img src="../../logo.webp" alt="Noa" width="200"/>
 
 
 **AI 네이티브 분산 버전 관리 시스템**

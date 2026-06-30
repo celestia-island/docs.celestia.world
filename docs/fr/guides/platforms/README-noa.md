@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="../../../res/logo/entelecheia.webp" alt="Noa" width="200"/>
+<img src="../../logo.webp" alt="Noa" width="200"/>
 
 
 **Système de contrôle de versions distribué natif pour l'IA**

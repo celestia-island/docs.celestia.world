@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="../../../res/logo/entelecheia.webp" alt="Shittim Chest" width="200"/>
+<img src="../../logo.webp" alt="Shittim Chest" width="200"/>
 
 
 **entelecheia 멀티 에이전트 플랫폼용 사용자 대면 셸**

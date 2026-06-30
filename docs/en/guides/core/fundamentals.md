@@ -67,7 +67,7 @@ The most complete and most mature user entry point currently is the TUI.
 
 ### WebUI
 
-The Web UI (arona chat) and the management panel (plana) have been migrated to the sister repository [shittim-chest](https://github.com/celestia-island/shittim-chest) and removed from this codebase; the preferred interface for this repository is the TUI.
+The Web UI (arona chat) and the management panel (malkuth) have been migrated to the sister repository [shittim-chest](https://github.com/celestia-island/shittim-chest) and removed from this codebase; the preferred interface for this repository is the TUI.
 
 ### CLI
 

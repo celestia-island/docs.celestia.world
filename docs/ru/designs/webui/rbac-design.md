@@ -242,7 +242,7 @@ fn has_permission(user, permission, resource_id=None) -> bool {
 - `GET /api/channel` → возвращать только каналы с правом `channel.list`
 - Перед запуском режима круиза → проверять право `yolo.use`
 
-## 5. Дизайн фронтенда (Plana)
+## 5. Дизайн фронтенда (Malkuth)
 
 ### 5.1 Рефакторинг RbacView
 

@@ -67,7 +67,7 @@ Skill 是基于 prompt 定义的工作流，会引用相关工具，有时也引
 
 ### WebUI
 
-Web UI（arona 聊天）与管理面板（plana）已迁移至姊妹仓库 [shittim-chest](https://github.com/celestia-island/shittim-chest) 并从本代码库移除；本仓库的首选界面是 TUI。
+Web UI（arona 聊天）与管理面板（malkuth）已迁移至姊妹仓库 [shittim-chest](https://github.com/celestia-island/shittim-chest) 并从本代码库移除；本仓库的首选界面是 TUI。
 
 ### CLI
 

@@ -242,7 +242,7 @@ fn has_permission(user, permission, resource_id=None) -> bool {
 - `GET /api/channel` → `channel.list` 권한이 있는 채널만 반환
 - 순항 모드 시작 전 → `yolo.use` 권한 확인
 
-## 5. 프론트엔드 설계 (Plana)
+## 5. 프론트엔드 설계 (Malkuth)
 
 ### 5.1 RbacView 재구성
 

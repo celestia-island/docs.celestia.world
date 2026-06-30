@@ -72,7 +72,7 @@ Layer3 仍是基于 `.amphoreus/` 的自定义 Agent 扩展点（设计阶段，
 
 ### WebUI / IDE / Tauri
 
-Web UI（arona）、管理面板（plana）、IDE 插件与 Tauri 应用已迁移至姊妹项目 **shittim-chest** 并从本仓库移除。本仓库的首选界面是 **TUI**；Web/IDE 层位于 shittim-chest，通过 JWT + WebSocket/HTTP 与 Scepter 通信。
+Web UI（arona）、管理面板（malkuth）、IDE 插件与 Tauri 应用已迁移至姊妹项目 **shittim-chest** 并从本仓库移除。本仓库的首选界面是 **TUI**；Web/IDE 层位于 shittim-chest，通过 JWT + WebSocket/HTTP 与 Scepter 通信。
 
 ## Memory 与知识能力
 

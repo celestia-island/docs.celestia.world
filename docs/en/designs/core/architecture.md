@@ -20,7 +20,7 @@ Entelecheia has completed its major split: the user-facing shell layers have bee
 | Repository | Scope |
 | --- | --- |
 | **entelecheia** | Scepter orchestration, 16 agents (12 L1 + 4 L2), Cosmos/IEPL runtime, 32 shared crates |
-| **shittim-chest** | arona (Chat UI frontend), plana (Admin UI), `shittim_chest` backend (axum proxy + auth + webhook), IDE plugins, Tauri apps |
+| **shittim-chest** | arona (Chat UI frontend), malkuth (Admin UI), `shittim_chest` backend (axum proxy + auth + webhook), IDE plugins, Tauri apps |
 
 ## Current Scope
 
@@ -84,13 +84,13 @@ flowchart TB
 flowchart TB
     subgraph shittim_chest["shittim-chest (user shell)"]
         Arona["arona (Chat UI)\nVue legacy → WASM"]
-        Plana["plana (Admin UI)\nVue legacy → WASM"]
+        Malkuth["malkuth (Admin UI)\nVue legacy → WASM"]
         SC["shittim_chest (axum)\nauth proxy + webhook"]
         IDE["IDE plugins\nVS Code + IntelliJ"]
         Tauri["Tauri apps"]
         SC_DB[("shittim_chest_db\n用户凭据")]
         Arona --> SC
-        Plana --> SC
+        Malkuth --> SC
         IDE --> SC
         Tauri --> SC
         SC --> SC_DB
@@ -363,7 +363,7 @@ Knowledge and memory features exist in a simpler form than design documents desc
 
 - **CLI feature parity substantially improved**: `packages/cli` now supports service management (init, serve, stop), chat, timeline, agent lifecycle queries (via `Cli.Status`), provider configuration CRUD (`config provider {list,get,add,set,rename,remove}`), and MCP tool/skill browsing (`mcp tools`/`mcp skills` via `Cli.ListTools`/`Cli.ListSkills`). The dead `ProcessManager` (agent start/stop/restart as standalone binaries) has been removed — agents run in-process inside scepter. Remaining CLI gaps vs TUI: interactive multi-page UI, i18n, theme, agent container fork/merge visualization.
 - **TUI command palette and cancel wired**: `Ctrl+P` opens the command palette (12 commands). `Ctrl+G` sends `request.cancel` to scepter via a new fast-path RPC that sets the cancel flag and aborts the active request JoinHandle. `/clear` and `/settings` slash commands are implemented. `WorkerInput::CancelRequest` documents the Ctrl+G path. `ExecuteSudoCommand` remains unwired (needs security audit).
-- **WebUI, IDE plugins, Tauri apps migrated to shittim-chest**: The web-facing user experience (arona chat UI, plana admin panel, IDE integration, webhook ingress) is now in the sibling project `../shittim-chest`. All WebUI references have been removed from TUI, CLI, Scepter, and shared crates. (Note: `packages/webui_bindings/` is a residual TypeScript project directory not referenced by any Rust crate.)
+- **WebUI, IDE plugins, Tauri apps migrated to shittim-chest**: The web-facing user experience (arona chat UI, malkuth admin panel, IDE integration, webhook ingress) is now in the sibling project `../shittim-chest`. All WebUI references have been removed from TUI, CLI, Scepter, and shared crates. (Note: `packages/webui_bindings/` is a residual TypeScript project directory not referenced by any Rust crate.)
 
 ### Major (blocks production readiness)
 

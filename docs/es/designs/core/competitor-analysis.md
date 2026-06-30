@@ -323,7 +323,7 @@ subcategory = "core"
   1. Actualizar variables de contexto
   1. Repetir hasta que no haya más llamadas a herramientas o se alcance `max_turns`
 
-- **Agentes**: Solo un nombre, modelo, instrucciones (string o invocable), lista de funciones. Sin jerarquía de agentes — delegación plana mediante handoffs.
+- **Agentes**: Solo un nombre, modelo, instrucciones (string o invocable), lista de funciones. Sin jerarquía de agentes — delegación malkuth mediante handoffs.
 - **Comunicación**: Mensajes de la API Chat Completions. Sin estado entre llamadas `client.run()`.
 
 ### Exposición de Herramientas

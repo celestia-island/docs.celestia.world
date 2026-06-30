@@ -242,7 +242,7 @@ Las APIs de recursos existentes necesitan añadir filtrado de permisos:
 - `GET /api/channel` → solo devolver canales con permiso `channel.list`
 - Antes de iniciar el modo crucero → verificar permiso `yolo.use`
 
-## 5. Diseño del Frontend (Plana)
+## 5. Diseño del Frontend (Malkuth)
 
 ### 5.1 Refactorización de RbacView
 

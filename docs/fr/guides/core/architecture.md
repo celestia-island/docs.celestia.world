@@ -72,7 +72,7 @@ Une partie de la logique s'exécute dans le processus Scepter, tandis qu'une aut
 
 ### WebUI / IDE / Tauri
 
-L'interface Web (arona), le panneau d'administration (plana), le plugin IDE et l'application Tauri ont été migrés vers le projet frère **shittim-chest** et supprimés de ce dépôt. L'interface privilégiée de ce dépôt est le **TUI** ; la couche Web/IDE se trouve dans shittim-chest et communique avec Scepter via JWT + WebSocket/HTTP.
+L'interface Web (arona), le panneau d'administration (malkuth), le plugin IDE et l'application Tauri ont été migrés vers le projet frère **shittim-chest** et supprimés de ce dépôt. L'interface privilégiée de ce dépôt est le **TUI** ; la couche Web/IDE se trouve dans shittim-chest et communique avec Scepter via JWT + WebSocket/HTTP.
 
 ## Capacités Memory et Connaissance
 

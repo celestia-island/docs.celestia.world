@@ -242,7 +242,7 @@ Les API de ressources existantes doivent ajouter un filtrage par permission :
 - `GET /api/channel` → retourne uniquement les canaux avec la permission `channel.list`
 - Avant le démarrage du mode croisière → vérifier la permission `yolo.use`
 
-## 5. Conception Frontend (Plana)
+## 5. Conception Frontend (Malkuth)
 
 ### 5.1 Refonte de RbacView
 

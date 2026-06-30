@@ -72,7 +72,7 @@ Some logic executes within the Scepter process, while other work is done through
 
 ### WebUI / IDE / Tauri
 
-The Web UI (arona), the management panel (plana), the IDE plugins, and the Tauri apps have been migrated to the sister project **shittim-chest** and removed from this repository. The preferred interface for this repository is the **TUI**; the Web/IDE layer lives in shittim-chest and communicates with Scepter via JWT + WebSocket/HTTP.
+The Web UI (arona), the management panel (malkuth), the IDE plugins, and the Tauri apps have been migrated to the sister project **shittim-chest** and removed from this repository. The preferred interface for this repository is the **TUI**; the Web/IDE layer lives in shittim-chest and communicates with Scepter via JWT + WebSocket/HTTP.
 
 ## Memory and knowledge capabilities
 

@@ -20,7 +20,7 @@ Entelecheia a terminé sa division majeure : les couches de coque utilisateur on
 | Dépôt | Périmètre |
 | --- | --- |
 | **entelecheia** | Orchestration Scepter, 16 agents (12 L1 + 4 L2), runtime Cosmos/IEPL, 32 crates partagées |
-| **shittim-chest** | arona (frontend UI Chat), plana (UI Admin), backend `shittim_chest` (proxy axum + auth + webhook), plugins IDE, applications Tauri |
+| **shittim-chest** | arona (frontend UI Chat), malkuth (UI Admin), backend `shittim_chest` (proxy axum + auth + webhook), plugins IDE, applications Tauri |
 
 ## Périmètre Actuel
 
@@ -84,13 +84,13 @@ flowchart TB
 flowchart TB
     subgraph shittim_chest["shittim-chest (coque utilisateur)"]
         Arona["arona (UI Chat)\nVue legacy → WASM"]
-        Plana["plana (UI Admin)\nVue legacy → WASM"]
+        Malkuth["malkuth (UI Admin)\nVue legacy → WASM"]
         SC["shittim_chest (axum)\nproxy auth + webhook"]
         IDE["Plugins IDE\nVS Code + IntelliJ"]
         Tauri["Applications Tauri"]
         SC_DB[("shittim_chest_db\nidentifiants utilisateur")]
         Arona --> SC
-        Plana --> SC
+        Malkuth --> SC
         IDE --> SC
         Tauri --> SC
         SC --> SC_DB
@@ -363,7 +363,7 @@ Les fonctionnalités de connaissance et de mémoire existent sous une forme plus
 
 - **Parité fonctionnelle CLI substantiellement améliorée** : `packages/cli` supporte maintenant la gestion de services (init, serve, stop), le chat, la chronologie, les requêtes cycle de vie agent (via `Cli.Status`), le CRUD configuration fournisseur (`config provider {list,get,add,set,rename,remove}`) et la navigation outils/skills MCP (`mcp tools`/`mcp skills` via `Cli.ListTools`/`Cli.ListSkills`). Le `ProcessManager` mort (start/stop/restart agent comme binaires autonomes) a été retiré — les agents s'exécutent en processus dans scepter. Lacunes CLI restantes vs TUI : UI interactive multi-page, i18n, thème, visualisation fork/merge conteneur agent.
 - **Palette de commandes TUI et annulation câblés** : `Ctrl+P` ouvre la palette de commandes (12 commandes). `Ctrl+G` envoie `request.cancel` à scepter via un nouveau RPC voie rapide qui positionne le drapeau d'annulation et abandonne le JoinHandle de la requête active. Les commandes slash `/clear` et `/settings` sont implémentées. `WorkerInput::CancelRequest` documente le chemin Ctrl+G. `ExecuteSudoCommand` reste non câblé (nécessite audit sécurité).
-- **WebUI, plugins IDE, applications Tauri migrés vers shittim-chest** : L'expérience utilisateur web (UI chat arona, panneau admin plana, intégration IDE, entrée webhook) est maintenant dans le projet frère `../shittim-chest`. Toutes les références WebUI ont été retirées de TUI, CLI, Scepter et des crates partagées. (Note : `packages/webui_bindings/` est un répertoire de projet TypeScript résiduel non référencé par aucune crate Rust.)
+- **WebUI, plugins IDE, applications Tauri migrés vers shittim-chest** : L'expérience utilisateur web (UI chat arona, panneau admin malkuth, intégration IDE, entrée webhook) est maintenant dans le projet frère `../shittim-chest`. Toutes les références WebUI ont été retirées de TUI, CLI, Scepter et des crates partagées. (Note : `packages/webui_bindings/` est un répertoire de projet TypeScript résiduel non référencé par aucune crate Rust.)
 
 ### Majeur (bloque la préparation production)
 

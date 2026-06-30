@@ -242,7 +242,7 @@ fn has_permission(user, permission, resource_id=None) -> bool {
 - `GET /api/channel` → 只返回有 `channel.list` 權限的頻道
 - 巡航模式啟動前 → 檢查 `yolo.use` 權限
 
-## 5. 前端設計（Plana）
+## 5. 前端設計（Malkuth）
 
 ### 5.1 RbacView 重構
 

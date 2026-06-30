@@ -67,7 +67,7 @@ Le point d'entrée utilisateur le plus complet et le plus mature est actuellemen
 
 ### WebUI
 
-L'interface Web (chat arona) et le panneau d'administration (plana) ont été migrés vers le dépôt frère [shittim-chest](https://github.com/celestia-island/shittim-chest) et supprimés de ce dépôt ; l'interface privilégiée de ce dépôt est le TUI.
+L'interface Web (chat arona) et le panneau d'administration (malkuth) ont été migrés vers le dépôt frère [shittim-chest](https://github.com/celestia-island/shittim-chest) et supprimés de ce dépôt ; l'interface privilégiée de ce dépôt est le TUI.
 
 ### CLI
 

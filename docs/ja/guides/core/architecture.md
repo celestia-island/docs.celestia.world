@@ -72,7 +72,7 @@ Layer3 は依然として `.amphoreus/` ベースのカスタム Agent 拡張ポ
 
 ### WebUI / IDE / Tauri
 
-Web UI（arona）、管理パネル（plana）、IDE プラグイン、Tauri アプリケーションは姉妹プロジェクト **shittim-chest** に移行され、本リポジトリから削除されました。本リポジトリの優先インターフェースは **TUI** です。Web/IDE レイヤーは shittim-chest にあり、JWT + WebSocket/HTTP を通じて Scepter と通信します。
+Web UI（arona）、管理パネル（malkuth）、IDE プラグイン、Tauri アプリケーションは姉妹プロジェクト **shittim-chest** に移行され、本リポジトリから削除されました。本リポジトリの優先インターフェースは **TUI** です。Web/IDE レイヤーは shittim-chest にあり、JWT + WebSocket/HTTP を通じて Scepter と通信します。
 
 ## Memory と知識能力
 

@@ -20,7 +20,7 @@ Entelecheiaは大規模な分割を完了しました：ユーザー向けシェ
 | リポジトリ | 範囲 |
 | --- | --- |
 | **entelecheia** | Scepterオーケストレーション、16エージェント（12 L1 + 4 L2）、Cosmos/IEPLランタイム、32共有クレート |
-| **shittim-chest** | arona（チャットUIフロントエンド）、plana（管理UI）、`shittim_chest`バックエンド（axumプロキシ + 認証 + webhook）、IDEプラグイン、Tauriアプリ |
+| **shittim-chest** | arona（チャットUIフロントエンド）、malkuth（管理UI）、`shittim_chest`バックエンド（axumプロキシ + 認証 + webhook）、IDEプラグイン、Tauriアプリ |
 
 ## 現在の範囲
 
@@ -84,13 +84,13 @@ flowchart TB
 flowchart TB
     subgraph shittim_chest["shittim-chest（ユーザーシェル）"]
         Arona["arona（チャットUI）\nVueレガシー → WASM"]
-        Plana["plana（管理UI）\nVueレガシー → WASM"]
+        Malkuth["malkuth（管理UI）\nVueレガシー → WASM"]
         SC["shittim_chest（axum）\n認証プロキシ + webhook"]
         IDE["IDEプラグイン\nVS Code + IntelliJ"]
         Tauri["Tauriアプリ"]
         SC_DB[("shittim_chest_db\nユーザー認証情報")]
         Arona --> SC
-        Plana --> SC
+        Malkuth --> SC
         IDE --> SC
         Tauri --> SC
         SC --> SC_DB

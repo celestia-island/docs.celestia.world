@@ -242,7 +242,7 @@ fn has_permission(user, permission, resource_id=None) -> bool {
 - `GET /api/channel` → `channel.list`権限のあるチャネルのみ返す
 - クルーズモード起動前 → `yolo.use`権限をチェック
 
-## 5. フロントエンド設計（Plana）
+## 5. フロントエンド設計（Malkuth）
 
 ### 5.1 RbacViewの再構築
 

@@ -67,7 +67,7 @@ El punto de entrada de usuario más completo y maduro actualmente es TUI.
 
 ### WebUI
 
-La Web UI (chat arona) y el panel de administración (plana) se han migrado al repositorio hermano [shittim-chest](https://github.com/celestia-island/shittim-chest) y se han eliminado de este repositorio; la interfaz preferida de este repositorio es TUI.
+La Web UI (chat arona) y el panel de administración (malkuth) se han migrado al repositorio hermano [shittim-chest](https://github.com/celestia-island/shittim-chest) y se han eliminado de este repositorio; la interfaz preferida de este repositorio es TUI.
 
 ### CLI
 

@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+*.swp
+*.swo
+*~
+
+# Future site-framework build output (VitePress / Docusaurus / MkDocs)
+/site/.vitepress/dist
+/site/.vitepress/cache
+/site/.docusaurus
+/site/build/
+/site/_build/

@@ -1,0 +1,17 @@
+[book]
+title = "Documentação do celestia-island"
+description = "Centro centralizado de documentação e blog para o ecossistema celestia-island"
+authors = ["celestia-island"]
+language = "pt"
+src = "."
+
+[build]
+build-dir = "../../target/docs/pt"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/celestia-island/docs.celestia.world"
+edit-url-template = "https://github.com/celestia-island/docs.celestia.world/edit/main/docs/pt/{path}"
+additional-js = ["../theme/lang-switcher.js"]
+additional-css = ["../theme/lang-switcher.css"]

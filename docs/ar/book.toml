@@ -1,0 +1,17 @@
+[book]
+title = "توثيق celestia-island"
+description = "مركز مركزي للتوثيق والمدونة لمنظومة celestia-island"
+authors = ["celestia-island"]
+language = "ar"
+src = "."
+
+[build]
+build-dir = "../../target/docs/ar"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/celestia-island/docs.celestia.world"
+edit-url-template = "https://github.com/celestia-island/docs.celestia.world/edit/main/docs/ar/{path}"
+additional-js = ["../theme/lang-switcher.js"]
+additional-css = ["../theme/lang-switcher.css"]

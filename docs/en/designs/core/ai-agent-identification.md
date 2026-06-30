@@ -1,4 +1,3 @@
-
 # AI Agent Identification & Commit Co-author Strategy
 
 ## Overview

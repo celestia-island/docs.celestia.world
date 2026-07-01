@@ -27,7 +27,8 @@ language switcher supporting 11 languages.
 | --- | --- |
 | `core` | [entelecheia](https://github.com/celestia-island/entelecheia) — multi-agent collaboration platform |
 | `webui` | [shittim-chest](https://github.com/celestia-island/shittim-chest) — user-facing shell |
-| `platforms` | [arona](https://github.com/celestia-island/arona) (protocol types) · [evernight](https://github.com/celestia-island/evernight) (remote control & protocols) · [noa](https://github.com/celestia-island/noa) (DVCS) |
+| `platforms` | [arona](https://github.com/celestia-island/arona) (protocol types) · [evernight](https://github.com/celestia-island/evernight) (remote control & protocols) |
+| `tool` | [yuuka](https://github.com/celestia-island/yuuka) · [kirino](https://github.com/celestia-island/kirino) · [noa](https://github.com/celestia-island/noa) · [malkuth](https://github.com/celestia-island/malkuth) · [seia](https://github.com/celestia-island/seia) · [lagrange](https://github.com/celestia-island/lagrange) · [ichika](https://github.com/celestia-island/ichika) · [aoba](https://github.com/celestia-island/aoba) — standalone Rust libraries; each has its own docs at `<name>.docs.celestia.world` |
 
 ## Structure
 

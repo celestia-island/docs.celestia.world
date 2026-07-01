@@ -39,7 +39,7 @@
 - [CONTRIBUTING](./guides/webui/CONTRIBUTING.md)
 - [Shittim-chest](./guides/webui/README-shittim-chest.md)
 
-## Platforms (arona · evernight · noa)
+## Platforms (arona · evernight)
 
 - [Getting Started](./guides/platforms/getting-started.md)
 - [Protocols](./guides/platforms/protocols.md)

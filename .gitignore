@@ -6,5 +6,11 @@ __pycache__/
 *.swo
 *~
 
-# mdBook build output
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# mdBook
 /target/
+.mdbook/

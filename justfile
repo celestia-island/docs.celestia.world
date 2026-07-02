@@ -8,12 +8,15 @@ LANGS := "en zhs zht ja ko fr es ru de pt ar"
 default:
     @just --list
 
-# Build all language books into target/docs/.
-build:
+# Build all language books into target/docs/ (double-quote for maximum compatibility).
+build-all:
     @for lang in {{ LANGS }}; do \
         echo "Building $lang…"; \
-        mdbook build docs/$lang 2>/dev/null || echo "  (skipped $lang — missing content)"; \
+        mdbook build docs/$lang || echo "  (failed $lang — check output above)"; \
     done
+
+# Alias for build-all.
+build: build-all
 
 # Build a single language book.
 build-lang lang:
@@ -35,6 +38,6 @@ clean:
 watch lang:
     mdbook watch docs/{{ lang }}
 
-# Lint all Markdown files with markdownlint (if available).
+# Lint all Markdown files with markdownlint.
 lint:
-    @command -v markdownlint >/dev/null 2>&1 && markdownlint 'docs/**/*.md' || echo "(markdownlint not installed; skipping)"
+    @command -v markdownlint >/dev/null 2>&1 && markdownlint 'docs/**/*.md' --config .markdownlint.json || echo "(markdownlint not installed; skipping)"

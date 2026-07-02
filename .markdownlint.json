@@ -1,7 +1,9 @@
 {
   "default": true,
   "MD013": false,
+  "MD024": false,
   "MD025": false,
+  "MD033": false,
   "MD060": { "style": "consistent" },
   "MD046": { "style": "fenced" }
 }

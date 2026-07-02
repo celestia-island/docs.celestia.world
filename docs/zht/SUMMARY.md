@@ -108,6 +108,7 @@
 - [Overview](./designs/platforms/README.md)
 - [Architecture](./designs/platforms/architecture.md)
 - [ADR Index](./designs/platforms/adr-index.md)
+- [AI Agent Identification](./designs/platforms/ai-agent-identification.md)
 
 ### Architecture Decision Records
 

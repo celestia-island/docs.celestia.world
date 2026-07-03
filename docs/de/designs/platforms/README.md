@@ -1,24 +1,22 @@
-# Platform Design Documents
+# Plattform-Designdokumente
 
-> **Scope.** These documents are *platform-level*: they cut across
-> `core` (entelecheia), `webui` (shittim-chest) and `router`
-> (evernight). Per-project designs live under their own subcategories.
+> **Geltungsbereich.** Diese Dokumente sind *plattformübergreifend*: Sie erstrecken sich über `core` (entelecheia), `webui` (shittim-chest) und `router` (evernight). Projektspezifische Designs befinden sich in ihren eigenen Unterkategorien.
 
 ## Index
 
-| Document | Summary |
+| Dokument | Zusammenfassung |
 | --- | --- |
-| [Supervision, Rolling Update & Replication](https://malkuth.docs.celestia.world/en/design/supervision-and-rolling-update.html) | A single supervision-tree backbone shared by all three projects: uniform signal/drain semantics, systemd socket activation for zero-downtime handoff, a pluggable coordination-lock trait, and two fault-tolerance strategies (Replica = load-balancing ⊃ rolling update; Leader/Follower = edge HA) built on the same Worker + Supervisor primitives. |
+| [Supervision, Rolling Update & Replikation](https://malkuth.docs.celestia.world/en/design/supervision-and-rolling-update.html) | Ein einheitliches Supervision-Tree-Grundgerüst, das von allen drei Projekten gemeinsam genutzt wird: einheitliche Signal-/Drain-Semantik, systemd-Socket-Aktivierung für unterbrechungsfreie Übergabe, ein austauschbares Coordination-Lock-Trait und zwei Fehlertoleranzstrategien (Replica = Lastverteilung ⊃ Rolling Update; Leader/Follower = Edge-HA), aufgebaut auf denselben Worker + Supervisor-Primitiven. |
 
-## Language Directories
+## Sprachverzeichnisse
 
-| Code | Language |
+| Code | Sprache |
 | --- | --- |
-| `en/` | English (canonical) |
-| `zhs/` | 简体中文 (Simplified Chinese) |
-| `zht/` | 繁體中文 (Traditional Chinese) |
-| `ja/` | 日本語 (Japanese) |
-| `ko/` | 한국어 (Korean) |
-| `fr/` | Français (French) |
-| `es/` | Español (Spanish) |
-| `ru/` | Русский (Russian) |
+| `en/` | English (maßgeblich) |
+| `zhs/` | 简体中文 (Vereinfachtes Chinesisch) |
+| `zht/` | 繁體中文 (Traditionelles Chinesisch) |
+| `ja/` | 日本語 (Japanisch) |
+| `ko/` | 한국어 (Koreanisch) |
+| `fr/` | Français (Französisch) |
+| `es/` | Español (Spanisch) |
+| `ru/` | Русский (Russisch) |

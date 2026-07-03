@@ -1,60 +1,35 @@
-# Contributing to Arona
+# Contribuindo com Arona
+> Esta é uma tradução de referência da comunidade. Em caso de divergência, prevalece a versão original em inglês [`CONTRIBUTING.md`](../../../CONTRIBUTING.md) na raiz do repositório.
 
-Thank you for your interest in contributing! This guide covers everything you
-need to get started.
+Obrigado pelo seu interesse em contribuir! Este guia cobre tudo o que você precisa para começar.
 
-## Contribution policy (read this first)
+## Política de contribuição (leia primeiro)
 
-Arona defines the shared JSON-RPC 2.0 protocol types consumed across the
-Entelecheia platform, so **correctness, backward compatibility, and stability
-outweigh contribution throughput**. Please read this before opening a pull
-request.
+Arona define os tipos de protocolo JSON-RPC 2.0 compartilhados consumidos em toda a plataforma Entelecheia, portanto **correção, compatibilidade retroativa e estabilidade prevalecem sobre o volume de contribuições**. Por favor, leia isto antes de abrir um pull request.
 
-- **High merge bar, not a public roadmap.** Opening a PR does not imply it will
+- **Barra alta de merge, não um roadmap público.** Abrir um PR não implica que ele será mesclado. Aceitamos um número deliberadamente pequeno de alterações, e apenas quando se encaixam na arquitetura e passam pela revisão. Isso é intencional, não falta de educação.
 
-be merged. We accept a deliberately small number of changes, and only when
-they fit the architecture and pass review. This is by design, not rudeness.
+- **O que acolhemos:** relatórios de bugs, correções focadas, campos aditivos de protocolo (não disruptivos), documentação aprimorada e discussões de design prévias antes do código.
 
-- **What we welcome:** bug reports, focused fixes, additive (non-breaking)
+- **O que geralmente não mesclaremos:** grandes reescritas não solicitadas, alterações disruptivas na superfície de tipos do protocolo, mudanças arquitetônicas sem discussão de design prévia, PRs em massa feitos por "vibe-coding" e qualquer coisa que reduza a barra de compatibilidade do contrato de tipos.
 
-protocol fields, improved documentation, and prior design discussions before
-code.
+- **Núcleo vs. periferia.** As definições de tipos de protocolo e sua superfície de serialização são mantidas no padrão mais rigoroso e gerenciadas pela equipe central.
 
-- **What we generally will not merge:** large unsolicited rewrites, breaking
+- **CLA obrigatório.** Toda contribuição aceita requer um Acordo de Licença de Contribuinte assinado. Veja [`CLA.md`](cla.md). Os commits devem conter uma linha `Signed-off-by` (`git commit -s`).
 
-changes to the protocol type surface, architectural changes without a prior
-design discussion, bulk "vibe-coded" PRs, and anything that lowers the
-compatibility bar of the type contract.
+> **A licença pode se abrir; a barra de merge não.** Em **2030-01-01** este projeto converte de BUSL-1.1 para Apache-2.0 ou MIT (escolha do destinatário) — veja [`LICENSE`](LICENSE). Isso amplia *o que você pode fazer com o código*; **não** reduz a barra de revisão, não remove o CLA e não significa que aceitaremos mais PRs. A política de contribuição permanece inalterada antes e depois da data de mudança.
 
-- **Core vs. periphery.** The protocol type definitions and their serialization
+## Segurança
 
-surface are held to the strictest bar and maintained by the core team.
+**Não** abra issues públicas para vulnerabilidades de segurança. Relate-as de forma privada via [GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new). Veja [`SECURITY.md`](security.md).
 
-- **CLA required.** Every accepted contribution requires a signed Contributor
+## Código de Conduta
 
-License Agreement. See [`CLA.md`](cla.md). Commits must carry a
-`Signed-off-by` line (`git commit -s`).
+Seja respeitoso, construtivo e inclusivo. Seguimos o [Código de Conduta Contributor Covenant](code-of-conduct.md).
 
-> **The license may open; the merge bar will not.** On **2030-01-01** this
-> project converts from BUSL-1.1 to Apache-2.0 or MIT (recipient's choice) — see
-> [`LICENSE`](LICENSE). That broadens *what you may do with the code*; it does
-> **not** lower the review bar, remove the CLA, or mean we accept more PRs. The
-> contribution policy is unchanged before and after the change date.
+## Desenvolvimento
 
-## Security
-
-Do **not** open public issues for security vulnerabilities. Report them privately
-via [GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
-See [`SECURITY.md`](security.md).
-
-## Code of Conduct
-
-Be respectful, constructive, and inclusive. We follow the
-[Contributor Covenant Code of Conduct](code-of-conduct.md).
-
-## Development
-
-Arona is a small Rust crate. Quick start:
+Arona é uma pequena crate Rust. Início rápido:
 
 ```bash
 git clone https://github.com/celestia-island/arona.git
@@ -65,34 +40,21 @@ cargo clippy -- -D warnings
 ```
 
 - Rust 1.85+.
-- Types derive `ts-rs` (`#[derive(TS)]`) to generate TypeScript bindings — keep
+- Os tipos derivam `ts-rs` (`#[derive(TS)]`) para gerar bindings TypeScript — mantenha os atributos `serde` e as anotações `ts-rs` consistentes.
 
-`serde` attributes and `ts-rs` annotations consistent.
+- Não introduza alterações disruptivas nos tipos de protocolo existentes; prefira campos aditivos com `#[serde(default)]`.
 
-- Do not introduce breaking changes to existing protocol types; prefer additive
+## Processo de pull request
 
-fields with `#[serde(default)]`.
+1. Faça um fork e crie um branch a partir de `main`.
+2. Discuta alterações grandes ou que afetem o protocolo primeiro em uma issue.
+3. Faça commits atômicos seguindo [Conventional Commits](https://www.conventionalcommits.org/).
+4. Certifique-se de que `cargo fmt`, `cargo clippy -D warnings` e `cargo test` passem.
+5. Assine o CLA e adicione `Signed-off-by` a cada commit.
+6. Atenda ao feedback da revisão; mantenha force-pushes apenas para rebase.
 
-## Pull request process
+## Licença & CLA
 
-1. Fork and branch from `main`.
-1. Discuss large or protocol-affecting changes in an issue first.
-1. Make atomic commits following [Conventional Commits](https://www.conventionalcommits.org/).
-1. Ensure `cargo fmt`, `cargo clippy -D warnings`, and `cargo test` pass.
-1. Sign the CLA and add `Signed-off-by` to each commit.
-1. Address review feedback; keep force-pushes to rebase only.
+Arona é licenciado sob a **Business Source License 1.1 (BUSL-1.1)** com uma **Data de Mudança de 2030-01-01**, quando converte para a escolha do destinatário entre **Apache-2.0 ou MIT**. Para todo uso interno, acadêmico, governamental, educacional e não comercial, já é equivalente a Apache-2.0 ou MIT hoje (veja a Concessão de Uso Adicional em [`LICENSE`](LICENSE)). Usos comerciais restritos (hospedagem, revenda ou rebranding como serviço) exigem uma licença comercial separada até a Data de Mudança.
 
-## License & CLA
-
-Arona is licensed under the **Business Source License 1.1 (BUSL-1.1)** with a
-**Change Date of 2030-01-01**, on which it converts to the recipient's choice of
-**Apache-2.0 or MIT**. For all internal, academic, government, educational, and
-non-commercial use it is already equivalent to Apache-2.0 or MIT today (see the
-Additional Use Grant in [`LICENSE`](LICENSE)). Restricted commercial uses
-(hosting, resale, or rebranding as a service) require a separate commercial
-license until the Change Date.
-
-By contributing, you agree that your contributions are licensed under the
-project's license and that you sign the CLA ([`CLA.md`](cla.md)). The CLA grants
-the project a permissive license **including the right to relicense**, so the
-project can keep its BUSL→Apache/MIT path and adapt its licensing in the future.
+Ao contribuir, você concorda que suas contribuições sejam licenciadas sob a licença do projeto e que você assina o CLA ([`CLA.md`](cla.md)). O CLA concede ao projeto uma licença permissiva **incluindo o direito de relicenciar**, para que o projeto possa manter sua trajetória BUSL→Apache/MIT e adaptar seu licenciamento no futuro.

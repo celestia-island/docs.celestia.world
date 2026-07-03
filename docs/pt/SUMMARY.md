@@ -1,19 +1,19 @@
-# Summary
+# Sumário
 
-[Welcome](./intro.md)
+[Bem-vindo](./intro.md)
 
 ---
 
 # Meta
 
-- [License](./meta/license.md)
+- [Licença](./meta/license.md)
 - [CLA](./meta/cla.md)
-- [Code of Conduct](./meta/code-of-conduct.md)
-- [Security](./meta/security.md)
-- [Contributing](./meta/CONTRIBUTING.md)
+- [Código de Conduta](./meta/code-of-conduct.md)
+- [Segurança](./meta/security.md)
+- [Contribuindo](./meta/CONTRIBUTING.md)
 
-# Platforms
+# Plataformas
 
 - [Arona](./guides/platforms/README-arona.md)
 - [Noa](./guides/platforms/README-noa.md)
-- [Platform Designs](./designs/platforms/README.md)
+- [Designs de Plataforma](./designs/platforms/README.md)

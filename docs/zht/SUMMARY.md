@@ -43,6 +43,7 @@
 
 - [Getting Started](./guides/platforms/getting-started.md)
 - [Protocols](./guides/platforms/protocols.md)
+- [Integration](./guides/platforms/integration.md)
 - [Arona](./guides/platforms/README-arona.md)
 - [Evernight](./guides/platforms/README-evernight.md)
 - [Noa](./guides/platforms/README-noa.md)
@@ -58,6 +59,7 @@
 - [Agent Config System](./designs/core/agent-config-system.md)
 - [Agent Consensus](./designs/core/agent-consensus.md)
 - [AI Agent Identification](./designs/core/ai-agent-identification.md)
+- [Benchmark Mock LLM](./designs/core/benchmark-mock-llm.md)
 - [Boa Javascript Engine](./designs/core/boa-javascript-engine.md)
 - [Competitor Analysis](./designs/core/competitor-analysis.md)
 - [Container Sandboxed Agent Execution](./designs/core/container-sandboxed-agent-execution.md)
@@ -79,6 +81,7 @@
 - [Plan](./designs/core/plan.md)
 - [PostgreSQL pgvector Storage](./designs/core/postgresql-pgvector-storage.md)
 - [Production Checklist](./designs/core/production-checklist.md)
+- [Reflection Architecture](./designs/core/reflection-architecture.md)
 - [Scepter Architecture](./designs/core/scepter-architecture.md)
 - [Security](./designs/core/security.md)
 - [Session Lifecycle Policy](./designs/core/session-lifecycle-policy.md)

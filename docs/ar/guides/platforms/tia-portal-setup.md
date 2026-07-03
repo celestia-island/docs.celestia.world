@@ -1,0 +1,156 @@
+# المتطلبات الأساسية لـ TIA Portal — ربط evernight
+
+> **الهدف**: تجهيز وحدة PLC من Siemens من طراز S7-1200/1500 **مرة واحدة** في TIA Portal بحيث يستطيع evernight الاتصال، والشبكة الذاتية، وقراءة/كتابة الجهاز **دون أي تدخل بشري إضافي**. هذا تكوين لمرة واحدة لخصائص وحدة المعالجة (CPU) — لا يتم المساس بمنطق برنامج السُّلَّم/SCL الخاص بك أبدًا.
+
+يتحدث evernight عبر **قناتين** مع وحدة PLC من Siemens. اختر واحدة بناءً على ما تكشفه وحدة PLC لديك:
+
+| القناة | المنفذ | نمط الوصول | يحتاج تجهيز TIA | الأفضل لـ |
+|---------|------|--------------|----------------|----------|
+| **S7comm** | 102 | قراءة/كتابة بايت خام لـ M / I / Q / DB | PUT/GET + DBs غير محسَّن | قديم، خفيف، بلا ترخيص OPC UA |
+| **OPC UA** | 4840 | رمزي، واصف ذاتيًا | تفعيل الخادم المدمج | **موصى به** — اكتشاف تلقائي، DBs محسَّن مقبول |
+
+إذا استطعت تفعيل OPC UA، ففضّله: يقوم evernight بـ **التصفّح** التلقائي لكامل فضاء العناوين الرمزي ولا توجد إدخال يدوي للرموز إطلاقًا.
+
+---
+
+## المسار A — S7comm (وصول السجلات الخام)
+
+### A.1 تفعيل اتصال PUT/GET
+
+تمنع وحدات S7-1200/1500 قراءة/كتابة S7 الخارجية افتراضيًا.
+
+1. افتح المشروع في **TIA Portal**.
+2. في عرض الجهاز/الشبكة، **انقر على وحدة المعالجة (CPU)**.
+3. Properties ← **Protection & Security ← Connection mechanisms**.
+4. ضع علامة على **"Permit access with PUT/GET communication from remote partner"**.
+5. نزّل تكوين العتاد إلى وحدة المعالجة.
+
+### A.2 جعل DBs المستهدفة غير محسَّنة
+
+الوصول المحسَّن للكتل (الافتراضي في S7-1200/1500) لا يملك إزاحة بايت ثابتة، لذلك تفشل القراءات بالعنوان المطلق. لكل DB يجب أن يقرأه/يكتبه evernight:
+
+1. انقر بزر الفأرة الأيمن على DB ← **Properties**.
+2. أزل علامة **"Optimized block access"**.
+3. أعد التجميع والتنزيل.
+
+> علامات M وصور العملية I/Q قابلة للعنونة بالبايت دائمًا — لا حاجة لتغيير
+> هناك. هذه الخطوة تخص DBs فقط.
+
+### A.3 الاتصال من evernight
+
+```
+s7://192.168.1.10:102?rack=0&slot=1
+```
+
+- S7-1200/1500: `rack=0, slot=1`
+- S7-300: `slot=2`
+
+الشبكة الذاتية في الكود:
+
+```rust
+use evernight::protocol::auto_provision;
+
+let profile = auto_provision("192.168.1.10").await?;
+// profile.data_blocks / profile.db_structures now describe every readable DB
+```
+
+---
+
+## المسار B — OPC UA (موصى به)
+
+### B.1 متطلبات البرامج الثابتة والترخيص
+
+- برمجيات وحدة المعالجة **V2.0+** (V2.5+ لطرق OPC UA).
+- **ترخيص تشغيل SIMATIC OPC UA** مناسب لحجم وحدة المعالجة (يُسنَد تحت CPU Properties ← **Runtime licenses ← OPC UA**). مطلوب للامتثال.
+
+### B.2 تفعيل خادم OPC UA
+
+1. **انقر على وحدة المعالجة (CPU)** في عرض الشبكة/الجهاز.
+2. Properties ← **OPC UA ← General**: أدخل اسمًا للخادم.
+3. Properties ← **OPC UA ← Server**: ضع علامة على **"Activate OPC UA server"**.
+4. أسنِد الخادم إلى **واجهة PROFINET** التي سيصل إليها العميل.
+
+### B.3 كشف المتغيرات الرمزية
+
+- **OPC UA ← Server ← Server interface**: اختر **"Standard SIMATIC server interface"** بحيث تُنشَر كل علامة/DB رمزية (بما في ذلك DBs المحسَّنة) تلقائيًا. (تتيح الواجهات المخصصة انتقاء العلامات يدويًا.)
+
+### B.4 المصادقة والأمان
+
+- **OPC UA ← Server ← User authentication**: مجهول (لشبكة محلية موثوقة) أو اسم مستخدم/كلمة مرور.
+- **OPC UA ← Server ← Security**: اختر سياسة. `None` الأسهل للاتصال الأول؛ `Sign & Encrypt` للإنتاج.
+- على البرمجيات الثابتة **V3.1+ مع TIA V19+**، امنح الدور الوظيفي/حق التشغيل **"OPC UA server access"** للمستخدم المتصل.
+
+### B.5 الثقة بشهادة العميل
+
+تقدم عملاء OPC UA شهادة X.509 عند الاتصال؛ تعزل وحدة PLC الشهادات غير المعروفة. بعد أول محاولة اتصال من evernight، اقبلها:
+
+1. TIA Portal ← **CPU ← Certificates** (عبر الإنترنت)، **أو**
+2. **خادم الويب** للـ PLC ← "Communication with OPC UA clients"، **أو**
+3. مدير الشهادات في شاشة عرض وحدة المعالجة.
+
+ثم **اقبل/وثِق** بشهادة عميل evernight.
+
+### B.6 (اختياري) تصدير ملف XML الخاص بـ OPC UA NodeSet
+
+ملف NodeSet هو خريطة دون اتصال لكل متغير — مفيدة للتخطيط المسبق دون اتصال حي.
+
+1. CPU Properties ← **OPC UA ← Server ← Export**.
+2. انقر **"Export OPC UA XML file"**، احفظ `*.Opc.Ua.NodeSet2.xml`.
+
+### B.7 التنزيل
+
+نزّل **تكوين العتاد**. هذه خصائص وحدة المعالجة، وليست منطق البرنامج — كود السُّلَّم/SCL الخاص بك لا يُمَس.
+
+### B.8 الاتصال من evernight
+
+عنوان URL لنقطة النهاية:
+
+```
+opc.tcp://192.168.1.10:4840
+```
+
+يتصل evernight كعميل OPC UA، ويُجري **تصفّحًا** للشجرة الرمزية بأكملها، ويقرأ/يكتب بالاسم — بدون إدخال يدوي للرموز، شاملاً DBs المحسَّنة.
+
+---
+
+## التحقق من الاتصال (مسبارات صفرية المخاطر)
+
+قبل تشغيل المخرجات، تأكد من أن القنوات حية عبر مسبارات للقراءة فقط:
+
+```bash
+# Is anything speaking S7comm on port 102?
+evernight probe 192.168.1.10 --ports 102
+
+# Is the OPC UA server up on 4840?
+evernight probe 192.168.1.10 --ports 4840
+```
+
+كلاهما مصافحة سلبية — لا تقرأ شيئًا ولا تكتب شيئًا.
+
+---
+
+## حدود السلامة
+
+- **لا تضع أبدًا** حلقات الأمان (إيقاف الطوارئ، الحدود، الحِمل الزائد) على مسار S7/OPC UA. أبقِها داخل دورة مسح PLC. يجب ألا يعطّل رابط شبكة مسقوط وظيفة سلامة.
+- تحكم evernight مناسب للأحمال **بطيئة الاستجابة** (صمامات، آلات الحالات، مفاتيح الأوضاع). زمن الذهاب والإياب عبر S7/OPC UA ~10–50 مللي ثانية — جيد للإشراف، بطيء جدًا للحركة/الخدمات الت伺فية.
+- فضّل كتابة **بتات أوامر M** التي يعمل منطق PLC الموجود بناءً عليها (تستولي على مصدر المُحفِّز) على كتابة مخرجات Q مباشرة.
+
+---
+
+## استكشاف الأخطاء وإصلاحها
+
+| العَرَض | السبب المحتمل | الإصلاح |
+|---------|--------------|-----|
+| رفض اتصال S7 / لا يوجد تأكيد COTP | PUT/GET غير مفعَّل؛ rack/slot خاطئ؛ جدار ناري | A.1؛ تحقق من `rack=0 slot=1` (1200/1500) |
+| قراءة DB تُعيد "optimized" / InvalidAddress | الوصول المحسَّن للكتل مفعّل | A.2 — أزل علامة الوصول المحسَّن، أعد التجميع |
+| نقطة نهاية OPC UA غير قابلة للوصول | الخادم غير مُفعَّل؛ غير منزّل؛ الترخيص مفقود | B.2 / B.7 / B.1 |
+| يتصل OPC UA ثم يُرفَض | شهادة العميل غير موثوقة | B.5 |
+| التصفّح يُعيد فراغًا | واجهة SIMATIC القياسية غير مفعّلة | B.3 |
+
+---
+
+## المراجع
+
+- [Enabling the OPC UA server (S7-1500) — STEP 7 V20 docs](https://docs.tia.siemens.cloud/r/en-us/v20/configuring-automation-systems/using-opc-ua-communication-s7-1200-s7-1500-s7-1500t/using-the-s7-1500-as-an-opc-ua-server-s7-1500-s7-1500t/configuring-the-opc-ua-server-s7-1500-s7-1500t/enabling-the-opc-ua-server-s7-1500-s7-1500t)
+- [Access to the OPC UA server (endpoint URL / port 4840)](https://docs.tia.siemens.cloud/r/en-us/v20/configuring-automation-systems/using-opc-ua-communication-s7-1200-s7-1500-s7-1500t/using-the-s7-1500-as-an-opc-ua-server-s7-1500-s7-1500t/configuring-the-opc-ua-server-s7-1500-s7-1500t/access-to-the-opc-ua-server-s7-1500-s7-1500t)
+- [Export OPC UA XML file (NodeSet)](https://docs.tia.siemens.cloud/r/en-us/v20/configuring-automation-systems/using-opc-ua-communication-s7-1200-s7-1500-s7-1500t/using-the-s7-1500-as-an-opc-ua-server-s7-1500-s7-1500t/configuring-the-opc-ua-server-s7-1500-s7-1500t/accessing-opc-ua-server-data-s7-1500-s7-1500t/export-opc-ua-xml-file-s7-1500-s7-1500t)

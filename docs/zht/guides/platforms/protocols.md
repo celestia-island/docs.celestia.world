@@ -1,387 +1,191 @@
-# 工業協定接入指南 — Evernight
+# 工業協定整合 — Evernight
 
-Evernight 是 celestia-island 生態的**強制硬體能力代理（hardware capability broker）**。任何上游 crate 都不得直接匯入 `aoba` / `rust7` 等函式庫——所有物理 I/O 必須經過 evernight 的協定模組。本指南涵蓋如何連接、輪詢、發現並對每個支援的工業協定進行警報。
+Evernight 是 celestia-island 生態的**強制硬體能力代理人**。所有上游 crate
+不直接依賴 `aoba` / `rust7` 等——所有物理 I/O 都透過 evernight 的協定模組。
 
-## 一覽
+## 協定分層
 
-| 協定 | 傳輸層 | 狀態 | 連接埠 / 匯流排 | 涵蓋範圍 |
-|------|--------|------|------------|----------|
-| **Modbus RTU** | 序列埠（RS-485） | ✅ 生產就緒 | `/dev/ttyUSB*` | 約占中國 PLC 市場 70% |
-| **Modbus TCP** | TCP | ✅ 生產就緒 | 502 | 廠級 SCADA |
-| **S7comm**（西門子） | TCP | ✅ 生產就緒 | 102 | S7-1200/1500/300/400 |
-| **MC Protocol**（三菱） | TCP | 🚧 規劃中 | 5000 | MELSEC FX/Q/L/iQ-R |
-| **OPC UA** | TCP | ⏳ 僅探測 | 4840 | "萬能翻譯器" |
-| **EtherCAT**（倍福） | 乙太網 | ⏳ 規劃中 | — | 伺服 / 運動 |
-| **EtherNet/IP**（羅克韋爾） | TCP/UDP | ⏳ 規劃中 | 44818/2222 | Allen-Bradley |
-| **CAN 2.0B** | 序列埠 | ⏳ 規劃中 | `/dev/ttyUSBCAN` | 燃料電池 |
+協定分為三層：
 
-> **狀態欄說明**：✅ = 已在 CI 中通過模擬器驗證；🚧 = 設計完成，實作進行中；⏳ = 僅探測/連通性檢查，或規劃中。
+| 層級 | 內容 | 內嵌編譯？ | 在 aris 映像檔中？ | 範例 |
+|------|------|-----------|----------------|------|
+| **Tier 1** | 開放標準 — 始終可用 | ✅ 是 | ✅ 是 | OPC UA, Modbus TCP/RTU, CAN, EtherCAT |
+| **Tier 2** | 廠商私有 — 官方 crate，可選 | 可選 feature | ❌ 否 | S7comm, MC Protocol, EtherNet/IP |
+| **Tier 3** | 第三方外掛程式 — 執行時載入 | ❌ 外部處理程序 | ❌ 否 | 任何你自己寫的 |
 
-## 架構
+### 為什麼分層？
+
+**Tier 1（開放標準）是首選路徑。** 所有現代 PLC（西門子 S7-1500、三菱 iQ-R、
+羅克韋爾 ControlLogix 5580）都內建 OPC UA 伺服器。如果裝置支援 OPC UA，
+走 OPC UA 就行——不需要廠商私有協定。
+
+**Tier 2（廠商私有）涵蓋存量裝置。** 現場大量的舊 PLC（S7-300/1200、MELSEC Q、
+老 Allen-Bradley）沒有 OPC UA，只說自己的私有協定。這些協定：
+
+- 以**獨立 crate** 實作（不嵌入 evernight 核心）
+- 僅在啟用 Cargo feature 時編譯
+- **不包含**在 aris 閘道 OS 映像檔中
+- 每個 crate 同時作為 Tier 3 外掛程式的**參考實作**
+
+**Tier 3（第三方外掛程式）允許任何人不修改 evernight 原始碼就新增協定支援。**
+外掛程式是一個獨立處理程序，透過 JSON-RPC（使用
+[arona](https://github.com/celestia-island/arona) 型別）經 WebSocket 或
+Unix 網域 socket 通訊。在閘道 TOML 設定中宣告即可。
 
 ```
-                         ┌──────────────────────────────────┐
-   你的應用 ────────────►│         evernight crate           │
-   (CLI / 庫 /            │                                   │
-    sensor-poll /         │  ┌─────────────────────────────┐ │
-    API 服務)             │  │   ProtocolBackend trait      │ │
-                         │  │   ProtocolProbe trait         │ │
-                         │  │   ProtocolRegistry           │ │
-                         │  │   ┌─────────┐ ┌─────────┐    │ │
-                         │  │   │ Modbus  │ │ S7comm  │ …  │ │
-                         │  │   │ Backend │ │ Backend │    │ │
-                         │  │   └────┬────┘ └────┬────┘    │ │
-                         │  └───────┼────────────┼─────────┘ │
-                         │          │            │           │
-                         │   ┌──────▼──┐  ┌──────▼────┐      │
-                         │   │  aoba   │  │  rust7 +  │      │
-                         │   │(Modbus) │  │ snap7-cli │      │
-                         │   └─────────┘  └───────────┘      │
-                         └──────────────────────────────────┘
-                                          │
-                              ┌───────────┴───────────┐
-                              │      物理硬體         │
-                              │  PLC / 感測器 / 閥門  │
-                              └───────────────────────┘
+  ┌──────────────────────────────────────────────────────┐
+  │                  ProtocolRegistry                     │
+  │                                                       │
+  │  Tier 1（始終載入）                                    │
+  │  ├── Modbus TCP/RTU  (開放, IEC 61158)               │
+  │  ├── OPC UA         (開放, IEC 62541)                │
+  │  ├── CAN 2.0B       (開放, ISO 11898)                │
+  │  └── EtherCAT       (開放, IEC 61158)                │
+  │                                                       │
+  │  Tier 2（可選 feature，不在 aris 映像檔中）             │
+  │  ├── S7comm         (西門子, feature = "s7comm")     │
+  │  ├── MC Protocol    (三菱, feature = "mc")           │
+  │  └── EtherNet/IP    (羅克韋爾, feature = "enip")     │
+  │                                                       │
+  │  Tier 3（執行時外掛程式，在 TOML 中宣告）               │
+  │  ├── fins_tcp       → ws://127.0.0.1:51001            │
+  │  ├── mewtocol       → ipc:///run/evernight/mew.sock   │
+  │  └── your_protocol  → ws://...                        │
+  └──────────────────────────────────────────────────────┘
 ```
 
-每個協定實作相同的兩個 trait，因此新增協定是**外掛式**的——無需修改上游消費者（感測器輪詢器、發現工具、CLI）：
+## Tier 1：開放標準
 
-```rust
-// src/protocol/backend.rs
-pub trait ProtocolBackend: Send + Sync {
-    fn protocol_name(&self) -> &'static str;
-    fn connect(&self, transport: &TransportInfo) -> Result<()>;
-    fn read(&self, addr: &DataAddress) -> Result<ProtocolReadResult>;
-    fn write(&self, addr: &DataAddress, data: &[u8]) -> Result<ProtocolWriteResult>;
-    fn ping(&self) -> Result<bool>;
-}
+### Modbus（RTU 序列埠 / TCP）
 
-pub trait ProtocolProbe: Send + Sync {
-    fn protocol_name(&self) -> &'static str;
-    fn probe(&self, transport: &TransportInfo) -> Result<Option<ProtocolProbeResult>>;
-    fn confidence(&self) -> f32;
-}
-```
+Modbus 是工業通訊的主力。它是開放標準（IEC 61158），幾乎所有 PLC、感測器、
+變頻器都支援。**始終編譯包含。**
 
----
+### OPC UA
 
-## Modbus（序列埠 RTU / TCP）
+OPC UA（IEC 62541）是通用工業通訊標準。所有主要廠商的現代 PLC 都內建
+OPC UA 伺服器。如果裝置支援 OPC UA，這是首選路徑。
 
-Modbus 是工業通訊的主力。Evernight 將 `aoba` crate 封裝在 `evernight::serial::modbus::ModbusMaster` 和 `evernight::protocol::ModbusBackend` 之後。
+### CAN 2.0B / EtherCAT
 
-### Feature 開關
+現場匯流排通訊的開放標準（燃料電池、伺服驅動、運動控制）。
+
+## Tier 2：廠商私有協定
+
+每個 Tier 2 協定是**獨立 crate**，實作了 `ProtocolBackend` 和
+`ProtocolProbe` trait。可選啟用——啟用 Cargo feature 才編譯。
+
+> **Tier 2 crate 不包含在 aris 閘道 OS 映像檔中。** 映像檔預設只包含 Tier 1。
+> 如果需要在閘道上使用廠商私有協定，要嘛：
+> 1. 建置自訂 aris 映像檔（啟用對應 feature），或
+> 2. 以 Tier 3 外掛程式方式執行（見下文）。
+
+### S7comm（西門子 S7-1200/1500/300/400）
 
 ```toml
-[dependencies]
-evernight = { version = "0.1", features = ["serial", "protocol"] }
+evernight = { version = "0.1", features = ["s7comm"] }
 ```
 
-- `serial` — `ModbusMaster`、暫存器讀寫、鮑率自動偵測
-- `protocol` — `ModbusBackend`（trait 實作）+ `ModbusProbe`（TCP 自動偵測）
+S7comm 是西門子原生協定（ISO-on-TCP，埠 102）。**優先級最高的廠商協定**
+——西門子在目標市場（氫能、化工、製藥）裝機量最大。
 
-### 快速上手 — 程式碼讀取暫存器
+**驗證：** 與 Snap7 C 參考實作做了位元組級差分驗證。19 個整合測試在 CI 中通過。
 
-```rust
-use evernight::serial::modbus::{ModbusMaster, RegisterMode};
-
-#[tokio::main]
-async fn main() -> anyhow::Result<()> {
-    let master = ModbusMaster::builder(0x13)        // 站号 19
-        .with_port("/dev/ttyUSB1")
-        .with_timeout(5000)
-        .open()?;
-
-    let result = master.read_registers(RegisterMode::Holding, 0x10, 3)?;
-    println!("寄存器值: {:?}", result.values);       // [压力1, 压力2, 压力3]
-    Ok(())
-}
-```
-
-### 自動偵測鮑率
-
-如果不知道設備的鮑率，可以掃描常見速率：
-
-```rust
-use evernight::serial::probe_modbus_rtu_baud;
-
-let detected = probe_modbus_rtu_baud("/dev/ttyUSB1", 0x13)?;
-println!("设备在 {} 波特率下响应", detected.baud);
-```
-
-### Modbus TCP — 探測 + 自動識別
-
-```rust
-use evernight::protocol::{ProtocolRegistry, ModbusProbe, TransportInfo};
-use std::sync::Arc;
-
-let mut registry = ProtocolRegistry::new();
-registry.register_probe(Arc::new(ModbusProbe));
-
-let transport = TransportInfo::Tcp { host: "192.168.1.20".into(), port: 502 };
-if let Some(result) = registry.auto_detect(&transport, 0.5).await {
-    println!("检测到 {}（置信度 {:.0}%）", result.protocol, result.confidence * 100.0);
-}
-```
-
-### CLI — 探測主機的 Modbus
-
-```bash
-# 探测常见工业端口（502=Modbus, 102=S7comm, …）
-evernight probe 192.168.1.20 --ports 502,102,4840
-```
-
-### 無硬體測試
-
-Evernight 的 CI 使用虛擬序列埠（`socat`）配合 aoba 的 Modbus 從站。執行整合測試：
-
-```bash
-cargo test --features full --test serial_integration
-```
-
-這些測試開啟一對虛擬 TTY，執行真實的 Modbus 從站迴圈，驗證讀寫/鮑率掃描——無需物理硬體。
-
----
-
-## S7comm（西門子 S7-1200/1500/300/400）
-
-S7comm 是西門子的原生協定，基於 ISO-on-TCP（連接埠 102）。Evernight 用 `rust7` crate（純 Rust，無 FFI）做資料存取，用 `snap7-client` 做區塊下載/燒錄。
-
-### Feature 開關
+### MC Protocol（三菱 MELSEC）
 
 ```toml
-[dependencies]
-evernight = { version = "0.1", features = ["s7comm", "manifest"] }
+evernight = { version = "0.1", features = ["mc"] }
 ```
 
-### 讀取資料區塊（DB）
+MC Protocol（3E 二進位訊框）涵蓋三菱 MELSEC Q/L/iQ-R 系列。**優先級最低**
+——三菱生態封閉，無開源參考伺服器。但現代三菱 PLC（iQ-R、iQ-F）內建
+OPC UA，**OPC UA 是三菱裝置的首選路徑**。
 
-```rust
-use evernight::protocol::s7comm::{S7CommClient, S7ConnectParams};
+**驗證：** 與六個獨立來源做了交叉驗證（三菱官方手冊、Beijer 驅動文件、
+Neuron 文件、Sym3 模擬器、pymcprotocol 客戶端、實測訊框結構）。
 
-#[tokio::main]
-async fn main() -> anyhow::Result<()> {
-    let client = S7CommClient::new(S7ConnectParams {
-        host: "192.168.1.10".into(),
-        port: 102,
-        rack: 0,
-        slot: 1,            // S7-1500: slot 1；S7-300: slot 2
-    });
-    client.connect().await?;
-
-    // 从 DB1 偏移 0 读取 4 字节（一个 REAL 温度值）
-    let bytes = client.read_db(1, 0, 4).await?;
-    let temp = f32::from_be_bytes(bytes.try_into().unwrap());
-    println!("DB1.DBD0 = {:.1} °C", temp);
-
-    client.disconnect().await;
-    Ok(())
-}
-```
-
-### 發現未知 DB + 探測結構
-
-```rust
-use evernight::protocol::s7comm::{scan_db_numbers, probe_db_structure};
-
-// 这个 PLC 上有哪些 DB 编号？
-let dbs = scan_db_numbers(&client, 1, 100).await?;
-for db in &dbs {
-    println!("DB{}: {}", db.db_number, db.status);   // ok / optimized / not_found
-}
-
-// 读取 DB1 前 512 字节用于类型推断
-let report = probe_db_structure(&client, 1, 512).await?;
-println!("DB1 原始字节: {} 字节, 可读={}", report.raw_bytes.len(), report.readable);
-```
-
-### 區塊下載 + 燒錄（PLC 程式設計）
-
-```rust
-use evernight::protocol::s7comm_blocks::{S7BlockOps, flash_block};
-
-let ops = S7BlockOps::new(&client);
-let binary_blocks = ops.full_upload_block(1).await?;   // 读取已有块
-// … 修改 MC7 二进制 …
-ops.download_block(block_type, block_num, &new_binary).await?;
-
-// 一步完成：停止 → 下载 → 重启：
-let result = flash_block(&client, block_type, block_num, &new_binary).await?;
-println!("烧录完成，PLC 已重启: {:?}", result);
-```
-
-### S7 manifest — 宣告式輪詢設定
-
-不用硬編碼暫存器佈局，而是用 TOML 描述整個站點：
+### EtherNet/IP（羅克韋爾/Allen-Bradley）
 
 ```toml
-# corridor.toml
-format_version = "1"
-
-[facility]
-id = "hydrogen-plant"
-name = "制氢产线"
-
-[[connections]]
-id = "conn-s7"
-kind = "s7comm"
-host = "192.168.1.10"
-port = 102
-rack = 0
-slot = 1
-
-[[stations]]
-id = 1
-connection_ref = "conn-s7"
-poll_interval_ms = 1000
-device_class = "equipment"
-vendor = "siemens"
-model = "S7-1500"
-
-# 要轮询的 S7 数据块
-[[stations.s7_data_blocks]]
-db_number = 1
-start_offset = 0
-length = 16
-
-[[stations.s7_data_blocks.fields]]
-offset = 0.0
-name = "temperature"
-data_type = "REAL"
-scale = { kind = "linear", factor = 1.0, offset = 0.0, unit = "Celsius" }
-
-[[stations.s7_data_blocks.fields.alarm]]
-h = 60.0
-hh = 80.0
-
-[[stations.s7_data_blocks.fields]]
-offset = 4.0
-name = "pressure"
-data_type = "REAL"
-scale = { kind = "linear", factor = 1.0, offset = 0.0, unit = "MPa" }
-
-[[alarm_rules]]
-id = "1.temperature.hh"
-station_ref = 1
-register_name = "temperature"
-level = "HighHigh"
-threshold = 80.0
-unit = "°C"
+evernight = { version = "0.1", features = ["enip"] }
 ```
 
-一條命令即可輪詢（S7 站點由平行的 `S7SensorPoller` 輪詢，警報規則自動標記 `protocol = "s7comm"`）：
+EtherNet/IP + CIP 涵蓋羅克韋爾 PLC，主要在北美市場。
 
-```bash
-evernight sensor-poll --manifest corridor.toml \
-  --entelecheia-socket /run/entelecheia/hardware-events.sock
+## Tier 3：外掛程式協定 — JSON-RPC over WebSocket / IPC
+
+Tier 3 允許**任何人**新增協定支援，不需要修改 evernight 原始碼。外掛程式是一個
+獨立處理程序：
+
+1. 監聽 WebSocket（`ws://host:port`）或 Unix 網域 socket（`ipc:///path`）
+2. 使用 JSON-RPC 2.0（[arona](https://github.com/celestia-island/arona) 型別）
+3. 實作與內建後端相同的 `connect` / `read` / `write` / `ping` 介面
+
+### 在閘道 TOML 中宣告外掛程式
+
+```toml
+# /etc/evernight/gateway.toml
+
+[[protocol_plugins]]
+name = "fins_tcp"                    # 歐姆龍 FINS/TCP
+transport = "ws://127.0.0.1:51001"   # 外掛程式處理程序的 WebSocket
+priority = 60                        # 探測優先級（低 = 先試）
+
+[[protocol_plugins]]
+name = "mewtocol"                    # 松下 Mewtocol
+transport = "ipc:///run/evernight/mewtocol.sock"  # Unix socket
+priority = 70
 ```
 
-### S7 欄位資料型別
+### JSON-RPC 介面（arona 型別）
 
-| 型別 | 大小 | 偏移格式 | 解碼 |
-|------|------|----------|------|
-| `BOOL` | 1 位元 | `8.0`（位元組 8，位元 0） | 位元測試 |
-| `BYTE` | 1 位元組 | `8` | `u8` |
-| `WORD` | 2 位元組 | `8` | `u16::from_be_bytes` |
-| `INT` | 2 位元組 | `8` | `i16::from_be_bytes` |
-| `DWORD` | 4 位元組 | `8` | `u32::from_be_bytes` |
-| `DINT` | 4 位元組 | `8` | `i32::from_be_bytes` |
-| `REAL` | 4 位元組 | `0` | `f32::from_be_bytes` |
-| `STRING` | 變長 | `20` | 長度前綴 ASCII |
+| 方法 | 參數 | 傳回 |
+|------|------|------|
+| `protocol.connect` | `{ transport: TransportInfo }` | `{ connected: bool }` |
+| `protocol.read` | `{ address: DataAddress }` | `{ raw: [u8], latency_us: u64 }` |
+| `protocol.write` | `{ address: DataAddress, data: [u8] }` | `{ confirmed: bool }` |
+| `protocol.ping` | `{}` | `{ reachable: bool }` |
+| `protocol.probe` | `{ transport: TransportInfo }` | `{ protocol: string, confidence: float }` |
 
-> `offset` 的小數部分編碼 BOOL 欄位的**位元索引**。例如 `10.3` = 位元組 10，位元 3。
+### 撰寫 Tier 3 外掛程式
 
-### 無硬體測試
+Tier 2 crate（如 `evernight-s7comm`）是**參考實作**。外掛程式作者可以閱讀其
+原始碼理解 `ProtocolBackend` trait 的契約，然後用任何語言（Python、Go、C、
+Node.js）在 JSON-RPC 伺服器後面實作相同邏輯。
 
-CI 執行 `snap7-server` 模擬器（純 Rust S7-1500 模擬器），驗證 連接 → 讀 DB → 掃描 DB → 探測結構 → 區塊操作：
+最小 Python 外掛程式範例：
 
-```bash
-cargo test --features full --test s7comm_integration
+```python
+#!/usr/bin/env python3
+"""最小 Tier 3 外掛程式 — 透過 WebSocket 說 JSON-RPC"""
+import json, asyncio, websockets
+
+async def handle(ws):
+    async for msg in ws:
+        req = json.loads(msg)
+        method = req["method"]
+        if method == "protocol.connect":
+            await ws.send(json.dumps({"id": req["id"], "result": {"connected": True}}))
+        elif method == "protocol.read":
+            await ws.send(json.dumps({"id": req["id"], "result": {"raw": [0,0,1,92], "latency_us": 500}}))
+        elif method == "protocol.ping":
+            await ws.send(json.dumps({"id": req["id"], "result": {"reachable": True}}))
+
+asyncio.run(websockets.serve(handle, "127.0.0.1", 51001))
 ```
 
-12 個測試通過——這是真實的端對端協定互動，不是 mock。
+## 自動探測優先級
 
-> **⚠️ TIA Portal 前置條件**：S7-1200/1500 PLC 需要在硬體組態中啟用
-> **"允許 PUT/GET 存取"**，且 DB 必須使用**非最佳化區塊存取**（右鍵 DB → 屬性 →
-> 取消勾選"最佳化的區塊存取"）。最佳化 DB 在位元組層級讀取時會回傳錯誤。
+| 優先級 | 協定 | 埠 | 層級 |
+|--------|------|------|------|
+| 10 | OPC UA | 4840 | Tier 1 |
+| 20 | Modbus TCP | 502 | Tier 1 |
+| 30 | EtherCAT | — | Tier 1 |
+| 40 | CAN | — | Tier 1 |
+| 50 | S7comm | 102 | Tier 2 |
+| 60 | MC Protocol | 5000 | Tier 2 |
+| 70 | EtherNet/IP | 44818 | Tier 2 |
+| 100+ | Tier 3 外掛程式 | 不定 | Tier 3 |
 
----
-
-## OPC UA（連通性探測）
-
-Evernight 可以偵測 OPC UA 端點（TCP 連接埠 4840），但尚未提供完整用戶端（Rust `opcua` crate 的用戶端功能尚不完善）。用探測發現端點，後端上線前使用專用 OPC UA 用戶端。
-
-```bash
-evernight probe 192.168.1.50 --ports 4840
-```
-
----
-
-## 發現 — 自主協定識別
-
-將 evernight 指向未知的網路範圍或序列埠，它會自動識別協定：
-
-```
-TCP 端點                    序列匯流排
-     │                         │
-     ▼                         ▼
- ProtocolProbe 鏈          鮑率掃描 + 站號掃描
- （按優先順序排序）           (probe_modbus_rtu_baud)
-     │                         │
-     ▼                         ▼
- ProtocolProbeResult       { port, baud, protocol, stations[] }
- { protocol, confidence,
-   banner }
-```
-
-探測按優先順序執行（Modbus=40 先於 S7comm=50）；信心度閾值（預設 0.5）以上的首個匹配勝出。
-
----
-
-## 警報路由（Modbus + S7comm）
-
-感測器讀數流經共享的警報管道。每個協定有自己的 topic 命名空間，下游消費者（entelecheia、shittim-chest）可以按來源過濾：
-
-| 協定 | 觸發 topic | 來源 ID |
-|------|-----------|---------|
-| Modbus | `modbus.{站號}.{欄位}.{級別}` | `evernight.modbus.{站號}` |
-| S7comm | `s7comm.{站號}.{欄位}.{級別}` | `evernight.s7comm.{站號}` |
-
-警報級別遵循 ISA-18.2：`ll` / `l` / `h` / `hh` / `roc`，帶遲滯死區和去抖計數以防止抖動。
-
-```rust
-use evernight::sensor::{AlarmConfig, AlarmRule, AlarmLevel};
-
-let alarm = AlarmConfig::new()
-    .with_rule(
-        AlarmRule::new("1.temp.hh", 1, "temperature", AlarmLevel::HH, 80.0)
-            .with_protocol("s7comm")    // → topic "s7comm.1.temperature.hh"
-            .with_hysteresis(2.0),
-    );
-```
-
----
-
-## CLI 命令參考
-
-| 命令 | 說明 |
-|------|------|
-| `evernight probe <host> [--ports 502,102,...]` | 探測主機的工業協定 |
-| `evernight sensor-poll [--manifest X.toml]` | 輪詢感測器暫存器，向 entelecheia 傳送警報 |
-| `evernight file cp <本地> <user@host:路徑>` | 透過 SSH 上傳檔案 |
-| `evernight file get <user@host:路徑> <本地>` | 透過 SSH 下載檔案 |
-| `evernight file ls <user@host:路徑>` | 列出遠端目錄 |
-| `evernight proxy <連接埠> --host <跳板機>` | 透過 SSH 動態轉送的本地 SOCKS5 代理 |
-| `evernight exec --host X --command "..."` | 執行一次性 SSH 命令 |
-| `evernight hw` | 顯示本地硬體遙測 |
-| `evernight api-serve --transport ws` | 啟動 JSON-RPC API 服務 |
-
----
-
-## 路線圖
-
-- **MC Protocol**（三菱）— 手寫二進位訊框編解碼器，目前無 Rust crate。增加約 7% PLC 市場覆蓋。
-- **EtherCAT**（倍福 / 匯川）— 透過 `ethercrab` crate。
-- **EtherNet/IP + CIP**（羅克韋爾）— 類別/實例/屬性定址。
-- **OPC UA 用戶端/伺服端** — 取決於 `opcua` crate 成熟度。
-- **CAN 2.0B** — 燃料電池 USB-CAN 橋接解析。
+開放標準的探測優先級最低（最先嘗試），因為如果裝置支援 OPC UA，
+那就是你想要的路徑——不管它是什麼品牌。

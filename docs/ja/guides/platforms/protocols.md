@@ -1,115 +1,59 @@
-# 産業プロトコル接続ガイド — Evernight
+# 産業プロトコル統合 — Evernight
 
-Evernight は celestia-island エコシステムの**強制ハードウェア能力ブローカー（hardware capability broker）**です。上流 crate はすべて `aoba` / `rust7` などのライブラリを直接インポートしてはならず、物理 I/O はすべて evernight のプロトコルモジュールを経由する必要があります。本ガイドでは、対応する各産業プロトコルの接続、ポーリング、発見、アラームの方法を説明します。
+Evernight は celestia-island エコシステムにおける**必須のハードウェア機能ブローカー**です。上流のクレートはいずれも `aoba` / `rust7` / などを直接インポートしません — すべての物理 I/O は evernight のプロトコルモジュールを経由します。
 
-## 一覧
+## プロトコルのティア
 
-| プロトコル | トランスポート層 | 状態 | ポート / バス | カバレッジ |
-|------|--------|------|------------|----------|
-| **Modbus RTU** | シリアル（RS-485） | ✅ 本番対応 | `/dev/ttyUSB*` | 中国 PLC 市場の約 70% を占有 |
-| **Modbus TCP** | TCP | ✅ 本番対応 | 502 | 工場レベル SCADA |
-| **S7comm**（シーメンス） | TCP | ✅ 本番対応 | 102 | S7-1200/1500/300/400 |
-| **MC Protocol**（三菱） | TCP | 🚧 計画中 | 5000 | MELSEC FX/Q/L/iQ-R |
-| **OPC UA** | TCP | ⏳ プローブのみ | 4840 | "万能トランスレータ" |
-| **EtherCAT**（ベッコフ） | イーサネット | ⏳ 計画中 | — | サーボ / モーション |
-| **EtherNet/IP**（ロックウェル） | TCP/UDP | ⏳ 計画中 | 44818/2222 | Allen-Bradley |
-| **CAN 2.0B** | シリアル | ⏳ 計画中 | `/dev/ttyUSBCAN` | 燃料電池 |
+すべてのプロトコルが同等というわけではありません。Evernight はこれらを 3 つのティアに分類します:
 
-> **状態列の説明**：✅ = CI 上でシミュレータにより検証済み；🚧 = 設計完了、実装進行中；⏳ = プローブ／接続性チェックのみ、または計画中。
+| Tier | 内容 | 組み込み? | aris イメージに収録? | 例 |
+|------|------|-----------|----------------------|------|
+| **Tier 1** | オープン標準 — 常に利用可能 | ✅ はい | ✅ はい | OPC UA, Modbus TCP/RTU, CAN, EtherCAT |
+| **Tier 2** | ベンダー固有 — 公式クレート、オプトイン | オプション機能 | ❌ いいえ | S7comm, MC Protocol, EtherNet/IP |
+| **Tier 3** | サードパーティプラグイン — 実行時にロード | ❌ 外部プロセス | ❌ いいえ | 自作するものすべて |
 
-## アーキテクチャ
+### なぜティア分けするのか?
+
+**Tier 1（オープン標準）** が主要な経路です。主要ベンダー各社（Siemens S7-1500、Mitsubishi iQ-R、Rockwell ControlLogix 5580）の最新 PLC は組み込みの OPC UA サーバーを同梱しています。デバイスが OPC UA を話すなら、それを使いましょう — ベンダー固有のコードは不要です。
+
+**Tier 2（ベンダー固有）** は既存のレガシー設備をカバーします。現場にある数百万台の PLC（S7-300/1200、MELSEC Q、旧型 Allen-Bradley）は OPC UA を持たず、独自プロトコルしか話しません。これらのプロトコルは:
+
+- **スタンドアロンクレート**として実装されている（evernight コアには組み込まれない）
+- Cargo 機能を有効にしたときのみコンパイルされる
+- aris ゲートウェイ OS イメージにはデフォルトで**収録されない**
+- 各クレートは Tier 3 プラグイン作者向けの**リファレンス実装**も兼ねる
+
+**Tier 3（サードパーティプラグイン）** は、evernight のソースコードに手を加えずに誰でもプロトコルサポートを追加できるようにします。プラグインは WebSocket または Unix ドメインソケット経由で JSON-RPC（[arona](https://github.com/celestia-island/arona) 型を使用）を話す外部プロセスです。ゲートウェイの TOML 設定で各プラグインの場所を宣言します。
 
 ```
-                         ┌──────────────────────────────────┐
-   あなたのアプリ ────────►│         evernight crate           │
-   (CLI / ライブラリ /      │                                   │
-    sensor-poll /          │  ┌─────────────────────────────┐ │
-    API サービス)          │  │   ProtocolBackend trait      │ │
-                         │  │   ProtocolProbe trait         │ │
-                         │  │   ProtocolRegistry           │ │
-                         │  │   ┌─────────┐ ┌─────────┐    │ │
-                         │  │   │ Modbus  │ │ S7comm  │ …  │ │
-                         │  │   │ Backend │ │ Backend │    │ │
-                         │  │   └────┬────┘ └────┬────┘    │ │
-                         │  └───────┼────────────┼─────────┘ │
-                         │          │            │           │
-                         │   ┌──────▼──┐  ┌──────▼────┐      │
-                         │   │  aoba   │  │  rust7 +  │      │
-                         │   │(Modbus) │  │ snap7-cli │      │
-                         │   └─────────┘  └───────────┘      │
-                         └──────────────────────────────────┘
-                                          │
-                              ┌───────────┴───────────┐
-                              │     物理ハードウェア   │
-                              │  PLC / センサ / バルブ │
-                              └───────────────────────┘
+  ┌──────────────────────────────────────────────────────┐
+  │                  ProtocolRegistry                     │
+  │                                                       │
+  │  Tier 1 (always loaded)                               │
+  │  ├── Modbus TCP/RTU  (open, IEC 61158)               │
+  │  ├── OPC UA         (open, IEC 62541)                │
+  │  ├── CAN 2.0B       (open, ISO 11898)                │
+  │  └── EtherCAT       (open, IEC 61158)                │
+  │                                                       │
+  │  Tier 2 (opt-in features, NOT in aris image)          │
+  │  ├── S7comm         (Siemens, feature = "s7comm")    │
+  │  ├── MC Protocol    (Mitsubishi, feature = "mc")     │
+  │  └── EtherNet/IP    (Rockwell, feature = "enip")     │
+  │                                                       │
+  │  Tier 3 (runtime plugins, declared in TOML)           │
+  │  ├── fins_tcp       → ws://127.0.0.1:51001            │
+  │  ├── mewtocol       → ipc:///run/evernight/mew.sock   │
+  │  └── your_protocol  → ws://...                        │
+  └──────────────────────────────────────────────────────┘
 ```
 
-各プロトコルは同じ 2 つの trait を実装するため、新しいプロトコルの追加は**プラグイン式**です。上流のコンシューマー（センサポーラ、発見ツール、CLI）を変更する必要はありません：
+## Tier 1: オープン標準
 
-```rust
-// src/protocol/backend.rs
-pub trait ProtocolBackend: Send + Sync {
-    fn protocol_name(&self) -> &'static str;
-    fn connect(&self, transport: &TransportInfo) -> Result<()>;
-    fn read(&self, addr: &DataAddress) -> Result<ProtocolReadResult>;
-    fn write(&self, addr: &DataAddress, data: &[u8]) -> Result<ProtocolWriteResult>;
-    fn ping(&self) -> Result<bool>;
-}
+### Modbus（シリアル経由 RTU / TCP）
 
-pub trait ProtocolProbe: Send + Sync {
-    fn protocol_name(&self) -> &'static str;
-    fn probe(&self, transport: &TransportInfo) -> Result<Option<ProtocolProbeResult>>;
-    fn confidence(&self) -> f32;
-}
-```
+Modbus は産業通信の主役です。実質的に市場のすべての PLC、センサー、ドライブが対応するオープン規格（IEC 61158）です。
 
----
-
-## Modbus（シリアル RTU / TCP）
-
-Modbus は産業通信の主力です。Evernight は `aoba` crate を `evernight::serial::modbus::ModbusMaster` と `evernight::protocol::ModbusBackend` の背後にカプセル化しています。
-
-### Feature スイッチ
-
-```toml
-[dependencies]
-evernight = { version = "0.1", features = ["serial", "protocol"] }
-```
-
-- `serial` — `ModbusMaster`、レジスタの読み書き、ボーレート自動検出
-- `protocol` — `ModbusBackend`（trait 実装）+ `ModbusProbe`（TCP 自動検出）
-
-### クイックスタート — コードでレジスタを読み取る
-
-```rust
-use evernight::serial::modbus::{ModbusMaster, RegisterMode};
-
-#[tokio::main]
-async fn main() -> anyhow::Result<()> {
-    let master = ModbusMaster::builder(0x13)        // 站号 19
-        .with_port("/dev/ttyUSB1")
-        .with_timeout(5000)
-        .open()?;
-
-    let result = master.read_registers(RegisterMode::Holding, 0x10, 3)?;
-    println!("寄存器值: {:?}", result.values);       // [压力1, 压力2, 压力3]
-    Ok(())
-}
-```
-
-### ボーレートの自動検出
-
-デバイスのボーレートが不明な場合は、一般的なレートをスキャンできます：
-
-```rust
-use evernight::serial::probe_modbus_rtu_baud;
-
-let detected = probe_modbus_rtu_baud("/dev/ttyUSB1", 0x13)?;
-println!("设备在 {} 波特率下响应", detected.baud);
-```
-
-### Modbus TCP — プローブ + 自動識別
+**常にコンパイル済み。** 機能フラグは不要です。
 
 ```rust
 use evernight::protocol::{ProtocolRegistry, ModbusProbe, TransportInfo};
@@ -120,269 +64,251 @@ registry.register_probe(Arc::new(ModbusProbe));
 
 let transport = TransportInfo::Tcp { host: "192.168.1.20".into(), port: 502 };
 if let Some(result) = registry.auto_detect(&transport, 0.5).await {
-    println!("检测到 {}（置信度 {:.0}%）", result.protocol, result.confidence * 100.0);
+    println!("Detected {} ({:.0}%)", result.protocol, result.confidence * 100.0);
 }
 ```
 
-### CLI — ホストの Modbus をプローブ
+### OPC UA
 
-```bash
-# 探测常见工业端口（502=Modbus, 102=S7comm, …）
-evernight probe 192.168.1.20 --ports 502,102,4840
-```
-
-### ハードウェアなしのテスト
-
-Evernight の CI は仮想シリアルポート（`socat`）と aoba の Modbus スレーブを組み合わせて使用します。統合テストを実行します：
-
-```bash
-cargo test --features full --test serial_integration
-```
-
-これらのテストは仮想 TTY のペアを開き、実際の Modbus スレーブループを実行して、読み書き／ボーレートスキャンを検証します。物理ハードウェアは不要です。
-
----
-
-## S7comm（シーメンス S7-1200/1500/300/400）
-
-S7comm はシーメンスのネイティブプロトコルで、ISO-on-TCP（ポート 102）に基づいています。Evernight は `rust7` crate（純 Rust、FFI なし）でデータアクセスを行い、`snap7-client` でブロックのダウンロード／フラッシュを行います。
-
-### Feature スイッチ
+OPC UA（IEC 62541）は汎用の産業通信規格です。Siemens、Mitsubishi、Rockwell などの最新 PLC には組み込みの OPC UA サーバーが含まれます。デバイスが OPC UA に対応している場合、これが推奨される経路です — ベンダー固有のプロトコルは不要です。
 
 ```toml
 [dependencies]
-evernight = { version = "0.1", features = ["s7comm", "manifest"] }
+evernight = { version = "0.1", features = ["opcua"] }
 ```
 
-### データブロック（DB）の読み取り
+### CAN 2.0B / EtherCAT
+
+フィールドバス通信（燃料電池、サーボドライブ、モーション制御）のオープン規格です。`can` および `ethercat` 機能で有効化します。
+
+---
+
+## Tier 2: ベンダー固有プロトコル
+
+各 Tier 2 プロトコルは `ProtocolBackend` と `ProtocolProbe` トレイトを実装した**スタンドアロンクレート**です。これらはオプトインです — Cargo 機能を有効にしてコンパイルに含めるか、バイナリを小さく保つために外すかを選べます。
+
+> **Tier 2 クレートはデフォルトでは aris ゲートウェイ OS イメージに含まれません。**
+> イメージは Tier 1 のみを同梱します。ゲートウェイ上でベンダー固有プロトコルが必要な場合は、次のいずれかを行います:
+> 1. 機能を有効にしたカスタム aris イメージをビルドする、または
+> 2. プロトコルを Tier 3 プラグインとして実行する（後述）。
+
+### S7comm（Siemens S7-1200/1500/300/400）
+
+```toml
+[dependencies]
+evernight = { version = "0.1", features = ["s7comm"] }
+```
+
+S7comm は ISO-on-TCP（ポート 102）上の Siemens ネイティブプロトコルです。これは**最優先度のベンダープロトコル**です — 対象市場（水素エネルギー、化学、製薬）で Siemens が最大の設置基数を持っています。
 
 ```rust
 use evernight::protocol::s7comm::{S7CommClient, S7ConnectParams};
 
-#[tokio::main]
-async fn main() -> anyhow::Result<()> {
-    let client = S7CommClient::new(S7ConnectParams {
-        host: "192.168.1.10".into(),
-        port: 102,
-        rack: 0,
-        slot: 1,            // S7-1500: slot 1；S7-300: slot 2
-    });
-    client.connect().await?;
-
-    // 从 DB1 偏移 0 读取 4 字节（一个 REAL 温度值）
-    let bytes = client.read_db(1, 0, 4).await?;
-    let temp = f32::from_be_bytes(bytes.try_into().unwrap());
-    println!("DB1.DBD0 = {:.1} °C", temp);
-
-    client.disconnect().await;
-    Ok(())
-}
+let client = S7CommClient::new(S7ConnectParams {
+    host: "192.168.1.10".into(),
+    port: 102,
+    rack: 0,
+    slot: 1,
+});
+client.connect().await?;
+let bytes = client.read_db(1, 0, 4).await?;
+let temp = f32::from_be_bytes(bytes.try_into().unwrap());
+println!("DB1.DBD0 = {:.1} °C", temp);
 ```
 
-### 未知 DB の発見 + 構造プローブ
+**検証:** Snap7 C リファレンス実装（15 年の歴史を持つオープンソースの業界標準）に対して検証済み。バイトレベルの差分テストでワイヤーフォーマットの準拠を確認。CI で 19 件の統合テストが合格しています。
 
-```rust
-use evernight::protocol::s7comm::{scan_db_numbers, probe_db_structure};
-
-// 这个 PLC 上有哪些 DB 编号？
-let dbs = scan_db_numbers(&client, 1, 100).await?;
-for db in &dbs {
-    println!("DB{}: {}", db.db_number, db.status);   // ok / optimized / not_found
-}
-
-// 读取 DB1 前 512 字节用于类型推断
-let report = probe_db_structure(&client, 1, 512).await?;
-println!("DB1 原始字节: {} 字节, 可读={}", report.raw_bytes.len(), report.readable);
-```
-
-### ブロックのダウンロード + フラッシュ（PLC プログラミング）
-
-```rust
-use evernight::protocol::s7comm_blocks::{S7BlockOps, flash_block};
-
-let ops = S7BlockOps::new(&client);
-let binary_blocks = ops.full_upload_block(1).await?;   // 读取已有块
-// … 修改 MC7 二进制 …
-ops.download_block(block_type, block_num, &new_binary).await?;
-
-// 一步完成：停止 → 下载 → 重启：
-let result = flash_block(&client, block_type, block_num, &new_binary).await?;
-println!("烧录完成，PLC 已重启: {:?}", result);
-```
-
-### S7 manifest — 宣言型ポーリング設定
-
-レジスタレイアウトをハードコードする代わりに、TOML でサイト全体を記述します：
+### MC Protocol（Mitsubishi MELSEC）
 
 ```toml
-# corridor.toml
-format_version = "1"
-
-[facility]
-id = "hydrogen-plant"
-name = "制氢产线"
-
-[[connections]]
-id = "conn-s7"
-kind = "s7comm"
-host = "192.168.1.10"
-port = 102
-rack = 0
-slot = 1
-
-[[stations]]
-id = 1
-connection_ref = "conn-s7"
-poll_interval_ms = 1000
-device_class = "equipment"
-vendor = "siemens"
-model = "S7-1500"
-
-# 要轮询的 S7 数据块
-[[stations.s7_data_blocks]]
-db_number = 1
-start_offset = 0
-length = 16
-
-[[stations.s7_data_blocks.fields]]
-offset = 0.0
-name = "temperature"
-data_type = "REAL"
-scale = { kind = "linear", factor = 1.0, offset = 0.0, unit = "Celsius" }
-
-[[stations.s7_data_blocks.fields.alarm]]
-h = 60.0
-hh = 80.0
-
-[[stations.s7_data_blocks.fields]]
-offset = 4.0
-name = "pressure"
-data_type = "REAL"
-scale = { kind = "linear", factor = 1.0, offset = 0.0, unit = "MPa" }
-
-[[alarm_rules]]
-id = "1.temperature.hh"
-station_ref = 1
-register_name = "temperature"
-level = "HighHigh"
-threshold = 80.0
-unit = "°C"
+[dependencies]
+evernight = { version = "0.1", features = ["mc"] }
 ```
 
-1 つのコマンドでポーリングできます（S7 ステーションは並列の `S7SensorPoller` によってポーリングされ、アラームルールには自動的に `protocol = "s7comm"` がタグ付けされます）：
+MC Protocol（3E バイナリフレーム）は Mitsubishi MELSEC Q/L/iQ-R シリーズをカバーします。ベンダープロトコルの中では**最も優先度が低い**です — Mitsubishi のエコシステムはクローズドソースで、リファレンスサーバー実装がありません。ただし、最新の Mitsubishi PLC（iQ-R、iQ-F）は組み込みの OPC UA を持つため、**Mitsubishi デバイスでは OPC UA が推奨される経路**です。
 
-```bash
-evernight sensor-poll --manifest corridor.toml \
-  --entelecheia-socket /run/entelecheia/hardware-events.sock
+**検証:** 6 つの独立ソース（Mitsubishi 公式マニュアル、Beijer Electronics ドライバ、Neuron ドキュメント、Sym3 エミュレータ、pymcprotocol クライアント、現場検証済みフレームキャプチャ）と相互照合済み。
+
+### EtherNet/IP（Rockwell/Allen-Bradley）
+
+```toml
+[dependencies]
+evernight = { version = "0.1", features = ["enip"] }
 ```
 
-### S7 フィールドのデータ型
-
-| 型 | サイズ | オフセット形式 | デコード |
-|------|------|----------|------|
-| `BOOL` | 1 ビット | `8.0`（バイト 8，ビット 0） | ビットテスト |
-| `BYTE` | 1 バイト | `8` | `u8` |
-| `WORD` | 2 バイト | `8` | `u16::from_be_bytes` |
-| `INT` | 2 バイト | `8` | `i16::from_be_bytes` |
-| `DWORD` | 4 バイト | `8` | `u32::from_be_bytes` |
-| `DINT` | 4 バイト | `8` | `i32::from_be_bytes` |
-| `REAL` | 4 バイト | `0` | `f32::from_be_bytes` |
-| `STRING` | 可変長 | `20` | 長さプレフィックス ASCII |
-
-> `offset` の小数部分は BOOL フィールドの**ビットインデックス**をエンコードします。例えば `10.3` = バイト 10，ビット 3。
-
-### ハードウェアなしのテスト
-
-CI は `snap7-server` シミュレータ（純 Rust S7-1500 エミュレータ）を実行し、接続 → DB 読み取り → DB スキャン → 構造プローブ → ブロック操作を検証します：
-
-```bash
-cargo test --features full --test s7comm_integration
-```
-
-12 個のテストがパスします。これは実際のエンドツーエンドのプロトコル相互作用であり、mock ではありません。
-
-> **⚠️ TIA Portal の前提条件**：S7-1200/1500 PLC ではハードウェア構成で
-> **"PUT/GET アクセスを許可"** を有効化する必要があり、DB は**非最適化ブロックアクセス**を
-> 使用しなければなりません（DB を右クリック → プロパティ → "最適化されたブロックアクセス" の
-> チェックを外す）。最適化 DB はバイトレベルの読み取りでエラーを返します。
+EtherNet/IP + CIP は Rockwell Automation / Allen-Bradley PLC をカバーします。主に北米市場向けです。
 
 ---
 
-## OPC UA（接続性プローブ）
+## Tier 3: プラグインプロトコル — WebSocket / IPC 経由 JSON-RPC
 
-Evernight は OPC UA エンドポイント（TCP ポート 4840）を検出できますが、完全なクライアントはまだ提供していません（Rust の `opcua` crate のクライアント機能はまだ十分ではありません）。プローブでエンドポイントを発見し、バックエンドが利用可能になるまでは専用の OPC UA クライアントを使用します。
+Tier 3 は、evernight のソースコードを変更せずに**誰もが** evernight にプロトコルサポートを追加できるようにします。プラグインは以下を行う外部プロセスです:
 
-```bash
-evernight probe 192.168.1.50 --ports 4840
+1. WebSocket（`ws://host:port`）または Unix ドメインソケット（`ipc:///path`）でリッスンする
+2. [arona](https://github.com/celestia-island/arona) 型を使用して JSON-RPC 2.0 を話す
+3. 組み込みバックエンドと同じ `connect` / `read` / `write` / `ping` インターフェースを実装する
+
+### ゲートウェイ TOML でのプラグイン宣言
+
+```toml
+# /etc/evernight/gateway.toml
+
+[[protocol_plugins]]
+name = "fins_tcp"                    # Omron FINS/TCP
+transport = "ws://127.0.0.1:51001"   # plugin process WebSocket
+priority = 60                        # probe priority (lower = first)
+
+[[protocol_plugins]]
+name = "mewtocol"                    # Panasonic Mewtocol
+transport = "ipc:///run/evernight/mewtocol.sock"  # Unix socket
+priority = 70
+
+[[protocol_plugins]]
+name = "custom_protocol"
+transport = "ws://192.168.1.100:8080"  # remote plugin on another machine
+priority = 80
+```
+
+起動時に、evernight はこのファイルを読み込み、各エントリに対して `RemotePluginBackend` をインスタンス化し、`ProtocolRegistry` に登録します。そこからは、プラグインは組み込みバックエンドと全く同じように自動検出とデータ I/O に参加します。
+
+### JSON-RPC インターフェース（arona 型）
+
+プラグインは以下の JSON-RPC メソッド（arona で定義）に応答しなければなりません:
+
+| Method | Parameters | Returns |
+|--------|-----------|---------|
+| `protocol.connect` | `{ transport: TransportInfo }` | `{ connected: bool }` |
+| `protocol.read` | `{ address: DataAddress }` | `{ raw: [u8], latency_us: u64 }` |
+| `protocol.write` | `{ address: DataAddress, data: [u8] }` | `{ confirmed: bool }` |
+| `protocol.ping` | `{}` | `{ reachable: bool }` |
+| `protocol.probe` | `{ transport: TransportInfo }` | `{ protocol: string, confidence: float }` |
+
+完全な型定義と TypeScript バインディングは [arona クレート](https://github.com/celestia-island/arona)を参照してください。
+
+### Tier 3 プラグインの作成
+
+Tier 2 クレート（例: `evernight-s7comm`）は**リファレンス実装**も兼ねています。プラグイン作者はそのソースを調べて `ProtocolBackend` トレイトの契約を理解した上で、JSON-RPC サーバーの背後で同じロジックを任意の言語（Python、Go、C、Node.js）で実装できます。
+
+最小限の Python プラグインの例:
+
+```python
+#!/usr/bin/env python3
+"""Minimal Tier 3 plugin — speaks JSON-RPC over WebSocket."""
+import json, asyncio, websockets
+
+async def handle(ws):
+    async for msg in ws:
+        req = json.loads(msg)
+        method = req["method"]
+        if method == "protocol.connect":
+            await ws.send(json.dumps({"id": req["id"], "result": {"connected": True}}))
+        elif method == "protocol.read":
+            # Your protocol-specific read logic here
+            await ws.send(json.dumps({"id": req["id"], "result": {"raw": [0,0,1,92], "latency_us": 500}}))
+        elif method == "protocol.ping":
+            await ws.send(json.dumps({"id": req["id"], "result": {"reachable": True}}))
+
+asyncio.run(websockets.serve(handle, "127.0.0.1", 51001))
 ```
 
 ---
 
-## 発見 — 自律的なプロトコル識別
+## アーキテクチャ
 
-evernight を未知のネットワーク範囲やシリアルポートに向けると、プロトコルを自動的に識別します：
-
-```
-TCP エンドポイント          シリアルバス
-     │                         │
-     ▼                         ▼
- ProtocolProbe チェーン     ボーレートスキャン + ステーション番号スキャン
- （優先度順）               (probe_modbus_rtu_baud)
-     │                         │
-     ▼                         ▼
- ProtocolProbeResult       { port, baud, protocol, stations[] }
- { protocol, confidence,
-   banner }
-```
-
-プローブは優先度順に実行され（Modbus=40 が S7comm=50 より先）、信頼度しきい値（デフォルト 0.5）を上回る最初の一致が勝者となります。
-
----
-
-## アラームルーティング（Modbus + S7comm）
-
-センサの読み取り値は共有のアラームパイプラインを流れます。各プロトコルには独自の topic 名前空間があり、下流のコンシューマー（entelecheia、shittim-chest）はソースごとにフィルタリングできます：
-
-| プロトコル | トリガ topic | ソース ID |
-|------|-----------|---------|
-| Modbus | `modbus.{ステーション番号}.{フィールド}.{レベル}` | `evernight.modbus.{ステーション番号}` |
-| S7comm | `s7comm.{ステーション番号}.{フィールド}.{レベル}` | `evernight.s7comm.{ステーション番号}` |
-
-アラームレベルは ISA-18.2 に従います：`ll` / `l` / `h` / `hh` / `roc`。チャタリングを防ぐため、ヒステリシスデッドバンドとデバウンスカウントを備えています。
+すべてのプロトコル — ティアを問わず — は同じ 2 つのトレイトを実装します:
 
 ```rust
-use evernight::sensor::{AlarmConfig, AlarmRule, AlarmLevel};
+pub trait ProtocolBackend: Send + Sync {
+    fn protocol_name(&self) -> &'static str;
+    fn tier(&self) -> ProtocolTier;
+    async fn connect(&self, transport: &TransportInfo) -> Result<()>;
+    async fn read(&self, addr: &DataAddress) -> Result<ProtocolReadResult>;
+    async fn write(&self, addr: &DataAddress, data: &[u8]) -> Result<ProtocolWriteResult>;
+}
 
-let alarm = AlarmConfig::new()
-    .with_rule(
-        AlarmRule::new("1.temp.hh", 1, "temperature", AlarmLevel::HH, 80.0)
-            .with_protocol("s7comm")    // → topic "s7comm.1.temperature.hh"
-            .with_hysteresis(2.0),
-    );
+pub trait ProtocolProbe: Send + Sync {
+    fn protocol_name(&self) -> &'static str;
+    async fn probe(&self, transport: &TransportInfo) -> Result<Option<ProtocolProbeResult>>;
+    fn confidence(&self) -> f32;
+    fn priority(&self) -> i32;
+}
 ```
 
----
+```
+                          ┌──────────────────────────────────┐
+   Your application ────► │         evernight crate           │
+   (CLI / library /       │                                   │
+    sensor-poll /         │  ProtocolBackend trait            │
+    API server)           │  ProtocolProbe trait              │
+                          │  ProtocolRegistry                 │
+                          │  ┌─────────┐ ┌─────────┐         │
+                          │  │ Tier 1  │ │ Tier 2  │         │
+                          │  │ Modbus  │ │ S7comm  │  …      │
+                          │  │ OPC UA  │ │ MC Proto│         │
+                          │  └────┬────┘ └────┬────┘         │
+                          │       │           │              │
+                          │       │     ┌─────┴──────┐       │
+                          │       │     │ Tier 3 RPC │       │
+                          │       │     │ (arona     │       │
+                          │       │     │  JSON-RPC) │       │
+                          │       │     └─────┬──────┘       │
+                          └───────┼───────────┼──────────────┘
+                                  │           │
+                          ┌───────▼───┐ ┌─────▼──────────┐
+                          │  aoba /   │ │ External plugin │
+                          │  asyncua  │ │ process (any    │
+                          │  (Tier 1) │ │  language)      │
+                          └───────────┘ └────────────────┘
+```
+
+## 自動検出の優先度
+
+未知のデバイスをプローブする際、Tier 1 のオープン標準プローブが最初に実行されます:
+
+| Priority | Protocol | Port |
+|----------|----------|------|
+| 10 | OPC UA | 4840 |
+| 20 | Modbus TCP | 502 |
+| 30 | EtherCAT | — |
+| 40 | CAN | — |
+| 50 | S7comm (Tier 2) | 102 |
+| 60 | MC Protocol (Tier 2) | 5000 |
+| 70 | EtherNet/IP (Tier 2) | 44818 |
+| 100+ | Tier 3 plugins | varies |
+
+オープン標準が最も低い優先度番号（最初にプローブ）を得ます — デバイスが OPC UA を話すなら、ベンダーに関わらずそれが望む経路だからです。
 
 ## CLI コマンドリファレンス
 
 | コマンド | 説明 |
-|------|------|
-| `evernight probe <host> [--ports 502,102,...]` | ホストの産業プロトコルをプローブ |
-| `evernight sensor-poll [--manifest X.toml]` | センサーレジスタをポーリングし、entelecheia にアラームを送信 |
-| `evernight file cp <ローカル> <user@host:パス>` | SSH でファイルをアップロード |
-| `evernight file get <user@host:パス> <ローカル>` | SSH でファイルをダウンロード |
-| `evernight file ls <user@host:パス>` | リモートディレクトリを一覧表示 |
-| `evernight proxy <ポート> --host <踏み台>` | SSH 動的転送によるローカル SOCKS5 プロキシ |
-| `evernight exec --host X --command "..."` | 一回限りの SSH コマンドを実行 |
-| `evernight hw` | ローカルハードウェアテレメトリを表示 |
-| `evernight api-serve --transport ws` | JSON-RPC API サービスを起動 |
+|----------|------|
+| `evernight probe <host> [--ports 502,102,...]` | ホストのプロトコルをプローブ（全ティア） |
+| `evernight sensor-poll [--manifest X.toml]` | センサーをポーリングし、アラームを送出 |
+| `evernight api-serve --transport ws` | JSON-RPC API サーバーを起動 |
 
----
+## S7 フィールドデータ型
 
-## ロードマップ
+| Type | Size | Offset format | Decode |
+|------|------|---------------|--------|
+| `BOOL` | 1 bit | `8.0` (byte 8, bit 0) | bit test |
+| `BYTE` | 1 byte | `8` | `u8` |
+| `WORD` | 2 bytes | `8` | `u16::from_be_bytes` |
+| `INT` | 2 bytes | `8` | `i16::from_be_bytes` |
+| `DWORD` | 4 bytes | `8` | `u32::from_be_bytes` |
+| `DINT` | 4 bytes | `8` | `i32::from_be_bytes` |
+| `REAL` | 4 bytes | `0` | `f32::from_be_bytes` |
+| `STRING` | var | `20` | length-prefixed ASCII |
 
-- **MC Protocol**（三菱）— 手書きのバイナリフレームコーデック。現状 Rust crate はなし。PLC 市場の約 7% のカバレッジを追加。
-- **EtherCAT**（ベッコフ / 汇川）— `ethercrab` crate 経由。
-- **EtherNet/IP + CIP**（ロックウェル）— クラス／インスタンス／属性アドレッシング。
-- **OPC UA クライアント／サーバー** — `opcua` crate の成熟度次第。
-- **CAN 2.0B** — 燃料電池の USB-CAN ブリッジ解析。
+> `offset` の小数部は BOOL フィールドの**ビットインデックス**を表します。
+
+## アラームルーティング
+
+センサーの読み取り値は共有のアラームパイプラインを通ります。各プロトコルは独自のトピック名前空間を持ちます:
+
+| Protocol | Trigger topic | Source id |
+|----------|---------------|-----------|
+| Modbus | `modbus.{station}.{field}.{level}` | `evernight.modbus.{station}` |
+| S7comm | `s7comm.{station}.{field}.{level}` | `evernight.s7comm.{station}` |
+| OPC UA | `opcua.{node}.{field}.{level}` | `evernight.opcua.{node}` |
+
+アラームレベルは ISA-18.2 に従います: `ll` / `l` / `h` / `hh` / `roc`。

@@ -1,27 +1,19 @@
-# Resumo
+# Summary
 
-[Boas-vindas](./intro.md)
+[Welcome](./intro.md)
 
------------------------------------------------------------------------------
+---
 
 # Meta
 
-- [Licença](./meta/license.md)
+- [License](./meta/license.md)
 - [CLA](./meta/cla.md)
-- [Código de Conduta](./meta/code-of-conduct.md)
-- [Segurança](./meta/security.md)
+- [Code of Conduct](./meta/code-of-conduct.md)
+- [Security](./meta/security.md)
+- [Contributing](./meta/CONTRIBUTING.md)
 
-# Guias
-
-## entelecheia (Núcleo)
-
-- [Entelecheia](./guides/core/README-entelecheia.md)
-
-## shittim-chest (WebUI)
-
-- [Shittim-chest](./guides/webui/README-shittim-chest.md)
-
-## Plataformas (arona · evernight)
+# Platforms
 
 - [Arona](./guides/platforms/README-arona.md)
-- [Evernight](./guides/platforms/README-evernight.md)
+- [Noa](./guides/platforms/README-noa.md)
+- [Platform Designs](./designs/platforms/README.md)

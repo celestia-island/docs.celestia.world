@@ -8,7 +8,7 @@
 
 | Document | Summary |
 | --- | --- |
-| [Supervision, Rolling Update & Replication](../../../malkuth/docs/en/design/supervision-and-rolling-update.md) | A single supervision-tree backbone shared by all three projects: uniform signal/drain semantics, systemd socket activation for zero-downtime handoff, a pluggable coordination-lock trait, and two fault-tolerance strategies (Replica = load-balancing ⊃ rolling update; Leader/Follower = edge HA) built on the same Worker + Supervisor primitives. |
+| [Supervision, Rolling Update & Replication](https://malkuth.docs.celestia.world/en/design/supervision-and-rolling-update.html) | A single supervision-tree backbone shared by all three projects: uniform signal/drain semantics, systemd socket activation for zero-downtime handoff, a pluggable coordination-lock trait, and two fault-tolerance strategies (Replica = load-balancing ⊃ rolling update; Leader/Follower = edge HA) built on the same Worker + Supervisor primitives. |
 
 ## Language Directories
 

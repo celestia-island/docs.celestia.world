@@ -2,9 +2,22 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/ci.yml'
   pull_request:
     branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -12,18 +25,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install mdBook
-        run: |
-          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.47/mdbook-v0.4.47-x86_64-unknown-linux-gnu.tar.gz | tar xz
-          sudo mv mdbook /usr/local/bin/
+      - uses: dtolnay/rust-toolchain@stable
 
-      - name: Build all language books
-        run: |
-          for lang in en zhs zht ja ko fr es ru de pt ar; do
-            echo "::group::Building $lang"
-            mdbook build docs/$lang
-            echo "::endgroup::"
-          done
+      - name: Install lagrange
+        run: cargo install lagrange-library --locked || cargo install --git https://github.com/celestia-island/lagrange --branch dev lagrange-library
+
+      - name: Build docs
+        run: lagrange build --src docs --out _site
+
+      - name: Set CNAME
+        run: echo "docs.celestia.world" > _site/CNAME
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   lint:
     runs-on: ubuntu-latest

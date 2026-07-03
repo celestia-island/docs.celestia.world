@@ -1,42 +1,26 @@
-# docs.celestia.world — centralized documentation hub (mdBook).
+# docs.celestia.world — centralized documentation hub (lagrange).
 
 set shell := ["bash", "-c"]
 set dotenv-load := false
 
-LANGS := "en zhs zht ja ko fr es ru de pt ar"
-
 default:
     @just --list
 
-# Build all language books into target/docs/ (double-quote for maximum compatibility).
-build-all:
-    @for lang in {{ LANGS }}; do \
-        echo "Building $lang…"; \
-        mdbook build docs/$lang || echo "  (failed $lang — check output above)"; \
-    done
+# Build all language docs with lagrange.
+build:
+    lagrange build --src docs --out target/docs
 
-# Alias for build-all.
-build: build-all
-
-# Build a single language book.
-build-lang lang:
-    mdbook build docs/{{ lang }}
-
-# Serve a single language book on http://localhost:3000 (or specified port).
-serve lang port="3000":
-    mdbook serve docs/{{ lang }} --port {{ port }} --open
-
-# Serve the English book on the default port.
-serve-en:
-    mdbook serve docs/en --open
+# Serve docs on a local port.
+serve port="3000":
+    lagrange dev --src docs --out target/docs --port {{ port }}
 
 # Clean all built docs.
 clean:
     rm -rf target/docs/
 
-# Watch and rebuild a single language book (like serve but without browser).
-watch lang:
-    mdbook watch docs/{{ lang }}
+# Watch and rebuild (like serve but without browser).
+watch:
+    lagrange dev --src docs --out target/docs
 
 # Lint all Markdown files with markdownlint.
 lint:

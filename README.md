@@ -1,11 +1,11 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
+<p align="center"><img src="https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/docs/logo.webp" alt="docs.celestia.world" width="200" /></p>
+
+<h1 align="center">docs.celestia.world</h1>
+
+<p align="center"><strong>Centralized documentation hub</strong></p>
+
 <div align="center">
-
-<img src="docs/logo.webp" alt="docs.celestia.world logo" width="200"/>
-
-# docs.celestia.world
-
-**Centralized documentation hub for the celestia-island ecosystem**
 
 [![License](https://img.shields.io/badge/license-CC0%201.0-blue.svg)](LICENSE)
 [![GitHub](https://img.shields.io/badge/github-celestia--island%2Fdocs.celestia.world-blue.svg)](https://github.com/celestia-island/docs.celestia.world)

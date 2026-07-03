@@ -5,7 +5,7 @@
 > Utiliser multimedia-creation et ApoRia pour générer, enregistrer et analyser des médias
 > Note sur l'état actuel : ce document décrit principalement le flux de travail cible. Des outils liés au multimodal existent effectivement dans ApoRia dans la base de code actuelle, mais ils n'ont pas encore pleinement atteint les capacités de registre d'actifs centralisé et de boucle fermée complète décrites ci-dessous.
 
----
+-----------------------------------------------------------------------------
 
 ## Table des matières
 
@@ -18,7 +18,7 @@
 - [Documents Office](#documents-office)
 - [Exemple complet](#exemple-complet)
 
----
+-----------------------------------------------------------------------------
 
 ## Aperçu
 
@@ -31,7 +31,7 @@ flowchart TB
     C --> D["Boucle de rétroaction : identifier les problèmes → affiner → ré-analyser"]
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Registre d'actifs
 
@@ -62,7 +62,7 @@ const retrieved = $.agent.ApoRia.media_asset_retrieve({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Outils de génération
 
@@ -137,7 +137,7 @@ $multimedia-creation.slide_generate({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Enregistrement
 
@@ -164,7 +164,7 @@ const asset = $.agent.ApoRia.media_asset_register({
 const asset_id: string = asset.id;
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Analyse multimodale
 
@@ -195,7 +195,7 @@ const context_analysis = $.agent.ApoRia.multimodal_chat({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Cycle de revue
 
@@ -253,7 +253,7 @@ while (iteration < max_iterations) {
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Documents Office
 
@@ -306,7 +306,7 @@ $multimedia-creation.slide_generate({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Exemple complet
 
@@ -381,7 +381,7 @@ report({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Prochaines étapes
 

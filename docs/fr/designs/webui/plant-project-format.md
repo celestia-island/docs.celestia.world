@@ -31,7 +31,7 @@
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Section 1 : `metadata`
 
@@ -61,7 +61,7 @@ Description des champs :
 | updated_at | ISO8601 | N | Dernière modification |
 | tags | string[] | N | Étiquettes |
 
----
+-----------------------------------------------------------------------------
 
 ## Section 2 : `nodes`
 
@@ -148,7 +148,7 @@ Structure Sensor :
 | unit | string | Unité |
 | range | [min, max] | Plage de mesure |
 
----
+-----------------------------------------------------------------------------
 
 ## Section 3 : `topology`
 
@@ -255,7 +255,7 @@ Structure Connection (générique) :
 | id | string | ID de connexion |
 | from | string | ID de l'entité source (nœud / capteur / plc / utilitaire) |
 | to | string | ID de l'entité destination |
-| points | [x,y][] | Coordonnées du chemin en polyligne |
+| points | `[x,y]` | Coordonnées du chemin en polyligne |
 | protocol | string | Protocole de câble de signal (Modbus / 4-20mA / Profibus / HART / OPC-UA) |
 | voltage | string | Tension du câble d'alimentation |
 | medium | string | Milieu de la conduite d'eau |
@@ -263,7 +263,7 @@ Structure Connection (générique) :
 | flow_rate | number | Débit |
 | temperature | number | Température |
 
----
+-----------------------------------------------------------------------------
 
 ## Section 4 : `scene`
 
@@ -372,7 +372,7 @@ Structure Model3D :
 | material | "auto" \| "holographic" \| "native" | Remplacement de matériau |
 | is_background | boolean | S'il s'agit d'un objet décoratif d'arrière-plan |
 
----
+-----------------------------------------------------------------------------
 
 ## Plan d'Intégration Tripartite
 
@@ -422,13 +422,13 @@ Extensions futures :
 - Édition par glisser-déposer de la disposition 3D dans la webui → écriture dans `.plant.json`
 - Pipeline CI/CD valide l'intégrité du schéma `.plant.json`
 
----
+-----------------------------------------------------------------------------
 
 ## Fichier d'Exemple
 
 L'exemple complet se trouve dans `scripts/mock/fixtures/hydrogen_corridor.plant.json` (à créer).
 
----
+-----------------------------------------------------------------------------
 
 ## Relation avec les Données Existantes
 

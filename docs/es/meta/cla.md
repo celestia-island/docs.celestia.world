@@ -1,7 +1,6 @@
 # Acuerdo de Licencia de Colaborador (CLA)
 > Esta es una traducción de referencia proporcionada por la comunidad para mayor comodidad. El único texto con fuerza legal es la versión en inglés del archivo `CLA.md` en la raíz del repositorio. En caso de conflicto, prevalecerá la versión en inglés.
 
-
 El presente Acuerdo de Licencia de Colaborador (el «CLA») se aplica a toda contribución aceptada e incorporada al proyecto **Arona** (el «Proyecto»), incluidos todos los repositorios de la organización Celestia Island que adopten este CLA. El Proyecto se encuentra bajo la Business Source License 1.1 con una Fecha de Cambio del 2030-01-01, a partir de la cual se convierte, a elección del receptor, en Apache-2.0 o MIT (véase `LICENSE`).
 
 **Deberá aceptar este CLA antes de que su contribución pueda fusionarse.** La aceptación del CLA es una acción única por colaborador (y por empleador, si contribuye en nombre de una empresa).
@@ -16,7 +15,7 @@ El presente Acuerdo de Licencia de Colaborador (el «CLA») se aplica a toda con
   Signed-off-by: Jane Doe <jane@example.com>
   ```
 
-- **Colaboradores corporativos.** Si contribuye en nombre de un empleador, este también deberá firmar el CLA Corporativo de la Sección 6 y devolverlo al Licenciante en contact@celestia.world (o al contacto indicado en `LICENSE`). Un `Signed-off-by` de un empleado solo será válido una vez que el CLA Corporativo del empleador esté registrado.
+- **Colaboradores corporativos.** Si contribuye en nombre de un empleador, este también deberá firmar el CLA Corporativo de la Sección 6 y devolverlo al Licenciante en <contact@celestia.world> (o al contacto indicado en `LICENSE`). Un `Signed-off-by` de un empleado solo será válido una vez que el CLA Corporativo del empleador esté registrado.
 
 ## 2. Definiciones
 
@@ -46,7 +45,7 @@ Usted declara que:
 
 ## 6. CLA Corporativo
 
-Si usted contribuye en nombre de una empresa, esta deberá confirmar lo siguiente firmando y devolviendo el bloque de CLA Corporativo que aparece a continuación a contact@celestia.world:
+Si usted contribuye en nombre de una empresa, esta deberá confirmar lo siguiente firmando y devolviendo el bloque de CLA Corporativo que aparece a continuación a <contact@celestia.world>:
 
 ```text
 Company: ______________________________________________________

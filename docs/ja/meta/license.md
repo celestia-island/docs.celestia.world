@@ -5,7 +5,7 @@ Business Source License 1.1
 ライセンステキスト著作権 (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
 "Business Source License" は MariaDB Corporation Ab の商標です。
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 パラメータ
 
@@ -85,9 +85,9 @@ Business Source License 1.1
 同等の範囲となります：
 
 —— Apache License, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0)、または
+(<https://www.apache.org/licenses/LICENSE-2.0>)、または
 —— MIT License
-(https://opensource.org/licenses/MIT)。
+(<https://opensource.org/licenses/MIT>)。
 
 許可された用途について、本ライセンスを Apache License 2.0
 または MIT License として取り扱うことができます。上記
@@ -100,14 +100,14 @@ Business Source License 1.1 の完全な条項が適用され、
 変更ライセンス:       変更日以降、本ライセンスは受領者の選択により自動的に
 デュアルライセンスに移行します:
 — Apache License, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0) または
+(<https://www.apache.org/licenses/LICENSE-2.0>) または
 — MIT License
-(https://opensource.org/licenses/MIT)
+(<https://opensource.org/licenses/MIT>)
 本ライセンス下でリリースされた本許諾対象作品のすべての
 バージョンについて、すべてのユーザーおよびすべての用途に対し、
 利用制限および別途商用ライセンスなしで適用されます。
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 条項
 
@@ -140,7 +140,7 @@ Business Source License 1.1 の完全な条項が適用され、
 これには（制限なく）商品性、特定目的への適合性、非侵害性、および
 権原の保証が含まれます。
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 通知
 

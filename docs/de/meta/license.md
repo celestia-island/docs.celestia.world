@@ -5,7 +5,7 @@ Business Source License 1.1
 Lizenztext Copyright (c) 2017 MariaDB Corporation Ab, Alle Rechte vorbehalten.
 "Business Source License" ist eine Marke der MariaDB Corporation Ab.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Parameter
 
@@ -92,9 +92,9 @@ Nutzung sind die gewährten Rechte im Umfang gleichwertig mit den
 Rechten, die unter Ihrer Wahl aus folgendem bereitgestellt werden:
 
 — Apache License, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), oder
+(<https://www.apache.org/licenses/LICENSE-2.0>), oder
 — MIT License
-(https://opensource.org/licenses/MIT).
+(<https://opensource.org/licenses/MIT>).
 
 Sie dürfen diese Lizenz für jede erlaubte Nutzung als Apache
 License 2.0 oder MIT License behandeln. Für jede unter den Punkten
@@ -107,15 +107,15 @@ eine separate kommerzielle Lizenz ist erforderlich.
 Änderungslizenz:       Ab dem Änderungsdatum wandelt sich diese Lizenz automatisch
 in eine Doppellizenz nach Wahl des Empfängers um:
 — die Apache License, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0) oder
+(<https://www.apache.org/licenses/LICENSE-2.0>) oder
 — die MIT License
-(https://opensource.org/licenses/MIT)
+(<https://opensource.org/licenses/MIT>)
 für alle Versionen des lizenzierten Werks, die unter dieser
 Lizenz veröffentlicht wurden, für alle Nutzer und alle
 Nutzungen, ohne Nutzungsbeschränkung und ohne separate
 kommerzielle Lizenz.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Bedingungen
 
@@ -151,7 +151,7 @@ DER LIZENZGEBER LEHNT HIERMIT ALLE GEWÄHRLEISTUNGEN UND BEDINGUNGEN AB, AUSDRÜ
 ODER STILLSCHWEIGEND, EINSCHLIESSLICH (OHNE EINSCHRÄNKUNG) GEWÄHRLEISTUNGEN DER
 MARKTGÄNGIGKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK, NICHTVERLETZUNG UND EIGENTUM.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Hinweis
 

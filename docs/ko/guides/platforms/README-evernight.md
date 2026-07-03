@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Evernight" width="200"/>
 
-
 **크로스 플랫폼 원격 제어 및 산업 프로토콜 브로커**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](https://github.com/celestia-island/evernight/blob/main/LICENSE)

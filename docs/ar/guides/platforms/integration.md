@@ -4,7 +4,7 @@
 
 ## البنية
 
-```
+```text
   Your app (CLI / TUI / Web / Agent)
          │
          ▼
@@ -19,7 +19,7 @@
    Physical hardware / remote servers / cloud APIs
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 1. Modbus RTU (تسلسلي)
 
@@ -47,7 +47,7 @@ println!("Pressures: {:?}", &result.values[..3]);
 evernight sensor-poll --manifest corridor.toml
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 2. S7comm (Siemens)
 
@@ -69,7 +69,7 @@ let temp = f32::from_be_bytes(bytes.try_into().unwrap());
 println!("Temperature: {:.1} °C", temp);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 3. MC Protocol (Mitsubishi)
 
@@ -87,7 +87,7 @@ let words = client.read_devices(McDevice::D, 0, 10).await?;
 println!("D0-D9: {:?}", words);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 4. EtherNet/IP (Rockwell)
 
@@ -109,7 +109,7 @@ let result = backend.read(&DataAddress::Raw {
 println!("Value: {:02X?}", result.raw);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 5. OPC UA
 
@@ -135,7 +135,7 @@ let value = client.read_node("ns=2;s=Temperature").await?;
 println!("Temperature: {}", value);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 6. SSH
 
@@ -160,7 +160,7 @@ evernight file put ./config.yaml root@192.168.1.100:/etc/app/config.yaml
 evernight proxy 1080 --host 192.168.1.100 --user root
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 7. VNC
 
@@ -180,7 +180,7 @@ evernight proxy 1080 --host 192.168.1.100 --user root
 evernight connect vnc://192.168.1.100:5901
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 8. RDP
 
@@ -222,7 +222,7 @@ evernight connect rdp://192.168.1.100:3389
 - ✅ NLA: NTLMv2 + CredSSP (يحتاج Kerberos إلى KDC)
 - ◐ الجلسة: تحتاج Channel-Join ← تبادل القدرات ← حلقة لوحة الإطارات المستمرة
 
----
+-----------------------------------------------------------------------------
 
 ## 9. Kubernetes
 
@@ -241,7 +241,7 @@ for pod in &pods {
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 10. libvirt
 
@@ -260,7 +260,7 @@ for d in &domains {
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## سؤال العميل: هل يجب أن تبني عارضًا؟
 
@@ -278,7 +278,7 @@ for d in &domains {
 
 #### Tier 1: لقطة شاشة بلا واجهة (أقل جهدًا، أعلى قيمة اختبار)
 
-```
+```text
 evernight connect rdp://host --screenshot out.png
 ```
 
@@ -293,7 +293,7 @@ evernight connect rdp://host --screenshot out.png
 
 #### Tier 2: نافذة egui (جهد متوسط، اختبار يدوي كامل)
 
-```
+```text
 evernight connect rdp://host --gui
 ```
 
@@ -328,7 +328,7 @@ evernight connect rdp://host --gui
 
 Tier 3 هو الواجهة الأمامية للإنتاج، تُبنى عندما تكون واجهة الويب جاهزة.
 
----
+-----------------------------------------------------------------------------
 
 ## البدء السريع: تحقق من إعدادك
 

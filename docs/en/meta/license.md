@@ -79,9 +79,9 @@ above, the rights granted are equivalent in scope to those
 provided under your choice of either:
 
 — the Apache License, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), or
+(<https://www.apache.org/licenses/LICENSE-2.0>), or
 — the MIT License
-(https://opensource.org/licenses/MIT).
+(<https://opensource.org/licenses/MIT>).
 
 You may treat this License as the Apache License 2.0 or
 the MIT License for any Permitted Use. For any Restricted
@@ -94,9 +94,9 @@ Change Date:          2030-01-01
 Change License:       On and after the Change Date, this License automatically
 converts to a dual license at the recipient's choice:
 — the Apache License, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), or
+(<https://www.apache.org/licenses/LICENSE-2.0>), or
 — the MIT License
-(https://opensource.org/licenses/MIT)
+(<https://opensource.org/licenses/MIT>)
 for all versions of the Licensed Work released under this
 License, for all users and for all uses, with no
 production-use restriction and no separate commercial

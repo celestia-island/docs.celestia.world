@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Shittim Chest" width="200"/>
 
-
 **entelecheia 멀티 에이전트 플랫폼용 사용자 대면 셸**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](https://github.com/celestia-island/shittim-chest/blob/main/LICENSE)

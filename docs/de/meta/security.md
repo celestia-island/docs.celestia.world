@@ -1,7 +1,6 @@
 # Sicherheitsrichtlinie
 > **Hinweis**: Dies ist eine Community-Referenzübersetzung. Bei Unstimmigkeiten ist die englische Version `SECURITY.md` im Wurzelverzeichnis des Repositorys maßgeblich.
 
-
 ## Melden einer Schwachstelle
 
 **Eröffnen Sie keine öffentlichen Issues für Sicherheitsschwachstellen.**
@@ -9,7 +8,7 @@
 Melden Sie diese privat über
 [GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
 Wenn Ihnen GitHub Security Advisories nicht zur Verfügung stehen, senden Sie eine E-Mail an den Maintainer unter
-security@celestia.world mit einer klaren Beschreibung und Reproduktionsschritten.
+<security@celestia.world> mit einer klaren Beschreibung und Reproduktionsschritten.
 
 ## Geltungsbereich
 

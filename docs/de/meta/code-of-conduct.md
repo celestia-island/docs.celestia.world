@@ -1,7 +1,6 @@
 # Verhaltenskodex
 > Dies ist eine gemeinschaftliche Referenzübersetzung. Bei Unstimmigkeiten ist die englische Originaldatei [`CODE_OF_CONDUCT.md`](../../../CODE_OF_CONDUCT.md) im Stammverzeichnis des Repositorys maßgeblich.
 
-
 ## Unser Versprechen
 
 Wir als Mitglieder, Mitwirkende und Leitende geloben, die Teilnahme an unserer Gemeinschaft für alle zu einer belästigungsfreien Erfahrung zu machen, unabhängig von Alter, Körpergröße, sichtbaren oder unsichtbaren Behinderungen, ethnischer Zugehörigkeit, sexueller Merkmale, Geschlechtsidentität und -ausdruck, Erfahrungsstand, Bildung, sozioökonomischem Status, Nationalität, persönlichem Erscheinungsbild, Rasse, Religion oder sexueller Identität und Orientierung.
@@ -38,7 +37,7 @@ Dieser Verhaltenskodex gilt innerhalb aller Gemeinschaftsräume und findet auch 
 
 ## Durchsetzung
 
-Vorfälle missbräuchlichen, belästigenden oder anderweitig inakzeptablen Verhaltens können den für die Durchsetzung verantwortlichen Leitenden der Gemeinschaft unter contact@celestia.world gemeldet werden. Alle Beschwerden werden umgehend und fair geprüft und untersucht.
+Vorfälle missbräuchlichen, belästigenden oder anderweitig inakzeptablen Verhaltens können den für die Durchsetzung verantwortlichen Leitenden der Gemeinschaft unter <contact@celestia.world> gemeldet werden. Alle Beschwerden werden umgehend und fair geprüft und untersucht.
 
 Alle Leitenden der Gemeinschaft sind verpflichtet, die Privatsphäre und Sicherheit der meldenden Person jeglichen Vorfalls zu achten.
 

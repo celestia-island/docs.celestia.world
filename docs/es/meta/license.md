@@ -5,7 +5,7 @@ Licencia de Código Fuente Empresarial 1.1
 Texto de la licencia copyright (c) 2017 MariaDB Corporation Ab, Todos los Derechos Reservados.
 "Business Source License" es una marca registrada de MariaDB Corporation Ab.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Parámetros
 
@@ -95,9 +95,9 @@ equivalentes en alcance a los proporcionados bajo
 su elección de:
 
 — la Licencia Apache, Versión 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), o
+(<https://www.apache.org/licenses/LICENSE-2.0>), o
 — la Licencia MIT
-(https://opensource.org/licenses/MIT).
+(<https://opensource.org/licenses/MIT>).
 
 Puede tratar esta Licencia como la Apache License 2.0
 o la MIT License para cualquier Uso Permitido. Para
@@ -112,14 +112,14 @@ Licencia de Cambio:    A partir de la Fecha de Cambio, esta Licencia se conviert
 automáticamente en una licencia doble a elección del
 destinatario:
 — la Licencia Apache, Versión 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), o
+(<https://www.apache.org/licenses/LICENSE-2.0>), o
 — la Licencia MIT
-(https://opensource.org/licenses/MIT)
+(<https://opensource.org/licenses/MIT>)
 para todas las versiones de la Obra Licenciada publicada bajo
 esta Licencia, para todos los usuarios y todos los usos, sin
 restricción de uso y sin licencia comercial separada.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Términos
 
@@ -155,7 +155,7 @@ EN LA MEDIDA PERMITIDA POR LA LEY APLICABLE, LA OBRA LICENCIADA SE PROPORCIONA
 CONDICIONES, EXPRESAS O IMPLÍCITAS, INCLUYENDO (SIN LIMITACIÓN) LAS GARANTÍAS DE
 COMERCIABILIDAD, IDONEIDAD PARA UN FIN DETERMINADO, NO INFRACCIÓN Y TITULARIDAD.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Aviso
 

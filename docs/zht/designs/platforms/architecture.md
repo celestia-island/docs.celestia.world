@@ -36,7 +36,7 @@
 - `ProtocolBackend` —— connect / read / write / ping
 - `ProtocolProbe` —— 自動識別未知端點的協定
 
-```
+```text
 ProtocolRegistry::auto_detect(transport)  →  ProtocolProbeResult
 ```
 
@@ -61,7 +61,7 @@ let profile = auto_provision("192.168.1.10").await?;
 
 連線是 URI 型別化、目錄化管理的：
 
-```
+```text
 ssh://user@host:22          s7://10.0.0.5?rack=0&slot=1
 vnc://host:5900             opcua://10.0.0.5:4840
 serial:///dev/ttyUSB0?baud=9600

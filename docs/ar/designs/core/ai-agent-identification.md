@@ -28,7 +28,7 @@
 المحلي يُرمّز **من خدم النموذج**:
 
 ```text
-Display Name <provider-or-platform-id@celestia.world>
+Display Name <provider-<or-platform-id@celestia.world>>
 ```
 
 معرّف المزود هو **حقل `website_domain` الإلزامي** المصرّح به في كل
@@ -50,10 +50,10 @@ Display Name <provider-or-platform-id@celestia.world>
 هذا يعني أن *نفس* النموذج المُتلقى عبر مسارات مختلفة يمكن تمييزه:
 
 ```text
-GLM 5 <zhipuai.cn@celestia.world>              # direct from Zhipu AI
-GLM 5 <jdcloud.com@celestia.world>           # GLM 5 served via JD Cloud
-Deepseek V4 Pro <deepseek.com@celestia.world> # direct from DeepSeek
-Deepseek V4 Pro <opencode.ai@celestia.world>  # DeepSeek served via opencode
+GLM 5 <zhipuai.<cn@celestia.world>>              # direct from Zhipu AI
+GLM 5 <jdcloud.<com@celestia.world>>           # GLM 5 served via JD Cloud
+Deepseek V4 Pro <deepseek.<com@celestia.world>> # direct from DeepSeek
+Deepseek V4 Pro <opencode.<ai@celestia.world>>  # DeepSeek served via opencode
 ```
 
 ## مواصفة مقطور المشارك (Co-author)
@@ -85,8 +85,8 @@ Co-authored-by: Entelecheia <demiurge@celestia.world>
 مُضمّن في اسم عرض كل نموذج ضمن مقطور `Co-authored-by` (كتلة مقطور واحدة يحللها GitHub بشكل صحيح):
 
 ```text
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 القواعد:
@@ -107,7 +107,7 @@ The previous 180s timeout was too tight for clean builds on a loaded
 machine; raise it to 300s to avoid spurious validation failures.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.cn@celestia.world>
+Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.<cn@celestia.world>>
 ```
 
 ## تثبيت ربط noa
@@ -187,7 +187,7 @@ flowchart LR
 evernight SSH ← المضيف B ← `git commit`)، يطلق ربط `commit-msg`
 الخاص بالمضيف محليًا ويختم الالتزام. قد يظهر `evernight` نفسه كـ **مزود
 عبور** في بريد المؤلف عندما يرحل حركة النموذج (مثل
-`GLM 5 <evernight.celestia.world@celestia.world>`)، مما يجعل قفزة النقل
+`GLM 5 <evernight.<celestia.world@celestia.world>>`)، مما يجعل قفزة النقل
 قابلة للتدقيق.
 
 ## اعتبارات الأمان

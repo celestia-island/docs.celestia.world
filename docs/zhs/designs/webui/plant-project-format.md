@@ -31,7 +31,7 @@
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Section 1：`metadata`
 
@@ -61,7 +61,7 @@
 | updated_at | ISO8601 | N | 最后修改时间 |
 | tags | string[] | N | 标签 |
 
----
+-----------------------------------------------------------------------------
 
 ## Section 2：`nodes`
 
@@ -148,7 +148,7 @@ Sensor 结构：
 | unit | string | 单位 |
 | range | [min, max] | 量程 |
 
----
+-----------------------------------------------------------------------------
 
 ## Section 3：`topology`
 
@@ -255,7 +255,7 @@ Connection 结构（通用）：
 | id | string | 连接 ID |
 | from | string | 起点实体 ID (node / sensor / plc / utility) |
 | to | string | 终点实体 ID |
-| points | [x,y][] | 折线路径坐标 |
+| points | `[x,y]` | 折线路径坐标 |
 | protocol | string | 信号线协议 (Modbus / 4-20mA / Profibus / HART / OPC-UA) |
 | voltage | string | 电力电缆电压 |
 | medium | string | 水管介质 |
@@ -263,7 +263,7 @@ Connection 结构（通用）：
 | flow_rate | number | 流量 |
 | temperature | number | 温度 |
 
----
+-----------------------------------------------------------------------------
 
 ## Section 4：`scene`
 
@@ -372,7 +372,7 @@ Model3D 结构：
 | material | "auto" \| "holographic" \| "native" | 材质覆盖 |
 | is_background | boolean | 是否为背景装饰物 |
 
----
+-----------------------------------------------------------------------------
 
 ## 三端对接方案
 
@@ -422,13 +422,13 @@ PoleMos 通过 MCP tool 读取 plant 文件：
 - 人在 webui 里拖拽编辑 3D 布局 → 写回 `.plant.json`
 - CI/CD 管线验证 `.plant.json` 的 schema 完整性
 
----
+-----------------------------------------------------------------------------
 
 ## 示例文件
 
 完整示例见 `scripts/mock/fixtures/hydrogen_corridor.plant.json`（待创建）。
 
----
+-----------------------------------------------------------------------------
 
 ## 与现有数据的关系
 

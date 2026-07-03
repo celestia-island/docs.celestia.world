@@ -25,7 +25,7 @@ Entelecheia implementa una **arquitectura de seguridad de defensa en profundidad
 | 13 | Limitación de Tasa | shittim-chest `channel/rate_limit` | DoS, agotamiento de recursos |
 | 14 | Pista de Auditoría | `orexis`, `timeline` | Forense post-incidente, responsabilidad |
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 1: Microkernel Solo-Ejecución
 
@@ -46,7 +46,7 @@ Las 148 herramientas MCP (operaciones de archivos, gestión de contenedores, con
 
 **Implementación:** `packages/shared/mcp_types/src/` define los tipos IPC del microkernel. El manejador `exec` en `packages/cosmos/` transpila y ejecuta el script mediante el motor Boa, con llamadas a herramientas enrutadas a través del `McpRouter` de `skemma`.
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 2: Puerta de Permiso de Doble Autorización
 
@@ -76,7 +76,7 @@ pub enum PermissionLevel {
 
 **Implementación:** `packages/shared/security_policy/src/` — 107 anotaciones de prueba, 4 pruebas tokio.
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 3: Autorización de Habilidades por Nivel de Confianza
 
@@ -93,7 +93,7 @@ Las habilidades se clasifican en **niveles de confianza** que determinan su alca
 
 El nivel de confianza de cada habilidad se verifica al cargar y se almacena en caché. Los intentos de escalar el nivel de confianza se registran como eventos de seguridad.
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 4: Aislamiento de Contenedor (Anillo Externo)
 
@@ -109,7 +109,7 @@ Cada ejecución de agente ocurre dentro de un **contenedor Docker o Podman** con
 
 **Implementación:** `packages/shared/container/src/` — 74 anotaciones de prueba, 12 pruebas tokio. Soporta tanto Docker (vía API Bollard) como Podman.
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 5: Sandbox OCI (Anillo Interno)
 
@@ -124,7 +124,7 @@ Dentro del contenedor Docker, Entelecheia ejecuta una **segunda capa de aislamie
 
 **¿Por qué dos capas?** Docker proporciona aislamiento de grano grueso (red, sistema de archivos). Youki proporciona filtrado de syscalls de grano fino y contabilidad de recursos. Si Docker se ve comprometido, el sandbox Youki aún contiene al agente.
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 6: Control de Acceso RBAC
 
@@ -137,7 +137,7 @@ Control de acceso basado en roles que gobierna todas las operaciones API:
 - **Aislamiento de workspace:** Los usuarios solo pueden acceder a los workspaces de los que son miembros
 - **Operaciones entre workspaces:** Requieren concesiones de admin explícitas
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 7: Autenticación JWT
 
@@ -149,7 +149,7 @@ Control de acceso basado en roles que gobierna todas las operaciones API:
 - **Protección CSRF basada en nonce** para clientes de navegador
 - **Limitación de tasa** en endpoints de autenticación (algoritmo GCRA)
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 8: Encriptación de Claves API
 
@@ -162,7 +162,7 @@ Todas las claves API de proveedores LLM se encriptan en reposo usando **AES-256-
 - Puesta a cero de claves en texto plano de la memoria después del uso
 - Soporte de rotación de claves
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 9: Centinela de Seguridad (OreXis)
 
@@ -177,7 +177,7 @@ OreXis es un Agente de Capa-1 que:
 
 Herramientas MCP (24): `standard_check`, `compliance_report`, `audit_alignment`, `audit_legality`, `agent_integrity`, `security_audit`, `tool_block`, `tool_unblock`, `policy_register`, `policy_list`, etc.
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 10: Pipeline IEPL con Seguridad de Tipos
 
@@ -193,7 +193,7 @@ El pipeline **Lenguaje de Plugin de Entelecheia** (IEPL) asegura la seguridad de
 
 **Amenaza mitigada:** Ataques de inyección mediante llamadas a herramientas sin tipo (común en frameworks de agentes basados en Python donde los esquemas de herramientas se validan solo en tiempo de ejecución).
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 11: Lista Blanca de Registro de Proveedores
 
@@ -205,7 +205,7 @@ crates.io, PyPI, npm, Go modules, Docker Hub, Maven Central, NuGet, RubyGems, Ha
 
 Cualquier importación de paquete desde un registro no incluido en la lista blanca se **bloquea a nivel de contenedor** antes de la ejecución.
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 12: Defensa contra Inyección de Prompts
 
@@ -220,7 +220,7 @@ La salida `exec` del LLM se ejecuta en un **contexto Boa JS aislado** sin acceso
 
 Las salidas de herramientas devueltas al LLM son **sanitizadas** — los datos binarios se codifican en base64, la salida excesiva se trunca y los patrones potenciales de inyección de prompts en los resultados de herramientas son marcados por OreXis.
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 13: Limitación de Tasa
 
@@ -233,7 +233,7 @@ Limitación de tasa por usuario y por canal usando el **Algoritmo GCRA (Generic 
 - Retroceso automático al exceder el límite
 - Límites separados para llamadas API, envíos de mensajes e invocaciones de herramientas
 
----
+-----------------------------------------------------------------------------
 
 ## Capa 14: Pista de Auditoría
 
@@ -246,7 +246,7 @@ Cada invocación de herramienta, decisión de agente y evento de seguridad es:
 1. Persistido en PostgreSQL con retención configurable
 1. Consultable mediante CLI (`entelecheia-cli trace-chain <insignia>`)
 
----
+-----------------------------------------------------------------------------
 
 ## Comparación de Seguridad con Otros Frameworks
 
@@ -260,7 +260,7 @@ Cada invocación de herramienta, decisión de agente y evento de seguridad es:
 | Lista blanca de paquetes | **15 registros** | Ninguno | Ninguno | Ninguno |
 | Pista de auditoría | Línea de tiempo enlazada por hash | Cadena de hash Merkle | Ninguno | Ninguno |
 
----
+-----------------------------------------------------------------------------
 
 ## Modelo de Amenazas
 
@@ -277,7 +277,7 @@ Cada invocación de herramienta, decisión de agente y evento de seguridad es:
 - Interrupciones del proveedor LLM (sin ruta de ejecución de respaldo)
 - Corrupción de datos PostgreSQL (mitigada por respaldos, no prevenida)
 
----
+-----------------------------------------------------------------------------
 
 ## Reporte de Vulnerabilidades
 

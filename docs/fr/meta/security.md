@@ -1,7 +1,6 @@
 # Politique de sécurité
 > **Remarque** : Ceci est une traduction communautaire de référence. En cas de divergence, la version anglaise `SECURITY.md` à la racine du dépôt fait foi.
 
-
 ## Signaler une vulnérabilité
 
 **N'ouvrez pas de tickets publics pour les vulnérabilités de sécurité.**
@@ -9,7 +8,7 @@
 Signalez-les en privé via
 [GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
 Si GitHub Security Advisories n'est pas disponible pour vous, envoyez un e-mail au responsable à
-security@celestia.world avec une description claire et les étapes de reproduction.
+<security@celestia.world> avec une description claire et les étapes de reproduction.
 
 ## Périmètre
 

@@ -38,7 +38,7 @@ Las E/S industriales se gestionan mediante dos traits:
 - `ProtocolBackend` — connect / read / write / ping
 - `ProtocolProbe` — detecta automáticamente el protocolo de un endpoint desconocido
 
-```
+```text
 ProtocolRegistry::auto_detect(transport)  →  ProtocolProbeResult
 ```
 
@@ -64,7 +64,7 @@ para la preparación única del PLC.
 
 Las conexiones son tipadas por URI y gestionadas por catálogo:
 
-```
+```text
 ssh://user@host:22          s7://10.0.0.5?rack=0&slot=1
 vnc://host:5900             opcua://10.0.0.5:4840
 serial:///dev/ttyUSB0?baud=9600

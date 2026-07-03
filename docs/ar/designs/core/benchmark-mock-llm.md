@@ -35,10 +35,10 @@
 
 ## 2. الهندسة المعمارية
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                    Benchmark Runner                      │
-│  (遍历数据集实例，收集结果，输出 JSONL)                     │
+│  (遍历数据集实例,收集结果,输出 JSONL)                     │
 └──────────────┬──────────────────────┬───────────────────┘
                │                      │
        ┌───────▼────────┐    ┌────────▼────────┐
@@ -83,12 +83,12 @@
 خادم Mock متوافق مع OpenAI Chat Completions API (`/v1/chat/completions`)، يدعم وضعي عمل:
 
 **وضع التسجيل (عند تشغيل نموذج حقيقي لأول مرة)**:
-```
+```text
 Client → Mock Server → Real API → Mock Server (录制响应) → Client
 ```
 
 **وضع إعادة التشغيل (في CI/دون اتصال)**:
-```
+```text
 Client → Mock Server (匹配请求 → 返回录制的响应) → Client
 ```
 
@@ -106,7 +106,7 @@ Client → Mock Server (匹配请求 → 返回录制的响应) → Client
 
 ### 3.3 تخزين الـ Fixtures
 
-```
+```text
 tests/fixtures/llm/
 ├── swe-bench-verified/
 │   ├── gpt-4o/
@@ -132,13 +132,13 @@ tests/fixtures/llm/
 
 ### 4.1 تدفق تنفيذ المهمة
 
-```
+```text
 for instance in dataset:
     1. 拉取 SWE-bench Docker 镜像 (base + env + instance 三层)
-    2. 启动容器，挂载代码仓库
+    2. 启动容器,挂载代码仓库
     3. 注入 issue 文本作为任务描述
-    4. 启动 Entelecheia Agent Runtime（连接到容器内的 bash/文件系统）
-    5. Agent 执行直到完成或超时（step cap: 50, wall-clock: 15min）
+    4. 启动 Entelecheia Agent Runtime(连接到容器内的 bash/文件系统)
+    5. Agent 执行直到完成或超时(step cap: 50, wall-clock: 15min)
     6. 容器内执行 git diff → 提取 patch
     7. 输出 JSONL: {instance_id, model_name_or_path, model_patch}
     8. 销毁容器

@@ -25,7 +25,7 @@ Evernight은 celestia-island 생태계의 **필수 하드웨어 능력 브로커
 
 **Tier 3(서드파티 플러그인)**은 누구나 evernight의 소스 코드를 수정하지 않고 프로토콜 지원을 추가할 수 있게 합니다. 플러그인은 WebSocket이나 Unix 도메인 소켓을 통해([arona](https://github.com/celestia-island/arona) 타입 사용) JSON-RPC를 사용하는 외부 프로세스입니다. 게이트웨이의 TOML 설정이 각 플러그인의 위치를 선언합니다.
 
-```
+```text
   ┌──────────────────────────────────────────────────────┐
   │                  ProtocolRegistry                     │
   │                                                       │
@@ -81,7 +81,7 @@ evernight = { version = "0.1", features = ["opcua"] }
 
 필드버스 통신(연료전지, 서보 드라이브, 모션 제어)을 위한 오픈 표준입니다. `can` 및 `ethercat` 기능으로 활성화합니다.
 
----
+-----------------------------------------------------------------------------
 
 ## Tier 2: 벤더 전용 프로토콜
 
@@ -138,7 +138,7 @@ evernight = { version = "0.1", features = ["enip"] }
 
 EtherNet/IP + CIP은 북미 시장의 Rockwell Automation / Allen-Bradley PLC를 주로 다룹니다.
 
----
+-----------------------------------------------------------------------------
 
 ## Tier 3: 플러그인 프로토콜 — WebSocket / IPC 위의 JSON-RPC
 
@@ -211,7 +211,7 @@ async def handle(ws):
 asyncio.run(websockets.serve(handle, "127.0.0.1", 51001))
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 아키텍처
 
@@ -234,7 +234,7 @@ pub trait ProtocolProbe: Send + Sync {
 }
 ```
 
-```
+```text
                           ┌──────────────────────────────────┐
    Your application ────► │         evernight crate           │
    (CLI / library /       │                                   │

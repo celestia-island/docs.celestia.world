@@ -18,14 +18,14 @@ This document specifies evernight's role. The authoritative mechanism is defined
 
 The author email uses the `celestia.world` trust namespace:
 
-```
-Display Name <provider-or-platform-id@celestia.world>
+```text
+Display Name <provider-<or-platform-id@celestia.world>>
 ```
 
 When evernight relays a model, the provider id reflects the relay:
 
-```
-GLM 5 <evernight.celestia.world@celestia.world>   # GLM 5 relayed via evernight
+```text
+GLM 5 <evernight.<celestia.world@celestia.world>>   # GLM 5 relayed via evernight
 ```
 
 First-party providers keep their own domain (`anthropic.com`, `deepseek.com`,
@@ -44,9 +44,9 @@ every commit.
 
 Appended after the co-author trailers (blank-line separated):
 
-```
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+```text
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 - `Upload` = input tokens; `Download` = output tokens.
@@ -72,14 +72,14 @@ provider id becomes `evernight.celestia.world`. This is configured through the s
 
 ## Full Commit Message Example
 
-```
+```text
 perf(screen): cache X11 connection to avoid per-frame reconnect
 
 X11CaptureBackend previously called x11rb::connect on every capture_frame.
 Cache the connection in a Mutex<Option<..>>, reusing it across frames.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.com@celestia.world>
+Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.<com@celestia.world>>
 ```
 
 ## Security Considerations

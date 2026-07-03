@@ -440,7 +440,7 @@ flowchart TB
 | **内部計画ドキュメントパーサ** | 外部エージェントプラットフォームがARCHITECTURE.mdを読み取り、タスクを自身で分解するためにのみループが動作する。内部スキルは存在しない。 | `hubris::read_iteration_plan`スキル: バックログテーブルを解析 → 構造化された`Vec<BacklogItem>`を返し、Entelecheia自身のコーディネーターがループを駆動できるようにする。 | P0 |
 | **コーディネーター-ワーカー分離強制** | 外部プラットフォームが自身のプランナー/ワーカー分離を提供。Entelecheiaのパイプラインはこれを強制しない。コーディネータースキルチェーンは依然として`file_write`/`host_command_exec`を直接呼び出せる。 | スキルフロントマターに`role`フィールドを追加。`pipeline.rs`のツールホワイトリストビルダーで`role = "coordinator"`チェーンから変更ツールを除去。 | P0 |
 | **受け入れ基準検証** | `PostSurgeryRollback`は`cargo check --workspace`（ビルドレベル）をチェックするが、タスク固有の受け入れ基準はチェックしない。`prompt.rs`に部分的な配線。 | `verify_acceptance_criteria`フック名前空間: 各バックログ項目がチェック可能な基準を宣言（テスト合格、ファイル存在、関数実装）。 | P1 |
-| **バックログ状態マシン** | このテーブルは`status`カラムを持つが、まだ自律的に書き戻すエージェントがいない。 | 各チェーン+コミット後に`status: pending → in_progress → done | blocked`を自動更新。 | P1 |
+| **バックログ状態マシン** | このテーブルは`status`カラムを持つが、まだ自律的に書き戻すエージェントがいない。 | 各チェーン+コミット後に`status: pending → in_progress → done \| blocked`を自動更新。 | P1 |
 | **深いチェーンのコンテキスト予算** | `context_overflow_handler`は存在。コンテナ化されたSkeMmaが利用不可の場合、深いIEPL委譲は依然として脆弱。 | コンテナ化エージェント実行の安定化（youki root問題）または深いチェーンのためのプロセス内フォールバックの堅牢化。 | P2 |
 
 ### 反復バックログ

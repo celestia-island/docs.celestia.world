@@ -1,7 +1,6 @@
 # Código de Conduta
 > Esta é uma tradução de referência da comunidade. Em caso de divergência, prevalece a versão original em inglês [`CODE_OF_CONDUCT.md`](../../../CODE_OF_CONDUCT.md) na raiz do repositório.
 
-
 ## Nosso compromisso
 
 Como membros, colaboradores e líderes, comprometemo-nos a tornar a participação em nossa comunidade uma experiência livre de assédio para todos, independentemente de idade, tamanho corporal, deficiência visível ou invisível, etnia, características sexuais, identidade e expressão de gênero, nível de experiência, escolaridade, condição socioeconômica, nacionalidade, aparência pessoal, raça, religião, ou identidade e orientação sexuais.
@@ -38,7 +37,7 @@ Este Código de Conduta se aplica em todos os espaços da comunidade e também s
 
 ## Aplicação
 
-Casos de comportamento abusivo, de assédio ou de outro modo inaceitável podem ser relatados aos líderes da comunidade responsáveis pela aplicação em contact@celestia.world. Todas as reclamações serão revisadas e investigadas de forma rápida e justa.
+Casos de comportamento abusivo, de assédio ou de outro modo inaceitável podem ser relatados aos líderes da comunidade responsáveis pela aplicação em <contact@celestia.world>. Todas as reclamações serão revisadas e investigadas de forma rápida e justa.
 
 Todos os líderes da comunidade têm a obrigação de respeitar a privacidade e a segurança do relator de qualquer incidente.
 

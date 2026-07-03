@@ -143,32 +143,35 @@ Este documento describe el flujo completo para que los usuarios configuren Prove
 
 ## Arquitectura del Flujo de Configuración
 
+```text
 ### Flujo General
 
 ```mermaid
 flowchart TB
-    subgraph Capa de Interfaz de Usuario
-        A[Página de Modelos] --> B[Seleccionar Proveedor]
-        B --> C[Asistente de Configuración]
-    end
+subgraph Capa de Interfaz de Usuario
+    A[Página de Modelos] --> B[Seleccionar Proveedor]
+    B --> C[Asistente de Configuración]
+end
 
-    subgraph Capa de Transporte
-        C --> D[Mensaje WebSocket]
-        D --> E[Procesamiento de Máquina de Estados]
-    end
+subgraph Capa de Transporte
+    C --> D[Mensaje WebSocket]
+    D --> E[Procesamiento de Máquina de Estados]
+end
 
-    subgraph Capa de Servicio
-        E --> F[Validación de Configuración]
-        F --> G[Almacenamiento en Base de Datos]
-        G --> H[Notificación Broadcast]
-    end
+subgraph Capa de Servicio
+    E --> F[Validación de Configuración]
+    F --> G[Almacenamiento en Base de Datos]
+    G --> H[Notificación Broadcast]
+end
 
-    subgraph Capa de Uso
-        H --> I[Solicitud de Conversación]
-        I --> J[Cargar Configuración]
-        J --> K[Llamada LLM]
-    end
+subgraph Capa de Uso
+    H --> I[Solicitud de Conversación]
+    I --> J[Cargar Configuración]
+    J --> K[Llamada LLM]
+end
 ```
+
+```text
 
 ## Flujo de Configuración del Proveedor
 
@@ -1014,7 +1017,7 @@ flowchart TB
 
 ### Configuración
 
-# provider_config.toml
+\# provider_config.toml
 [[models]]
 id = "gpt-5.4"
 tier = "normal"
@@ -1041,6 +1044,7 @@ Con esta configuración:
 
 ## Flujo: Mensaje de Usuario → Respuesta LLM
 
+```text
     1. El usuario envía un mensaje mediante TUI/CLI/socket
     1. `handle_user_message`():
 
@@ -1070,11 +1074,13 @@ c. TierPermit soltado → ranura de semáforo liberada
 a. Permiso de Semáforo de Solicitudes devuelto
 b. El contenedor Cosmos puede limpiarse (o reutilizarse)
 
+```
+
 ## Pruebas E2E
 
 Las pruebas usan timeout de inactividad (no plazo absoluto). El temporizador se reinicia en cada evento significativo:
 
-# La actividad reinicia el temporizador de inactividad — la cadena puede ejecutarse indefinidamente mientras permanezca activa
+\# La actividad reinicia el temporizador de inactividad — la cadena puede ejecutarse indefinidamente mientras permanezca activa
 ACTIVE_METHODS = {
 "Tui.`OrchestrationStatus`",
 "Tui.`McpToolResult`",
@@ -1125,6 +1131,7 @@ flowchart TB
 
 ## Orden de Resolución de BD en Tiempo de Ejecución
 
+```rust
 // packages/scepter/src/app/setup.rs
 let `db_url` = if let Ok(url) = std::env::var("DATABASE_URL") {
 // 1. Variable de entorno (producción: Docker PG, desarrollo: archivo .env)
@@ -1148,6 +1155,7 @@ url
 return Err(/* "no se configuró DATABASE_URL" */);
 }
 };
+```
 
 ## Patrón de Arnés de Pruebas
 
@@ -1185,18 +1193,19 @@ Las 23 tablas + 1 tabla con ámbito de esquema + 4 vistas se crean mediante migr
 
 ## Restricciones de PGlite
 
+```text
 | Restricción | Impacto | Mitigación |
 | --- | --- | --- |
 | `max_connections=1` | Solo un grupo a la vez | Conexión DB compartida entre subpruebas; sin `db.close()` entre pruebas |
 | Conversión de tipos estricta | `uuid = text` falla | Pasar siempre valores tipados (ej., `Uuid` no `String` para columnas UUID) |
 | Sin acceso concurrente | Las pruebas deben ser secuenciales | Ejecutor `#[test]` único con todas las subpruebas en línea |
 | Tareas en segundo plano del grupo sqlx | `close()` se cuelga indefinidamente | `std::process::exit(0)` después de que todas las pruebas completen |
-
+```
 ## Endurecimiento de Compilación Docker
 
 Todos los Dockerfiles de producción excluyen embedded-db:
 
-# Dockerfile
+\# Dockerfile
 RUN cargo build --release -p scepter \
 --no-default-features --features all-agents
 

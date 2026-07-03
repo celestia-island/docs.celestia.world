@@ -16,7 +16,7 @@ PLC exposes:
 If you can enable OPC UA, prefer it: evernight **browses** the full symbolic
 address space automatically and there is zero manual symbol entry.
 
----
+-----------------------------------------------------------------------------
 
 ## Path A — S7comm (raw register access)
 
@@ -44,7 +44,7 @@ absolute-address reads fail. For each DB evernight must read/write:
 
 ### A.3 Connect from evernight
 
-```
+```text
 s7://192.168.1.10:102?rack=0&slot=1
 ```
 
@@ -60,7 +60,7 @@ let profile = auto_provision("192.168.1.10").await?;
 // profile.data_blocks / profile.db_structures now describe every readable DB
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Path B — OPC UA (recommended)
 
@@ -120,14 +120,14 @@ logic — your ladder/SCL code is untouched.
 
 Endpoint URL:
 
-```
+```text
 opc.tcp://192.168.1.10:4840
 ```
 
 evernight connects as an OPC UA client, **browses** the whole symbolic tree,
 and reads/writes by name — no manual symbol entry, optimized DBs included.
 
----
+-----------------------------------------------------------------------------
 
 ## Verifying connectivity (zero-risk probes)
 
@@ -143,7 +143,7 @@ evernight probe 192.168.1.10 --ports 4840
 
 Both are passive handshakes — they read nothing and write nothing.
 
----
+-----------------------------------------------------------------------------
 
 ## Safety boundaries
 
@@ -156,7 +156,7 @@ Both are passive handshakes — they read nothing and write nothing.
 - Prefer writing **command M-bits** that existing PLC logic acts on (you hijack
   the trigger source) over writing Q outputs directly.
 
----
+-----------------------------------------------------------------------------
 
 ## Troubleshooting
 
@@ -168,7 +168,7 @@ Both are passive handshakes — they read nothing and write nothing.
 | OPC UA connects then rejected | Client certificate not trusted | B.5 |
 | Browse returns empty | Standard SIMATIC interface not enabled | B.3 |
 
----
+-----------------------------------------------------------------------------
 
 ## References
 

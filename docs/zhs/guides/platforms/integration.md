@@ -4,7 +4,7 @@
 
 ## 架构
 
-```
+```text
   Your app (CLI / TUI / Web / Agent)
          │
          ▼
@@ -19,7 +19,7 @@
    Physical hardware / remote servers / cloud APIs
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 1. Modbus RTU（串口）
 
@@ -47,7 +47,7 @@ println!("Pressures: {:?}", &result.values[..3]);
 evernight sensor-poll --manifest corridor.toml
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 2. S7comm（西门子）
 
@@ -69,7 +69,7 @@ let temp = f32::from_be_bytes(bytes.try_into().unwrap());
 println!("Temperature: {:.1} °C", temp);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 3. MC 协议（三菱）
 
@@ -87,7 +87,7 @@ let words = client.read_devices(McDevice::D, 0, 10).await?;
 println!("D0-D9: {:?}", words);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 4. EtherNet/IP（罗克韦尔）
 
@@ -109,7 +109,7 @@ let result = backend.read(&DataAddress::Raw {
 println!("Value: {:02X?}", result.raw);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 5. OPC UA
 
@@ -135,7 +135,7 @@ let value = client.read_node("ns=2;s=Temperature").await?;
 println!("Temperature: {}", value);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 6. SSH
 
@@ -160,7 +160,7 @@ evernight file put ./config.yaml root@192.168.1.100:/etc/app/config.yaml
 evernight proxy 1080 --host 192.168.1.100 --user root
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 7. VNC
 
@@ -180,7 +180,7 @@ evernight proxy 1080 --host 192.168.1.100 --user root
 evernight connect vnc://192.168.1.100:5901
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 8. RDP
 
@@ -222,7 +222,7 @@ evernight connect rdp://192.168.1.100:3389
 - ✅ NLA：NTLMv2 + CredSSP（Kerberos 需要 KDC）
 - ◐ 会话：需要 Channel-Join → 能力交换 → 持续的 framebuffer 循环
 
----
+-----------------------------------------------------------------------------
 
 ## 9. Kubernetes
 
@@ -241,7 +241,7 @@ for pod in &pods {
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 10. libvirt
 
@@ -260,7 +260,7 @@ for d in &domains {
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 客户端之问：你应该自己造一个查看器吗？
 
@@ -281,7 +281,7 @@ Evernight 能把 RDP 位图解码为 RGBA 缓冲区、把 VNC 帧解码为像素
 
 #### Tier 1：无头截图（最小投入，最高测试价值）
 
-```
+```text
 evernight connect rdp://host --screenshot out.png
 ```
 
@@ -297,7 +297,7 @@ evernight connect rdp://host --screenshot out.png
 
 #### Tier 2：egui 窗口（中等投入，完整手动测试）
 
-```
+```text
 evernight connect rdp://host --gui
 ```
 
@@ -334,7 +334,7 @@ RDP 位图流水线是否产出了正确的像素。
 
 Tier 3 是生产前端，在 Web UI 准备就绪时构建。
 
----
+-----------------------------------------------------------------------------
 
 ## 快速开始：验证你的环境
 

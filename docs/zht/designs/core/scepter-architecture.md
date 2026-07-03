@@ -143,32 +143,35 @@ graph LR
 
 ## 配置流程架構
 
+```text
 ### 整體流程
 
 ```mermaid
 flowchart TB
-    subgraph User Interface Layer
-        A[Models 頁面] --> B[選擇 Provider]
-        B --> C[配置精靈]
-    end
+subgraph User Interface Layer
+    A[Models 頁面] --> B[選擇 Provider]
+    B --> C[配置精靈]
+end
 
-    subgraph Transport Layer
-        C --> D[WebSocket 訊息]
-        D --> E[狀態機處理]
-    end
+subgraph Transport Layer
+    C --> D[WebSocket 訊息]
+    D --> E[狀態機處理]
+end
 
-    subgraph Service Layer
-        E --> F[配置驗證]
-        F --> G[資料庫儲存]
-        G --> H[廣播通知]
-    end
+subgraph Service Layer
+    E --> F[配置驗證]
+    F --> G[資料庫儲存]
+    G --> H[廣播通知]
+end
 
-    subgraph Usage Layer
-        H --> I[對話請求]
-        I --> J[載入配置]
-        J --> K[LLM 調用]
-    end
+subgraph Usage Layer
+    H --> I[對話請求]
+    I --> J[載入配置]
+    J --> K[LLM 調用]
+end
 ```
+
+```text
 
 ## Provider 配置流程
 
@@ -990,7 +993,7 @@ flowchart TB
 
 ### 配置
 
-# provider_config.toml
+\# provider_config.toml
 [[models]]
 id = "gpt-5.4"
 tier = "normal"
@@ -1017,6 +1020,7 @@ priority = 8
 
 ## 流程：使用者訊息 → LLM 回應
 
+```text
     1. 使用者透過 TUI/CLI/socket 發送訊息
     1. `handle_user_message`():
 
@@ -1046,11 +1050,13 @@ c. TierPermit 丟棄 → 信號量槽位釋放
 a. 請求信號量許可歸還
 b. Cosmos 容器可以清理（或重用）
 
+```
+
 ## E2E 測試
 
 測試使用閒置逾時（非絕對截止時間）。計時器在每個有意義的事件上重置：
 
-# 活動重置閒置計時器——只要保持活躍，鏈可以無限期執行
+\# 活動重置閒置計時器——只要保持活躍，鏈可以無限期執行
 ACTIVE_METHODS = {
 "Tui.`OrchestrationStatus`",
 "Tui.`McpToolResult`",
@@ -1163,18 +1169,19 @@ fn pg_integration_tests() {
 
 ## PGlite 限制
 
+```text
 | 限制 | 影響 | 緩解措施 |
 | --- | --- | --- |
 | `max_connections=1` | 一次只有一個池 | 在子測試間共享資料庫連線；測試間不 `db.close()` |
 | 嚴格的型別轉換 | `uuid = text` 失敗 | 始終傳遞型別化值（如 `Uuid` 而非 `String` 用於 UUID 欄位） |
 | 不支援並行存取 | 測試必須順序執行 | 單一 `#[test]` 執行器，所有子測試內聯 |
 | sqlx 池背景任務 | `close()` 無限期阻塞 | 所有測試完成後 `std::process::exit(0)` |
-
+```
 ## Docker 建置強化
 
 所有正式環境 Dockerfile 排除 embedded-db：
 
-# Dockerfile
+\# Dockerfile
 RUN cargo build --release -p scepter \
 --no-default-features --features all-agents
 

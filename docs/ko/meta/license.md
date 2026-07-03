@@ -5,7 +5,7 @@ Business Source License 1.1
 라이선스 텍스트 저작권 (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
 "Business Source License"는 MariaDB Corporation Ab의 상표입니다.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 매개변수
 
@@ -13,7 +13,7 @@ Business Source License 1.1
 
 허여된 저작물：         Arona —— Entelecheia 멀티 에이전트 플랫폼을 위한
 공유 JSON-RPC 2.0 프로토콜 타입
-본 허여된 저작물은 (c) 2025 langyo <contact@celestia.world>
+본 허여된 저작물은 (c) 2025 langyo <<contact@celestia.world>>
 
 추가 사용 허여：        허여자는 아래 약관（Terms） 섹션에 규정된 기본 권리에
 더하여 다음의 추가 권리를 부여합니다. 이 권리들은
@@ -86,9 +86,9 @@ Business Source License 1.1
 동등한 범위입니다:
 
 —— Apache License, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), 또는
+(<https://www.apache.org/licenses/LICENSE-2.0>), 또는
 —— MIT License
-(https://opensource.org/licenses/MIT).
+(<https://opensource.org/licenses/MIT>).
 
 허용된 용도에 대해 본 라이선스를 Apache License 2.0
 또는 MIT License로 취급할 수 있습니다. 위 (i)부터 (v)까지에
@@ -100,14 +100,14 @@ Business Source License 1.1
 변경 라이선스:        변경일부터 본 라이선스는 수령자의 선택에 따라 자동으로
 듀얼 라이선스로 전환됩니다:
 — Apache License, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0) 또는
+(<https://www.apache.org/licenses/LICENSE-2.0>) 또는
 — MIT License
-(https://opensource.org/licenses/MIT)
+(<https://opensource.org/licenses/MIT>)
 본 라이선스 하에 릴리스된 본 허여된 저작물의 모든 버전에
 대해, 모든 사용자와 모든 용도에 대해, 사용 제한 및 별도의
 상용 라이선스 없이 적용됩니다.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 약관
 
@@ -139,12 +139,12 @@ Business Source License 1.1
 여기에는（제한 없이）상품성, 특정 목적 적합성, 비침해성 및 소유권 보증이
 포함됩니다.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 고지
 
 Arona
-Copyright (c) 2025 langyo <contact@celestia.world>
+Copyright (c) 2025 langyo <<contact@celestia.world>>
 
 본 제품은 Business Source License 1.1에 따라 라이선스됩니다.
 본 라이선스를 준수하여 본 제품을 사용하십시오.

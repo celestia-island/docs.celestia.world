@@ -172,68 +172,71 @@ flowchart TB
 
 ## Поток конфигурации провайдера
 
+```text
 ### Последовательность шагов конфигурации
 
 ```mermaid
 sequenceDiagram
-    participant U as Пользователь
-    participant TUI as Интерфейс TUI
-    participant KB as Обработчик клавиатуры
-    participant WS as WebSocket
-    participant Srv as Сервер
-    participant DB as База данных
+participant U as Пользователь
+participant TUI as Интерфейс TUI
+participant KB as Обработчик клавиатуры
+participant WS as WebSocket
+participant Srv as Сервер
+participant DB as База данных
 
-    U->>TUI: Ctrl+P Открыть Models
-    TUI->>U: Показать список провайдеров
+U->>TUI: Ctrl+P Открыть Models
+TUI->>U: Показать список провайдеров
 
-    U->>TUI: Выбрать провайдера и нажать Enter
-    TUI->>KB: PageAction::ConfigureProvider
+U->>TUI: Выбрать провайдера и нажать Enter
+TUI->>KB: PageAction::ConfigureProvider
 
-    alt OpenAI-совместимая платформа
-        KB->>TUI: Показать ввод Endpoint
-        U->>TUI: Ввести пользовательский Endpoint
-        TUI->>KB: Вернуть Endpoint
-    end
+alt OpenAI-совместимая платформа
+    KB->>TUI: Показать ввод Endpoint
+    U->>TUI: Ввести пользовательский Endpoint
+    TUI->>KB: Вернуть Endpoint
+end
 
-    KB->>TUI: Показать ввод API Key
-    U->>TUI: Ввести API Key
-    TUI->>KB: Вернуть API Key
+KB->>TUI: Показать ввод API Key
+U->>TUI: Ввести API Key
+TUI->>KB: Вернуть API Key
 
-    KB->>WS: SendWsMessage{ConfigureLlmProvider}
-    WS->>Srv: Сообщение WebSocket
+KB->>WS: SendWsMessage{ConfigureLlmProvider}
+WS->>Srv: Сообщение WebSocket
 
-    Srv->>DB: Обновить таблицу llm_providers
-    Srv->>DB: Вставить модель по умолчанию
+Srv->>DB: Обновить таблицу llm_providers
+Srv->>DB: Вставить модель по умолчанию
 
-    Srv->>WS: Широковещательно LlmProviderConfigured
-    WS->>TUI: Уведомление об успехе конфигурации
-    TUI->>U: Показать сообщение об успехе
+Srv->>WS: Широковещательно LlmProviderConfigured
+WS->>TUI: Уведомление об успехе конфигурации
+TUI->>U: Показать сообщение об успехе
 ```
 
 ### Конечный автомат конфигурации
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Idle: Начальное состояние
+[*] --> Idle: Начальное состояние
 
-    Idle --> SelectProvider: Открыть страницу Models
-    SelectProvider --> CheckCompatibility: Выбрать провайдера
+Idle --> SelectProvider: Открыть страницу Models
+SelectProvider --> CheckCompatibility: Выбрать провайдера
 
-    CheckCompatibility --> EnterEndpoint: OpenAI-совместимая платформа
-    CheckCompatibility --> EnterApiKey: Стандартная платформа
+CheckCompatibility --> EnterEndpoint: OpenAI-совместимая платформа
+CheckCompatibility --> EnterApiKey: Стандартная платформа
 
-    EnterEndpoint --> EnterApiKey: Ввод завершён
-    EnterApiKey --> SendingConfig: Ввод завершён
+EnterEndpoint --> EnterApiKey: Ввод завершён
+EnterApiKey --> SendingConfig: Ввод завершён
 
-    SendingConfig --> WaitingResponse: Отправить запрос конфигурации
-    WaitingResponse --> Success: Конфигурация успешна
-    WaitingResponse --> Failed: Конфигурация не удалась
+SendingConfig --> WaitingResponse: Отправить запрос конфигурации
+WaitingResponse --> Success: Конфигурация успешна
+WaitingResponse --> Failed: Конфигурация не удалась
 
-    Success --> Idle: Очистить состояние
-    Failed --> EnterApiKey: Повторить
+Success --> Idle: Очистить состояние
+Failed --> EnterApiKey: Повторить
 
-    note right of CheckCompatibility: Определить, нужен ли пользовательский endpoint
+note right of CheckCompatibility: Определить, нужен ли пользовательский endpoint
 ```
+
+```text
 
 ## Поток использования в разговоре
 
@@ -1014,7 +1017,7 @@ flowchart TB
 
 ### Конфигурация
 
-# provider_config.toml
+\# provider_config.toml
 [[models]]
 id = "gpt-5.4"
 tier = "normal"
@@ -1041,6 +1044,7 @@ priority = 8
 
 ## Поток: Сообщение пользователя → Ответ LLM
 
+```text
     1. Пользователь отправляет сообщение через TUI/CLI/сокет
     1. `handle_user_message`():
 
@@ -1070,11 +1074,13 @@ c. TierPermit сброшен → слот семафора освобождён
 a. Разрешение семафора запросов возвращено
 b. Контейнер Cosmos может быть очищен (или переиспользован)
 
+```
+
 ## E2E тестирование
 
 Тесты используют таймаут бездействия (а не абсолютный дедлайн). Таймер сбрасывается при каждом значимом событии:
 
-# Активность сбрасывает таймер бездействия — цепочка может работать бесконечно, пока остаётся активной
+\# Активность сбрасывает таймер бездействия — цепочка может работать бесконечно, пока остаётся активной
 ACTIVE_METHODS = {
 "Tui.`OrchestrationStatus`",
 "Tui.`McpToolResult`",
@@ -1125,6 +1131,7 @@ flowchart TB
 
 ## Порядок разрешения БД во время выполнения
 
+```rust
 // packages/scepter/src/app/setup.rs
 let `db_url` = if let Ok(url) = std::env::var("DATABASE_URL") {
 // 1. Переменная окружения (production: Docker PG, dev: файл .env)
@@ -1148,6 +1155,7 @@ url
 return Err(/* "DATABASE_URL не настроен" */);
 }
 };
+```
 
 ## Шаблон тестового окружения
 
@@ -1185,18 +1193,19 @@ fn pg_integration_tests() {
 
 ## Ограничения PGlite
 
+```text
 | Ограничение | Влияние | Смягчение |
 | --- | --- | --- |
 | `max_connections=1` | Только один пул одновременно | Общее соединение с БД между подтестами; без `db.close()` между тестами |
 | Строгое приведение типов | `uuid = text` не работает | Всегда передавать типизированные значения (например, `Uuid`, а не `String` для столбцов UUID) |
 | Отсутствие параллельного доступа | Тесты должны быть последовательными | Один `#[test]` runner со всеми подтестами внутри |
 | Фоновые задачи пула sqlx | `close()` зависает бесконечно | `std::process::exit(0)` после завершения всех тестов |
-
+```
 ## Усиление сборки Docker
 
 Все production Dockerfile исключают embedded-db:
 
-# Dockerfile
+\# Dockerfile
 RUN cargo build --release -p scepter \
 --no-default-features --features all-agents
 

@@ -298,6 +298,7 @@ webuiは**`vue-i18n`**（カスタム実装ではない）を使用し、**11の
 > | 十分に翻訳 | `ja`、`ko`、`zhs`、`zht` | ~5% | `zhs`は18キー不足。他は112不足 |
 > | ほぼ翻訳 | `de`、`fr`、`pt`、`es`、`ar` | ~9–14% | 共通の112キーブロックが不足 |
 > | 実質的に未翻訳 | `ru` | **~76%** | キー数は完全だが、値は逐語的な英語 |
+>
 > 共通の112キーギャップは新しい機能をカバーします: `admin.agents.*`、`admin.deviceModels.*`、`admin.projects.*`、`admin.rbac.*`、`admin.resourceQuota.*`、`auth.protocol.*`、`chat.cruise.*`、`chat.voice_*`。
 
 ## RBACアーキテクチャ

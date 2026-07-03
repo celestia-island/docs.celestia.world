@@ -455,7 +455,7 @@ flowchart TB
 | **內部計畫文件解析器** | 迴路僅因外部代理平台讀取 ARCHITECTURE.md 並自行分解任務而運作。無內部技能存在。 | `hubris::read_iteration_plan` 技能：解析待辦事項表格 → 返回結構化的 `Vec<BacklogItem>`，以便 Entelecheia 自己的協調者可以驅動迴路。 | P0 |
 | **協調者-工作者分離強制** | 外部平台提供其自己的規劃者/工作者分離；Entelecheia 的管線不強制執行它。協調者技能鏈仍然可以直接調用 `file_write`/`host_command_exec`。 | 在技能 frontmatter 中新增 `role` 欄位；在 `pipeline.rs` 工具白名單建構器中剝離 `role = "coordinator"` 鏈的變更工具。 | P0 |
 | **驗收標準驗證** | `PostSurgeryRollback` 檢查 `cargo check --workspace`（構建級別）而非任務特定的驗收標準。`prompt.rs` 中有部分接線。 | `verify_acceptance_criteria` 掛鉤命名空間：每個待辦事項項目宣告可檢查的標準（測試通過、檔案存在、功能已實作）。 | P1 |
-| **待辦事項狀態機** | 此表格帶有 `status` 欄但尚無代理自主寫回。 | 在每個鏈+提交後自動更新 `status: pending → in_progress → done | blocked`。 | P1 |
+| **待辦事項狀態機** | 此表格帶有 `status` 欄但尚無代理自主寫回。 | 在每個鏈+提交後自動更新 `status: pending → in_progress → done \| blocked`。 | P1 |
 | **深層鏈的上下文預算** | `context_overflow_handler` 存在；當容器化的 SkeMma 不可用時，深度 IEPL 委派仍然脆弱。 | 穩定容器化代理執行（youki root 問題）或使處理程序內備援對深層鏈更加穩健。 | P2 |
 
 ### 迭代待辦事項

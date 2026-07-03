@@ -457,7 +457,7 @@ flowchart TB
 | **内部计划文档解析器** | 循环仅因外部智能体平台读取 ARCHITECTURE.md 并自行分解任务才工作。无内部技能。 | `hubris::read_iteration_plan` 技能：解析待办表 → 返回结构化的 `Vec<BacklogItem>`，以便 Entelecheia 自身的协调器可以驱动循环。 | P0 |
 | **协调器-工作者分离强制执行** | 外部平台提供其自身的规划器/工作者分离；Entelecheia 的管道不强制执行它。协调器技能链仍可直接调用 `file_write`/`host_command_exec`。 | 向技能 frontmatter 添加 `role` 字段；在 `pipeline.rs` 工具白名单构建器中，从 `role = "coordinator"` 链中剥离变异工具。 | P0 |
 | **验收标准验证** | `PostSurgeryRollback` 检查 `cargo check --workspace`（构建级别），但不检查任务特定的验收标准。`prompt.rs` 中有部分接入。 | `verify_acceptance_criteria` 钩子命名空间：每个待办项声明可检查的标准（测试通过、文件存在、函数实现）。 | P1 |
-| **待办状态机** | 此表带有 `status` 列，但尚未有智能体自动写回。 | 自动更新 `status: pending → in_progress → done | blocked`，在每次链+提交后。 | P1 |
+| **待办状态机** | 此表带有 `status` 列，但尚未有智能体自动写回。 | 自动更新 `status: pending → in_progress → done \| blocked`，在每次链+提交后。 | P1 |
 | **深层链的上下文预算** | `context_overflow_handler` 存在；当容器化的 SkeMma 不可用时，深层 IEPL 委托仍然脆弱。 | 稳定容器化智能体执行（youki root 问题）或使进程内回退对深层链健壮。 | P2 |
 
 ### 迭代待办

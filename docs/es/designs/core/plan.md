@@ -6,7 +6,7 @@
 > bucle alarma→respuesta — sin ingeniería manual por dispositivo.
 > **Fecha límite gubernamental**: esta capacidad está vinculada a un hito de proyecto gubernamental.
 
----
+-----------------------------------------------------------------------------
 
 ## Trabajo Restante
 
@@ -37,7 +37,7 @@ El productor/resolutor están desacoplados mediante un `WriteApprovalRegistry`
 compartido a nivel de proceso (`_shared_security_policy::write_approval_registry`),
 inyectado en orexis al inicio y usado por scepter cuando el operador responde.
 
----
+-----------------------------------------------------------------------------
 
 ## Fase E: Dogfood de Extremo a Extremo
 
@@ -67,7 +67,7 @@ Validación operacional, no código puro. Requiere ejecutar simuladores de hardw
 | E.3.1 | Grabar el ciclo completo descubrimiento→monitorización→alarma→respuesta como captura de pantalla | Demostrar adaptación autónoma a hardware desconocido |
 | E.3.2 | Generar artefacto de informe de descubrimiento (manifiesto TOML autogenerado + tabla de campos inferidos) | Entregable tangible para la revisión del hito gubernamental |
 
----
+-----------------------------------------------------------------------------
 
 ## Dependencia de Proyectos Hermanos (restante)
 
@@ -76,7 +76,7 @@ Validación operacional, no código puro. Requiere ejecutar simuladores de hardw
 | **arona** | Ruta de difusión WS para `WriteApprovalRequest` (A.2.4) | ~~bloquea A.2.4 / D.2~~ hecho — viaja en `TuiMessage::IndustrialWriteApprovalPush` (reexportado de tipos arona) | ✓ |
 | **shittim-chest** | Diálogo de aprobación del operador (`industrial.approveWrite` consumidor) + renderizado de progreso de descubrimiento | bloquea E.2.4 dogfood (el manejador WS en scepter está listo; shittim-chest necesita renderizar el diálogo y hacer POST de la respuesta) | PLAN hermano |
 
----
+-----------------------------------------------------------------------------
 
 ## Explícitamente Fuera del Alcance (sprint de 2 semanas)
 
@@ -87,14 +87,14 @@ Validación operacional, no código puro. Requiere ejecutar simuladores de hardw
 - Cobertura de pruebas del frontend (shittim-chest recibe solo plan de guía, sin escritura de pruebas)
 - Paridad de características del CLI con TUI
 
----
+-----------------------------------------------------------------------------
 
 # Hoja de Ruta Técnica — Profundización de la Arquitectura
 
 > **Fecha**: 2026-06-26
 > **Contexto**: Después de limpiar el repositorio de más de 700 documentos/archivos obsoletos y consolidar todos los prompts en `res/prompts/`, auditamos los documentos de diseño restantes contra el código fuente real para identificar qué diseños aspiracionales vale la pena implementar.
 
----
+-----------------------------------------------------------------------------
 
 ## 1. Direccionamiento de Sub-Insignias + Ejecución Paralela de Habilidades
 
@@ -117,7 +117,7 @@ Validación operacional, no código puro. Requiere ejecutar simuladores de hardw
 
 **Impacto esperado**: Escrituras de archivos paralelas, análisis paralelos desde habilidades de coordinador como `industrial_discover` reducirían la latencia de extremo a extremo significativamente.
 
----
+-----------------------------------------------------------------------------
 
 ## 2. Pipeline de Sedimentación de Memoria
 
@@ -144,7 +144,7 @@ Validación operacional, no código puro. Requiere ejecutar simuladores de hardw
 - Gradiente de calidad: conteos de acceso, decaimiento temporal, puntuación de confianza.
 - Prototipo de tres canales (episódico/procedimental/atómico) con estrategias de recuperación diferenciadas.
 
----
+-----------------------------------------------------------------------------
 
 ## 3. Negociación Entre Agentes
 
@@ -165,7 +165,7 @@ Validación operacional, no código puro. Requiere ejecutar simuladores de hardw
 
 **Cuándo revisitar**: Si los agentes alguna vez necesitan negociar dinámicamente decisiones a mitad de cadena (no solo despachar y esperar), las primitivas están construidas al 40%. La brecha es el bucle de integración en el pipeline.
 
----
+-----------------------------------------------------------------------------
 
 ## Resumen
 

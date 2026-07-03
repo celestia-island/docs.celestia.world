@@ -601,7 +601,7 @@ declarations.join("\n\n")
 
 ### 当前（JavaScript）
 
-```
+```mermaid
 
 flowchart TD
 Meta["技能元数据\`nrelated_tools`：\n- kalos.file_read\n- kalos.file_write"]
@@ -613,7 +613,7 @@ LLM1 --> Boa1["Boa eval() 直接执行\n（无预验证）"]
 
 ### 目标（TypeScript + IEPL）
 
-```
+```mermaid
 
 flowchart TD
 Meta2["技能元数据\`nrelated_tools`：\n- kalos.file_read\n- kalos.file_write"]
@@ -694,7 +694,7 @@ ts-rs = { version = "12", features = ["serde-compat", "format"] }
 
 ## 新 Crate 结构
 
-```
+```mermaid
 
 flowchart LR
 SkemmaIepl["packages/agents/skemma/src/iepl/"] --> SM1["mod.rs\npub mod engine; pub mod `ast_validator`;"]
@@ -713,6 +713,7 @@ BApi --> BA2["neikos.d.ts"]
 BApi --> BA3["..."]
 
 ```text
+```
 
 ## 实现路径
 

@@ -5,7 +5,7 @@
 > 人工逐设备工程。
 > **政府硬性截止日期**：此能力与政府项目里程碑绑定。
 
----
+-----------------------------------------------------------------------------
 
 ## 剩余工作
 
@@ -35,7 +35,7 @@
 `WriteApprovalRegistry`（`_shared_security_policy::write_approval_registry`）
 解耦，在启动时注入到 orexis，操作员响应时由 scepter 使用。
 
----
+-----------------------------------------------------------------------------
 
 ## 阶段 E：端到端自举
 
@@ -65,7 +65,7 @@
 | E.3.1 | 将完整发现→监控→告警→响应循环录制为屏幕录像 | 展示对未知硬件的自主自适应 |
 | E.3.2 | 生成发现报告制品（自动生成的清单 TOML + 推断字段表） | 政府里程碑评审的有形交付物 |
 
----
+-----------------------------------------------------------------------------
 
 ## 对兄弟项目的依赖（剩余）
 
@@ -74,7 +74,7 @@
 | **arona** | `WriteApprovalRequest` 的 WS 广播路径（A.2.4） | ~~阻塞 A.2.4 / D.2~~ done — 通过 `TuiMessage::IndustrialWriteApprovalPush`（从 arona 类型重新导出） | ✓ |
 | **shittim-chest** | 操作员审批对话框（`industrial.approveWrite` 消费者）+ 发现进度渲染 | 阻塞 E.2.4 自举（scepter 中的 WS 处理程序已就绪；shittim-chest 需要渲染对话框并 POST 响应） | 兄弟 PLAN |
 
----
+-----------------------------------------------------------------------------
 
 ## 明确不在此范围内（2 周冲刺）
 
@@ -85,14 +85,14 @@
 - 前端测试覆盖（shittim-chest 仅获得指导计划，不编写测试）
 - CLI 功能对等 TUI
 
----
+-----------------------------------------------------------------------------
 
 # 技术路线图 — 架构深化
 
 > **日期**：2026-06-26
 > **背景**：在清理仓库中 700+ 份陈旧文档/文件并将所有提示整合到 `res/prompts/` 后，我们对照实际源代码审计了剩余的设计文档，以识别哪些期望设计值得实现。
 
----
+-----------------------------------------------------------------------------
 
 ## 1. 子徽章寻址 + 并行技能执行
 
@@ -112,9 +112,9 @@
 1. ✅ 向 `SnowflakeManager` 添加子代/后代查找：`children_of`、`children_of_badge`、`most_recent_child_of`、`deepest_descendant`（`parent_id` → 反向索引）。
 1. ✅ 基于 `FuturesUnordered` 的 `next_targets` 并行执行：`dispatch_parallel_targets` 通过 `parallel_dispatch::fan_out`（由 `Semaphore` 限界）将协调器的独立**叶子**目标并发扇出。串行 `invoke_skill_with_retries` 路径中的两个全局单例阻塞，处理方式如下：
 
-   - **共享本地 cosmos 命名空间** → 每个目标在第一阶段分支出其**自己的 cosmos 容器**（`fork_container_for_skill` + `assign_container_id` + `register_container_badge_in_registry`），因此 `dump/restore_cosmos_namespace` 在每个分支中是空操作，并发执行是隔离的。`MAX_BRANCH_DEPTH`（第 4 项）限制了分支链。
-   - **`active_streaming_skill` UI 竞态** → 容忍（`Option` 上最后写入者胜；每个分支后重置为 `None`）。
-   - **`&mut SkillChainInput` 线程安全** → `BranchOwner` 按分支镜像可变部分；`as_input` 将它们借回短生命周期的 `SkillChainInput`，以便复用来改变的管道辅助函数。
+- **共享本地 cosmos 命名空间** → 每个目标在第一阶段分支出其**自己的 cosmos 容器**（`fork_container_for_skill` + `assign_container_id` + `register_container_badge_in_registry`），因此 `dump/restore_cosmos_namespace` 在每个分支中是空操作，并发执行是隔离的。`MAX_BRANCH_DEPTH`（第 4 项）限制了分支链。
+- **`active_streaming_skill` UI 竞态** → 容忍（`Option` 上最后写入者胜；每个分支后重置为 `None`）。
+- **`&mut SkillChainInput` 线程安全** → `BranchOwner` 按分支镜像可变部分；`as_input` 将它们借回短生命周期的 `SkillChainInput`，以便复用来改变的管道辅助函数。
 
 阶段 1（分支 + 准备 + 构建提示 + 工具白名单）被**序列化**以避免 `rag_buffer` 竞态；仅阶段 2（延迟主导的 LLM 调用）并行运行；阶段 3 清理并通过 `merge_branch_reports` 将报告合并到父上下文中。由 `SKILL_CHAIN_PARALLEL_TARGETS`（默认**关闭**）+ `parallel_targets_eligible`（容器化 + 全叶子目标）门控。`route_to_next_skill` 中的串行栈展开仍然是默认行为。
 
@@ -122,7 +122,7 @@
 
 **预期影响**：来自协调器技能（如 `industrial_discover`）的并行文件写入、并行分析将显著降低端到端延迟。
 
----
+-----------------------------------------------------------------------------
 
 ## 2. 记忆沉淀管道
 
@@ -149,7 +149,7 @@
 - 质量梯度：访问计数、时间衰减、置信度评分。
 - 三通道原型（片段性/程序性/原子性），具有差异化的检索策略。
 
----
+-----------------------------------------------------------------------------
 
 ## 3. 智能体间协商
 
@@ -170,7 +170,7 @@
 
 **何时重新审视**：如果智能体需要在中途动态协商链决策（不只是分发并等待），原语已完成 40%。差距在于管道集成循环。
 
----
+-----------------------------------------------------------------------------
 
 ## 摘要
 

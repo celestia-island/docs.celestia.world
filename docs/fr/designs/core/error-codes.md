@@ -94,7 +94,7 @@ avec des messages descriptifs.
 | `RT_ARC_UNWRAP_DOMAIN` | `Arc::try_unwrap a échoué pour llm_domain/agent_domain` | `scepter/src/state_machine/mod.rs` |
 | `RT_UNDO_NO_ACTIVE_SKILL` | `active_streaming_skill est None, retour par défaut à HubRis` | `scepter/src/state_machine/mod.rs` |
 
----
+-----------------------------------------------------------------------------
 
 > **Note** : Ceci est un catalogue au meilleur effort. Entelecheia migre vers
 > des types d'erreur structurés avec des codes uniques. Les contributions pour étendre cette

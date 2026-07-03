@@ -143,32 +143,35 @@ graph LR
 
 ## 配置流程架构
 
+```text
 ### 整体流程
 
 ```mermaid
 flowchart TB
-    subgraph 用户界面层
-        A[Models Page] --> B[选择 Provider]
-        B --> C[配置向导]
-    end
+subgraph 用户界面层
+    A[Models Page] --> B[选择 Provider]
+    B --> C[配置向导]
+end
 
-    subgraph 传输层
-        C --> D[WebSocket 消息]
-        D --> E[状态机处理]
-    end
+subgraph 传输层
+    C --> D[WebSocket 消息]
+    D --> E[状态机处理]
+end
 
-    subgraph 服务层
-        E --> F[配置验证]
-        F --> G[数据库存储]
-        G --> H[广播通知]
-    end
+subgraph 服务层
+    E --> F[配置验证]
+    F --> G[数据库存储]
+    G --> H[广播通知]
+end
 
-    subgraph 使用层
-        H --> I[对话请求]
-        I --> J[加载配置]
-        J --> K[LLM 调用]
-    end
+subgraph 使用层
+    H --> I[对话请求]
+    I --> J[加载配置]
+    J --> K[LLM 调用]
+end
 ```
+
+```text
 
 ## Provider 配置流程
 
@@ -1014,7 +1017,7 @@ flowchart TB
 
 ### 配置
 
-# provider_config.toml
+\# provider_config.toml
 [[models]]
 id = "gpt-5.4"
 tier = "normal"
@@ -1041,6 +1044,7 @@ priority = 8
 
 ## 流程：用户消息 → LLM 响应
 
+```text
     1. 用户通过 TUI/CLI/套接字发送消息
     1. `handle_user_message`()：
 
@@ -1070,11 +1074,13 @@ c. TierPermit 释放 → 信号量槽位释放
 a. 请求信号量许可归还
 b. Cosmos 容器可清理（或重用）
 
+```
+
 ## E2E 测试
 
 测试使用空闲超时（而非绝对截止时间）。计时器在每次有意义的事件时重置：
 
-# 活动重置空闲计时器——只要保持活跃，链可以无限运行
+\# 活动重置空闲计时器——只要保持活跃，链可以无限运行
 ACTIVE_METHODS = {
 "Tui.`OrchestrationStatus`",
 "Tui.`McpToolResult`",
@@ -1125,6 +1131,7 @@ flowchart TB
 
 ## 运行时 DB 解析顺序
 
+```rust
 // packages/scepter/src/app/setup.rs
 let `db_url` = if let Ok(url) = std::env::var("DATABASE_URL") {
 // 1. 环境变量（生产：Docker PG，开发：.env 文件）
@@ -1148,6 +1155,7 @@ url
 return Err(/* "未配置 DATABASE_URL" */);
 }
 };
+```
 
 ## 测试工具模式
 
@@ -1185,18 +1193,19 @@ fn pg_integration_tests() {
 
 ## PGlite 约束
 
+```text
 | 约束 | 影响 | 缓解措施 |
 | --- | --- | --- |
 | `max_connections=1` | 一次仅一个池 | 在子测试间共享 DB 连接；测试间不调用 `db.close()` |
 | 严格类型转换 | `uuid = text` 会失败 | 始终传递类型化值（例如对 UUID 列使用 `Uuid` 而非 `String`） |
 | 无并发访问 | 测试必须顺序执行 | 单个 `#[test]` 运行器，所有子测试内联 |
 | sqlx 池后台任务 | `close()` 无限挂起 | 所有测试完成后 `std::process::exit(0)` |
-
+```
 ## Docker 构建加固
 
 所有生产 Dockerfile 排除 embedded-db：
 
-# Dockerfile
+\# Dockerfile
 RUN cargo build --release -p scepter \
 --no-default-features --features all-agents
 

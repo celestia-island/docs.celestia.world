@@ -143,32 +143,35 @@ graph LR
 
 ## 설정 흐름 아키텍처
 
+```text
 ### 전체 흐름
 
 ```mermaid
 flowchart TB
-    subgraph 사용자 인터페이스 계층
-        A[모델 페이지] --> B[프로바이더 선택]
-        B --> C[설정 마법사]
-    end
+subgraph 사용자 인터페이스 계층
+    A[모델 페이지] --> B[프로바이더 선택]
+    B --> C[설정 마법사]
+end
 
-    subgraph 전송 계층
-        C --> D[WebSocket 메시지]
-        D --> E[상태 머신 처리]
-    end
+subgraph 전송 계층
+    C --> D[WebSocket 메시지]
+    D --> E[상태 머신 처리]
+end
 
-    subgraph 서비스 계층
-        E --> F[설정 검증]
-        F --> G[데이터베이스 저장]
-        G --> H[브로드캐스트 알림]
-    end
+subgraph 서비스 계층
+    E --> F[설정 검증]
+    F --> G[데이터베이스 저장]
+    G --> H[브로드캐스트 알림]
+end
 
-    subgraph 사용 계층
-        H --> I[대화 요청]
-        I --> J[설정 로드]
-        J --> K[LLM 호출]
-    end
+subgraph 사용 계층
+    H --> I[대화 요청]
+    I --> J[설정 로드]
+    J --> K[LLM 호출]
+end
 ```
+
+```text
 
 ## 프로바이더 설정 흐름
 
@@ -471,7 +474,7 @@ flowchart TB
 | 설정 임포트/익스포트 | 설정 파일 마이그레이션 지원 | 높음 |
 | 프로바이더 상태 확인 | 주기적 프로바이더 가용성 감지 | 중간 |
 | 자동 페일오버 | 프로바이더 불가용 시 자동 전환 | 중간 |
-| 사용 통계 통합 | 사용 통계 시스템과 연동 | 낮음
+| 사용 통계 통합 | 사용 통계 시스템과 연동 | 낮음 |
 
 # MCP 프롬프트 주입 및 컨텍스트 압축 메커니즘
 
@@ -1014,7 +1017,7 @@ flowchart TB
 
 ### 설정
 
-# provider_config.toml
+\# provider_config.toml
 [[models]]
 id = "gpt-5.4"
 tier = "normal"
@@ -1041,6 +1044,7 @@ priority = 8
 
 ## 흐름: 사용자 메시지 → LLM 응답
 
+```text
     1. 사용자가 TUI/CLI/소켓을 통해 메시지 전송
     1. `handle_user_message`():
 
@@ -1070,11 +1074,13 @@ c. TierPermit 해제 → 세마포어 슬롯 릴리스
 a. 요청 세마포어 허용 반환
 b. Cosmos 컨테이너 정리 (또는 재사용)
 
+```
+
 ## E2E 테스트
 
 테스트는 절대적 데드라인이 아닌 유휴 타임아웃을 사용합니다. 모든 의미 있는 이벤트마다 타이머가 초기화됩니다:
 
-# 활동이 유휴 타이머를 초기화 — 체인은 활성 상태인 한 무기한 실행 가능
+\# 활동이 유휴 타이머를 초기화 — 체인은 활성 상태인 한 무기한 실행 가능
 ACTIVE_METHODS = {
 "Tui.`OrchestrationStatus`",
 "Tui.`McpToolResult`",
@@ -1125,6 +1131,7 @@ flowchart TB
 
 ## 런타임 DB 해결 순서
 
+```rust
 // packages/scepter/src/app/setup.rs
 let `db_url` = if let Ok(url) = std::env::var("DATABASE_URL") {
 // 1. 환경 변수 (프로덕션: Docker PG, 개발: .env 파일)
@@ -1148,6 +1155,7 @@ url
 return Err(/* "DATABASE_URL이 설정되지 않음" */);
 }
 };
+```
 
 ## 테스트 하네스 패턴
 
@@ -1185,18 +1193,19 @@ fn pg_integration_tests() {
 
 ## PGlite 제약
 
+```text
 | 제약 | 영향 | 완화 |
 | --- | --- | --- |
 | `max_connections=1` | 한 번에 하나의 풀만 | 서브 테스트 간 DB 연결 공유; 테스트 간 `db.close()` 없음 |
 | 엄격한 타입 캐스팅 | `uuid = text` 실패 | 항상 타입화된 값 전달 (예: UUID 열에 `String`이 아닌 `Uuid`) |
 | 동시 접근 불가 | 테스트는 순차적이어야 함 | 모든 서브 테스트가 인라인된 단일 `#[test]` 러너 |
 | sqlx 풀 백그라운드 태스크 | `close()`가 무기한 정지 | 모든 테스트 완료 후 `std::process::exit(0)` |
-
+```
 ## Docker 빌드 강화
 
 모든 프로덕션 Dockerfile은 embedded-db를 제외합니다:
 
-# Dockerfile
+\# Dockerfile
 RUN cargo build --release -p scepter \
 --no-default-features --features all-agents
 

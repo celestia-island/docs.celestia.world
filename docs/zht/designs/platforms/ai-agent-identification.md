@@ -17,14 +17,14 @@
 
 作者郵箱使用 `celestia.world` 信任名稱空間：
 
-```
-顯示名 <provider-or-platform-id@celestia.world>
+```text
+顯示名 <provider-<or-platform-id@celestia.world>>
 ```
 
 當 evernight 中轉一個模型時，提供商 id 反映該中轉：
 
-```
-GLM 5 <evernight.celestia.world@celestia.world>   # 經 evernight 中轉的 GLM 5
+```text
+GLM 5 <evernight.<celestia.world@celestia.world>>   # 經 evernight 中轉的 GLM 5
 ```
 
 第一方提供商保留自己的域名（`anthropic.com`、`deepseek.com`、`zhipuai.cn`……）；第三方中轉
@@ -42,9 +42,9 @@ GLM 5 <evernight.celestia.world@celestia.world>   # 經 evernight 中轉的 GLM 
 
 追加在共同作者 trailer 之後（空行分隔）：
 
-```
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+```text
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 - `Upload` = 輸入 token；`Download` = 輸出 token。
@@ -68,14 +68,14 @@ resolve` 讀取的同一份 `aporia.toml` 提供商列表配置。
 
 ## 完整提交訊息示例
 
-```
+```text
 perf(screen): cache X11 connection to avoid per-frame reconnect
 
 X11CaptureBackend previously called x11rb::connect on every capture_frame.
 Cache the connection in a Mutex<Option<..>>, reusing it across frames.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.com@celestia.world>
+Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.<com@celestia.world>>
 ```
 
 ## 安全考量

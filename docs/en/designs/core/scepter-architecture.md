@@ -143,32 +143,35 @@ This document describes the complete flow for users to configure LLM Providers, 
 
 ## Configuration Flow Architecture
 
+```text
 ### Overall Flow
 
 ```mermaid
 flowchart TB
-    subgraph User Interface Layer
-        A[Models Page] --> B[Select Provider]
-        B --> C[Configuration Wizard]
-    end
+subgraph User Interface Layer
+    A[Models Page] --> B[Select Provider]
+    B --> C[Configuration Wizard]
+end
 
-    subgraph Transport Layer
-        C --> D[WebSocket Message]
-        D --> E[State Machine Processing]
-    end
+subgraph Transport Layer
+    C --> D[WebSocket Message]
+    D --> E[State Machine Processing]
+end
 
-    subgraph Service Layer
-        E --> F[Config Validation]
-        F --> G[Database Storage]
-        G --> H[Broadcast Notification]
-    end
+subgraph Service Layer
+    E --> F[Config Validation]
+    F --> G[Database Storage]
+    G --> H[Broadcast Notification]
+end
 
-    subgraph Usage Layer
-        H --> I[Conversation Request]
-        I --> J[Load Config]
-        J --> K[LLM Call]
-    end
+subgraph Usage Layer
+    H --> I[Conversation Request]
+    I --> J[Load Config]
+    J --> K[LLM Call]
+end
 ```
+
+```text
 
 ## Provider Configuration Flow
 
@@ -1014,7 +1017,7 @@ flowchart TB
 
 ### Configuration
 
-# provider_config.toml
+\# provider_config.toml
 [[models]]
 id = "gpt-5.4"
 tier = "normal"
@@ -1041,6 +1044,7 @@ With this config:
 
 ## Flow: User Message → LLM Response
 
+```text
     1. User sends message via TUI/CLI/socket
     1. `handle_user_message`():
 
@@ -1069,12 +1073,13 @@ c. TierPermit dropped → semaphore slot released
 
 a. Request Semaphore permit returned
 b. Cosmos container can be cleaned up (or reused)
+```
 
 ## E2E Testing
 
 Tests use idle-timeout (not absolute deadline). Timer resets on every meaningful event:
 
-# Activity resets the idle timer — chain can run indefinitely as long as it stays active
+\# Activity resets the idle timer — chain can run indefinitely as long as it stays active
 ACTIVE_METHODS = {
 "Tui.`OrchestrationStatus`",
 "Tui.`McpToolResult`",
@@ -1125,6 +1130,7 @@ flowchart TB
 
 ## Runtime DB Resolution Order
 
+```rust
 // packages/scepter/src/app/setup.rs
 let `db_url` = if let Ok(url) = std::env::var("DATABASE_URL") {
 // 1. Environment variable (production: Docker PG, dev: .env file)
@@ -1148,6 +1154,8 @@ url
 return Err(/* "no DATABASE_URL configured" */);
 }
 };
+
+```
 
 ## Test Harness Pattern
 
@@ -1185,18 +1193,19 @@ All 23 tables + 1 schema-scoped table + 4 views are created via SeaORM migration
 
 ## PGlite Constraints
 
+```text
 | Constraint | Impact | Mitigation |
 | --- | --- | --- |
 | `max_connections=1` | Only one pool at a time | Shared DB connection across sub-tests; no `db.close()` between tests |
 | Strict type casting | `uuid = text` fails | Always pass typed values (e.g., `Uuid` not `String` for UUID columns) |
 | No concurrent access | Tests must be sequential | Single `#[test]` runner with all sub-tests inline |
 | sqlx pool background tasks | `close()` hangs indefinitely | `std::process::exit(0)` after all tests complete |
-
+```
 ## Docker Build Hardening
 
 All production Dockerfiles exclude embedded-db:
 
-# Dockerfile
+\# Dockerfile
 RUN cargo build --release -p scepter \
 --no-default-features --features all-agents
 

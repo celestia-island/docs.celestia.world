@@ -5,7 +5,7 @@ Licence de Source Commerciale 1.1
 Texte de la licence copyright (c) 2017 MariaDB Corporation Ab, Tous Droits Réservés.
 "Business Source License" est une marque déposée de MariaDB Corporation Ab.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Paramètres
 
@@ -100,9 +100,9 @@ Libre :               Pour toute Utilisation Autorisée décrite aux points
 en portée à ceux prévus par votre choix parmi :
 
 — la Licence Apache, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), ou
+(<https://www.apache.org/licenses/LICENSE-2.0>), ou
 — la Licence MIT
-(https://opensource.org/licenses/MIT).
+(<https://opensource.org/licenses/MIT>).
 
 Vous pouvez traiter la présente Licence comme l'Apache
 License 2.0 ou la MIT License pour toute Utilisation
@@ -118,14 +118,14 @@ Licence de Changement: À compter de la Date de Changement, cette Licence se
 convertit automatiquement en une double licence au choix du
 destinataire :
 — la Licence Apache, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), ou
+(<https://www.apache.org/licenses/LICENSE-2.0>), ou
 — la Licence MIT
-(https://opensource.org/licenses/MIT)
+(<https://opensource.org/licenses/MIT>)
 pour toutes les versions de l'Œuvre Concédée publiées sous
 cette Licence, pour tous les utilisateurs et tous les usages,
 sans restriction d'usage et sans licence commerciale distincte.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Conditions
 
@@ -164,7 +164,7 @@ EXPRESSE OU IMPLICITE, Y COMPRIS (SANS LIMITATION) LES GARANTIES DE QUALITÉ
 MARCHANDE, D'ADÉQUATION À UN USAGE PARTICULIER, D'ABSENCE DE CONTREFAÇON ET
 DE TITRE.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Avis
 

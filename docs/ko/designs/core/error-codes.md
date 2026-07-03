@@ -94,7 +94,7 @@
 | `RT_ARC_UNWRAP_DOMAIN` | `Arc::try_unwrap이 llm_domain/agent_domain에 대해 실패` | `scepter/src/state_machine/mod.rs` |
 | `RT_UNDO_NO_ACTIVE_SKILL` | `active_streaming_skill이 None, HubRis로 기본값 설정` | `scepter/src/state_machine/mod.rs` |
 
----
+-----------------------------------------------------------------------------
 
 > **참고**: 이는 최선의 노력을 다한 목록입니다. Entelecheia는 고유 코드를
 > 가진 구조화된 오류 유형으로 마이그레이션 중입니다. 이 참조를 확장하기 위한

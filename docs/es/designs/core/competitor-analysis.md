@@ -1,11 +1,11 @@
 # Análisis Competitivo de Frameworks Multi-Agente
 
 **Fecha**: 12 de mayo de 2026 (actualizado tras auditoría completa del código fuente de 43 crates × 1500+ archivos fuente)
-**Contexto**: Comparación estructurada contra las dimensiones de diseño de Entelecheia（玄枢）.
+**Contexto**: Comparación estructurada contra las dimensiones de diseño de Entelecheia(玄枢).
 
 > Nota sobre el estado actual: las referencias a Entelecheia en este documento mezclan la realidad actual del código y la arquitectura prevista. Lea las secciones "vs. Entelecheia" como comparaciones contra los objetivos de diseño de Entelecheia, no como afirmaciones de que cada capacidad está completamente implementada hoy. Para la realidad actual de la implementación, priorice el apéndice aquí y el informe de diagnóstico del 13-05-2026.
 
----
+-----------------------------------------------------------------------------
 
 ## 1. CrewAI
 
@@ -60,7 +60,7 @@
 - Sin integración nativa de navegador/shell para tareas de codificación de agentes.
 - La orquestación es solo Python (sin runtime multi-lenguaje).
 
----
+-----------------------------------------------------------------------------
 
 ## 2. LangGraph
 
@@ -113,7 +113,7 @@
 - El enfoque de grafo de estados puede volverse difícil de manejar para interacciones complejas de agentes.
 - Sin soporte incorporado para aislamiento de ejecución de código.
 
----
+-----------------------------------------------------------------------------
 
 ## 3. MetaGPT
 
@@ -172,7 +172,7 @@
 - Sin soporte de protocolo inter-agente MCP/A2A.
 - El seguimiento de presupuesto es solo de coste, no basado en recursos/seguridad.
 
----
+-----------------------------------------------------------------------------
 
 ## 4. ChatDev 2.0 (DevAll)
 
@@ -232,7 +232,7 @@
 - Sin soporte de agentes multi-lenguaje.
 - La comunidad está orientada a la investigación más que a la empresa.
 
----
+-----------------------------------------------------------------------------
 
 ## 5. Google ADK (Agent Development Kit)
 
@@ -295,7 +295,7 @@
 - Sin experiencia de agente nativa CLI (enfocado en UI web).
 - El manejo de memoria/contexto es consciente de la caché de Gemini, menos genérico para otros modelos.
 
----
+-----------------------------------------------------------------------------
 
 ## 6. OpenAI Swarm (experimental, ahora deprecado)
 
@@ -351,7 +351,7 @@
 - Sin comunicación multi-agente más allá de handoffs.
 - Experimental/educativo — no es un framework de producción.
 
----
+-----------------------------------------------------------------------------
 
 ## 7. Cline
 
@@ -418,7 +418,7 @@
 - No es un framework — es una aplicación. No se puede embeber como biblioteca.
 - Solo TypeScript/Go, sin SDK Python.
 
----
+-----------------------------------------------------------------------------
 
 ## 8. Aider
 
@@ -489,7 +489,7 @@
 - **Fragilidad del parseo de texto**: Depende de que el LLM produzca formatos de edición precisos — puede fallar con desviaciones del modelo.
 - **Solo terminal**: No se puede embeber como biblioteca en la mayoría de flujos de trabajo (aunque existe API Python).
 
----
+-----------------------------------------------------------------------------
 
 ## Tabla Comparativa Resumen
 
@@ -510,7 +510,7 @@
 | **Fortaleza única** | Dualidad Flows+Crews | Ejecución duradera | Emulación SDLC completa | Constructor visual sin código | Protocolo A2A, ejecución sandboxed | Elegancia minimalista | Integración IDE, automatización navegador | Mapa del repo, formatos de edición |
 | **Tamaño de código** | ~50+ archivos fuente | Grande | ~200+ archivos fuente | ~150+ archivos fuente | ~200+ archivos fuente | ~4 archivos fuente | ~300+ archivos fuente | ~100 archivos fuente |
 
----
+-----------------------------------------------------------------------------
 
 ## Conclusiones Clave para la Hoja de Ruta de Entelecheia
 
@@ -534,7 +534,7 @@
 
 1. **Cline y Aider** son aplicaciones, no frameworks. Demuestran el poder de la integración estrecha de herramientas (IDE, git, terminal, navegador) pero no pueden componerse en sistemas de agentes más grandes.
 
----
+-----------------------------------------------------------------------------
 
 ## Apéndice: Recordatorio del Estado Actual de Entelecheia
 

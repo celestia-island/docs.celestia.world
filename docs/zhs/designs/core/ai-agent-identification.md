@@ -21,7 +21,7 @@
 作者邮箱使用单一信任命名空间——`celestia.world`——本地部分编码**谁提供了模型服务**：
 
 ```text
-显示名称 <provider-or-platform-id@celestia.world>
+显示名称 <provider-<or-platform-id@celestia.world>>
 ```
 
 提供商 ID 是每个提供商配置中声明的**强制性 `website_domain`** 字段（提供商注册入口 TOML 和本地 `aporia.toml`）。它**不是**从 API `base_url` 派生的——单个提供商可能暴露多个 `base_url` 主机（例如 `zhipu_glm` 同时提供 `open.bigmodel.cn` 和 `api.z.ai`，但其规范域名为 `zhipuai.cn`）。如果提供商缺少 `website_domain`，则不会为其归属共同作者（解析器跳过它，而不是从 URL 或模型前缀猜测）。
@@ -32,10 +32,10 @@
 这意味着通过不同路由访问的*相同*模型是可区分的：
 
 ```text
-GLM 5 <zhipuai.cn@celestia.world>              # 直接来自智谱 AI
-GLM 5 <jdcloud.com@celestia.world>           # GLM 5 通过京东云提供
-Deepseek V4 Pro <deepseek.com@celestia.world> # 直接来自 DeepSeek
-Deepseek V4 Pro <opencode.ai@celestia.world>  # DeepSeek 通过 opencode 提供
+GLM 5 <zhipuai.<cn@celestia.world>>              # 直接来自智谱 AI
+GLM 5 <jdcloud.<com@celestia.world>>           # GLM 5 通过京东云提供
+Deepseek V4 Pro <deepseek.<com@celestia.world>> # 直接来自 DeepSeek
+Deepseek V4 Pro <opencode.<ai@celestia.world>>  # DeepSeek 通过 opencode 提供
 ```
 
 ## 共同作者尾部信息规范
@@ -66,8 +66,8 @@ YOLO 模式从以下两者之一检测：
 嵌入在 `Co-authored-by` 尾部信息中每个模型的显示名称内（GitHub 正确解析的一个尾部信息块）：
 
 ```text
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 规则：
@@ -85,7 +85,7 @@ The previous 180s timeout was too tight for clean builds on a loaded
 machine; raise it to 300s to avoid spurious validation failures.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.cn@celestia.world>
+Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.<cn@celestia.world>>
 ```
 
 ## noa 钩子安装
@@ -138,7 +138,7 @@ flowchart LR
 
 ## evernight 集成
 
-当 AI agent 通过 `evernight` 编排提交时（例如 agent 在主机 A → evernight SSH → 主机 B → `git commit`），主机端的 `commit-msg` 钩子仍然在本地触发并标记提交。当 `evernight` 中继模型流量时，它自身可能作为**传输提供商**出现在作者邮箱中（例如 `GLM 5 <evernight.celestia.world@celestia.world>`），使传输跳可审计。
+当 AI agent 通过 `evernight` 编排提交时（例如 agent 在主机 A → evernight SSH → 主机 B → `git commit`），主机端的 `commit-msg` 钩子仍然在本地触发并标记提交。当 `evernight` 中继模型流量时，它自身可能作为**传输提供商**出现在作者邮箱中（例如 `GLM 5 <evernight.<celestia.world@celestia.world>>`），使传输跳可审计。
 
 ## 安全考量
 

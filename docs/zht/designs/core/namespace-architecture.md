@@ -46,7 +46,7 @@ flowchart TB
 | **提示注入** | 快照資料驅動富含上下文的系統提示——LLM 看到可用的變數名稱、引用摘要和環境設定 |
 | **工具存取控制** | 所有 3 個 cosmos 內部工具（`exec`、`write_to_var`、`write_to_var_json`）透過 `agent_allowed_tools()` 授予每個 Agent；個別技能 SOP 定義使用哪個 |
 
----
+-----------------------------------------------------------------------------
 
 ## 命名空間比較
 
@@ -80,7 +80,7 @@ flowchart LR
     end
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 1. `__vars` — 變數儲存（`vars`）
 
@@ -176,7 +176,7 @@ const report = vars['analysis_results'];
 
 **實作：** `packages/agents/skemma/src/js_runtime/module_loader.rs` 第 142-156 行。該模組使用 `Module::synthetic()` 搭配一個閉包，直接回傳 `globalThis.__vars`（即時引用，而非快照）。這意味著透過 `vars['key'] = value` 的修改等同於 `vars['key'] = value`。
 
----
+-----------------------------------------------------------------------------
 
 ## 2. `__refs` — 資源引用（`refs`）
 
@@ -312,7 +312,7 @@ __refs（來自使用者/Agent 的引用資源，共 3 個）：
 - LLM 根據任務相關性決定何時解引用內容
 - 沒有任何 Agent 能意外地將引用內容洩漏到對話流中
 
----
+-----------------------------------------------------------------------------
 
 ## 3. `__env` — 環境配置（`env`）
 
@@ -397,7 +397,7 @@ Object.defineProperty(globalThis.$, 'variant', {
 
 > **快照注意：** 因為 `$.variant` 是一個循環引用（`$.variant === $`），嘗試 `JSON.stringify` 會拋出 `TypeError`。快照 JS 程式碼顯式地直接針對 `__vars` 和 `__refs`，而不是迭代 `globalThis.$` 的鍵，從而避免了這個問題。
 
----
+-----------------------------------------------------------------------------
 
 ## 4. 快照與還原架構
 
@@ -521,7 +521,7 @@ sequenceDiagram
 })()
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 5. 工具註冊與存取控制
 
@@ -688,7 +688,7 @@ pub async fn build_scepter_namespace_config_and_js(
 - **一次** 在 `LocalCosmosRuntime::new()` 啟動時
 - **按需** 在技能鏈重建期間透過 `CosmosCommand::RebuildNamespace`
 
----
+-----------------------------------------------------------------------------
 
 ## 6. 系統提示組裝順序
 
@@ -747,7 +747,7 @@ pub async fn build_scepter_namespace_config_and_js(
 | 輸出路由 | runtime_context 之前 | LLM 在讀取上下文之前知道將結果發送到哪裡 |
 | 執行時上下文 | RAG 之前、鏈備註之前 | Vars 和 refs 為知識檢索提供執行上下文 |
 
----
+-----------------------------------------------------------------------------
 
 ## 7. ResetVars 行為
 
@@ -766,7 +766,7 @@ globalThis.__refs = globalThis.__refs || {};
 - **技能隔離是可選的** — 技能應該只讀取它們知道的變數（透過執行時上下文提示中的名稱）
 - **無強制清理** — 管理變數命名空間污染是 LLM 的責任
 
----
+-----------------------------------------------------------------------------
 
 ## 8. 實作檔案地圖
 
@@ -806,7 +806,7 @@ globalThis.__refs = globalThis.__refs || {};
 | 單元測試 | `packages/agents/skemma/src/js_runtime/runtime.rs` | 679-746 | `write_to_ref`、snapshot、restore 測試 |
 | Ref 命名空間測試 | `packages/shared/core/src/ref_namespace.rs` | 99-145 | JS 程式碼生成模式測試 |
 
----
+-----------------------------------------------------------------------------
 
 ## 9. 橫切關注重點
 
@@ -836,7 +836,7 @@ globalThis.__refs = globalThis.__refs || {};
 | `ref_add` 含無效 JSON | 回傳 `SkemmaError::JsEval` 含預覽 |
 | 循環引用的快照（`$.variant`） | 靜默捕獲 `TypeError`，跳過該鍵 |
 | 快照中缺少 `__refs` | `build_refs_section` 回傳空字串 |
-| ResetVars 後 `__refs` 損壞 | `|| {}` 保證重新初始化 |
+| ResetVars 後 `__refs` 損壞 | `\|\| {}` 保證重新初始化 |
 
 ### 9.4 RebuildNamespace 生命週期
 

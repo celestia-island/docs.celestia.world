@@ -94,7 +94,7 @@
 | `RT_ARC_UNWRAP_DOMAIN` | `Arc::try_unwrap failed for llm_domain/agent_domain` | `scepter/src/state_machine/mod.rs` |
 | `RT_UNDO_NO_ACTIVE_SKILL` | `active_streaming_skill is None, defaulting to HubRis` | `scepter/src/state_machine/mod.rs` |
 
----
+-----------------------------------------------------------------------------
 
 > **ملاحظة**: هذا فهرس بأفضل جهد ممكنة. تنتقل Entelecheia نحو
 > أنواع أخطاء منظّمة برموز فريدة. المساهمات لتوسيع هذا

@@ -8,7 +8,7 @@ El repositorio ya contiene integraciones de webhook orientadas a plataformas de 
 
 La estructura de directorios actual contiene simultáneamente:
 
-- Antiguos directorios por plataforma, como `plugins/github-webhook/github/`、`gitee/`、`gitlab/`、`telegram/`、`qq/`、`lark/`
+- Antiguos directorios por plataforma, como `plugins/github-webhook/github/`, `gitee/`, `gitlab/`, `telegram/`, `qq/`, `lark/`
 - Una implementación TypeScript más reciente: `plugins/github-webhook/ts/`
 
 El paquete TypeScript actualmente integra:

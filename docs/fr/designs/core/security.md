@@ -25,7 +25,7 @@ Entelecheia implémente une **architecture de sécurité en défense en profonde
 | 13 | Limitation de Débit | shittim-chest `channel/rate_limit` | DoS, épuisement des ressources |
 | 14 | Piste d'Audit | `orexis`, `timeline` | Investigation post-incident, responsabilité |
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 1 : Micro-Noyau Exec-Only
 
@@ -46,7 +46,7 @@ Les 148 outils MCP (opérations sur fichiers, gestion de conteneurs, contrôle d
 
 **Implémentation :** `packages/shared/mcp_types/src/` définit les types IPC du micro-noyau. Le gestionnaire `exec` dans `packages/cosmos/` transpile et exécute le script via le moteur Boa, avec les appels d'outils routés via le `McpRouter` de `skemma`.
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 2 : Porte de Permission à Double Autorisation
 
@@ -76,7 +76,7 @@ pub enum PermissionLevel {
 
 **Implémentation :** `packages/shared/security_policy/src/` — 107 annotations de test, 4 tests tokio.
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 3 : Autorisation de Compétence par Niveau de Confiance
 
@@ -93,7 +93,7 @@ Les compétences sont classées en **niveaux de confiance** qui déterminent leu
 
 Le niveau de confiance de chaque compétence est vérifié au chargement et mis en cache. Les tentatives d'escalade du niveau de confiance sont journalisées comme événements de sécurité.
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 4 : Isolation de Conteneur (Anneau Externe)
 
@@ -109,7 +109,7 @@ Chaque exécution d'agent se produit à l'intérieur d'un **conteneur Docker ou 
 
 **Implémentation :** `packages/shared/container/src/` — 74 annotations de test, 12 tests tokio. Prend en charge Docker (via l'API Bollard) et Podman.
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 5 : Bac à Sable OCI (Anneau Interne)
 
@@ -124,7 +124,7 @@ Chaque exécution d'agent se produit à l'intérieur d'un **conteneur Docker ou 
 
 **Pourquoi deux couches ?** Docker fournit une isolation à gros grain (réseau, système de fichiers). Youki fournit un filtrage fin des appels système et une comptabilité des ressources. Si Docker est compromis, le bac à sable Youki contient toujours l'agent.
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 6 : Contrôle d'Accès RBAC
 
@@ -137,7 +137,7 @@ Contrôle d'accès basé sur les rôles régissant toutes les opérations API :
 - **Isolation de l'espace de travail :** Les utilisateurs ne peuvent accéder qu'aux espaces de travail dont ils sont membres
 - **Opérations inter-espaces de travail :** Nécessitent des autorisations admin explicites
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 7 : Authentification JWT
 
@@ -149,7 +149,7 @@ Contrôle d'accès basé sur les rôles régissant toutes les opérations API :
 - **Protection CSRF basée sur nonce** pour les clients navigateur
 - **Limitation de débit** sur les points de terminaison d'authentification (algorithme GCRA)
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 8 : Chiffrement des Clés API
 
@@ -162,7 +162,7 @@ Toutes les clés API des fournisseurs LLM sont chiffrées au repos en utilisant 
 - Zéroïsation des clés en clair de la mémoire après utilisation
 - Support de rotation des clés
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 9 : Sentinelle de Sécurité (OreXis)
 
@@ -177,7 +177,7 @@ OreXis est un Agent Couche 1 qui :
 
 Outils MCP (24) : `standard_check`, `compliance_report`, `audit_alignment`, `audit_legality`, `agent_integrity`, `security_audit`, `tool_block`, `tool_unblock`, `policy_register`, `policy_list`, etc.
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 10 : Pipeline Typé IEPL
 
@@ -193,7 +193,7 @@ Le pipeline **Entelecheia Plugin Language** (IEPL) assure la sécurité de type 
 
 **Menace atténuée :** Attaques par injection via des appels d'outils non typés (courantes dans les frameworks d'agents basés sur Python où les schémas d'outils ne sont validés qu'à l'exécution).
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 11 : Liste Blanche du Registre des Fournisseurs
 
@@ -205,7 +205,7 @@ crates.io, PyPI, npm, modules Go, Docker Hub, Maven Central, NuGet, RubyGems, Ha
 
 Tout import de paquet depuis un registre non listé est **bloqué au niveau du conteneur** avant l'exécution.
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 12 : Défense contre l'Injection de Prompt
 
@@ -220,7 +220,7 @@ La sortie `exec` du LLM est exécutée dans un **contexte Boa JS isolé** sans a
 
 Les sorties d'outils retournées au LLM sont **assainies** — les données binaires sont encodées en base64, la sortie excessive est tronquée et les motifs potentiels d'injection de prompt dans les résultats d'outils sont signalés par OreXis.
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 13 : Limitation de Débit
 
@@ -233,7 +233,7 @@ Limitation de débit par utilisateur, par canal utilisant l'algorithme **GCRA (G
 - Backoff automatique en cas de dépassement de limite
 - Limites séparées pour les appels API, les envois de messages et les invocations d'outils
 
----
+-----------------------------------------------------------------------------
 
 ## Couche 14 : Piste d'Audit
 
@@ -246,7 +246,7 @@ Chaque invocation d'outil, décision d'agent et événement de sécurité est :
 1. Persisté dans PostgreSQL avec une rétention configurable
 1. Interrogeable via la CLI (`entelecheia-cli trace-chain <badge>`)
 
----
+-----------------------------------------------------------------------------
 
 ## Comparaison de Sécurité avec d'Autres Frameworks
 
@@ -260,7 +260,7 @@ Chaque invocation d'outil, décision d'agent et événement de sécurité est :
 | Liste blanche de paquets | **15 registres** | Aucune | Aucune | Aucune |
 | Piste d'audit | Chronologie liée par hachage | Chaîne de hachage Merkle | Aucune | Aucune |
 
----
+-----------------------------------------------------------------------------
 
 ## Modèle de Menace
 
@@ -277,7 +277,7 @@ Chaque invocation d'outil, décision d'agent et événement de sécurité est :
 - Indisponibilité des fournisseurs LLM (pas de chemin d'exécution de repli)
 - Corruption des données PostgreSQL (atténuée par les sauvegardes, non empêchée)
 
----
+-----------------------------------------------------------------------------
 
 ## Signalement des Vulnérabilités
 

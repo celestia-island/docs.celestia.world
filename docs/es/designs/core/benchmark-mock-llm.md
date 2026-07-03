@@ -35,7 +35,7 @@ El profile se construye dinámicamente en tiempo de ejecución a partir de las v
 
 ## 2. Arquitectura
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                    Benchmark Runner                      │
 │  (recorre instancias, recopila resultados, salida JSONL) │
@@ -83,12 +83,12 @@ El profile se construye dinámicamente en tiempo de ejecución a partir de las v
 El servidor Mock es compatible con la API de OpenAI Chat Completions (`/v1/chat/completions`) y soporta dos modos de funcionamiento:
 
 **Modo de grabación (al ejecutar el modelo real por primera vez)**:
-```
+```text
 Client → Mock Server → Real API → Mock Server (grabar respuesta) → Client
 ```
 
 **Modo de reproducción (CI / sin conexión)**:
-```
+```text
 Client → Mock Server (coincide petición → devuelve respuesta grabada) → Client
 ```
 
@@ -106,7 +106,7 @@ Las peticiones se emparejan mediante el hash de los siguientes campos:
 
 ### 3.3 Almacenamiento de fixtures
 
-```
+```text
 tests/fixtures/llm/
 ├── swe-bench-verified/
 │   ├── gpt-4o/
@@ -132,7 +132,7 @@ tests/fixtures/llm/
 
 ### 4.1 Flujo de ejecución de tareas
 
-```
+```text
 for instance in dataset:
     1. Descargar la imagen Docker de SWE-bench (3 capas: base + env + instance)
     2. Iniciar el contenedor y montar el repositorio de código

@@ -1,7 +1,6 @@
 # 安全策略
 > **提示**：本文为社区参考翻译，如有歧义以仓库根目录的英文版 `SECURITY.md` 为准。
 
-
 ## 报告漏洞
 
 **请勿针对安全漏洞公开提 issue。**
@@ -10,7 +9,7 @@
 [GitHub 安全公告](https://github.com/celestia-island/arona/security/advisories/new)
 私下报告。
 如果您无法使用 GitHub 安全公告，请发送邮件至维护者
-security@celestia.world，并附上清晰的描述与复现步骤。
+<security@celestia.world>，并附上清晰的描述与复现步骤。
 
 ## 范围
 

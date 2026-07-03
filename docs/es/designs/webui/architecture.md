@@ -299,6 +299,7 @@ Cada locale tiene **17 archivos JSON de namespace** (admin, auth, chat, cmd, com
 > | Bien traducidos | `ja`, `ko`, `zhs`, `zht` | ~5% | `zhs` faltan 18 claves; otros faltan 112 |
 > | Mayormente traducidos | `de`, `fr`, `pt`, `es`, `ar` | ~9–14% | Bloque compartido de 112 claves faltante |
 > | Efectivamente sin traducir | `ru` | **~76%** | Paridad completa de claves, pero los valores son inglés literal |
+>
 > La brecha compartida de 112 claves cubre características más nuevas: `admin.agents.*`, `admin.deviceModels.*`, `admin.projects.*`, `admin.rbac.*`, `admin.resourceQuota.*`, `auth.protocol.*`, `chat.cruise.*`, `chat.voice_*`.
 
 ## Arquitectura RBAC

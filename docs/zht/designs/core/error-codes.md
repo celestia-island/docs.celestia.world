@@ -92,7 +92,7 @@
 | `RT_ARC_UNWRAP_DOMAIN` | `Arc::try_unwrap failed for llm_domain/agent_domain` | `scepter/src/state_machine/mod.rs` |
 | `RT_UNDO_NO_ACTIVE_SKILL` | `active_streaming_skill is None, defaulting to HubRis` | `scepter/src/state_machine/mod.rs` |
 
----
+-----------------------------------------------------------------------------
 
 > **注意**：這是一個盡力的編目。Entelecheia 正在遷移到
 > 具有唯一代碼的結構化錯誤型別。歡迎擴充此

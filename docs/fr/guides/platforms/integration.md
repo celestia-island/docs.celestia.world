@@ -5,7 +5,7 @@ utiliser, et comment vérifier que la connexion fonctionne de bout en bout.
 
 ## Architecture
 
-```
+```text
   Your app (CLI / TUI / Web / Agent)
          │
          ▼
@@ -20,7 +20,7 @@ utiliser, et comment vérifier que la connexion fonctionne de bout en bout.
    Physical hardware / remote servers / cloud APIs
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 1. Modbus RTU (Série)
 
@@ -48,7 +48,7 @@ println!("Pressures: {:?}", &result.values[..3]);
 evernight sensor-poll --manifest corridor.toml
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 2. S7comm (Siemens)
 
@@ -70,7 +70,7 @@ let temp = f32::from_be_bytes(bytes.try_into().unwrap());
 println!("Temperature: {:.1} °C", temp);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 3. Protocole MC (Mitsubishi)
 
@@ -88,7 +88,7 @@ let words = client.read_devices(McDevice::D, 0, 10).await?;
 println!("D0-D9: {:?}", words);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 4. EtherNet/IP (Rockwell)
 
@@ -110,7 +110,7 @@ let result = backend.read(&DataAddress::Raw {
 println!("Value: {:02X?}", result.raw);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 5. OPC UA
 
@@ -136,7 +136,7 @@ let value = client.read_node("ns=2;s=Temperature").await?;
 println!("Temperature: {}", value);
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 6. SSH
 
@@ -161,7 +161,7 @@ evernight file put ./config.yaml root@192.168.1.100:/etc/app/config.yaml
 evernight proxy 1080 --host 192.168.1.100 --user root
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 7. VNC
 
@@ -181,7 +181,7 @@ evernight proxy 1080 --host 192.168.1.100 --user root
 evernight connect vnc://192.168.1.100:5901
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 8. RDP
 
@@ -223,7 +223,7 @@ evernight connect rdp://192.168.1.100:3389
 - ✅ NLA : NTLMv2 + CredSSP (Kerberos nécessite un KDC)
 - ◐ Session : nécessite Channel-Join → échange de capacités → boucle framebuffer continue
 
----
+-----------------------------------------------------------------------------
 
 ## 9. Kubernetes
 
@@ -242,7 +242,7 @@ for pod in &pods {
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 10. libvirt
 
@@ -261,7 +261,7 @@ for d in &domains {
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## La Question du Client : Faut-il Construire un Visualiseur ?
 
@@ -282,7 +282,7 @@ Trois niveaux d'effort, du plus simple au plus utile :
 
 #### Tier 1 : Capture d'écran headless (effort minimal, valeur de test maximale)
 
-```
+```text
 evernight connect rdp://host --screenshot out.png
 ```
 
@@ -298,7 +298,7 @@ Effort estimé : ~100 lignes (encodage PNG + boucle de capture en une fois).
 
 #### Tier 2 : Fenêtre egui (effort modéré, tests manuels complets)
 
-```
+```text
 evernight connect rdp://host --gui
 ```
 
@@ -335,7 +335,7 @@ l'entrée clavier, le presse-papiers, la redirection de disque.
 
 Le Tier 3 est le frontend de production, construit lorsque l'interface web sera prête.
 
----
+-----------------------------------------------------------------------------
 
 ## Démarrage Rapide : Vérifiez Votre Configuration
 

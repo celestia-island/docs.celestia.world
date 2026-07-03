@@ -1,6 +1,6 @@
 # Shittim Chest（什亭之匣）
 
-**版本 0.1.0**
+## 版本 0.1.0
 
 Shittim Chest 是 [entelecheia](https://github.com/celestia-island/entelecheia) 多代理協作平台的使用者面向外殼，使用 Rust 和 Vue 3 構建。
 
@@ -35,6 +35,6 @@ Shittim Chest 依據 **Business Source License 1.1 (BSL-1.1)** 授權。
 
 詳情請參閱[完整授權文字](https://github.com/celestia-island/shittim-chest/blob/main/LICENSE)。
 
----
+-----------------------------------------------------------------------------
 
 由 [Celestia Island](https://github.com/celestia-island) 用 ❤ 構建。

@@ -1,6 +1,6 @@
 # حول Shittim Chest (什亭之匣)
 
-**الإصدار 0.1.0**
+## الإصدار 0.1.0
 
 Shittim Chest هو الغلاف الموجّه للمستخدم لمنصة [entelecheia](https://github.com/celestia-island/entelecheia) للتعاون متعدد الوكلاء، مبنية بـ Rust و Vue 3.
 
@@ -35,6 +35,6 @@ Shittim Chest مرخص تحت **Business Source License 1.1 (BSL-1.1)**.
 
 راجع [نص الترخيص الكامل](https://github.com/celestia-island/shittim-chest/blob/main/LICENSE) للتفاصيل.
 
----
+-----------------------------------------------------------------------------
 
 بُني بـ ❤ من قبل [Celestia Island](https://github.com/celestia-island).

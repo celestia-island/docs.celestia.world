@@ -453,7 +453,7 @@ flowchart TB
 | **내부 계획 문서 파서** | 외부 에이전트 플랫폼이 ARCHITECTURE.md를 읽고 작업을 자체 분해하기 때문에 루프가 작동함. 내부 스킬 없음. | `hubris::read_iteration_plan` 스킬: 백로그 테이블 파싱 → 구조화된 `Vec<BacklogItem>` 반환하여 Entelecheia 자체 조정자가 루프를 구동할 수 있게 함. | P0 |
 | **조정자-작업자 분리 집행** | 외부 플랫폼이 자체 플래너/작업자 분리 제공; Entelecheia의 파이프라인은 이를 집행하지 않음. 조정자 스킬 체인이 여전히 `file_write`/`host_command_exec`를 직접 호출 가능. | 스킬 프론트매터에 `role` 필드 추가; `pipeline.rs` 도구 화이트리스트 빌더에서 `role = "coordinator"` 체인에서 변경 도구 제거. | P0 |
 | **수락 기준 검증** | `PostSurgeryRollback`이 `cargo check --workspace`(빌드 수준)를 확인하나 작업별 수락 기준은 확인하지 않음. `prompt.rs`에 부분 연결. | `verify_acceptance_criteria` 훅 네임스페이스: 각 백로그 항목이 확인 가능한 기준 선언(테스트 통과, 파일 존재, 함수 구현). | P1 |
-| **백로그 상태 머신** | 이 테이블은 `status` 열을 가지나 아직 어떤 에이전트도 자동으로 다시 쓰지 않음. | 각 체인+커밋 후 `status: pending → in_progress → done | blocked` 자동 업데이트. | P1 |
+| **백로그 상태 머신** | 이 테이블은 `status` 열을 가지나 아직 어떤 에이전트도 자동으로 다시 쓰지 않음. | 각 체인+커밋 후 `status: pending → in_progress → done \| blocked` 자동 업데이트. | P1 |
 | **깊은 체인을 위한 컨텍스트 예산** | `context_overflow_handler` 존재; 컨테이너화된 SkeMma를 사용할 수 없을 때 깊은 IEPL 위임이 여전히 취약. | 컨테이너화된 에이전트 실행 안정화(youki root 문제) 또는 깊은 체인을 위한 인프로세스 폴백 강화. | P2 |
 
 ### 반복 백로그

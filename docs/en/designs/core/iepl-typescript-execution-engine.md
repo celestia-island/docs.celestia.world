@@ -601,7 +601,7 @@ declarations.join("\n\n")
 
 ### Current (JavaScript)
 
-```
+```mermaid
 
 flowchart TD
 Meta["Skill Metadata\`nrelated_tools`:\n- kalos.file_read\n- kalos.file_write"]
@@ -613,7 +613,7 @@ LLM1 --> Boa1["Boa eval() direct execution\n(no pre-validation)"]
 
 ### Target (TypeScript + IEPL)
 
-```
+```mermaid
 
 flowchart TD
 Meta2["Skill Metadata\`nrelated_tools`:\n- kalos.file_read\n- kalos.file_write"]
@@ -694,7 +694,7 @@ ts-rs = { version = "12", features = ["serde-compat", "format"] }
 
 ## New Crate Structure
 
-```
+```mermaid
 
 flowchart LR
 SkemmaIepl["packages/agents/skemma/src/iepl/"] --> SM1["mod.rs\npub mod engine; pub mod `ast_validator`;"]
@@ -711,11 +711,10 @@ BTypes --> BT3["..."]
 BApi --> BA1["kalos.d.ts"]
 BApi --> BA2["neikos.d.ts"]
 BApi --> BA3["..."]
-
 ```text
+```
 
 ## Implementation Path
-
 ### Phase 1: ts-rs Infrastructure (~2–3 days)
 
 1. Add `ts-rs` workspace dependency

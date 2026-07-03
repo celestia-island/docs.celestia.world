@@ -3,7 +3,7 @@
 > Connecter les systèmes externes de suivi d'issues aux flux de travail d'Agent d'Entelecheia
 > Note sur l'état actuel : HubRis fournit actuellement des capacités d'assistance pour la création, la mise à jour, la recherche et les commentaires d'issues, et une intégration webhook existe dans le dépôt. Mais ce document ne doit pas être interprété comme « il existe déjà une surface produit d'issue inter-plateforme complète et unifiée ».
 
----
+-----------------------------------------------------------------------------
 
 ## Table des matières
 
@@ -16,7 +16,7 @@
 - [Nommage des branches Fork de conteneur](#nommage-des-branches-fork-de-conteneur)
 - [Intégration WebUI](#intégration-webui)
 
----
+-----------------------------------------------------------------------------
 
 ## Aperçu
 
@@ -27,7 +27,7 @@ Actuellement, les capacités liées aux issues d'Entelecheia proviennent princip
 
 L'automatisation inter-plateforme des issues peut être considérée comme une direction et une implémentation partielle existantes, mais il ne faut pas supposer par défaut que chaque flux de travail décrit dans ce document est déjà complètement bouclé.
 
----
+-----------------------------------------------------------------------------
 
 ## Identification à trois niveaux du conteneur
 
@@ -41,7 +41,7 @@ Les conteneurs dans Entelecheia utilisent un système d'ID à trois niveaux, mai
 
 L'**ID de liaison** lie un conteneur à une ressource de plateforme externe. Il reste stable après les redémarrages de Scepter, contrairement à l'ID d'exécution qui est réattribué à chaque démarrage.
 
----
+-----------------------------------------------------------------------------
 
 ## Format de l'ID de liaison
 
@@ -72,7 +72,7 @@ Les ID de liaison sont utilisés pour :
 - Les paramètres de compétence d'Agent
 - Le filtrage de la liste d'issues WebUI
 
----
+-----------------------------------------------------------------------------
 
 ## Comment les Agents interagissent avec les Issues
 
@@ -115,7 +115,7 @@ $.agent.HubRis.issue_comment({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Flux de travail pilotés par les Issues
 
@@ -139,7 +139,7 @@ flowchart TB
 1. KaLos lit les fichiers source pertinents, SkeMma exécute des scripts de diagnostic
 1. L'Agent soumet le correctif et commente la solution sur `@github#42`
 
----
+-----------------------------------------------------------------------------
 
 ## Registre des préfixes de plateforme
 
@@ -163,7 +163,7 @@ Les préfixes de plateforme prennent en charge les noms internationalisés. Par 
 
 Le registre des préfixes les normalise en interne en préfixes canoniques.
 
----
+-----------------------------------------------------------------------------
 
 ## Nommage des branches Fork de conteneur
 
@@ -191,7 +191,7 @@ cosmos-<uuid8>-<reason>
 
 Le format d'ID de liaison garantit que les branches peuvent être retracées jusqu'à leur issue d'origine.
 
----
+-----------------------------------------------------------------------------
 
 ## Intégration WebUI
 
@@ -221,7 +221,7 @@ La vue détaillée affiche :
 - Journal d'activité de l'Agent (appels de compétence, commentaires publiés)
 - Conteneurs et branches associés
 
----
+-----------------------------------------------------------------------------
 
 ## Prochaines étapes
 

@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Evernight" width="200"/>
 
-
 **تحكم عن بُعد متعدد المنصات ووسيط بروتوكولات صناعية**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](https://github.com/celestia-island/evernight/blob/main/LICENSE)

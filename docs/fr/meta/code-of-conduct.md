@@ -1,7 +1,6 @@
 # Code de conduite
 > Ceci est une traduction de référence communautaire. En cas de divergence, la version anglaise originale [`CODE_OF_CONDUCT.md`](../../../CODE_OF_CONDUCT.md) à la racine du dépôt fait foi.
 
-
 ## Notre engagement
 
 En tant que membres, contributeurs et responsables, nous nous engageons à faire de la participation à notre communauté une expérience sans harcèlement pour tous, sans distinction d'âge, de corpulence, de handicap visible ou invisible, d'origine ethnique, de caractéristiques sexuelles, d'identité et d'expression de genre, de niveau d'expérience, de niveau d'études, de statut socio-économique, de nationalité, d'apparence physique, de race, de religion, ou d'identité et d'orientation sexuelles.
@@ -38,7 +37,7 @@ Ce Code de conduite s'applique dans tous les espaces de la communauté, et s'app
 
 ## Application
 
-Les cas de comportement abusif, de harcèlement ou autrement inacceptable peuvent être signalés aux responsables de la communauté chargés de l'application à l'adresse contact@celestia.world. Toutes les plaintes seront examinées et étudiées rapidement et équitablement.
+Les cas de comportement abusif, de harcèlement ou autrement inacceptable peuvent être signalés aux responsables de la communauté chargés de l'application à l'adresse <contact@celestia.world>. Toutes les plaintes seront examinées et étudiées rapidement et équitablement.
 
 Tous les responsables de la communauté ont l'obligation de respecter la confidentialité et la sécurité de la personne signalant un incident.
 

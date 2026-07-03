@@ -18,14 +18,14 @@ le document de conception de `noa` ; la présente couvre l'intégration spécifi
 
 L'email de l'auteur utilise l'espace de noms de confiance `celestia.world` :
 
-```
-Display Name <provider-or-platform-id@celestia.world>
+```text
+Display Name <provider-<or-platform-id@celestia.world>>
 ```
 
 Lorsqu'evernight relaie un modèle, l'identifiant du provider reflète ce relais :
 
-```
-GLM 5 <evernight.celestia.world@celestia.world>   # GLM 5 relayé via evernight
+```text
+GLM 5 <evernight.<celestia.world@celestia.world>>   # GLM 5 relayé via evernight
 ```
 
 Les providers de première partie conservent leur propre domaine (`anthropic.com`, `deepseek.com`,
@@ -44,9 +44,9 @@ chaque commit.
 
 Ajouté après les trailers de co-auteur (séparé par une ligne vide) :
 
-```
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+```text
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 - `Upload` = tokens d'entrée ; `Download` = tokens de sortie.
@@ -72,14 +72,14 @@ liste de providers `aporia.toml` que lit `noa co-author resolve`.
 
 ## Exemple de Message de Commit Complet
 
-```
+```text
 perf(screen): cache X11 connection to avoid per-frame reconnect
 
 X11CaptureBackend previously called x11rb::connect on every capture_frame.
 Cache the connection in a Mutex<Option<..>>, reusing it across frames.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.com@celestia.world>
+Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.<com@celestia.world>>
 ```
 
 ## Considérations de Sécurité

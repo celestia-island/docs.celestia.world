@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Shittim Chest logo" width="200"/>
 
-
 **الصدفة المواجهة للمستخدم لمنصة [entelecheia](https://github.com/celestia-island/entelecheia) متعددة الوكلاء**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](../../meta/license.md)

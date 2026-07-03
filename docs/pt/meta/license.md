@@ -5,7 +5,7 @@ Licença de Source Business 1.1
 Texto da licença copyright (c) 2017 MariaDB Corporation Ab, Todos os Direitos Reservados.
 "Business Source License" é uma marca comercial da MariaDB Corporation Ab.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Parâmetros
 
@@ -89,9 +89,9 @@ os direitos concedidos são equivalentes em escopo àqueles
 fornecidos por sua escolha entre:
 
 — a Licença Apache, Versão 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), ou
+(<https://www.apache.org/licenses/LICENSE-2.0>), ou
 — a Licença MIT
-(https://opensource.org/licenses/MIT).
+(<https://opensource.org/licenses/MIT>).
 
 Você pode tratar esta Licença como a Apache License 2.0 ou a
 MIT License para qualquer Uso Permitido. Para qualquer uso restrito
@@ -104,15 +104,15 @@ Data de Mudança:      2030-01-01
 Licença de Mudança:   A partir da Data de Mudança, esta Licença converte-se
 automaticamente numa licença dupla à escolha do destinatário:
 — Apache License 2.0
-(https://www.apache.org/licenses/LICENSE-2.0), ou
+(<https://www.apache.org/licenses/LICENSE-2.0>), ou
 — MIT License
-(https://opensource.org/licenses/MIT)
+(<https://opensource.org/licenses/MIT>)
 para todas as versões da Obra Licenciada lançadas sob esta
 Licença, para todos os utilizadores e todos os casos de uso,
 sem restrições de uso e sem necessidade de licença comercial
 separada.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Termos
 
@@ -148,7 +148,7 @@ NA MEDIDA EM QUE PERMITIDO PELA LEI APLICÁVEL, A OBRA LICENCIADA É FORNECIDA E
 CONDIÇÕES, EXPRESSAS OU IMPLÍCITAS, INCLUINDO (SEM LIMITAÇÃO) GARANTIAS DE
 COMERCIABILIDADE, ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO, NÃO VIOLAÇÃO E TÍTULO.
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 Aviso
 

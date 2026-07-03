@@ -6,7 +6,7 @@
 > manual per-device engineering.
 > **Government hard deadline**: this capability is bound to a government project milestone.
 
----
+-----------------------------------------------------------------------------
 
 ## Remaining Work
 
@@ -36,7 +36,7 @@ The producer/resolver are decoupled via a process-wide shared
 `WriteApprovalRegistry` (`_shared_security_policy::write_approval_registry`),
 injected into orexis at startup and used by scepter when the operator responds.
 
----
+-----------------------------------------------------------------------------
 
 ## Phase E: End-to-End Dogfood
 
@@ -66,7 +66,7 @@ Operational validation, not pure code. Requires running hardware simulators.
 | E.3.1 | Record full discovery→monitoring→alarm→response cycle as screen capture | Demonstrate autonomous adaptation to unknown hardware |
 | E.3.2 | Generate discovery report artifact (auto-generated manifest TOML + inferred field table) | Tangible deliverable for government milestone review |
 
----
+-----------------------------------------------------------------------------
 
 ## Dependency on Sibling Projects (remaining)
 
@@ -75,7 +75,7 @@ Operational validation, not pure code. Requires running hardware simulators.
 | **arona** | WS broadcast path for `WriteApprovalRequest` (A.2.4) | ~~blocks A.2.4 / D.2~~ done — rides `TuiMessage::IndustrialWriteApprovalPush` (re-exported from arona types) | ✓ |
 | **shittim-chest** | Operator approval dialog (`industrial.approveWrite` consumer) + discovery progress rendering | blocks E.2.4 dogfood (the WS handler in scepter is ready; shittim-chest needs to render the dialog and POST the response) | sibling PLAN |
 
----
+-----------------------------------------------------------------------------
 
 ## Explicitly Out of Scope (2-week sprint)
 
@@ -86,14 +86,14 @@ Operational validation, not pure code. Requires running hardware simulators.
 - Frontend test coverage (shittim-chest gets guidance plan only, no test-writing)
 - CLI feature parity with TUI
 
----
+-----------------------------------------------------------------------------
 
 # Technical Roadmap — Architecture Deepening
 
 > **Date**: 2026-06-26
 > **Context**: After cleaning the repo of 700+ stale docs/files and consolidating all prompts into `res/prompts/`, we audited the remaining design docs against actual source code to identify which aspirational designs are worth implementing.
 
----
+-----------------------------------------------------------------------------
 
 ## 1. Sub-Badge Addressing + Parallel Skill Execution
 
@@ -126,18 +126,18 @@ targets out concurrently via `parallel_dispatch::fan_out` (bounded by a
 `Semaphore`). The two global-singleton blockers in the serial
 `invoke_skill_with_retries` path are handled as follows:
 
-   - **Shared local cosmos namespace** → each target is forked into its **own
+- **Shared local cosmos namespace** → each target is forked into its **own
 
 cosmos container** in Phase 1 (`fork_container_for_skill` +
 `assign_container_id` + `register_container_badge_in_registry`), so
 `dump/restore_cosmos_namespace` is a no-op per branch and concurrent exec
 is isolated. `MAX_BRANCH_DEPTH` (item 4) bounds the fork chain.
 
-   - **`active_streaming_skill` UI race** → tolerated (last-writer-wins on an
+- **`active_streaming_skill` UI race** → tolerated (last-writer-wins on an
 
 `Option`; reset to `None` after each branch).
 
-   - **`&mut SkillChainInput` threading** → `BranchOwner` mirrors the mutable
+- **`&mut SkillChainInput` threading** → `BranchOwner` mirrors the mutable
 
 portions per branch; `as_input` borrows them back into a short-lived
 `SkillChainInput` so the unchanged pipeline helpers are reused.
@@ -156,7 +156,7 @@ hardcoded `1`.
 
 **Expected impact**: Parallel file writes, parallel analyses from coordinator skills like `industrial_discover` would reduce end-to-end latency significantly.
 
----
+-----------------------------------------------------------------------------
 
 ## 2. Memory Sedimentation Pipeline
 
@@ -183,7 +183,7 @@ hardcoded `1`.
 - Quality gradient: access counts, temporal decay, confidence scoring.
 - Three-channel prototype (episodic/procedural/atomic) with differentiated retrieval strategies.
 
----
+-----------------------------------------------------------------------------
 
 ## 3. Inter-Agent Negotiation
 
@@ -204,7 +204,7 @@ hardcoded `1`.
 
 **When to revisit**: If agents ever need to dynamically negotiate mid-chain decisions (not just dispatch-and-wait), the primitives are 40% built. The gap is the pipeline integration loop.
 
----
+-----------------------------------------------------------------------------
 
 ## Summary
 

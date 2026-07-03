@@ -298,6 +298,7 @@ webui는 **`vue-i18n`**(사용자 정의 구현 아님)을 사용하며 **11개 
 > | 잘 번역됨 | `ja`, `ko`, `zhs`, `zht` | ~5% | `zhs` 18개 키 누락; 기타 112개 누락 |
 > | 대부분 번역됨 | `de`, `fr`, `pt`, `es`, `ar` | ~9–14% | 공유 112개 키 블록 누락 |
 > | 사실상 미번역 | `ru` | **~76%** | 전체 키 동등하나 값이 그대로 영어 |
+>
 > 공유 112개 키 공백은 최신 기능을 다룹니다: `admin.agents.*`, `admin.deviceModels.*`, `admin.projects.*`, `admin.rbac.*`, `admin.resourceQuota.*`, `auth.protocol.*`, `chat.cruise.*`, `chat.voice_*`.
 
 ## RBAC 아키텍처

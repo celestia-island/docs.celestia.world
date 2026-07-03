@@ -40,7 +40,7 @@ processus externe qui parle JSON-RPC (en utilisant les types
 de domaine Unix. La configuration TOML de la passerelle déclare où se trouve
 chaque plug-in.
 
-```
+```text
   ┌──────────────────────────────────────────────────────┐
   │                  ProtocolRegistry                     │
   │                                                       │
@@ -103,7 +103,7 @@ Standards ouverts pour la communication de bus de terrain (piles à
 combustible, servo-variateurs, contrôle de mouvement). Activés via les
 fonctionnalités `can` et `ethercat`.
 
----
+-----------------------------------------------------------------------------
 
 ## Tier 2 : Protocoles spécifiques au constructeur
 
@@ -177,7 +177,7 @@ evernight = { version = "0.1", features = ["enip"] }
 EtherNet/IP + CIP couvre les PLC Rockwell Automation / Allen-Bradley,
 principalement sur le marché nord-américain.
 
----
+-----------------------------------------------------------------------------
 
 ## Tier 3 : Protocole plug-in — JSON-RPC sur WebSocket / IPC
 
@@ -260,7 +260,7 @@ async def handle(ws):
 asyncio.run(websockets.serve(handle, "127.0.0.1", 51001))
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Architecture
 
@@ -284,7 +284,7 @@ pub trait ProtocolProbe: Send + Sync {
 }
 ```
 
-```
+```text
                           ┌──────────────────────────────────┐
    Your application ────► │         evernight crate           │
    (CLI / library /       │                                   │

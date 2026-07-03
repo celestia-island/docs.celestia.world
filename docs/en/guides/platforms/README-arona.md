@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Arona" width="200"/>
 
-
 **Shared protocol types for the celestia-island platform**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](https://github.com/celestia-island/arona/blob/main/LICENSE)

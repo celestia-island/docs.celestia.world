@@ -39,7 +39,7 @@ Industrial I/O is brokered through two traits:
 - `ProtocolBackend` — connect / read / write / ping
 - `ProtocolProbe` — auto-detect the protocol of an unknown endpoint
 
-```
+```text
 ProtocolRegistry::auto_detect(transport)  →  ProtocolProbeResult
 ```
 
@@ -65,7 +65,7 @@ one-time PLC preparation.
 
 Connections are URI-typed and catalog-managed:
 
-```
+```text
 ssh://user@host:22          s7://10.0.0.5?rack=0&slot=1
 vnc://host:5900             opcua://10.0.0.5:4840
 serial:///dev/ttyUSB0?baud=9600

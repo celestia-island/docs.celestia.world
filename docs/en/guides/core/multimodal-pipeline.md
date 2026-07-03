@@ -5,7 +5,7 @@
 > Generate, register, and analyze media using multimedia-creation and ApoRia
 > Current status note: This document primarily describes the target workflow. The codebase does contain ApoRia's multimodal-related tools, but it has not yet fully reached the centralized asset registry and full closed-loop capabilities described below.
 
----
+-----------------------------------------------------------------------------
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@
 - [Office documents](#office-documents)
 - [Complete example](#complete-example)
 
----
+-----------------------------------------------------------------------------
 
 ## Overview
 
@@ -31,7 +31,7 @@ flowchart TB
     C --> D["Feedback loop: identify issues → refine → re-analyze"]
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Asset registry
 
@@ -62,7 +62,7 @@ const retrieved = $.agent.ApoRia.media_asset_retrieve({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Generation tools
 
@@ -137,7 +137,7 @@ $multimedia-creation.slide_generate({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Registration
 
@@ -164,7 +164,7 @@ const asset = $.agent.ApoRia.media_asset_register({
 const asset_id: string = asset.id;
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Multimodal analysis
 
@@ -195,7 +195,7 @@ const context_analysis = $.agent.ApoRia.multimodal_chat({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Review loop
 
@@ -253,7 +253,7 @@ while (iteration < max_iterations) {
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Office documents
 
@@ -306,7 +306,7 @@ $multimedia-creation.slide_generate({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Complete example
 
@@ -381,7 +381,7 @@ report({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Next steps
 

@@ -13,14 +13,14 @@ Este documento especifica el rol de evernight. El mecanismo autoritativo se defi
 
 El email del autor usa el espacio de nombres de confianza `celestia.world`:
 
-```
-Display Name <provider-or-platform-id@celestia.world>
+```text
+Display Name <provider-<or-platform-id@celestia.world>>
 ```
 
 Cuando evernight retransmite un modelo, el id del proveedor refleja la retransmisión:
 
-```
-GLM 5 <evernight.celestia.world@celestia.world>   # GLM 5 relayed via evernight
+```text
+GLM 5 <evernight.<celestia.world@celestia.world>>   # GLM 5 relayed via evernight
 ```
 
 Los proveedores de primera parte conservan su propio dominio (`anthropic.com`, `deepseek.com`, `zhipuai.cn`, ...); las retransmisiones de terceros conservan el suyo (`opencode.ai`, `jdcloud.com`, `openrouter.ai`, ...). Esto hace visible la cadena "qué modelo, a través de quién" en cada commit.
@@ -35,9 +35,9 @@ Los proveedores de primera parte conservan su propio dominio (`anthropic.com`, `
 
 Se añade después de los trailers de coautoría (separado por una línea en blanco):
 
-```
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+```text
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 - `Upload` = tokens de entrada; `Download` = tokens de salida.
@@ -56,14 +56,14 @@ Cuando evernight hace de proxy del tráfico LLM (p. ej., al enrutar una llamada 
 
 ## Ejemplo completo de mensaje de commit
 
-```
+```text
 perf(screen): cache X11 connection to avoid per-frame reconnect
 
 X11CaptureBackend previously called x11rb::connect on every capture_frame.
 Cache the connection in a Mutex<Option<..>>, reusing it across frames.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.com@celestia.world>
+Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.<com@celestia.world>>
 ```
 
 ## Consideraciones de seguridad

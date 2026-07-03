@@ -143,32 +143,35 @@ graph LR
 
 ## 設定フローアーキテクチャ
 
+```text
 ### 全体フロー
 
 ```mermaid
 flowchart TB
-    subgraph ユーザーインターフェースレイヤー
-        A[モデルページ] --> B[プロバイダを選択]
-        B --> C[設定ウィザード]
-    end
+subgraph ユーザーインターフェースレイヤー
+    A[モデルページ] --> B[プロバイダを選択]
+    B --> C[設定ウィザード]
+end
 
-    subgraph 転送レイヤー
-        C --> D[WebSocketメッセージ]
-        D --> E[状態機械処理]
-    end
+subgraph 転送レイヤー
+    C --> D[WebSocketメッセージ]
+    D --> E[状態機械処理]
+end
 
-    subgraph サービスレイヤー
-        E --> F[設定検証]
-        F --> G[データベースストレージ]
-        G --> H[ブロードキャスト通知]
-    end
+subgraph サービスレイヤー
+    E --> F[設定検証]
+    F --> G[データベースストレージ]
+    G --> H[ブロードキャスト通知]
+end
 
-    subgraph 使用レイヤー
-        H --> I[会話リクエスト]
-        I --> J[設定読み込み]
-        J --> K[LLM呼び出し]
-    end
+subgraph 使用レイヤー
+    H --> I[会話リクエスト]
+    I --> J[設定読み込み]
+    J --> K[LLM呼び出し]
+end
 ```
+
+```text
 
 ## プロバイダ設定フロー
 
@@ -1014,7 +1017,7 @@ flowchart TB
 
 ### 設定
 
-# provider_config.toml
+\# provider_config.toml
 [[models]]
 id = "gpt-5.4"
 tier = "normal"
@@ -1041,6 +1044,7 @@ priority = 8
 
 ## フロー: ユーザーメッセージ → LLM応答
 
+```text
     1. ユーザーがTUI/CLI/ソケット経由でメッセージを送信
     1. `handle_user_message`():
 
@@ -1070,11 +1074,13 @@ c. TierPermitがドロップ → セマフォスロット解放
 a. リクエストセマフォパーミット返却
 b. Cosmosコンテナをクリーンアップ（または再利用）可能
 
+```
+
 ## E2Eテスト
 
 テストはアイドルタイムアウト（絶対期限ではない）を使用する。タイマーは意味のあるイベントごとにリセットされる：
 
-# アクティビティがアイドルタイマーをリセット — チェーンはアクティブであり続ける限り無期限に実行可能
+\# アクティビティがアイドルタイマーをリセット — チェーンはアクティブであり続ける限り無期限に実行可能
 ACTIVE_METHODS = {
 "Tui.`OrchestrationStatus`",
 "Tui.`McpToolResult`",
@@ -1125,6 +1131,7 @@ flowchart TB
 
 ## 実行時DB解決順序
 
+```rust
 // packages/scepter/src/app/setup.rs
 let `db_url` = if let Ok(url) = std::env::var("DATABASE_URL") {
 // 1. 環境変数（プロダクション: Docker PG、開発: .envファイル）
@@ -1148,6 +1155,7 @@ url
 return Err(/* "DATABASE_URLが設定されていません" */);
 }
 };
+```
 
 ## テストハーネスパターン
 
@@ -1185,18 +1193,19 @@ fn pg_integration_tests() {
 
 ## PGlite制約
 
+```text
 | 制約 | 影響 | 軽減策 |
 | --- | --- | --- |
 | `max_connections=1` | 一度に1つのプールのみ | サブテスト間でDB接続を共有。テスト間で `db.close()` しない |
 | 厳密な型キャスト | `uuid = text` が失敗 | 常に型付き値を渡す（例：UUID列には `Uuid` を使用、`String` ではなく） |
 | 同時アクセス不可 | テストは逐次的である必要がある | 全サブテストをインライン化した単一 `#[test]` ランナー |
 | sqlxプールバックグラウンドタスク | `close()` が無期限にハング | 全テスト完了後に `std::process::exit(0)` |
-
+```
 ## Dockerビルド堅牢化
 
 すべてのプロダクションDockerfileはembedded-dbを除外する：
 
-# Dockerfile
+\# Dockerfile
 RUN cargo build --release -p scepter \
 --no-default-features --features all-agents
 

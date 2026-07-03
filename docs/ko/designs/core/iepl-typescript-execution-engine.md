@@ -601,7 +601,7 @@ declarations.join("\n\n")
 
 ### 현재 (JavaScript)
 
-```
+```mermaid
 
 flowchart TD
 Meta["스킬 메타데이터\`nrelated_tools`:\n- kalos.file_read\n- kalos.file_write"]
@@ -613,7 +613,7 @@ LLM1 --> Boa1["Boa eval() 직접 실행\n(사전 검증 없음)"]
 
 ### 목표 (TypeScript + IEPL)
 
-```
+```mermaid
 
 flowchart TD
 Meta2["스킬 메타데이터\`nrelated_tools`:\n- kalos.file_read\n- kalos.file_write"]
@@ -717,6 +717,7 @@ neikos.d.ts
 iepl-api.d.ts    → 병합된 아티팩트 (선택적)
 
 ```text
+```
 
 ## 구현 경로
 

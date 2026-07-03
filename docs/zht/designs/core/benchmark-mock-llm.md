@@ -35,7 +35,7 @@ Profile 在运行时从 env vars 动态构建，不预存設定文件。
 
 ## 2. 架構
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                    Benchmark Runner                      │
 │  (遍历資料集實例，收集结果，输出 JSONL)                     │
@@ -83,12 +83,12 @@ Profile 在运行时从 env vars 动态构建，不预存設定文件。
 Mock 服务端兼容 OpenAI Chat Completions API（`/v1/chat/completions`），支援两种工作模式：
 
 **录制模式（首次跑真实模型时）**：
-```
+```text
 Client → Mock Server → Real API → Mock Server (录制响应) → Client
 ```
 
 **回放模式（CI/离线时）**：
-```
+```text
 Client → Mock Server (匹配请求 → 回傳录制的响应) → Client
 ```
 
@@ -106,7 +106,7 @@ Client → Mock Server (匹配请求 → 回傳录制的响应) → Client
 
 ### 3.3 Fixture 存储
 
-```
+```text
 tests/fixtures/llm/
 ├── swe-bench-verified/
 │   ├── gpt-4o/
@@ -132,7 +132,7 @@ tests/fixtures/llm/
 
 ### 4.1 任务执行流程
 
-```
+```text
 for instance in dataset:
     1. 拉取 SWE-bench Docker 映像檔 (base + env + instance 三層)
     2. 启动容器，挂载程式碼仓库

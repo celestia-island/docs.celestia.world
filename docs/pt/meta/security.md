@@ -1,7 +1,6 @@
 # Política de segurança
 > **Nota**: Esta é uma tradução de referência da comunidade. Em caso de divergência, prevalece a versão em inglês `SECURITY.md` na raiz do repositório.
 
-
 ## Como relatar uma vulnerabilidade
 
 **Não abra issues públicas para vulnerabilidades de segurança.**
@@ -9,7 +8,7 @@
 Relate-as de forma privada via
 [GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
 Se o GitHub Security Advisories não estiver disponível para você, envie um e-mail ao mantenedor em
-security@celestia.world com uma descrição clara e os passos de reprodução.
+<security@celestia.world> com uma descrição clara e os passos de reprodução.
 
 ## Escopo
 

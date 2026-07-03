@@ -46,7 +46,7 @@ flowchart TB
 | **Inyección en Prompt** | Los datos de instantánea impulsan prompts de sistema ricos en contexto — el LLM ve nombres de variables disponibles, resúmenes de referencias y configuraciones de entorno |
 | **Control de Acceso a Herramientas** | Las 3 herramientas internas de cosmos (`exec`, `write_to_var`, `write_to_var_json`) se conceden a cada agente mediante `agent_allowed_tools()`; los SOP de habilidades individuales definen cuáles usar |
 
----
+-----------------------------------------------------------------------------
 
 ## Comparación de Namespaces
 
@@ -80,7 +80,7 @@ flowchart LR
     end
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 1. `__vars` — Almacén de Variables (`vars`)
 
@@ -176,7 +176,7 @@ const report = vars['resultados_analisis'];
 
 **Implementación:** `packages/agents/skemma/src/js_runtime/module_loader.rs` líneas 142-156. El módulo usa `Module::synthetic()` con un cierre que devuelve `globalThis.__vars` directamente (referencia viva, no una instantánea). Esto significa que las modificaciones mediante `vars['clave'] = valor` son equivalentes a `vars['clave'] = valor`.
 
----
+-----------------------------------------------------------------------------
 
 ## 2. `__refs` — Referencias de Recursos (`refs`)
 
@@ -312,7 +312,7 @@ La `refs_section` en el system prompt expone la **tabla de contenidos** (nombre,
 - El LLM decide cuándo desreferenciar contenido según la relevancia de la tarea
 - Ningún agente puede filtrar accidentalmente contenido de referencia en el flujo de conversación
 
----
+-----------------------------------------------------------------------------
 
 ## 3. `__env` — Configuración de Entorno (`env`)
 
@@ -397,7 +397,7 @@ Esto permite que el código escrito como `$.variant.tools.agent.method()` se res
 
 > **Precaución de instantánea:** Debido a que `$.variant` es una referencia circular (`$.variant === $`), intentar `JSON.stringify` lanza un `TypeError`. El código JS de instantánea apunta explícitamente a `__vars` y `__refs` directamente en lugar de iterar las claves de `globalThis.$`, evitando este problema.
 
----
+-----------------------------------------------------------------------------
 
 ## 4. Arquitectura de Instantánea y Restauración
 
@@ -521,7 +521,7 @@ La función de instantánea accede directamente a los árboles de namespace cono
 })()
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 5. Registro de Herramientas y Control de Acceso
 
@@ -688,7 +688,7 @@ El JS del namespace se evalúa:
 - **Una vez** al inicio de `LocalCosmosRuntime::new()`
 - **Bajo demanda** durante la reconstrucción de cadena de habilidades mediante `CosmosCommand::RebuildNamespace`
 
----
+-----------------------------------------------------------------------------
 
 ## 6. Orden de Ensamblaje del System Prompt
 
@@ -747,7 +747,7 @@ Eres el motor de ejecución de la habilidad {skill_name} del {Agent}. Ejecuta la
 | Enrutamiento de salida | Antes del contexto de runtime | El LLM sabe a dónde enviar resultados antes de leer el contexto |
 | Contexto de runtime | Antes de RAG, antes de la nota de cadena | Vars y refs proporcionan contexto de ejecución para la recuperación de conocimiento |
 
----
+-----------------------------------------------------------------------------
 
 ## 7. Comportamiento de ResetVars
 
@@ -766,7 +766,7 @@ Esto significa:
 - **El aislamiento de habilidades es opt-in** — las habilidades solo deben leer variables que conocen (por nombre en el prompt de contexto de runtime)
 - **Sin limpieza forzada** — es responsabilidad del LLM gestionar la contaminación del namespace de variables
 
----
+-----------------------------------------------------------------------------
 
 ## 8. Mapa de Archivos de Implementación
 
@@ -806,7 +806,7 @@ Esto significa:
 | Pruebas unitarias | `packages/agents/skemma/src/js_runtime/runtime.rs` | 679-746 | Pruebas `write_to_ref`, instantánea, restauración |
 | Pruebas de namespace ref | `packages/shared/core/src/ref_namespace.rs` | 99-145 | Pruebas de patrón de generación de código JS |
 
----
+-----------------------------------------------------------------------------
 
 ## 9. Preocupaciones Transversales
 
@@ -836,7 +836,7 @@ Esto significa:
 | `ref_add` con JSON inválido | Devuelve `SkemmaError::JsEval` con vista previa |
 | Instantánea de referencia circular (`$.variant`) | Captura `TypeError` silenciosamente, omite la clave |
 | `__refs` faltante en instantánea | `build_refs_section` devuelve cadena vacía |
-| `__refs` corrupto después de ResetVars | `|| {}` garantiza reinicialización |
+| `__refs` corrupto después de ResetVars | `\|\| {}` garantiza reinicialización |
 
 ### 9.4 Ciclo de Vida de RebuildNamespace
 

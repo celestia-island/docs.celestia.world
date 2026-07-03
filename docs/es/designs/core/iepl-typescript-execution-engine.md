@@ -601,7 +601,7 @@ declarations.join("\n\n")
 
 ### Actual (JavaScript)
 
-```
+```mermaid
 
 flowchart TD
 Meta["Metadatos de Habilidad\`nrelated_tools`:\n- kalos.file_read\n- kalos.file_write"]
@@ -613,7 +613,7 @@ LLM1 --> Boa1["Boa eval() ejecución directa\n(sin pre-validación)"]
 
 ### Objetivo (TypeScript + IEPL)
 
-```
+```mermaid
 
 flowchart TD
 Meta2["Metadatos de Habilidad\`nrelated_tools`:\n- kalos.file_read\n- kalos.file_write"]
@@ -694,7 +694,7 @@ ts-rs = { version = "12", features = ["serde-compat", "format"] }
 
 ## Nueva Estructura de Crates
 
-```
+```mermaid
 
 flowchart LR
 SkemmaIepl["packages/agents/skemma/src/iepl/"] --> SM1["mod.rs\npub mod engine; pub mod `ast_validator`;"]
@@ -713,6 +713,7 @@ BApi --> BA2["neikos.d.ts"]
 BApi --> BA3["..."]
 
 ```text
+```
 
 ## Ruta de Implementación
 

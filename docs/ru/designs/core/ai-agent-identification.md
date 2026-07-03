@@ -30,7 +30,7 @@ Email автора использует единое пространство и
 частью, кодирующей **кто обслуживал модель**:
 
 ```text
-Отображаемое Имя <provider-or-platform-id@celestia.world>
+Отображаемое Имя <provider-<or-platform-id@celestia.world>>
 ```
 
 Идентификатор провайдера — это **обязательное поле `website_domain`**, объявленное в каждой
@@ -52,10 +52,10 @@ Email автора использует единое пространство и
 Это означает, что *одна и та же* модель, доступная через разные маршруты, различима:
 
 ```text
-GLM 5 <zhipuai.cn@celestia.world>              # напрямую от Zhipu AI
-GLM 5 <jdcloud.com@celestia.world>           # GLM 5 через JD Cloud
-Deepseek V4 Pro <deepseek.com@celestia.world> # напрямую от DeepSeek
-Deepseek V4 Pro <opencode.ai@celestia.world>  # DeepSeek через opencode
+GLM 5 <zhipuai.<cn@celestia.world>>              # напрямую от Zhipu AI
+GLM 5 <jdcloud.<com@celestia.world>>           # GLM 5 через JD Cloud
+Deepseek V4 Pro <deepseek.<com@celestia.world>> # напрямую от DeepSeek
+Deepseek V4 Pro <opencode.<ai@celestia.world>>  # DeepSeek через opencode
 ```
 
 ## Спецификация Трейлера Соавтора
@@ -87,8 +87,8 @@ Co-authored-by: Entelecheia <demiurge@celestia.world>
 Встраивается в отображаемое имя каждой модели в трейлере `Co-authored-by` (один блок трейлера, который GitHub корректно разбирает):
 
 ```text
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 Правила:
@@ -109,7 +109,7 @@ The previous 180s timeout was too tight for clean builds on a loaded
 machine; raise it to 300s to avoid spurious validation failures.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.cn@celestia.world>
+Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.<cn@celestia.world>>
 ```
 
 ## Установка Хука noa
@@ -187,7 +187,7 @@ flowchart LR
 evernight SSH → хост B → `git commit`), хук `commit-msg` на стороне хоста всё равно срабатывает
 локально и маркирует коммит. `evernight` сам может фигурировать как **транзитный
 провайдер** в email автора, когда он ретранслирует трафик модели (например,
-`GLM 5 <evernight.celestia.world@celestia.world>`), делая транспортный переход
+`GLM 5 <evernight.<celestia.world@celestia.world>>`), делая транспортный переход
 аудируемым.
 
 ## Соображения Безопасности

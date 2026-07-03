@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Shittim Chest" width="200"/>
 
-
 **Interface utilisateur pour la plateforme multi-agents entelecheia**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](https://github.com/celestia-island/shittim-chest/blob/main/LICENSE)

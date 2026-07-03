@@ -4,7 +4,7 @@
 
 > Note: The CLI does not yet reach full feature parity with the TUI. For the current status, see [ARCHITECTURE.md](../../designs/core/architecture.md).
 
----
+-----------------------------------------------------------------------------
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@
 - [Docker images](#docker-images)
 - [Advanced usage](#advanced-usage)
 
----
+-----------------------------------------------------------------------------
 
 ## Installation
 
@@ -47,7 +47,7 @@ The binary is located at `target/debug/entelecheia-cli` (debug) or `target/relea
 
 Pre-built binaries are available from [GitHub Releases](https://github.com/celestia-island/entelecheia/releases). Download the archive for your platform and place the binary in your `PATH`.
 
----
+-----------------------------------------------------------------------------
 
 ## Basic usage
 
@@ -65,7 +65,7 @@ echo "summarize this file" | entelecheia-cli send
 entelecheia-cli status
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Global options
 
@@ -101,7 +101,7 @@ entelecheia-cli -l debug send "debug connection issue"
 entelecheia-cli -d run my-agent --ci
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Chat commands
 
@@ -170,7 +170,7 @@ entelecheia-cli chat recent [OPTIONS]
 | `--agent <TYPE>` | Filter by agent type | — |
 | `--limit <N>` | Maximum number of messages to return | `20` |
 
----
+-----------------------------------------------------------------------------
 
 ## Agent management
 
@@ -200,7 +200,7 @@ entelecheia-cli agent restart <AGENT_TYPE>
 
 > Note: Agents run as library crates inside the scepter runtime, not as standalone executables. The `agent start` command attempts to spawn a binary matching the agent's name, which is mainly applicable when an agent is compiled as a separate binary. In practice, agents are activated through the scepter server.
 
----
+-----------------------------------------------------------------------------
 
 ## Service lifecycle
 
@@ -264,7 +264,7 @@ Starts or creates only the WebUI container.
 | `--prefix <STR>` | Container name prefix | `e-` |
 | `--webui-port <PORT>` | WebUI port | `3424` |
 
----
+-----------------------------------------------------------------------------
 
 ## Configuration
 
@@ -316,7 +316,7 @@ Validating WebSocket configuration...
 [ OK ]  Configuration validation passed
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Connection context
 
@@ -406,7 +406,7 @@ entelecheia-cli status
 entelecheia-cli context use default
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Status and monitoring
 
@@ -491,7 +491,7 @@ entelecheia-cli logs -a ApoRia
 
 Logs are read from the `./logs/` directory. Each agent has its own log file (`ApoRia.log`, `EleOs.log`, etc.).
 
----
+-----------------------------------------------------------------------------
 
 ## Subscriptions (Layer3)
 
@@ -551,7 +551,7 @@ entelecheia-cli subscribe auto-update
 
 Updates all subscriptions that have `auto_update` enabled.
 
----
+-----------------------------------------------------------------------------
 
 ## Running agents
 
@@ -603,7 +603,7 @@ entelecheia-cli status
 entelecheia-cli status history[-5]
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Timeline
 
@@ -631,7 +631,7 @@ entelecheia-cli timeline show <CONVERSATION_ID> [OPTIONS]
 | --- | --- | --- |
 | `--include-messages` | Include messages in the output | `true` |
 
----
+-----------------------------------------------------------------------------
 
 ## Docker images
 
@@ -661,7 +661,7 @@ Managed images:
 - `entelecheia` — the orchestration server (with the embedded cosmos runtime)
 - `pgvector/pgvector` — PostgreSQL with the vector extension
 
----
+-----------------------------------------------------------------------------
 
 ## Advanced usage
 
@@ -695,7 +695,7 @@ The CLI and the TUI connect to the same scepter server. Both can be used simulta
 - Start the TUI for interactive sessions: `cargo run --bin entelecheia-tui`
 - Use the CLI for scripting, automation, and quick queries
 
----
+-----------------------------------------------------------------------------
 
 ## Troubleshooting
 

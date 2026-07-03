@@ -2,7 +2,7 @@
 
 > How to create and register MCP tools in the Entelecheia platform
 
----
+-----------------------------------------------------------------------------
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@
 - [Best practices](#best-practices)
 - [Testing MCP tools](#testing-mcp-tools)
 
----
+-----------------------------------------------------------------------------
 
 ## Exec-Only microkernel
 
@@ -33,7 +33,7 @@ flowchart TB
 
 The `related_tools` declaration in a skill's TOML frontmatter determines which ES module import APIs will be documented in the prompt sent to the LLM.
 
----
+-----------------------------------------------------------------------------
 
 ## MCP tool structure
 
@@ -127,7 +127,7 @@ McpToolResult::failure_lines(vec!["Error 1".into(), "Error 2".into()])
 
 Reference: `packages/shared/domain_skills/src/mcp_tools.rs:62-136`.
 
----
+-----------------------------------------------------------------------------
 
 ## Adding a new MCP tool
 
@@ -302,7 +302,7 @@ sequenceDiagram
     Cosmos-->>LLM: 10. Final result returned to the LLM
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Best practices
 
@@ -431,7 +431,7 @@ McpToolResult::failure(format!("TODO item {} not found", id))
 McpToolResult::failure("Error".into())
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Testing MCP tools
 
@@ -570,7 +570,7 @@ cargo test -p hubris test_report_success
 cargo test -p hubris -- --nocapture
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Quick reference: key files
 

@@ -39,7 +39,7 @@
 - `ProtocolBackend` — اتصال / قراءة / كتابة / ping
 - `ProtocolProbe` — كشف تلقائي لبروتوكول نقطة نهاية مجهولة
 
-```
+```text
 ProtocolRegistry::auto_detect(transport)  →  ProtocolProbeResult
 ```
 
@@ -65,7 +65,7 @@ PLC لمرة واحدة.
 
 الاتصالات مُنمَّطة بـ URI ومُدارة بالكتالوج:
 
-```
+```text
 ssh://user@host:22          s7://10.0.0.5?rack=0&slot=1
 vnc://host:5900             opcua://10.0.0.5:4840
 serial:///dev/ttyUSB0?baud=9600

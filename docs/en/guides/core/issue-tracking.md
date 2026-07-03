@@ -3,7 +3,7 @@
 > Connect external issue tracking systems to Entelecheia's agent workflow
 > Current status note: HubRis does currently provide issue create, update, search, and comment helper capabilities, and webhook integrations also exist in the repository. However, this document should not be read as "there already exists a complete, unified, cross-platform issue product surface."
 
----
+-----------------------------------------------------------------------------
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@
 - [Container fork branch naming](#container-fork-branch-naming)
 - [WebUI integration](#webui-integration)
 
----
+-----------------------------------------------------------------------------
 
 ## Overview
 
@@ -27,7 +27,7 @@ Entelecheia's current issue-related capabilities come from two directions:
 
 Cross-platform issue automation can be viewed as an existing direction and a partially implemented feature, but you should not assume by default that every workflow in this document is already fully closed-loop.
 
----
+-----------------------------------------------------------------------------
 
 ## Container three-tier identifiers
 
@@ -41,7 +41,7 @@ Containers in Entelecheia use a three-tier ID system to maintain identity across
 
 The **Binding ID** links a container to an external platform resource. It remains stable across Scepter restarts, unlike the runtime ID which is reassigned on each start.
 
----
+-----------------------------------------------------------------------------
 
 ## Binding ID format
 
@@ -72,7 +72,7 @@ Binding IDs are used for:
 - Agent skill parameters
 - WebUI issue list filtering
 
----
+-----------------------------------------------------------------------------
 
 ## How agents interact with issues
 
@@ -115,7 +115,7 @@ $.agent.HubRis.issue_comment({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Issue-driven workflow
 
@@ -139,7 +139,7 @@ flowchart TB
 1. KaLos reads the relevant source files, SkeMma runs diagnostic scripts
 1. The agent commits the fix and comments the solution on `@github#42`
 
----
+-----------------------------------------------------------------------------
 
 ## Platform prefix registry
 
@@ -163,7 +163,7 @@ Platform prefixes support internationalized names. For example, Feishu can be re
 
 The prefix registry internally normalizes these to the canonical prefix.
 
----
+-----------------------------------------------------------------------------
 
 ## Container fork branch naming
 
@@ -191,7 +191,7 @@ cosmos-<uuid8>-<reason>
 
 The binding ID format ensures a branch can be traced back to its originating issue.
 
----
+-----------------------------------------------------------------------------
 
 ## WebUI integration
 
@@ -221,7 +221,7 @@ The detail view shows:
 - The agent activity log (skill calls, comments posted)
 - Associated containers and branches
 
----
+-----------------------------------------------------------------------------
 
 ## Next steps
 

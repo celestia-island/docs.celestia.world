@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Shittim Chest" width="200"/>
 
-
 **entelecheia マルチエージェントプラットフォーム向けのユーザー向けシェル**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](https://github.com/celestia-island/shittim-chest/blob/main/LICENSE)

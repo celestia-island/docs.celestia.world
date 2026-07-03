@@ -21,7 +21,7 @@
 著者メールは単一の信頼名前空間 — `celestia.world` — を使用し、ローカル部分が**誰がモデルを提供したか**をエンコードします：
 
 ```text
-Display Name <provider-or-platform-id@celestia.world>
+Display Name <provider-<or-platform-id@celestia.world>>
 ```
 
 プロバイダIDは、各プロバイダ設定（プロバイダレジストリエントリポイントTOMLとローカルの`aporia.toml`）で宣言された**必須の`website_domain`**フィールドです。API base_urlから派生するものでは**ありません** — 単一のプロバイダが複数のbase_urlホストを公開する場合があります（例：zhipu_glmは`open.bigmodel.cn`と`api.z.ai`の両方を提供しますが、その正規ドメインは`zhipuai.cn`です）。プロバイダに`website_domain`がない場合、そのプロバイダには共著者は帰属しません（リゾルバはURLやモデルプレフィックスから推測するのではなくスキップします）。
@@ -32,10 +32,10 @@ Display Name <provider-or-platform-id@celestia.world>
 これは、異なる経路を通じて到達した*同じ*モデルが区別可能であることを意味します：
 
 ```text
-GLM 5 <zhipuai.cn@celestia.world>              # Zhipu AIから直接
-GLM 5 <jdcloud.com@celestia.world>           # JD Cloud経由で提供されたGLM 5
-Deepseek V4 Pro <deepseek.com@celestia.world> # DeepSeekから直接
-Deepseek V4 Pro <opencode.ai@celestia.world>  # opencode経由で提供されたDeepSeek
+GLM 5 <zhipuai.<cn@celestia.world>>              # Zhipu AIから直接
+GLM 5 <jdcloud.<com@celestia.world>>           # JD Cloud経由で提供されたGLM 5
+Deepseek V4 Pro <deepseek.<com@celestia.world>> # DeepSeekから直接
+Deepseek V4 Pro <opencode.<ai@celestia.world>>  # opencode経由で提供されたDeepSeek
 ```
 
 ## 共著者トレーラー仕様
@@ -66,8 +66,8 @@ YOLOモードは以下のいずれかから検出されます：
 各モデルの表示名内に`Co-authored-by`トレーラーに埋め込まれます（GitHubが正しく解析する1つのトレーラーブロック）：
 
 ```text
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 ルール：
@@ -85,7 +85,7 @@ The previous 180s timeout was too tight for clean builds on a loaded
 machine; raise it to 300s to avoid spurious validation failures.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.cn@celestia.world>
+Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.<cn@celestia.world>>
 ```
 
 ## noaフックのインストール
@@ -138,7 +138,7 @@ flowchart LR
 
 ## evernight統合
 
-AIエージェントが`evernight`を通じてコミットをオーケストレーションする場合（例：ホストAのエージェント → evernight SSH → ホストB → `git commit`）、ホスト側の`commit-msg`フックは依然としてローカルで発火しコミットをスタンプします。`evernight`自体は、モデルトラフィックを中継する際に著者メール内で**通過プロバイダ**として表示される場合があります（例：`GLM 5 <evernight.celestia.world@celestia.world>`）。これにより転送ホップが監査可能になります。
+AIエージェントが`evernight`を通じてコミットをオーケストレーションする場合（例：ホストAのエージェント → evernight SSH → ホストB → `git commit`）、ホスト側の`commit-msg`フックは依然としてローカルで発火しコミットをスタンプします。`evernight`自体は、モデルトラフィックを中継する際に著者メール内で**通過プロバイダ**として表示される場合があります（例：`GLM 5 <evernight.<celestia.world@celestia.world>>`）。これにより転送ホップが監査可能になります。
 
 ## セキュリティ上の考慮事項
 

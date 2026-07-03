@@ -2,7 +2,7 @@
 
 > Comment créer et enregistrer des outils MCP dans la plateforme Entelecheia
 
----
+-----------------------------------------------------------------------------
 
 ## Table des matières
 
@@ -12,7 +12,7 @@
 - [Bonnes pratiques](#bonnes-pratiques)
 - [Tester les outils MCP](#tester-les-outils-mcp)
 
----
+-----------------------------------------------------------------------------
 
 ## Micro-noyau Exec-Only
 
@@ -33,7 +33,7 @@ flowchart TB
 
 La déclaration `related_tools` dans le frontmatter TOML de la Skill détermine quelles API d'import de modules ES seront documentées dans le prompt envoyé au LLM.
 
----
+-----------------------------------------------------------------------------
 
 ## Structure d'un outil MCP
 
@@ -127,7 +127,7 @@ McpToolResult::failure_lines(vec!["Error 1".into(), "Error 2".into()])
 
 Référence : `packages/shared/domain_skills/src/mcp_tools.rs:62-136`.
 
----
+-----------------------------------------------------------------------------
 
 ## Ajouter un nouvel outil MCP
 
@@ -302,7 +302,7 @@ sequenceDiagram
     Cosmos-->>LLM: 10. Résultat final renvoyé au LLM
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Bonnes pratiques
 
@@ -431,7 +431,7 @@ McpToolResult::failure(format!("TODO item {} not found", id))
 McpToolResult::failure("Error".into())
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Tester les outils MCP
 
@@ -570,7 +570,7 @@ cargo test -p hubris test_report_success
 cargo test -p hubris -- --nocapture
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Référence rapide : fichiers clés
 

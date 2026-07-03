@@ -1,11 +1,11 @@
 # Multi-Agent Framework Competitive Analysis
 
 **Date**: May 12, 2026 (updated after full source code audit of 43 crates × 1500+ source files)
-**Context**: Structured comparison against Entelecheia（玄枢） design dimensions.
+**Context**: Structured comparison against Entelecheia(玄枢) design dimensions.
 
 > Current-state note: references to Entelecheia in this document mix present code reality and intended architecture. Read "vs. Entelecheia" sections as comparisons against Entelecheia's design goals, not as claims that every capability is fully shipped today. For current implementation reality, prioritize the appendix here and the 2026-05-13 diagnosis report.
 
----
+-----------------------------------------------------------------------------
 
 ## 1. CrewAI
 
@@ -60,7 +60,7 @@
 - No native browser/shell integration for agent coding tasks.
 - Orchestration is Python-only (no multi-language runtime).
 
----
+-----------------------------------------------------------------------------
 
 ## 2. LangGraph
 
@@ -113,7 +113,7 @@
 - State graph approach can become unwieldy for complex agent interactions.
 - No built-in support for code execution isolation.
 
----
+-----------------------------------------------------------------------------
 
 ## 3. MetaGPT
 
@@ -172,7 +172,7 @@
 - No MCP/A2A inter-agent protocol support.
 - Budget tracking is cost-only, not resource/security-based.
 
----
+-----------------------------------------------------------------------------
 
 ## 4. ChatDev 2.0 (DevAll)
 
@@ -232,7 +232,7 @@
 - No cross-language agent support.
 - Community is research-oriented rather than enterprise.
 
----
+-----------------------------------------------------------------------------
 
 ## 5. Google ADK (Agent Development Kit)
 
@@ -295,7 +295,7 @@
 - No CLI-native agent experience (web UI focused).
 - Memory/context handling is Gemini-cache-aware, less generic for other models.
 
----
+-----------------------------------------------------------------------------
 
 ## 6. OpenAI Swarm (experimental, now deprecated)
 
@@ -351,7 +351,7 @@
 - No multi-agent communication beyond handoffs.
 - Experimental/educational — not a production framework.
 
----
+-----------------------------------------------------------------------------
 
 ## 7. Cline
 
@@ -418,7 +418,7 @@
 - Not a framework — an application. Can't embed as a library.
 - TypeScript/Go only, no Python SDK.
 
----
+-----------------------------------------------------------------------------
 
 ## 8. Aider
 
@@ -489,7 +489,7 @@
 - **Text parsing fragility**: Relies on LLM outputting precise edit formats — can fail on model deviations.
 - **Terminal-only**: Not embeddable as a library in most workflows (though Python API exists).
 
----
+-----------------------------------------------------------------------------
 
 ## Comparative Summary Table
 
@@ -510,7 +510,7 @@
 | **Unique Strength** | Flows+Crews duality | Durable execution | Full SDLC emulation | Zero-code visual builder | A2A protocol, sandboxed execution | Minimalist elegance | IDE integration, browser automation | Repo map, edit formats |
 | **Code Size** | ~50+ source files | Large | ~200+ source files | ~150+ source files | ~200+ source files | ~4 source files | ~300+ source files | ~100 source files |
 
----
+-----------------------------------------------------------------------------
 
 ## Key Takeaways for Entelecheia's Roadmap
 
@@ -534,7 +534,7 @@
 
 1. **Cline and Aider** are applications, not frameworks. They demonstrate the power of tight tool integration (IDE, git, terminal, browser) but can't be composed into larger agent systems.
 
----
+-----------------------------------------------------------------------------
 
 ## Appendix: Entelecheia Current-State Reminder
 

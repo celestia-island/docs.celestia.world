@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Noa" width="200"/>
 
-
 **AI 原生的分散式版本控制系統**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](https://github.com/celestia-island/noa/blob/main/LICENSE)

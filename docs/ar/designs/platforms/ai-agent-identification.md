@@ -18,14 +18,14 @@
 
 يستخدم بريد المؤلف نطاق ثقة `celestia.world`:
 
-```
-Display Name <provider-or-platform-id@celestia.world>
+```text
+Display Name <provider-<or-platform-id@celestia.world>>
 ```
 
 عندما يرحل evernight نموذجًا، يعكس معرّف المزود المرحل:
 
-```
-GLM 5 <evernight.celestia.world@celestia.world>   # GLM 5 relayed via evernight
+```text
+GLM 5 <evernight.<celestia.world@celestia.world>>   # GLM 5 relayed via evernight
 ```
 
 يحتفظ مزودو الطرف الأول بنطاقهم الخاص (`anthropic.com`، `deepseek.com`،
@@ -44,9 +44,9 @@ GLM 5 <evernight.celestia.world@celestia.world>   # GLM 5 relayed via evernight
 
 مُلحق بعد مقاطير المشارك (مفصول بسطر فارغ):
 
-```
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+```text
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 - `Upload` = رموز الإدخال؛ `Download` = رموز المخرج.
@@ -72,14 +72,14 @@ Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world
 
 ## مثال رسالة التزام كاملة
 
-```
+```text
 perf(screen): cache X11 connection to avoid per-frame reconnect
 
 X11CaptureBackend previously called x11rb::connect on every capture_frame.
 Cache the connection in a Mutex<Option<..>>, reusing it across frames.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.com@celestia.world>
+Co-authored-by: Deepseek V4 Pro (↑ 18.2k ↓ 2.1k) <deepseek.<com@celestia.world>>
 ```
 
 ## اعتبارات الأمان

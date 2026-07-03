@@ -1,6 +1,6 @@
 # Shittim Chest (什亭之匣)
 
-**Версия 0.1.0**
+## Версия 0.1.0
 
 Shittim Chest — это пользовательская оболочка для платформы мультиагентного взаимодействия [entelecheia](https://github.com/celestia-island/entelecheia), построенная на Rust и Vue 3.
 
@@ -35,6 +35,6 @@ Shittim Chest лицензирован под **Business Source License 1.1 (BSL
 
 Подробности см. в [полном тексте лицензии](https://github.com/celestia-island/shittim-chest/blob/main/LICENSE).
 
----
+-----------------------------------------------------------------------------
 
 Создано с ❤ командой [Celestia Island](https://github.com/celestia-island).

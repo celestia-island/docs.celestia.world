@@ -37,7 +37,7 @@
 - `ProtocolBackend` —— connect / read / write / ping
 - `ProtocolProbe` —— 알려지지 않은 엔드포인트의 프로토콜 자동 식별
 
-```
+```text
 ProtocolRegistry::auto_detect(transport)  →  ProtocolProbeResult
 ```
 
@@ -62,7 +62,7 @@ let profile = auto_provision("192.168.1.10").await?;
 
 연결은 URI 타입화되어 카탈로그로 관리된다:
 
-```
+```text
 ssh://user@host:22          s7://10.0.0.5?rack=0&slot=1
 vnc://host:5900             opcua://10.0.0.5:4840
 serial:///dev/ttyUSB0?baud=9600

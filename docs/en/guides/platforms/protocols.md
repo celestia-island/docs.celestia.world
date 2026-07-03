@@ -36,7 +36,7 @@ JSON-RPC (using [arona](https://github.com/celestia-island/arona) types) over
 WebSocket or Unix domain socket. The gateway's TOML config declares where each
 plugin lives.
 
-```
+```text
   ┌──────────────────────────────────────────────────────┐
   │                  ProtocolRegistry                     │
   │                                                       │
@@ -97,7 +97,7 @@ evernight = { version = "0.1", features = ["opcua"] }
 Open standards for fieldbus communication (fuel cells, servo drives, motion
 control). Enabled via `can` and `ethercat` features.
 
----
+-----------------------------------------------------------------------------
 
 ## Tier 2: Vendor-specific protocols
 
@@ -168,7 +168,7 @@ evernight = { version = "0.1", features = ["enip"] }
 EtherNet/IP + CIP covers Rockwell Automation / Allen-Bradley PLCs, primarily
 in the North American market.
 
----
+-----------------------------------------------------------------------------
 
 ## Tier 3: Plugin protocol — JSON-RPC over WebSocket / IPC
 
@@ -249,7 +249,7 @@ async def handle(ws):
 asyncio.run(websockets.serve(handle, "127.0.0.1", 51001))
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Architecture
 
@@ -272,7 +272,7 @@ pub trait ProtocolProbe: Send + Sync {
 }
 ```
 
-```
+```text
                           ┌──────────────────────────────────┐
    Your application ────► │         evernight crate           │
    (CLI / library /       │                                   │

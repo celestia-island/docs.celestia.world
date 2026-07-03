@@ -29,7 +29,7 @@ El email del autor usa un único espacio de nombres de confianza — `celestia.w
 local codificando **quién sirvió el modelo**:
 
 ```text
-Nombre para Mostrar <id-del-proveedor-o-plataforma@celestia.world>
+Nombre para Mostrar <id-<del-proveedor-o-plataforma@celestia.world>>
 ```
 
 El id del proveedor es el campo obligatorio **`website_domain`** declarado en cada
@@ -51,10 +51,10 @@ adivinar desde la URL o el prefijo del modelo).
 Esto significa que el *mismo* modelo alcanzado a través de diferentes rutas es distinguible:
 
 ```text
-GLM 5 <zhipuai.cn@celestia.world>              # directo desde Zhipu AI
-GLM 5 <jdcloud.com@celestia.world>           # GLM 5 servido vía JD Cloud
-Deepseek V4 Pro <deepseek.com@celestia.world> # directo desde DeepSeek
-Deepseek V4 Pro <opencode.ai@celestia.world>  # DeepSeek servido vía opencode
+GLM 5 <zhipuai.<cn@celestia.world>>              # directo desde Zhipu AI
+GLM 5 <jdcloud.<com@celestia.world>>           # GLM 5 servido vía JD Cloud
+Deepseek V4 Pro <deepseek.<com@celestia.world>> # directo desde DeepSeek
+Deepseek V4 Pro <opencode.<ai@celestia.world>>  # DeepSeek servido vía opencode
 ```
 
 ## Especificación del Tráiler de Co-autor
@@ -86,8 +86,8 @@ Esto permite a un humano ver inmediatamente "este commit se hizo sin humano en e
 Incrustado en el nombre para mostrar de cada modelo dentro del tráiler `Co-authored-by` (un bloque de tráiler que GitHub analiza correctamente):
 
 ```text
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 Reglas:
@@ -108,7 +108,7 @@ El timeout anterior de 180s era demasiado ajustado para compilaciones limpias en
 cargada; se sube a 300s para evitar fallos de validación espurios.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.cn@celestia.world>
+Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.<cn@celestia.world>>
 ```
 
 ## Instalación del Hook de noa
@@ -186,7 +186,7 @@ Cuando un agente IA orquesta un commit a través de `evernight` (ej. agente en h
 evernight SSH → host B → `git commit`), el hook `commit-msg` del lado del host aún se dispara
 localmente y sella el commit. `evernight` mismo puede aparecer como un **proveedor de
 tránsito** en el email del autor cuando retransmite tráfico de modelo (ej.
-`GLM 5 <evernight.celestia.world@celestia.world>`), haciendo el salto de transporte
+`GLM 5 <evernight.<celestia.world@celestia.world>>`), haciendo el salto de transporte
 auditable.
 
 ## Consideraciones de Seguridad

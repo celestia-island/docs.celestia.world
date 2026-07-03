@@ -6,7 +6,7 @@
 > ingénierie manuelle par appareil.
 > **Date limite gouvernementale stricte** : cette capacité est liée à un jalon de projet gouvernemental.
 
----
+-----------------------------------------------------------------------------
 
 ## Travail Restant
 
@@ -36,7 +36,7 @@ Le producteur/résolveur sont découplés via un `WriteApprovalRegistry` partag�
 (`_shared_security_policy::write_approval_registry`),
 injecté dans orexis au démarrage et utilisé par scepter lorsque l'opérateur répond.
 
----
+-----------------------------------------------------------------------------
 
 ## Phase E : Dogfood de Bout en Bout
 
@@ -66,7 +66,7 @@ Validation opérationnelle, pas du code pur. Nécessite l'exécution de simulate
 | E.3.1 | Enregistrer le cycle complet découverte→surveillance→alarme→réponse en capture d'écran | Démontrer l'adaptation autonome à du matériel inconnu |
 | E.3.2 | Générer l'artefact de rapport de découverte (manifeste TOML auto-généré + tableau de champs inférés) | Livrable tangible pour l'examen du jalon gouvernemental |
 
----
+-----------------------------------------------------------------------------
 
 ## Dépendance envers les Projets Frères (restant)
 
@@ -75,7 +75,7 @@ Validation opérationnelle, pas du code pur. Nécessite l'exécution de simulate
 | **arona** | Chemin de diffusion WS pour `WriteApprovalRequest` (A.2.4) | ~~bloque A.2.4 / D.2~~ fait — passe par `TuiMessage::IndustrialWriteApprovalPush` (ré-exporté depuis les types arona) | ✓ |
 | **shittim-chest** | Dialogue d'approbation opérateur (consommateur `industrial.approveWrite`) + rendu de progression de découverte | bloque le dogfood E.2.4 (le gestionnaire WS dans scepter est prêt ; shittim-chest doit rendre le dialogue et POSTer la réponse) | PLAN frère |
 
----
+-----------------------------------------------------------------------------
 
 ## Explicitement Hors Périmètre (sprint de 2 semaines)
 
@@ -86,14 +86,14 @@ Validation opérationnelle, pas du code pur. Nécessite l'exécution de simulate
 - Couverture de tests frontend (shittim-chest reçoit un plan d'orientation seulement, pas d'écriture de tests)
 - Parité de fonctionnalités CLI avec TUI
 
----
+-----------------------------------------------------------------------------
 
 # Feuille de Route Technique — Approfondissement de l'Architecture
 
 > **Date** : 2026-06-26
 > **Contexte** : Après avoir nettoyé le dépôt de 700+ docs/fichiers obsolètes et consolidé tous les prompts dans `res/prompts/`, nous avons audité les documents de conception restants par rapport au code source réel pour identifier quels designs ambitieux valent la peine d'être implémentés.
 
----
+-----------------------------------------------------------------------------
 
 ## 1. Adressage par Sous-Badge + Exécution Parallèle de Compétences
 
@@ -123,7 +123,7 @@ La Phase 1 (fork + préparer + construire les prompts + liste blanche d'outils) 
 
 **Impact attendu** : Les écritures parallèles de fichiers, les analyses parallèles des compétences coordinateur comme `industrial_discover` réduiraient significativement la latence de bout en bout.
 
----
+-----------------------------------------------------------------------------
 
 ## 2. Pipeline de Sédimentation de Mémoire
 
@@ -150,7 +150,7 @@ La Phase 1 (fork + préparer + construire les prompts + liste blanche d'outils) 
 - Gradient de qualité : compteurs d'accès, dégradation temporelle, score de confiance.
 - Prototype à trois canaux (épisodique/procédural/atomique) avec stratégies de récupération différenciées.
 
----
+-----------------------------------------------------------------------------
 
 ## 3. Négociation Inter-Agents
 
@@ -171,7 +171,7 @@ La Phase 1 (fork + préparer + construire les prompts + liste blanche d'outils) 
 
 **Quand revisiter** : Si les agents ont besoin de négocier dynamiquement des décisions en cours de chaîne (pas seulement distribuer-et-attendre), les primitives sont construites à 40%. La lacune est la boucle d'intégration du pipeline.
 
----
+-----------------------------------------------------------------------------
 
 ## Résumé
 

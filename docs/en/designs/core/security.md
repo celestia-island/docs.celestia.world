@@ -25,7 +25,7 @@ Entelecheia implements a **defense-in-depth security architecture** spanning 14 
 | 13 | Rate Limiting | shittim-chest `channel/rate_limit` | DoS, resource exhaustion |
 | 14 | Audit Trail | `orexis`, `timeline` | Post-incident forensics, accountability |
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 1: Exec-Only Microkernel
 
@@ -46,7 +46,7 @@ All 148 MCP tools (file operations, container management, device control, web se
 
 **Implementation:** `packages/shared/mcp_types/src/` defines the microkernel IPC types. The `exec` handler in `packages/cosmos/` transpiles and executes the script via the Boa engine, with tool calls routed through `skemma`'s `McpRouter`.
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 2: Dual-Authorization Permission Gate
 
@@ -76,7 +76,7 @@ pub enum PermissionLevel {
 
 **Implementation:** `packages/shared/security_policy/src/` — 107 test annotations, 4 tokio tests.
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 3: Trust-Level Skill Authorization
 
@@ -93,7 +93,7 @@ Skills are classified into **trust levels** that determine their default permiss
 
 Each skill's trust level is verified at load time and cached. Attempts to escalate trust level are logged as security events.
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 4: Container Isolation (Outer Ring)
 
@@ -109,7 +109,7 @@ Every agent execution occurs inside a **Docker or Podman container** with:
 
 **Implementation:** `packages/shared/container/src/` — 74 test annotations, 12 tokio tests. Supports both Docker (via Bollard API) and Podman.
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 5: OCI Sandbox (Inner Ring)
 
@@ -124,7 +124,7 @@ Inside the Docker container, Entelecheia runs a **second isolation layer** using
 
 **Why two layers?** Docker provides coarse-grained isolation (network, filesystem). Youki provides fine-grained syscall filtering and resource accounting. If Docker is compromised, the Youki sandbox still contains the agent.
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 6: RBAC Access Control
 
@@ -137,7 +137,7 @@ Role-based access control governing all API operations:
 - **Workspace isolation:** Users can only access workspaces they're members of
 - **Cross-workspace operations:** Require explicit admin grants
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 7: JWT Authentication
 
@@ -149,7 +149,7 @@ Role-based access control governing all API operations:
 - **Nonce-based CSRF protection** for browser clients
 - **Rate limiting** on auth endpoints (GCRA algorithm)
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 8: API Key Encryption
 
@@ -162,7 +162,7 @@ All LLM provider API keys are encrypted at rest using **AES-256-GCM** with:
 - Zeroization of plaintext keys from memory after use
 - Key rotation support
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 9: Security Sentinel (OreXis)
 
@@ -177,7 +177,7 @@ OreXis is a Layer-1 Agent that:
 
 MCP tools (24): `standard_check`, `compliance_report`, `audit_alignment`, `audit_legality`, `agent_integrity`, `security_audit`, `tool_block`, `tool_unblock`, `policy_register`, `policy_list`, etc.
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 10: IEPL Type-Safe Pipeline
 
@@ -193,7 +193,7 @@ The **Entelecheia Plugin Language** (IEPL) pipeline ensures type safety between 
 
 **Threat mitigated:** Injection attacks via untyped tool calls (common in Python-based agent frameworks where tool schemas are validated only at runtime).
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 11: Provider Registry Whitelist
 
@@ -205,7 +205,7 @@ crates.io, PyPI, npm, Go modules, Docker Hub, Maven Central, NuGet, RubyGems, Ha
 
 Any package import from a non-whitelisted registry is **blocked at the container level** before execution.
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 12: Prompt Injection Defense
 
@@ -220,7 +220,7 @@ The LLM's `exec` output is executed in an **isolated Boa JS context** with no ac
 
 Tool outputs returned to the LLM are **sanitized** — binary data is base64-encoded, excessive output is truncated, and potential prompt injection patterns in tool results are flagged by OreXis.
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 13: Rate Limiting
 
@@ -233,7 +233,7 @@ Per-user, per-channel rate limiting using the **GCRA (Generic Cell Rate Algorith
 - Automatic backoff on limit exceeded
 - Separate limits for API calls, message sends, and tool invocations
 
----
+-----------------------------------------------------------------------------
 
 ## Layer 14: Audit Trail
 
@@ -246,7 +246,7 @@ Every tool invocation, agent decision, and security event is:
 1. Persisted to PostgreSQL with configurable retention
 1. Queryable via the CLI (`entelecheia-cli trace-chain <badge>`)
 
----
+-----------------------------------------------------------------------------
 
 ## Security Comparison with Other Frameworks
 
@@ -260,7 +260,7 @@ Every tool invocation, agent decision, and security event is:
 | Package whitelist | **15 registries** | None | None | None |
 | Audit trail | Hash-linked timeline | Merkle hash-chain | None | None |
 
----
+-----------------------------------------------------------------------------
 
 ## Threat Model
 
@@ -277,7 +277,7 @@ Every tool invocation, agent decision, and security event is:
 - LLM provider outages (no fallback execution path)
 - PostgreSQL data corruption (mitigated by backups, not prevented)
 
----
+-----------------------------------------------------------------------------
 
 ## Reporting Vulnerabilities
 

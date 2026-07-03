@@ -1,6 +1,6 @@
 # Building Guide
 
----
+-----------------------------------------------------------------------------
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@
 - [Troubleshooting](#troubleshooting)
 - [Running the webhook bot](#running-the-webhook-bot)
 
----
+-----------------------------------------------------------------------------
 
 ## Prerequisites
 
@@ -81,7 +81,7 @@ Please use the official rustup installation method for your platform:
 
 - **VS Code** with the rust-analyzer extension installed
 
----
+-----------------------------------------------------------------------------
 
 ## Installation
 
@@ -172,7 +172,7 @@ docker compose up -d
 just dev
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Configuration
 
@@ -211,7 +211,7 @@ CONTAINER_NETWORK=entelecheia-network
 CONTAINER_REGISTRY=127.0.0.1:5000
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Building
 
@@ -249,7 +249,7 @@ After building, you will find:
 - **Binaries**: in `target/debug/` or `target/release/`
 - **Docker images**: built automatically during `just dev`
 
----
+-----------------------------------------------------------------------------
 
 ## Running
 
@@ -339,7 +339,7 @@ just dev-down
 just dev-kill
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Database management
 
@@ -382,7 +382,7 @@ cargo test -p scepter test_create_migration -- --nocapture --ignored
 just db-migrate-down
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Development environment
 
@@ -433,7 +433,7 @@ just clippy
 just check
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Deployment
 
@@ -468,7 +468,7 @@ docker compose logs -f
 docker compose down
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Troubleshooting
 
@@ -523,7 +523,7 @@ docker compose up -d
 1. Search [GitHub Issues](https://github.com/celestia-island/entelecheia/issues)
 1. Join our [discussions](https://github.com/celestia-island/entelecheia/discussions)
 
----
+-----------------------------------------------------------------------------
 
 ## Running the webhook bot
 
@@ -570,13 +570,13 @@ cp plugins/github-webhook/.env.example plugins/github-webhook/.env
 
 For platform-specific configuration details, see the [Webhook configuration guide](webhook-setup.md).
 
----
+-----------------------------------------------------------------------------
 
 ## Next steps
 
 - Read the [Fundamentals guide](fundamentals.md) to understand the architecture
 - Browse the [agent documentation](../../agents/) to learn about available agents
 
----
+-----------------------------------------------------------------------------
 
 **Happy building!** 🚀

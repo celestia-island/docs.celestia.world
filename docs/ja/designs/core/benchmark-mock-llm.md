@@ -35,7 +35,7 @@ Entelecheia には**すでに**完全な env-var 駆動の provider ディスカ
 
 ## 2. アーキテクチャ
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                    Benchmark Runner                      │
 │  (遍历数据集实例，收集结果，输出 JSONL)                     │
@@ -83,12 +83,12 @@ Entelecheia には**すでに**完全な env-var 駆動の provider ディスカ
 Mock サーバーは OpenAI Chat Completions API（`/v1/chat/completions`）互換で、2 つの動作モードをサポートする：
 
 **録画モード（初回に実際のモデルを動かすとき）**：
-```
+```text
 Client → Mock Server → Real API → Mock Server (レスポンスを録画) → Client
 ```
 
 **再生モード（CI／オフライン時）**：
-```
+```text
 Client → Mock Server (リクエストを照合 → 録画済みレスポンスを返す) → Client
 ```
 
@@ -106,7 +106,7 @@ Client → Mock Server (リクエストを照合 → 録画済みレスポンス
 
 ### 3.3 フィクスチャの格納
 
-```
+```text
 tests/fixtures/llm/
 ├── swe-bench-verified/
 │   ├── gpt-4o/
@@ -132,7 +132,7 @@ tests/fixtures/llm/
 
 ### 4.1 タスク実行フロー
 
-```
+```text
 for instance in dataset:
     1. SWE-bench Docker イメージを取得（base + env + instance の 3 層）
     2. コンテナを起動し、コードリポジトリをマウント

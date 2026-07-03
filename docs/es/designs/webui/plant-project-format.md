@@ -31,7 +31,7 @@
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Sección 1: `metadata`
 
@@ -61,7 +61,7 @@ Descripción de campos:
 | updated_at | ISO8601 | N | Fecha de última modificación |
 | tags | string[] | N | Etiquetas |
 
----
+-----------------------------------------------------------------------------
 
 ## Sección 2: `nodes`
 
@@ -148,7 +148,7 @@ Estructura de Sensor:
 | unit | string | Unidad |
 | range | [min, max] | Rango |
 
----
+-----------------------------------------------------------------------------
 
 ## Sección 3: `topology`
 
@@ -255,7 +255,7 @@ Estructura de Connection (genérica):
 | id | string | ID de conexión |
 | from | string | ID de entidad origen (nodo / sensor / plc / utilidad) |
 | to | string | ID de entidad destino |
-| points | [x,y][] | Coordenadas de la ruta poligonal |
+| points | `[x,y]` | Coordenadas de la ruta poligonal |
 | protocol | string | Protocolo de cable de señal (Modbus / 4-20mA / Profibus / HART / OPC-UA) |
 | voltage | string | Voltaje del cable de potencia |
 | medium | string | Medio de la tubería de agua |
@@ -263,7 +263,7 @@ Estructura de Connection (genérica):
 | flow_rate | number | Caudal |
 | temperature | number | Temperatura |
 
----
+-----------------------------------------------------------------------------
 
 ## Sección 4: `scene`
 
@@ -372,7 +372,7 @@ Estructura de Model3D:
 | material | "auto" \| "holographic" \| "native" | Anulación de material |
 | is_background | boolean | Si es un elemento decorativo de fondo |
 
----
+-----------------------------------------------------------------------------
 
 ## Plan de Integración Triple
 
@@ -422,13 +422,13 @@ Futuro ampliable:
 - Persona edita diseño 3D arrastrando en webui → escribe de vuelta `.plant.json`
 - Pipeline CI/CD valida la integridad del schema de `.plant.json`
 
----
+-----------------------------------------------------------------------------
 
 ## Archivo de Ejemplo
 
 El ejemplo completo está en `scripts/mock/fixtures/hydrogen_corridor.plant.json` (por crear).
 
----
+-----------------------------------------------------------------------------
 
 ## Relación con Datos Existentes
 

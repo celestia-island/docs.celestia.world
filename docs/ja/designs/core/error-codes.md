@@ -92,7 +92,7 @@
 | `RT_ARC_UNWRAP_DOMAIN` | `Arc::try_unwrap failed for llm_domain/agent_domain` | `scepter/src/state_machine/mod.rs` |
 | `RT_UNDO_NO_ACTIVE_SKILL` | `active_streaming_skill is None, defaulting to HubRis` | `scepter/src/state_machine/mod.rs` |
 
----
+-----------------------------------------------------------------------------
 
 > **注意**: これはベストエフォートのカタログです。Entelecheiaは一意のコードを持つ
 > 構造化エラータイプへの移行中です。このリファレンスの拡張への貢献を歓迎します。

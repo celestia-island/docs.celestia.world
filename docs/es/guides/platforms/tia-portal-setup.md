@@ -16,7 +16,7 @@ su PLC:
 Si puede activar OPC UA, preferirlo: evernight **recorre** automáticamente todo
 el espacio de direcciones simbólico, sin entrada manual de símbolos.
 
----
+-----------------------------------------------------------------------------
 
 ## Ruta A — S7comm (acceso a registros crudos)
 
@@ -45,7 +45,7 @@ que evernight deba leer/escribir:
 
 ### A.3 Conectar desde evernight
 
-```
+```text
 s7://192.168.1.10:102?rack=0&slot=1
 ```
 
@@ -61,7 +61,7 @@ let profile = auto_provision("192.168.1.10").await?;
 // profile.data_blocks / profile.db_structures ahora describen cada DB legible
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Ruta B — OPC UA (recomendado)
 
@@ -125,14 +125,14 @@ de programa — su código ladder/SCL queda intacto.
 
 URL del endpoint:
 
-```
+```text
 opc.tcp://192.168.1.10:4840
 ```
 
 evernight se conecta como cliente OPC UA, **recorre** todo el árbol simbólico y
 lee/escribe por nombre — sin entrada manual de símbolos, DB optimizados incluidos.
 
----
+-----------------------------------------------------------------------------
 
 ## Verificar la conectividad (sondeos sin riesgo)
 
@@ -149,7 +149,7 @@ evernight probe 192.168.1.10 --ports 4840
 
 Ambos son handshakes pasivos — no leen ni escriben nada.
 
----
+-----------------------------------------------------------------------------
 
 ## Límites de seguridad
 
@@ -163,7 +163,7 @@ Ambos son handshakes pasivos — no leen ni escriben nada.
   existente (usted secuestra la fuente de disparo) en vez de escribir salidas Q
   directamente.
 
----
+-----------------------------------------------------------------------------
 
 ## Resolución de problemas
 
@@ -175,7 +175,7 @@ Ambos son handshakes pasivos — no leen ni escriben nada.
 | OPC UA conecta y luego rechaza | Certificado de cliente no confiable | B.5 |
 | Recorrido devuelve vacío | Interfaz SIMATIC estándar no habilitada | B.3 |
 
----
+-----------------------------------------------------------------------------
 
 ## Referencias
 

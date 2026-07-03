@@ -143,32 +143,35 @@ Ce document décrit le flux complet permettant aux utilisateurs de configurer le
 
 ## Architecture du Flux de Configuration
 
+```text
 ### Flux Global
 
 ```mermaid
 flowchart TB
-    subgraph Couche Interface Utilisateur
-        A[Page Modèles] --> B[Sélectionner le Fournisseur]
-        B --> C[Assistant de Configuration]
-    end
+subgraph Couche Interface Utilisateur
+    A[Page Modèles] --> B[Sélectionner le Fournisseur]
+    B --> C[Assistant de Configuration]
+end
 
-    subgraph Couche Transport
-        C --> D[Message WebSocket]
-        D --> E[Traitement de la Machine d'État]
-    end
+subgraph Couche Transport
+    C --> D[Message WebSocket]
+    D --> E[Traitement de la Machine d'État]
+end
 
-    subgraph Couche Service
-        E --> F[Validation de Configuration]
-        F --> G[Stockage en Base de Données]
-        G --> H[Notification de Diffusion]
-    end
+subgraph Couche Service
+    E --> F[Validation de Configuration]
+    F --> G[Stockage en Base de Données]
+    G --> H[Notification de Diffusion]
+end
 
-    subgraph Couche Utilisation
-        H --> I[Demande de Conversation]
-        I --> J[Charger la Configuration]
-        J --> K[Appel LLM]
-    end
+subgraph Couche Utilisation
+    H --> I[Demande de Conversation]
+    I --> J[Charger la Configuration]
+    J --> K[Appel LLM]
+end
 ```
+
+```text
 
 ## Flux de Configuration du Fournisseur
 
@@ -1014,7 +1017,7 @@ flowchart TB
 
 ### Configuration
 
-# provider_config.toml
+\# provider_config.toml
 [[models]]
 id = "gpt-5.4"
 tier = "normal"
@@ -1041,6 +1044,7 @@ Avec cette configuration :
 
 ## Flux : Message Utilisateur → Réponse LLM
 
+```text
     1. L'utilisateur envoie un message via TUI/CLI/socket
     1. `handle_user_message`() :
 
@@ -1070,11 +1074,13 @@ c. TierPermit libéré → créneau de sémaphore libéré
 a. Permis du Sémaphore de Requêtes retourné
 b. Le conteneur Cosmos peut être nettoyé (ou réutilisé)
 
+```
+
 ## Tests E2E
 
 Les tests utilisent un délai d'inactivité (pas une échéance absolue). Le minuteur se réinitialise à chaque événement significatif :
 
-# L'activité réinitialise le minuteur d'inactivité — la chaîne peut s'exécuter indéfiniment tant qu'elle reste active
+\# L'activité réinitialise le minuteur d'inactivité — la chaîne peut s'exécuter indéfiniment tant qu'elle reste active
 ACTIVE_METHODS = {
 "Tui.`OrchestrationStatus`",
 "Tui.`McpToolResult`",
@@ -1125,6 +1131,7 @@ flowchart TB
 
 ## Ordre de Résolution de la BD à l'Exécution
 
+```rust
 // packages/scepter/src/app/setup.rs
 let `db_url` = if let Ok(url) = std::env::var("DATABASE_URL") {
 // 1. Variable d'environnement (production : Docker PG, dev : fichier .env)
@@ -1148,6 +1155,7 @@ url
 return Err(/* "aucun DATABASE_URL configuré" */);
 }
 };
+```
 
 ## Modèle de Harnais de Test
 
@@ -1185,18 +1193,19 @@ Les 23 tables + 1 table à schéma spécifique + 4 vues sont créées via les mi
 
 ## Contraintes PGlite
 
+```text
 | Contrainte | Impact | Atténuation |
 | --- | --- | --- |
 | `max_connections=1` | Un seul pool à la fois | Connexion DB partagée entre les sous-tests ; pas de `db.close()` entre les tests |
 | Conversion de type stricte | `uuid = text` échoue | Toujours passer des valeurs typées (par exemple, `Uuid` pas `String` pour les colonnes UUID) |
 | Pas d'accès concurrent | Les tests doivent être séquentiels | Un seul exécuteur `#[test]` avec tous les sous-tests en ligne |
 | Tâches d'arrière-plan du pool sqlx | `close()` se bloque indéfiniment | `std::process::exit(0)` après que tous les tests sont terminés |
-
+```
 ## Durcissement de la Construction Docker
 
 Tous les Dockerfiles de production excluent embedded-db :
 
-# Dockerfile
+\# Dockerfile
 RUN cargo build --release -p scepter \
 --no-default-features --features all-agents
 

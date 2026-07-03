@@ -1,6 +1,6 @@
 # Shittim Chest (什亭之匣)
 
-**Version 0.1.0**
+## Version 0.1.0
 
 Shittim Chest est la coque utilisateur pour la plateforme de collaboration multi-agent [entelecheia](https://github.com/celestia-island/entelecheia), construite avec Rust et Vue 3.
 
@@ -35,6 +35,6 @@ Pour un **usage non commercial** — y compris les opérations internes, la rech
 
 Voir le [texte complet de la licence](https://github.com/celestia-island/shittim-chest/blob/main/LICENSE) pour plus de détails.
 
----
+-----------------------------------------------------------------------------
 
 Construit avec ❤ par [Celestia Island](https://github.com/celestia-island).

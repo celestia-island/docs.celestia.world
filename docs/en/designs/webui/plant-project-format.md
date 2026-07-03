@@ -31,7 +31,7 @@
 }
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Section 1: `metadata`
 
@@ -61,7 +61,7 @@ Field descriptions:
 | updated_at | ISO8601 | N | Last modified time |
 | tags | string[] | N | Tags |
 
----
+-----------------------------------------------------------------------------
 
 ## Section 2: `nodes`
 
@@ -148,7 +148,7 @@ Sensor structure:
 | unit | string | Unit |
 | range | [min, max] | Measurement range |
 
----
+-----------------------------------------------------------------------------
 
 ## Section 3: `topology`
 
@@ -255,7 +255,7 @@ Connection structure (common):
 | id | string | Connection ID |
 | from | string | Source entity ID (node / sensor / plc / utility) |
 | to | string | Destination entity ID |
-| points | [x,y][] | Polyline path coordinates |
+| points | `[x,y]` | Polyline path coordinates |
 | protocol | string | Signal wire protocol (Modbus / 4-20mA / Profibus / HART / OPC-UA) |
 | voltage | string | Power cable voltage |
 | medium | string | Water pipe medium |
@@ -263,7 +263,7 @@ Connection structure (common):
 | flow_rate | number | Flow rate |
 | temperature | number | Temperature |
 
----
+-----------------------------------------------------------------------------
 
 ## Section 4: `scene`
 
@@ -372,7 +372,7 @@ Model3D structure:
 | material | "auto" \| "holographic" \| "native" | Material override |
 | is_background | boolean | Whether this is a background decoration |
 
----
+-----------------------------------------------------------------------------
 
 ## Three-Party Integration
 
@@ -422,13 +422,13 @@ Future extensions:
 - Users drag-and-drop 3D layout in webui → write back `.plant.json`
 - CI/CD pipeline validates `.plant.json` schema integrity
 
----
+-----------------------------------------------------------------------------
 
 ## Example File
 
 See `scripts/mock/fixtures/hydrogen_corridor.plant.json` for a complete example (to be created).
 
----
+-----------------------------------------------------------------------------
 
 ## Relationship to Existing Data
 

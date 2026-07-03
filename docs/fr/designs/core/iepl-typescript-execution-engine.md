@@ -601,7 +601,7 @@ declarations.join("\n\n")
 
 ### Actuel (JavaScript)
 
-```
+```mermaid
 
 flowchart TD
 Meta["Métadonnées de Compétence\`nrelated_tools`:\n- kalos.file_read\n- kalos.file_write"]
@@ -613,7 +613,7 @@ LLM1 --> Boa1["Exécution directe Boa eval()\n(aucune pré-validation)"]
 
 ### Cible (TypeScript + IEPL)
 
-```
+```mermaid
 
 flowchart TD
 Meta2["Métadonnées de Compétence\`nrelated_tools`:\n- kalos.file_read\n- kalos.file_write"]
@@ -715,6 +715,7 @@ bindings/                    # Artefacts générés, suivis dans git
 └── iepl-api.d.ts            # Artefact fusionné (optionnel)
 
 ```text
+```
 
 ## Chemin d'Implémentation
 

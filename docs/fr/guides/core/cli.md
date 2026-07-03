@@ -4,7 +4,7 @@
 
 > Remarque : le CLI n'a pas encore atteint la parité fonctionnelle complète avec le TUI. Pour l'état actuel, consultez [ARCHITECTURE.md](../../ARCHITECTURE.md).
 
----
+-----------------------------------------------------------------------------
 
 ## Table des matières
 
@@ -23,7 +23,7 @@
 - [Images Docker](#images-docker)
 - [Utilisation avancée](#utilisation-avancée)
 
----
+-----------------------------------------------------------------------------
 
 ## Installation
 
@@ -47,7 +47,7 @@ Le binaire se trouve dans `target/debug/entelecheia-cli` (debug) ou `target/rele
 
 Les binaires pré-construits sont disponibles sur [GitHub Releases](https://github.com/celestia-island/entelecheia/releases). Téléchargez l'archive correspondant à votre plateforme et placez le binaire dans votre `PATH`.
 
----
+-----------------------------------------------------------------------------
 
 ## Utilisation de base
 
@@ -65,7 +65,7 @@ echo "Résumez ce fichier" | entelecheia-cli send
 entelecheia-cli status
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Options globales
 
@@ -101,7 +101,7 @@ entelecheia-cli -l debug send "Déboguer le problème de connexion"
 entelecheia-cli -d run my-agent --ci
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Commandes de chat
 
@@ -170,7 +170,7 @@ entelecheia-cli chat recent [OPTIONS]
 | `--agent <TYPE>` | Filtrer par type d'agent | — |
 | `--limit <N>` | Nombre maximum de messages retournés | `20` |
 
----
+-----------------------------------------------------------------------------
 
 ## Gestion des agents
 
@@ -200,7 +200,7 @@ entelecheia-cli agent restart <AGENT_TYPE>
 
 > Remarque : les agents s'exécutent en tant que crates de bibliothèque au sein du runtime scepter, et non en tant qu'exécutables indépendants. La commande `agent start` tente de générer un binaire correspondant au nom de l'agent, ce qui s'applique principalement lorsque les agents sont compilés en tant que binaires séparés. En pratique, les agents sont activés via le serveur scepter.
 
----
+-----------------------------------------------------------------------------
 
 ## Cycle de vie des services
 
@@ -264,7 +264,7 @@ Démarre ou crée uniquement le conteneur WebUI.
 | `--prefix <STR>` | Préfixe des noms de conteneurs | `e-` |
 | `--webui-port <PORT>` | Port de la WebUI | `3424` |
 
----
+-----------------------------------------------------------------------------
 
 ## Configuration
 
@@ -316,7 +316,7 @@ Validating WebSocket configuration...
 [ OK ]  Configuration validation passed
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Contexte de connexion
 
@@ -406,7 +406,7 @@ entelecheia-cli status
 entelecheia-cli context use default
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## État et surveillance
 
@@ -491,7 +491,7 @@ entelecheia-cli logs -a ApoRia
 
 Les journaux sont lus depuis le répertoire `./logs/`. Chaque agent a son propre fichier journal (`ApoRia.log`, `EleOs.log`, etc.).
 
----
+-----------------------------------------------------------------------------
 
 ## Abonnements (Layer3)
 
@@ -551,7 +551,7 @@ entelecheia-cli subscribe auto-update
 
 Met à jour tous les abonnements avec `auto_update` activé.
 
----
+-----------------------------------------------------------------------------
 
 ## Exécuter des agents
 
@@ -603,7 +603,7 @@ entelecheia-cli status
 entelecheia-cli status history[-5]
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Chronologie
 
@@ -631,7 +631,7 @@ entelecheia-cli timeline show <CONVERSATION_ID> [OPTIONS]
 | --- | --- | --- |
 | `--include-messages` | Inclure les messages dans la sortie | `true` |
 
----
+-----------------------------------------------------------------------------
 
 ## Images Docker
 
@@ -661,7 +661,7 @@ Images gérées :
 - `entelecheia` — Serveur d'orchestration (avec runtime cosmos intégré)
 - `pgvector/pgvector` — PostgreSQL avec extension vectorielle
 
----
+-----------------------------------------------------------------------------
 
 ## Utilisation avancée
 
@@ -695,7 +695,7 @@ Le CLI et le TUI se connectent au même serveur scepter. Les deux peuvent être 
 - Démarrer le TUI pour une session interactive : `cargo run --bin entelecheia-tui`
 - Utiliser le CLI pour les scripts, l'automatisation et les requêtes rapides
 
----
+-----------------------------------------------------------------------------
 
 ## Dépannage
 

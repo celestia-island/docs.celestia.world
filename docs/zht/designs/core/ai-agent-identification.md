@@ -29,7 +29,7 @@
 部分編碼**誰提供了模型**：
 
 ```text
-Display Name <provider-or-platform-id@celestia.world>
+Display Name <provider-<or-platform-id@celestia.world>>
 ```
 
 提供者 ID 是每個提供者配置中宣告的**強制 `website_domain`** 欄位
@@ -50,10 +50,10 @@ Display Name <provider-or-platform-id@celestia.world>
 這意味著透過不同路由存取的*相同*模型是可區分的：
 
 ```text
-GLM 5 <zhipuai.cn@celestia.world>              # 直接來自智譜 AI
-GLM 5 <jdcloud.com@celestia.world>           # GLM 5 透過京東雲服務
-Deepseek V4 Pro <deepseek.com@celestia.world> # 直接來自 DeepSeek
-Deepseek V4 Pro <opencode.ai@celestia.world>  # DeepSeek 透過 opencode 服務
+GLM 5 <zhipuai.<cn@celestia.world>>              # 直接來自智譜 AI
+GLM 5 <jdcloud.<com@celestia.world>>           # GLM 5 透過京東雲服務
+Deepseek V4 Pro <deepseek.<com@celestia.world>> # 直接來自 DeepSeek
+Deepseek V4 Pro <opencode.<ai@celestia.world>>  # DeepSeek 透過 opencode 服務
 ```
 
 ## 共同作者尾塊規範
@@ -85,8 +85,8 @@ YOLO 模式從以下任一來源偵測：
 嵌入在 `Co-authored-by` 尾塊中每個模型的顯示名稱內（GitHub 能正確解析的一個尾塊）：
 
 ```text
-Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.com@celestia.world>
-Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.com@celestia.world>
+Co-authored-by: Claude Opus 4.8 (↑ 12.5k ↓ 8.3k ●45.2k) <anthropic.<com@celestia.world>>
+Co-authored-by: Deepseek V4 Pro (↑ 5.1k ↓ 3.2k) <deepseek.<com@celestia.world>>
 ```
 
 規則：
@@ -104,7 +104,7 @@ The previous 180s timeout was too tight for clean builds on a loaded
 machine; raise it to 300s to avoid spurious validation failures.
 
 Co-authored-by: Entelecheia <demiurge@celestia.world>
-Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.cn@celestia.world>
+Co-authored-by: GLM 5 (↑ 36.4k ↓ 1.5k) <zhipuai.<cn@celestia.world>>
 ```
 
 ## noa Hook 安裝
@@ -179,7 +179,7 @@ flowchart LR
 evernight SSH → 主機 B → `git commit`），主機端的 `commit-msg` hook 仍會
 在本機觸發並標記提交。`evernight` 本身可能在作者電子郵件中作為**傳輸
 提供者**出現（例如
-`GLM 5 <evernight.celestia.world@celestia.world>`），使傳輸跳點可稽核。
+`GLM 5 <evernight.<celestia.world@celestia.world>>`），使傳輸跳點可稽核。
 
 ## 安全考量
 

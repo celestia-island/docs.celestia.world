@@ -46,7 +46,7 @@ flowchart TB
 | **Prompt Injection** | Snapshot data drives context-rich system prompts — the LLM sees available variable names, reference summaries, and environment settings |
 | **Tool Access Control** | All 3 cosmos internal tools (`exec`, `write_to_var`, `write_to_var_json`) are granted to every agent via `agent_allowed_tools()`; individual skill SOPs define which to use |
 
----
+-----------------------------------------------------------------------------
 
 ## Namespace Comparison
 
@@ -80,7 +80,7 @@ flowchart LR
     end
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 1. `__vars` — Variable Store (`vars`)
 
@@ -176,7 +176,7 @@ const report = vars['analysis_results'];
 
 **Implementation:** `packages/agents/skemma/src/js_runtime/module_loader.rs` lines 142-156. The module uses `Module::synthetic()` with a closure that returns `globalThis.__vars` directly (live reference, not a snapshot). This means modifications via `vars['key'] = value` are equivalent to `vars['key'] = value`.
 
----
+-----------------------------------------------------------------------------
 
 ## 2. `__refs` — Resource References (`refs`)
 
@@ -312,7 +312,7 @@ The `refs_section` in the system prompt exposes the **table of contents** (name,
 - The LLM decides when to dereference content based on task relevance
 - No agent can accidentally leak reference content into the conversation stream
 
----
+-----------------------------------------------------------------------------
 
 ## 3. `__env` — Environment Configuration (`env`)
 
@@ -397,7 +397,7 @@ This allows code written as `$.variant.tools.agent.method()` to resolve to the s
 
 > **Snapshot caution:** Because `$.variant` is a circular reference (`$.variant === $`), attempting to `JSON.stringify` it throws a `TypeError`. The snapshot JS code explicitly targets `__vars` and `__refs` directly rather than iterating `globalThis.$` keys, avoiding this problem.
 
----
+-----------------------------------------------------------------------------
 
 ## 4. Snapshot & Restore Architecture
 
@@ -521,7 +521,7 @@ The snapshot function directly accesses known namespace trees:
 })()
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## 5. Tool Registration & Access Control
 
@@ -688,7 +688,7 @@ The namespace JS is evaluated:
 - **Once** at `LocalCosmosRuntime::new()` startup
 - **On demand** during skill chain rebuilding via `CosmosCommand::RebuildNamespace`
 
----
+-----------------------------------------------------------------------------
 
 ## 6. System Prompt Assembly Order
 
@@ -747,7 +747,7 @@ You are the {Agent} {skill_name} skill execution engine. Execute the skill faith
 | Output routing | Before runtime context | LLM knows where to send results before reading context |
 | Runtime context | Before RAG, before chain note | Vars and refs provide execution context for knowledge retrieval |
 
----
+-----------------------------------------------------------------------------
 
 ## 7. ResetVars Behavior
 
@@ -766,7 +766,7 @@ This means:
 - **Skill isolation is opt-in** — skills should only read variables they know about (by name in the runtime context prompt)
 - **No forced cleanup** — it is the LLM's responsibility to manage variable namespace pollution
 
----
+-----------------------------------------------------------------------------
 
 ## 8. Implementation File Map
 
@@ -806,7 +806,7 @@ This means:
 | Unit tests | `packages/agents/skemma/src/js_runtime/runtime.rs` | 679-746 | `write_to_ref`, snapshot, restore tests |
 | Ref namespace tests | `packages/shared/core/src/ref_namespace.rs` | 99-145 | JS code generation pattern tests |
 
----
+-----------------------------------------------------------------------------
 
 ## 9. Cross-Cutting Concerns
 
@@ -836,7 +836,7 @@ This means:
 | `ref_add` with invalid JSON | Returns `SkemmaError::JsEval` with preview |
 | Snapshot of circular reference (`$.variant`) | Catches `TypeError` silently, skips the key |
 | Missing `__refs` in snapshot | `build_refs_section` returns empty string |
-| Corrupted `__refs` after ResetVars | `|| {}` guarantees re-initialization |
+| Corrupted `__refs` after ResetVars | `\|\| {}` guarantees re-initialization |
 
 ### 9.4 RebuildNamespace Lifecycle
 

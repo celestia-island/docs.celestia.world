@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Shittim Chest" width="200"/>
 
-
 **Shell voltada ao usuário para a plataforma multiagente entelecheia**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](https://github.com/celestia-island/shittim-chest/blob/main/LICENSE)

@@ -1,7 +1,6 @@
 # Accord de licence contributeur (CLA)
 > Il s'agit d'une traduction de référence fournie par la communauté pour plus de commodité. Le seul texte juridiquement contraignant est la version anglaise du fichier `CLA.md` à la racine du dépôt. En cas de conflit, la version anglaise prévaut.
 
-
 Le présent Accord de licence contributeur (« CLA ») s'applique à toute contribution acceptée et intégrée au projet **Arona** (« le Projet »), y compris tous les dépôts relevant de l'organisation Celestia Island qui adoptent la présente CLA. Le Projet est concédé sous la Business Source License 1.1 avec une date de changement fixée au 2030-01-01, à l'issue de laquelle il passe au choix du destinataire entre Apache-2.0 ou MIT (voir `LICENSE`).
 
 **Vous devez accepter la présente CLA avant que votre contribution puisse être fusionnée.** L'acceptation de la CLA est une action unique par contributeur (et par employeur, si vous contribuez au nom d'une entreprise).
@@ -16,7 +15,7 @@ Le présent Accord de licence contributeur (« CLA ») s'applique à toute contr
   Signed-off-by: Jane Doe <jane@example.com>
   ```
 
-- **Contributeurs d'entreprise.** Si vous contribuez au nom d'un employeur, celui-ci doit également signer la CLA d'entreprise de la section 6 et la renvoyer au Concédant à l'adresse contact@celestia.world (ou au contact indiqué dans `LICENSE`). Un `Signed-off-by` émanant d'un salarié n'est valable qu'une fois la CLA d'entreprise de l'employeur déposée.
+- **Contributeurs d'entreprise.** Si vous contribuez au nom d'un employeur, celui-ci doit également signer la CLA d'entreprise de la section 6 et la renvoyer au Concédant à l'adresse <contact@celestia.world> (ou au contact indiqué dans `LICENSE`). Un `Signed-off-by` émanant d'un salarié n'est valable qu'une fois la CLA d'entreprise de l'employeur déposée.
 
 ## 2. Définitions
 
@@ -46,7 +45,7 @@ Vous déclarez que :
 
 ## 6. CLA d'entreprise
 
-Si Vous contribuez au nom d'une entreprise, celle-ci doit confirmer les éléments suivants en signant et en renvoyant le bloc de CLA d'entreprise ci-dessous à contact@celestia.world :
+Si Vous contribuez au nom d'une entreprise, celle-ci doit confirmer les éléments suivants en signant et en renvoyant le bloc de CLA d'entreprise ci-dessous à <contact@celestia.world> :
 
 ```text
 Company: ______________________________________________________

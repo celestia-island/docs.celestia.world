@@ -299,6 +299,7 @@ Each locale has **17 namespace JSON files** (admin, auth, chat, cmd, common, dev
 > | Well translated | `ja`, `ko`, `zhs`, `zht` | ~5% | `zhs` missing 18 keys; others missing 112 |
 > | Mostly translated | `de`, `fr`, `pt`, `es`, `ar` | ~9–14% | Missing shared 112-key block |
 > | Effectively untranslated | `ru` | **~76%** | Full key parity, but values are verbatim English |
+>
 > The shared 112-key gap covers newer features: `admin.agents.*`, `admin.deviceModels.*`, `admin.projects.*`, `admin.rbac.*`, `admin.resourceQuota.*`, `auth.protocol.*`, `chat.cruise.*`, `chat.voice_*`.
 
 ## RBAC Architecture

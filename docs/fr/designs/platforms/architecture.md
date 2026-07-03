@@ -38,7 +38,7 @@ Les E/S industrielles sont courtées via deux traits :
 - `ProtocolBackend` — connect / read / write / ping
 - `ProtocolProbe` — détecte automatiquement le protocole d'un endpoint inconnu
 
-```
+```text
 ProtocolRegistry::auto_detect(transport)  →  ProtocolProbeResult
 ```
 
@@ -64,7 +64,7 @@ pour la préparation unique du PLC.
 
 Les connexions sont typées par URI et gérées par catalogue :
 
-```
+```text
 ssh://user@host:22          s7://10.0.0.5?rack=0&slot=1
 vnc://host:5900             opcua://10.0.0.5:4840
 serial:///dev/ttyUSB0?baud=9600

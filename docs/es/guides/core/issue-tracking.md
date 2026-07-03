@@ -3,7 +3,7 @@
 > Conectar sistemas externos de seguimiento de Issues a los flujos de trabajo de Agent de Entelecheia (玄枢)
 > Nota de estado actual: HubRis actualmente proporciona capacidades de creación, actualización, búsqueda y comentarios de issues, y también existen integraciones de webhook en el repositorio. Pero este documento no debe interpretarse como que "ya existe una superficie de producto de issues unificada y completa multiplataforma".
 
----
+-----------------------------------------------------------------------------
 
 ## Tabla de contenidos
 
@@ -16,7 +16,7 @@
 - [Nomenclatura de ramas Fork del contenedor](#nomenclatura-de-ramas-fork-del-contenedor)
 - [Integración WebUI](#integración-webui)
 
----
+-----------------------------------------------------------------------------
 
 ## Descripción general
 
@@ -27,7 +27,7 @@ Actualmente, las capacidades relacionadas con issues de Entelecheia provienen pr
 
 La automatización de issues multiplataforma puede considerarse una dirección existente con implementación parcial, pero no se debe asumir por defecto que cada flujo de trabajo en este documento ya está completamente cerrado.
 
----
+-----------------------------------------------------------------------------
 
 ## Identificación de tres capas del contenedor
 
@@ -41,7 +41,7 @@ Los contenedores en Entelecheia utilizan un sistema de ID de tres capas para man
 
 El **ID vinculante** enlaza un contenedor a un recurso de plataforma externa. Permanece estable tras reinicios de Scepter, a diferencia del ID de tiempo de ejecución que se reasigna en cada inicio.
 
----
+-----------------------------------------------------------------------------
 
 ## Formato de ID vinculante
 
@@ -51,7 +51,7 @@ El formato general del ID vinculante es:
 @platform#id[@#floor]
 ```
 
-- `platform` — Prefijo de plataforma (ej. `github`、`gitee`、`gitlab`)
+- `platform` — Prefijo de plataforma (ej. `github`, `gitee`, `gitlab`)
 - `id` — Número de Issue o recurso en la plataforma
 - `@#floor` — Número de piso opcional, para referencias anidadas (ej. comentarios)
 
@@ -72,7 +72,7 @@ Los IDs vinculantes se utilizan para:
 - Parámetros de skills de Agent
 - Filtrado de lista de Issues en WebUI
 
----
+-----------------------------------------------------------------------------
 
 ## Cómo interactúan los Agents con los Issues
 
@@ -115,7 +115,7 @@ $.agent.HubRis.issue_comment({
 });
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Flujos de trabajo impulsados por Issues
 
@@ -125,7 +125,7 @@ El flujo de trabajo predeterminado impulsado por Issues sigue el siguiente pipel
 flowchart TB
     A["Webhook recibe evento (ej. creación de GitHub Issue)"] --> B["Skill issue_triage"]
     B -- "Analiza contenido del Issue, asigna prioridad y etiquetas" --> C["Planificación de tareas (HubRis)"]
-    C -- "Descompone en subtareas, genera plan de trabajo" --> D["Ejecución (KaLos、SkeMma, etc.)"]
+    C -- "Descompone en subtareas, genera plan de trabajo" --> D["Ejecución (KaLos, SkeMma, etc.)"]
     D -- "Ejecuta subtareas en entorno contenedorizado" --> E["Actualiza Issue con resultados"]
     E -- "Retroalimenta hallazgos, cambios de código y estado al Issue" --> F["Completado"]
 ```
@@ -139,7 +139,7 @@ flowchart TB
 1. KaLos lee los archivos fuente relevantes, SkeMma ejecuta scripts de diagnóstico
 1. El Agent envía la corrección y comenta la solución en `@github#42`
 
----
+-----------------------------------------------------------------------------
 
 ## Registro de prefijos de plataforma
 
@@ -163,7 +163,7 @@ Los prefijos de plataforma admiten nombres internacionalizados. Por ejemplo, Fei
 
 El registro de prefijos los normaliza internamente a prefijos canónicos.
 
----
+-----------------------------------------------------------------------------
 
 ## Nomenclatura de ramas Fork del contenedor
 
@@ -191,7 +191,7 @@ cosmos-<uuid8>-<reason>
 
 El formato de ID vinculante asegura que las ramas se puedan rastrear hasta su Issue original.
 
----
+-----------------------------------------------------------------------------
 
 ## Integración WebUI
 
@@ -207,9 +207,9 @@ La WebUI de Entelecheia proporciona una vista unificada de Issues en todas las p
 
 Los Issues se pueden filtrar por:
 
-- **Plataforma**: mostrar solo GitHub、Gitee、GitLab, etc.
-- **Estado**: abierto、cerrado、en progreso
-- **Prioridad**: alta、media、baja (derivada de etiquetas)
+- **Plataforma**: mostrar solo GitHub, Gitee, GitLab, etc.
+- **Estado**: abierto, cerrado, en progreso
+- **Prioridad**: alta, media, baja (derivada de etiquetas)
 - **Agent asignado**: filtrar por el Agent que está procesando actualmente el Issue
 
 ### Vista de detalles de Issue
@@ -221,7 +221,7 @@ La vista de detalles muestra:
 - Registro de actividad del Agent (invocaciones de skills, comentarios publicados)
 - Contenedores y ramas asociados
 
----
+-----------------------------------------------------------------------------
 
 ## Siguientes pasos
 

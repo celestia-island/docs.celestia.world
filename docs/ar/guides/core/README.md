@@ -4,7 +4,6 @@
 
 <img src="../../logo.webp" alt="Entelecheia logo" width="200"/>
 
-
 **منصة تعاون متعددة الوكلاء مبنية بلغة Rust**
 
 [![License](https://img.shields.io/badge/license-BSL--1.1-blue.svg)](../../meta/license.md)

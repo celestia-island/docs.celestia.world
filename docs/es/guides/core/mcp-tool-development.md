@@ -2,7 +2,7 @@
 
 > Cómo crear y registrar herramientas MCP en la plataforma Entelecheia (玄枢)
 
----
+-----------------------------------------------------------------------------
 
 ## Tabla de contenidos
 
@@ -12,11 +12,11 @@
 - [Mejores prácticas](#mejores-prácticas)
 - [Probar herramientas MCP](#probar-herramientas-mcp)
 
----
+-----------------------------------------------------------------------------
 
 ## Micronúcleo Exec-Only
 
-Entelecheia utiliza una **arquitectura de micronúcleo** para el acceso a herramientas. El LLM solo puede ver tres herramientas — `exec`、`write_to_var`、`write_to_var_json` — y todo el trabajo real se realiza dentro de su tiempo de ejecución TypeScript (motor IEPL).
+Entelecheia utiliza una **arquitectura de micronúcleo** para el acceso a herramientas. El LLM solo puede ver tres herramientas — `exec`, `write_to_var`, `write_to_var_json` — y todo el trabajo real se realiza dentro de su tiempo de ejecución TypeScript (motor IEPL).
 
 ```mermaid
 flowchart TB
@@ -28,12 +28,12 @@ flowchart TB
 
 **Principio fundamental**: El LLM nunca invoca directamente las herramientas MCP. Genera código TypeScript que, mediante importación de módulos ES, invoca la API de funciones de herramienta (por ejemplo, `import { report } from 'hubris'; report()`), y el motor IEPL lo transpila a JavaScript y lo despacha a la implementación real en Rust.
 
-- Importación de módulos ES — patrón general (por ejemplo, `import { report } from 'hubris'; report()`、`file_read()`)
-- `exec`、`write_to_var`、`write_to_var_json` son las únicas tres herramientas registradas para todos los Agents (ver `packages/shared/domain_skills/src/tool_names.rs:265-283`)
+- Importación de módulos ES — patrón general (por ejemplo, `import { report } from 'hubris'; report()`, `file_read()`)
+- `exec`, `write_to_var`, `write_to_var_json` son las únicas tres herramientas registradas para todos los Agents (ver `packages/shared/domain_skills/src/tool_names.rs:265-283`)
 
 La declaración `related_tools` en el frontmatter TOML de la skill determina qué APIs de importación de módulos ES se documentan en los prompts enviados al LLM.
 
----
+-----------------------------------------------------------------------------
 
 ## Estructura de herramientas MCP
 
@@ -127,7 +127,7 @@ McpToolResult::failure_lines(vec!["Error 1".into(), "Error 2".into()])
 
 Referencia: `packages/shared/domain_skills/src/mcp_tools.rs:62-136`.
 
----
+-----------------------------------------------------------------------------
 
 ## Añadir una nueva herramienta MCP
 
@@ -302,7 +302,7 @@ sequenceDiagram
     Cosmos-->>LLM: 10. Resultado final devuelto al LLM
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Mejores prácticas
 
@@ -329,7 +329,7 @@ exec({ code: `
 Las skills que producen texto orientado al usuario deben verificar el idioma de salida configurado:
 
 ```typescript
-const lang: string = env.aporia.language;  // ej. "en"、"zhs"、"ja"
+const lang: string = env.aporia.language;  // ej. "en","zhs","ja"
 const greeting: string = lang === "en" ? "Hello" : lang === "zhs" ? "你好" : "Hello";
 ```
 
@@ -381,7 +381,7 @@ Múltiples llamadas se agregan — todo el contenido se combina al finalizar la 
 
 ### 6. Convenciones de nomenclatura de parámetros
 
-- Usa `snake_case` para nombres de parámetros (ej. `parent_id`、`due_date`、`workspace_id`)
+- Usa `snake_case` para nombres de parámetros (ej. `parent_id`, `due_date`, `workspace_id`)
 - Los IDs de cadena deben usar formato UUID
 - Las marcas de tiempo deben usar formato ISO 8601 / RFC 3339
 - Los parámetros opcionales deben documentar valores predeterminados explícitos
@@ -431,7 +431,7 @@ McpToolResult::failure(format!("TODO item {} not found", id))
 McpToolResult::failure("Error".into())
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Probar herramientas MCP
 
@@ -570,7 +570,7 @@ cargo test -p hubris test_report_success
 cargo test -p hubris -- --nocapture
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Referencia rápida: archivos clave
 

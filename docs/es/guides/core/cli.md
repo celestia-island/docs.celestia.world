@@ -4,7 +4,7 @@
 
 > Nota: CLI actualmente no ha alcanzado la misma funcionalidad completa que TUI. Para el estado actual, consulta [ARCHITECTURE.md](../../ARCHITECTURE.md).
 
----
+-----------------------------------------------------------------------------
 
 ## Tabla de contenidos
 
@@ -23,7 +23,7 @@
 - [Imágenes Docker](#imágenes-docker)
 - [Uso avanzado](#uso-avanzado)
 
----
+-----------------------------------------------------------------------------
 
 ## Instalación
 
@@ -47,7 +47,7 @@ El binario se encuentra en `target/debug/entelecheia-cli` (debug) o `target/rele
 
 Los binarios preconstruidos están disponibles en [GitHub Releases](https://github.com/celestia-island/entelecheia/releases). Descarga el archivo comprimido adecuado para tu plataforma y coloca el binario en tu `PATH`.
 
----
+-----------------------------------------------------------------------------
 
 ## Uso básico
 
@@ -65,20 +65,20 @@ echo "Resume este archivo" | entelecheia-cli send
 entelecheia-cli status
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Opciones globales
 
 | Opción | Descripción | Valor predeterminado |
 | --- | --- | --- |
-| `-l, --log-level <LEVEL>` | Nivel de registro (trace、debug、info、warn、error) | `warn` |
+| `-l, --log-level <LEVEL>` | Nivel de registro (trace, debug, info, warn, error) | `warn` |
 | `-d, --daemon` | Despachar comando en segundo plano y salir inmediatamente | — |
 | `-c, --clean` | Limpiar contenedores Cosmos y archivos socket | — |
 | `-a, --auto-approve` | Aprobar operaciones automáticamente (asegura que el servidor esté en ejecución) | — |
 | `-t, --table` | Salida en tabla legible por humanos (formato ANSI) | Predeterminado |
 | `-j, --json` | Salida JSON (legible por máquina) | — |
 | `-r, --raw` | Salida de texto plano sin formato | — |
-| `--format <FORMAT>` | Formato de salida（table、json、raw） | `table` |
+| `--format <FORMAT>` | Formato de salida (table, json, raw) | `table` |
 
 Opciones de formato de salida:
 
@@ -101,7 +101,7 @@ entelecheia-cli -l debug send "Depurar problema de conexión"
 entelecheia-cli -d run my-agent --ci
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Comandos de chat
 
@@ -146,9 +146,9 @@ entelecheia-cli chat history [OPTIONS]
 | --- | --- | --- |
 | `--conversation <ID>` | Filtrar por ID de conversación | — |
 | `--agent <TYPE>` | Filtrar por tipo de agente | — |
-| `--role <ROLE>` | Filtrar por rol（user/assistant/system） | — |
-| `--from <ISO8601>` | Fecha/hora de inicio（ISO 8601） | — |
-| `--to <ISO8601>` | Fecha/hora de fin（ISO 8601） | — |
+| `--role <ROLE>` | Filtrar por rol (user/assistant/system) | — |
+| `--from <ISO8601>` | Fecha/hora de inicio (ISO 8601) | — |
+| `--to <ISO8601>` | Fecha/hora de fin (ISO 8601) | — |
 | `--limit <N>` | Número máximo de mensajes a devolver | `50` |
 | `--offset <N>` | Desplazamiento de paginación | `0` |
 
@@ -170,7 +170,7 @@ entelecheia-cli chat recent [OPTIONS]
 | `--agent <TYPE>` | Filtrar por tipo de agente | — |
 | `--limit <N>` | Número máximo de mensajes a devolver | `20` |
 
----
+-----------------------------------------------------------------------------
 
 ## Gestión de agentes
 
@@ -196,11 +196,11 @@ entelecheia-cli agent stop <AGENT_TYPE>
 entelecheia-cli agent restart <AGENT_TYPE>
 ```
 
-**Tipos de agente disponibles:** ApoRia、EleOs、EpieiKeia、Haplotes、HubRis、Kalos、NeiKos、OreXis、PhiLia、Polemos、SkeMma、SkoPeo。
+**Tipos de agente disponibles:** ApoRia, EleOs, EpieiKeia, Haplotes, HubRis, Kalos, NeiKos, OreXis, PhiLia, Polemos, SkeMma, SkoPeo.
 
 > Nota: Los agentes se ejecutan como crates de biblioteca dentro del tiempo de ejecución de scepter, no como ejecutables independientes. El comando `agent start` intenta generar un binario que coincida con el nombre del agente, lo cual se aplica principalmente cuando los agentes se compilan como binarios separados. En el uso real, los agentes se activan a través del servidor scepter.
 
----
+-----------------------------------------------------------------------------
 
 ## Ciclo de vida de servicios
 
@@ -264,7 +264,7 @@ Inicia o crea solo el contenedor WebUI.
 | `--prefix <STR>` | Prefijo de nombre de contenedor | `e-` |
 | `--webui-port <PORT>` | Puerto de WebUI | `3424` |
 
----
+-----------------------------------------------------------------------------
 
 ## Configuración
 
@@ -316,7 +316,7 @@ Validating WebSocket configuration...
 [ OK ]  Configuration validation passed
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Contexto de conexión
 
@@ -371,7 +371,7 @@ docker exec e-scepter cat /home/entelecheia/.config/entelecheia/scepter.token
 
 ```bash
 entelecheia-cli context use staging
-# A partir de ahora, todos los comandos (send、status、chat, etc.) se enrutarán a través de la conexión de staging
+# A partir de ahora, todos los comandos (send, status, chat, etc.) se enrutarán a través de la conexión de staging
 ```
 
 ### Eliminar contexto
@@ -406,7 +406,7 @@ entelecheia-cli status
 entelecheia-cli context use default
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Estado y monitoreo
 
@@ -489,9 +489,9 @@ entelecheia-cli logs -l 200
 entelecheia-cli logs -a ApoRia
 ```
 
-Los registros se leen del directorio `./logs/`. Cada agente tiene su propio archivo de registro (`ApoRia.log`、`EleOs.log`, etc.).
+Los registros se leen del directorio `./logs/`. Cada agente tiene su propio archivo de registro (`ApoRia.log`, `EleOs.log`, etc.).
 
----
+-----------------------------------------------------------------------------
 
 ## Suscripción (Layer3)
 
@@ -514,7 +514,7 @@ entelecheia-cli subscribe add [OPTIONS]
 | Opción | Descripción |
 | --- | --- |
 | `--name <NAME>` | Nombre de la suscripción (obligatorio) |
-| `--source <SOURCE>` | Tipo de origen：`official`、`github` o `url` (obligatorio) |
+| `--source <SOURCE>` | Tipo de origen: `official`, `github` o `url` (obligatorio) |
 | `--repository <REPO>` | Repositorio GitHub (para origen github) |
 | `--url <URL>` | URL directa (para origen url) |
 | `--version <VER>` | Restricción de versión |
@@ -551,7 +551,7 @@ entelecheia-cli subscribe auto-update
 
 Actualiza todas las suscripciones que tienen `auto_update` habilitado.
 
----
+-----------------------------------------------------------------------------
 
 ## Ejecutar agentes
 
@@ -589,7 +589,7 @@ entelecheia-cli -d run my-agent --ci --auto-pr
 
 El indicador de modo segundo plano hace que CLI regenere un proceso hijo separado eliminando el parámetro `--daemon` y retorne inmediatamente. El proceso hijo hereda el comando original y se ejecuta de forma independiente. Después se puede usar `status` para ver el progreso.
 
-Adecuado para operaciones de larga duración como `run`、`init`、`deploy`:
+Adecuado para operaciones de larga duración como `run`, `init`, `deploy`:
 
 ```bash
 # Despachar ejecución de agente en segundo plano
@@ -603,7 +603,7 @@ entelecheia-cli status
 entelecheia-cli status history[-5]
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Línea de tiempo
 
@@ -631,7 +631,7 @@ entelecheia-cli timeline show <CONVERSATION_ID> [OPTIONS]
 | --- | --- | --- |
 | `--include-messages` | Incluir mensajes en la salida | `true` |
 
----
+-----------------------------------------------------------------------------
 
 ## Imágenes Docker
 
@@ -661,7 +661,7 @@ Imágenes gestionadas:
 - `entelecheia` — Servidor de orquestación (con tiempo de ejecución cosmos integrado)
 - `pgvector/pgvector` — PostgreSQL con extensión de vectores
 
----
+-----------------------------------------------------------------------------
 
 ## Uso avanzado
 
@@ -695,7 +695,7 @@ CLI y TUI se conectan al mismo servidor scepter. Ambos se pueden usar simultáne
 - Inicia TUI para sesiones interactivas: `cargo run --bin entelecheia-tui`
 - Usa CLI para scripting, automatización y consultas rápidas
 
----
+-----------------------------------------------------------------------------
 
 ## Solución de problemas
 

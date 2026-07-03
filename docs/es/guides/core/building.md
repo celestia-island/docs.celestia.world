@@ -1,6 +1,6 @@
 # Guía de construcción
 
----
+-----------------------------------------------------------------------------
 
 ## Tabla de contenidos
 
@@ -15,7 +15,7 @@
 - [Solución de problemas](#solución-de-problemas)
 - [Ejecutar bot Webhook](#ejecutar-bot-webhook)
 
----
+-----------------------------------------------------------------------------
 
 ## Requisitos previos
 
@@ -81,7 +81,7 @@ Instala usando el método oficial rustup para tu plataforma:
 
 - **VS Code** con la extensión rust-analyzer instalada
 
----
+-----------------------------------------------------------------------------
 
 ## Instalación
 
@@ -172,7 +172,7 @@ docker compose up -d
 just dev
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Configuración
 
@@ -211,7 +211,7 @@ CONTAINER_NETWORK=entelecheia-network
 CONTAINER_REGISTRY=127.0.0.1:5000
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Construcción
 
@@ -249,7 +249,7 @@ Una vez completada la construcción, encontrarás:
 - **Binarios**: `target/debug/` o `target/release/`
 - **Imágenes Docker**: construidas automáticamente durante `just dev`
 
----
+-----------------------------------------------------------------------------
 
 ## Ejecución
 
@@ -339,7 +339,7 @@ just dev-down
 just dev-kill
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Gestión de base de datos
 
@@ -382,7 +382,7 @@ cargo test -p scepter test_create_migration -- --nocapture --ignored
 just db-migrate-down
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Entorno de desarrollo
 
@@ -433,7 +433,7 @@ just clippy
 just check
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Despliegue
 
@@ -468,7 +468,7 @@ docker compose logs -f
 docker compose down
 ```
 
----
+-----------------------------------------------------------------------------
 
 ## Solución de problemas
 
@@ -523,7 +523,7 @@ docker compose up -d
 1. Busca en [GitHub Issues](https://github.com/celestia-island/entelecheia/issues)
 1. Únete a nuestro [foro de discusión](https://github.com/celestia-island/entelecheia/discussions)
 
----
+-----------------------------------------------------------------------------
 
 ## Ejecutar bot Webhook
 
@@ -570,13 +570,13 @@ cp plugins/github-webhook/.env.example plugins/github-webhook/.env
 
 Consulta la [Guía de configuración de Webhook](webhook-setup.md) para detalles de configuración específicos de cada plataforma.
 
----
+-----------------------------------------------------------------------------
 
 ## Siguientes pasos
 
 - Lee la [Guía de fundamentos](fundamentals.md) para entender la arquitectura
 - Explora la [documentación de agentes](../../agents/) para conocer los agentes disponibles
 
----
+-----------------------------------------------------------------------------
 
 **¡Feliz construcción!** 🚀

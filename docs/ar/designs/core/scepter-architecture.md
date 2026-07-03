@@ -1014,7 +1014,7 @@ flowchart TB
 
 ### التهيئة
 
-# provider_config.toml
+\# provider_config.toml
 [[models]]
 id = "gpt-5.4"
 tier = "normal"
@@ -1041,6 +1041,7 @@ priority = 8
 
 ## التدفق: رسالة المستخدم ← استجابة LLM
 
+```text
     1. يرسل المستخدم رسالة عبر TUI/CLI/socket
     1. `handle_user_message`():
 
@@ -1070,11 +1071,13 @@ c. إسقاط TierPermit ← تحرير خانة الإشارة
 a. إرجاع تصريح إشارة الطلب
 b. يمكن تنظيف حاوية Cosmos (أو إعادة استخدامها)
 
+```
+
 ## اختبار E2E
 
 تستخدم الاختبارات مهلة الخمول (وليس الموعد النهائي المطلق). يُعاد ضبط المؤقت عند كل حدث ذي معنى:
 
-# Activity resets the idle timer — chain can run indefinitely as long as it stays active
+\# Activity resets the idle timer — chain can run indefinitely as long as it stays active
 ACTIVE_METHODS = {
 "Tui.`OrchestrationStatus`",
 "Tui.`McpToolResult`",
@@ -1125,6 +1128,7 @@ flowchart TB
 
 ## ترتيب حل قاعدة البيانات وقت التشغيل
 
+```rust
 // packages/scepter/src/app/setup.rs
 let `db_url` = if let Ok(url) = std::env::var("DATABASE_URL") {
 // 1. Environment variable (production: Docker PG, dev: .env file)
@@ -1148,6 +1152,8 @@ url
 return Err(/* "no DATABASE_URL configured" */);
 }
 };
+
+```
 
 ## نمط هارنس الاختبار
 
@@ -1185,18 +1191,19 @@ fn pg_integration_tests() {
 
 ## قيود PGlite
 
+```text
 | القيد | التأثير | التخفيف |
 | --- | --- | --- |
 | `max_connections=1` | تجمع واحد فقط في كل مرة | اتصال DB مشترك عبر الاختبارات الفرعية؛ لا `db.close()` بين الاختبارات |
 | تحويل نوع صارم | `uuid = text` يفشل | مرر دائمًا قيم محددة النوع (مثلًا، `Uuid` وليس `String` لأعمدة UUID) |
 | لا وصول متزامن | يجب أن تكون الاختبارات متسلسلة | مشغل `#[test]` واحد بكل الاختبارات الفرعية مضمّنة |
 | مهام خلفية لتجمع sqlx | `close()` يعلق إلى الأبد | `std::process::exit(0)` بعد إكمال كل الاختبارات |
-
+```
 ## تقوية بناء Docker
 
 كل Dockerfiles الإنتاجية تستبعد embedded-db:
 
-# Dockerfile
+\# Dockerfile
 RUN cargo build --release -p scepter \
 --no-default-features --features all-agents
 

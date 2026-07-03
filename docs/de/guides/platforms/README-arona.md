@@ -22,17 +22,17 @@ JSON-RPC 2.0-Protokolltypen, TypeScript-Bindings und der Dokumentations-Hub. Ver
 ## Schnellstart
 
 ```bash
-# Bauen
+# Build
 cargo build
 
-# Alle Tests ausführen (inklusive TS-Binding-Generierung)
+# Run all tests (includes TS binding generation)
 cargo test --all-features
 
-# Lint + Formatierung prüfen
+# Check lint + formatting
 cargo clippy --all-targets --all-features -- -D warnings
 cargo fmt --all -- --check
 
-# Nur TypeScript-Bindings generieren
+# Generate TypeScript bindings only
 cargo test --package arona
 ```
 

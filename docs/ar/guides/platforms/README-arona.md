@@ -22,17 +22,17 @@
 ## بداية سريعة
 
 ```bash
-# بناء
+# Build
 cargo build
 
-# تشغيل جميع الاختبارات (يتضمن توليد روابط TS)
+# Run all tests (includes TS binding generation)
 cargo test --all-features
 
-# التحقق من التنسيق والتدقيق
+# Check lint + formatting
 cargo clippy --all-targets --all-features -- -D warnings
 cargo fmt --all -- --check
 
-# توليد روابط TypeScript فقط
+# Generate TypeScript bindings only
 cargo test --package arona
 ```
 

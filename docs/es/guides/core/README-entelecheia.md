@@ -56,8 +56,8 @@ irm https://raw.githubusercontent.com/celestia-island/entelecheia/main/scripts/d
 ```bash
 git clone https://github.com/celestia-island/entelecheia.git
 cd entelecheia
-just bootstrap    # instalar dependencias, construir el espacio de trabajo, generar configuración
-just dev          # lanzar la TUI (gestiona la orquestación de Docker/servicios)
+just bootstrap    # install deps, build workspace, generate config
+just dev          # launch the TUI (handles Docker/service orchestration)
 ```
 
 Requisitos previos: Rust 1.85+ (edición 2024), Docker, ejecutor de tareas `just`.
@@ -65,7 +65,7 @@ Requisitos previos: Rust 1.85+ (edición 2024), Docker, ejecutor de tareas `just
 **Modo de base de datos embebida** (no requiere PostgreSQL externo):
 
 ```bash
-just local         # scepter con pglite embebido
+just local         # scepter with embedded pglite
 ```
 
 ## Agentes
@@ -93,32 +93,32 @@ just local         # scepter con pglite embebido
 
 ```mermaid
 flowchart TB
-    User["Usuario"] --> TUI["TUI — interfaz principal"]
+    User["User"] --> TUI["TUI — primary interface"]
     User --> CLI["CLI"]
 
-    TUI --> Scepter["Scepter — servidor de orquestación"]
+    TUI --> Scepter["Scepter — orchestration server"]
     CLI --> Scepter
 
-    subgraph agents["Capa de agentes"]
-        L1["Layer1 — agentes de orquestación\nHapLotes · SkoPeo · HubRis · KaLos · NeiKos ·\nSkeMma · ApoRia · EleOs · EpieiKeia · OreXis · PhiLia · PoleMos"]
-        L2["Layer2 — agentes de dominio\nClassic SE · Web Automation · Industrial IoT · Remote Ops"]
+    subgraph agents["Agent Layer"]
+        L1["Layer1 — orchestration agents\nHapLotes · SkoPeo · HubRis · KaLos · NeiKos ·\nSkeMma · ApoRia · EleOs · EpieiKeia · OreXis · PhiLia · PoleMos"]
+        L2["Layer2 — domain agents\nClassic SE · Web Automation · Industrial IoT · Remote Ops"]
     end
 
     Scepter --> L1
     Scepter --> L2
 
-    subgraph runtime["Entorno de ejecución"]
-        Cosmos["Cosmos — motor JS Boa + tubería IEPL"]
-        Container["Aislamiento por contenedores\nDocker + Youki"]
+    subgraph runtime["Execution Runtime"]
+        Cosmos["Cosmos — Boa JS engine + IEPL pipeline"]
+        Container["Container Isolation\nDocker + Youki"]
     end
 
     Scepter --> Cosmos
     Cosmos --> Container
 
-    subgraph infra["Infraestructura compartida"]
-        Router["Enrutador de proveedores LLM\nDeepSeek · GLM · Qwen · OpenAI · ..."]
-        Memory["Memoria & RAG\npgvector · recorrido de grafos"]
-        Safety["Profundidad de seguridad\nOreXis · listas blancas de escritura · aprobación humana"]
+    subgraph infra["Shared Infrastructure"]
+        Router["LLM Provider Router\nDeepSeek · GLM · Qwen · OpenAI · ..."]
+        Memory["Memory & RAG\npgvector · graph traversal"]
+        Safety["Safety Depth\nOreXis · write whitelists · human approval"]
     end
 
     Scepter --> Router

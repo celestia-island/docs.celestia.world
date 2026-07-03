@@ -56,8 +56,8 @@ irm https://raw.githubusercontent.com/celestia-island/entelecheia/main/scripts/d
 ```bash
 git clone https://github.com/celestia-island/entelecheia.git
 cd entelecheia
-just bootstrap    # 安裝依賴，建構工作區，產生設定
-just dev          # 啟動 TUI（處理 Docker／服務編排）
+just bootstrap    # install deps, build workspace, generate config
+just dev          # launch the TUI (handles Docker/service orchestration)
 ```
 
 前置條件：Rust 1.85+（edition 2024）、Docker、`just` 任務執行器。
@@ -65,7 +65,7 @@ just dev          # 啟動 TUI（處理 Docker／服務編排）
 **嵌入式資料庫模式**（無需外部 PostgreSQL）：
 
 ```bash
-just local         # 使用嵌入式 pglite 的 scepter
+just local         # scepter with embedded pglite
 ```
 
 ## 智能體
@@ -93,32 +93,32 @@ just local         # 使用嵌入式 pglite 的 scepter
 
 ```mermaid
 flowchart TB
-    User["使用者"] --> TUI["TUI — 主要介面"]
+    User["User"] --> TUI["TUI — primary interface"]
     User --> CLI["CLI"]
 
-    TUI --> Scepter["Scepter — 編排伺服器"]
+    TUI --> Scepter["Scepter — orchestration server"]
     CLI --> Scepter
 
-    subgraph agents["智能體層"]
-        L1["Layer1 — 編排智能體\nHapLotes · SkoPeo · HubRis · KaLos · NeiKos ·\nSkeMma · ApoRia · EleOs · EpieiKeia · OreXis · PhiLia · PoleMos"]
-        L2["Layer2 — 領域智能體\n經典軟體工程 · Web 自動化 · 工業物聯網 · 遠端操作"]
+    subgraph agents["Agent Layer"]
+        L1["Layer1 — orchestration agents\nHapLotes · SkoPeo · HubRis · KaLos · NeiKos ·\nSkeMma · ApoRia · EleOs · EpieiKeia · OreXis · PhiLia · PoleMos"]
+        L2["Layer2 — domain agents\nClassic SE · Web Automation · Industrial IoT · Remote Ops"]
     end
 
     Scepter --> L1
     Scepter --> L2
 
-    subgraph runtime["執行執行時"]
-        Cosmos["Cosmos — Boa JS 引擎 + IEPL 管線"]
-        Container["容器隔離\nDocker + Youki"]
+    subgraph runtime["Execution Runtime"]
+        Cosmos["Cosmos — Boa JS engine + IEPL pipeline"]
+        Container["Container Isolation\nDocker + Youki"]
     end
 
     Scepter --> Cosmos
     Cosmos --> Container
 
-    subgraph infra["共享基礎設施"]
-        Router["LLM 供應商路由器\nDeepSeek · GLM · Qwen · OpenAI · ..."]
-        Memory["記憶與 RAG\npgvector · 圖遍歷"]
-        Safety["安全深度\nOreXis · 寫入白名單 · 人工核准"]
+    subgraph infra["Shared Infrastructure"]
+        Router["LLM Provider Router\nDeepSeek · GLM · Qwen · OpenAI · ..."]
+        Memory["Memory & RAG\npgvector · graph traversal"]
+        Safety["Safety Depth\nOreXis · write whitelists · human approval"]
     end
 
     Scepter --> Router

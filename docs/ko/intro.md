@@ -2,6 +2,16 @@
 
 **celestia-island** 생태계의 중앙 집중식 문서 허브입니다.
 
+## 시설
+
+각 시설은 자체 문서 사이트를 유지하며, 소스 코드와 동일한 저장소에서 빌드됩니다:
+
+| 시설 | 설명 | 문서 |
+| --- | --- | --- |
+| **Entelecheia** | 다중 에이전트 협업 플랫폼 | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| **Shittim Chest** | WebUI, 백엔드, CLI 셸 | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
+| **Evernight** | 원격 제어 및 산업 프로토콜 브로커 | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+
 ## 플랫폼 프로젝트
 
 | 그룹 | 프로젝트 | 설명 |

@@ -2,6 +2,16 @@
 
 這是 **celestia-island** 生態系統的集中式文件中心。
 
+## 設施
+
+每個設施維護自己的文件站點，與原始碼構建自同一倉庫：
+
+| 設施 | 描述 | 文件 |
+| --- | --- | --- |
+| **Entelecheia** | 多智能體協作平台 | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| **Shittim Chest** | WebUI、後端、CLI shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
+| **Evernight** | 遠端控制與工業協定代理 | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+
 ## 平台專案
 
 | 組別 | 專案 | 描述 |

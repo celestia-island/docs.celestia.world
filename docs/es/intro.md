@@ -2,6 +2,16 @@
 
 Este es el centro de documentación centralizado para el ecosistema de **celestia-island**.
 
+## Instalaciones
+
+Cada instalación mantiene su propio sitio de documentación, construido desde el mismo repositorio que el código fuente:
+
+| Instalación | Descripción | Documentación |
+| --- | --- | --- |
+| **Entelecheia** | Plataforma de colaboración multi-agente | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| **Shittim Chest** | WebUI, backend, CLI shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
+| **Evernight** | Broker de control remoto y protocolos industriales | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+
 ## Proyectos de la plataforma
 
 | Grupo | Proyecto | Descripción |

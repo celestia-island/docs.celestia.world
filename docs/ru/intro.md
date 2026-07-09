@@ -2,6 +2,16 @@
 
 Это централизованный центр документации для экосистемы **celestia-island**.
 
+## Инфраструктура
+
+Каждый компонент поддерживает собственный сайт документации, собираемый из того же репозитория, что и исходный код:
+
+| Компонент | Описание | Документация |
+| --- | --- | --- |
+| **Entelecheia** | Платформа для совместной работы мультиагентов | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| **Shittim Chest** | WebUI, бэкенд, CLI-оболочка | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
+| **Evernight** | Брокер удалённого управления и промышленных протоколов | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+
 ## Проекты платформы
 
 | Группа | Проект | Описание |

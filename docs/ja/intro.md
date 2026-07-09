@@ -2,6 +2,16 @@
 
 これは **celestia-island** エコシステムの統合ドキュメントハブです。
 
+## ファシリティ
+
+各ファシリティは独自のドキュメントサイトを維持し、ソースコードと同じリポジトリからビルドされます：
+
+| ファシリティ | 説明 | ドキュメント |
+| --- | --- | --- |
+| **Entelecheia** | マルチエージェントコラボレーションプラットフォーム | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| **Shittim Chest** | WebUI、バックエンド、CLIシェル | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
+| **Evernight** | リモート制御・産業プロトコルブローカー | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+
 ## プラットフォームプロジェクト
 
 | グループ | プロジェクト | 説明 |

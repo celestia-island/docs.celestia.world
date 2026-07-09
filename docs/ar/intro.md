@@ -2,6 +2,16 @@
 
 هذا هو المركز المركزي للوثائق لمنظومة **celestia-island**.
 
+## المرافق
+
+يحافظ كل مرفق على موقع توثيق خاص به، يُبنى من نفس المستودع الذي يُبنى منه الكود المصدري:
+
+| المرفق | الوصف | التوثيق |
+| --- | --- | --- |
+| **Entelecheia** | منصة تعاون متعدد الوكلاء | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| **Shittim Chest** | واجهة ويب، خلفية، صدفة CLI | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
+| **Evernight** | وسيط التحكم عن بعد والبروتوكولات الصناعية | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+
 ## مشاريع المنصة
 
 | المجموعة | المشروع | الوصف |

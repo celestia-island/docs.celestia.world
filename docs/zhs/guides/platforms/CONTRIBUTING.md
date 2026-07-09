@@ -21,7 +21,7 @@ Pull Request 之前，请先阅读本节。
   提交须带 `Signed-off-by`（`git commit -s`）。
 
 > **许可证会开放，合并门槛不会。** 在 **2030-01-01**，本项目从 BUSL-1.1 转为 Apache-2.0 或
-> MIT（接收者任选），见 [`LICENSE`](../../../LICENSE)。这放宽的是*你能用代码做什么*，而
+> MIT（接收者任选），见 [`LICENSE`](../../../../LICENSE)。这放宽的是*你能用代码做什么*，而
 > **不是**降低审查门槛、取消 CLA，也不意味着我们会接受更多 PR。变更日期前后，贡献政策不变。
 
 ## 安全
@@ -47,7 +47,7 @@ Pull Request 之前，请先阅读本节。
 
 采用 **BUSL-1.1**，**Change Date 为 2030-01-01**，届时转为接收者任选的 **Apache-2.0 或
 MIT**。如今在内部运营、学术、政府、教育与非商业用途下，它已等同于 Apache-2.0 或 MIT（见
-[`LICENSE`](../../../LICENSE) 中的 Additional Use Grant）。受限的商业用途（托管、转售、作为
+[`LICENSE`](../../../../LICENSE) 中的 Additional Use Grant）。受限的商业用途（托管、转售、作为
 服务换皮销售）在 Change Date 之前需另行获取商业授权。
 
 提交贡献即表示你同意贡献按本项目许可证授权，并签署 CLA（[`CLA.md`](../../../en/meta/cla.md)）。CLA

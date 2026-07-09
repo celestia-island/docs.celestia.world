@@ -34,7 +34,7 @@ d'ouvrir une pull request.
 
 > **La licence s'ouvre, la barre de fusion, non.** Le **2030-01-01**, ce projet
 > passe de BUSL-1.1 à Apache-2.0 ou MIT (au choix du destinataire), voir
-> [`LICENSE`](../../../LICENSE). Cela élargit *ce que vous pouvez faire du code* ;
+> [`LICENSE`](../../../../LICENSE). Cela élargit *ce que vous pouvez faire du code* ;
 > cela ne **baissant** pas la barre de relecture, ne supprime pas le CLA et ne
 > signifie pas que nous acceptons plus de PR. La politique de contribution est
 > inchangée avant et après la date de changement.
@@ -63,7 +63,7 @@ Soyez respectueux, constructif et inclusif. Nous suivons le [Contributor Covenan
 Sous **BUSL-1.1**, **Date de changement 2030-01-01**, convertie au choix du
 destinataire en **Apache-2.0 ou MIT**. Pour tout usage interne, académique,
 gouvernemental, éducatif et non commercial, cela équivaut déjà aujourd'hui à
-Apache-2.0 ou MIT (voir l'Additional Use Grant dans [`LICENSE`](../../../LICENSE)).
+Apache-2.0 ou MIT (voir l'Additional Use Grant dans [`LICENSE`](../../../../LICENSE)).
 Les usages commerciaux restreints (hébergement, revente, rebranding en tant que
 service) nécessitent une licence commerciale distincte jusqu'à la date de changement.
 

@@ -31,7 +31,7 @@ esto antes de abrir un pull request.
 
 > **La licencia se abre, la barra de fusión no.** El **2030-01-01** este proyecto
 > pasa de BUSL-1.1 a Apache-2.0 o MIT (a elección del destinatario), ver
-> [`LICENSE`](../../../LICENSE). Eso amplía *qué puedes hacer con el código*; **no**
+> [`LICENSE`](../../../../LICENSE). Eso amplía *qué puedes hacer con el código*; **no**
 > baja la barra de revisión, no elimina el CLA ni significa que aceptemos más PR.
 > La política de contribución no cambia antes ni después de la fecha de cambio.
 
@@ -59,7 +59,7 @@ Sea respetuoso, constructivo e inclusivo. Seguimos el [Contributor Covenant Code
 Bajo **BUSL-1.1**, **Fecha de cambio 2030-01-01**, convertida a elección del
 destinatario en **Apache-2.0 o MIT**. Para todo uso interno, académico, gubernamental,
 educativo y no comercial, ya equivale hoy a Apache-2.0 o MIT (ver la Additional Use
-Grant en [`LICENSE`](../../../LICENSE)). Los usos comerciales restringidos (hosting,
+Grant en [`LICENSE`](../../../../LICENSE)). Los usos comerciales restringidos (hosting,
 reventa, rebranding como servicio) requieren una licencia comercial separada hasta la
 fecha de cambio.
 

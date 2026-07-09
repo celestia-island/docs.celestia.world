@@ -17,7 +17,7 @@ Arona definiert die gemeinsamen JSON-RPC 2.0-Protokolltypen, die auf der gesamte
 
 - **CLA erforderlich.** Jeder akzeptierte Beitrag erfordert eine unterzeichnete Contributor License Agreement. Siehe [`CLA.md`](cla.md). Commits müssen eine `Signed-off-by`-Zeile enthalten (`git commit -s`).
 
-> **Die Lizenz mag sich öffnen; die Merge-Hürde nicht.** Am **2030-01-01** wechselt dieses Projekt von BUSL-1.1 zu Apache-2.0 oder MIT (nach Wahl des Empfängers) — siehe [`LICENSE`](LICENSE). Das erweitert, *was Sie mit dem Code tun dürfen*; es senkt **nicht** die Review-Hürde, entfernt nicht die CLA und bedeutet nicht, dass wir mehr PRs akzeptieren. Die Beitragsrichtlinie bleibt vor und nach dem Änderungsdatum unverändert.
+> **Die Lizenz mag sich öffnen; die Merge-Hürde nicht.** Am **2030-01-01** wechselt dieses Projekt von BUSL-1.1 zu Apache-2.0 oder MIT (nach Wahl des Empfängers) — siehe [`LICENSE`](../../../LICENSE). Das erweitert, *was Sie mit dem Code tun dürfen*; es senkt **nicht** die Review-Hürde, entfernt nicht die CLA und bedeutet nicht, dass wir mehr PRs akzeptieren. Die Beitragsrichtlinie bleibt vor und nach dem Änderungsdatum unverändert.
 
 ## Sicherheit
 
@@ -55,6 +55,6 @@ cargo clippy -- -D warnings
 
 ## Lizenz & CLA
 
-Arona ist unter der **Business Source License 1.1 (BUSL-1.1)** mit einem **Änderungsdatum vom 2030-01-01** lizenziert, an dem es nach Wahl des Empfängers in **Apache-2.0 oder MIT** übergeht. Für alle interne, akademische, staatliche, bildungsspezifische und nicht-kommerzielle Nutzung ist es bereits heute gleichwertig mit Apache-2.0 oder MIT (siehe Additional Use Grant in [`LICENSE`](LICENSE)). Eingeschränkte kommerzielle Nutzungen (Hosting, Weiterverkauf oder Rebranding als Dienst) erfordern bis zum Änderungsdatum eine separate kommerzielle Lizenz.
+Arona ist unter der **Business Source License 1.1 (BUSL-1.1)** mit einem **Änderungsdatum vom 2030-01-01** lizenziert, an dem es nach Wahl des Empfängers in **Apache-2.0 oder MIT** übergeht. Für alle interne, akademische, staatliche, bildungsspezifische und nicht-kommerzielle Nutzung ist es bereits heute gleichwertig mit Apache-2.0 oder MIT (siehe Additional Use Grant in [`LICENSE`](../../../LICENSE)). Eingeschränkte kommerzielle Nutzungen (Hosting, Weiterverkauf oder Rebranding als Dienst) erfordern bis zum Änderungsdatum eine separate kommerzielle Lizenz.
 
 Durch Ihre Mitwirkung erklären Sie sich damit einverstanden, dass Ihre Beiträge unter der Projektlizenz lizenziert werden und dass Sie die CLA unterzeichnen ([`CLA.md`](cla.md)). Die CLA gewährt dem Projekt eine freizügige Lizenz **einschließlich des Rechts zur Relizenzierung**, damit das Projekt seinen BUSL→Apache/MIT-Pfad beibehalten und seine Lizenzierung in Zukunft anpassen kann.

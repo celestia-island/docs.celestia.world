@@ -37,7 +37,7 @@ License Agreement. See [`CLA.md`](cla.md). Commits must carry a
 
 > **The license may open; the merge bar will not.** On **2030-01-01** this
 > project converts from BUSL-1.1 to Apache-2.0 or MIT (recipient's choice) — see
-> [`LICENSE`](LICENSE). That broadens *what you may do with the code*; it does
+> [`LICENSE`](../../../LICENSE). That broadens *what you may do with the code*; it does
 > **not** lower the review bar, remove the CLA, or mean we accept more PRs. The
 > contribution policy is unchanged before and after the change date.
 
@@ -88,7 +88,7 @@ Arona is licensed under the **Business Source License 1.1 (BUSL-1.1)** with a
 **Change Date of 2030-01-01**, on which it converts to the recipient's choice of
 **Apache-2.0 or MIT**. For all internal, academic, government, educational, and
 non-commercial use it is already equivalent to Apache-2.0 or MIT today (see the
-Additional Use Grant in [`LICENSE`](LICENSE)). Restricted commercial uses
+Additional Use Grant in [`LICENSE`](../../../LICENSE)). Restricted commercial uses
 (hosting, resale, or rebranding as a service) require a separate commercial
 license until the Change Date.
 

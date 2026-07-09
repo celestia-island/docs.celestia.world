@@ -17,7 +17,7 @@ Arona define os tipos de protocolo JSON-RPC 2.0 compartilhados consumidos em tod
 
 - **CLA obrigatório.** Toda contribuição aceita requer um Acordo de Licença de Contribuinte assinado. Veja [`CLA.md`](cla.md). Os commits devem conter uma linha `Signed-off-by` (`git commit -s`).
 
-> **A licença pode se abrir; a barra de merge não.** Em **2030-01-01** este projeto converte de BUSL-1.1 para Apache-2.0 ou MIT (escolha do destinatário) — veja [`LICENSE`](LICENSE). Isso amplia *o que você pode fazer com o código*; **não** reduz a barra de revisão, não remove o CLA e não significa que aceitaremos mais PRs. A política de contribuição permanece inalterada antes e depois da data de mudança.
+> **A licença pode se abrir; a barra de merge não.** Em **2030-01-01** este projeto converte de BUSL-1.1 para Apache-2.0 ou MIT (escolha do destinatário) — veja [`LICENSE`](../../../LICENSE). Isso amplia *o que você pode fazer com o código*; **não** reduz a barra de revisão, não remove o CLA e não significa que aceitaremos mais PRs. A política de contribuição permanece inalterada antes e depois da data de mudança.
 
 ## Segurança
 
@@ -55,6 +55,6 @@ cargo clippy -- -D warnings
 
 ## Licença & CLA
 
-Arona é licenciado sob a **Business Source License 1.1 (BUSL-1.1)** com uma **Data de Mudança de 2030-01-01**, quando converte para a escolha do destinatário entre **Apache-2.0 ou MIT**. Para todo uso interno, acadêmico, governamental, educacional e não comercial, já é equivalente a Apache-2.0 ou MIT hoje (veja a Concessão de Uso Adicional em [`LICENSE`](LICENSE)). Usos comerciais restritos (hospedagem, revenda ou rebranding como serviço) exigem uma licença comercial separada até a Data de Mudança.
+Arona é licenciado sob a **Business Source License 1.1 (BUSL-1.1)** com uma **Data de Mudança de 2030-01-01**, quando converte para a escolha do destinatário entre **Apache-2.0 ou MIT**. Para todo uso interno, acadêmico, governamental, educacional e não comercial, já é equivalente a Apache-2.0 ou MIT hoje (veja a Concessão de Uso Adicional em [`LICENSE`](../../../LICENSE)). Usos comerciais restritos (hospedagem, revenda ou rebranding como serviço) exigem uma licença comercial separada até a Data de Mudança.
 
 Ao contribuir, você concorda que suas contribuições sejam licenciadas sob a licença do projeto e que você assina o CLA ([`CLA.md`](cla.md)). O CLA concede ao projeto uma licença permissiva **incluindo o direito de relicenciar**, para que o projeto possa manter sua trajetória BUSL→Apache/MIT e adaptar seu licenciamento no futuro.

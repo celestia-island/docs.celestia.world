@@ -36,7 +36,7 @@ ligne `Signed-off-by` (`git commit -s`).
 
 > **La licence peut s'ouvrir ; la barre de fusion ne le fera pas.** Le **2030-01-01** ce
 > projet passe de BUSL-1.1 à Apache-2.0 ou MIT (choix du destinataire) — voir
-> [`LICENSE`](LICENSE). Cela élargit *ce que vous pouvez faire avec le code* ; cela n'abaisse
+> [`LICENSE`](../../../LICENSE). Cela élargit *ce que vous pouvez faire avec le code* ; cela n'abaisse
 > **pas** la barre de revue, ne supprime pas le CLA, et ne signifie pas que nous acceptons plus de PR. La
 > politique de contribution est inchangée avant et après la date de changement.
 
@@ -87,7 +87,7 @@ Arona est sous **Business Source License 1.1 (BUSL-1.1)** avec une
 **Date de Changement au 2030-01-01**, à laquelle il passe au choix du destinataire sous
 **Apache-2.0 ou MIT**. Pour tout usage interne, académique, gouvernemental, éducatif et
 non commercial, il est déjà équivalent à Apache-2.0 ou MIT aujourd'hui (voir la
-Concession d'Usage Supplémentaire dans [`LICENSE`](LICENSE)). Les usages commerciaux restreints
+Concession d'Usage Supplémentaire dans [`LICENSE`](../../../LICENSE)). Les usages commerciaux restreints
 (hébergement, revente ou rebranding en tant que service) nécessitent une licence commerciale
 séparée jusqu'à la Date de Changement.
 

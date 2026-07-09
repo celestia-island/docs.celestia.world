@@ -1,7 +1,7 @@
 # Evernight 기여 가이드
 
 > 이 파일은 기여 정책의 한국어 버전입니다. 빌드 명령어와 상세 설정 절차는 저장소 루트의 영문
-> [`CONTRIBUTING.md`](../../../CONTRIBUTING.md)를 참조하십시오. 명령어 자체는 번역하지 않습니다.
+> [`CONTRIBUTING.md`](../../../en/meta/CONTRIBUTING.md)를 참조하십시오. 명령어 자체는 번역하지 않습니다.
 > 충돌이 있을 경우 영문 버전이 우선합니다.
 
 ## 기여 정책 (먼저 읽어 주세요)
@@ -18,7 +18,7 @@ Pull Request를 열기 전에 이 절을 먼저 읽어 주세요.
   보안 중요 코어에 대한 변경.
 - **코어 vs 주변부.** 코어(오케스트레이션, 마이크로커널, 보안)는 가장 엄격한 기준을 유지하며
   주로 코어 팀이 관리합니다. 외부 기여가 가장 유용하고 수용될 가능성이 높은 곳은 주변부입니다.
-- **CLA 필수.** 수용되는 모든 기여는 서명된 CLA가 필요합니다. [`CLA.md`](../../../CLA.md)를 참조하세요.
+- **CLA 필수.** 수용되는 모든 기여는 서명된 CLA가 필요합니다. [`CLA.md`](../../../en/meta/cla.md)를 참조하세요.
   커밋에는 `Signed-off-by`(`git commit -s`)가 포함되어야 합니다.
 
 > **라이선스는 열리지만, 병합 기준은 변하지 않습니다.** **2030-01-01**에 이 프로젝트는 BUSL-1.1에서
@@ -29,11 +29,11 @@ Pull Request를 열기 전에 이 절을 먼저 읽어 주세요.
 
 보안 취약점을 공개 이슈로 보고**하지 마세요**.
 [GitHub Security Advisories](https://github.com/celestia-island/evernight/security/advisories/new)를 통해 비공개로 보고하세요.
-위협 모델과 대응 SLA는 [`SECURITY.md`](../../../SECURITY.md)를 참조하세요.
+위협 모델과 대응 SLA는 [`SECURITY.md`](../../../en/meta/security.md)를 참조하세요.
 
 ## 행동 강령
 
-존중하고 건설적이며 포용적으로 행동하세요. [Contributor Covenant Code of Conduct](../../../CODE_OF_CONDUCT.md)를 따릅니다.
+존중하고 건설적이며 포용적으로 행동하세요. [Contributor Covenant Code of Conduct](../../../en/meta/code-of-conduct.md)를 따릅니다.
 
 ## Pull Request 절차
 
@@ -51,6 +51,6 @@ Pull Request를 열기 전에 이 절을 먼저 읽어 주세요.
 ([`LICENSE`](../../../LICENSE)의 Additional Use Grant 참조). 제한되는 상업적 용도(호스팅, 재판매, 서비스로의 리브랜딩 판매)는
 Change Date 이전에 별도의 상업 라이선스가 필요합니다.
 
-기여함으로써 귀하는 자신의 기여가 본 프로젝트의 라이선스로 라이선스되는 것에 동의하고, CLA([`CLA.md`](../../../CLA.md))에 서명합니다.
+기여함으로써 귀하는 자신의 기여가 본 프로젝트의 라이선스로 라이선스되는 것에 동의하고, CLA([`CLA.md`](../../../en/meta/cla.md))에 서명합니다.
 CLA는 프로젝트에 **재라이선스 권한을 포함한** 관대한 라이선스를 부여하여, 프로젝트가 BUSL→Apache/MIT 경로를 유지하고
 향후 라이선스를 조정할 수 있게 합니다.

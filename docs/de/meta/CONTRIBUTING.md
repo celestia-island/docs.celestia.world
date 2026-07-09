@@ -1,5 +1,5 @@
 # Mitwirken bei Arona
-> Dies ist eine gemeinschaftliche Referenzübersetzung. Bei Unstimmigkeiten ist die englische Originaldatei [`CONTRIBUTING.md`](../../../CONTRIBUTING.md) im Stammverzeichnis des Repositorys maßgeblich.
+> Dies ist eine gemeinschaftliche Referenzübersetzung. Bei Unstimmigkeiten ist die englische Originaldatei [`CONTRIBUTING.md`](../../en/meta/CONTRIBUTING.md) im Stammverzeichnis des Repositorys maßgeblich.
 
 Vielen Dank für Ihr Interesse an der Mitarbeit! Dieser Leitfaden deckt alles ab, was Sie für den Einstieg benötigen.
 

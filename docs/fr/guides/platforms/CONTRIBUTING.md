@@ -1,7 +1,7 @@
 # Contribuer à Evernight
 
 > Ceci est la version française de la politique de contribution. Les commandes
-> de build et l'installation détaillée se trouvent dans le [`CONTRIBUTING.md`](../../../CONTRIBUTING.md)
+> de build et l'installation détaillée se trouvent dans le [`CONTRIBUTING.md`](../../../en/meta/CONTRIBUTING.md)
 > anglais à la racine du dépôt ; les commandes ne sont pas traduites. En cas de
 > conflit, la version anglaise fait foi.
 
@@ -29,7 +29,7 @@ d'ouvrir une pull request.
   périphérie est l'endroit où les contributions externes sont les plus utiles et
   les plus susceptibles d'être acceptées.
 - **CLA obligatoire.** Toute contribution acceptée exige un CLA signé, voir
-  [`CLA.md`](../../../CLA.md). Les commits doivent porter une ligne
+  [`CLA.md`](../../../en/meta/cla.md). Les commits doivent porter une ligne
   `Signed-off-by` (`git commit -s`).
 
 > **La licence s'ouvre, la barre de fusion, non.** Le **2030-01-01**, ce projet
@@ -43,11 +43,11 @@ d'ouvrir une pull request.
 
 N'ouvrez **pas** d'issue publique pour une vulnérabilité. Signalez-la en privé
 via [GitHub Security Advisories](https://github.com/celestia-island/evernight/security/advisories/new).
-Le modèle de menaces et le SLA sont dans [`SECURITY.md`](../../../SECURITY.md).
+Le modèle de menaces et le SLA sont dans [`SECURITY.md`](../../../en/meta/security.md).
 
 ## Code de conduite
 
-Soyez respectueux, constructif et inclusif. Nous suivons le [Contributor Covenant Code of Conduct](../../../CODE_OF_CONDUCT.md).
+Soyez respectueux, constructif et inclusif. Nous suivons le [Contributor Covenant Code of Conduct](../../../en/meta/code-of-conduct.md).
 
 ## Processus de pull request
 
@@ -68,6 +68,6 @@ Les usages commerciaux restreints (hébergement, revente, rebranding en tant que
 service) nécessitent une licence commerciale distincte jusqu'à la date de changement.
 
 En contribuant, vous acceptez que vos contributions soient licenciées sous la
-licence du projet et que vous signiez le CLA ([`CLA.md`](../../../CLA.md)). Le CLA
+licence du projet et que vous signiez le CLA ([`CLA.md`](../../../en/meta/cla.md)). Le CLA
 accorde au projet une licence permissive **incluant le droit de relicencier**, afin
 qu'il puisse conserver son parcours BUSL→Apache/MIT et adapter son licence à l'avenir.

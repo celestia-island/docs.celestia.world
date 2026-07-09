@@ -1,5 +1,5 @@
 # Verhaltenskodex
-> Dies ist eine gemeinschaftliche Referenzübersetzung. Bei Unstimmigkeiten ist die englische Originaldatei [`CODE_OF_CONDUCT.md`](../../../CODE_OF_CONDUCT.md) im Stammverzeichnis des Repositorys maßgeblich.
+> Dies ist eine gemeinschaftliche Referenzübersetzung. Bei Unstimmigkeiten ist die englische Originaldatei [`CODE_OF_CONDUCT.md`](../../en/meta/code-of-conduct.md) im Stammverzeichnis des Repositorys maßgeblich.
 
 ## Unser Versprechen
 

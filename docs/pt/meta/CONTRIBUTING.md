@@ -1,5 +1,5 @@
 # Contribuindo com Arona
-> Esta é uma tradução de referência da comunidade. Em caso de divergência, prevalece a versão original em inglês [`CONTRIBUTING.md`](../../../CONTRIBUTING.md) na raiz do repositório.
+> Esta é uma tradução de referência da comunidade. Em caso de divergência, prevalece a versão original em inglês [`CONTRIBUTING.md`](../../en/meta/CONTRIBUTING.md) na raiz do repositório.
 
 Obrigado pelo seu interesse em contribuir! Este guia cobre tudo o que você precisa para começar.
 

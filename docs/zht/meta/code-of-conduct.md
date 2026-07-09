@@ -1,5 +1,5 @@
 # 行為準則
-> 本文為社群參考翻譯。如有歧義，以倉庫根目錄下的英文原版 [`CODE_OF_CONDUCT.md`](../../../CODE_OF_CONDUCT.md) 為準。
+> 本文為社群參考翻譯。如有歧義，以倉庫根目錄下的英文原版 [`CODE_OF_CONDUCT.md`](../../en/meta/code-of-conduct.md) 為準。
 
 ## 我們的承諾
 

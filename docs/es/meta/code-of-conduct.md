@@ -1,5 +1,5 @@
 # Código de Conducta
-> Esta es una traducción de referencia comunitaria. En caso de discrepancia, prevalece la versión original en inglés [`CODE_OF_CONDUCT.md`](../../../CODE_OF_CONDUCT.md) en la raíz del repositorio.
+> Esta es una traducción de referencia comunitaria. En caso de discrepancia, prevalece la versión original en inglés [`CODE_OF_CONDUCT.md`](../../en/meta/code-of-conduct.md) en la raíz del repositorio.
 
 ## Nuestro compromiso
 

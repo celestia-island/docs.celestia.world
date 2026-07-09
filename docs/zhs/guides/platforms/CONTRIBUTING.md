@@ -1,7 +1,7 @@
 # 贡献指南（Evernight）
 
 > 本文件是贡献政策的简体中文版本。构建命令与详细安装步骤请见仓库根目录的英文
-> [`CONTRIBUTING.md`](../../../CONTRIBUTING.md)；命令本身不翻译。如有歧义，以英文版为准。
+> [`CONTRIBUTING.md`](../../../en/meta/CONTRIBUTING.md)；命令本身不翻译。如有歧义，以英文版为准。
 
 ## 贡献政策（请先阅读）
 
@@ -17,7 +17,7 @@ Pull Request 之前，请先阅读本节。
   的改动。
 - **核心 vs. 外延。** 核心（编排、微内核、安全）维持最严标准，主要由核心团队维护。外延
   是外部贡献最有用、也最可能被接受的地方。
-- **必须签署 CLA。** 每一个被接受的贡献都需要签署贡献者许可协议，见 [`CLA.md`](../../../CLA.md)。
+- **必须签署 CLA。** 每一个被接受的贡献都需要签署贡献者许可协议，见 [`CLA.md`](../../../en/meta/cla.md)。
   提交须带 `Signed-off-by`（`git commit -s`）。
 
 > **许可证会开放，合并门槛不会。** 在 **2030-01-01**，本项目从 BUSL-1.1 转为 Apache-2.0 或
@@ -28,11 +28,11 @@ Pull Request 之前，请先阅读本节。
 
 **不要**用公开 issue 报告安全漏洞。请通过
 [GitHub Security Advisories](https://github.com/celestia-island/evernight/security/advisories/new)
-私下报告。威胁模型与响应 SLA 见 [`SECURITY.md`](../../../SECURITY.md)。
+私下报告。威胁模型与响应 SLA 见 [`SECURITY.md`](../../../en/meta/security.md)。
 
 ## 行为准则
 
-请保持尊重、建设性与包容。我们遵循 [Contributor Covenant Code of Conduct](../../../CODE_OF_CONDUCT.md)。
+请保持尊重、建设性与包容。我们遵循 [Contributor Covenant Code of Conduct](../../../en/meta/code-of-conduct.md)。
 
 ## Pull Request 流程
 
@@ -50,5 +50,5 @@ MIT**。如今在内部运营、学术、政府、教育与非商业用途下，
 [`LICENSE`](../../../LICENSE) 中的 Additional Use Grant）。受限的商业用途（托管、转售、作为
 服务换皮销售）在 Change Date 之前需另行获取商业授权。
 
-提交贡献即表示你同意贡献按本项目许可证授权，并签署 CLA（[`CLA.md`](../../../CLA.md)）。CLA
+提交贡献即表示你同意贡献按本项目许可证授权，并签署 CLA（[`CLA.md`](../../../en/meta/cla.md)）。CLA
 授予项目**含再许可权在内的**宽松许可，使项目能保持 BUSL→Apache/MIT 的路径，并在未来调整许可。

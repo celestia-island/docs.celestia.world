@@ -40,7 +40,7 @@ Arona는 Entelecheia 플랫폼 전반에서 사용되는 공유 JSON-RPC 2.0 프
 ## 보안
 
 보안 취약점에 대해 공개 이슈를 열지 **마십시오**.
-[GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new)를 통해
+[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new)를 통해
 비공개로 신고하십시오. [`SECURITY.md`](security.md)를 참조하십시오.
 
 ## 행동 강령
@@ -53,7 +53,7 @@ Arona는 Entelecheia 플랫폼 전반에서 사용되는 공유 JSON-RPC 2.0 프
 Arona는 작은 Rust 크레이트입니다. 빠른 시작:
 
 ```bash
-git clone https://github.com/celestia-island/arona.git
+git clone https://github.com/celestia-island/plana.git
 cd arona
 cargo build
 cargo test

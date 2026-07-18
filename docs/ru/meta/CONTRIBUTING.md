@@ -44,7 +44,7 @@ request.
 ## Безопасность
 
 **Не** открывайте публичные issues для уязвимостей безопасности. Сообщайте о них конфиденциально
-через [GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
+через [GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
 См. [`SECURITY.md`](security.md).
 
 ## Кодекс поведения
@@ -57,7 +57,7 @@ request.
 Arona — это небольшой крейт Rust. Быстрый старт:
 
 ```bash
-git clone https://github.com/celestia-island/arona.git
+git clone https://github.com/celestia-island/plana.git
 cd arona
 cargo build
 cargo test

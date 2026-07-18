@@ -44,7 +44,7 @@ línea `Signed-off-by` (`git commit -s`).
 ## Seguridad
 
 **No** abras issues públicos para vulnerabilidades de seguridad. Repórtalas de forma privada
-a través de [Avisos de Seguridad de GitHub](https://github.com/celestia-island/arona/security/advisories/new).
+a través de [Avisos de Seguridad de GitHub](https://github.com/celestia-island/plana/security/advisories/new).
 Ver [`SECURITY.md`](security.md).
 
 ## Código de Conducta
@@ -57,7 +57,7 @@ Sé respetuoso, constructivo e inclusivo. Seguimos el
 Arona es una pequeña crate de Rust. Inicio rápido:
 
 ```bash
-git clone https://github.com/celestia-island/arona.git
+git clone https://github.com/celestia-island/plana.git
 cd arona
 cargo build
 cargo test

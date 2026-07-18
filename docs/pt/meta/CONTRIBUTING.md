@@ -21,7 +21,7 @@ Arona define os tipos de protocolo JSON-RPC 2.0 compartilhados consumidos em tod
 
 ## Segurança
 
-**Não** abra issues públicas para vulnerabilidades de segurança. Relate-as de forma privada via [GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new). Veja [`SECURITY.md`](security.md).
+**Não** abra issues públicas para vulnerabilidades de segurança. Relate-as de forma privada via [GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new). Veja [`SECURITY.md`](security.md).
 
 ## Código de Conduta
 
@@ -32,7 +32,7 @@ Seja respeitoso, construtivo e inclusivo. Seguimos o [Código de Conduta Contrib
 Arona é uma pequena crate Rust. Início rápido:
 
 ```bash
-git clone https://github.com/celestia-island/arona.git
+git clone https://github.com/celestia-island/plana.git
 cd arona
 cargo build
 cargo test

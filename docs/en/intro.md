@@ -18,7 +18,7 @@ Lightweight libraries that belong to the ecosystem:
 
 | Project | Description |
 | --- | --- |
-| [Arona](https://github.com/celestia-island/arona) | Shared protocol types for JSON-RPC 2.0 |
+| [Arona](https://github.com/celestia-island/plana) | Shared protocol types for JSON-RPC 2.0 |
 | [Noa](https://github.com/celestia-island/noa) | AI-native distributed version control — [docs](https://noa.docs.celestia.world) |
 
 ## Tool Libraries

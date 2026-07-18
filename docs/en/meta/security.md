@@ -5,7 +5,7 @@
 **Do not open public issues for security vulnerabilities.**
 
 Report them privately via
-[GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
+[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
 If GitHub Security Advisories are unavailable to you, email the maintainer at
 <security@celestia.world> with a clear description and reproduction steps.
 

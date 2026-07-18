@@ -6,7 +6,7 @@
 **请勿针对安全漏洞公开提 issue。**
 
 请通过
-[GitHub 安全公告](https://github.com/celestia-island/arona/security/advisories/new)
+[GitHub 安全公告](https://github.com/celestia-island/plana/security/advisories/new)
 私下报告。
 如果您无法使用 GitHub 安全公告，请发送邮件至维护者
 <security@celestia.world>，并附上清晰的描述与复现步骤。

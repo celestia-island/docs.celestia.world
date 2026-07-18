@@ -5,7 +5,7 @@
 
 **보안 취약점에 대해 공개 이슈를 열지 마세요.**
 
-[GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new)
+[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new)
 를 통해 비공개로 신고해 주세요.
 GitHub Security Advisories를 이용할 수 없는 경우, 명확한 설명과 재현 단계를 포함하여
 유지관리자(<security@celestia.world>)에게 이메일을 보내주세요.

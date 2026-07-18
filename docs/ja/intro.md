@@ -18,7 +18,7 @@
 | --- | --- | --- |
 | **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | マルチエージェントコラボレーションプラットフォーム |
 | **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | ユーザー向けシェル |
-| **Platforms** | [arona](https://github.com/celestia-island/arona) · [evernight](https://github.com/celestia-island/evernight) | プロトコルタイプ · リモートコントロール |
+| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | プロトコルタイプ · リモートコントロール |
 
 ## ツールライブラリ
 

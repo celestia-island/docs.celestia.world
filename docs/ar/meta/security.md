@@ -6,7 +6,7 @@
 **لا تفتح issues عامة للثغرات الأمنية.**
 
 أبلغ عنها بشكل خاص عبر
-[GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
+[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
 إذا لم يكن GitHub Security Advisories متاحًا لك، أرسل بريدًا إلكترونيًا إلى المشرف على
 <security@celestia.world> مع وصف واضح وخطوات إعادة الإنتاج.
 

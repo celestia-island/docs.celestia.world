@@ -40,7 +40,7 @@ PR，以及任何降低型別合約相容性門檻的內容。
 ## 安全性
 
 **不要**為安全漏洞開立公開 issue。請透過
-[GitHub 安全諮詢](https://github.com/celestia-island/arona/security/advisories/new)
+[GitHub 安全諮詢](https://github.com/celestia-island/plana/security/advisories/new)
 私下回報。請參閱 [`SECURITY.md`](security.md)。
 
 ## 行為準則
@@ -53,7 +53,7 @@ PR，以及任何降低型別合約相容性門檻的內容。
 Arona 是一個小型的 Rust crate。快速開始：
 
 ```bash
-git clone https://github.com/celestia-island/arona.git
+git clone https://github.com/celestia-island/plana.git
 cd arona
 cargo build
 cargo test

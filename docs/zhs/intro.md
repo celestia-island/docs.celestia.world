@@ -18,7 +18,7 @@
 | --- | --- | --- |
 | **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能体协作平台 |
 | **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | 面向用户的 Shell |
-| **Platforms** | [arona](https://github.com/celestia-island/arona) · [evernight](https://github.com/celestia-island/evernight) | 协议类型 · 远程控制 |
+| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | 协议类型 · 远程控制 |
 
 ## 工具库
 

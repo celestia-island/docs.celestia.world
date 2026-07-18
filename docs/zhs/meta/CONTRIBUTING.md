@@ -41,7 +41,7 @@ pull request 之前，请先阅读本部分。
 ## 安全
 
 **不要**为安全漏洞公开发布 issue。请通过
-[GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new)
+[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new)
 私下报告。参见 [`SECURITY.md`](security.md)。
 
 ## 行为准则
@@ -54,7 +54,7 @@ pull request 之前，请先阅读本部分。
 Arona 是一个小型 Rust crate。快速开始：
 
 ```bash
-git clone https://github.com/celestia-island/arona.git
+git clone https://github.com/celestia-island/plana.git
 cd arona
 cargo build
 cargo test

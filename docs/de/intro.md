@@ -18,7 +18,7 @@ Jede Einrichtung unterhält ihre eigene Dokumentationsseite, die aus demselben R
 | --- | --- | --- |
 | **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | Plattform für Multi-Agenten-Kollaboration |
 | **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Benutzerorientierte Shell |
-| **Platforms** | [arona](https://github.com/celestia-island/arona) · [evernight](https://github.com/celestia-island/evernight) | Protokolltypen · Fernsteuerung |
+| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | Protokolltypen · Fernsteuerung |
 
 ## Werkzeugbibliotheken
 

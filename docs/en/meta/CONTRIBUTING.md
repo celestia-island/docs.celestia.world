@@ -44,7 +44,7 @@ License Agreement. See [`CLA.md`](cla.md). Commits must carry a
 ## Security
 
 Do **not** open public issues for security vulnerabilities. Report them privately
-via [GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
+via [GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
 See [`SECURITY.md`](security.md).
 
 ## Code of Conduct
@@ -57,7 +57,7 @@ Be respectful, constructive, and inclusive. We follow the
 Arona is a small Rust crate. Quick start:
 
 ```bash
-git clone https://github.com/celestia-island/arona.git
+git clone https://github.com/celestia-island/plana.git
 cd arona
 cargo build
 cargo test

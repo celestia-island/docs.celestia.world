@@ -16,7 +16,7 @@ Aronaは、Entelecheiaプラットフォーム全体で使用される共有JSON
 
 ## セキュリティ
 
-セキュリティ脆弱性について公開Issueを**作成しないでください**。脆弱性は[GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new)を通じて非公開で報告してください。[`SECURITY.md`](security.md)を参照してください。
+セキュリティ脆弱性について公開Issueを**作成しないでください**。脆弱性は[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new)を通じて非公開で報告してください。[`SECURITY.md`](security.md)を参照してください。
 
 ## 行動規範
 
@@ -27,7 +27,7 @@ Aronaは、Entelecheiaプラットフォーム全体で使用される共有JSON
 Aronaは小規模なRustクレートです。クイックスタート：
 
 ```bash
-git clone https://github.com/celestia-island/arona.git
+git clone https://github.com/celestia-island/plana.git
 cd arona
 cargo build
 cargo test

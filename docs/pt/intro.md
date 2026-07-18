@@ -18,7 +18,7 @@ Cada instalação mantém seu próprio site de documentação, construído a par
 | --- | --- | --- |
 | **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboração multi-agente |
 | **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Shell voltado para o usuário |
-| **Platforms** | [arona](https://github.com/celestia-island/arona) · [evernight](https://github.com/celestia-island/evernight) | Tipos de protocolos · Controle remoto |
+| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | Tipos de protocolos · Controle remoto |
 
 ## Bibliotecas de ferramentas
 

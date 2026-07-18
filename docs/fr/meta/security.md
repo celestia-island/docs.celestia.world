@@ -6,7 +6,7 @@
 **N'ouvrez pas de tickets publics pour les vulnérabilités de sécurité.**
 
 Signalez-les en privé via
-[GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
+[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
 Si GitHub Security Advisories n'est pas disponible pour vous, envoyez un e-mail au responsable à
 <security@celestia.world> avec une description claire et les étapes de reproduction.
 

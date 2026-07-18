@@ -18,7 +18,7 @@
 | --- | --- | --- |
 | **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | 다중 에이전트 협업 플랫폼 |
 | **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | 사용자 대면 셸 |
-| **Platforms** | [arona](https://github.com/celestia-island/arona) · [evernight](https://github.com/celestia-island/evernight) | 프로토콜 유형 · 원격 제어 |
+| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | 프로토콜 유형 · 원격 제어 |
 
 ## 도구 라이브러리
 

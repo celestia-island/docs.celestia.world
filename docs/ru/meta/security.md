@@ -6,7 +6,7 @@
 **Не создавайте публичные issues для уязвимостей безопасности.**
 
 Сообщайте о них в частном порядке через
-[GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
+[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
 Если GitHub Security Advisories вам недоступен, напишите мейнтейнеру на
 <security@celestia.world> с понятным описанием и шагами воспроизведения.
 

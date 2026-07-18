@@ -18,7 +18,7 @@
 | --- | --- | --- |
 | **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | منصة تعاون متعددة الوكلاء |
 | **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | واجهة المستخدم |
-| **Platforms** | [arona](https://github.com/celestia-island/arona) · [evernight](https://github.com/celestia-island/evernight) | أنواع البروتوكولات · التحكم عن بعد |
+| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | أنواع البروتوكولات · التحكم عن بعد |
 
 ## مكتبات الأدوات
 

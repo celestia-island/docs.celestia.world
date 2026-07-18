@@ -18,7 +18,7 @@
 | --- | --- | --- |
 | **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | Платформа для совместной работы нескольких агентов |
 | **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Пользовательская оболочка |
-| **Platforms** | [arona](https://github.com/celestia-island/arona) · [evernight](https://github.com/celestia-island/evernight) | Типы протоколов · Удалённое управление |
+| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | Типы протоколов · Удалённое управление |
 
 ## Инструментальные библиотеки
 

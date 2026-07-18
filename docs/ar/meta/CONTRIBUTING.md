@@ -42,7 +42,7 @@
 ## الأمان
 
 لا تفتح **مشكلات** عامة للثغرات الأمنية. أبلغ عنها بشكل خاص
-عبر [GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new).
+عبر [GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
 انظر [`SECURITY.md`](security.md).
 
 ## مدونة قواعد السلوك
@@ -55,7 +55,7 @@
 Arona كريت Rust صغير. البدء السريع:
 
 ```bash
-git clone https://github.com/celestia-island/arona.git
+git clone https://github.com/celestia-island/plana.git
 cd arona
 cargo build
 cargo test

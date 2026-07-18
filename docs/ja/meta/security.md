@@ -5,7 +5,7 @@
 
 **セキュリティ脆弱性について公開の issue を開かないでください。**
 
-[GitHub Security Advisories](https://github.com/celestia-island/arona/security/advisories/new)
+[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new)
 から非公開で報告してください。
 GitHub Security Advisories を利用できない場合は、メンテナ宛てに
 <security@celestia.world> へ、明確な説明と再現手順を記載したメールを送信してください。

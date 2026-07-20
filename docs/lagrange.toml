@@ -4,6 +4,9 @@ description = "Centralized documentation hub for the celestia-island ecosystem"
 
 cname = "docs.celestia.world"
 
+[layout]
+content_padding = "max(16px, 10%)"
+
 [languages]
 default = "en"
 order = ["en", "zhs", "zht", "ja", "ko", "de", "fr", "es", "pt", "ru", "ar"]

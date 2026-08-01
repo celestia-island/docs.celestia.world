@@ -17,3 +17,7 @@
 - [Arona](./guides/platforms/README-plana.md)
 - [Noa](./guides/platforms/README-noa.md)
 - [Platform Designs](./designs/platforms/README.md)
+
+# Guides
+
+- [Internal Beta Guide](./guides/beta/README.md)

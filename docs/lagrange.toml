@@ -1,6 +1,6 @@
 [site]
 title = "Celestia World Docs"
-description = "Centralized documentation hub for the celestia-island ecosystem"
+description = "Documentation hub for the celestia-island ecosystem — philosophy, ecosystem map, and getting started."
 
 cname = "docs.celestia.world"
 
@@ -9,4 +9,4 @@ content_padding = "max(16px, 10%)"
 
 [languages]
 default = "en"
-order = ["en", "zhs", "zht", "ja", "ko", "de", "fr", "es", "pt", "ru", "ar"]
+order = ["en", "zh-Hans", "zh-Hant", "ja", "ko", "de", "fr", "es", "pt", "ru", "ar"]

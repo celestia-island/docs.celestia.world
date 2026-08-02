@@ -2,12 +2,12 @@ name: CI
 
 on:
   push:
-    branches: [main, dev]
+    branches: [master]
     paths:
       - 'docs/**'
       - '.github/workflows/ci.yml'
   pull_request:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -28,7 +28,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
 
       - name: Install lagrange
-        run: cargo install lagrange-library --locked || cargo install --git https://github.com/celestia-island/lagrange --branch dev lagrange-library
+        run: cargo install lagrange-library --locked || cargo install --git https://github.com/celestia-island/lagrange --branch master lagrange-library
 
       - name: Build docs
         run: lagrange build --src docs --out _site
@@ -43,7 +43,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
+    if: github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

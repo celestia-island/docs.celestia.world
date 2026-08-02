@@ -1,4 +1,5 @@
 # 행동 강령
+
 > 이 문서는 커뮤니티 참고 번역입니다. 모호한 부분이 있을 경우, 저장소 루트의 영어 원본 [`CODE_OF_CONDUCT.md`](../../en/meta/code-of-conduct.md)를 우선합니다.
 
 ## 우리의 서약
@@ -71,7 +72,7 @@
 
 ## 저작자 표시
 
-본 행동 강령은 [Contributor Covenant][homepage](기여자 서약) 버전 2.1에서 각색되었으며, [https://www.contributor-covenant.org/version/2/1/`code_of_conduct`/][v2.1]에서 확인할 수 있습니다.
+본 행동 강령은 [Contributor Covenant][homepage]（기여자 서약） 버전 2.1에서 각색되었으며, [https://www.contributor-covenant.org/version/2/1/`code_of_conduct`/][v2.1]에서 확인할 수 있습니다.
 
 커뮤니티 영향 지침은 [Mozilla의 행동 강령 집행 사다리][mozilla-coc]에서 영감을 받았습니다.
 

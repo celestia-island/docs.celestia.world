@@ -3,7 +3,7 @@
 
 <h1 align="center">docs.celestia.world</h1>
 
-<p align="center"><strong>Centralized documentation hub</strong></p>
+<p align="center"><strong>The philosophy and entry point of the celestia-island ecosystem</strong></p>
 
 <div align="center">
 
@@ -13,60 +13,47 @@
 </div>
 <!-- markdownlint-enable MD033 MD041 MD036 -->
 
-`docs.celestia.world` is the single home for all documentation of the
-celestia-island projects. It supersedes the per-repo `docs/` directories and
-the former `arona` docs hub, and is published as a multilingual documentation
-site at [docs.celestia.world](https://docs.celestia.world).
+`docs.celestia.world` is the *why* layer of the celestia-island ecosystem: it
+explains the project philosophy (the closed loop, layered architecture, safety
+principles, long-term narrative), maps all projects to their repositories and
+per-project documentation sites, and guides new users from zero to a working
+system. Every *how* document lives in the per-project sites at
+`<name>.docs.celestia.world`; this hub links to them and never duplicates them.
 
-Built with [mdBook](https://rust-lang.github.io/mdBook/) and a custom
-language switcher supporting 11 languages.
+Built with [lagrange](https://github.com/celestia-island/lagrange) and a
+custom language switcher supporting 11 languages.
 
-## Projects covered
-
-| Group | Repositories |
-| --- | --- |
-| `core` | [entelecheia](https://github.com/celestia-island/entelecheia) — multi-agent collaboration platform |
-| `webui` | [shittim-chest](https://github.com/celestia-island/shittim-chest) — user-facing shell |
-| `platforms` | [arona](https://github.com/celestia-island/plana) (protocol types) · [evernight](https://github.com/celestia-island/evernight) (remote control & protocols) |
-| `tool` | [yuuka](https://github.com/celestia-island/yuuka) · [kirino](https://github.com/celestia-island/kirino) · [noa](https://github.com/celestia-island/noa) · [malkuth](https://github.com/celestia-island/malkuth) · [seia](https://github.com/celestia-island/seia) · [lagrange](https://github.com/celestia-island/lagrange) · [ichika](https://github.com/celestia-island/ichika) · [aoba](https://github.com/celestia-island/aoba) — standalone Rust libraries; each has its own docs at `<name>.docs.celestia.world` |
-
-## Structure
+## Layout
 
 ```text
 docs/
-├── logo.webp                    # Hub logo
-├── theme/                       # Shared lang-switcher JS/CSS
+├── logo.webp                 # Hub logo
+├── lagrange.toml             # Site config and language order
+├── theme/                    # Shared lang-switcher JS/CSS
 │   ├── lang-switcher.js
 │   └── lang-switcher.css
-└── <lang>/                      # Per-language mdBook
-    ├── book.toml                # mdBook configuration
-    ├── SUMMARY.md               # Table of contents
-    ├── intro.md                 # Welcome page
-    ├── meta/                    # License, CLA, CoC, Security
-    ├── guides/{core,webui,platforms}/   # Practical guides
-    └── designs/{core,webui,platforms}/  # Architecture & design docs
+└── <lang>/                   # Per-language content (BCP-47 codes)
+    ├── SUMMARY.md            # Table of contents
+    ├── intro.md              # Welcome page
+    ├── philosophy/           # Why: closed loop, architecture, safety, narrative
+    ├── ecosystem/            # Project map and site ownership
+    ├── getting-started/      # Quickstart and beta guide
+    └── meta/                 # License, CLA, CoC, Security, Contributing
 ```
 
 ### Languages
 
-`en` (canonical) · `zhs` · `zht` · `ja` · `ko` · `fr` · `es` · `ru` · `de` · `pt` · `ar`
+`en` (canonical) · `zh-Hans` · `zh-Hant` · `ja` · `ko` · `fr` · `es` · `ru` · `de` · `pt` · `ar`
 
-> `de`, `pt`, and `ar` are partial translations (meta/legal documents only).
+Content is authored in `en` and translated to the other languages. `en` is the
+single source of truth; if translations lag, they say so explicitly.
 
 ## Building
 
 ```bash
-# Install mdBook
-cargo install mdbook
-
-# Build all languages
-just build
-
-# Build a single language
-just build-lang en
-
-# Serve locally (with live reload)
-just serve en
+just build   # Build all languages with lagrange
+just serve   # Serve locally (with live reload)
+just lint    # markdownlint over docs/**
 ```
 
 ## License

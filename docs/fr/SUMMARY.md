@@ -1,19 +1,31 @@
-# Summary
+# Sommaire
 
-[Welcome](./intro.md)
+[Bienvenue](./intro.md)
 
 ---
 
+# Philosophie
+
+- [Pourquoi](./philosophy/why.md)
+- [La Boucle Fermée](./philosophy/closed-loop.md)
+- [Architecture en couches](./philosophy/layered-architecture.md)
+- [Principes de sécurité](./philosophy/safety.md)
+- [Récit & Horizon](./philosophy/narrative.md)
+
+# Écosystème
+
+- [Carte des projets](./ecosystem/projects.md)
+- [Sites & Propriété](./ecosystem/sites.md)
+
+# Bien démarrer
+
+- [Démarrage rapide](./getting-started/quickstart.md)
+- [Guide de la bêta fermée](./getting-started/beta-guide.md)
+
 # Meta
 
-- [License](./meta/license.md)
+- [Licence](./meta/license.md)
 - [CLA](./meta/cla.md)
-- [Code of Conduct](./meta/code-of-conduct.md)
-- [Security](./meta/security.md)
-- [Contributing](./meta/CONTRIBUTING.md)
-
-# Platforms
-
-- [Arona](./guides/platforms/README-plana.md)
-- [Noa](./guides/platforms/README-noa.md)
-- [Platform Designs](./designs/platforms/README.md)
+- [Code de conduite](./meta/code-of-conduct.md)
+- [Sécurité](./meta/security.md)
+- [Contribuer](./meta/CONTRIBUTING.md)

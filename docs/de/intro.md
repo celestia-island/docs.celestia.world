@@ -1,46 +1,54 @@
-# Willkommen bei der celestia-island Dokumentation
+# Willkommen bei celestia-island
 
-Dies ist der zentrale Dokumentations-Hub für das **celestia-island** Ökosystem.
+**celestia-island** ist eine Suite von Projekten für industrielle KI-Steuerung:
+Multi-Agenten-Kollaboration, Fernoperation und sicherheitskritische
+Automatisierung. Diese Seite ist ihr *Warum* — die Philosophie, die
+Ökosystem-Karte und der Einstiegspunkt. Das *Wie* lebt in den projekteigenen
+Dokumentationsseiten, die von hier aus verlinkt sind.
 
-## Einrichtungen
+## Drei Fragen, drei Antworten
 
-Jede Einrichtung unterhält ihre eigene Dokumentationsseite, die aus demselben Repository wie der Quellcode erstellt wird:
-
-| Einrichtung | Beschreibung | Dokumentation |
+| Frage | Wo | Was Sie finden |
 | --- | --- | --- |
-| **Entelecheia** | Plattform für Multi-Agenten-Kollaboration | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| **Shittim Chest** | WebUI, Backend, CLI-Shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| **Evernight** | Broker für Fernsteuerung und Industrieprotokolle | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| **Warum gibt es das?** | [Philosophie](./philosophy/why.md) | Das Problem, das wir lösen, der geschlossene Regelkreis, die Sicherheitsdoktrin und der langfristige Horizont |
+| **Was steckt dahinter?** | [Ökosystem](./ecosystem/projects.md) | Jedes Projekt, seine Rolle im Regelkreis und wo seine Dokumentation liegt |
+| **Wie fange ich an?** | [Erste Schritte](./getting-started/quickstart.md) | Der 30-Minuten-Weg vom Konto bis zu einem funktionierenden Chat-Agenten und industrieller Steuerung |
 
-## Plattformprojekte
+## Die Kurzfassung in einem Absatz
 
-| Gruppe | Projekt | Beschreibung |
-| --- | --- | --- |
-| **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | Plattform für Multi-Agenten-Kollaboration |
-| **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Benutzerorientierte Shell |
-| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | Protokolltypen · Fernsteuerung |
+celestia-island baut den **geschlossenen Regelkreis** von der Entdeckung bis
+zur Verifikation für KI-gesteuerte industrielle Steuerung: entdecken →
+installieren → authentifizieren → Modell bereitstellen → chatten und Agenten
+ausführen → Industrieanlagen steuern → alles verifizieren. Der Regelkreis wird
+aus kleinen, streng geschichteten Bausteinen zusammengesetzt:
+Authentifizierungs-Primitive ([kirino](https://github.com/celestia-island/kirino)),
+Plattform-Grundlagen ([plana](https://github.com/celestia-island/plana)),
+UI-Komponenten ([hikari](https://github.com/celestia-island/hikari)) und
+Dienste, die nur Geschäftslogik implementieren
+([arona](https://github.com/celestia-island/arona),
+[shittim-chest](https://github.com/celestia-island/shittim-chest),
+[entelecheia](https://github.com/celestia-island/entelecheia),
+[evernight](https://github.com/celestia-island/evernight)). Nichts wird je
+doppelt implementiert: generische Fähigkeiten werden einmalig upstream gebaut
+und von jedem Dienst downstream konsumiert.
 
-## Werkzeugbibliotheken
+Der Grund dafür ist eine einfache Beobachtung: Auf dem Mond dauert eine
+Signal-Rundstrecke 2,6 Sekunden, auf dem Mars 6 bis 44 Minuten. Roboter dort
+können nicht auf einen Menschen auf der Erde warten — sie müssen lokal autonom
+sein. Die Entscheidungsebene, das Weltmodell und die Sicherheitssperren, die
+wir heute für die industrielle Steuerung bauen, haben dieselbe Form, die
+Autonomie morgen brauchen wird.
 
-Eigenständige Rust-Bibliotheken, die zum celestia-island-Ökosystem gehören,
-aber nicht an die entelecheia-Plattform gebunden sind. Jedes Werkzeug bietet
-eine eigene Dokumentationsseite unter `<name>.docs.celestia.world`.
+## Wo alles liegt
 
-| Bibliothek | Beschreibung | Dokumentation |
-| --- | --- | --- |
-| [yuuka](https://github.com/celestia-island/yuuka) | Prozedurales Makro für komplexe verschachtelte Strukturen | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
-| [kirino](https://github.com/celestia-island/kirino) | Zero-Trust-Authentifizierung und RBAC | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
-| [noa](https://github.com/celestia-island/noa) | AI-native verteilte Versionskontrolle | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
-| [malkuth](https://github.com/celestia-island/malkuth) | Dienstüberwachungs-Toolkit | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [seia](https://github.com/celestia-island/seia) | Multi-Engine-Websuche | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | Pest-basierter Markdown-Dokumentenrenderer | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Thread-Pool-Pipeline-Makros | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [aoba](https://github.com/celestia-island/aoba) | Modbus- und Datenquellen-CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+- **Projekteigene Dokumentation** — `<name>.docs.celestia.world`, aus jedem
+  Repository erstellt. Die vollständige Liste finden Sie unter
+  [Sites & Verantwortlichkeiten](./ecosystem/sites.md).
+- **Präsenz der Organisation** — [celestia-island auf GitHub](https://github.com/celestia-island).
+- **Produkt-Panels (WIP während der Beta)** — [arona](https://arona.celestia.world)
+  (Cloud-API-Admin), [dev](https://dev.celestia.world) (Entwicklerportal); das
+  Live-Panel läuft bis zum Ende der Beta intern unter `arona:8420`.
 
-## Organisation
-
-- **Meta** — gemeinsame Richtlinien: Lizenz, CLA, Verhaltenskodex, Sicherheit
-- **Guides** — praktische Leitfäden für den Einstieg und die Entwicklung
-- **Designs** — Architektur- und Designdokumente
-
-Verwenden Sie den Sprachumschalter (unten rechts), um zwischen den verfügbaren Sprachen zu wechseln.
+Verwenden Sie den Sprachumschalter (unten rechts), um diese Seite in einer
+anderen Sprache zu lesen. Die Inhalte werden auf Englisch verfasst;
+Übersetzungen folgen derselben Struktur.

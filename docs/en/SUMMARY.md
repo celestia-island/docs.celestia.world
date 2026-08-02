@@ -4,6 +4,24 @@
 
 ---
 
+# Philosophy
+
+- [Why](./philosophy/why.md)
+- [The Closed Loop](./philosophy/closed-loop.md)
+- [Layered Architecture](./philosophy/layered-architecture.md)
+- [Safety Principles](./philosophy/safety.md)
+- [Narrative & Horizon](./philosophy/narrative.md)
+
+# Ecosystem
+
+- [Projects Map](./ecosystem/projects.md)
+- [Sites & Ownership](./ecosystem/sites.md)
+
+# Get Started
+
+- [Quickstart](./getting-started/quickstart.md)
+- [Closed Beta Guide](./getting-started/beta-guide.md)
+
 # Meta
 
 - [License](./meta/license.md)
@@ -11,9 +29,3 @@
 - [Code of Conduct](./meta/code-of-conduct.md)
 - [Security](./meta/security.md)
 - [Contributing](./meta/CONTRIBUTING.md)
-
-# Platforms
-
-- [Arona](./guides/platforms/README-plana.md)
-- [Noa](./guides/platforms/README-noa.md)
-- [Platform Designs](./designs/platforms/README.md)

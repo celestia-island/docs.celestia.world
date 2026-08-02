@@ -1,46 +1,47 @@
 # celestia-island 문서에 오신 것을 환영합니다
 
-**celestia-island** 생태계의 중앙 집중식 문서 허브입니다.
+**celestia-island**는 산업용 AI 제어를 위한 프로젝트 모음입니다: 다중 에이전트
+협업, 원격 운영, 안전 필수(safety-critical) 자동화가 포함됩니다. 이 사이트는
+그 *이유* — 철학, 생태계 지도, 진입점 — 를 담고 있습니다. *방법* 은 각
+프로젝트별 문서 사이트에 있으며 여기에서 연결됩니다.
 
-## 시설
+## 세 가지 질문에 대한 답변
 
-각 시설은 자체 문서 사이트를 유지하며, 소스 코드와 동일한 저장소에서 빌드됩니다:
-
-| 시설 | 설명 | 문서 |
+| 질문 | 위치 | 찾을 수 있는 내용 |
 | --- | --- | --- |
-| **Entelecheia** | 다중 에이전트 협업 플랫폼 | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| **Shittim Chest** | WebUI, 백엔드, CLI 셸 | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| **Evernight** | 원격 제어 및 산업 프로토콜 브로커 | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| **왜 존재하나요?** | [철학](./philosophy/why.md) | 우리가 해결하려는 문제, 폐쇄 루프, 안전 원칙, 장기적 지평 |
+| **무엇이 있나요?** | [생태계](./ecosystem/projects.md) | 모든 프로젝트, 루프 안에서의 역할, 문서가 있는 곳 |
+| **어떻게 시작하나요?** | [시작하기](./getting-started/quickstart.md) | 계정부터 동작하는 채팅 에이전트와 산업 제어까지 30분 경로 |
 
-## 플랫폼 프로젝트
+## 한 문단 요약
 
-| 그룹 | 프로젝트 | 설명 |
-| --- | --- | --- |
-| **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | 다중 에이전트 협업 플랫폼 |
-| **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | 사용자 대면 셸 |
-| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | 프로토콜 유형 · 원격 제어 |
+celestia-island는 AI 기반 산업 제어를 위한 **폐쇄 루프**를 발견에서 검증까지
+구축합니다: 발견 → 설치 → 인증 → 모델 배포 → 채팅 및 에이전트 실행 → 산업
+장비 제어 → 모든 것 검증. 루프는 작고 엄격하게 계층화된 조각들로
+조립됩니다: 인증 프리미티브([kirino](https://github.com/celestia-island/kirino)),
+플랫폼 기반 시설([plana](https://github.com/celestia-island/plana)), UI
+컴포넌트([hikari](https://github.com/celestia-island/hikari)), 그리고
+비즈니스 로직만 구현하는 서비스들([arona](https://github.com/celestia-island/arona),
+[shittim-chest](https://github.com/celestia-island/shittim-chest),
+[entelecheia](https://github.com/celestia-island/entelecheia),
+[evernight](https://github.com/celestia-island/evernight))로 구성됩니다.
+어떤 것도 두 번 구현되지 않습니다: 일반 기능은 상류에서 한 번 구축되고,
+모든 서비스가 하류에서 이를 소비합니다.
 
-## 도구 라이브러리
+이 모든 것의 이유는 단순한 관찰에서 비롯됩니다: 달에서는 왕복 통신이 2.6초,
+화성에서는 6분에서 44분이 걸립니다. 그곳의 로봇은 지구의 인간을 기다릴 수
+없습니다 — 로컬에서 자율적으로 동작해야 합니다. 우리가 오늘 산업 제어를 위해
+구축하는 의사결정 계층, 세계 모델, 안전 게이트는 내일의 자율성이 필요로 할
+것과 같은 형태입니다.
 
-celestia-island 생태계에 속하지만 entelecheia 플랫폼에
-종속되지 않는 독립형 Rust 라이브러리입니다. 각 도구는
-`<name>.docs.celestia.world`에 자체 문서 사이트를 제공합니다.
+## 모든 것이 있는 곳
 
-| 라이브러리 | 설명 | 문서 |
-| --- | --- | --- |
-| [yuuka](https://github.com/celestia-island/yuuka) | 복잡한 중첩 구조를 위한 절차 매크로 | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
-| [kirino](https://github.com/celestia-island/kirino) | 제로 트러스트 인증 및 RBAC | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
-| [noa](https://github.com/celestia-island/noa) | AI 네이티브 분산 버전 관리 | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
-| [malkuth](https://github.com/celestia-island/malkuth) | 서비스 감독 도구 키트 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [seia](https://github.com/celestia-island/seia) | 다중 엔진 웹 검색 | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | Pest 기반 마크다운 문서 렌더러 | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | 스레드 풀 파이프라인 매크로 | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [aoba](https://github.com/celestia-island/aoba) | Modbus 및 데이터 소스 CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+- **프로젝트별 문서** — 각 저장소에서 빌드된 `<name>.docs.celestia.world`.
+  전체 목록은 [사이트 및 소유권](./ecosystem/sites.md)에서 확인하세요.
+- **조직 프레즌스** — [celestia-island GitHub 조직](https://github.com/celestia-island).
+- **제품 패널(베타 기간 중 WIP)** — [arona](https://arona.celestia.world)
+  (클라우드 API 관리), [dev](https://dev.celestia.world) (개발자 포털);
+  베타가 끝날 때까지 실시간 패널은 내부 `arona:8420`에서 실행됩니다.
 
-## 조직
-
-- **Meta** — 공유 정책: 라이선스, CLA, 행동 강령, 보안
-- **Guides** — 시작 및 개발을 위한 실용 가이드
-- **Designs** — 아키텍처 및 설계 문서
-
-언어 전환기(오른쪽 하단)를 사용하여 사용 가능한 언어로 전환하세요.
+언어 전환기(오른쪽 하단)를 사용하여 이 사이트를 다른 언어로 읽을 수
+있습니다. 콘텐츠는 영어로 작성되며, 번역은 동일한 구조를 따릅니다.

@@ -1,4 +1,5 @@
 # Política de seguridad
+
 > **Nota**: Esta es una traducción de referencia comunitaria. En caso de discrepancia, prevalece la versión en inglés `SECURITY.md` en la raíz del repositorio.
 
 ## Reportar una vulnerabilidad

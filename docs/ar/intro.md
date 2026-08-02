@@ -1,46 +1,48 @@
-# مرحبًا بكم في وثائق celestia-island
+# مرحبًا بك في celestia-island
 
-هذا هو المركز المركزي للوثائق لمنظومة **celestia-island**.
+**celestia-island** هي مجموعة مشاريع للتحكم الصناعي بالذكاء الاصطناعي: تعاون
+متعدد الوكلاء، وعمليات عن بعد، وأتمتة حرجة السلامة. هذا الموقع هو *لماذا* هذه
+المجموعة — الفلسفة، وخريطة المنظومة، ونقطة الدخول. أما *كيف* فتجدها في مواقع
+التوثيق الخاصة بكل مشروع، المربوطة من هنا.
 
-## المرافق
+## الإجابة عن ثلاثة أسئلة
 
-يحافظ كل مرفق على موقع توثيق خاص به، يُبنى من نفس المستودع الذي يُبنى منه الكود المصدري:
-
-| المرفق | الوصف | التوثيق |
+| السؤال | أين | ما ستجده |
 | --- | --- | --- |
-| **Entelecheia** | منصة تعاون متعدد الوكلاء | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| **Shittim Chest** | واجهة ويب، خلفية، صدفة CLI | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| **Evernight** | وسيط التحكم عن بعد والبروتوكولات الصناعية | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| **لماذا يوجد هذا؟** | [الفلسفة](./philosophy/why.md) | المشكلة التي نحلها، والحلقة المغلقة، وعقيدة السلامة، والأفق طويل المدى |
+| **ماذا يوجد في الداخل؟** | [المنظومة](./ecosystem/projects.md) | كل مشروع، ودوره في الحلقة، وأين يقع توثيقه |
+| **كيف أبدأ؟** | [ابدأ من هنا](./getting-started/quickstart.md) | مسار 30 دقيقة من الحساب إلى وكيل محادثة يعمل والتحكم الصناعي |
 
-## مشاريع المنصة
+## ملخص في فقرة واحدة
 
-| المجموعة | المشروع | الوصف |
-| --- | --- | --- |
-| **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | منصة تعاون متعددة الوكلاء |
-| **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | واجهة المستخدم |
-| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | أنواع البروتوكولات · التحكم عن بعد |
+تبني celestia-island **الحلقة المغلقة** من الاكتشاف إلى التحقق للتحكم الصناعي
+المدفوع بالذكاء الاصطناعي: اكتشف ← ثبّت ← وثّق الهوية ← انشر نموذجًا ← تحدث
+وشغّل الوكلاء ← تحكم في المعدات الصناعية ← تحقق من كل شيء. تتألف الحلقة من
+قطع صغيرة ذات طبقات صارمة: بدائيات المصادقة
+([kirino](https://github.com/celestia-island/kirino))، ومرافق المنصة
+([plana](https://github.com/celestia-island/plana))، ومكونات الواجهة
+([hikari](https://github.com/celestia-island/hikari))، وخدمات لا تنفذ سوى منطق
+الأعمال ([arona](https://github.com/celestia-island/arona) و
+[shittim-chest](https://github.com/celestia-island/shittim-chest) و
+[entelecheia](https://github.com/celestia-island/entelecheia) و
+[evernight](https://github.com/celestia-island/evernight)). لا يُنفَّذ أي شيء
+مرتين أبدًا: القدرة العامة تُبنى في المنبع مرة واحدة، وتستهلكها كل خدمة في
+المصب.
 
-## مكتبات الأدوات
+والسبب وراء كل ذلك ملاحظة بسيطة: على القمر تستغرق الرحلة ذهابًا وإيابًا 2.6
+ثانية، وعلى المريخ من 6 إلى 44 دقيقة. الروبوتات هناك لا يمكنها انتظار إنسان
+على الأرض — يجب أن تكون مستقلة محليًا. طبقة القرار، ونموذج العالم، وبوابات
+السلامة التي نبنيها اليوم للتحكم الصناعي هي نفس الشكل الذي ستحتاجه
+الاستقلالية غدًا.
 
-مكتبات Rust مستقلة تنتمي إلى منظومة celestia-island
-ولكنها غير مرتبطة بمنصة entelecheia. لكل أداة موقع
-توثيق خاص بها على `<name>.docs.celestia.world`.
+## أين يوجد كل شيء
 
-| المكتبة | الوصف | التوثيق |
-| --- | --- | --- |
-| [yuuka](https://github.com/celestia-island/yuuka) | ماكرو إجرائي للهياكل المتداخلة المعقدة | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
-| [kirino](https://github.com/celestia-island/kirino) | مصادقة الثقة الصفرية و RBAC | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
-| [noa](https://github.com/celestia-island/noa) | تحكم بالإصدارات موزع أصلي للذكاء الاصطناعي | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
-| [malkuth](https://github.com/celestia-island/malkuth) | مجموعة أدوات مراقبة الخدمات | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [seia](https://github.com/celestia-island/seia) | بحث ويب متعدد المحركات | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | معالج مستندات Markdown مبني على Pest | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | ماكروات خطوط الأنابيب بمجمع الخيوط | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [aoba](https://github.com/celestia-island/aoba) | واجهة سطر أوامر Modbus ومصادر البيانات | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+- **توثيق كل مشروع** — `<name>.docs.celestia.world`، مبني من كل مستودع.
+  ابحث عن القائمة الكاملة في [المواقع والمسؤوليات](./ecosystem/sites.md).
+- **حضور المنظمة** — [celestia-island على GitHub](https://github.com/celestia-island).
+- **لوحات المنتجات (قيد التطوير أثناء النسخة التجريبية)** — [arona](https://arona.celestia.world)
+  (إدارة API السحابية)، [dev](https://dev.celestia.world) (بوابة المطورين)؛
+  اللوحة الحية تعمل داخليًا على `arona:8420` حتى انتهاء النسخة التجريبية.
 
-## المنظمة
-
-- **Meta** — السياسات المشتركة: الترخيص، CLA، مدونة قواعد السلوك، الأمان
-- **Guides** — أدلة عملية للبدء والتطوير
-- **Designs** — وثائق البنية والتصميم
-
-استخدم مبدل اللغة (أسفل اليمين) للتبديل بين اللغات المتاحة.
+استخدم مبدل اللغة (أسفل اليمين) لقراءة هذا الموقع بلغة أخرى. المحتوى مكتوب
+بالإنجليزية؛ وتتبع الترجمات البنية نفسها.

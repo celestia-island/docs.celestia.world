@@ -1,46 +1,25 @@
-# Bienvenido a la documentación de celestia-island
+# Bienvenido a celestia-island
 
-Este es el centro de documentación centralizado para el ecosistema de **celestia-island**.
+**celestia-island** es un conjunto de proyectos para el control industrial con IA: colaboración multi-agente, operaciones remotas y automatización crítica para la seguridad. Este sitio es su *porqué* — la filosofía, el mapa del ecosistema y el punto de entrada. El *cómo* vive en los sitios de documentación de cada proyecto, enlazados desde aquí.
 
-## Instalaciones
+## Respuestas a tres preguntas
 
-Cada instalación mantiene su propio sitio de documentación, construido desde el mismo repositorio que el código fuente:
-
-| Instalación | Descripción | Documentación |
+| Pregunta | Dónde | Qué encontrarás |
 | --- | --- | --- |
-| **Entelecheia** | Plataforma de colaboración multi-agente | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| **Shittim Chest** | WebUI, backend, CLI shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| **Evernight** | Broker de control remoto y protocolos industriales | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| **¿Por qué existe esto?** | [Filosofía](./philosophy/why.md) | El problema que resolvemos, el bucle cerrado, la doctrina de seguridad y el horizonte a largo plazo |
+| **¿Qué hay dentro?** | [Ecosistema](./ecosystem/projects.md) | Cada proyecto, su papel en el bucle y dónde vive su documentación |
+| **¿Cómo empiezo?** | [Primeros pasos](./getting-started/quickstart.md) | El camino de 30 minutos desde la cuenta hasta un agente de chat funcional y el control industrial |
 
-## Proyectos de la plataforma
+## El resumen en un párrafo
 
-| Grupo | Proyecto | Descripción |
-| --- | --- | --- |
-| **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboración multi-agente |
-| **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Shell orientado al usuario |
-| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | Tipos de protocolos · Control remoto |
+celestia-island construye el **bucle cerrado** desde el descubrimiento hasta la verificación para el control industrial impulsado por IA: descubrir → instalar → autenticar → desplegar un modelo → chatear y ejecutar agentes → controlar equipos industriales → verificar todo. El bucle se ensambla a partir de piezas pequeñas y estrictamente estratificadas: primitivas de autenticación ([kirino](https://github.com/celestia-island/kirino)), facilidades de plataforma ([plana](https://github.com/celestia-island/plana)), componentes de UI ([hikari](https://github.com/celestia-island/hikari)) y servicios que solo implementan lógica de negocio ([arona](https://github.com/celestia-island/arona), [shittim-chest](https://github.com/celestia-island/shittim-chest), [entelecheia](https://github.com/celestia-island/entelecheia), [evernight](https://github.com/celestia-island/evernight)). Nada se implementa nunca dos veces: la capacidad genérica se construye una sola vez en las capas superiores y la consumen todos los servicios posteriores.
 
-## Bibliotecas de herramientas
+La razón de todo esto es una observación simple: en la Luna un viaje de ida y vuelta tarda 2.6 segundos; en Marte, de 6 a 44 minutos. Los robots de allí no pueden esperar a un humano en la Tierra — deben ser autónomos localmente. La capa de decisión, el modelo del mundo y las compuertas de seguridad que estamos construyendo hoy para el control industrial tienen la misma forma que la autonomía necesitará mañana.
 
-Bibliotecas Rust independientes que pertenecen al ecosistema celestia-island
-pero no están vinculadas a la plataforma entelecheia. Cada herramienta tiene
-su propio sitio de documentación en `<name>.docs.celestia.world`.
+## Dónde vive todo
 
-| Biblioteca | Descripción | Docs |
-| --- | --- | --- |
-| [yuuka](https://github.com/celestia-island/yuuka) | Macro procedimental para estructuras anidadas complejas | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
-| [kirino](https://github.com/celestia-island/kirino) | Autenticación de confianza cero y RBAC | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
-| [noa](https://github.com/celestia-island/noa) | Control de versiones distribuido nativo en IA | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
-| [malkuth](https://github.com/celestia-island/malkuth) | Kit de herramientas de supervisión de servicios | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [seia](https://github.com/celestia-island/seia) | Búsqueda web multimotor | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | Renderizador de documentos Markdown basado en Pest | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Macros de canalización con pool de hilos | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [aoba](https://github.com/celestia-island/aoba) | CLI Modbus y fuente de datos | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+- **Documentación por proyecto** — `<name>.docs.celestia.world`, construida desde cada repositorio. Encuentra la lista completa en [Sitios y propiedad](./ecosystem/sites.md).
+- **Presencia de la organización** — [celestia-island en GitHub](https://github.com/celestia-island).
+- **Paneles de producto (WIP durante la beta)** — [arona](https://arona.celestia.world) (administración de API en la nube), [dev](https://dev.celestia.world) (portal de desarrolladores); el panel en vivo se ejecuta internamente en `arona:8420` hasta que termine la beta.
 
-## Organización
-
-- **Meta** — políticas compartidas: licencia, CLA, código de conducta, seguridad
-- **Guides** — guías prácticas para empezar y desarrollo
-- **Designs** — documentos de arquitectura y diseño
-
-Utiliza el selector de idioma (abajo a la derecha) para cambiar entre los idiomas disponibles.
+Usa el selector de idioma (abajo a la derecha) para leer este sitio en otro idioma. El contenido se redacta en inglés; las traducciones siguen la misma estructura.

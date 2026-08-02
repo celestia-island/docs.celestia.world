@@ -1,19 +1,31 @@
 # Summary
 
-[Welcome](./intro.md)
+[مرحبًا](./intro.md)
 
 ---
 
+# الفلسفة
+
+- [لماذا](./philosophy/why.md)
+- [الحلقة المغلقة](./philosophy/closed-loop.md)
+- [البنية الطبقية](./philosophy/layered-architecture.md)
+- [مبادئ السلامة](./philosophy/safety.md)
+- [السردية والأفق](./philosophy/narrative.md)
+
+# المنظومة
+
+- [خريطة المشاريع](./ecosystem/projects.md)
+- [المواقع والمسؤوليات](./ecosystem/sites.md)
+
+# ابدأ
+
+- [البدء السريع](./getting-started/quickstart.md)
+- [دليل النسخة التجريبية المغلقة](./getting-started/beta-guide.md)
+
 # Meta
 
-- [License](./meta/license.md)
+- [الترخيص](./meta/license.md)
 - [CLA](./meta/cla.md)
-- [Code of Conduct](./meta/code-of-conduct.md)
-- [Security](./meta/security.md)
-- [Contributing](./meta/CONTRIBUTING.md)
-
-# Platforms
-
-- [Arona](./guides/platforms/README-plana.md)
-- [Noa](./guides/platforms/README-noa.md)
-- [Platform Designs](./designs/platforms/README.md)
+- [مدونة قواعد السلوك](./meta/code-of-conduct.md)
+- [الأمان](./meta/security.md)
+- [المساهمة](./meta/CONTRIBUTING.md)

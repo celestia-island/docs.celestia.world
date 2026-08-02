@@ -1,46 +1,53 @@
-# Добро пожаловать в документацию celestia-island
+# Добро пожаловать в celestia-island
 
-Это централизованный центр документации для экосистемы **celestia-island**.
+**celestia-island** — это набор проектов для промышленного ИИ-управления:
+совместная работа мультиагентов, удалённые операции и управление, критичное к
+безопасности. Этот сайт — его *почему*: философия, карта экосистемы и точка
+входа. *Как* описано на сайтах документации отдельных проектов, на которые
+здесь есть ссылки.
 
-## Инфраструктура
+## Ответы на три вопроса
 
-Каждый компонент поддерживает собственный сайт документации, собираемый из того же репозитория, что и исходный код:
-
-| Компонент | Описание | Документация |
+| Вопрос | Где | Что вы найдёте |
 | --- | --- | --- |
-| **Entelecheia** | Платформа для совместной работы мультиагентов | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| **Shittim Chest** | WebUI, бэкенд, CLI-оболочка | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| **Evernight** | Брокер удалённого управления и промышленных протоколов | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| **Почему это существует?** | [Философия](./philosophy/why.md) | Проблема, которую мы решаем, замкнутый цикл, доктрина безопасности и долгосрочный горизонт |
+| **Что внутри?** | [Экосистема](./ecosystem/projects.md) | Каждый проект, его роль в цикле и место его документации |
+| **С чего начать?** | [Начало работы](./getting-started/quickstart.md) | Путь за 30 минут от учётной записи до работающего чат-агента и промышленного управления |
 
-## Проекты платформы
+## Краткое резюме
 
-| Группа | Проект | Описание |
-| --- | --- | --- |
-| **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | Платформа для совместной работы нескольких агентов |
-| **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Пользовательская оболочка |
-| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | Типы протоколов · Удалённое управление |
+celestia-island строит **замкнутый цикл** от обнаружения до проверки для
+ИИ-управляемого промышленного производства: обнаружить → установить →
+аутентифицироваться → развернуть модель → общаться с чатом и запускать агентов
+→ управлять промышленным оборудованием → проверить всё. Цикл собирается из
+небольших строго слоистых компонентов: примитивы аутентификации
+([kirino](https://github.com/celestia-island/kirino)), платформенные средства
+([plana](https://github.com/celestia-island/plana)), UI-компоненты
+([hikari](https://github.com/celestia-island/hikari)) и сервисы, реализующие
+только бизнес-логику ([arona](https://github.com/celestia-island/arona),
+[shittim-chest](https://github.com/celestia-island/shittim-chest),
+[entelecheia](https://github.com/celestia-island/entelecheia),
+[evernight](https://github.com/celestia-island/evernight)). Ничто никогда не
+реализуется дважды: общая функциональность создаётся выше по потоку один раз,
+а каждый сервис ниже по потоку её потребляет.
 
-## Инструментальные библиотеки
+Причина всего этого — простое наблюдение: на Луне круговой обмен сигналом
+занимает 2,6 секунды, на Марсе — от 6 до 44 минут. Роботы там не могут ждать
+человека на Земле — они должны быть автономны на месте. Слой принятия
+решений, модель мира и защитные барьеры безопасности, которые мы строим
+сегодня для промышленного управления, имеют ту же форму, какая понадобится
+автономии завтра.
 
-Автономные библиотеки Rust, которые принадлежат экосистеме celestia-island,
-но не привязаны к платформе entelecheia. Каждый инструмент имеет собственный
-сайт документации по адресу `<name>.docs.celestia.world`.
+## Где что находится
 
-| Библиотека | Описание | Документация |
-| --- | --- | --- |
-| [yuuka](https://github.com/celestia-island/yuuka) | Процедурный макрос для сложных вложенных структур | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
-| [kirino](https://github.com/celestia-island/kirino) | Аутентификация с нулевым доверием и RBAC | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
-| [noa](https://github.com/celestia-island/noa) | AI-ориентированное распределённое управление версиями | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
-| [malkuth](https://github.com/celestia-island/malkuth) | Инструментарий для наблюдения за сервисами | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [seia](https://github.com/celestia-island/seia) | Многопоточный веб-поиск | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | Рендерер Markdown-документов на основе Pest | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Макросы конвейеров с пулом потоков | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [aoba](https://github.com/celestia-island/aoba) | CLI для Modbus и источников данных | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+- **Документация по каждому проекту** — `<name>.docs.celestia.world`,
+  собирается из каждого репозитория. Полный список — в разделе
+  [Сайты и владельцы](./ecosystem/sites.md).
+- **Присутствие организации** — [celestia-island на GitHub](https://github.com/celestia-island).
+- **Продуктовые панели (WIP на время беты)** — [arona](https://arona.celestia.world)
+  (облачная API-админка), [dev](https://dev.celestia.world) (портал разработчика);
+  рабочая панель до конца беты запущена внутри на `arona:8420`.
 
-## Организация
-
-- **Meta** — общие политики: лицензия, CLA, кодекс поведения, безопасность
-- **Guides** — практические руководства по началу работы и разработке
-- **Designs** — архитектурные и проектные документы
-
-Используйте переключатель языков (внизу справа) для переключения между доступными языками.
+Используйте переключатель языков (внизу справа), чтобы читать этот сайт на
+другом языке. Контент пишется на английском; переводы следуют той же
+структуре.

@@ -4,6 +4,24 @@
 
 ---
 
+# Filosofia
+
+- [Porquê](./philosophy/why.md)
+- [O Ciclo Fechado](./philosophy/closed-loop.md)
+- [Arquitetura em Camadas](./philosophy/layered-architecture.md)
+- [Princípios de Segurança](./philosophy/safety.md)
+- [Narrativa e Horizonte](./philosophy/narrative.md)
+
+# Ecossistema
+
+- [Mapa de Projetos](./ecosystem/projects.md)
+- [Sites e Responsabilidade](./ecosystem/sites.md)
+
+# Começar
+
+- [Início Rápido](./getting-started/quickstart.md)
+- [Guia do Beta Fechado](./getting-started/beta-guide.md)
+
 # Meta
 
 - [Licença](./meta/license.md)
@@ -11,9 +29,3 @@
 - [Código de Conduta](./meta/code-of-conduct.md)
 - [Segurança](./meta/security.md)
 - [Contribuindo](./meta/CONTRIBUTING.md)
-
-# Plataformas
-
-- [Arona](./guides/platforms/README-plana.md)
-- [Noa](./guides/platforms/README-noa.md)
-- [Designs de Plataforma](./designs/platforms/README.md)

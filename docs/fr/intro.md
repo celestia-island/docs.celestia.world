@@ -1,46 +1,55 @@
-# Bienvenue dans la documentation de celestia-island
+# Bienvenue sur celestia-island
 
-Il s'agit du centre de documentation centralisé pour l'écosystème **celestia-island**.
+**celestia-island** est une suite de projets pour le contrôle industriel par IA :
+collaboration multi-agents, opérations à distance et automatisation critique pour
+la sécurité. Ce site en est le *pourquoi* — la philosophie, la carte de
+l'écosystème et le point d'entrée. Le *comment* vit dans les sites de
+documentation par projet auxquels renvoient les liens depuis cette page.
 
-## Installations
+## Répondre à trois questions
 
-Chaque installation gère son propre site de documentation, construit à partir du même dépôt que le code source :
-
-| Installation | Description | Documentation |
+| Question | Où | Ce que vous y trouverez |
 | --- | --- | --- |
-| **Entelecheia** | Plateforme de collaboration multi-agents | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| **Shittim Chest** | WebUI, backend, CLI shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| **Evernight** | Courtier en contrôle à distance et protocoles industriels | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| **Pourquoi cela existe-t-il ?** | [Philosophie](./philosophy/why.md) | Le problème que nous résolvons, la boucle fermée, la doctrine de sécurité et l'horizon à long terme |
+| **Qu'y a-t-il à l'intérieur ?** | [Écosystème](./ecosystem/projects.md) | Chaque projet, son rôle dans la boucle et l'emplacement de sa documentation |
+| **Comment commencer ?** | [Bien démarrer](./getting-started/quickstart.md) | Le parcours de 30 minutes du compte à un agent de chat fonctionnel et au contrôle industriel |
 
-## Projets de la plateforme
+## Le résumé en un paragraphe
 
-| Groupe | Projet | Description |
-| --- | --- | --- |
-| **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | Plateforme de collaboration multi-agents |
-| **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Shell destiné aux utilisateurs |
-| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | Types de protocoles · Contrôle à distance |
+celestia-island construit la **boucle fermée** de la découverte à la vérification
+pour le contrôle industriel piloté par IA : découvrir → installer →
+s'authentifier → déployer un modèle → chatter et exécuter des agents → contrôler
+des équipements industriels → tout vérifier. La boucle est assemblée à partir de
+briques petites et strictement stratifiées : primitives d'authentification
+([kirino](https://github.com/celestia-island/kirino)), infrastructures de
+plateforme ([plana](https://github.com/celestia-island/plana)), composants UI
+([hikari](https://github.com/celestia-island/hikari)) et services qui
+n'implémentent que la logique métier
+([arona](https://github.com/celestia-island/arona),
+[shittim-chest](https://github.com/celestia-island/shittim-chest),
+[entelecheia](https://github.com/celestia-island/entelecheia),
+[evernight](https://github.com/celestia-island/evernight)). Rien n'est jamais
+implémenté deux fois : la capacité générique est construite une seule fois en
+amont, puis consommée par chaque service en aval.
 
-## Bibliothèques d'outils
+La raison de tout cela est une observation simple : sur la Lune, un aller-retour
+de signal prend 2,6 secondes ; sur Mars, de 6 à 44 minutes. Les robots là-bas ne
+peuvent pas attendre un humain sur Terre — ils doivent être autonomes
+localement. La couche de décision, le modèle du monde et les portes de sécurité
+que nous construisons aujourd'hui pour le contrôle industriel ont la même forme
+que ce dont l'autonomie aura besoin demain.
 
-Bibliothèques Rust autonomes appartenant à l'écosystème celestia-island
-mais non liées à la plateforme entelecheia. Chaque outil dispose de son
-propre site de documentation à l'adresse `<name>.docs.celestia.world`.
+## Où tout se trouve
 
-| Bibliothèque | Description | Docs |
-| --- | --- | --- |
-| [yuuka](https://github.com/celestia-island/yuuka) | Macro procédurale pour structures imbriquées complexes | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
-| [kirino](https://github.com/celestia-island/kirino) | Authentification zero-trust et RBAC | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
-| [noa](https://github.com/celestia-island/noa) | Contrôle de version distribué natif IA | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
-| [malkuth](https://github.com/celestia-island/malkuth) | Boîte à outils de supervision de services | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [seia](https://github.com/celestia-island/seia) | Recherche web multi-moteur | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | Moteur de rendu de documentation Markdown basé sur Pest | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Macros de pipeline à pool de threads | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [aoba](https://github.com/celestia-island/aoba) | CLI Modbus et source de données | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+- **Documentation par projet** — `<name>.docs.celestia.world`, générée depuis
+  chaque dépôt. Retrouvez la liste complète dans
+  [Sites & Propriété](./ecosystem/sites.md).
+- **Présence de l'organisation** —
+  [celestia-island sur GitHub](https://github.com/celestia-island).
+- **Panneaux produits (WIP pendant la bêta)** — [arona](https://arona.celestia.world)
+  (admin API cloud), [dev](https://dev.celestia.world) (portail développeur) ; le
+  panneau en direct tourne en interne sur `arona:8420` jusqu'à la fin de la bêta.
 
-## Organisation
-
-- **Meta** — politiques communes : licence, CLA, code de conduite, sécurité
-- **Guides** — guides pratiques pour le démarrage et le développement
-- **Designs** — documents d'architecture et de conception
-
-Utilisez le sélecteur de langue (en bas à droite) pour passer d'une langue à l'autre.
+Utilisez le sélecteur de langue (en bas à droite) pour lire ce site dans une
+autre langue. Le contenu est rédigé en anglais ; les traductions suivent la même
+structure.

@@ -1,19 +1,31 @@
-# Summary
+# Содержание
 
-[Welcome](./intro.md)
+[Добро пожаловать](./intro.md)
 
 ---
 
+# Философия
+
+- [Почему](./philosophy/why.md)
+- [Замкнутый цикл](./philosophy/closed-loop.md)
+- [Слоистая архитектура](./philosophy/layered-architecture.md)
+- [Принципы безопасности](./philosophy/safety.md)
+- [Нарратив и горизонт](./philosophy/narrative.md)
+
+# Экосистема
+
+- [Карта проектов](./ecosystem/projects.md)
+- [Сайты и владельцы](./ecosystem/sites.md)
+
+# Начало работы
+
+- [Краткое руководство](./getting-started/quickstart.md)
+- [Руководство по закрытой бете](./getting-started/beta-guide.md)
+
 # Meta
 
-- [License](./meta/license.md)
+- [Лицензия](./meta/license.md)
 - [CLA](./meta/cla.md)
-- [Code of Conduct](./meta/code-of-conduct.md)
-- [Security](./meta/security.md)
-- [Contributing](./meta/CONTRIBUTING.md)
-
-# Platforms
-
-- [Arona](./guides/platforms/README-plana.md)
-- [Noa](./guides/platforms/README-noa.md)
-- [Platform Designs](./designs/platforms/README.md)
+- [Кодекс поведения](./meta/code-of-conduct.md)
+- [Безопасность](./meta/security.md)
+- [Вклад](./meta/CONTRIBUTING.md)

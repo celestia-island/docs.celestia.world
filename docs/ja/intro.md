@@ -1,46 +1,52 @@
-# celestia-island ドキュメントへようこそ
+# celestia-island へようこそ
 
-これは **celestia-island** エコシステムの統合ドキュメントハブです。
+**celestia-island** は産業用 AI 制御のためのプロジェクト群です。マルチ
+エージェントコラボレーション、遠隔運用、そして安全性重視の自動化を
+実現します。このサイトはその *why* —— 哲学、エコシステムマップ、
+そしてエントリーポイントをまとめたものです。*how* は、ここから
+リンクされる各プロジェクトのドキュメントサイトにあります。
 
-## ファシリティ
+## 3 つの問いに答える
 
-各ファシリティは独自のドキュメントサイトを維持し、ソースコードと同じリポジトリからビルドされます：
-
-| ファシリティ | 説明 | ドキュメント |
+| 問い | どこ | 見つかるもの |
 | --- | --- | --- |
-| **Entelecheia** | マルチエージェントコラボレーションプラットフォーム | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| **Shittim Chest** | WebUI、バックエンド、CLIシェル | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| **Evernight** | リモート制御・産業プロトコルブローカー | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| **なぜこれが存在するのか？** | [哲学](./philosophy/why.md) | 解決しようとしている問題、クローズドループ、安全のドクトリン、長期的な展望 |
+| **中身は何か？** | [エコシステム](./ecosystem/projects.md) | すべてのプロジェクト、ループ内での役割、ドキュメントの置き場所 |
+| **どう始めるか？** | [始め方](./getting-started/quickstart.md) | アカウント作成から動作するチャットエージェントと産業制御まで 30 分でたどる道筋 |
 
-## プラットフォームプロジェクト
+## 1 段落の要約
 
-| グループ | プロジェクト | 説明 |
-| --- | --- | --- |
-| **Core** | [entelecheia](https://github.com/celestia-island/entelecheia) | マルチエージェントコラボレーションプラットフォーム |
-| **WebUI** | [shittim-chest](https://github.com/celestia-island/shittim-chest) | ユーザー向けシェル |
-| **Platforms** | [arona](https://github.com/celestia-island/plana) · [evernight](https://github.com/celestia-island/evernight) | プロトコルタイプ · リモートコントロール |
+celestia-island は、AI による産業制御のために**発見から検証までの
+クローズドループ**を構築します。発見 → インストール → 認証 → モデル
+デプロイ → チャットとエージェント実行 → 産業機器の制御 → すべての
+検証。このループは小さく厳密にレイヤ化された部品から組み立てられます。
+認証プリミティブ（[kirino](https://github.com/celestia-island/kirino)）、
+プラットフォーム基盤（[plana](https://github.com/celestia-island/plana)）、
+UI コンポーネント（[hikari](https://github.com/celestia-island/hikari)）、
+そしてビジネスロジックのみを実装するサービス群
+（[arona](https://github.com/celestia-island/arona)、
+[shittim-chest](https://github.com/celestia-island/shittim-chest)、
+[entelecheia](https://github.com/celestia-island/entelecheia)、
+[evernight](https://github.com/celestia-island/evernight)）です。
+何かが二重実装されることは決してありません。汎用機能は上流で一度
+構築され、下流のすべてのサービスがそれを利用します。
 
-## ツールライブラリ
+その理由は単純な観察にあります。月までの往復には 2.6 秒、火星まで
+は 6〜44 分かかります。そこにあるロボットは地球の人間を待つことが
+できません —— 現地で自律的に動作しなければならないのです。私たちが
+今日産業制御のために構築している意思決定層、世界モデル、安全ゲートは、
+将来の自律性が必要とするものと同じ形なのです。
 
-celestia-island エコシステムに属するが、entelecheia プラットフォームに
-依存しないスタンドアロン Rust ライブラリです。各ツールには
-`<name>.docs.celestia.world` に独自のドキュメントサイトがあります。
+## すべての配置場所
 
-| ライブラリ | 説明 | ドキュメント |
-| --- | --- | --- |
-| [yuuka](https://github.com/celestia-island/yuuka) | 複雑なネスト構造のための手続きマクロ | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
-| [kirino](https://github.com/celestia-island/kirino) | ゼロトラスト認証と RBAC | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
-| [noa](https://github.com/celestia-island/noa) | AI ネイティブ分散バージョン管理 | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
-| [malkuth](https://github.com/celestia-island/malkuth) | サービス監視ツールキット | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [seia](https://github.com/celestia-island/seia) | マルチエンジン Web 検索 | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | Pest ベースの Markdown ドキュメントレンダラー | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | スレッドプールパイプラインマクロ | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [aoba](https://github.com/celestia-island/aoba) | Modbus およびデータソース CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+- **プロジェクト別ドキュメント** —— `<name>.docs.celestia.world`。
+  各リポジトリから構築されます。完全な一覧は
+  [サイトと所有](./ecosystem/sites.md) を参照してください。
+- **組織の存在** —— [GitHub 上の celestia-island](https://github.com/celestia-island)。
+- **プロダクトパネル（ベータ期間中は WIP）** —— [arona](https://arona.celestia.world)
+  （クラウド API 管理パネル）、[dev](https://dev.celestia.world)
+  （開発者ポータル）。ベータ期間中、ライブパネルは内部の `arona:8420`
+  で実行されます。
 
-## 組織
-
-- **Meta** — 共通ポリシー：ライセンス、CLA、行動規範、セキュリティ
-- **Guides** — スタートアップと開発の実践ガイド
-- **Designs** — アーキテクチャと設計ドキュメント
-
-言語スイッチャー（右下）を使って、利用可能な言語を切り替えてください。
+右下の言語切り替えを使って、このサイトを別の言語で読むことができます。
+コンテンツは英語で執筆され、翻訳は同じ構造に従います。

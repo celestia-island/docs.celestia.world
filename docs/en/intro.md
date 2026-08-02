@@ -1,48 +1,48 @@
 # Welcome to celestia-island
 
-This is the documentation hub for the **celestia-island** ecosystem — a suite of projects for industrial AI control, remote operations, and multi-agent collaboration.
+**celestia-island** is a suite of projects for industrial AI control: multi-agent
+collaboration, remote operations, and safety-critical automation. This site is
+its *why* — the philosophy, the ecosystem map, and the entry point. The *how*
+lives in per-project documentation sites linked from here.
 
-## Facilities
+## Answering three questions
 
-Each facility maintains its own documentation site, built from the same repository as the source code:
-
-| Facility | Description | Documentation |
+| Question | Where | What you will find |
 | --- | --- | --- |
-| **Entelecheia** | Multi-agent collaboration platform | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| **Shittim Chest** | WebUI, backend, CLI shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| **Evernight** | Remote control and industrial protocol broker | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| **Why does this exist?** | [Philosophy](./philosophy/why.md) | The problem we are solving, the closed loop, the safety doctrine, and the long-term horizon |
+| **What is inside?** | [Ecosystem](./ecosystem/projects.md) | Every project, its role in the loop, and where its documentation lives |
+| **How do I start?** | [Get Started](./getting-started/quickstart.md) | The 30-minute path from account to a working chat agent and industrial control |
 
-## Platform Projects
+## The one-paragraph summary
 
-Lightweight libraries that belong to the ecosystem:
+celestia-island builds the **closed loop** from discovery to verification for
+AI-driven industrial control: discover → install → authenticate → deploy a
+model → chat and run agents → control industrial equipment → verify everything.
+The loop is assembled from small, strictly layered pieces: authentication
+primitives ([kirino](https://github.com/celestia-island/kirino)), platform
+facilities ([plana](https://github.com/celestia-island/plana)), UI components
+([hikari](https://github.com/celestia-island/hikari)), and services that only
+implement business logic ([arona](https://github.com/celestia-island/arona),
+[shittim-chest](https://github.com/celestia-island/shittim-chest),
+[entelecheia](https://github.com/celestia-island/entelecheia),
+[evernight](https://github.com/celestia-island/evernight)). Nothing is ever
+implemented twice: generic capability is built upstream once, and consumed by
+every service downstream.
 
-| Project | Description |
-| --- | --- |
-| [Arona](https://github.com/celestia-island/plana) | Shared protocol types for JSON-RPC 2.0 |
-| [Noa](https://github.com/celestia-island/noa) | AI-native distributed version control — [docs](https://noa.docs.celestia.world) |
+The reason for all of it is a simple observation: on the Moon a round-trip
+takes 2.6 seconds, on Mars 6 to 44 minutes. Robots out there cannot wait for a
+human on Earth — they must be locally autonomous. The decision layer, world
+model, and safety gates we are building for industrial control today are the
+same shape that autonomy will need tomorrow.
 
-## Tool Libraries
+## Where everything lives
 
-Standalone Rust libraries with their own documentation sites at `<name>.docs.celestia.world`:
+- **Per-project documentation** — `<name>.docs.celestia.world`, built from each
+  repository. Find the full list in [Sites & Ownership](./ecosystem/sites.md).
+- **Organization presence** — [celestia-island on GitHub](https://github.com/celestia-island).
+- **Product entries (WIP during the beta)** — [arona](https://arona.celestia.world)
+  (cloud API admin), [dev](https://dev.celestia.world) (developer portal); the
+  live panel runs internally at `arona:8420` until the beta ends.
 
-| Library | Description | Docs |
-| --- | --- | --- |
-| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro for complex nested structures | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
-| [kirino](https://github.com/celestia-island/kirino) | Zero-trust authentication and RBAC | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
-| [malkuth](https://github.com/celestia-island/malkuth) | Service supervision toolkit | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [seia](https://github.com/celestia-island/seia) | Multi-engine web search | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | Pest-based markdown doc renderer | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Thread-pool pipeline macros | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [aoba](https://github.com/celestia-island/aoba) | Modbus and data-source CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
-
-## Meta
-
-Project-group level governance and policies:
-
-- [License](./meta/license.md)
-- [CLA](./meta/cla.md)
-- [Code of Conduct](./meta/code-of-conduct.md)
-- [Security](./meta/security.md)
-- [Contributing](./meta/CONTRIBUTING.md)
-
-Use the language switcher (bottom-right) to switch between available languages.
+Use the language switcher (bottom-right) to read this site in another language.
+Content is authored in English; translations follow the same structure.

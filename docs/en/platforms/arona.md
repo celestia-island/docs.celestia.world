@@ -7,7 +7,7 @@ and multi-node clusters.
 
 ## Architecture at a glance
 
-```
+```text
 shittim-chest / any OpenAI client
         │  /v1/chat/completions (Bearer API key)
         ▼
@@ -18,7 +18,7 @@ shittim-chest / any OpenAI client
         │
         ▼
    Backends: ollama · external (OpenAI-compatible) · agent-deployed engines
-```
+```bash
 
 All management traffic (dashboard, agents, memory) runs over WebSocket with
 JSON-RPC 2.0 messages; the only REST surface is the OpenAI-compatible
@@ -31,7 +31,7 @@ JSON-RPC 2.0 messages; the only REST surface is the OpenAI-compatible
 Backends are registered as `ollama` or `external` (any OpenAI-compatible
 server — vLLM, TGI, LMDeploy, TileRT's router, …):
 
-```
+```bash
 POST /api/admin/backends        # Bearer ADMIN_TOKEN
   {"type": "ollama", "name": "node3-ollama", "url": "http://host:11434"}
   {"type": "external", "name": "my-vllm", "url": "http://host:8000",
@@ -69,11 +69,11 @@ memory service (entelecheia's PhiLia agent) around your existing model.
 
 ### Enable
 
-```
+```bash
 ARONA_MEMORY_URL=ws://<scepter-host>:8424/ws
 ARONA_MEMORY_TOKEN=<scepter connection token>
 ARONA_MEMORY_WRITEBACK=1        # default on; 0 disables writeback
-```
+```bash
 
 ### What happens per chat
 

@@ -4,7 +4,7 @@ Arona 是平台控制平面：OpenAI 兼容的模型网关、自部署运行时�
 
 ## 架构一览
 
-```
+```text
 shittim-chest / 任意 OpenAI 兼容客户端
         │  /v1/chat/completions（Bearer API key）
         ▼
@@ -27,7 +27,7 @@ shittim-chest / 任意 OpenAI 兼容客户端
 后端注册为 `ollama` 或 `external`（任意 OpenAI 兼容服务——vLLM、TGI、
 LMDeploy、TileRT 的 router 等）：
 
-```
+```bash
 POST /api/admin/backends        # Bearer ADMIN_TOKEN
   {"type": "ollama", "name": "node3-ollama", "url": "http://host:11434"}
   {"type": "external", "name": "my-vllm", "url": "http://host:8000",
@@ -61,7 +61,7 @@ Arona 是**记忆网关**：它不做模型训练——而是围绕你现有的�
 
 ### 启用
 
-```
+```bash
 ARONA_MEMORY_URL=ws://<scepter-host>:8424/ws
 ARONA_MEMORY_TOKEN=<scepter 连接 token>
 ARONA_MEMORY_WRITEBACK=1        # 默认开启；0 关闭写回

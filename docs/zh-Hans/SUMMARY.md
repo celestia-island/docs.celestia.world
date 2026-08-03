@@ -26,6 +26,10 @@
 - [快速开始](./getting-started/quickstart.md)
 - [内测指南](./getting-started/beta-guide.md)
 
+# 平台
+
+- [Shittim Chest — 聊天、面板与多渠道集成](./platforms/chest.md)
+
 # 元信息
 
 - [许可证](./meta/license.md)

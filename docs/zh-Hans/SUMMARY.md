@@ -17,6 +17,10 @@
 - [项目地图](./ecosystem/projects.md)
 - [站点分工](./ecosystem/sites.md)
 
+# 平台
+
+- [Arona — 模型网关、长期记忆与集群](./platforms/arona.md)
+
 # 快速开始
 
 - [快速开始](./getting-started/quickstart.md)

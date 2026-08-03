@@ -28,4 +28,6 @@
 - [CLA](./meta/cla.md)
 - [Code of Conduct](./meta/code-of-conduct.md)
 - [Security](./meta/security.md)
+- [Terms of Service](./meta/terms.md)
+- [Privacy Policy](./meta/privacy.md)
 - [Contributing](./meta/CONTRIBUTING.md)

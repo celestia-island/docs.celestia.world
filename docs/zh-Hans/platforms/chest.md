@@ -1,8 +1,8 @@
 # Shittim Chest — 聊天、面板与多渠道集成
 
-Shittim Chest 是面向用户的壳层：聊天产品、桌面/Web 客户端、管理面板与多渠道
-集成层。它对接 Arona（模型网关）获取模型与记忆，对接 entelecheia 的 scepter
-运行时获取 agent、面板与工业工作流。
+Shittim Chest 是用户面：聊天、面板与多渠道集成——把模型与 agent 的能力
+变成你每天用得到的东西。它从 Arona 取模型与记忆，从 entelecheia 的 scepter
+取 agent、面板与工业工作流。本文按功能模块展开：聊天、面板、渠道、搜索与认证。
 
 ## 架构一览
 

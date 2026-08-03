@@ -1,9 +1,9 @@
 # Evernight — 工业协议 Broker
 
-Evernight 是工业边缘层：跨平台的 broker，说现场协议（Modbus、S7comm、MC
-Protocol、EtherNet/IP、EtherCAT、CAN、OPC UA、MQTT 等），轮询传感器、评估
-告警并把事件推入 celestia-island 技术栈。它还管理节点上的模型服务器
-（ollama / whisper / vLLM）用于边缘推理。
+Evernight 是工业边缘层：说现场协议（Modbus、S7comm、MC、EtherNet/IP、
+EtherCAT、CAN、OPC UA、MQTT 等）、轮询感知、评估告警，把物理世界变成平台可
+行动的类型化读数——它还在节点上运行边缘模型服务。它位于闭环的"工控"一端。
+本文按功能模块展开：协议、感知与告警、录制回放、边缘模型服务与北向集成。
 
 ## 架构一览
 

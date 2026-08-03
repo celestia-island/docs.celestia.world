@@ -1,9 +1,9 @@
 # Core Infrastructure — Auth, RPC and Foundations
 
-Everything above sits on a shared foundation: kirino (zero-trust auth and
-RBAC), plana (protocol types, JSON-RPC transport, metering, sync engine),
-and hikari (UI component library). This guide explains the common concepts
-you will meet in every platform.
+Every platform you use sits on the same foundation. Read this once and
+the platform guides click into place: kirino (zero-trust auth and RBAC),
+plana (protocol types, JSON-RPC transport, metering, sync engine) and
+hikari (the UI component library).
 
 ## Authentication and authorization (kirino)
 

@@ -1,9 +1,10 @@
 # Shittim Chest — Chat, Panels and Integrations
 
-Shittim Chest is the user-facing shell: the chat product, the desktop/web
-client, the admin panels, and the multi-channel integration layer. It talks
-to Arona (model gateway) for models and memory, and to entelecheia's scepter
-runtime for agents, panels and industrial workflows.
+Shittim Chest is the user face: chat, panels and multi-channel
+integrations — the layer that turns model and agent capabilities into
+something you use every day. It takes models and memory from Arona, and
+agents, panels and industrial workflows from entelecheia's scepter. This
+guide is organized by capability: chat, panels, channels, search and auth.
 
 ## Architecture at a glance
 

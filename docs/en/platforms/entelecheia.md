@@ -1,10 +1,11 @@
 # Entelecheia — Agent Platform and Memory
 
-Entelecheia is the agent platform: a scepter runtime that orchestrates
-specialized agents (the "souls"), a layered decision architecture, a
-long-term memory service (PhiLia), semantic search, and the industrial
-integration layer. Arona and Shittim Chest consume it over the JSON-RPC/WS
-surface.
+Entelecheia is the agent platform: the scepter runtime that orchestrates
+specialized agents (the "souls"), maintains long-term memory (PhiLia),
+provides semantic search, and hosts the industrial integration layer.
+Behind the capabilities of Arona and Chest stands this platform. This guide
+is organized by capability: agents, memory, search, knowledge and
+connections.
 
 ## Architecture at a glance
 

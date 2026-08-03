@@ -12,6 +12,10 @@
 - [安全原则](./philosophy/safety.md)
 - [叙事与地平线](./philosophy/narrative.md)
 
+# 核心基础设施
+
+- [认证、RPC 与地基](./core/infrastructure.md)
+
 # 生态
 
 - [项目地图](./ecosystem/projects.md)

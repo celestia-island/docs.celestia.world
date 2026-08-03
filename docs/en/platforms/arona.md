@@ -1,9 +1,10 @@
 # Arona — Model Gateway, Memory and Cluster
 
-Arona is the platform control plane: an OpenAI-compatible model gateway, a
-self-deployment runtime manager, and a web dashboard. This guide covers the
-three capabilities that matter day to day: routing models, long-term memory,
-and multi-node clusters.
+Arona is the platform control plane: model gateway, self-deployment
+runtime manager and web dashboard. The problem it solves is turning "a model
+downloaded to some machine" into something the whole platform can route,
+meter and remember. This guide is organized by capability: model routing,
+long-term memory, and multi-node clusters.
 
 ## Architecture at a glance
 

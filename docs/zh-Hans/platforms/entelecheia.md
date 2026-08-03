@@ -1,8 +1,8 @@
 # Entelecheia — Agent 平台与记忆
 
-Entelecheia 是 agent 平台：scepter 运行时编排专门化 agent（"souls"）、分层决策
-架构、长期记忆服务（PhiLia）、语义搜索与工业集成层。Arona 与 Shittim Chest
-通过 JSON-RPC/WS 面消费它。
+Entelecheia 是 agent 平台：scepter 运行时编排专门化 agent（"souls"）、维护
+长期记忆（PhiLia）、提供语义搜索，并承载工业集成层。Arona 与 Chest 的能力背后
+都是它。本文按功能模块展开：agents、记忆、搜索、知识库与连接。
 
 ## 架构一览
 

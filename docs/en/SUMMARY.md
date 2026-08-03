@@ -23,6 +23,10 @@
 - [Downloads](./getting-started/downloads.md)
 - [Closed Beta Guide](./getting-started/beta-guide.md)
 
+# Platforms
+
+- [Arona — Model Gateway, Memory and Cluster](./platforms/arona.md)
+
 # Meta
 
 - [License](./meta/license.md)

@@ -20,6 +20,7 @@
 # Get Started
 
 - [Quickstart](./getting-started/quickstart.md)
+- [Downloads](./getting-started/downloads.md)
 - [Closed Beta Guide](./getting-started/beta-guide.md)
 
 # Meta

@@ -25,7 +25,9 @@
 
 # Platforms
 
-- [Shittim Chest — Chat, Panels and Integrations](./platforms/chest.md)
+
+- [Arona — Model Gateway, Memory and Cluster](./platforms/arona.md)
+- [Entelecheia — Agent Platform and Memory](./platforms/entelecheia.md)
 
 # Meta
 

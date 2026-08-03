@@ -26,6 +26,7 @@
 # Platforms
 
 - [Shittim Chest — Chat, Panels and Integrations](./platforms/chest.md)
+- [Evernight — Industrial Protocol Broker](./platforms/evernight.md)
 
 # Meta
 

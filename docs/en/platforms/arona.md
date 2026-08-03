@@ -18,7 +18,7 @@ shittim-chest / any OpenAI client
         │
         ▼
    Backends: ollama · external (OpenAI-compatible) · agent-deployed engines
-```bash
+```
 
 All management traffic (dashboard, agents, memory) runs over WebSocket with
 JSON-RPC 2.0 messages; the only REST surface is the OpenAI-compatible
@@ -73,7 +73,7 @@ memory service (entelecheia's PhiLia agent) around your existing model.
 ARONA_MEMORY_URL=ws://<scepter-host>:8424/ws
 ARONA_MEMORY_TOKEN=<scepter connection token>
 ARONA_MEMORY_WRITEBACK=1        # default on; 0 disables writeback
-```bash
+```
 
 ### What happens per chat
 

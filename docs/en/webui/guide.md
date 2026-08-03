@@ -1,99 +1,57 @@
-# Web UI Guide
+# Web UI — 从第一句话开始的旅程
 
-Two web interfaces ship with the platform: **Arona** (the admin dashboard —
-models, keys, usage, billing, memory) and **Shittim Chest** (the working
-surface — chat, panels, visualizations, and a deep admin backend). This
-guide walks through what each screen does.
+两个界面，一条动线：**Arona** 是控制台（模型、钥匙、账本、记忆），**Chest**
+是工作台（聊天、面板、看世界）。不用先搞懂全部——跟着一条线走一遍，其余
+自然会熟。
 
-## Arona — the admin dashboard
+## 第一站：说第一句话
 
-Open `http://<host>:8420`. Login or register (registration locks after the
-first admin; `ARONA_REGISTRATION_OPEN=1` re-opens it).
+登录 Arona，进 **Playground**，选个模型，发一句。
 
-### Dashboard
-Overview page: request volume, online GPU nodes, deployed models and recent
-usage at a glance.
+发完看一眼消息上方的徽章：`Memory on` 还是 `Memory offline`。这枚徽章值得
+看——它告诉你刚才那条消息走得多远：回忆、路由、生成、写回。如果显示
+offline，去 **Memory** 页看看，它会把原因摊开给你。
 
-### Models
-The model catalogue. Lists everything routable through the gateway — the
-HuggingFace registry quick-start set plus backends you registered — and shows
-which model is served by which backend.
+## 第二站：一个模型的一生
 
-### Agents
-GPU node management. Each row is an `arona-agent` node: status (online from
-heartbeats), host, GPU summary and loaded models. **Deploy** / **Stop**
-buttons push commands to the node over the agent control plane; with an
-empty model field the least-loaded node is auto-targeted.
+模型不是"注册一下就有"，它有一条动线：
 
-### Providers
-The provider catalogue (registry entries + your custom providers). This is
-metadata about model sources; actual routing backends are managed via the
-admin API.
+- **Providers** —— 模型从哪些来源来（registry 目录、你的自定义源）
+- **Agents** —— 部署到哪台机器（每行一个 GPU 节点，心跳判定死活）
+- **Models** —— 最终可路由清单，每个模型挂在哪个后端上
+- **Playground** —— 用上它
 
-### API Keys
-Create and revoke API keys per user (optionally scoped to a project). Keys
-are the identity used by `curl` and by chest when it talks to the gateway.
+在 **Agents** 页部署模型时，模型名留空会自己挑最闲的机器——容量调度是
+默认行为，不是隐藏开关。重启之后节点和路由都还在——这是有意为之。
 
-### Usage
-Per-key usage records: prompt/completion tokens, model, backend, cost.
+## 第三站：你的钥匙和账本
 
-### Billing
-Billing tiers (free/pro/enterprise seeds) with monthly quota in USD and
-token quotas, plus per-tier rate limits.
+**API Keys** 是你的身份——`curl` 和 Chest 都拿这把钥匙进门。**Usage** 是
+每把钥匙的花销流水。**Billing** 是档位：配额到了会被硬拒，先看档位再放开玩。
 
-### Memory
-The memory gateway status page: whether recall/writeback are enabled, and
-the activity log (recall / writeback / delete events). Delete a stored node
-from its writeback entry.
+## 第四站：记忆怎么长大
 
-### Playground
-A chat testbed against any routed model. Pick a model, use or create a
-conversation, and chat — the memory badge shows the memory state of each
-turn (`Memory on` / `Memory offline`).
+先发几条有内容的对话，然后打开 **Memory** 页：你会看到写回事件一条条冒出来。
+换一个会话、问刚才聊过的事——徽章会变成 `Memory on`：它记得。
 
-### Settings
-Account settings (profile, credentials).
+写回条目上有个删除按钮——记忆可以反悔。`Memory offline` 不是 bug，是
+"记忆服务没连上"的诚实信号：平台从不假装记得。
 
-## Shittim Chest — the working surface
+## Chest：工作台
 
-Open `http://<host>:8425`. The UI has three areas: chat, panels, and the
-admin backend (`/backend#…`).
+登录先聊天——会话在服务端，换设备不丢。
 
-### Chat
-The chat product: conversations persist server-side, streaming responses,
-and agent tool calls / thinking chunks visible in the message stream.
+然后做三件事，按顺序：
 
-### Panels
-Prompt-created workspaces rendered as panels — data grid, media pipeline
-and 3D twin. Each panel's raw data-source binding and widget list are
-editable (structured edit view), not a black box.
+1. 用一句话开一个**面板**（创建入口就一个提示词框）
+2. 打开它的编辑视图：数据源绑定、组件清单、连接状态都在眼前——不是黑盒
+3. 加一个**媒体管线**节点，跑一遍，看节点状态实时走动
 
-### Visualizations
-- **Topology** — the device/network topology view with per-device details.
-- **Holographic** — the 3D twin view (device models with world coordinates).
-- **Demiurge** — the agent overview and per-agent detail (status, skills,
-  tools).
-- **Reports** — agent report archive with semantic search.
+之后随意逛：**Topology** 和 **Holographic** 是同一批设备的两种看法——
+数字孪生不只是好看；**Reports** 里历史报告可以语义搜；管理后台
+（`/backend`）日常用不到，邀请人、配渠道、看告警时才进去。
 
-### Admin backend (`/backend`)
-Grouped by domain:
+## 收尾
 
-- **Resources** — Workspaces, Devices, Stations, Groups, Manifests, Device
-  Models (with deep-edit modal), Resource Quotas.
-- **Agents** — Agents list + detail (tools, MCP, skills, containers),
-  Layer-2 agents, MCP Tools, Skills.
-- **Access** — Invitations, RBAC (roles/permissions/assignments), OAuth
-  providers, Webhooks.
-- **Integration** — Channels (IM platforms + webhooks), Bridge Network,
-  Voice service.
-- **Operations** — Alarms, Token Usage, System.
-- **Preferences** — UI preferences and panel defaults.
-
-## Common flows
-
-- **First login**: chest admin → Settings/Setup → connect the provider
-  (usually Arona) with an API key → chat.
-- **Trying a model**: Arona Playground → pick model → chat; then give the
-  same model to chest via its provider config.
-- **Giving someone access**: chest admin → Invitations → send invite;
-  assign a role in RBAC.
+整条动线是：**钥匙 → 模型 → 对话 → 记忆 → 工控**（Chest 侧的写门）。其余
+页面都是这条线的注脚。走到哪算哪，迷路了回来找路标。

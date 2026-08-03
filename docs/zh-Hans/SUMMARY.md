@@ -30,6 +30,7 @@
 # 平台
 
 - [Shittim Chest — 聊天、面板与多渠道集成](./platforms/chest.md)
+- [Evernight — 工业协议 Broker](./platforms/evernight.md)
 
 # 元信息
 

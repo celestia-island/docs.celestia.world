@@ -28,6 +28,8 @@
 
 - [Arona — Model Gateway, Memory and Cluster](./platforms/arona.md)
 - [Entelecheia — Agent Platform and Memory](./platforms/entelecheia.md)
+- [Shittim Chest — Chat, Panels and Integrations](./platforms/chest.md)
+- [Evernight — Industrial Protocol Broker](./platforms/evernight.md)
 
 # Meta
 

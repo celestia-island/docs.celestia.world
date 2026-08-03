@@ -26,6 +26,7 @@
 # Platforms
 
 - [Arona — Model Gateway, Memory and Cluster](./platforms/arona.md)
+- [Entelecheia — Agent Platform and Memory](./platforms/entelecheia.md)
 
 # Meta
 

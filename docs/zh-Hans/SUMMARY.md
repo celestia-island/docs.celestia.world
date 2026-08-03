@@ -20,6 +20,7 @@
 # 平台
 
 - [Arona — 模型网关、长期记忆与集群](./platforms/arona.md)
+- [Entelecheia — Agent 平台与记忆](./platforms/entelecheia.md)
 
 # 快速开始
 

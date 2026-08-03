@@ -6,6 +6,8 @@
 
 ## 模型：从来源到被调用
 
+![Arona Dashboard](res/screenshots/arona-dashboard.png)
+
 一个模型从"存在"到"能被聊天用上"，要经过四个环节：
 
 1. **来源** —— Providers 页是模型来源的目录：registry 的模型（如
@@ -31,6 +33,10 @@
 
 ## 身份与计量
 
+![Arona API Keys](res/screenshots/arona-apikeys.png)
+
+![Arona Billing](res/screenshots/arona-billing.png)
+
 - **API Keys** —— 你的身份。网关对 `/v1/*` 用 Bearer 鉴权；`curl` 与 Chest
   都拿它进门。密钥可限项目作用域。
 - **Usage** —— 每把钥匙的逐次调用流水：token、模型、后端、成本。
@@ -38,6 +44,8 @@
   降速——先看档位再放开用。
 
 ## 聊天与记忆
+
+![Arona Playground](res/screenshots/arona-playground.png)
 
 聊天在 Playground 进行，但每一轮都经过记忆服务，看徽章就知道走没走：
 
@@ -55,6 +63,8 @@
 
 ## 面板与工控（Chest）
 
+![Arona Agents](res/screenshots/arona-agents.png)
+
 - **聊天**：会话服务端持久化，换设备不丢；消息流里可见 agent 工具调用与
   思考块。
 - **面板**：一个提示词创建 → 引擎生成布局 → 持久化到 scepter 的
@@ -70,6 +80,10 @@
 
 管理后台（`/backend`）日常用不到：邀请人、配渠道（IM/webhook）、看告警、
 调 RBAC 时才进去。
+
+登录入口：
+
+![Arona Login](res/screenshots/arona-login.png)
 
 ## 收尾
 

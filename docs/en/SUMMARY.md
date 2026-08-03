@@ -23,6 +23,10 @@
 - [Downloads](./getting-started/downloads.md)
 - [Closed Beta Guide](./getting-started/beta-guide.md)
 
+# Platforms
+
+- [Shittim Chest — Chat, Panels and Integrations](./platforms/chest.md)
+
 # Meta
 
 - [License](./meta/license.md)

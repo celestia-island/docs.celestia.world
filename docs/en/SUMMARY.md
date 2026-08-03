@@ -12,6 +12,10 @@
 - [Safety Principles](./philosophy/safety.md)
 - [Narrative & Horizon](./philosophy/narrative.md)
 
+# Core Infrastructure
+
+- [Auth, RPC and Foundations](./core/infrastructure.md)
+
 # Ecosystem
 
 - [Projects Map](./ecosystem/projects.md)

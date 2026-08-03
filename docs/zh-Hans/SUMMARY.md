@@ -21,6 +21,10 @@
 - [项目地图](./ecosystem/projects.md)
 - [站点分工](./ecosystem/sites.md)
 
+# Web UI
+
+- [Arona 与 Shittim Chest 指南](./webui/guide.md)
+
 # 平台
 
 - [Arona — 模型网关、长期记忆与集群](./platforms/arona.md)

@@ -27,6 +27,10 @@
 - [Downloads](./getting-started/downloads.md)
 - [Closed Beta Guide](./getting-started/beta-guide.md)
 
+# Web UI
+
+- [Arona & Shittim Chest Guide](./webui/guide.md)
+
 # Platforms
 
 

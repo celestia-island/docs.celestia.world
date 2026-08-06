@@ -7,7 +7,7 @@ EtherCAT、CAN、OPC UA、MQTT 等）、轮询感知、评估告警，把物理�
 
 ## 架构一览
 
-```
+```text
 现场：PLC / MCU / 传感器（Modbus、S7comm、MC、EtherCAT、CAN、OPC UA、…）
         ▼
    evernight（边缘节点）
@@ -20,7 +20,7 @@ EtherCAT、CAN、OPC UA、MQTT 等）、轮询感知、评估告警，把物理�
         │
         ▼
    scepter（agent、工业工作流、写入审批）
-```
+```text
 
 ## 1. 现场协议
 

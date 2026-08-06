@@ -8,7 +8,7 @@ whisper / vLLM) for edge inference.
 
 ## Architecture at a glance
 
-```
+```text
 Field: PLC / MCU / sensors (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)
         ▼
    evernight (edge node)
@@ -21,7 +21,7 @@ Field: PLC / MCU / sensors (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)
         │
         ▼
    scepter (agents, industrial workflows, write approval)
-```
+```text
 
 ## 1. Field protocols
 

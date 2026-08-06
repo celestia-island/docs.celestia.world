@@ -8,7 +8,7 @@ guide is organized by capability: chat, panels, channels, search and auth.
 
 ## Architecture at a glance
 
-```
+```text
 You
  │  desktop app · web UI · 12+ IM channels (discord/slack/matrix/lark/…)
  ▼
@@ -21,7 +21,7 @@ Shittim Chest core (node-2:8425)
         │
         ▼
 Arona (models, memory) · scepter (agents, panels, search)
-```
+```text
 
 ## 1. Chat
 

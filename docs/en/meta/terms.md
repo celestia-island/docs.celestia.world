@@ -31,8 +31,9 @@ or discontinue any part of the services.
 ## Intellectual property and licensing
 
 Source code of the celestia-island projects is published under per-repository
-licenses — libraries under SySL-1.0 and products under BUSL-1.1 unless stated
-otherwise. Each repository's `LICENSE` file governs its own code.
+licenses — upstream libraries under Apache-2.0 and service-layer products under
+BUSL-1.1 unless stated otherwise; see [Commercial Licensing](./commercial-licensing.md)
+for the full map. Each repository's `LICENSE` file governs its own code.
 
 ## Changes
 

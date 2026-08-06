@@ -33,7 +33,6 @@
 
 # Platforms
 
-
 - [Arona — Model Gateway, Memory and Cluster](./platforms/arona.md)
 - [Entelecheia — Agent Platform and Memory](./platforms/entelecheia.md)
 - [Shittim Chest — Chat, Panels and Integrations](./platforms/chest.md)
@@ -42,6 +41,7 @@
 # Meta
 
 - [License](./meta/license.md)
+- [Commercial Licensing](./meta/commercial-licensing.md)
 - [CLA](./meta/cla.md)
 - [Code of Conduct](./meta/code-of-conduct.md)
 - [Security](./meta/security.md)

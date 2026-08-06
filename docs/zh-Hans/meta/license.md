@@ -81,11 +81,8 @@ License 2.0 或 MIT License。对于上述第 (i) 至
 
 变更日期：             2030-01-01
 
-变更许可：             自变更日期起，本许可证自动转换为接收者任选的双重许可：
-— Apache 许可证 2.0 版
-(<https://www.apache.org/licenses/LICENSE-2.0>)，或
-— MIT 许可证
-(<https://opensource.org/licenses/MIT>)
+变更许可：             自变更日期起，本许可证自动转换为合成源代码许可证 1.0 版
+(SySL-1.0) (<https://github.com/celestia-island/sysl>)，
 适用于依本许可证发布的所有版本的授权作品，对所有用户和所有
 用途生效，无使用限制，亦无需单独的商业许可。
 

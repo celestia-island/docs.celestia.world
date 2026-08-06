@@ -43,7 +43,10 @@
 # 元信息
 
 - [许可证](./meta/license.md)
+- [商业许可](./meta/commercial-licensing.md)
 - [CLA](./meta/cla.md)
 - [行为准则](./meta/code-of-conduct.md)
 - [安全](./meta/security.md)
+- [服务条款](./meta/terms.md)
+- [隐私政策](./meta/privacy.md)
 - [贡献指南](./meta/CONTRIBUTING.md)

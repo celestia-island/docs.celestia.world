@@ -92,12 +92,9 @@ separate commercial license is required.
 Change Date:          2030-01-01
 
 Change License:       On and after the Change Date, this License automatically
-converts to a dual license at the recipient's choice:
-— the Apache License, Version 2.0
-(<https://www.apache.org/licenses/LICENSE-2.0>), or
-— the MIT License
-(<https://opensource.org/licenses/MIT>)
-for all versions of the Licensed Work released under this
+converts to the Synthetic Source License, Version 1.0
+(SySL-1.0) (<https://github.com/celestia-island/sysl>) for
+all versions of the Licensed Work released under this
 License, for all users and for all uses, with no
 production-use restriction and no separate commercial
 license required.

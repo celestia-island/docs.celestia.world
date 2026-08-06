@@ -6,7 +6,7 @@ Shittim Chest 是用户面：聊天、面板与多渠道集成——把模型与
 
 ## 架构一览
 
-```
+```text
 你
  │  桌面应用 · Web UI · 12+ IM 渠道（discord/slack/matrix/lark/…）
  ▼
@@ -19,7 +19,7 @@ Shittim Chest core（node-2:8425）
         │
         ▼
 Arona（模型、记忆）· scepter（agent、面板、搜索）
-```
+```text
 
 ## 1. 聊天
 

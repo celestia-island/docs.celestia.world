@@ -9,7 +9,7 @@ connections.
 
 ## Architecture at a glance
 
-```
+```text
 Clients: Arona (gateway) · Shittim Chest (chat/panels) · TUI/CLI
         │  JSON-RPC 2.0 over WebSocket (token or API key)
         ▼
@@ -20,7 +20,7 @@ Clients: Arona (gateway) · Shittim Chest (chat/panels) · TUI/CLI
    ├─ ApoRia: knowledge base + workspace index (semantic search)
    ├─ OreXis: policy / safety gates on tool execution
    └─ Reflection: lesson store re-injected into prompts
-```
+```text
 
 ## 1. Agents (souls)
 

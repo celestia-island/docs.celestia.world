@@ -6,7 +6,7 @@ Entelecheia 是 agent 平台：scepter 运行时编排专门化 agent（"souls"�
 
 ## 架构一览
 
-```
+```text
 客户端：Arona（网关）· Shittim Chest（聊天/面板）· TUI/CLI
         │  WebSocket 上的 JSON-RPC 2.0（token 或 API key）
         ▼
@@ -17,7 +17,7 @@ Entelecheia 是 agent 平台：scepter 运行时编排专门化 agent（"souls"�
    ├─ ApoRia：知识库 + workspace 索引（语义搜索）
    ├─ OreXis：工具执行的策略/安全门
    └─ Reflection：教训库重新注入提示词
-```
+```text
 
 ## 1. Agents（souls）
 

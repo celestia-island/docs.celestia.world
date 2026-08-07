@@ -2,16 +2,16 @@
 
 The celestia-island ecosystem is licensed in two tiers: the **service-layer
 applications** use the Business Source License 1.1 (BUSL-1.1), the **generic
-upstream libraries** use the Apache License 2.0, and a few repositories carry
-other licenses. This page explains what that means in practice and when a
-separate commercial license is required.
+upstream libraries** use the Synthetic Source License 1.0 (SySL-1.0), and a few
+repositories carry other licenses. This page explains what that means in
+practice and when a separate commercial license is required.
 
 ## License map
 
 | Repository | License |
 | --- | --- |
 | arona, shittim-chest, scriptum, entelecheia, e.celestia.world, dev.celestia.world, evernight | BUSL-1.1 (service layer) |
-| kirino, hikari, plana, malkuth, lagrange | Apache-2.0 (upstream libraries) |
+| kirino, hikari, plana, malkuth, lagrange | SySL-1.0 (upstream libraries) |
 | arcaea.celestia.world | SySL-1.0 |
 | docs.celestia.world content | CC0-1.0 |
 

@@ -1,13 +1,13 @@
 # 商业许可
 
-celestia-island 生态采用两层许可：**服务层应用**使用商业源代码许可证 1.1（BUSL-1.1）；**通用上游库**使用 Apache License 2.0；个别仓库采用其他许可。本页说明其中的实际含义，以及何时需要单独的商业许可。
+celestia-island 生态采用两层许可：**服务层应用**使用商业源代码许可证 1.1（BUSL-1.1）；**通用上游库**使用 Synthetic Source License 1.0（SySL-1.0）；个别仓库采用其他许可。本页说明其中的实际含义，以及何时需要单独的商业许可。
 
 ## 许可地图
 
 | 仓库 | 许可 |
 | --- | --- |
 | arona、shittim-chest、scriptum、entelecheia、e.celestia.world、dev.celestia.world、evernight | BUSL-1.1（服务层） |
-| kirino、hikari、plana、malkuth、lagrange | Apache-2.0（上游库） |
+| kirino、hikari、plana、malkuth、lagrange | SySL-1.0（上游库） |
 | arcaea.celestia.world | SySL-1.0 |
 | docs.celestia.world 内容 | CC0-1.0 |
 

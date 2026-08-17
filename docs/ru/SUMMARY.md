@@ -12,6 +12,10 @@
 - [Принципы безопасности](./philosophy/safety.md)
 - [Нарратив и горизонт](./philosophy/narrative.md)
 
+# Основная инфраструктура
+
+- [Аутентификация, RPC и фундамент](./core/infrastructure.md)
+
 # Экосистема
 
 - [Карта проектов](./ecosystem/projects.md)
@@ -20,11 +24,19 @@
 # Начало работы
 
 - [Краткое руководство](./getting-started/quickstart.md)
+- [Загрузки](./getting-started/downloads.md)
 - [Руководство по закрытой бете](./getting-started/beta-guide.md)
 
 # Веб-интерфейс
 
 - [Руководство по Arona и Shittim Chest](./webui/guide.md)
+
+# Платформы
+
+- [Arona — шлюз моделей, память и кластер](./platforms/arona.md)
+- [Entelecheia — агентная платформа и память](./platforms/entelecheia.md)
+- [Shittim Chest — чат, панели и интеграции](./platforms/chest.md)
+- [Evernight — брокер промышленных протоколов](./platforms/evernight.md)
 
 # Meta
 

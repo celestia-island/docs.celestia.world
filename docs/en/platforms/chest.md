@@ -21,7 +21,7 @@ Shittim Chest core (node-2:8425)
         │
         ▼
 Arona (models, memory) · scepter (agents, panels, search)
-```text
+```
 
 ## 1. Chat
 

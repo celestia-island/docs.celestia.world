@@ -21,6 +21,12 @@
 - [项目地图](./ecosystem/projects.md)
 - [站点分工](./ecosystem/sites.md)
 
+# 快速开始
+
+- [快速开始](./getting-started/quickstart.md)
+- [下载](./getting-started/downloads.md)
+- [内测指南](./getting-started/beta-guide.md)
+
 # Web UI
 
 - [Arona 与 Shittim Chest 指南](./webui/guide.md)
@@ -29,14 +35,6 @@
 
 - [Arona — 模型网关、长期记忆与集群](./platforms/arona.md)
 - [Entelecheia — Agent 平台与记忆](./platforms/entelecheia.md)
-
-# 快速开始
-
-- [快速开始](./getting-started/quickstart.md)
-- [内测指南](./getting-started/beta-guide.md)
-
-# 平台
-
 - [Shittim Chest — 聊天、面板与多渠道集成](./platforms/chest.md)
 - [Evernight — 工业协议 Broker](./platforms/evernight.md)
 

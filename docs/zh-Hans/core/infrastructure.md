@@ -38,7 +38,5 @@ Vue 组件库（`@celestia-island/hikari`）提供每个 webui 使用的按钮�
 
 ## 依赖规则
 
-- Layer 0：kirino（认证）→ Layer 1：plana（协议/地基）→ Layer 2：hikari
-  （UI）→ Layer 3：服务（arona、chest、entelecheia、evernight）。
-- 服务只实现业务逻辑；通用能力来自上游。跨仓依赖用 git reference 或钉
-  tag——绝不本地 path dep。
+- 第 0 层：kirino（认证）→ 第 1 层：plana（协议/地基）→ 第 2 层：hikari（UI）→ 第 3 层：服务（arona、chest、entelecheia、evernight）。
+- 服务只实现业务逻辑；通用能力来自上游。跨仓依赖用 git reference 或钉版 tag——绝不用本地 path 依赖。

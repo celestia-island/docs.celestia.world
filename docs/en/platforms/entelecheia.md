@@ -20,7 +20,7 @@ Clients: Arona (gateway) · Shittim Chest (chat/panels) · TUI/CLI
    ├─ ApoRia: knowledge base + workspace index (semantic search)
    ├─ OreXis: policy / safety gates on tool execution
    └─ Reflection: lesson store re-injected into prompts
-```text
+```
 
 ## 1. Agents (souls)
 

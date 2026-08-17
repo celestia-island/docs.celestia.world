@@ -22,6 +22,10 @@
 - [クイックスタート](./getting-started/quickstart.md)
 - [クローズドベータガイド](./getting-started/beta-guide.md)
 
+# Web UI
+
+- [Arona と Shittim Chest ガイド](./webui/guide.md)
+
 # メタ
 
 - [ライセンス](./meta/license.md)

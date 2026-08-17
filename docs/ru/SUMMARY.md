@@ -22,6 +22,10 @@
 - [Краткое руководство](./getting-started/quickstart.md)
 - [Руководство по закрытой бете](./getting-started/beta-guide.md)
 
+# Веб-интерфейс
+
+- [Руководство по Arona и Shittim Chest](./webui/guide.md)
+
 # Meta
 
 - [Лицензия](./meta/license.md)

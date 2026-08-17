@@ -22,6 +22,10 @@
 - [Schnellstart](./getting-started/quickstart.md)
 - [Leitfaden zur geschlossenen Beta](./getting-started/beta-guide.md)
 
+# Web-Oberfläche
+
+- [Anleitung zu Arona & Shittim Chest](./webui/guide.md)
+
 # Meta
 
 - [Lizenz](./meta/license.md)

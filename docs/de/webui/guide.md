@@ -1,7 +1,7 @@
-# Web UI — die Reise beginnend mit deinem ersten Satz
+# Web UI — die Reise beginnend mit Ihrem ersten Satz
 
 Zwei Oberflächen, ein Fluss: **arona** ist die Headless-Steuerungsebene (Modelle, Schlüssel,
-Ledger, Memory); **shittim-chest** ist die Werkbank, die du tatsächlich vor Augen hast (Chat,
+Ledger, Memory); **shittim-chest** ist die Werkbank, die Sie tatsächlich vor Augen haben (Chat,
 Panels, Weltblick). Jeder Bildschirm unten ist eine chest-Ansicht — chest spricht mit arona
 über dessen RPC-Fläche; arona selbst bringt kein UI mit.
 
@@ -24,7 +24,7 @@ liegt in den [arona docs](https://arona.docs.celestia.world).
 
 ![Chest-Abrechnung](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-billing.png)
 
-**API-Schlüssel** sind deine Identität — das Gateway authentifiziert `/v1/*` mit
+**API-Schlüssel** sind Ihre Identität — das Gateway authentifiziert `/v1/*` mit
 Bearer-Tokens, und sowohl `curl` als auch chest zeigen an der Tür einen vor. **Usage** ist
 ein Ledger pro Aufruf und Schlüssel: Tokens, Modell, Backend, Kosten. **Billing**-Stufen
 setzen Kontingente (USD / Tokens / Rate-Limits); wer eines erreicht, erhält eine harte
@@ -34,7 +34,7 @@ Ablehnung, keine Verlangsamung.
 
 ![Chest-Chat](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-playground.png)
 
-Jede Chat-Runde läuft durch den Memory-Dienst — das Badge an jeder Runde verrät dir, ob das
+Jede Chat-Runde läuft durch den Memory-Dienst — das Badge an jeder Runde verrät Ihnen, ob das
 geschah. `Memory on` bedeutet, dass relevante Langzeit-Erinnerungen vor dem Routing injiziert
 wurden; `Memory offline` bedeutet, dass der Memory-Dienst nicht erreichbar ist (ein
 Ehrlichkeitssignal, kein Bug); `disabled` bedeutet, dass nichts Relevantes gefunden wurde.

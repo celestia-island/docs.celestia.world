@@ -22,6 +22,10 @@
 - [快速開始](./getting-started/quickstart.md)
 - [封閉測試指南](./getting-started/beta-guide.md)
 
+# Web UI
+
+- [Arona 與 Shittim Chest 指南](./webui/guide.md)
+
 # 元資訊
 
 - [授權條款](./meta/license.md)

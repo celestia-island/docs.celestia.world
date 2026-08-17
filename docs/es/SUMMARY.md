@@ -22,6 +22,10 @@
 - [Inicio rápido](./getting-started/quickstart.md)
 - [Guía de beta cerrada](./getting-started/beta-guide.md)
 
+# Interfaz Web
+
+- [Guía de Arona y Shittim Chest](./webui/guide.md)
+
 # Meta
 
 - [Licencia](./meta/license.md)

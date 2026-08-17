@@ -22,6 +22,10 @@
 - [البدء السريع](./getting-started/quickstart.md)
 - [دليل النسخة التجريبية المغلقة](./getting-started/beta-guide.md)
 
+# واجهة الويب
+
+- [دليل Arona وShittim Chest](./webui/guide.md)
+
 # Meta
 
 - [الترخيص](./meta/license.md)

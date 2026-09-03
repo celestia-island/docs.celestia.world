@@ -1,61 +1,49 @@
-# Mitwirken bei Arona
+# Mitwirken bei Celestia Island
 
-> Dies ist eine gemeinschaftliche Referenzübersetzung. Bei Unstimmigkeiten ist die englische Originaldatei [`CONTRIBUTING.md`](../../en/meta/CONTRIBUTING.md) im Stammverzeichnis des Repositorys maßgeblich.
+Vielen Dank für Ihr Interesse an einem Beitrag! Celestia Island ist eine Familie von Projekten, die die gesamte Plattform umspannen — kirino (Authentifizierung), plana (Plattform), hikari (UI), die Dienste-Schicht sowie die WebUIs und Websites rundherum. Dieser Leitfaden beschreibt die Beitragspolitik, die für die gesamte Projektgruppe gilt; Bau- und Entwicklungsanleitungen für ein einzelnes Projekt finden Sie in dessen eigenem Repository und auf dessen Dokumentationsseite.
 
-Vielen Dank für Ihr Interesse an der Mitarbeit! Dieser Leitfaden deckt alles ab, was Sie für den Einstieg benötigen.
+## Beitragspolitik (zuerst lesen)
 
-## Beitragsrichtlinie (zuerst lesen)
+Die Gruppe ist als Schichten gemischter Kritikalität aufgebaut — Schicht 0 (kirino, Authentifizierung), Schicht 1 (plana, Plattform), Schicht 2 (hikari, UI) und die Dienste der Schicht 3 darüber — daher wiegen **Korrektheit, Abwärtskompatibilität und Stabilität schwerer als der Beitragsdurchsatz**. Bitte lesen Sie diesen Abschnitt, bevor Sie einen Pull Request öffnen.
 
-Arona definiert die gemeinsamen JSON-RPC 2.0-Protokolltypen, die auf der gesamten Entelecheia-Plattform verwendet werden. Daher wiegen **Korrektheit, Abwärtskompatibilität und Stabilität schwerer als der Beitragsdurchsatz**. Bitte lesen Sie dies, bevor Sie einen Pull Request eröffnen.
+- **Hohe Merge-Hürde, keine öffentliche Roadmap.** Das Öffnen eines Pull Requests impliziert nicht, dass er zusammengeführt wird. Wir nehmen bewusst nur eine kleine Zahl von Änderungen an — und auch nur dann, wenn sie zur Architektur passen und die Review bestehen. Das ist Absicht, keine Unhöflichkeit.
+- **Was wir willkommen heißen:** Fehlerberichte, fokussierte Fixes, additive (nicht brechende) Features und Protokollfelder, verbesserte Dokumentation sowie Design-Diskussionen vor dem Code.
+- **Was wir in der Regel nicht zusammenführen:** große unaufgeforderte Neuschreibungen, brechende Änderungen an gemeinsamen Verträgen und Protokollflächen (zum Beispiel die JSON-RPC-2.0-Protokolltypen, die in der gesamten Entelecheia-Plattform geteilt werden), architektonische Änderungen ohne vorherige Design-Diskussion, massenhafte „vibe-coded“ Pull Requests sowie alles, was die Kompatibilitäts-, Zuverlässigkeits- oder Sicherheitsanforderungen einer niedrigeren Schicht senkt.
+- **Kern versus Peripherie.** Der Zero-Trust-Authentifizierungskern, die gemeinsamen Plattformtypen und die gemeinsame UI-Komponentenbibliothek unterliegen dem strengsten Maßstab und werden vom Kernteam gepflegt; vorgeschlagene Änderungen dort sollten als Design-Diskussion beginnen.
+- **CLA erforderlich.** Jeder angenommene Beitrag erfordert eine unterzeichnete CLA (Contributor License Agreement). Siehe [`CLA.md`](cla.md). Commits müssen eine `Signed-off-by`-Zeile tragen (`git commit -s`).
 
-- **Hohe Merge-Hürde, keine öffentliche Roadmap.** Das Eröffnen eines PR bedeutet nicht, dass er zusammengeführt wird. Wir akzeptieren bewusst nur eine geringe Anzahl von Änderungen, und nur dann, wenn sie zur Architektur passen und das Review bestehen. Das ist beabsichtigt, nicht unhöflich.
-
-- **Was wir begrüßen:** Fehlerberichte, gezielte Korrekturen, additive (nicht-breaking) Protokollfelder, verbesserte Dokumentation und vorherige Design-Diskussionen vor dem Code.
-
-- **Was wir im Allgemeinen nicht mergen:** große unaufgeforderte Umschreibungen, Breaking Changes der Protokolltyp-Oberfläche, Architekturänderungen ohne vorherige Design-Diskussion, massenhafte „Vibe-Coded"-PRs und alles, was die Kompatibilitätsbarriere des Typvertrags senkt.
-
-- **Kern vs. Peripherie.** Die Protokolltyp-Definitionen und ihre Serialisierungsschnittstelle unterliegen der strengsten Prüfung und werden vom Kernteam gewartet.
-
-- **CLA erforderlich.** Jeder akzeptierte Beitrag erfordert eine unterzeichnete Contributor License Agreement. Siehe [`CLA.md`](cla.md). Commits müssen eine `Signed-off-by`-Zeile enthalten (`git commit -s`).
-
-> **Die Lizenz mag sich öffnen; die Merge-Hürde nicht.** Am **2030-01-01** wechselt dieses Projekt von BUSL-1.1 zu Apache-2.0 oder MIT (nach Wahl des Empfängers) — siehe [`LICENSE`](../../../LICENSE). Das erweitert, *was Sie mit dem Code tun dürfen*; es senkt **nicht** die Review-Hürde, entfernt nicht die CLA und bedeutet nicht, dass wir mehr PRs akzeptieren. Die Beitragsrichtlinie bleibt vor und nach dem Änderungsdatum unverändert.
+> **Die Lizenz mag sich öffnen; die Merge-Hürde tut es nicht.** Am **2030-01-01** gehen die Projekte der Gruppe von BUSL-1.1 in Apache-2.0 oder MIT über (nach Wahl des Empfängers) — siehe [`LICENSE`](../../../LICENSE). Das erweitert, *was Sie mit dem Code tun dürfen*; es senkt **nicht** die Review-Hürde, schafft die CLA nicht ab und bedeutet nicht, dass wir mehr Pull Requests annehmen. Die Beitragspolitik bleibt vor und nach dem Änderungsdatum unverändert.
 
 ## Sicherheit
 
-Eröffnen Sie **keine** öffentlichen Issues für Sicherheitslücken. Melden Sie diese vertraulich über [GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new). Siehe [`SECURITY.md`](security.md).
+Öffnen Sie **keine** öffentlichen Issues für Sicherheitslücken. Melden Sie sie privat über GitHub Security Advisories im betroffenen Repository oder per E-Mail an <security@celestia.world>. Siehe [`SECURITY.md`](security.md).
 
 ## Verhaltenskodex
 
-Seien Sie respektvoll, konstruktiv und inklusiv. Wir befolgen den [Contributor Covenant Verhaltenskodex](code-of-conduct.md).
+Behandeln Sie einander respektvoll, konstruktiv und inklusiv. Wir folgen dem [Contributor Covenant Code of Conduct](code-of-conduct.md).
 
-## Entwicklung
+## Erste Schritte
 
-Arona ist eine kleine Rust-Crate. Schnellstart:
-
-```bash
-git clone https://github.com/celestia-island/plana.git
-cd arona
-cargo build
-cargo test
-cargo clippy -- -D warnings
-```
-
-- Rust 1.85+.
-- Typen leiten `ts-rs` ab (`#[derive(TS)]`), um TypeScript-Bindings zu generieren — halten Sie `serde`-Attribute und `ts-rs`-Annotationen konsistent.
-
-- Führen Sie keine Breaking Changes an bestehenden Protokolltypen ein; bevorzugen Sie additive Felder mit `#[serde(default)]`.
+Wählen Sie das Repository aus, an dem Sie arbeiten möchten, und folgen Sie dessen README und Dokumentationsseite. Rust-Projekte verifizieren mit `cargo fmt`, `cargo clippy -D warnings` und `cargo test`; Web-Projekte mit `pnpm lint`, `pnpm build` und `pnpm test`. Die [Ökosystemkarte](../ecosystem/sites.md) listet jedes Projekt auf und zeigt, wo seine Dokumentation zu finden ist.
 
 ## Pull-Request-Prozess
 
-1. Forken und von `main` abzweigen.
-2. Diskutieren Sie große oder protokollrelevante Änderungen zuerst in einem Issue.
-3. Erstellen Sie atomare Commits gemäß [Conventional Commits](https://www.conventionalcommits.org/).
-4. Stellen Sie sicher, dass `cargo fmt`, `cargo clippy -D warnings` und `cargo test` erfolgreich sind.
-5. Unterzeichnen Sie die CLA und fügen Sie jedem Commit `Signed-off-by` hinzu.
-6. Berücksichtigen Sie Review-Feedback; beschränken Sie Force-Pushes auf Rebase-Vorgänge.
+1. Forken Sie das Repository und verzweigen Sie von dessen Standard-Branch.
+1. Diskutieren Sie große Änderungen oder solche an gemeinsamen Verträgen zuerst in einem Issue.
+1. Erstellen Sie atomare Commits: Jede Betreffzeile besteht aus einem einzelnen Gitmoji, gefolgt von einem englischen Satz, der großgeschrieben beginnt und mit einem Punkt endet; Details gehören in den Commit-Body.
+1. Stellen Sie sicher, dass die Checks des Projekts bestehen, bevor Sie pushen.
+1. Unterschreiben Sie die CLA und fügen Sie jedem Commit eine `Signed-off-by`-Zeile hinzu.
+1. Arbeiten Sie Review-Feedback ein; beschränken Sie Force-Pushes auf Rebases.
 
 ## Lizenz & CLA
 
-Arona ist unter der **Business Source License 1.1 (BUSL-1.1)** mit einem **Änderungsdatum vom 2030-01-01** lizenziert, an dem es nach Wahl des Empfängers in **Apache-2.0 oder MIT** übergeht. Für alle interne, akademische, staatliche, bildungsspezifische und nicht-kommerzielle Nutzung ist es bereits heute gleichwertig mit Apache-2.0 oder MIT (siehe Additional Use Grant in [`LICENSE`](../../../LICENSE)). Eingeschränkte kommerzielle Nutzungen (Hosting, Weiterverkauf oder Rebranding als Dienst) erfordern bis zum Änderungsdatum eine separate kommerzielle Lizenz.
+Die Projekte dieser Gruppe sind unter der **Business Source License 1.1 (BUSL-1.1)** mit einem **Änderungsdatum (Change Date) vom 2030-01-01** lizenziert, wonach jedes nach Wahl des Empfängers in **Apache-2.0 oder MIT** übergeht. Für interne, akademische, staatliche, bildungsbezogene und nicht-kommerzielle Nutzung sind sie heute bereits gleichwertig zu Apache-2.0 oder MIT (siehe den Additional Use Grant in der [`LICENSE`](../../../LICENSE) jedes Repositorys). Eingeschränkte kommerzielle Nutzungen (Hosting, Weiterverkauf oder Rebranding als Dienst) erfordern bis zum Änderungsdatum eine separate kommerzielle Lizenz.
 
-Durch Ihre Mitwirkung erklären Sie sich damit einverstanden, dass Ihre Beiträge unter der Projektlizenz lizenziert werden und dass Sie die CLA unterzeichnen ([`CLA.md`](cla.md)). Die CLA gewährt dem Projekt eine freizügige Lizenz **einschließlich des Rechts zur Relizenzierung**, damit das Projekt seinen BUSL→Apache/MIT-Pfad beibehalten und seine Lizenzierung in Zukunft anpassen kann.
+Mit Ihrem Beitrag stimmen Sie zu, dass Ihre Beiträge unter der Lizenz des Projekts lizenziert werden und dass Sie die CLA unterzeichnen ([`CLA.md`](cla.md)). Die CLA räumt dem Projekt eine permissive Lizenz **einschließlich des Rechts zur erneuten Lizenzierung** ein, damit die Projekte ihren BUSL→Apache/MIT-Lizenzierungspfad beibehalten und ihre Lizenzierung in Zukunft anpassen können.
+
+## Weiterführendes
+
+- [CLA](cla.md) — das Contributor License Agreement (CLA), das Sie unterzeichnen.
+- [Sicherheitsrichtlinie](security.md) — wie Sie Schwachstellen privat melden.
+- [Verhaltenskodex](code-of-conduct.md) — der Umgang, den wir voneinander erwarten.
+- [Ökosystemkarte](../ecosystem/sites.md) — jedes Projekt, jede Website und wo ihre Dokumentation zu finden ist.

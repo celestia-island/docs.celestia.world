@@ -1,98 +1,49 @@
-# Contributing to Arona
+# Contributing to Celestia Island
 
-Thank you for your interest in contributing! This guide covers everything you
-need to get started.
+Thank you for your interest in contributing! Celestia Island is a family of projects spanning the whole platform — kirino (auth), plana (platform), hikari (UI), the service layer, and the webuis and sites around them. This guide covers the contribution policy shared by the entire project group; build and development instructions for an individual project live in that project's own repository and documentation site.
 
 ## Contribution policy (read this first)
 
-Arona defines the shared JSON-RPC 2.0 protocol types consumed across the
-Entelecheia platform, so **correctness, backward compatibility, and stability
-outweigh contribution throughput**. Please read this before opening a pull
-request.
+The group is built as mixed-criticality layers — Layer 0 (kirino, auth), Layer 1 (plana, platform), Layer 2 (hikari, UI), and the Layer 3 services on top — so **correctness, backward compatibility, and stability outweigh contribution throughput**. Please read this section before opening a pull request.
 
-- **High merge bar, not a public roadmap.** Opening a PR does not imply it will
+- **High merge bar, not a public roadmap.** Opening a PR does not imply it will be merged. We accept a deliberately small number of changes, and only when they fit the architecture and pass review. This is by design, not rudeness.
+- **What we welcome:** bug reports, focused fixes, additive (non-breaking) features and protocol fields, improved documentation, and design discussions before code.
+- **What we generally will not merge:** large unsolicited rewrites, breaking changes to shared contracts and protocol surfaces (for example the JSON-RPC 2.0 protocol types shared across the Entelecheia platform), architectural changes without a prior design discussion, bulk "vibe-coded" PRs, and anything that lowers the compatibility, safety, or security bar of a lower layer.
+- **Core vs. periphery.** The zero-trust auth core, the shared platform types, and the shared UI component library are held to the strictest bar and maintained by the core team; proposed changes there should start as a design discussion.
+- **CLA required.** Every accepted contribution requires a signed Contributor License Agreement. See [`CLA.md`](cla.md). Commits must carry a `Signed-off-by` line (`git commit -s`).
 
-be merged. We accept a deliberately small number of changes, and only when
-they fit the architecture and pass review. This is by design, not rudeness.
-
-- **What we welcome:** bug reports, focused fixes, additive (non-breaking)
-
-protocol fields, improved documentation, and prior design discussions before
-code.
-
-- **What we generally will not merge:** large unsolicited rewrites, breaking
-
-changes to the protocol type surface, architectural changes without a prior
-design discussion, bulk "vibe-coded" PRs, and anything that lowers the
-compatibility bar of the type contract.
-
-- **Core vs. periphery.** The protocol type definitions and their serialization
-
-surface are held to the strictest bar and maintained by the core team.
-
-- **CLA required.** Every accepted contribution requires a signed Contributor
-
-License Agreement. See [`CLA.md`](cla.md). Commits must carry a
-`Signed-off-by` line (`git commit -s`).
-
-> **The license may open; the merge bar will not.** On **2030-01-01** this
-> project converts from BUSL-1.1 to Apache-2.0 or MIT (recipient's choice) — see
-> [`LICENSE`](../../../LICENSE). That broadens *what you may do with the code*; it does
-> **not** lower the review bar, remove the CLA, or mean we accept more PRs. The
-> contribution policy is unchanged before and after the change date.
+> **The license may open; the merge bar will not.** On **2030-01-01** the group's projects convert from BUSL-1.1 to Apache-2.0 or MIT (recipient's choice) — see [`LICENSE`](../../../LICENSE). That broadens *what you may do with the code*; it does **not** lower the review bar, remove the CLA, or mean we accept more PRs. The contribution policy is unchanged before and after the change date.
 
 ## Security
 
-Do **not** open public issues for security vulnerabilities. Report them privately
-via [GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
-See [`SECURITY.md`](security.md).
+Do **not** open public issues for security vulnerabilities. Report them privately via GitHub Security Advisories on the affected repository, or by emailing <security@celestia.world>. See [`SECURITY.md`](security.md).
 
 ## Code of Conduct
 
-Be respectful, constructive, and inclusive. We follow the
-[Contributor Covenant Code of Conduct](code-of-conduct.md).
+Be respectful, constructive, and inclusive. We follow the [Contributor Covenant Code of Conduct](code-of-conduct.md).
 
-## Development
+## Getting started
 
-Arona is a small Rust crate. Quick start:
-
-```bash
-git clone https://github.com/celestia-island/plana.git
-cd arona
-cargo build
-cargo test
-cargo clippy -- -D warnings
-```
-
-- Rust 1.85+.
-- Types derive `ts-rs` (`#[derive(TS)]`) to generate TypeScript bindings — keep
-
-`serde` attributes and `ts-rs` annotations consistent.
-
-- Do not introduce breaking changes to existing protocol types; prefer additive
-
-fields with `#[serde(default)]`.
+Pick the repository you want to work on and follow its README and documentation site. Rust projects verify with `cargo fmt`, `cargo clippy -D warnings`, and `cargo test`; web projects with `pnpm lint`, `pnpm build`, and `pnpm test`. The [ecosystem map](../ecosystem/sites.md) lists every project and where its documentation lives.
 
 ## Pull request process
 
-1. Fork and branch from `main`.
-1. Discuss large or protocol-affecting changes in an issue first.
-1. Make atomic commits following [Conventional Commits](https://www.conventionalcommits.org/).
-1. Ensure `cargo fmt`, `cargo clippy -D warnings`, and `cargo test` pass.
+1. Fork and branch from the repository's default branch.
+1. Discuss large or shared-contract changes in an issue first.
+1. Make atomic commits: each subject is a single gitmoji followed by one capitalized English sentence ending with a period, with details in the commit body.
+1. Ensure the project's checks pass before pushing.
 1. Sign the CLA and add `Signed-off-by` to each commit.
 1. Address review feedback; keep force-pushes to rebase only.
 
 ## License & CLA
 
-Arona is licensed under the **Business Source License 1.1 (BUSL-1.1)** with a
-**Change Date of 2030-01-01**, on which it converts to the recipient's choice of
-**Apache-2.0 or MIT**. For all internal, academic, government, educational, and
-non-commercial use it is already equivalent to Apache-2.0 or MIT today (see the
-Additional Use Grant in [`LICENSE`](../../../LICENSE)). Restricted commercial uses
-(hosting, resale, or rebranding as a service) require a separate commercial
-license until the Change Date.
+The projects in this group are licensed under the **Business Source License 1.1 (BUSL-1.1)** with a **Change Date of 2030-01-01**, on which each converts to the recipient's choice of **Apache-2.0 or MIT**. For internal, academic, government, educational, and non-commercial use they are already equivalent to Apache-2.0 or MIT today (see the Additional Use Grant in each repository's [`LICENSE`](../../../LICENSE)). Restricted commercial uses (hosting, resale, or rebranding as a service) require a separate commercial license until the Change Date.
 
-By contributing, you agree that your contributions are licensed under the
-project's license and that you sign the CLA ([`CLA.md`](cla.md)). The CLA grants
-the project a permissive license **including the right to relicense**, so the
-project can keep its BUSL→Apache/MIT path and adapt its licensing in the future.
+By contributing, you agree that your contributions are licensed under the project's license and that you sign the CLA ([`CLA.md`](cla.md)). The CLA grants the project a permissive license **including the right to relicense**, so the projects can keep their BUSL→Apache/MIT path and adapt their licensing in the future.
+
+## Where to go deeper
+
+- [CLA](cla.md) — the Contributor License Agreement you sign.
+- [Security policy](security.md) — how to report vulnerabilities privately.
+- [Code of Conduct](code-of-conduct.md) — the behavior we hold each other to.
+- [Ecosystem map](../ecosystem/sites.md) — every project, site, and where its documentation lives.

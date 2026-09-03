@@ -1,97 +1,49 @@
-# Contribuer à Arona
+# Contribuer à Celestia Island
 
-Merci de votre intérêt pour contribuer ! Ce guide couvre tout ce dont vous
-avez besoin pour commencer.
+Merci de votre intérêt pour la contribution ! Celestia Island est une famille de projets couvrant l'ensemble de la plateforme — kirino (auth), plana (plateforme), hikari (UI), la couche de services, ainsi que les webUI et les sites qui les entourent. Ce guide décrit la politique de contribution partagée par l'ensemble du groupe de projets ; les instructions de build et de développement d'un projet donné se trouvent dans le dépôt et le site de documentation de ce projet.
 
-## Politique de contribution (lisez ceci en premier)
+## Politique de contribution (à lire en premier)
 
-Arona définit les types de protocole JSON-RPC 2.0 partagés consommés à travers la
-plateforme Entelecheia, donc **la justesse, la compatibilité ascendante et la stabilité
-priment sur le débit de contribution**. Veuillez lire ceci avant d'ouvrir une pull
-request.
+Le groupe est construit comme des couches à criticité mixte — Couche 0 (kirino, auth), Couche 1 (plana, plateforme), Couche 2 (hikari, UI) et les services de la Couche 3 par-dessus — si bien que **la justesse, la compatibilité ascendante et la stabilité priment sur le débit de contribution**. Merci de lire cette section avant d'ouvrir une pull request.
 
-- **Barre de fusion élevée, pas une feuille de route publique.** Ouvrir une PR n'implique pas qu'elle sera
+- **Seuil de fusion élevé, pas une feuille de route publique.** Ouvrir une pull request ne garantit nullement sa fusion. Nous n'acceptons qu'un nombre volontairement restreint de changements, et uniquement lorsqu'ils s'inscrivent dans l'architecture et passent la revue. C'est un choix délibéré, pas de l'impolitesse.
+- **Ce que nous accueillons volontiers :** les rapports de bugs, les correctifs ciblés, les fonctionnalités et les champs de protocole additifs (sans rupture), l'amélioration de la documentation, et les discussions de conception avant le code.
+- **Ce que nous ne fusionnerons généralement pas :** les réécritures massives non sollicitées, les changements cassants des contrats partagés et des surfaces de protocole (par exemple les types du protocole JSON-RPC 2.0 partagés par toute la plateforme Entelecheia), les changements d'architecture sans discussion de conception préalable, les pull requests massives « vibe-coded », et tout ce qui abaisse le niveau de compatibilité, de sûreté ou de sécurité d'une couche inférieure.
+- **Cœur vs périphérie.** Le cœur d'authentification zero-trust, les types de plateforme partagés et la bibliothèque de composants UI partagée sont soumis au niveau d'exigence le plus strict et maintenus par l'équipe centrale ; toute proposition de changement doit y commencer comme une discussion de conception.
+- **CLA obligatoire.** Toute contribution acceptée exige un Accord de licence contributeur signé. Voir [`CLA.md`](cla.md). Les commits doivent porter une ligne `Signed-off-by` (`git commit -s`).
 
-fusionnée. Nous acceptons un nombre délibérément restreint de modifications, et seulement lorsqu'elles
-correspondent à l'architecture et passent la revue. C'est par conception, pas par impolitesse.
-
-- **Ce que nous accueillons :** rapports de bugs, correctifs ciblés, champs de protocole additifs (non cassants),
-
-documentation améliorée, et discussions de conception préalables avant le code.
-
-- **Ce que nous ne fusionnerons généralement pas :** réécritures massives non sollicitées, modifications
-
-cassantes de la surface de type du protocole, changements architecturaux sans discussion
-de conception préalable, PR « vibe-codées » en masse, et tout ce qui abaisse la
-barre de compatibilité du contrat de type.
-
-- **Cœur vs. périphérie.** Les définitions de type du protocole et leur surface de sérialisation
-
-sont tenues à la barre la plus stricte et maintenues par l'équipe cœur.
-
-- **CLA requis.** Chaque contribution acceptée nécessite un Accord de Licence du Contributeur
-
-signé. Voir [`CLA.md`](cla.md). Les commits doivent porter une
-ligne `Signed-off-by` (`git commit -s`).
-
-> **La licence peut s'ouvrir ; la barre de fusion ne le fera pas.** Le **2030-01-01** ce
-> projet passe de BUSL-1.1 à Apache-2.0 ou MIT (choix du destinataire) — voir
-> [`LICENSE`](../../../LICENSE). Cela élargit *ce que vous pouvez faire avec le code* ; cela n'abaisse
-> **pas** la barre de revue, ne supprime pas le CLA, et ne signifie pas que nous acceptons plus de PR. La
-> politique de contribution est inchangée avant et après la date de changement.
+> **La licence peut s'ouvrir ; le seuil de fusion, lui, ne bougera pas.** Au **2030-01-01**, les projets du groupe passent de BUSL-1.1 à Apache-2.0 ou MIT (au choix du destinataire) — voir [`LICENSE`](../../../LICENSE). Cela élargit *ce que vous pouvez faire du code* ; cela **n'abaisse** pas le niveau d'examen, ne supprime pas la CLA et ne signifie pas que nous acceptons davantage de pull requests. La politique de contribution reste inchangée avant et après la date de changement.
 
 ## Sécurité
 
-N'ouvrez **pas** de tickets publics pour les vulnérabilités de sécurité. Signalez-les en privé
-via [les Avis de Sécurité GitHub](https://github.com/celestia-island/plana/security/advisories/new).
-Voir [`SECURITY.md`](security.md).
+N'ouvrez **pas** d'issue publique pour signaler une vulnérabilité de sécurité. Signalez-la de manière confidentielle via les GitHub Security Advisories du dépôt concerné, ou par courriel à <security@celestia.world>. Voir [`SECURITY.md`](security.md).
 
-## Code de Conduite
+## Code de conduite
 
-Soyez respectueux, constructif et inclusif. Nous suivons le
-[Code de Conduite du Pacte du Contributeur](code-of-conduct.md).
+Soyez respectueux, constructifs et inclusifs. Nous suivons le [Code de conduite du Contributor Covenant](code-of-conduct.md).
 
-## Développement
+## Premiers pas
 
-Arona est une petite crate Rust. Démarrage rapide :
+Choisissez le dépôt sur lequel vous souhaitez travailler et suivez son README et son site de documentation. Les projets Rust se vérifient avec `cargo fmt`, `cargo clippy -D warnings` et `cargo test` ; les projets web avec `pnpm lint`, `pnpm build` et `pnpm test`. La [carte de l'écosystème](../ecosystem/sites.md) recense chaque projet et l'endroit où vit sa documentation.
 
-```bash
-git clone https://github.com/celestia-island/plana.git
-cd arona
-cargo build
-cargo test
-cargo clippy -- -D warnings
-```
+## Processus de pull request
 
-- Rust 1.85+.
-- Les types dérivent `ts-rs` (`#[derive(TS)]`) pour générer des bindings TypeScript — gardez
+1. Forkez et créez une branche depuis la branche par défaut du dépôt.
+1. Discutez d'abord des changements importants ou touchant des contrats partagés dans une issue.
+1. Faites des commits atomiques : chaque sujet de commit est constitué d'un seul gitmoji suivi d'une phrase anglaise commençant par une majuscule et terminée par un point, les détails figurant dans le corps du commit.
+1. Assurez-vous que les vérifications du projet passent avant de pousser.
+1. Signez la CLA et ajoutez `Signed-off-by` à chaque commit.
+1. Traitez les retours de revue ; réservez les force-push au seul rebase.
 
-les attributs `serde` et les annotations `ts-rs` cohérents.
+## Licence et CLA
 
-- N'introduisez pas de changements cassants dans les types de protocole existants ; préférez des champs
+Les projets de ce groupe sont concédés sous la **Business Source License 1.1 (BUSL-1.1)** avec une **date de changement** fixée au **2030-01-01**, à laquelle chacun passe, au choix du destinataire, à **Apache-2.0 ou MIT**. Pour les usages internes, académiques, gouvernementaux, éducatifs et non commerciaux, ils sont déjà aujourd'hui équivalents à Apache-2.0 ou MIT (voir l'Additional Use Grant dans le fichier [`LICENSE`](../../../LICENSE) de chaque dépôt). Les usages commerciaux restreints (hébergement, revente ou exploitation sous une autre marque en tant que service) exigent une licence commerciale distincte jusqu'à la date de changement.
 
-additifs avec `#[serde(default)]`.
+En contribuant, vous acceptez que vos contributions soient concédées sous la licence du projet et que vous signiez la CLA ([`CLA.md`](cla.md)). La CLA accorde au projet une licence permissive **incluant le droit de changer de licence**, afin que les projets puissent conserver leur cheminement BUSL→Apache/MIT et adapter leur licence à l'avenir.
 
-## Processus de Pull Request
+## Pour aller plus loin
 
-1. Forkez et branchez depuis `main`.
-1. Discutez des changements importants ou affectant le protocole dans un ticket d'abord.
-1. Faites des commits atomiques suivant [Conventional Commits](https://www.conventionalcommits.org/).
-1. Assurez-vous que `cargo fmt`, `cargo clippy -D warnings`, et `cargo test` passent.
-1. Signez le CLA et ajoutez `Signed-off-by` à chaque commit.
-1. Répondez aux retours de revue ; gardez les force-push pour le rebase uniquement.
-
-## Licence & CLA
-
-Arona est sous **Business Source License 1.1 (BUSL-1.1)** avec une
-**Date de Changement au 2030-01-01**, à laquelle il passe au choix du destinataire sous
-**Apache-2.0 ou MIT**. Pour tout usage interne, académique, gouvernemental, éducatif et
-non commercial, il est déjà équivalent à Apache-2.0 ou MIT aujourd'hui (voir la
-Concession d'Usage Supplémentaire dans [`LICENSE`](../../../LICENSE)). Les usages commerciaux restreints
-(hébergement, revente ou rebranding en tant que service) nécessitent une licence commerciale
-séparée jusqu'à la Date de Changement.
-
-En contribuant, vous acceptez que vos contributions soient sous licence du
-projet et que vous signez le CLA ([`CLA.md`](cla.md)). Le CLA accorde
-au projet une licence permissive **incluant le droit de re-licencier**, afin que le
-projet puisse conserver son chemin BUSL→Apache/MIT et adapter sa licence à l'avenir.
+- [CLA](cla.md) — l'Accord de licence contributeur que vous signez.
+- [Politique de sécurité](security.md) — comment signaler une vulnérabilité de manière confidentielle.
+- [Code de conduite](code-of-conduct.md) — le comportement que nous nous tenons d'appliquer les uns envers les autres.
+- [Carte de l'écosystème](../ecosystem/sites.md) — chaque projet, chaque site, et l'endroit où vit sa documentation.

@@ -1,97 +1,49 @@
-# 貢獻 Arona
+# 為 Celestia Island 做貢獻
 
-感謝您有興趣貢獻！本指南涵蓋了您入門所需的一切。
+感謝您有意參與貢獻！Celestia Island 是一個橫跨整個平台的專案家族——kirino（認證）、plana（平台）、hikari（UI）、其上的服務層，以及圍繞它們的各個 WebUI 與網站。本指南涵蓋整個專案群共享的貢獻政策；個別專案的建置與開發說明，則位於該專案自己的儲存庫與文件網站。
 
 ## 貢獻政策（請先閱讀）
 
-Arona 定義了 Entelecheia 平台中共享的 JSON-RPC 2.0 協定型別，
-因此**正確性、向下相容性和穩定性優先於貢獻吞吐量**。
-在發起 pull request 之前請閱讀本節。
+本專案群以混合關鍵性的分層架構構成——第 0 層（kirino，認證）、第 1 層（plana，平台）、第 2 層（hikari，UI），以及其上的第 3 層服務——因此**正確性、向下相容性與穩定性優先於貢獻吞吐量**。發起拉取請求之前，請先閱讀本節。
 
-- **高合併門檻，非公開路線圖。** 發起 PR 並不意味著它會被合併。
+- **合併門檻高，而非公開路線圖。** 發起 PR 並不代表它會被合併。我們刻意只接受少量的變更，且僅在符合架構並通過審查時才接受。這是有意的設計，並非無禮。
+- **我們歡迎的內容：** 錯誤回報、聚焦的修復、新增式（非破壞性）的功能與協定欄位、文件改進，以及在撰寫程式之前先進行設計討論。
+- **我們通常不會合併的內容：** 大型且未經請求的重寫、對共享契約與協定介面的破壞性變更（例如整個 Entelecheia 平台共享的 JSON-RPC 2.0 協定型別）、未經事先設計討論的架構變更、大量「vibe coding」式的 PR，以及任何會降低較低層級之相容性、安全性或資訊安全門檻的內容。
+- **核心 vs. 外圍。** 零信任認證核心、共享平台型別與共享 UI 元件庫受到最嚴格的門檻要求，並由核心團隊維護；針對這些部分的變更提案，應從設計討論開始。
+- **需要 CLA。** 每項被接受的貢獻都必須簽署貢獻者授權協議（Contributor License Agreement）。請參閱 [`CLA.md`](cla.md)。提交必須帶有 `Signed-off-by` 行（`git commit -s`）。
 
-我們有意識地只接受少量變更，且僅在它們符合架構並通過審查時
-才接受。這是設計上的選擇，並非無禮。
-
-- **我們歡迎的內容：** 錯誤報告、針對性修復、新增（非破壞性）的
-
-協定欄位、改進的文件，以及在程式碼之前的設計討論。
-
-- **我們通常不會合併的內容：** 大型未經請求的重寫、對協定型別
-
-表面的破壞性變更、未經事先設計討論的架構變更、批次「vibe-coding」
-PR，以及任何降低型別合約相容性門檻的內容。
-
-- **核心 vs. 外圍。** 協定型別定義及其序列化表面受到最嚴格的
-
-門檻要求，並由核心團隊維護。
-
-- **需要 CLA。** 每個被接受的貢獻都需要簽署貢獻者授權協議。
-
-請參閱 [`CLA.md`](cla.md)。提交必須帶有 `Signed-off-by` 行
-（`git commit -s`）。
-
-> **授權可能會開放；合併門檻不會。** 在 **2030-01-01**，本專案
-> 將從 BUSL-1.1 轉換為 Apache-2.0 或 MIT（接收方可選擇）— 請參閱
-> [`LICENSE`](../../../LICENSE)。這擴大了*您可以對程式碼做什麼*的範圍；
-> 它**不**會降低審查門檻、不會移除 CLA，也不意味著我們接受更多 PR。
-> 貢獻政策在變更日期前後保持不變。
+> **授權條款會開放；合併門檻不會。** 自 **2030-01-01** 起，本專案群的各專案將從 BUSL-1.1 轉換為 Apache-2.0 或 MIT（由接收者任選其一）——請參閱 [`LICENSE`](../../../LICENSE)。這擴大了*您可以對程式碼做什麼*的範圍，但**不會**降低審查門檻、不會移除 CLA，也不代表我們會接受更多 PR。貢獻政策在變更日期前後維持不變。
 
 ## 安全性
 
-**不要**為安全漏洞開立公開 issue。請透過
-[GitHub 安全諮詢](https://github.com/celestia-island/plana/security/advisories/new)
-私下回報。請參閱 [`SECURITY.md`](security.md)。
+**不要**為安全漏洞開立公開議題。請透過受影響儲存庫上的 GitHub Security Advisories 私下回報，或寄信至 <security@celestia.world>。請參閱 [`SECURITY.md`](security.md)。
 
 ## 行為準則
 
-保持尊重、建設性和包容。我們遵循
-[貢獻者公約行為準則](code-of-conduct.md)。
+保持尊重、具建設性且包容。我們遵循 [Contributor Covenant 行為準則](code-of-conduct.md)。
 
-## 開發
+## 入門
 
-Arona 是一個小型的 Rust crate。快速開始：
+挑選您想投入的儲存庫，並遵循其 README 與文件網站。Rust 專案以 `cargo fmt`、`cargo clippy -D warnings` 與 `cargo test` 進行驗證；Web 專案則以 `pnpm lint`、`pnpm build` 與 `pnpm test` 驗證。[站點分工](../ecosystem/sites.md)列出所有專案及其文件的所在位置。
 
-```bash
-git clone https://github.com/celestia-island/plana.git
-cd arona
-cargo build
-cargo test
-cargo clippy -- -D warnings
-```
+## Pull request 流程
 
-- Rust 1.85+。
-- 型別衍生 `ts-rs`（`#[derive(TS)]`）以生成 TypeScript 繫結 — 保持
-
-`serde` 屬性和 `ts-rs` 註解一致。
-
-- 不要對現有協定型別引入破壞性變更；偏好使用帶有 `#[serde(default)]`
-
-的新增欄位。
-
-## Pull Request 流程
-
-1. 從 `main` 分叉並建立分支。
-1. 先在 issue 中討論大型或影響協定的變更。
-1. 按照 [Conventional Commits](https://www.conventionalcommits.org/)
-
-進行原子提交。
-
-1. 確保 `cargo fmt`、`cargo clippy -D warnings` 和 `cargo test` 通過。
-1. 簽署 CLA 並在每個提交中新增 `Signed-off-by`。
-1. 回應審查回饋；強制推送僅限於 rebase。
+1. Fork 儲存庫，並從其預設分支建立分支。
+1. 大型或涉及共享契約的變更，先在議題中討論。
+1. 進行原子化的提交：每個提交標題是一個 gitmoji 後接一句以句號結尾、字首大寫的英文句子，細節則放在提交本文中。
+1. 推送之前，確保該專案的各項檢查通過。
+1. 簽署 CLA，並在每個提交中加入 `Signed-off-by`。
+1. 處理審查意見；force-push 僅限用於 rebase。
 
 ## 授權與 CLA
 
-Arona 依據 **Business Source License 1.1 (BUSL-1.1)** 授權，
-**變更日期為 2030-01-01**，屆時轉換為接收方可選擇的
-**Apache-2.0 或 MIT**。對於所有內部、學術、政府、教育和
-非商業用途，今天已等同於 Apache-2.0 或 MIT（請參閱
-[`LICENSE`](../../../LICENSE) 中的額外使用授權）。受限的商業用途
-（作為服務託管、轉售或重新品牌化）在變更日期前需要
-單獨的商業授權。
+本專案群中的各專案以 **Business Source License 1.1（BUSL-1.1）** 授權，**變更日期（Change Date）為 2030-01-01**，屆時每個專案都轉換為接收者任選的 **Apache-2.0 或 MIT**。對於內部、學術、政府、教育與非商業用途，它們今天就已等同於 Apache-2.0 或 MIT（請參閱各儲存庫 [`LICENSE`](../../../LICENSE) 中的額外使用授權）。在變更日期之前，受限的商業用途（託管、轉售或以服務形式重新品牌化）需要另外取得商業授權。
 
-透過貢獻，您同意您的貢獻依據本專案的授權條款授權，
-並且您簽署了 CLA（[`CLA.md`](cla.md)）。CLA 授予本專案
-一個寬鬆的授權，**包括重新授權的權利**，因此本專案可以
-保持其 BUSL→Apache/MIT 路徑並在未來調整其授權。
+一旦進行貢獻，即表示您同意您的貢獻依該專案的授權條款授權，且您已簽署 CLA（[`CLA.md`](cla.md)）。CLA 授予本專案一項寬鬆的授權，**包括重新授權的權利**，讓各專案得以維持其 BUSL→Apache/MIT 的路徑，並在未來調整其授權安排。
+
+## 深入閱讀
+
+- [CLA](cla.md) —— 您所簽署的貢獻者授權協議。
+- [安全政策](security.md) —— 如何私下回報漏洞。
+- [行為準則](code-of-conduct.md) —— 我們彼此對待所依循的行為規範。
+- [站點分工](../ecosystem/sites.md) —— 所有專案、網站及其文件的所在位置。

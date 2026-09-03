@@ -2,11 +2,11 @@
 
 > Esta é uma tradução de referência fornecida pela comunidade para sua conveniência. O único texto juridicamente vinculante é a versão em inglês do arquivo `CLA.md` na raiz do repositório. Em caso de conflito, a versão em inglês prevalecerá.
 
-O presente Acordo de Licença de Contribuinte (a "CLA") aplica-se a toda contribuição aceita e incorporada ao projeto **Arona** (o "Projeto"), incluindo todos os repositórios da organização Celestia Island que adotem esta CLA. O Projeto é licenciado sob a Business Source License 1.1 com uma Data de Mudança em 2030-01-01, a partir de quando converte-se, à escolha do destinatário, para Apache-2.0 ou MIT (vide `LICENSE`).
+O presente Acordo de Licença de Contribuinte (a "CLA") aplica-se a toda contribuição aceita em qualquer projeto do grupo **Celestia Island** (cada um, "o Projeto"), incluindo todos os repositórios da organização Celestia Island que adotem esta CLA. Cada Projeto é licenciado sob a Business Source License 1.1 com uma Data de Mudança em 2030-01-01, a partir de quando converte-se para a Licença de Mudança declarada em seu `LICENSE` (hoje SySL-1.0 para a maioria dos projetos).
 
 **Você deverá aceitar esta CLA antes de sua contribuição poder ser mesclada.** A aceitação da CLA é uma ação única por contribuinte (e por empregador, caso contribua em nome de uma empresa).
 
-> A CLA existe apenas por dois motivos: (1) confirmar que você tem o direito de contribuir com o que submete, e (2) permitir que o Projeto mantenha sua trajetória de licenciamento BUSL→Apache/MIT e adapte seu licenciamento no futuro sem precisar localizar cada antigo contribuinte. Ela **não** reduz o nível de revisão nem obriga o Projeto a aceitar qualquer contribuição.
+> A CLA existe apenas por dois motivos: (1) confirmar que você tem o direito de contribuir com o que submete, e (2) permitir que o Projeto mantenha sua trajetória de licenciamento planejada e adapte seu licenciamento no futuro sem precisar localizar cada antigo contribuinte. Ela **não** reduz o nível de revisão nem obriga o Projeto a aceitar qualquer contribuição.
 
 ## 1. Como assinar
 
@@ -26,7 +26,7 @@ O presente Acordo de Licença de Contribuinte (a "CLA") aplica-se a toda contrib
 
 ## 3. Concessão de licença de direitos autorais
 
-Sujeito a esta CLA, Você concede ao Licenciante uma licença de direitos autorais perpétua, mundial, não exclusiva, isenta de royalties e irrevogável para reproduzir, preparar obras derivadas, exibir publicamente, executar publicamente, sublicenciar, distribuir e de qualquer outra forma explorar a sua Contribuição, incluindo o direito de relicenciar a Contribuição (isoladamente ou junto com o Projeto) sob a Business Source License 1.1, a Apache License 2.0, a licença MIT ou qualquer outra licença escolhida pelo Licenciante, bem como autorizar o mesmo para destinatários subsequentes.
+Sujeito a esta CLA, Você concede ao Licenciante uma licença de direitos autorais perpétua, mundial, não exclusiva, isenta de royalties e irrevogável para reproduzir, preparar obras derivadas, exibir publicamente, executar publicamente, sublicenciar, distribuir e de qualquer outra forma explorar a sua Contribuição, incluindo o direito de relicenciar a Contribuição (isoladamente ou junto com o Projeto) sob a Business Source License 1.1, a Synthetic Source License 1.0 (SySL-1.0), a Apache License 2.0, a licença MIT ou qualquer outra licença escolhida pelo Licenciante, bem como autorizar o mesmo para destinatários subsequentes.
 
 ## 4. Concessão de licença de patente
 

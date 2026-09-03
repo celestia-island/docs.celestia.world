@@ -12,7 +12,7 @@ O grupo é construído como camadas de criticalidade mista — Camada 0 (kirino,
 - **Núcleo vs. periferia.** O núcleo de autenticação de confiança zero, os tipos de plataforma compartilhados e a biblioteca de componentes de UI compartilhada são submetidos à barra mais rigorosa e mantidos pela equipe central; mudanças propostas nesses pontos devem começar como uma discussão de design.
 - **CLA obrigatório.** Toda contribuição aceita requer um Acordo de Licença de Contribuinte (CLA) assinado. Veja [`CLA.md`](cla.md). Os commits devem conter uma linha `Signed-off-by` (`git commit -s`).
 
-> **A licença pode se abrir; a barra de merge não.** Em **2030-01-01**, os projetos do grupo convertem-se de BUSL-1.1 para Apache-2.0 ou MIT (à escolha do destinatário) — veja [`LICENSE`](../../../LICENSE). Isso amplia *o que você pode fazer com o código*; **não** reduz a barra de revisão, não remove o CLA e não significa que aceitaremos mais PRs. A política de contribuição permanece inalterada antes e depois da data de mudança.
+> **A licença pode se abrir; a barra de merge não.** Em **2030-01-01**, os projetos do grupo convertem-se de BUSL-1.1 para a Licença de Mudança declarada no [`LICENSE`](../../../LICENSE) de cada repositório — hoje SySL-1.0 na maioria dos projetos. Isso amplia *o que você pode fazer com o código*; **não** reduz a barra de revisão, não remove o CLA e não significa que aceitaremos mais PRs. A política de contribuição permanece inalterada antes e depois da data de mudança.
 
 ## Segurança
 
@@ -37,9 +37,9 @@ Escolha o repositório em que deseja trabalhar e siga o README e o site de docum
 
 ## Licença & CLA
 
-Os projetos deste grupo são licenciados sob a **Business Source License 1.1 (BUSL-1.1)** com uma **Data de Mudança em 2030-01-01**, a partir da qual cada um converte-se, à escolha do destinatário, para **Apache-2.0 ou MIT**. Para uso interno, acadêmico, governamental, educacional e não comercial, já são hoje equivalentes a Apache-2.0 ou MIT (veja a Concessão de Uso Adicional no [`LICENSE`](../../../LICENSE) de cada repositório). Usos comerciais restritos (hospedagem, revenda ou rebranding como serviço) exigem uma licença comercial separada até a Data de Mudança.
+Os projetos deste grupo são licenciados sob a **Business Source License 1.1 (BUSL-1.1)** com uma **Data de Mudança em 2030-01-01**, na qual cada um converte-se para a Licença de Mudança declarada em seu LICENSE — hoje **SySL-1.0** para a maioria dos projetos. Para uso interno, acadêmico, governamental, educacional e não comercial, já são hoje equivalentes a Apache-2.0 ou MIT (veja a Concessão de Uso Adicional no [`LICENSE`](../../../LICENSE) de cada repositório). Usos comerciais restritos (hospedagem, revenda ou rebranding como serviço) exigem uma licença comercial separada até a Data de Mudança.
 
-Ao contribuir, você concorda que suas contribuições são licenciadas sob a licença do projeto e que você assina o CLA ([`CLA.md`](cla.md)). O CLA concede ao projeto uma licença permissiva **incluindo o direito de relicenciar**, para que os projetos possam manter sua trajetória de licenciamento BUSL→Apache/MIT e adaptar seu licenciamento no futuro.
+Ao contribuir, você concorda que suas contribuições são licenciadas sob a licença do projeto e que você assina o CLA ([`CLA.md`](cla.md)). O CLA concede ao projeto uma licença permissiva **incluindo o direito de relicenciar**, para que os projetos possam manter sua trajetória de licenciamento planejada e adaptar seu licenciamento no futuro.
 
 ## Aprofundar-se
 

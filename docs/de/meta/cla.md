@@ -2,11 +2,11 @@
 
 > Dies ist eine von der Community bereitgestellte Referenzübersetzung, die der Bequemlichkeit dient. Der einzig rechtsverbindliche Text ist die englische Fassung der Datei `CLA.md` im Stammverzeichnis des Repositorys. Bei Widersprüchen ist die englische Fassung maßgeblich.
 
-Diese Contributor License Agreement („CLA") gilt für jeden Beitrag, der in das Projekt **Arona** („das Projekt") aufgenommen wird, einschließlich aller Repositories unter der Organisation Celestia Island, die diese CLA anwenden. Das Projekt ist unter der Business Source License 1.1 mit einem Änderungsdatum vom 2030-01-01 lizenziert, wonach es nach Wahl des Empfängers in Apache-2.0 oder MIT übergeht (siehe `LICENSE`).
+Diese Contributor License Agreement („CLA") gilt für jeden Beitrag, der in ein Projekt der Gruppe **Celestia Island** (jeweils „das Projekt") aufgenommen wird, einschließlich aller Repositories unter der Organisation Celestia Island, die diese CLA anwenden. Jedes Projekt ist unter der Business Source License 1.1 mit einem Änderungsdatum vom 2030-01-01 lizenziert, wonach es in die in seiner `LICENSE` genannte Change License übergeht (heute SySL-1.0 für die meisten Projekte).
 
 **Sie müssen diese CLA akzeptieren, bevor Ihr Beitrag zusammengeführt (gemerged) werden kann.** Die Akzeptanz der CLA ist eine einmalige Handlung pro Beiträger (und pro Arbeitgeber, falls Sie im Namen eines Unternehmens beitragen).
 
-> Die CLA existiert nur aus zwei Gründen: (1) um zu bestätigen, dass Sie das Recht haben, das von Ihnen Eingereichte beizusteuern, und (2) um es dem Projekt zu ermöglichen, seinen BUSL→Apache/MIT-Lizenzierungspfad beizubehalten und seine Lizenzierung in Zukunft anzupassen, ohne jeden früheren Beiträger ausfindig machen zu müssen. Sie senkt **nicht** die Review-Anforderungen und verpflichtet das Projekt nicht, irgendeinen Beitrag anzunehmen.
+> Die CLA existiert nur aus zwei Gründen: (1) um zu bestätigen, dass Sie das Recht haben, das von Ihnen Eingereichte beizusteuern, und (2) um es dem Projekt zu ermöglichen, seinen geplanten Lizenzierungspfad beizubehalten und seine Lizenzierung in Zukunft anzupassen, ohne jeden früheren Beiträger ausfindig machen zu müssen. Sie senkt **nicht** die Review-Anforderungen und verpflichtet das Projekt nicht, irgendeinen Beitrag anzunehmen.
 
 ## 1. Wie man signiert
 
@@ -26,7 +26,7 @@ Diese Contributor License Agreement („CLA") gilt für jeden Beitrag, der in da
 
 ## 3. Einräumung einer Urheberrechtslizenz
 
-Vorbehaltlich dieser CLA räumen Sie dem Lizenzgeber eine unbefristete, weltweite, nicht-ausschließliche, lizenzgebührenfreie, unwiderrufliche Urheberrechtslizenz ein, Ihren Beitrag zu reproduzieren, davon abgeleitete Werke zu erstellen, öffentlich zu zeigen, öffentlich aufzuführen, unterzulizenzieren, zu verbreiten und anderweitig zu verwerten, einschließlich des Rechts, den Beitrag (für sich allein oder zusammen mit dem Projekt) unter der Business Source License 1.1, der Apache License 2.0, der MIT-Lizenz oder einer sonstigen vom Lizenzgeber gewählten Lizenz erneut zu lizenzieren und dasselbe gegenüber nachgelagerten Empfängern zu gestatten.
+Vorbehaltlich dieser CLA räumen Sie dem Lizenzgeber eine unbefristete, weltweite, nicht-ausschließliche, lizenzgebührenfreie, unwiderrufliche Urheberrechtslizenz ein, Ihren Beitrag zu reproduzieren, davon abgeleitete Werke zu erstellen, öffentlich zu zeigen, öffentlich aufzuführen, unterzulizenzieren, zu verbreiten und anderweitig zu verwerten, einschließlich des Rechts, den Beitrag (für sich allein oder zusammen mit dem Projekt) unter der Business Source License 1.1, der Synthetic Source License 1.0 (SySL-1.0), der Apache License 2.0, der MIT-Lizenz oder einer sonstigen vom Lizenzgeber gewählten Lizenz erneut zu lizenzieren und dasselbe gegenüber nachgelagerten Empfängern zu gestatten.
 
 ## 4. Einräumung einer Patentlizenz
 

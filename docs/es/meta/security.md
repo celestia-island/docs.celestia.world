@@ -6,10 +6,7 @@
 
 **No abra issues públicos para vulnerabilidades de seguridad.**
 
-Repórtelas de forma privada a través de
-[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
-Si no tiene acceso a GitHub Security Advisories, envíe un correo electrónico al responsable a
-<security@celestia.world> con una descripción clara y los pasos de reproducción.
+Repórtelas de forma privada a través de GitHub Security Advisories del repositorio afectado. Si no tiene acceso a GitHub Security Advisories, envíe un correo electrónico al responsable a <security@celestia.world> con una descripción clara y los pasos de reproducción.
 
 ## Alcance
 

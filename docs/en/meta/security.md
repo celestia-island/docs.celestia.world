@@ -4,10 +4,7 @@
 
 **Do not open public issues for security vulnerabilities.**
 
-Report them privately via
-[GitHub Security Advisories](https://github.com/celestia-island/plana/security/advisories/new).
-If GitHub Security Advisories are unavailable to you, email the maintainer at
-<security@celestia.world> with a clear description and reproduction steps.
+Report them privately via GitHub Security Advisories on the affected repository. If GitHub Security Advisories are unavailable to you, email the maintainer at <security@celestia.world> with a clear description and reproduction steps.
 
 ## Scope
 
@@ -35,10 +32,8 @@ Out of scope:
 | Initial assessment | 3 calendar days |
 | Fix or mitigation | 30 calendar days (severity-dependent) |
 
-Please include: (1) the affected component and version, (2) the attack vector
-and impact, (3) reproduction steps, and (4) suggested mitigations.
+Please include: (1) the affected component and version, (2) the attack vector and impact, (3) reproduction steps, and (4) suggested mitigations.
 
 ## Supported Versions
 
-Only the latest release line on the `main` / `dev` branches receives security
-fixes.
+Only the latest release line on the `main` / `dev` branches receives security fixes.

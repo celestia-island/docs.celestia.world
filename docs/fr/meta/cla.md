@@ -2,11 +2,11 @@
 
 > Il s'agit d'une traduction de référence fournie par la communauté pour plus de commodité. Le seul texte juridiquement contraignant est la version anglaise du fichier `CLA.md` à la racine du dépôt. En cas de conflit, la version anglaise prévaut.
 
-Le présent Accord de licence contributeur (« CLA ») s'applique à toute contribution acceptée et intégrée au projet **Arona** (« le Projet »), y compris tous les dépôts relevant de l'organisation Celestia Island qui adoptent la présente CLA. Le Projet est concédé sous la Business Source License 1.1 avec une date de changement fixée au 2030-01-01, à l'issue de laquelle il passe au choix du destinataire entre Apache-2.0 ou MIT (voir `LICENSE`).
+Le présent Accord de licence contributeur (« CLA ») s'applique à toute contribution acceptée dans tout projet du groupe **Celestia Island** (chacun, « le Projet »), y compris tous les dépôts relevant de l'organisation Celestia Island qui adoptent la présente CLA. Chaque Projet est concédé sous la Business Source License 1.1 avec une date de changement fixée au 2030-01-01, à l'issue de laquelle il passe à la Change License déclarée dans son `LICENSE` (aujourd'hui SySL-1.0 pour la plupart des projets).
 
 **Vous devez accepter la présente CLA avant que votre contribution puisse être fusionnée.** L'acceptation de la CLA est une action unique par contributeur (et par employeur, si vous contribuez au nom d'une entreprise).
 
-> La CLA n'existe que pour deux raisons : (1) confirmer que vous avez le droit de contribuer ce que vous soumettez, et (2) permettre au Projet de conserver son cheminement de licence BUSL→Apache/MIT et d'adapter sa licence à l'avenir sans avoir à retrouver chaque ancien contributeur. Elle **n'abaisse pas** le niveau d'examen et n'oblige pas le Projet à accepter la moindre contribution.
+> La CLA n'existe que pour deux raisons : (1) confirmer que vous avez le droit de contribuer ce que vous soumettez, et (2) permettre à chaque Projet de conserver son chemin de licence prévu et d'adapter sa licence à l'avenir sans avoir à retrouver chaque ancien contributeur. Elle **n'abaisse pas** le niveau d'examen et n'oblige pas le Projet à accepter la moindre contribution.
 
 ## 1. Comment signer
 
@@ -26,7 +26,7 @@ Le présent Accord de licence contributeur (« CLA ») s'applique à toute contr
 
 ## 3. Octroi de licence sur les droits d'auteur
 
-Sous réserve de la présente CLA, Vous accordez au Concédant une licence sur les droits d'auteur perpétuelle, mondiale, non exclusive, libre de redevance et irrévocable, permettant de reproduire, préparer des œuvres dérivées, afficher publiquement, exécuter publiquement, concéder des sous-licences, distribuer et exploiter de toute autre manière votre Contribution, y compris le droit de concéder à nouveau la licence de la Contribution (seule ou avec le Projet) sous la Business Source License 1.1, la Apache License 2.0, la licence MIT ou toute autre licence choisie par le Concédant, et d'autoriser les mêmes droits pour les destinataires en aval.
+Sous réserve de la présente CLA, Vous accordez au Concédant une licence sur les droits d'auteur perpétuelle, mondiale, non exclusive, libre de redevance et irrévocable, permettant de reproduire, préparer des œuvres dérivées, afficher publiquement, exécuter publiquement, concéder des sous-licences, distribuer et exploiter de toute autre manière votre Contribution, y compris le droit de concéder à nouveau la licence de la Contribution (seule ou avec le Projet) sous la Business Source License 1.1, la Synthetic Source License 1.0 (SySL-1.0), la Apache License 2.0, la licence MIT ou toute autre licence choisie par le Concédant, et d'autoriser les mêmes droits pour les destinataires en aval.
 
 ## 4. Octroi de licence sur les brevets
 

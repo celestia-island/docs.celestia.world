@@ -1,10 +1,6 @@
 # Commercial Licensing
 
-The celestia-island ecosystem is licensed in two tiers: the **service-layer
-applications** use the Business Source License 1.1 (BUSL-1.1), the **generic
-upstream libraries** use the Synthetic Source License 1.0 (SySL-1.0), and a few
-repositories carry other licenses. This page explains what that means in
-practice and when a separate commercial license is required.
+The celestia-island ecosystem is licensed in two tiers: the **service-layer applications** use the Business Source License 1.1 (BUSL-1.1), the **generic upstream libraries** use the Synthetic Source License 1.0 (SySL-1.0), and a few repositories carry other licenses. This page explains what that means in practice and when a separate commercial license is required.
 
 ## License map
 
@@ -21,8 +17,7 @@ practice and when a separate commercial license is required.
 - **Production deployment is subject to the license terms** by default.
 - BUSL is **not an OSI-approved open-source license**.
 
-The BUSL parameters of this organization include an **Additional Use Grant**:
-the following uses are free and require **no commercial license**:
+The BUSL parameters of this organization include an **Additional Use Grant**: the following uses are free and require **no commercial license**:
 
 - **(a) Internal operations** — using the work for your own internal operations, without offering hosting, services, or products to external third parties.
 - **(b) Non-commercial use** — academic research, teaching, personal study, evaluation, experimentation, and contribution to the upstream project.

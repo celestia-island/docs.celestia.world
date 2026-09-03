@@ -72,13 +72,11 @@
 
 ## 署名
 
-本行为准则改编自 [Contributor Covenant][homepage]（贡献者公约）2.1 版本，可在
-[https://www.contributor-covenant.org/version/2/1/`code_of_conduct`/][v2.1] 查看。
+本行为准则改编自 [Contributor Covenant][homepage]（贡献者公约）2.1 版本，可在[https://www.contributor-covenant.org/version/2/1/`code_of_conduct`/][v2.1] 查看。
 
 社区影响指南受 [Mozilla 的行为准则执行阶梯][mozilla-coc] 启发。
 
-有关本行为准则常见问题的解答，请参见 [https://www.contributor-covenant.org/faq][faq] 的常见问题。译文请见
-[https://www.contributor-covenant.org/translations][translations]。
+有关本行为准则常见问题的解答，请参见 [https://www.contributor-covenant.org/faq][faq] 的常见问题。译文请见[https://www.contributor-covenant.org/translations][translations]。
 
 [homepage]: https://www.contributor-covenant.org
 [v2.1]: https://www.contributor-covenant.org/version/2/1/`code_of_conduct`/

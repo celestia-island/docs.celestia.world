@@ -2,11 +2,11 @@
 
 > Esta es una traducción de referencia proporcionada por la comunidad para mayor comodidad. El único texto con fuerza legal es la versión en inglés del archivo `CLA.md` en la raíz del repositorio. En caso de conflicto, prevalecerá la versión en inglés.
 
-El presente Acuerdo de Licencia de Colaborador (el «CLA») se aplica a toda contribución aceptada e incorporada al proyecto **Arona** (el «Proyecto»), incluidos todos los repositorios de la organización Celestia Island que adopten este CLA. El Proyecto se encuentra bajo la Business Source License 1.1 con una Fecha de Cambio del 2030-01-01, a partir de la cual se convierte, a elección del receptor, en Apache-2.0 o MIT (véase `LICENSE`).
+El presente Acuerdo de Licencia de Colaborador (el «CLA») se aplica a toda contribución aceptada e incorporada en cualquier proyecto del grupo **Celestia Island** (cada uno, «el Proyecto»), incluidos todos los repositorios de la organización Celestia Island que adopten este CLA. Cada Proyecto se encuentra bajo la Business Source License 1.1 con una Fecha de Cambio del 2030-01-01, a partir de la cual se convierte en la Licencia de Cambio declarada en su `LICENSE` (hoy SySL-1.0 para la mayoría de los proyectos).
 
 **Deberá aceptar este CLA antes de que su contribución pueda fusionarse.** La aceptación del CLA es una acción única por colaborador (y por empleador, si contribuye en nombre de una empresa).
 
-> El CLA existe únicamente por dos motivos: (1) confirmar que usted tiene derecho a contribuir con lo que presenta, y (2) permitir que el Proyecto conserve su trayectoria de licenciamiento BUSL→Apache/MIT y adapte su licencia en el futuro sin tener que localizar a cada colaborador pasado. No **reduce** el estándar de revisión ni obliga al Proyecto a aceptar contribución alguna.
+> El CLA existe únicamente por dos motivos: (1) confirmar que usted tiene derecho a contribuir con lo que presenta, y (2) permitir que cada Proyecto conserve su trayectoria de licenciamiento prevista y adapte su licencia en el futuro sin tener que localizar a cada colaborador pasado. No **reduce** el estándar de revisión ni obliga al Proyecto a aceptar contribución alguna.
 
 ## 1. Cómo firmar
 
@@ -26,7 +26,7 @@ El presente Acuerdo de Licencia de Colaborador (el «CLA») se aplica a toda con
 
 ## 3. Concesión de licencia de derechos de autor
 
-Sujeto a este CLA, usted concede al Licenciante una licencia de derechos de autor perpetua, mundial, no exclusiva, libre de regalías e irrevocable para reproducir, preparar obras derivadas, mostrar públicamente, ejecutar públicamente, conceder sublicencias, distribuir y explotar de cualquier otra manera su Contribución, incluido el derecho de volver a licenciar la Contribución (por sí sola o junto con el Proyecto) bajo la Business Source License 1.1, la Apache License 2.0, la licencia MIT o cualquier otra licencia elegida por el Licenciante, y autorizar lo mismo a los destinatarios posteriores.
+Sujeto a este CLA, usted concede al Licenciante una licencia de derechos de autor perpetua, mundial, no exclusiva, libre de regalías e irrevocable para reproducir, preparar obras derivadas, mostrar públicamente, ejecutar públicamente, conceder sublicencias, distribuir y explotar de cualquier otra manera su Contribución, incluido el derecho de volver a licenciar la Contribución (por sí sola o junto con el Proyecto) bajo la Business Source License 1.1, la Synthetic Source License 1.0 (SySL-1.0), la Apache License 2.0, la licencia MIT o cualquier otra licencia elegida por el Licenciante, y autorizar lo mismo a los destinatarios posteriores.
 
 ## 4. Concesión de licencia de patente
 

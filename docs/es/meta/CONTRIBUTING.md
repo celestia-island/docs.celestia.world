@@ -12,7 +12,7 @@ El grupo se construye como capas de criticidad mixta — capa 0 (kirino, autenti
 - **Núcleo vs. periferia.** El núcleo de autenticación de confianza cero, los tipos de plataforma compartidos y la biblioteca de componentes de interfaz compartida se rigen por el listón más estricto y los mantiene el equipo central; los cambios propuestos allí deben empezar como una discusión de diseño.
 - **CLA obligatorio.** Toda contribución aceptada requiere un Acuerdo de Licencia de Colaborador firmado. Véase [`CLA.md`](cla.md). Los commits deben llevar una línea `Signed-off-by` (`git commit -s`).
 
-> **La licencia puede abrirse; el listón de fusión no.** El **2030-01-01** los proyectos del grupo convierten de BUSL-1.1 a Apache-2.0 o MIT (a elección del receptor) — véase [`LICENSE`](../../../LICENSE). Eso amplía *lo que puedes hacer con el código*; **no** baja el listón de revisión, no elimina el CLA ni significa que aceptemos más PR. La política de contribución no cambia antes ni después de la fecha de cambio.
+> **La licencia puede abrirse; el listón de fusión no.** El **2030-01-01** los proyectos del grupo convierten de BUSL-1.1 a la Licencia de Cambio declarada en el [`LICENSE`](../../../LICENSE) de cada repositorio — hoy SySL-1.0 para la mayoría de los proyectos. Eso amplía *lo que puedes hacer con el código*; **no** baja el listón de revisión, no elimina el CLA ni significa que aceptemos más PR. La política de contribución no cambia antes ni después de la fecha de cambio.
 
 ## Seguridad
 
@@ -37,9 +37,9 @@ Elige el repositorio en el que quieras trabajar y sigue su README y su sitio de 
 
 ## Licencia y CLA
 
-Los proyectos de este grupo se licencian bajo la **Business Source License 1.1 (BUSL-1.1)** con una **Fecha de Cambio del 2030-01-01**, en la que cada uno se convierte, a elección del receptor, en **Apache-2.0 o MIT**. Para uso interno, académico, gubernamental, educativo y no comercial ya hoy equivalen a Apache-2.0 o MIT (véase la Concesión de Uso Adicional en el [`LICENSE`](../../../LICENSE) de cada repositorio). Los usos comerciales restringidos (alojamiento, reventa o rebranding como servicio) requieren una licencia comercial independiente hasta la Fecha de Cambio.
+Los proyectos de este grupo se licencian bajo la **Business Source License 1.1 (BUSL-1.1)** con una **Fecha de Cambio del 2030-01-01**, en la que cada uno se convierte en la Licencia de Cambio declarada en su LICENSE — hoy es **SySL-1.0** para la mayoría de los proyectos. Para uso interno, académico, gubernamental, educativo y no comercial ya hoy equivalen a Apache-2.0 o MIT (véase la Concesión de Uso Adicional en el [`LICENSE`](../../../LICENSE) de cada repositorio). Los usos comerciales restringidos (alojamiento, reventa o rebranding como servicio) requieren una licencia comercial independiente hasta la Fecha de Cambio.
 
-Al contribuir, aceptas que tus contribuciones se licencian bajo la licencia del proyecto y que firmas el CLA ([`CLA.md`](cla.md)). El CLA otorga al proyecto una licencia permisiva **incluido el derecho a relicenciar**, para que los proyectos puedan mantener su ruta BUSL→Apache/MIT y adaptar su licenciamiento en el futuro.
+Al contribuir, aceptas que tus contribuciones se licencian bajo la licencia del proyecto y que firmas el CLA ([`CLA.md`](cla.md)). El CLA otorga al proyecto una licencia permisiva **incluido el derecho a relicenciar**, para que los proyectos puedan mantener su trayectoria de licenciamiento prevista y adaptar su licenciamiento en el futuro.
 
 ## Dónde profundizar
 

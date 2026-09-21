@@ -8,7 +8,7 @@ on:
       - '.github/workflows/ci.yml'
   pull_request:
     branches: [master]
-    types: [opened, reopened, ready_for_review]
+    types: [opened, reopened, ready_for_review, synchronize]
   workflow_dispatch:
 
 permissions:

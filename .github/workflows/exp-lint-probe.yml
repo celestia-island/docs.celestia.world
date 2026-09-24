@@ -1,0 +1,13 @@
+name: Exp Lint Probe
+
+# Throwaway probe: does a second check run with the SAME name as the required
+# context satisfy branch protection when the hosted lane cannot start?
+on:
+  pull_request:
+
+jobs:
+  probe:
+    name: "lint-commits / Lint commit messages"
+    runs-on: [self-hosted, linux, x64, local]
+    steps:
+      - run: echo "probe reports success under the required context name"

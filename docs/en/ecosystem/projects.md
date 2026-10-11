@@ -29,7 +29,7 @@ Repositories marked with a documentation site carry their own *how* docs at
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Cloud API admin panel: accounts, API keys, model deployment, backends, usage records | repository |
 | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI and shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-agent collaboration platform: exec-only microkernel, scepter orchestration server, IEPL execution pipeline | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-agent collaboration platform: exec-only microkernel, scepter orchestration server, PTC execution pipeline | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
 | [evernight](https://github.com/celestia-island/evernight) | Industrial protocol broker: Modbus, S7comm, OPC UA; remote operations, telemetry, write gates | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Service supervision toolkit: rolling updates, health probes, reverse proxy, crash-loop recovery | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Markdown documentation engine powering this site and every project docs site | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |

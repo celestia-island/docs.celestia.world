@@ -29,7 +29,7 @@ dépôts marqués d'un site de documentation portent leurs propres docs *how* su
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Panneau d'administration API cloud : comptes, clés API, déploiement de modèles, backends, enregistrements d'usage | dépôt |
 | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI et shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Plateforme de collaboration multi-agents : microkernel exec-only, serveur d'orchestration scepter, pipeline d'exécution IEPL | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Plateforme de collaboration multi-agents : microkernel exec-only, serveur d'orchestration scepter, pipeline d'exécution PTC | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
 | [evernight](https://github.com/celestia-island/evernight) | Courtier de protocoles industriels : Modbus, S7comm, OPC UA ; opérations à distance, télémétrie, portes d'écriture | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Boîte à outils de supervision de services : mises à jour progressives, sondes de santé, proxy inverse, récupération de boucles de crash | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Moteur de documentation Markdown qui alimente ce site et tous les sites de docs de projets | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |

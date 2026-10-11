@@ -29,7 +29,7 @@
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | لوحة إدارة API السحابية: الحسابات، مفاتيح API، نشر النماذج، الخلفيات، سجلات الاستخدام | المستودع |
 | [shittim-chest](https://github.com/celestia-island/shittim-chest) | محادثة سطح المكتب/الويب والصدفة | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | منصة التعاون متعدد الوكلاء: نواة دقيقة exec-only، خادم تنسيق scepter، خط تنفيذ IEPL | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | منصة التعاون متعدد الوكلاء: نواة دقيقة exec-only، خادم تنسيق scepter، خط تنفيذ PTC | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
 | [evernight](https://github.com/celestia-island/evernight) | وسيط البروتوكولات الصناعية: Modbus وS7comm وOPC UA؛ العمليات عن بعد، القياسات عن بعد، بوابات الكتابة | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
 | [malkuth](https://github.com/celestia-island/malkuth) | مجموعة أدوات الإشراف على الخدمات: تحديثات متدحرجة، فحوصات صحة، وكيل عكسي، استرداد من حلقات الانهيار | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | محرك توثيق Markdown الذي يشغل هذا الموقع وكل مواقع توثيق المشاريع | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |

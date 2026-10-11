@@ -30,7 +30,7 @@
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Облачная API-админка: учётные записи, API key, развёртывание моделей, бэкенды, записи использования | репозиторий |
 | [shittim-chest](https://github.com/celestia-island/shittim-chest) | Чат desktop/webUI и оболочка | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Платформа мультиагентной совместной работы: exec-only микроядро, сервер оркестрации scepter, конвейер выполнения IEPL | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Платформа мультиагентной совместной работы: exec-only микроядро, сервер оркестрации scepter, конвейер выполнения PTC | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
 | [evernight](https://github.com/celestia-island/evernight) | Брокер промышленных протоколов: Modbus, S7comm, OPC UA; удалённые операции, телеметрия, шлюзы записи | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Инструментарий наблюдения за сервисами: rolling-обновления, проверки здоровья, обратный прокси, восстановление после краш-петли | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Движок Markdown-документации, питающий этот сайт и все сайты документации проектов | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |

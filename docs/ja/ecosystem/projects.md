@@ -30,7 +30,7 @@ celestia-island リポジトリの完全な一覧をレイヤ別にまとめて�
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | クラウド API 管理パネル: アカウント、API キー、モデルデプロイ、バックエンド、利用記録 | リポジトリ内 |
 | [shittim-chest](https://github.com/celestia-island/shittim-chest) | チャットデスクトップ/WebUI とシェル | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | マルチエージェントコラボレーションプラットフォーム: exec のみのマイクロカーネル、scepter オーケストレーションサーバー、IEPL 実行パイプライン | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | マルチエージェントコラボレーションプラットフォーム: exec のみのマイクロカーネル、scepter オーケストレーションサーバー、PTC 実行パイプライン | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
 | [evernight](https://github.com/celestia-island/evernight) | 産業プロトコルブローカー: Modbus、S7comm、OPC UA。遠隔運用、テレメトリ、書き込みゲート | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
 | [malkuth](https://github.com/celestia-island/malkuth) | サービス監視ツールキット: ローリングアップデート、ヘルスプローブ、リバースプロキシ、クラッシュループ復旧 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | 本サイトとすべてのプロジェクトドキュメントサイトを支える Markdown ドキュメントエンジン | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |

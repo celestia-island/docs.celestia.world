@@ -29,7 +29,7 @@ celestia-island 저장소의 전체 목록으로, 계층별로 정리되어 있�
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | 클라우드 API 관리 패널: 계정, API key, 모델 배포, 백엔드, 사용 기록 | 저장소 |
 | [shittim-chest](https://github.com/celestia-island/shittim-chest) | 채팅 데스크톱/웹UI 및 셸 | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | 다중 에이전트 협업 플랫폼: exec 전용 마이크로커널, scepter 오케스트레이션 서버, IEPL 실행 파이프라인 | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | 다중 에이전트 협업 플랫폼: exec 전용 마이크로커널, scepter 오케스트레이션 서버, PTC 실행 파이프라인 | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
 | [evernight](https://github.com/celestia-island/evernight) | 산업 프로토콜 브로커: Modbus, S7comm, OPC UA; 원격 운영, 텔레메트리, 쓰기 게이트 | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
 | [malkuth](https://github.com/celestia-island/malkuth) | 서비스 감독 도구 키트: 롤링 업데이트, 헬스 프로브, 리버스 프록시, 크래시 루프 복구 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | 이 사이트와 모든 프로젝트 문서 사이트를 구동하는 마크다운 문서 엔진 | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |

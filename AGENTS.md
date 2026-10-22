@@ -60,3 +60,7 @@ copied here.
 - CI deploys from `master` only (`.github/workflows/ci.yml`).
 - Commit messages follow workspace rules: `<gitmoji> <Capitalized English
   summary ending with period.>` — e.g. `📝 Add philosophy layer and restructure hub.`
+
+## 分支清理（2026-10-22）
+
+squash 合并后远端分支即删，本地孤本随之累积。清理一律 `celestia-devtools git-sweep --repo .`（默认 dry-run；`--apply` 自动备份补丁后删除）。

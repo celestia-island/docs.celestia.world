@@ -41,7 +41,10 @@
 # Meta
 
 - [الترخيص](./meta/license.md)
+- [الترخيص التجاري](./meta/commercial-licensing.md)
 - [CLA](./meta/cla.md)
 - [مدونة قواعد السلوك](./meta/code-of-conduct.md)
 - [الأمان](./meta/security.md)
+- [شروط الخدمة](./meta/terms.md)
+- [سياسة الخصوصية](./meta/privacy.md)
 - [المساهمة](./meta/CONTRIBUTING.md)

@@ -41,7 +41,10 @@
 # 元資訊
 
 - [授權條款](./meta/license.md)
+- [商業授權](./meta/commercial-licensing.md)
 - [CLA](./meta/cla.md)
 - [行為準則](./meta/code-of-conduct.md)
 - [安全](./meta/security.md)
+- [服務條款](./meta/terms.md)
+- [隱私政策](./meta/privacy.md)
 - [貢獻指南](./meta/CONTRIBUTING.md)

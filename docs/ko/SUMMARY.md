@@ -41,7 +41,10 @@
 # 메타
 
 - [라이선스](./meta/license.md)
+- [상용 라이선스](./meta/commercial-licensing.md)
 - [CLA](./meta/cla.md)
 - [행동 강령](./meta/code-of-conduct.md)
 - [보안](./meta/security.md)
+- [서비스 약관](./meta/terms.md)
+- [개인정보 처리방침](./meta/privacy.md)
 - [기여하기](./meta/CONTRIBUTING.md)

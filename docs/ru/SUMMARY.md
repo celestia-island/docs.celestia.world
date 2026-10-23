@@ -41,7 +41,10 @@
 # Meta
 
 - [Лицензия](./meta/license.md)
+- [Коммерческое лицензирование](./meta/commercial-licensing.md)
 - [CLA](./meta/cla.md)
 - [Кодекс поведения](./meta/code-of-conduct.md)
 - [Безопасность](./meta/security.md)
+- [Условия предоставления услуг](./meta/terms.md)
+- [Политика конфиденциальности](./meta/privacy.md)
 - [Вклад](./meta/CONTRIBUTING.md)

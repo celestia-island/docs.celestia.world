@@ -41,7 +41,10 @@
 # メタ
 
 - [ライセンス](./meta/license.md)
+- [商用ライセンス](./meta/commercial-licensing.md)
 - [CLA](./meta/cla.md)
 - [行動規範](./meta/code-of-conduct.md)
 - [セキュリティ](./meta/security.md)
+- [利用規約](./meta/terms.md)
+- [プライバシーポリシー](./meta/privacy.md)
 - [コントリビュート](./meta/CONTRIBUTING.md)

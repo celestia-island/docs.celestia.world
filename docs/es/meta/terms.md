@@ -17,7 +17,7 @@ Los servicios son **software en beta sin SLA**: la disponibilidad, la durabilida
 
 ## Propiedad intelectual y licencias
 
-El código fuente de los proyectos de celestia-island se publica bajo licencias de cada repositorio: las bibliotecas upstream bajo Apache-2.0 y los productos de la capa de servicio bajo BUSL-1.1, salvo indicación contraria; consulta [Licencia comercial](./commercial-licensing.md) para ver el mapa completo. El archivo `LICENSE` de cada repositorio rige su propio código.
+El código fuente de los proyectos de celestia-island se publica bajo licencias de cada repositorio: las bibliotecas upstream bajo SySL-1.0 y los productos de la capa de servicio bajo BUSL-1.1, salvo indicación contraria; consulta [Licencia comercial](./commercial-licensing.md) para ver el mapa completo. El archivo `LICENSE` de cada repositorio rige su propio código.
 
 ## Cambios
 

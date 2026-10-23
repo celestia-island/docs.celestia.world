@@ -17,7 +17,7 @@ Les services sont des **logiciels en bêta sans SLA** : la disponibilité, la du
 
 ## Propriété intellectuelle et licences
 
-Le code source des projets celestia-island est publié sous des licences propres à chaque dépôt — les bibliothèques amont sous Apache-2.0 et les produits de la couche service sous BUSL-1.1 sauf mention contraire ; voir [Licence commerciale](./commercial-licensing.md) pour la carte complète. Le fichier `LICENSE` de chaque dépôt régit son propre code.
+Le code source des projets celestia-island est publié sous des licences propres à chaque dépôt — les bibliothèques amont sous SySL-1.0 et les produits de la couche service sous BUSL-1.1 sauf mention contraire ; voir [Licence commerciale](./commercial-licensing.md) pour la carte complète. Le fichier `LICENSE` de chaque dépôt régit son propre code.
 
 ## Modifications
 

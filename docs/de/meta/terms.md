@@ -17,7 +17,7 @@ Bei den Diensten handelt es sich um **Beta-Software ohne SLA**: Verfügbarkeit, 
 
 ## Geistiges Eigentum und Lizenzierung
 
-Der Quellcode der celestia-island-Projekte wird unter den je-Repository-Lizenzen veröffentlicht — Upstream-Bibliotheken unter Apache-2.0 und Produkte der Service-Schicht unter BUSL-1.1, sofern nichts anderes angegeben ist; die vollständige Übersicht finden Sie unter [Kommerzielle Lizenzierung](./commercial-licensing.md). Die `LICENSE`-Datei jedes Repositorys regelt dessen eigenen Code.
+Der Quellcode der celestia-island-Projekte wird unter den je-Repository-Lizenzen veröffentlicht — Upstream-Bibliotheken unter SySL-1.0 und Produkte der Service-Schicht unter BUSL-1.1, sofern nichts anderes angegeben ist; die vollständige Übersicht finden Sie unter [Kommerzielle Lizenzierung](./commercial-licensing.md). Die `LICENSE`-Datei jedes Repositorys regelt dessen eigenen Code.
 
 ## Änderungen
 

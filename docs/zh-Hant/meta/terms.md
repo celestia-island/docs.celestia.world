@@ -17,7 +17,7 @@
 
 ## 智慧財產權與授權
 
-celestia-island 專案的原始碼按各倉庫自身的授權發布——除非另有說明，上游程式庫採用 Apache-2.0，服務層產品採用 BUSL-1.1；完整許可地圖見[商業授權](./commercial-licensing.md)。各倉庫的 `LICENSE` 檔案管轄其自身的程式碼。
+celestia-island 專案的原始碼按各倉庫自身的授權發布——除非另有說明，上游程式庫採用 SySL-1.0，服務層產品採用 BUSL-1.1；完整許可地圖見[商業授權](./commercial-licensing.md)。各倉庫的 `LICENSE` 檔案管轄其自身的程式碼。
 
 ## 變更
 

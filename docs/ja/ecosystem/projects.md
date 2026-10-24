@@ -49,6 +49,7 @@ celestia-island リポジトリの完全な一覧をレイヤ別にまとめて�
 | [aris](https://github.com/celestia-island/aris) | servo 由来のブラウザエンジン。ライブラリとして埋め込み可能（デジタルツイン用 WebGL） | リポジトリ内 |
 | [shirabe](https://github.com/celestia-island/shirabe) | 軽量な Rust ネイティブのブラウザ自動化・デバッグライブラリ | リポジトリ内 |
 | [tairitsu](https://github.com/celestia-island/tairitsu) | WASM Component Model を活用したフルスタックフレームワーク | リポジトリ内 |
+| [akivili](https://github.com/celestia-island/akivili) | プラグインファブリック兼 SDK。プラグインレジストリ、ホスト仲介、guard、TypeScript/WASM 実行パイプライン | リポジトリ内 |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | ratatui TUI 向け Markdown レンダリング | リポジトリ内 |
 | [arcaea](https://github.com/celestia-island/arcaea) | celestia ペルソナプロトコルの Rust ライブラリ | リポジトリ内 |
 | [scriptum](https://github.com/celestia-island/scriptum) | entelecheia 向けターミナルインターフェース（TUI）: scepter サーバーと対話する「ダムディスプレイ」 | リポジトリ内 |
@@ -58,6 +59,7 @@ celestia-island リポジトリの完全な一覧をレイヤ別にまとめて�
 | プロジェクト | 役割 | ドキュメント |
 | --- | --- | --- |
 | [kei](https://github.com/celestia-island/kei) | ARM64/RISC-V エッジデバイス向け Rust OS カーネル。長期的展望のための決定論的リアルタイムコア | リポジトリ内 |
+| [hare](https://github.com/celestia-island/hare) | 産業エッジ向け no_std ブリッジクレート。wire プロトコル、ハードウェアマニフェスト、プロトコルハブ（Modbus/MC/S7）、HAL トレイト、ANSI/VT | リポジトリ内 |
 
 ## インフラストラクチャとツーリング
 

@@ -46,6 +46,7 @@ celestia-island 倉庫全量清單，按層分組。帶文件站的倉庫在 `<n
 | [aris](https://github.com/celestia-island/aris) | 源自 servo 的瀏覽器引擎，可作函式庫嵌入（數位孿生的 WebGL） | 倉庫內 |
 | [shirabe](https://github.com/celestia-island/shirabe) | 輕量 Rust 原生瀏覽器自動化與除錯函式庫 | 倉庫內 |
 | [tairitsu](https://github.com/celestia-island/tairitsu) | 基於 WASM Component Model 的全端框架 | 倉庫內 |
+| [akivili](https://github.com/celestia-island/akivili) | 外掛織造層與 SDK：外掛註冊表、宿主中介、guard 與 TypeScript/WASM 執行管線 | 倉庫內 |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | 面向 ratatui TUI 的 Markdown 渲染 | 倉庫內 |
 | [arcaea](https://github.com/celestia-island/arcaea) | celestia persona 協定的 Rust 函式庫 | 倉庫內 |
 | [scriptum](https://github.com/celestia-island/scriptum) | entelecheia 的終端介面（TUI）：與 scepter 伺服器對話的「啞顯示」 | 倉庫內 |
@@ -55,6 +56,7 @@ celestia-island 倉庫全量清單，按層分組。帶文件站的倉庫在 `<n
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
 | [kei](https://github.com/celestia-island/kei) | ARM64/RISC-V 邊緣設備的 Rust 核心；長期地平線的確定性即時核心 | 倉庫內 |
+| [hare](https://github.com/celestia-island/hare) | 面向工業邊緣的 no_std 橋接 crate：wire 協定、硬體 manifest、協定中樞（Modbus/MC/S7）、HAL trait、ANSI/VT | 倉庫內 |
 
 ## 基礎設施與工具鏈
 

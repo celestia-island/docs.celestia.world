@@ -48,6 +48,7 @@
 | [aris](https://github.com/celestia-island/aris) | محرك متصفح مشتق من servo، قابل للتضمين كمكتبة (WebGL للتوائم الرقمية) | المستودع |
 | [shirabe](https://github.com/celestia-island/shirabe) | مكتبة أتمتة وتصحيح متصفح خفيفة أصلية في Rust | المستودع |
 | [tairitsu](https://github.com/celestia-island/tairitsu) | إطار عمل كامل الحزمة يعمل بنموذج مكونات WASM | المستودع |
+| [akivili](https://github.com/celestia-island/akivili) | نسيج إضافات وSDK: سجل الإضافات، توسط المضيف، guard، وخط تنفيذ TypeScript/WASM | المستودع |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | عرض Markdown لواجهات ratatui الطرفية | المستودع |
 | [arcaea](https://github.com/celestia-island/arcaea) | مكتبة Rust لبروتوكول شخصية celestia | المستودع |
 | [scriptum](https://github.com/celestia-island/scriptum) | واجهة طرفية (TUI) لـ entelecheia: «شاشة غبية» تتحدث إلى خادم scepter | المستودع |
@@ -57,6 +58,7 @@
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
 | [kei](https://github.com/celestia-island/kei) | نواة نظام Rust لأجهزة ARM64/RISC-V الطرفية؛ نواة زمن حقيقي حتمية للأفق الطويل | المستودع |
+| [hare](https://github.com/celestia-island/hare) | حِزم جسر no_std للحافة الصناعية: بروتوكول wire، بيان العتاد، محور البروتوكولات (Modbus/MC/S7)، سمات HAL، ANSI/VT | المستودع |
 
 ## البنية التحتية والأدوات
 

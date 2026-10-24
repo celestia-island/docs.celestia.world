@@ -48,6 +48,7 @@ dépôts marqués d'un site de documentation portent leurs propres docs *how* su
 | [aris](https://github.com/celestia-island/aris) | Moteur de navigateur dérivé de servo, intégrable comme bibliothèque (WebGL pour les jumeaux numériques) | dépôt |
 | [shirabe](https://github.com/celestia-island/shirabe) | Bibliothèque légère d'automatisation et de débogage de navigateur native Rust | dépôt |
 | [tairitsu](https://github.com/celestia-island/tairitsu) | Framework full-stack propulsé par le WASM Component Model | dépôt |
+| [akivili](https://github.com/celestia-island/akivili) | Tissu de plugins et SDK : registre de plugins, médiation hôte, guard et pipeline d’exécution TypeScript/WASM | dépôt |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Rendu Markdown pour les TUI ratatui | dépôt |
 | [arcaea](https://github.com/celestia-island/arcaea) | Bibliothèque Rust pour le protocole de persona celestia | dépôt |
 | [scriptum](https://github.com/celestia-island/scriptum) | Interface terminal (TUI) pour entelecheia : un « écran muet » qui parle au serveur scepter | dépôt |
@@ -57,6 +58,7 @@ dépôts marqués d'un site de documentation portent leurs propres docs *how* su
 | Projet | Rôle | Docs |
 | --- | --- | --- |
 | [kei](https://github.com/celestia-island/kei) | Noyau de système d'exploitation Rust pour dispositifs de périphérie ARM64/RISC-V ; noyau temps réel déterministe pour le long horizon | dépôt |
+| [hare](https://github.com/celestia-island/hare) | Crates de pont no_std pour la périphérie industrielle : protocole wire, manifeste matériel, hub de protocoles (Modbus/MC/S7), traits HAL, ANSI/VT | dépôt |
 
 ## Infrastructure & outillage
 

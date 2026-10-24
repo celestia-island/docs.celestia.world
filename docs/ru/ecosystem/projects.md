@@ -49,6 +49,7 @@
 | [aris](https://github.com/celestia-island/aris) | Браузерный движок на основе servo, встраиваемый как библиотека (WebGL для цифровых двойников) | репозиторий |
 | [shirabe](https://github.com/celestia-island/shirabe) | Лёгкая Rust-библиотека автоматизации и отладки браузера | репозиторий |
 | [tairitsu](https://github.com/celestia-island/tairitsu) | Full-stack фреймворк на базе WASM Component Model | репозиторий |
+| [akivili](https://github.com/celestia-island/akivili) | Фабрика плагинов и SDK: реестр плагинов, посредничество хоста, guard и конвейер исполнения TypeScript/WASM | репозиторий |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Рендеринг Markdown для ratatui TUI | репозиторий |
 | [arcaea](https://github.com/celestia-island/arcaea) | Rust-библиотека для протокола персон celestia | репозиторий |
 | [scriptum](https://github.com/celestia-island/scriptum) | Терминальный интерфейс (TUI) для entelecheia: «немой дисплей», говорящий с сервером scepter | репозиторий |
@@ -58,6 +59,7 @@
 | Проект | Роль | Документация |
 | --- | --- | --- |
 | [kei](https://github.com/celestia-island/kei) | Rust-ядро ОС для периферийных устройств ARM64/RISC-V; детерминированное ядро реального времени для долгого горизонта | репозиторий |
+| [hare](https://github.com/celestia-island/hare) | no_std-крейты моста для промышленного edge: wire-протокол, манифест оборудования, хаб протоколов (Modbus/MC/S7), HAL-трейты, ANSI/VT | репозиторий |
 
 ## Инфраструктура и инструментарий
 

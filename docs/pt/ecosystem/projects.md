@@ -49,6 +49,7 @@ documentado no próprio repositório.
 | [aris](https://github.com/celestia-island/aris) | Motor de navegador derivado do servo, incorporável como biblioteca (WebGL para gêmeos digitais) | repositório |
 | [shirabe](https://github.com/celestia-island/shirabe) | Biblioteca leve de automação e depuração de navegador nativa em Rust | repositório |
 | [tairitsu](https://github.com/celestia-island/tairitsu) | Framework full-stack alimentado pelo Modelo de Componentes WASM | repositório |
+| [akivili](https://github.com/celestia-island/akivili) | Malha de plugins e SDK: registro de plugins, mediação do host, guard e pipeline de execução TypeScript/WASM | repositório |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Renderização de Markdown para TUIs ratatui | repositório |
 | [arcaea](https://github.com/celestia-island/arcaea) | Biblioteca Rust para o protocolo de persona celestia | repositório |
 | [scriptum](https://github.com/celestia-island/scriptum) | Interface de terminal (TUI) para o entelecheia: um "display burro" que conversa com o servidor scepter | repositório |
@@ -58,6 +59,7 @@ documentado no próprio repositório.
 | Projeto | Papel | Docs |
 | --- | --- | --- |
 | [kei](https://github.com/celestia-island/kei) | Kernel de SO Rust para dispositivos edge ARM64/RISC-V; núcleo de tempo real determinístico para o horizonte de longo prazo | repositório |
+| [hare](https://github.com/celestia-island/hare) | Crates de ponte no_std para o edge industrial: protocolo wire, manifesto de hardware, hub de protocolos (Modbus/MC/S7), traits HAL, ANSI/VT | repositório |
 
 ## Infraestrutura e ferramentas
 

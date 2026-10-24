@@ -48,6 +48,7 @@ celestia-island 저장소의 전체 목록으로, 계층별로 정리되어 있�
 | [aris](https://github.com/celestia-island/aris) | servo에서 파생된 브라우저 엔진, 라이브러리로 임베드 가능 (디지털 트윈용 WebGL) | 저장소 |
 | [shirabe](https://github.com/celestia-island/shirabe) | 가벼운 Rust 네이티브 브라우저 자동화 및 디버그 라이브러리 | 저장소 |
 | [tairitsu](https://github.com/celestia-island/tairitsu) | WASM 컴포넌트 모델 기반 풀스택 프레임워크 | 저장소 |
+| [akivili](https://github.com/celestia-island/akivili) | 플러그인 패브릭 및 SDK: 플러그인 레지스트리, 호스트 중개, guard, TypeScript/WASM 실행 파이프라인 | 저장소 |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | ratatui TUI용 마크다운 렌더링 | 저장소 |
 | [arcaea](https://github.com/celestia-island/arcaea) | celestia persona 프로토콜용 Rust 라이브러리 | 저장소 |
 | [scriptum](https://github.com/celestia-island/scriptum) | entelecheia용 터미널 인터페이스 (TUI): scepter 서버와 대화하는 "단순 디스플레이" | 저장소 |
@@ -57,6 +58,7 @@ celestia-island 저장소의 전체 목록으로, 계층별로 정리되어 있�
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
 | [kei](https://github.com/celestia-island/kei) | ARM64/RISC-V 엣지 디바이스용 Rust OS 커널; 장기 지평을 위한 결정적 실시간 코어 | 저장소 |
+| [hare](https://github.com/celestia-island/hare) | 산업 엣지용 no_std 브리지 크레이트: wire 프로토콜, 하드웨어 매니페스트, 프로토콜 허브(Modbus/MC/S7), HAL 트레이트, ANSI/VT | 저장소 |
 
 ## 인프라 및 도구
 

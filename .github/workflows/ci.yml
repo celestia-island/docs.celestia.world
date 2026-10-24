@@ -22,20 +22,40 @@ concurrency:
 
 jobs:
   build:
-    # Fork pull requests pay for their own CI: this job is heavy (it compiles,
-    # builds, tests or audits) and a fork's run would spend shared runner time on
-    # untrusted content. The required commit-lint and PR-title checks are the
-    # deliberate exception: they are sub-minute, execute no pull request code, and
-    # hold no secrets.
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
-    runs-on: ubuntu-latest
+    # Self-hosted farm: this is the hub's only publishing lane, and the
+    # GitHub-hosted tier has been unavailable org-wide since 2026-09-24
+    # (`_ledger/ci-state.md`), which left content changes undeployable while
+    # the sibling docs site had already moved to the farm for exactly this
+    # reason. Fork PRs stay off the shared runners — an outside tree is not
+    # executed here; the build only needs to gate first-party PRs and master.
+    if: >-
+      github.event_name != 'pull_request' ||
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: [self-hosted, linux, x64, local]
+    timeout-minutes: 120
+    env:
+      # The org runners rewrite github.com/celestia-island/* to local bare
+      # mirrors. This repository has no mirror, and the lagrange fallback below
+      # installs from git, so talk to github.com directly (same reason the
+      # sibling docs site sets this).
+      GIT_CONFIG_COUNT: "0"
     steps:
       - uses: actions/checkout@v7
 
-      - uses: dtolnay/rust-toolchain@stable
-
+      # lagrange is preinstalled at /mnt/work/runner-shared/lagrange (refreshed
+      # from git master when lagrange changes); the version is printed so a
+      # stale build is visible in the log. Fall back to a local cargo install
+      # when the shared binary is missing.
       - name: Install lagrange
-        run: cargo install lagrange-library --locked || cargo install --git https://github.com/celestia-island/lagrange --branch master lagrange-library
+        run: |
+          set -euo pipefail
+          if [ -x /mnt/work/runner-shared/lagrange/bin/lagrange ]; then
+            /mnt/work/runner-shared/lagrange/bin/lagrange --version
+            echo "/mnt/work/runner-shared/lagrange/bin" >> "$GITHUB_PATH"
+          else
+            cargo install lagrange-library --locked \
+              || cargo install --git https://github.com/celestia-island/lagrange --branch master lagrange-library
+          fi
 
       - name: Build docs
         run: lagrange build --src docs --out _site
@@ -49,8 +69,9 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
+    runs-on: [self-hosted, linux, x64, local]
+    timeout-minutes: 120
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -60,13 +81,12 @@ jobs:
         uses: actions/deploy-pages@v5
 
   lint:
-    # Fork pull requests pay for their own CI: this job is heavy (it compiles,
-    # builds, tests or audits) and a fork's run would spend shared runner time on
-    # untrusted content. The required commit-lint and PR-title checks are the
-    # deliberate exception: they are sub-minute, execute no pull request code, and
-    # hold no secrets.
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    # Markdown lint is sub-minute and stdlib-only, and this is a public
+    # repository (AGENTS §8.2 allows hosted jobs here) — keeping it hosted
+    # leaves the farm free for the build lane. Same rationale as
+    # rules-lint.yml.
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
 

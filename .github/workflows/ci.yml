@@ -17,8 +17,14 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  # One group per ref. A single shared "pages" group with cancel-in-progress
+  # made every new run (another PR's build, or a master push) cancel whichever
+  # run was waiting — the farm queues, so the window is wide, and the cancelled
+  # run reads as "check never reported" rather than as a skip. Superseded PR
+  # builds on the SAME ref are still cancelled; master deploys never are
+  # (an interrupted Pages deploy is not resumable).
+  group: pages-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:

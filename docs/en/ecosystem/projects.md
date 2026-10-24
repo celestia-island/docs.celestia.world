@@ -1,8 +1,11 @@
 # Projects Map
 
-The complete inventory of celestia-island repositories, grouped by layer.
+The inventory of the celestia-island platform repositories, grouped by layer.
 Repositories marked with a documentation site carry their own *how* docs at
 `<name>.docs.celestia.world`; everything else is documented in its repository.
+Personal side projects and retired repositories are out of scope — the retired
+`gateway.celestia.world` service, for example, lives in its own repository with a
+retirement banner, and its domain is now served by evernight's gateway package.
 
 ## Layer 0 — Auth
 
@@ -33,6 +36,8 @@ Repositories marked with a documentation site carry their own *how* docs at
 | [evernight](https://github.com/celestia-island/evernight) | Industrial protocol broker: Modbus, S7comm, OPC UA; remote operations, telemetry, write gates | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Service supervision toolkit: rolling updates, health probes, reverse proxy, crash-loop recovery | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Markdown documentation engine powering this site and every project docs site | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| [celestia-erp](https://github.com/celestia-island/celestia-erp) | ERP backend and front-site OAuth provider: organizations, billing, invoices, RBAC admin panel (Rust + Vue) | repository |
+| [electrode_recon](https://github.com/celestia-island/electrode_recon) | Three-phase electrode microstructure generator, packaged as a containerized compute engine — the first external instance on the engine fabric | repository |
 
 ## Tools & libraries
 
@@ -49,6 +54,9 @@ Repositories marked with a documentation site carry their own *how* docs at
 | [shirabe](https://github.com/celestia-island/shirabe) | Lightweight Rust-native browser automation and debug library | repository |
 | [tairitsu](https://github.com/celestia-island/tairitsu) | Full-stack framework powered by the WASM Component Model | repository |
 | [akivili](https://github.com/celestia-island/akivili) | Plugin fabric and SDK: plugin registry, host mediation, guard and the TypeScript/WASM execution pipeline | repository |
+| [official-plugins](https://github.com/celestia-island/official-plugins) | Source home of the first-party plugin packages: manifests, agent tool/skill docs, install scripts and node-side MCP servers | repository |
+| [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python plugin/engine SDK — the Python twin of plana's JSON-RPC engine dialect (stdlib-only) | repository |
+| [shun](https://github.com/celestia-island/shun) | Stream-driven payload delivery runtime: installer, flasher and portable mode | repository |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Markdown rendering for ratatui TUIs | repository |
 | [arcaea](https://github.com/celestia-island/arcaea) | Rust library for the celestia persona protocol | repository |
 | [scriptum](https://github.com/celestia-island/scriptum) | Terminal interface (TUI) for entelecheia: a "dumb display" talking to the scepter server | repository |
@@ -59,6 +67,7 @@ Repositories marked with a documentation site carry their own *how* docs at
 | --- | --- | --- |
 | [kei](https://github.com/celestia-island/kei) | Rust OS kernel for ARM64/RISC-V edge devices; deterministic real-time core for the long horizon | repository |
 | [hare](https://github.com/celestia-island/hare) | no_std bridge crates for the industrial edge: wire protocol, hardware manifest, protocol hub (Modbus/MC/S7), HAL traits, ANSI/VT | repository |
+| [evernight-appliance](https://github.com/celestia-island/evernight-appliance) | evernight appliance distribution: boot firmware, flasher, Linux/kei driver contract rig | repository |
 
 ## Infrastructure & tooling
 
@@ -66,6 +75,7 @@ Repositories marked with a documentation site carry their own *how* docs at
 | --- | --- | --- |
 | [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | Shared development toolchain: justfile recipes, patch registration, linting | repository |
 | [celestia-integration](https://github.com/celestia-island/celestia-integration) | Real-hardware integration test suites for the full loop | repository |
+| [cherino](https://github.com/celestia-island/cherino) | Container stack and image-build helpers used by the services | repository |
 | [sysl](https://github.com/celestia-island/sysl) | Synthetic Source License (SySL): a license designed for AI-generated code | repository |
 
 ## Web presence
@@ -76,7 +86,9 @@ Repositories marked with a documentation site carry their own *how* docs at
 | [docs.celestia.world](https://docs.celestia.world) | This site — philosophy, map, getting started | repository |
 | [e.celestia.world](https://e.celestia.world) | Public landing page | repository |
 | [dev.celestia.world](https://dev.celestia.world) | Developer portal | repository |
-| [arona.celestia.world](https://arona.celestia.world) | Cloud API admin panel (product) | — |
+| [celestia.ac.cn](https://celestia.ac.cn) | Entelecheia public front door (.ac.cn domain) | repository |
+| [arona.docs.celestia.world](https://arona.docs.celestia.world) | arona product documentation site | repository |
+| [arcaea.celestia.world](https://arcaea.celestia.world) | persona protocol public registry site | repository |
 
 ## Where to go deeper
 

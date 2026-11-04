@@ -29,9 +29,9 @@ Repository dokumentiert.
 | Projekt | Rolle | Doku |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Cloud-API-Admin-Panel: Konten, API keys, Modellbereitstellung, Backends, Nutzungsprotokolle | Repository |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat-Desktop/WebUI und Shell | Docs (im Repo) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-Agenten-Kollaborationsplattform: Exec-only-Microkernel, scepter-Orchestrierungsserver, PTC-Ausführungspipeline | Docs (im Repo) |
-| [evernight](https://github.com/celestia-island/evernight) | Industrieller Protokoll-Broker: Modbus, S7comm, OPC UA; Fernoperation, Telemetrie, Schreibsperren | Docs (im Repo) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat-Desktop/WebUI und Shell | Doku (im Repo) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-Agenten-Kollaborationsplattform: Exec-only-Microkernel, scepter-Orchestrierungsserver, PTC-Ausführungspipeline | Doku (im Repo) |
+| [evernight](https://github.com/celestia-island/evernight) | Industrieller Protokoll-Broker: Modbus, S7comm, OPC UA; Fernoperation, Telemetrie, Schreibsperren | Doku (im Repo) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Dienstüberwachungs-Toolkit: Rolling Updates, Health-Probes, Reverse Proxy, Crash-Loop-Recovery | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Markdown-Dokumentations-Engine, die diese Seite und jede Projektdoku-Seite betreibt | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 

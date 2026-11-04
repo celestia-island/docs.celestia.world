@@ -46,7 +46,7 @@ que ce dont l'autonomie aura besoin demain.
   [Sites & Propriété](./ecosystem/sites.md).
 - **Présence de l'organisation** —
   [celestia-island sur GitHub](https://github.com/celestia-island).
-- **Panneaux produits (WIP pendant la bêta)** — [dev.celestia.world](https://dev.celestia.world)
+- **Entrées produits (WIP pendant la bêta)** — [dev.celestia.world](https://dev.celestia.world)
   (le panneau : compte, chat, agents), la face [tour](https://demo.dev.celestia.world/tour)
   anonyme, et le site de la société [celestia.ac.cn](https://celestia.ac.cn) ; le panneau
   d'administration propre à la plateforme de modèles reste interne au déploiement

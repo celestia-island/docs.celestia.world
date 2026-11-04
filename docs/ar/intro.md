@@ -40,7 +40,7 @@
 - **توثيق كل مشروع** — `<name>.docs.celestia.world`، مبني من كل مستودع.
   ابحث عن القائمة الكاملة في [المواقع والمسؤوليات](./ecosystem/sites.md).
 - **حضور المنظمة** — [celestia-island على GitHub](https://github.com/celestia-island).
-- **لوحات المنتجات (قيد التطوير أثناء النسخة التجريبية)** — [dev.celestia.world](https://dev.celestia.world)
+- **مداخل المنتجات (قيد التطوير أثناء النسخة التجريبية)** — [dev.celestia.world](https://dev.celestia.world)
   (اللوحة: الحساب، الدردشة، الوكلاء)، وواجهة [tour](https://demo.dev.celestia.world/tour)
   المجهولة، وموقع الشركة [celestia.ac.cn](https://celestia.ac.cn)؛ لوحة إدارة منصة
   النماذج نفسها تبقى داخلية للنشر حتى انتهاء النسخة التجريبية.

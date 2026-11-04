@@ -20,7 +20,7 @@ La razón de todo esto es una observación simple: en la Luna un viaje de ida y 
 
 - **Documentación por proyecto** — `<name>.docs.celestia.world`, construida desde cada repositorio. Encuentra la lista completa en [Sitios y propiedad](./ecosystem/sites.md).
 - **Presencia de la organización** — [celestia-island en GitHub](https://github.com/celestia-island).
-- **Paneles de producto (WIP durante la beta)** — [dev.celestia.world](https://dev.celestia.world)
+- **Entradas de producto (WIP durante la beta)** — [dev.celestia.world](https://dev.celestia.world)
   (el panel: cuenta, chat, agentes), la cara [tour](https://demo.dev.celestia.world/tour)
   anónima y el sitio de la empresa [celestia.ac.cn](https://celestia.ac.cn); el panel
   de administración propio de la plataforma de modelos permanece interno al despliegue

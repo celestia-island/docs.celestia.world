@@ -45,7 +45,7 @@ Autonomie morgen brauchen wird.
   Repository erstellt. Die vollständige Liste finden Sie unter
   [Sites & Verantwortlichkeiten](./ecosystem/sites.md).
 - **Präsenz der Organisation** — [celestia-island auf GitHub](https://github.com/celestia-island).
-- **Produkt-Panels (WIP während der Beta)** — [dev.celestia.world](https://dev.celestia.world)
+- **Produkt-Einstiege (WIP während der Beta)** — [dev.celestia.world](https://dev.celestia.world)
   (das Panel: Konto, Chat, Agenten), die anonyme
   [Tour](https://demo.dev.celestia.world/tour)-Seite und die Firmenwebsite
   [celestia.ac.cn](https://celestia.ac.cn); das eigene Admin-Panel der Modellplattform

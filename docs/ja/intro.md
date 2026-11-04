@@ -43,7 +43,7 @@ UI コンポーネント（[hikari](https://github.com/celestia-island/hikari)�
   各リポジトリから構築されます。完全な一覧は
   [サイトと所有](./ecosystem/sites.md) を参照してください。
 - **組織の存在** —— [GitHub 上の celestia-island](https://github.com/celestia-island)。
-- **プロダクトパネル（ベータ期間中は WIP）** —— [dev.celestia.world](https://dev.celestia.world)
+- **プロダクト入口（ベータ期間中は WIP）** —— [dev.celestia.world](https://dev.celestia.world)
   （パネル：アカウント・チャット・エージェント）、匿名の
   [tour](https://demo.dev.celestia.world/tour) 面、そして会社サイト
   [celestia.ac.cn](https://celestia.ac.cn)。モデルプラットフォーム自体の管理パネルは

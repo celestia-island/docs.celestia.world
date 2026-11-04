@@ -4,11 +4,11 @@ Recorre el [bucle cerrado](../philosophy/closed-loop.md) en unos 30 minutos. Las
 
 ## 1. Obtén una cuenta
 
-El registro está cerrado con invitación: el primer usuario de un despliegue se convierte en el administrador y, después, el auto-registro se bloquea. Contacta con los mantenedores para pedir una invitación y luego regístrate a través del panel de Arona (`https://dev.celestia.world` en un despliegue público, o `http://<host>:8420` de forma interna).
+El registro está cerrado con invitación: el primer usuario de un despliegue se convierte en el administrador y, después, el auto-registro se bloquea. Contacta con los mantenedores para pedir una invitación y luego regístrate a través del panel (`https://dev.celestia.world` en un despliegue público, o `http://<host>:8420` de forma interna).
 
 ## 2. Crea una clave de API
 
-En el panel de Arona, crea una clave de API para tu cuenta. Esta clave es tu identidad para todo lo siguiente: gestión de modelos, backends de chat y operaciones de agentes.
+En el panel, crea una clave de API para tu cuenta. Esta clave es tu identidad para todo lo siguiente: gestión de modelos, backends de chat y operaciones de agentes.
 
 ## 3. Despliega un modelo
 

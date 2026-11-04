@@ -12,7 +12,7 @@ sites de projets autoritaires.
 | `<name>.docs.celestia.world` | chaque projet | Guides, architecture, designs, références — construits depuis le dépôt du projet lui-même |
 | [celestia-island.github.io](https://celestia-island.github.io) | l'organisation | Présence, liens, actifs de marque |
 | [e.celestia.world](https://e.celestia.world) | la face publique | Page d'accueil, tarification, blog, appel à l'action |
-| [dev.celestia.world](https://dev.celestia.world) | les développeurs | Portail développeur et statut |
+| [dev.celestia.world](https://dev.celestia.world) | le panneau | Compte, chat, agents et la console d'exploitation (bêta sur invitation) |
 
 ## La règle : pas de duplication
 

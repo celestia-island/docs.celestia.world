@@ -29,7 +29,7 @@ Repository dokumentiert.
 | Projekt | Rolle | Doku |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Cloud-API-Admin-Panel: Konten, API keys, Modellbereitstellung, Backends, Nutzungsprotokolle | Repository |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat-Desktop/WebUI und Shell | [shittim-chest.docs.celestia.world](https://dev.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat-Desktop/WebUI und Shell | [Doku (im Repo)](https://dev.celestia.world) |
 | [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-Agenten-Kollaborationsplattform: Exec-only-Microkernel, scepter-Orchestrierungsserver, PTC-Ausführungspipeline | entelecheia.docs.celestia.world |
 | [evernight](https://github.com/celestia-island/evernight) | Industrieller Protokoll-Broker: Modbus, S7comm, OPC UA; Fernoperation, Telemetrie, Schreibsperren | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | Dienstüberwachungs-Toolkit: Rolling Updates, Health-Probes, Reverse Proxy, Crash-Loop-Recovery | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
@@ -77,7 +77,7 @@ Repository dokumentiert.
 | [docs.celestia.world](https://docs.celestia.world) | Diese Seite — Philosophie, Karte, Erste Schritte | Repository |
 | [e.celestia.world](https://e.celestia.world) | Öffentliche Landingpage | Repository |
 | [dev.celestia.world](https://dev.celestia.world) | Entwicklerportal | Repository |
-| [arona.celestia.world](https://dev.celestia.world) | Cloud-API-Admin-Panel (Produkt) | — |
+| [Panel](https://dev.celestia.world) | Cloud-API-Admin-Panel (Produkt) | — |
 
 ## Weiterführendes
 

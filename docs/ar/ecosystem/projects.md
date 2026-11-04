@@ -28,7 +28,7 @@
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | لوحة إدارة API السحابية: الحسابات، مفاتيح API، نشر النماذج، الخلفيات، سجلات الاستخدام | المستودع |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | محادثة سطح المكتب/الويب والصدفة | [shittim-chest.docs.celestia.world](https://dev.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | محادثة سطح المكتب/الويب والصدفة | [الوثائق (في المستودع)](https://dev.celestia.world) |
 | [entelecheia](https://github.com/celestia-island/entelecheia) | منصة التعاون متعدد الوكلاء: نواة دقيقة exec-only، خادم تنسيق scepter، خط تنفيذ PTC | entelecheia.docs.celestia.world |
 | [evernight](https://github.com/celestia-island/evernight) | وسيط البروتوكولات الصناعية: Modbus وS7comm وOPC UA؛ العمليات عن بعد، القياسات عن بعد، بوابات الكتابة | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | مجموعة أدوات الإشراف على الخدمات: تحديثات متدحرجة، فحوصات صحة، وكيل عكسي، استرداد من حلقات الانهيار | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
@@ -76,7 +76,7 @@
 | [docs.celestia.world](https://docs.celestia.world) | هذا الموقع — الفلسفة، الخريطة، البدء | المستودع |
 | [e.celestia.world](https://e.celestia.world) | صفحة الهبوط العامة | المستودع |
 | [dev.celestia.world](https://dev.celestia.world) | بوابة المطورين | المستودع |
-| [arona.celestia.world](https://dev.celestia.world) | لوحة إدارة API السحابية (منتج) | — |
+| [لوحة النظام](https://dev.celestia.world) | لوحة إدارة API السحابية (منتج) | — |
 
 ## لمزيد من التفاصيل
 

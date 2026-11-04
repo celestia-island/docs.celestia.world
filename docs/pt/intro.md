@@ -42,7 +42,7 @@ controle industrial têm a mesma forma que a autonomia precisará amanhã.
   partir de cada repositório. A lista completa está em
   [Sites e Responsabilidade](./ecosystem/sites.md).
 - **Presença da organização** — [celestia-island no GitHub](https://github.com/celestia-island).
-- **Painéis de produto (WIP durante a beta)** — [arona](https://dev.celestia.world)
+- **Painéis de produto (WIP durante a beta)** — [dev.celestia.world](https://dev.celestia.world)
   (administração da API em nuvem), [dev](https://dev.celestia.world)
   (portal do desenvolvedor); o painel ao vivo roda internamente em `arona:8420`
   até o fim da beta.

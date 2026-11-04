@@ -26,7 +26,7 @@ El inventario completo de repositorios de celestia-island, agrupados por capa. L
 | Proyecto | Rol | Docs |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Panel de administración de API en la nube: cuentas, claves de API, despliegue de modelos, backends, registros de uso | repositorio |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat de escritorio/webUI y shell | [shittim-chest.docs.celestia.world](https://dev.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat de escritorio/webUI y shell | [documentación (en el repo)](https://dev.celestia.world) |
 | [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboración multi-agente: microkernel de solo exec, servidor de orquestación scepter, canalización de ejecución PTC | entelecheia.docs.celestia.world |
 | [evernight](https://github.com/celestia-island/evernight) | Broker de protocolos industriales: Modbus, S7comm, OPC UA; operaciones remotas, telemetría, compuertas de escritura | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | Kit de herramientas de supervisión de servicios: actualizaciones progresivas, sondeos de salud, proxy inverso, recuperación de bucles de caída | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
@@ -74,7 +74,7 @@ El inventario completo de repositorios de celestia-island, agrupados por capa. L
 | [docs.celestia.world](https://docs.celestia.world) | Este sitio — filosofía, mapa, primeros pasos | repositorio |
 | [e.celestia.world](https://e.celestia.world) | Página de aterrizaje pública | repositorio |
 | [dev.celestia.world](https://dev.celestia.world) | Portal de desarrolladores | repositorio |
-| [arona.celestia.world](https://dev.celestia.world) | Panel de administración de API en la nube (producto) | — |
+| [panel](https://dev.celestia.world) | Panel de administración de API en la nube (producto) | — |
 
 ## Para profundizar
 

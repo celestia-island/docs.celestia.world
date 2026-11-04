@@ -8,13 +8,13 @@ administrador pela URL do painel e pelo seu convite.
 
 O registro é fechado por convite: o primeiro usuário de uma implantação
 torna-se o admin e, depois disso, o auto-registro trava. Entre em contato com
-os mantenedores para obter um convite e registre-se pelo painel da Arona
+os mantenedores para obter um convite e registre-se pelo painel
 (`https://dev.celestia.world` numa implantação pública, ou
 `http://<host>:8420` internamente).
 
 ## 2. Crie uma API key
 
-No painel da Arona, crie uma API key para a sua conta. Essa key é a sua
+No painel, crie uma API key para a sua conta. Essa key é a sua
 identidade para tudo o que vem a seguir — gerenciamento de modelos, backends
 de chat e operações de agentes.
 

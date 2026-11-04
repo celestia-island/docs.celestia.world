@@ -10,7 +10,7 @@
 | `<name>.docs.celestia.world` | 每个项目 | 指南、架构、设计、参考——由项目自身仓库构建 |
 | [celestia-island.github.io](https://celestia-island.github.io) | 组织 | 存在、链接、品牌资产 |
 | [e.celestia.world](https://e.celestia.world) | 公众面孔 | 落地页、定价、博客、行动号召 |
-| [dev.celestia.world](https://dev.celestia.world) | 开发者 | 开发者门户与状态 |
+| [dev.celestia.world](https://dev.celestia.world) | 面板与开发者门户 | 账户、聊天、智能体与运营控制台（内测期间邀请制） |
 
 ## 唯一规则：不重复
 

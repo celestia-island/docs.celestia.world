@@ -9,12 +9,12 @@ Sie Ihren Administrator nach der Panel-URL und Ihrer Einladung.
 Die Registrierung ist einladungsbasiert: Der erste Nutzer einer Bereitstellung
 wird zum Admin, danach sperrt sich die Selbstregistrierung. Kontaktieren Sie
 die Maintainer für eine Einladung und registrieren Sie sich dann über das
-Arona-Panel (`https://dev.celestia.world` in einer öffentlichen
+Panel (`https://dev.celestia.world` in einer öffentlichen
 Bereitstellung oder `http://<host>:8420` intern).
 
 ## 2. API key erstellen
 
-Erstellen Sie im Arona-Panel einen API key für Ihr Konto. Dieser Key ist Ihre
+Erstellen Sie im Panel einen API key für Ihr Konto. Dieser Key ist Ihre
 Identität für alles Folgende — Modellverwaltung, Chat-Backends und
 Agentenoperationen.
 

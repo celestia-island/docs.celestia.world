@@ -29,7 +29,7 @@ celestia-island リポジトリの完全な一覧をレイヤ別にまとめて�
 | プロジェクト | 役割 | ドキュメント |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | クラウド API 管理パネル: アカウント、API キー、モデルデプロイ、バックエンド、利用記録 | リポジトリ内 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | チャットデスクトップ/WebUI とシェル | [shittim-chest.docs.celestia.world](https://dev.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | チャットデスクトップ/WebUI とシェル | [ドキュメント（リポジトリ内）](https://dev.celestia.world) |
 | [entelecheia](https://github.com/celestia-island/entelecheia) | マルチエージェントコラボレーションプラットフォーム: exec のみのマイクロカーネル、scepter オーケストレーションサーバー、PTC 実行パイプライン | entelecheia.docs.celestia.world |
 | [evernight](https://github.com/celestia-island/evernight) | 産業プロトコルブローカー: Modbus、S7comm、OPC UA。遠隔運用、テレメトリ、書き込みゲート | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | サービス監視ツールキット: ローリングアップデート、ヘルスプローブ、リバースプロキシ、クラッシュループ復旧 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
@@ -77,7 +77,7 @@ celestia-island リポジトリの完全な一覧をレイヤ別にまとめて�
 | [docs.celestia.world](https://docs.celestia.world) | 本サイト —— 哲学、マップ、始め方 | リポジトリ内 |
 | [e.celestia.world](https://e.celestia.world) | 公開ランディングページ | リポジトリ内 |
 | [dev.celestia.world](https://dev.celestia.world) | 開発者ポータル | リポジトリ内 |
-| [arona.celestia.world](https://dev.celestia.world) | クラウド API 管理パネル（製品） | — |
+| [パネル](https://dev.celestia.world) | クラウド API 管理パネル（製品） | — |
 
 ## さらに詳しく
 

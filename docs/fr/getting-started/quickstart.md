@@ -9,12 +9,12 @@ du panneau et votre invitation à votre administrateur.
 L'inscription est limitée sur invitation : le premier utilisateur d'un
 déploiement devient l'administrateur, après quoi l'auto-inscription se
 verrouille. Contactez les mainteneurs pour obtenir une invitation, puis
-inscrivez-vous via le panneau Arona (`https://dev.celestia.world` dans un
+inscrivez-vous via le panneau (`https://dev.celestia.world` dans un
 déploiement public, ou `http://<host>:8420` en interne).
 
 ## 2. Créer une clé API
 
-Dans le panneau Arona, créez une clé API pour votre compte. Cette clé est votre
+Dans le panneau, créez une clé API pour votre compte. Cette clé est votre
 identité pour tout ce qui suit — gestion des modèles, backends de chat et
 opérations d'agents.
 

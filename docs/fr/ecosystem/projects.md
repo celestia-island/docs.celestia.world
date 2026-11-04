@@ -28,7 +28,7 @@ dépôts marqués d'un site de documentation portent leurs propres docs *how* su
 | Projet | Rôle | Docs |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Panneau d'administration API cloud : comptes, clés API, déploiement de modèles, backends, enregistrements d'usage | dépôt |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI et shell | [shittim-chest.docs.celestia.world](https://dev.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI et shell | [docs (dans le dépôt)](https://dev.celestia.world) |
 | [entelecheia](https://github.com/celestia-island/entelecheia) | Plateforme de collaboration multi-agents : microkernel exec-only, serveur d'orchestration scepter, pipeline d'exécution PTC | entelecheia.docs.celestia.world |
 | [evernight](https://github.com/celestia-island/evernight) | Courtier de protocoles industriels : Modbus, S7comm, OPC UA ; opérations à distance, télémétrie, portes d'écriture | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | Boîte à outils de supervision de services : mises à jour progressives, sondes de santé, proxy inverse, récupération de boucles de crash | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
@@ -76,7 +76,7 @@ dépôts marqués d'un site de documentation portent leurs propres docs *how* su
 | [docs.celestia.world](https://docs.celestia.world) | Ce site — philosophie, carte, bien démarrer | dépôt |
 | [e.celestia.world](https://e.celestia.world) | Page d'accueil publique | dépôt |
 | [dev.celestia.world](https://dev.celestia.world) | Portail développeur | dépôt |
-| [arona.celestia.world](https://dev.celestia.world) | Panneau d'administration API cloud (produit) | — |
+| [le panneau](https://dev.celestia.world) | Panneau d'administration API cloud (produit) | — |
 
 ## Pour aller plus loin
 

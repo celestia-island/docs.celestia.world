@@ -12,7 +12,7 @@ enxuto e os sites de projeto autoritativos.
 | `<name>.docs.celestia.world` | de cada projeto | Guias, arquitetura, designs, referências — construídos a partir do próprio repositório do projeto |
 | [celestia-island.github.io](https://celestia-island.github.io) | da organização | Presença, links, ativos de marca |
 | [e.celestia.world](https://e.celestia.world) | da face pública | Página de destino, preços, blog, chamada para ação |
-| [dev.celestia.world](https://dev.celestia.world) | dos desenvolvedores | Portal do desenvolvedor e status |
+| [dev.celestia.world](https://dev.celestia.world) | o painel | Conta, chat, agentes e o console de operação (beta por convite) |
 
 ## A única regra: nada de duplicação
 

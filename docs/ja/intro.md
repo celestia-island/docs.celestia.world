@@ -43,7 +43,7 @@ UI コンポーネント（[hikari](https://github.com/celestia-island/hikari)�
   各リポジトリから構築されます。完全な一覧は
   [サイトと所有](./ecosystem/sites.md) を参照してください。
 - **組織の存在** —— [GitHub 上の celestia-island](https://github.com/celestia-island)。
-- **プロダクトパネル（ベータ期間中は WIP）** —— [arona](https://dev.celestia.world)
+- **プロダクトパネル（ベータ期間中は WIP）** —— [dev.celestia.world](https://dev.celestia.world)
   （クラウド API 管理パネル）、[dev](https://dev.celestia.world)
   （開発者ポータル）。ベータ期間中、ライブパネルは内部の `arona:8420`
   で実行されます。

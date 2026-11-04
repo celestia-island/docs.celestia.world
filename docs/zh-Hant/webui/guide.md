@@ -54,4 +54,4 @@ chest 都得在門口出示同一把。**Usage** 是每把金鑰的逐次呼叫�
 
 - arona 平台的完整參考 —— [arona 文件](https://arona.docs.celestia.world)
 - chest 工作台與其面板 —— [shittim-chest 文件](https://dev.celestia.world)
-- 智能體、工作區與工業寫入閘門 —— [entelecheia 文件]()
+- 智能體、工作區與工業寫入閘門 —— entelecheia 文件

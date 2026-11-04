@@ -9,7 +9,7 @@
 登録は招待制です。デプロイメントの最初のユーザーが管理者になり、その
 後は自己登録がロックされます。メンテナーに招待状を依頼してから、
 Arona パネルで登録します（公開デプロイメントでは
-`https://arona.celestia.world`、内部では `http://<host>:8420`）。
+`https://dev.celestia.world`、内部では `http://<host>:8420`）。
 
 ## 2. API キーを作成する
 
@@ -26,7 +26,7 @@ Arona パネルで自分のアカウントの API キーを作成します。こ
 
 ## 4. チャットとエージェント実行
 
-[shittim-chest](https://shittim-chest.docs.celestia.world)（デスクトップ
+[shittim-chest](https://dev.celestia.world)（デスクトップ
 アプリまたは WebUI）を開き、API キーで接続して会話を始めます。マルチ
 エージェント作業では、entelecheia の scepter ランタイムが同じインタ
 ーフェースの背後でエージェントをオーケストレーションします。エージェ
@@ -34,7 +34,7 @@ Arona パネルで自分のアカウントの API キーを作成します。こ
 
 ## 5. 産業機器の制御
 
-[evernight](https://evernight.docs.celestia.world) を起動し、プロトコル
+evernight を起動し、プロトコル
 ブリッジ（Modbus、S7comm、OPC UA）を接続し、テレメトリを購読して、
 ポリシー検証と人間の確認の後に書き込みを実行します。内部ベータの間、
 この区間はシミュレートされた機器またはラボ機器に対して実行されます。

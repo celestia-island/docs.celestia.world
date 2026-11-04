@@ -65,4 +65,4 @@ falhas invisíveis são as perigosas.
 - [O Ciclo Fechado](./closed-loop.md) — onde os portões de segurança se situam no fluxo.
 - [Arquitetura em Camadas](./layered-architecture.md) — as camadas que a segurança atravessa.
 - [Documentação do kirino](https://kirino.docs.celestia.world) — o modelo de autenticação em detalhe.
-- [Documentação do evernight](https://evernight.docs.celestia.world) — intermediação de protocolos e portões de escrita.
+- Documentação do evernight — intermediação de protocolos e portões de escrita.

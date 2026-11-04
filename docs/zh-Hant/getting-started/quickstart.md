@@ -4,11 +4,11 @@
 
 ## 1. 取得帳戶
 
-註冊是邀請制：部署首個使用者自動成為管理員，此後自助註冊上鎖。向維護者索取邀請，然後在 Arona 控制台註冊（公網部署 `https://dev.celestia.world`，內網 `http://<主機>:8420`）。
+註冊是邀請制：部署首個使用者自動成為管理員，此後自助註冊上鎖。向維護者索取邀請，然後在面板註冊（公網部署 `https://dev.celestia.world`，內網 `http://<主機>:8420`）。
 
 ## 2. 建立 API 金鑰
 
-在 Arona 控制台為帳戶建立 API 金鑰。這個金鑰是你接下來一切操作的通行證——模型管理、聊天後端與智能體操作。
+在面板為帳戶建立 API 金鑰。這個金鑰是你接下來一切操作的通行證——模型管理、聊天後端與智能體操作。
 
 ## 3. 部署模型
 
@@ -16,11 +16,11 @@
 
 ## 4. 聊天與智能體
 
-開啟 [shittim-chest](https://github.com/celestia-island/shittim-chest/tree/master/docs)（桌面應用程式或 WebUI），用 API 金鑰連接並開始對話。多智能體場景下，entelecheia 的 scepter 執行環境在相同介面背後編排智能體；智能體日誌與工具呼叫在 UI 中可見。
+開啟 [shittim-chest](https://dev.celestia.world)（桌面應用程式或 WebUI），用 API 金鑰連接並開始對話。多智能體場景下，entelecheia 的 scepter 執行環境在相同介面背後編排智能體；智能體日誌與工具呼叫在 UI 中可見。
 
 ## 5. 控制工業設備
 
-[evernight](https://github.com/celestia-island/evernight/tree/master/docs) 執行後，接入協定橋（Modbus、S7comm、OPC UA），訂閱遙測，並在策略校驗與人工確認後發起寫入操作。封閉測試期間此環節執行於模擬或實驗室設備；安全鏈在兩種情況下完全相同。
+evernight 執行後，接入協定橋（Modbus、S7comm、OPC UA），訂閱遙測，並在策略校驗與人工確認後發起寫入操作。封閉測試期間此環節執行於模擬或實驗室設備；安全鏈在兩種情況下完全相同。
 
 ## 6. 驗證
 

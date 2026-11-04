@@ -58,5 +58,5 @@ Holographic은 같은 플릿을 보는 두 가지 뷰이고, Reports는 이력�
 ## 더 깊이 들어가기
 
 - arona 플랫폼 전체 참조 — [arona 문서](https://arona.docs.celestia.world)
-- chest 작업대와 그 패널 — [shittim-chest 문서](https://shittim-chest.docs.celestia.world)
-- 에이전트, 워크스페이스, 산업 쓰기 게이트 — [entelecheia 문서](https://entelecheia.docs.celestia.world)
+- chest 작업대와 그 패널 — [shittim-chest 문서](https://dev.celestia.world)
+- 에이전트, 워크스페이스, 산업 쓰기 게이트 — entelecheia 문서

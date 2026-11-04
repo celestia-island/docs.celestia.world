@@ -26,9 +26,9 @@ celestia-island 仓库全量清单，按层分组。带文档站的仓库在 `<n
 | 项目 | 角色 | 文档 |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | 云 API 管理面板：账户、API 密钥、模型部署、后端、用量记录 | 仓库内 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 与外壳 | [文档（仓内）](https://github.com/celestia-island/shittim-chest/tree/master/docs) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能体协作平台：exec-only 微内核、scepter 编排服务器、PTC 执行管线 | [文档（仓内）](https://github.com/celestia-island/entelecheia/tree/master/docs) |
-| [evernight](https://github.com/celestia-island/evernight) | 工业协议网关：Modbus、S7comm、OPC UA；远程操作、遥测、写阀门 | [文档（仓内）](https://github.com/celestia-island/evernight/tree/master/docs) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 与外壳 | [文档（仓内）](https://dev.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能体协作平台：exec-only 微内核、scepter 编排服务器、PTC 执行管线 | [文档（仓内）]() |
+| [evernight](https://github.com/celestia-island/evernight) | 工业协议网关：Modbus、S7comm、OPC UA；远程操作、遥测、写阀门 | [文档（仓内）]() |
 | [malkuth](https://github.com/celestia-island/malkuth) | 服务监督工具包：滚动更新、健康探针、反向代理、崩溃循环恢复 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | 支撑本站与所有项目文档站的 Markdown 文档引擎 | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -73,8 +73,7 @@ celestia-island 仓库全量清单，按层分组。带文档站的仓库在 `<n
 | [celestia-island.github.io](https://celestia-island.github.io) | 组织存在 | 仓库内 |
 | [docs.celestia.world](https://docs.celestia.world) | 本站 —— 哲学、地图、快速开始 | 仓库内 |
 | [e.celestia.world](https://e.celestia.world) | 公开落地页 | 仓库内 |
-| [dev.celestia.world](https://dev.celestia.world) | 开发者门户 | 仓库内 |
-| [dev.celestia.world](https://dev.celestia.world) | 面板（产品入口） | — |
+| [dev.celestia.world](https://dev.celestia.world) | 面板与开发者门户（产品入口） | — |
 
 ## 深入阅读
 

@@ -19,12 +19,12 @@
 
 تغطي بنيات الإصدار Linux وWindows فقط؛ وmacOS ليس جزءًا من خط أنابيب
 الإصدار. حتى صدور أول إصدار (أو إن فضّلت عدم التثبيت)، استخدم
-[webUI](https://shittim-chest.docs.celestia.world) الخاص بـ shittim-chest.
+[webUI](https://dev.celestia.world) الخاص بـ shittim-chest.
 
 ## لوحة الإدارة (arona)
 
 Arona مستضاف على الخادم — فلا شيء لتثبيته محليًا. افتح عنوان اللوحة الذي
-يزوّدك به مسؤولك (`https://arona.celestia.world` في تثبيت عام، أو
+يزوّدك به مسؤولك (`https://dev.celestia.world` في تثبيت عام، أو
 `http://<host>:8420` داخليًا) وسجّل الدخول بدعوتك.
 
 ## بيئة تشغيل الوكلاء (entelecheia/scepter، اختياري)

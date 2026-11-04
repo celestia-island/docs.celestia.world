@@ -26,9 +26,9 @@ celestia-island 倉庫全量清單，按層分組。帶文件站的倉庫在 `<n
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | 雲 API 管理控制台：帳戶、API 金鑰、模型部署、後端、用量紀錄 | 倉庫內 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 與外殼 | [文件（倉內）](https://github.com/celestia-island/shittim-chest/tree/master/docs) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能體協作平台：exec-only 微核心、scepter 編排伺服器、PTC 執行管線 | [文件（倉內）](https://github.com/celestia-island/entelecheia/tree/master/docs) |
-| [evernight](https://github.com/celestia-island/evernight) | 工業協定閘道：Modbus、S7comm、OPC UA；遠端操作、遙測、寫入閥門 | [文件（倉內）](https://github.com/celestia-island/evernight/tree/master/docs) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 與外殼 | [文件（倉內）](https://dev.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能體協作平台：exec-only 微核心、scepter 編排伺服器、PTC 執行管線 | [文件（倉內）]() |
+| [evernight](https://github.com/celestia-island/evernight) | 工業協定閘道：Modbus、S7comm、OPC UA；遠端操作、遙測、寫入閥門 | [文件（倉內）]() |
 | [malkuth](https://github.com/celestia-island/malkuth) | 服務監督工具包：滾動更新、健康探針、反向代理、崩潰迴圈恢復 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | 支撐本站與所有專案文件站的 Markdown 文件引擎 | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -73,8 +73,7 @@ celestia-island 倉庫全量清單，按層分組。帶文件站的倉庫在 `<n
 | [celestia-island.github.io](https://celestia-island.github.io) | 組織存在 | 倉庫內 |
 | [docs.celestia.world](https://docs.celestia.world) | 本站 —— 哲學、地圖、快速開始 | 倉庫內 |
 | [e.celestia.world](https://e.celestia.world) | 公開落地頁 | 倉庫內 |
-| [dev.celestia.world](https://dev.celestia.world) | 開發者入口 | 倉庫內 |
-| [dev.celestia.world](https://dev.celestia.world) | 面板（產品入口） | — |
+| [dev.celestia.world](https://dev.celestia.world) | 面板與開發者入口（產品入口） | — |
 
 ## 深入閱讀
 

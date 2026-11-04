@@ -63,5 +63,5 @@ que ce soit ne bouge : la fin de la boucle fermée, et sa plus lourde étape.
 ## Pour aller plus loin
 
 - La référence complète de la plateforme arona — [arona docs](https://arona.docs.celestia.world)
-- L'atelier chest et ses panneaux — [shittim-chest docs](https://shittim-chest.docs.celestia.world)
-- Agents, espaces de travail et porte d'écriture industrielle — [entelecheia docs](https://entelecheia.docs.celestia.world)
+- L'atelier chest et ses panneaux — [shittim-chest docs](https://dev.celestia.world)
+- Agents, espaces de travail et porte d'écriture industrielle — entelecheia docs

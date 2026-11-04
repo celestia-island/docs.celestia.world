@@ -28,9 +28,9 @@ dépôts marqués d'un site de documentation portent leurs propres docs *how* su
 | Projet | Rôle | Docs |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Panneau d'administration API cloud : comptes, clés API, déploiement de modèles, backends, enregistrements d'usage | dépôt |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI et shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Plateforme de collaboration multi-agents : microkernel exec-only, serveur d'orchestration scepter, pipeline d'exécution PTC | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| [evernight](https://github.com/celestia-island/evernight) | Courtier de protocoles industriels : Modbus, S7comm, OPC UA ; opérations à distance, télémétrie, portes d'écriture | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI et shell | [shittim-chest.docs.celestia.world](https://dev.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Plateforme de collaboration multi-agents : microkernel exec-only, serveur d'orchestration scepter, pipeline d'exécution PTC | entelecheia.docs.celestia.world |
+| [evernight](https://github.com/celestia-island/evernight) | Courtier de protocoles industriels : Modbus, S7comm, OPC UA ; opérations à distance, télémétrie, portes d'écriture | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | Boîte à outils de supervision de services : mises à jour progressives, sondes de santé, proxy inverse, récupération de boucles de crash | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Moteur de documentation Markdown qui alimente ce site et tous les sites de docs de projets | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -38,10 +38,10 @@ dépôts marqués d'un site de documentation portent leurs propres docs *how* su
 
 | Projet | Rôle | Docs |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | Contrôle de version distribué natif IA : isolation d'espace de travail par agent, journaux JSONL append-only, historique par snapshots | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
+| [noa](https://github.com/celestia-island/noa) | Contrôle de version distribué natif IA : isolation d'espace de travail par agent, journaux JSONL append-only, historique par snapshots | noa |
 | [seia](https://github.com/celestia-island/seia) | Bibliothèque de recherche web multi-moteurs et CLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Macros de pipelines à pool de threads (tubes de messages basés sur flume) | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro pour générer des structures imbriquées complexes depuis une simple macro | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | Macros de pipelines à pool de threads (tubes de messages basés sur flume) | ichika |
+| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro pour générer des structures imbriquées complexes depuis une simple macro | yuuka |
 | [aoba](https://github.com/celestia-island/aoba) | CLI Modbus et sources de données | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
 | [kou](https://github.com/celestia-island/kou) | Moteur de terminal virtuel autonome : gestion PTY, VT100/ANSI | dépôt |
 | [hifumi](https://github.com/celestia-island/hifumi) | Bibliothèque de sérialisation pour migrer des données entre versions | dépôt |
@@ -76,7 +76,7 @@ dépôts marqués d'un site de documentation portent leurs propres docs *how* su
 | [docs.celestia.world](https://docs.celestia.world) | Ce site — philosophie, carte, bien démarrer | dépôt |
 | [e.celestia.world](https://e.celestia.world) | Page d'accueil publique | dépôt |
 | [dev.celestia.world](https://dev.celestia.world) | Portail développeur | dépôt |
-| [arona.celestia.world](https://arona.celestia.world) | Panneau d'administration API cloud (produit) | — |
+| [arona.celestia.world](https://dev.celestia.world) | Panneau d'administration API cloud (produit) | — |
 
 ## Pour aller plus loin
 

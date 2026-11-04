@@ -20,13 +20,13 @@ leer, bis der erste Beta-Tag gepusht wird.
 
 Release-Builds decken nur Linux und Windows ab; macOS ist nicht Teil der
 Release-Pipeline. Bis zum ersten Release (oder wenn Sie gar nicht installieren
-wollen) nutzen Sie die shittim-chest-[WebUI](https://shittim-chest.docs.celestia.world).
+wollen) nutzen Sie die shittim-chest-[WebUI](https://dev.celestia.world).
 
 ## Admin-Panel (arona)
 
 Arona wird auf dem Server gehostet — lokal ist nichts zu installieren. Öffnen
 Sie die Panel-URL, die Ihr Administrator bereitstellt
-(`https://arona.celestia.world` in einer öffentlichen Bereitstellung oder
+(`https://dev.celestia.world` in einer öffentlichen Bereitstellung oder
 `http://<host>:8420` intern), und melden Sie sich mit Ihrer Einladung an.
 
 ## Agenten-Runtime (entelecheia/scepter, optional)

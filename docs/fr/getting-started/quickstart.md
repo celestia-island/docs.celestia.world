@@ -9,7 +9,7 @@ du panneau et votre invitation à votre administrateur.
 L'inscription est limitée sur invitation : le premier utilisateur d'un
 déploiement devient l'administrateur, après quoi l'auto-inscription se
 verrouille. Contactez les mainteneurs pour obtenir une invitation, puis
-inscrivez-vous via le panneau Arona (`https://arona.celestia.world` dans un
+inscrivez-vous via le panneau Arona (`https://dev.celestia.world` dans un
 déploiement public, ou `http://<host>:8420` en interne).
 
 ## 2. Créer une clé API
@@ -27,7 +27,7 @@ par la couche plateforme.
 
 ## 4. Chatter et exécuter des agents
 
-Ouvrez [shittim-chest](https://shittim-chest.docs.celestia.world) (application
+Ouvrez [shittim-chest](https://dev.celestia.world) (application
 de bureau ou webUI), connectez-vous avec votre clé API et démarrez une
 conversation. Pour le travail multi-agents, le runtime scepter d'entelecheia
 orchestre les agents derrière la même interface ; les journaux d'agents et les
@@ -35,7 +35,7 @@ appels d'outils sont visibles dans l'UI.
 
 ## 5. Contrôler des équipements industriels
 
-Avec [evernight](https://evernight.docs.celestia.world) en fonctionnement,
+Avec evernight en fonctionnement,
 connectez un pont de protocoles (Modbus, S7comm, OPC UA), abonnez-vous à la
 télémétrie et — après validation des politiques et confirmation humaine —
 émettez des écritures. Pendant la bêta interne, ce segment tourne contre des

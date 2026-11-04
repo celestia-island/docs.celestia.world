@@ -62,4 +62,4 @@ dangerous ones.
 - [The Closed Loop](./closed-loop.md) — where safety gates sit in the flow.
 - [Layered Architecture](./layered-architecture.md) — the layers safety cuts across.
 - [kirino documentation](https://kirino.docs.celestia.world) — the auth model in detail.
-- [evernight documentation](https://github.com/celestia-island/evernight/tree/master/docs) — protocol brokering and write gates.
+- [evernight documentation]() — protocol brokering and write gates.

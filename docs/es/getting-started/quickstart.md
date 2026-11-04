@@ -4,7 +4,7 @@ Recorre el [bucle cerrado](../philosophy/closed-loop.md) en unos 30 minutos. Las
 
 ## 1. Obtén una cuenta
 
-El registro está cerrado con invitación: el primer usuario de un despliegue se convierte en el administrador y, después, el auto-registro se bloquea. Contacta con los mantenedores para pedir una invitación y luego regístrate a través del panel de Arona (`https://arona.celestia.world` en un despliegue público, o `http://<host>:8420` de forma interna).
+El registro está cerrado con invitación: el primer usuario de un despliegue se convierte en el administrador y, después, el auto-registro se bloquea. Contacta con los mantenedores para pedir una invitación y luego regístrate a través del panel de Arona (`https://dev.celestia.world` en un despliegue público, o `http://<host>:8420` de forma interna).
 
 ## 2. Crea una clave de API
 
@@ -16,11 +16,11 @@ Desde el panel, elige un runtime de modelo (por ejemplo, un modelo respaldado po
 
 ## 4. Chatea y ejecuta agentes
 
-Abre [shittim-chest](https://shittim-chest.docs.celestia.world) (aplicación de escritorio o webUI), conéctate con tu clave de API y comienza una conversación. Para trabajo multi-agente, el runtime scepter de entelecheia orquesta los agentes detrás de la misma interfaz; los registros de agentes y las llamadas a herramientas son visibles en la UI.
+Abre [shittim-chest](https://dev.celestia.world) (aplicación de escritorio o webUI), conéctate con tu clave de API y comienza una conversación. Para trabajo multi-agente, el runtime scepter de entelecheia orquesta los agentes detrás de la misma interfaz; los registros de agentes y las llamadas a herramientas son visibles en la UI.
 
 ## 5. Controla equipos industriales
 
-Con [evernight](https://evernight.docs.celestia.world) en ejecución, conecta un puente de protocolo (Modbus, S7comm, OPC UA), suscríbete a la telemetría y — tras la validación de políticas y la confirmación humana — emite escrituras. Durante la beta interna, este segmento se ejecuta contra equipos simulados o de laboratorio; la cadena de seguridad es idéntica en ambos casos.
+Con evernight en ejecución, conecta un puente de protocolo (Modbus, S7comm, OPC UA), suscríbete a la telemetría y — tras la validación de políticas y la confirmación humana — emite escrituras. Durante la beta interna, este segmento se ejecuta contra equipos simulados o de laboratorio; la cadena de seguridad es idéntica en ambos casos.
 
 ## 6. Verifica
 

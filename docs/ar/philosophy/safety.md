@@ -59,4 +59,4 @@
 - [الحلقة المغلقة](./closed-loop.md) — أين تقع بوابات السلامة في التدفق.
 - [البنية الطبقية](./layered-architecture.md) — الطبقات التي تقطعها السلامة.
 - [توثيق kirino](https://kirino.docs.celestia.world) — نموذج المصادقة بالتفصيل.
-- [توثيق evernight](https://evernight.docs.celestia.world) — وساطة البروتوكولات وبوابات الكتابة.
+- توثيق evernight — وساطة البروتوكولات وبوابات الكتابة.

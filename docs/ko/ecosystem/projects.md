@@ -28,9 +28,9 @@ celestia-island 저장소의 전체 목록으로, 계층별로 정리되어 있�
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | 클라우드 API 관리 패널: 계정, API key, 모델 배포, 백엔드, 사용 기록 | 저장소 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 채팅 데스크톱/웹UI 및 셸 | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | 다중 에이전트 협업 플랫폼: exec 전용 마이크로커널, scepter 오케스트레이션 서버, PTC 실행 파이프라인 | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| [evernight](https://github.com/celestia-island/evernight) | 산업 프로토콜 브로커: Modbus, S7comm, OPC UA; 원격 운영, 텔레메트리, 쓰기 게이트 | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 채팅 데스크톱/웹UI 및 셸 | [shittim-chest.docs.celestia.world](https://dev.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | 다중 에이전트 협업 플랫폼: exec 전용 마이크로커널, scepter 오케스트레이션 서버, PTC 실행 파이프라인 | entelecheia.docs.celestia.world |
+| [evernight](https://github.com/celestia-island/evernight) | 산업 프로토콜 브로커: Modbus, S7comm, OPC UA; 원격 운영, 텔레메트리, 쓰기 게이트 | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | 서비스 감독 도구 키트: 롤링 업데이트, 헬스 프로브, 리버스 프록시, 크래시 루프 복구 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | 이 사이트와 모든 프로젝트 문서 사이트를 구동하는 마크다운 문서 엔진 | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -38,10 +38,10 @@ celestia-island 저장소의 전체 목록으로, 계층별로 정리되어 있�
 
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | AI 네이티브 분산 버전 관리: 에이전트별 작업 공간 격리, JSONL 추가 전용 로그, 스냅샷 히스토리 | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
+| [noa](https://github.com/celestia-island/noa) | AI 네이티브 분산 버전 관리: 에이전트별 작업 공간 격리, JSONL 추가 전용 로그, 스냅샷 히스토리 | noa |
 | [seia](https://github.com/celestia-island/seia) | 다중 엔진 웹 검색 라이브러리 및 CLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | 스레드 풀 파이프라인 매크로 (flume 기반 메시지 파이프) | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [yuuka](https://github.com/celestia-island/yuuka) | 단순 매크로에서 복잡한 중첩 구조를 생성하는 절차 매크로 | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | 스레드 풀 파이프라인 매크로 (flume 기반 메시지 파이프) | ichika |
+| [yuuka](https://github.com/celestia-island/yuuka) | 단순 매크로에서 복잡한 중첩 구조를 생성하는 절차 매크로 | yuuka |
 | [aoba](https://github.com/celestia-island/aoba) | Modbus 및 데이터 소스 CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
 | [kou](https://github.com/celestia-island/kou) | 독립형 가상 터미널 엔진: PTY 관리, VT100/ANSI | 저장소 |
 | [hifumi](https://github.com/celestia-island/hifumi) | 버전 간 데이터 마이그레이션용 직렬화 라이브러리 | 저장소 |
@@ -76,7 +76,7 @@ celestia-island 저장소의 전체 목록으로, 계층별로 정리되어 있�
 | [docs.celestia.world](https://docs.celestia.world) | 이 사이트 — 철학, 지도, 시작하기 | 저장소 |
 | [e.celestia.world](https://e.celestia.world) | 공개 랜딩 페이지 | 저장소 |
 | [dev.celestia.world](https://dev.celestia.world) | 개발자 포털 | 저장소 |
-| [arona.celestia.world](https://arona.celestia.world) | 클라우드 API 관리 패널 (제품) | — |
+| [arona.celestia.world](https://dev.celestia.world) | 클라우드 API 관리 패널 (제품) | — |
 
 ## 더 알아보기
 

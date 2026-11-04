@@ -46,7 +46,7 @@ que ce dont l'autonomie aura besoin demain.
   [Sites & Propriété](./ecosystem/sites.md).
 - **Présence de l'organisation** —
   [celestia-island sur GitHub](https://github.com/celestia-island).
-- **Panneaux produits (WIP pendant la bêta)** — [arona](https://arona.celestia.world)
+- **Panneaux produits (WIP pendant la bêta)** — [arona](https://dev.celestia.world)
   (admin API cloud), [dev](https://dev.celestia.world) (portail développeur) ; le
   panneau en direct tourne en interne sur `arona:8420` jusqu'à la fin de la bêta.
 

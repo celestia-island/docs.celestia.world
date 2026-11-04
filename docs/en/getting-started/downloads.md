@@ -20,7 +20,7 @@ pushed.
 
 Release builds cover Linux and Windows only; macOS is not part of the release
 pipeline. Until the first release (or if you prefer no install), use the
-shittim-chest [webUI](https://github.com/celestia-island/shittim-chest/tree/master/docs).
+shittim-chest [webUI](https://dev.celestia.world).
 
 ## Admin panel (arona)
 

@@ -44,7 +44,7 @@ celestia-island строит **замкнутый цикл** от обнаруж
   собирается из каждого репозитория. Полный список — в разделе
   [Сайты и владельцы](./ecosystem/sites.md).
 - **Присутствие организации** — [celestia-island на GitHub](https://github.com/celestia-island).
-- **Продуктовые панели (WIP на время беты)** — [arona](https://arona.celestia.world)
+- **Продуктовые панели (WIP на время беты)** — [arona](https://dev.celestia.world)
   (облачная API-админка), [dev](https://dev.celestia.world) (портал разработчика);
   рабочая панель до конца беты запущена внутри на `arona:8420`.
 

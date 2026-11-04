@@ -62,5 +62,5 @@ scepter のワークスペースストレージへ永続化します。編集は
 ## さらに詳しく
 
 - arona プラットフォームの完全なリファレンス —— [arona ドキュメント](https://arona.docs.celestia.world)
-- chest のワークベンチとそのパネル —— [shittim-chest ドキュメント](https://shittim-chest.docs.celestia.world)
-- エージェント、ワークスペース、産業書き込みゲート —— [entelecheia ドキュメント](https://entelecheia.docs.celestia.world)
+- chest のワークベンチとそのパネル —— [shittim-chest ドキュメント](https://dev.celestia.world)
+- エージェント、ワークスペース、産業書き込みゲート —— entelecheia ドキュメント

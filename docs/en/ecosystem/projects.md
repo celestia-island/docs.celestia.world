@@ -31,9 +31,9 @@ retirement banner, and its domain is now served by evernight's gateway package.
 | Project | Role | Docs |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Cloud API admin panel: accounts, API keys, model deployment, backends, usage records | repository |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI and shell | [docs (in repo)](https://github.com/celestia-island/shittim-chest/tree/master/docs) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-agent collaboration platform: exec-only microkernel, scepter orchestration server, PTC execution pipeline | [docs (in repo)](https://github.com/celestia-island/entelecheia/tree/master/docs) |
-| [evernight](https://github.com/celestia-island/evernight) | Industrial protocol broker: Modbus, S7comm, OPC UA; remote operations, telemetry, write gates | [docs (in repo)](https://github.com/celestia-island/evernight/tree/master/docs) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI and shell | [docs (in repo)](https://dev.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-agent collaboration platform: exec-only microkernel, scepter orchestration server, PTC execution pipeline | [docs (in repo)]() |
+| [evernight](https://github.com/celestia-island/evernight) | Industrial protocol broker: Modbus, S7comm, OPC UA; remote operations, telemetry, write gates | [docs (in repo)]() |
 | [malkuth](https://github.com/celestia-island/malkuth) | Service supervision toolkit: rolling updates, health probes, reverse proxy, crash-loop recovery | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Markdown documentation engine powering this site and every project docs site | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 | [celestia-erp](https://github.com/celestia-island/celestia-erp) | ERP backend and front-site OAuth provider: organizations, billing, invoices, RBAC admin panel (Rust + Vue) | repository |

@@ -9,7 +9,7 @@ administrador pela URL do painel e pelo seu convite.
 O registro é fechado por convite: o primeiro usuário de uma implantação
 torna-se o admin e, depois disso, o auto-registro trava. Entre em contato com
 os mantenedores para obter um convite e registre-se pelo painel da Arona
-(`https://arona.celestia.world` numa implantação pública, ou
+(`https://dev.celestia.world` numa implantação pública, ou
 `http://<host>:8420` internamente).
 
 ## 2. Crie uma API key
@@ -26,7 +26,7 @@ saúde e uso; medição e preços são tratados pela camada de plataforma.
 
 ## 4. Converse e execute agentes
 
-Abra o [shittim-chest](https://shittim-chest.docs.celestia.world) (aplicativo
+Abra o [shittim-chest](https://dev.celestia.world) (aplicativo
 desktop ou webUI), conecte-se com a sua API key e inicie uma conversa. Para
 trabalho multiagente, o runtime scepter do entelecheia orquestra os agentes
 por trás da mesma interface; os logs de agentes e as chamadas de ferramentas
@@ -34,7 +34,7 @@ são visíveis na UI.
 
 ## 5. Controle equipamentos industriais
 
-Com o [evernight](https://evernight.docs.celestia.world) em execução, conecte
+Com o evernight em execução, conecte
 uma ponte de protocolo (Modbus, S7comm, OPC UA), assine a telemetria e — após
 validação de política e confirmação humana — emita escritas. Durante a beta
 interna, esse segmento roda contra equipamento simulado ou de laboratório; a

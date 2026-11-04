@@ -26,9 +26,9 @@ El inventario completo de repositorios de celestia-island, agrupados por capa. L
 | Proyecto | Rol | Docs |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Panel de administración de API en la nube: cuentas, claves de API, despliegue de modelos, backends, registros de uso | repositorio |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat de escritorio/webUI y shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboración multi-agente: microkernel de solo exec, servidor de orquestación scepter, canalización de ejecución PTC | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| [evernight](https://github.com/celestia-island/evernight) | Broker de protocolos industriales: Modbus, S7comm, OPC UA; operaciones remotas, telemetría, compuertas de escritura | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat de escritorio/webUI y shell | [shittim-chest.docs.celestia.world](https://dev.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboración multi-agente: microkernel de solo exec, servidor de orquestación scepter, canalización de ejecución PTC | entelecheia.docs.celestia.world |
+| [evernight](https://github.com/celestia-island/evernight) | Broker de protocolos industriales: Modbus, S7comm, OPC UA; operaciones remotas, telemetría, compuertas de escritura | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | Kit de herramientas de supervisión de servicios: actualizaciones progresivas, sondeos de salud, proxy inverso, recuperación de bucles de caída | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Motor de documentación Markdown que impulsa este sitio y cada sitio de documentación de proyectos | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -36,10 +36,10 @@ El inventario completo de repositorios de celestia-island, agrupados por capa. L
 
 | Proyecto | Rol | Docs |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | Control de versiones distribuido nativo en IA: aislamiento de espacio de trabajo por agente, registros de solo anexado JSONL, historial de instantáneas | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
+| [noa](https://github.com/celestia-island/noa) | Control de versiones distribuido nativo en IA: aislamiento de espacio de trabajo por agente, registros de solo anexado JSONL, historial de instantáneas | noa |
 | [seia](https://github.com/celestia-island/seia) | Biblioteca y CLI de búsqueda web multimotor | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Macros de canalización con pool de hilos (tuberías de mensajes basadas en flume) | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro para generar estructuras anidadas complejas a partir de una macro simple | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | Macros de canalización con pool de hilos (tuberías de mensajes basadas en flume) | ichika |
+| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro para generar estructuras anidadas complejas a partir de una macro simple | yuuka |
 | [aoba](https://github.com/celestia-island/aoba) | CLI Modbus y de fuentes de datos | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
 | [kou](https://github.com/celestia-island/kou) | Motor de terminal virtual independiente: gestión de PTY, VT100/ANSI | repositorio |
 | [hifumi](https://github.com/celestia-island/hifumi) | Biblioteca de serialización para migrar datos entre versiones | repositorio |
@@ -74,7 +74,7 @@ El inventario completo de repositorios de celestia-island, agrupados por capa. L
 | [docs.celestia.world](https://docs.celestia.world) | Este sitio — filosofía, mapa, primeros pasos | repositorio |
 | [e.celestia.world](https://e.celestia.world) | Página de aterrizaje pública | repositorio |
 | [dev.celestia.world](https://dev.celestia.world) | Portal de desarrolladores | repositorio |
-| [arona.celestia.world](https://arona.celestia.world) | Panel de administración de API en la nube (producto) | — |
+| [arona.celestia.world](https://dev.celestia.world) | Panel de administración de API en la nube (producto) | — |
 
 ## Para profundizar
 

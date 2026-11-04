@@ -58,5 +58,5 @@ coisa se mover: o fim do ciclo fechado, e seu passo mais pesado.
 ## Para ir mais fundo
 
 - A referência completa da plataforma arona — [arona docs](https://arona.docs.celestia.world)
-- A bancada de trabalho do chest e seus painéis — [shittim-chest docs](https://shittim-chest.docs.celestia.world)
-- Agentes, workspaces e o gate de escrita industrial — [entelecheia docs](https://entelecheia.docs.celestia.world)
+- A bancada de trabalho do chest e seus painéis — [shittim-chest docs](https://dev.celestia.world)
+- Agentes, workspaces e o gate de escrita industrial — entelecheia docs

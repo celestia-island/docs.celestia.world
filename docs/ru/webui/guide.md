@@ -61,5 +61,5 @@ Reports добавляет семантический поиск по истор
 ## Копать глубже
 
 - Полный справочник платформы arona — [документация arona](https://arona.docs.celestia.world)
-- Рабочий стол chest и его панели — [документация shittim-chest](https://shittim-chest.docs.celestia.world)
-- Агенты, рабочие области и шлюз промышленной записи — [документация entelecheia](https://entelecheia.docs.celestia.world)
+- Рабочий стол chest и его панели — [документация shittim-chest](https://dev.celestia.world)
+- Агенты, рабочие области и шлюз промышленной записи — документация entelecheia

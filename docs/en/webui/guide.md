@@ -58,5 +58,5 @@ before anything moves: the end of the closed loop, and its heaviest step.
 ## Where to go deeper
 
 - The full arona platform reference — [arona docs](https://arona.docs.celestia.world)
-- The chest workbench and its panels — [shittim-chest docs](https://github.com/celestia-island/shittim-chest/tree/master/docs)
-- Agents, workspaces and the industrial write gate — [entelecheia docs](https://github.com/celestia-island/entelecheia/tree/master/docs)
+- The chest workbench and its panels — [shittim-chest docs](https://dev.celestia.world)
+- Agents, workspaces and the industrial write gate — [entelecheia docs]()

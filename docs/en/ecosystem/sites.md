@@ -12,7 +12,7 @@ project sites authoritative.
 | `<name>.docs.celestia.world` | each project | Guides, architecture, designs, references — built from the project's own repository |
 | [celestia-island.github.io](https://celestia-island.github.io) | the organization | Presence, links, brand assets |
 | [e.celestia.world](https://e.celestia.world) | the public face | Landing page, pricing, blog, call-to-action |
-| [dev.celestia.world](https://dev.celestia.world) | developers | Developer portal and status |
+| [dev.celestia.world](https://dev.celestia.world) | the panel | Account, chat, agents, and the operator console (invite-gated during the beta) |
 
 ## The one rule: no duplication
 

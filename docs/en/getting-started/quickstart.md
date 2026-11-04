@@ -25,14 +25,14 @@ usage; metering and pricing are handled by the platform layer.
 
 ## 4. Chat and run agents
 
-Open [shittim-chest](https://github.com/celestia-island/shittim-chest/tree/master/docs) (desktop app
+Open [shittim-chest](https://dev.celestia.world) (desktop app
 or webUI), connect with your API key, and start a conversation. For multi-agent
 work, entelecheia's scepter runtime orchestrates agents behind the same
 interface; agent logs and tool calls are visible in the UI.
 
 ## 5. Control industrial equipment
 
-With [evernight](https://github.com/celestia-island/evernight/tree/master/docs) running, connect a
+With evernight running, connect a
 protocol bridge (Modbus, S7comm, OPC UA), subscribe to telemetry, and — after
 policy validation and human confirmation — issue writes. During the internal
 beta this segment runs against simulated or lab equipment; the safety chain is

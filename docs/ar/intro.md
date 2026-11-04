@@ -40,7 +40,7 @@
 - **توثيق كل مشروع** — `<name>.docs.celestia.world`، مبني من كل مستودع.
   ابحث عن القائمة الكاملة في [المواقع والمسؤوليات](./ecosystem/sites.md).
 - **حضور المنظمة** — [celestia-island على GitHub](https://github.com/celestia-island).
-- **لوحات المنتجات (قيد التطوير أثناء النسخة التجريبية)** — [arona](https://arona.celestia.world)
+- **لوحات المنتجات (قيد التطوير أثناء النسخة التجريبية)** — [arona](https://dev.celestia.world)
   (إدارة API السحابية)، [dev](https://dev.celestia.world) (بوابة المطورين)؛
   اللوحة الحية تعمل داخليًا على `arona:8420` حتى انتهاء النسخة التجريبية.
 

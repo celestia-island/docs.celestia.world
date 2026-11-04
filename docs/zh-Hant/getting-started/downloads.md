@@ -12,7 +12,7 @@ shittim-chest 桌面應用程式從每個 `v*` tag 發布到 [GitHub Releases](h
 | Windows 10+ | `.exe`（NSIS）或 `.msi` |
 | macOS | 尚未發布 |
 
-發布構建僅涵蓋 Linux 與 Windows；macOS 不在發布管線之內。在首次發布之前（或如果你偏好不安裝），請使用 shittim-chest 的 [webUI](https://github.com/celestia-island/shittim-chest/tree/master/docs)。
+發布構建僅涵蓋 Linux 與 Windows；macOS 不在發布管線之內。在首次發布之前（或如果你偏好不安裝），請使用 shittim-chest 的 [webUI](https://dev.celestia.world)。
 
 ## 管理控制台（arona）
 

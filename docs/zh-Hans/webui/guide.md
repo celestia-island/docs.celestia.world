@@ -33,5 +33,5 @@
 ## 更深入的地方
 
 - arona 平台的完整参考 —— [arona 文档](https://arona.docs.celestia.world)
-- chest 工作台与它的面板 —— [shittim-chest 文档](https://shittim-chest.docs.celestia.world)
-- Agent、workspace 与工控写门 —— [entelecheia 文档](https://entelecheia.docs.celestia.world)
+- chest 工作台与它的面板 —— [shittim-chest 文档](https://github.com/celestia-island/shittim-chest/tree/master/docs)
+- Agent、workspace 与工控写门 —— [entelecheia 文档](https://github.com/celestia-island/entelecheia/tree/master/docs)

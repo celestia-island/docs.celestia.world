@@ -26,9 +26,9 @@ celestia-island 倉庫全量清單，按層分組。帶文件站的倉庫在 `<n
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | 雲 API 管理控制台：帳戶、API 金鑰、模型部署、後端、用量紀錄 | 倉庫內 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 與外殼 | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能體協作平台：exec-only 微核心、scepter 編排伺服器、PTC 執行管線 | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| [evernight](https://github.com/celestia-island/evernight) | 工業協定閘道：Modbus、S7comm、OPC UA；遠端操作、遙測、寫入閥門 | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 與外殼 | [文件（倉內）](https://github.com/celestia-island/shittim-chest/tree/master/docs) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能體協作平台：exec-only 微核心、scepter 編排伺服器、PTC 執行管線 | [文件（倉內）](https://github.com/celestia-island/entelecheia/tree/master/docs) |
+| [evernight](https://github.com/celestia-island/evernight) | 工業協定閘道：Modbus、S7comm、OPC UA；遠端操作、遙測、寫入閥門 | [文件（倉內）](https://github.com/celestia-island/evernight/tree/master/docs) |
 | [malkuth](https://github.com/celestia-island/malkuth) | 服務監督工具包：滾動更新、健康探針、反向代理、崩潰迴圈恢復 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | 支撐本站與所有專案文件站的 Markdown 文件引擎 | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -36,10 +36,10 @@ celestia-island 倉庫全量清單，按層分組。帶文件站的倉庫在 `<n
 
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | AI 原生分散式版本控制：每智能體工作區隔離、JSONL 追加日誌、快照歷史 | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
+| [noa](https://github.com/celestia-island/noa) | AI 原生分散式版本控制：每智能體工作區隔離、JSONL 追加日誌、快照歷史 | [倉庫](https://github.com/celestia-island/noa) |
 | [seia](https://github.com/celestia-island/seia) | 多引擎網路搜尋函式庫與 CLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | 執行緒池管線巨集（基於 flume 訊息管線） | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [yuuka](https://github.com/celestia-island/yuuka) | 用簡單巨集生成複雜巢狀結構的 proc-macro | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | 執行緒池管線巨集（基於 flume 訊息管線） | [倉庫](https://github.com/celestia-island/ichika) |
+| [yuuka](https://github.com/celestia-island/yuuka) | 用簡單巨集生成複雜巢狀結構的 proc-macro | [倉庫](https://github.com/celestia-island/yuuka) |
 | [aoba](https://github.com/celestia-island/aoba) | Modbus 與資料源 CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
 | [kou](https://github.com/celestia-island/kou) | 獨立虛擬終端機引擎：PTY 管理、VT100/ANSI | 倉庫內 |
 | [hifumi](https://github.com/celestia-island/hifumi) | 資料跨版本遷移的序列化函式庫 | 倉庫內 |
@@ -74,7 +74,7 @@ celestia-island 倉庫全量清單，按層分組。帶文件站的倉庫在 `<n
 | [docs.celestia.world](https://docs.celestia.world) | 本站 —— 哲學、地圖、快速開始 | 倉庫內 |
 | [e.celestia.world](https://e.celestia.world) | 公開落地頁 | 倉庫內 |
 | [dev.celestia.world](https://dev.celestia.world) | 開發者入口 | 倉庫內 |
-| [arona.celestia.world](https://arona.celestia.world) | 雲 API 管理控制台（產品） | — |
+| [dev.celestia.world](https://dev.celestia.world) | 面板（產品入口） | — |
 
 ## 深入閱讀
 

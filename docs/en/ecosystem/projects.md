@@ -31,9 +31,9 @@ retirement banner, and its domain is now served by evernight's gateway package.
 | Project | Role | Docs |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Cloud API admin panel: accounts, API keys, model deployment, backends, usage records | repository |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI and shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-agent collaboration platform: exec-only microkernel, scepter orchestration server, PTC execution pipeline | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| [evernight](https://github.com/celestia-island/evernight) | Industrial protocol broker: Modbus, S7comm, OPC UA; remote operations, telemetry, write gates | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI and shell | [docs (in repo)](https://github.com/celestia-island/shittim-chest/tree/master/docs) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-agent collaboration platform: exec-only microkernel, scepter orchestration server, PTC execution pipeline | [docs (in repo)](https://github.com/celestia-island/entelecheia/tree/master/docs) |
+| [evernight](https://github.com/celestia-island/evernight) | Industrial protocol broker: Modbus, S7comm, OPC UA; remote operations, telemetry, write gates | [docs (in repo)](https://github.com/celestia-island/evernight/tree/master/docs) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Service supervision toolkit: rolling updates, health probes, reverse proxy, crash-loop recovery | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Markdown documentation engine powering this site and every project docs site | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 | [celestia-erp](https://github.com/celestia-island/celestia-erp) | ERP backend and front-site OAuth provider: organizations, billing, invoices, RBAC admin panel (Rust + Vue) | repository |
@@ -43,10 +43,10 @@ retirement banner, and its domain is now served by evernight's gateway package.
 
 | Project | Role | Docs |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | AI-native distributed version control: per-agent workspace isolation, JSONL append-only logs, snapshot history | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
+| [noa](https://github.com/celestia-island/noa) | AI-native distributed version control: per-agent workspace isolation, JSONL append-only logs, snapshot history | [repository](https://github.com/celestia-island/noa) |
 | [seia](https://github.com/celestia-island/seia) | Multi-engine web search library and CLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Thread-pool pipeline macros (flume-based message pipes) | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro for generating complex nested structures from a simple macro | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | Thread-pool pipeline macros (flume-based message pipes) | [repository](https://github.com/celestia-island/ichika) |
+| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro for generating complex nested structures from a simple macro | [repository](https://github.com/celestia-island/yuuka) |
 | [aoba](https://github.com/celestia-island/aoba) | Modbus and data-source CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
 | [kou](https://github.com/celestia-island/kou) | Standalone virtual-terminal engine: PTY management, VT100/ANSI | repository |
 | [hifumi](https://github.com/celestia-island/hifumi) | Serialization library for migrating data between versions | repository |

@@ -40,9 +40,11 @@ same shape that autonomy will need tomorrow.
 - **Per-project documentation** — `<name>.docs.celestia.world`, built from each
   repository. Find the full list in [Sites & Ownership](./ecosystem/sites.md).
 - **Organization presence** — [celestia-island on GitHub](https://github.com/celestia-island).
-- **Product entries (WIP during the beta)** — [arona](https://arona.celestia.world)
-  (cloud API admin), [dev](https://dev.celestia.world) (developer portal); the
-  live panel runs internally at `arona:8420` until the beta ends.
+- **Product entries (WIP during the beta)** — [dev.celestia.world](https://dev.celestia.world)
+  (the panel: account, chat, agents), the anonymous
+  [tour](https://demo.dev.celestia.world/tour) face, and the company site
+  [celestia.ac.cn](https://celestia.ac.cn); the model platform's own admin
+  panel stays deployment-internal until the beta ends.
 
 Use the language switcher (bottom-right) to read this site in another language.
 Content is authored in English; translations follow the same structure.

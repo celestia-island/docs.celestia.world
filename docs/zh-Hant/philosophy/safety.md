@@ -44,4 +44,4 @@ LLM 斷線時平台優雅降級：進入安全態，或繼續執行已核准的�
 - [閉環](./closed-loop.md) —— 安全門在流程中的位置。
 - [分層架構](./layered-architecture.md) —— 安全橫跨的各層。
 - [kirino 文件](https://kirino.docs.celestia.world) —— 認證模型的細節。
-- [evernight 文件](https://evernight.docs.celestia.world) —— 協定橋接與寫入閥門。
+- [evernight 文件](https://github.com/celestia-island/evernight/tree/master/docs) —— 協定橋接與寫入閥門。

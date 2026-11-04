@@ -20,12 +20,12 @@ pushed.
 
 Release builds cover Linux and Windows only; macOS is not part of the release
 pipeline. Until the first release (or if you prefer no install), use the
-shittim-chest [webUI](https://shittim-chest.docs.celestia.world).
+shittim-chest [webUI](https://github.com/celestia-island/shittim-chest/tree/master/docs).
 
 ## Admin panel (arona)
 
 Arona is server-hosted — there is nothing to install locally. Open the panel
-URL your administrator provides (`https://arona.celestia.world` in a public
+URL your administrator provides (`https://dev.celestia.world` in a public
 deployment, or `http://<host>:8420` internally) and sign in with your
 invitation.
 

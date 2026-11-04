@@ -29,9 +29,9 @@ documentado no próprio repositório.
 | Projeto | Papel | Docs |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Painel de administração da API em nuvem: contas, API keys, implantação de modelos, backends, registros de uso | repositório |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI e shell | [documentação (no repositório)](https://dev.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboração multiagente: microkernel exec-only, servidor de orquestração scepter, pipeline de execução PTC | entelecheia.docs.celestia.world |
-| [evernight](https://github.com/celestia-island/evernight) | Broker de protocolos industriais: Modbus, S7comm, OPC UA; operações remotas, telemetria, portões de escrita | evernight.docs.celestia.world |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI e shell | docs (no repositório) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboração multiagente: microkernel exec-only, servidor de orquestração scepter, pipeline de execução PTC | docs (no repositório) |
+| [evernight](https://github.com/celestia-island/evernight) | Broker de protocolos industriais: Modbus, S7comm, OPC UA; operações remotas, telemetria, portões de escrita | docs (no repositório) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Kit de supervisão de serviços: atualizações contínuas, sondas de saúde, proxy reverso, recuperação de crash loops | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Motor de documentação Markdown que alimenta este site e todos os sites de docs dos projetos | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -76,8 +76,7 @@ documentado no próprio repositório.
 | [celestia-island.github.io](https://celestia-island.github.io) | Presença da organização | repositório |
 | [docs.celestia.world](https://docs.celestia.world) | Este site — filosofia, mapa, primeiros passos | repositório |
 | [e.celestia.world](https://e.celestia.world) | Página pública de destino | repositório |
-| [dev.celestia.world](https://dev.celestia.world) | Portal do desenvolvedor | repositório |
-| [o painel](https://dev.celestia.world) | Painel de administração da API em nuvem (produto) | — |
+| [dev.celestia.world](https://dev.celestia.world) | Painel e portal do desenvolvedor (entrada do produto) | — |
 
 ## Aprofundar-se
 

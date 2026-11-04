@@ -29,9 +29,9 @@
 | Проект | Роль | Документация |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Облачная API-админка: учётные записи, API key, развёртывание моделей, бэкенды, записи использования | репозиторий |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Чат desktop/webUI и оболочка | [документация (в репозитории)](https://dev.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Платформа мультиагентной совместной работы: exec-only микроядро, сервер оркестрации scepter, конвейер выполнения PTC | entelecheia.docs.celestia.world |
-| [evernight](https://github.com/celestia-island/evernight) | Брокер промышленных протоколов: Modbus, S7comm, OPC UA; удалённые операции, телеметрия, шлюзы записи | evernight.docs.celestia.world |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Чат desktop/webUI и оболочка | документация (в репозитории) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Платформа мультиагентной совместной работы: exec-only микроядро, сервер оркестрации scepter, конвейер выполнения PTC | документация (в репозитории) |
+| [evernight](https://github.com/celestia-island/evernight) | Брокер промышленных протоколов: Modbus, S7comm, OPC UA; удалённые операции, телеметрия, шлюзы записи | документация (в репозитории) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Инструментарий наблюдения за сервисами: rolling-обновления, проверки здоровья, обратный прокси, восстановление после краш-петли | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Движок Markdown-документации, питающий этот сайт и все сайты документации проектов | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -76,8 +76,7 @@
 | [celestia-island.github.io](https://celestia-island.github.io) | Присутствие организации | репозиторий |
 | [docs.celestia.world](https://docs.celestia.world) | Этот сайт — философия, карта, начало работы | репозиторий |
 | [e.celestia.world](https://e.celestia.world) | Публичная лендинг-страница | репозиторий |
-| [dev.celestia.world](https://dev.celestia.world) | Портал разработчика | репозиторий |
-| [панель](https://dev.celestia.world) | Облачная API-админка (продукт) | — |
+| [dev.celestia.world](https://dev.celestia.world) | Панель и портал разработчика (вход в продукт) | — |
 
 ## Подробнее
 

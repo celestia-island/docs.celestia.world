@@ -11,7 +11,7 @@
 | `<name>.docs.celestia.world` | كل مشروع | الأدلة، البنية، التصاميم، المراجع — مبنية من مستودع المشروع نفسه |
 | [celestia-island.github.io](https://celestia-island.github.io) | المنظمة | الحضور، الروابط، أصول العلامة التجارية |
 | [e.celestia.world](https://e.celestia.world) | الوجه العام | صفحة الهبوط، التسعير، المدونة، دعوة للفعل |
-| [dev.celestia.world](https://dev.celestia.world) | لوحة النظام | الحساب والدردشة والوكلاء ووحدة التحكم التشغيلية（دعوة أثناء بيتا） |
+| [dev.celestia.world](https://dev.celestia.world) | لوحة النظام | الحساب والدردشة والوكلاء ووحدة التحكم التشغيلية(دعوة أثناء بيتا) |
 
 ## القاعدة الواحدة: لا تكرار
 

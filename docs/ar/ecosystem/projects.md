@@ -28,9 +28,9 @@
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | لوحة إدارة API السحابية: الحسابات، مفاتيح API، نشر النماذج، الخلفيات، سجلات الاستخدام | المستودع |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | محادثة سطح المكتب/الويب والصدفة | [الوثائق (في المستودع)](https://dev.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | منصة التعاون متعدد الوكلاء: نواة دقيقة exec-only، خادم تنسيق scepter، خط تنفيذ PTC | entelecheia.docs.celestia.world |
-| [evernight](https://github.com/celestia-island/evernight) | وسيط البروتوكولات الصناعية: Modbus وS7comm وOPC UA؛ العمليات عن بعد، القياسات عن بعد، بوابات الكتابة | evernight.docs.celestia.world |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | محادثة سطح المكتب/الويب والصدفة | الوثائق (في المستودع) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | منصة التعاون متعدد الوكلاء: نواة دقيقة exec-only، خادم تنسيق scepter، خط تنفيذ PTC | الوثائق (في المستودع) |
+| [evernight](https://github.com/celestia-island/evernight) | وسيط البروتوكولات الصناعية: Modbus وS7comm وOPC UA؛ العمليات عن بعد، القياسات عن بعد، بوابات الكتابة | الوثائق (في المستودع) |
 | [malkuth](https://github.com/celestia-island/malkuth) | مجموعة أدوات الإشراف على الخدمات: تحديثات متدحرجة، فحوصات صحة، وكيل عكسي، استرداد من حلقات الانهيار | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | محرك توثيق Markdown الذي يشغل هذا الموقع وكل مواقع توثيق المشاريع | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -75,8 +75,7 @@
 | [celestia-island.github.io](https://celestia-island.github.io) | حضور المنظمة | المستودع |
 | [docs.celestia.world](https://docs.celestia.world) | هذا الموقع — الفلسفة، الخريطة، البدء | المستودع |
 | [e.celestia.world](https://e.celestia.world) | صفحة الهبوط العامة | المستودع |
-| [dev.celestia.world](https://dev.celestia.world) | بوابة المطورين | المستودع |
-| [لوحة النظام](https://dev.celestia.world) | لوحة إدارة API السحابية (منتج) | — |
+| [dev.celestia.world](https://dev.celestia.world) | اللوحة وبوابة المطورين (مدخل المنتج) | — |
 
 ## لمزيد من التفاصيل
 

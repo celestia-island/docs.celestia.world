@@ -26,7 +26,7 @@ celestia-island 倉庫全量清單，按層分組。帶文件站的倉庫在 `<n
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | 雲 API 管理控制台：帳戶、API 金鑰、模型部署、後端、用量紀錄 | 倉庫內 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 與外殼 | [文件（倉內）](https://dev.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 與外殼 | 文件（倉內） |
 | [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能體協作平台：exec-only 微核心、scepter 編排伺服器、PTC 執行管線 | 文件（倉內） |
 | [evernight](https://github.com/celestia-island/evernight) | 工業協定閘道：Modbus、S7comm、OPC UA；遠端操作、遙測、寫入閥門 | 文件（倉內） |
 | [malkuth](https://github.com/celestia-island/malkuth) | 服務監督工具包：滾動更新、健康探針、反向代理、崩潰迴圈恢復 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |

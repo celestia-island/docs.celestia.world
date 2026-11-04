@@ -88,7 +88,6 @@ retirement banner, and its domain is now served by evernight's gateway package.
 | [dev.celestia.world](https://dev.celestia.world) | Developer portal | repository |
 | [celestia.ac.cn](https://celestia.ac.cn) | Entelecheia public front door (.ac.cn domain) | repository |
 | [arona.docs.celestia.world](https://arona.docs.celestia.world) | arona product documentation site | repository |
-| [arcaea.celestia.world](https://arcaea.celestia.world) | persona protocol public registry site | repository |
 
 ## Where to go deeper
 

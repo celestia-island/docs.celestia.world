@@ -45,7 +45,7 @@ Autonomie morgen brauchen wird.
   Repository erstellt. Die vollständige Liste finden Sie unter
   [Sites & Verantwortlichkeiten](./ecosystem/sites.md).
 - **Präsenz der Organisation** — [celestia-island auf GitHub](https://github.com/celestia-island).
-- **Produkt-Panels (WIP während der Beta)** — [arona](https://arona.celestia.world)
+- **Produkt-Panels (WIP während der Beta)** — [dev.celestia.world](https://dev.celestia.world)
   (Cloud-API-Admin), [dev](https://dev.celestia.world) (Entwicklerportal); das
   Live-Panel läuft bis zum Ende der Beta intern unter `arona:8420`.
 

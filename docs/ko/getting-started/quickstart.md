@@ -7,13 +7,13 @@
 ## 1. 계정 만들기
 
 등록은 초대 게이트가 있습니다: 배포의 첫 번째 사용자가 관리자가 되고, 그
-후 자체 등록은 잠깁니다. 유지보수자에게 초대를 요청한 다음 Arona 패널을
-통해 등록하세요 (공개 배포에서는 `https://arona.celestia.world`, 내부적으로는
+후 자체 등록은 잠깁니다. 유지보수자에게 초대를 요청한 다음 패널을
+통해 등록하세요 (공개 배포에서는 `https://dev.celestia.world`, 내부적으로는
 `http://<host>:8420`).
 
 ## 2. API key 생성
 
-Arona 패널에서 계정의 API key를 생성하세요. 이 키는 이후의 모든 작업 — 모델
+패널에서 계정의 API key를 생성하세요. 이 키는 이후의 모든 작업 — 모델
 관리, 채팅 백엔드, 에이전트 운영 — 에서 당신의 신원입니다.
 
 ## 3. 모델 배포
@@ -24,14 +24,14 @@ Arona 패널에서 계정의 API key를 생성하세요. 이 키는 이후의 �
 
 ## 4. 채팅 및 에이전트 실행
 
-[shittim-chest](https://shittim-chest.docs.celestia.world)(데스크톱 앱 또는
+[shittim-chest](https://dev.celestia.world)(데스크톱 앱 또는
 웹UI)를 열고, API key로 연결하고, 대화를 시작하세요. 다중 에이전트 작업의
 경우 entelecheia의 scepter 런타임이 동일한 인터페이스 뒤에서 에이전트를
 오케스트레이션합니다; 에이전트 로그와 도구 호출은 UI에서 볼 수 있습니다.
 
 ## 5. 산업 장비 제어
 
-[evernight](https://evernight.docs.celestia.world)가 실행 중이면, 프로토콜
+evernight가 실행 중이면, 프로토콜
 브리지(Modbus, S7comm, OPC UA)를 연결하고 텔레메트리를 구독하고 — 정책 검증과
 인간 확인을 거친 후 — 쓰기를 실행하세요. 내부 베타 동안 이 구간은 시뮬레이션
 또는 랩 장비를 대상으로 실행됩니다; 안전 체인은 어느 쪽이든 동일합니다.

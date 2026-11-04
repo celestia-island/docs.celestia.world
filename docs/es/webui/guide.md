@@ -63,5 +63,5 @@ cerrado, y su paso más pesado.
 ## Para profundizar
 
 - La referencia completa de la plataforma arona — [arona docs](https://arona.docs.celestia.world)
-- El banco de trabajo chest y sus paneles — [shittim-chest docs](https://shittim-chest.docs.celestia.world)
-- Agentes, espacios de trabajo y la compuerta de escritura industrial — [entelecheia docs](https://entelecheia.docs.celestia.world)
+- El banco de trabajo chest y sus paneles — [shittim-chest docs](https://dev.celestia.world)
+- Agentes, espacios de trabajo y la compuerta de escritura industrial — entelecheia docs

@@ -58,5 +58,5 @@ scepter. والتحرير بنيوي — ارتباطات مصادر البيا�
 ## للاستزادة
 
 - المرجع الكامل لمنصة arona — [وثائق arona](https://arona.docs.celestia.world)
-- منصة العمل chest ولوحاتها — [وثائق shittim-chest](https://shittim-chest.docs.celestia.world)
-- الوكلاء ومساحات العمل وبوابة الكتابة الصناعية — [وثائق entelecheia](https://entelecheia.docs.celestia.world)
+- منصة العمل chest ولوحاتها — [وثائق shittim-chest](https://dev.celestia.world)
+- الوكلاء ومساحات العمل وبوابة الكتابة الصناعية — وثائق entelecheia

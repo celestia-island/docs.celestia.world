@@ -63,4 +63,4 @@ LLM이 오프라인이 되면 플랫폼은 우아하게 저하됩니다: 안전 
 - [폐쇄 루프](./closed-loop.md) — 흐름에서 안전 게이트가 있는 위치.
 - [계층형 아키텍처](./layered-architecture.md) — 안전이 가로지르는 계층.
 - [kirino 문서](https://kirino.docs.celestia.world) — 인증 모델 상세.
-- [evernight 문서](https://evernight.docs.celestia.world) — 프로토콜 브로커링과 쓰기 게이트.
+- evernight 문서 — 프로토콜 브로커링과 쓰기 게이트.

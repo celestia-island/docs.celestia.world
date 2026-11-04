@@ -12,11 +12,11 @@ shittim-chest 桌面應用程式從每個 `v*` tag 發布到 [GitHub Releases](h
 | Windows 10+ | `.exe`（NSIS）或 `.msi` |
 | macOS | 尚未發布 |
 
-發布構建僅涵蓋 Linux 與 Windows；macOS 不在發布管線之內。在首次發布之前（或如果你偏好不安裝），請使用 shittim-chest 的 [webUI](https://shittim-chest.docs.celestia.world)。
+發布構建僅涵蓋 Linux 與 Windows；macOS 不在發布管線之內。在首次發布之前（或如果你偏好不安裝），請使用 shittim-chest 的 [webUI](https://dev.celestia.world)。
 
 ## 管理控制台（arona）
 
-Arona 由伺服器託管 —— 本機沒有任何要安裝的東西。開啟管理員提供的控制台網址（公開部署為 `https://arona.celestia.world`，內網為 `http://<主機>:8420`），並以你的邀請登入。
+Arona 由伺服器託管 —— 本機沒有任何要安裝的東西。開啟管理員提供的控制台網址（公開部署為 `https://dev.celestia.world`，內網為 `http://<主機>:8420`），並以你的邀請登入。
 
 ## 智能體執行環境（entelecheia/scepter，可選）
 

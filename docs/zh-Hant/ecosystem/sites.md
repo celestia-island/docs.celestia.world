@@ -10,7 +10,7 @@
 | `<name>.docs.celestia.world` | 每個專案 | 指南、架構、設計、參考——由專案自身倉庫構建 |
 | [celestia-island.github.io](https://celestia-island.github.io) | 組織 | 存在、連結、品牌資產 |
 | [e.celestia.world](https://e.celestia.world) | 公眾面孔 | 落地頁、定價、部落格、行動呼籲 |
-| [dev.celestia.world](https://dev.celestia.world) | 開發者 | 開發者入口與狀態 |
+| [dev.celestia.world](https://dev.celestia.world) | 面板與開發者入口 | 帳戶、聊天、智慧代理與營運控制台（封測期間邀請制） |
 
 ## 唯一規則：不重複
 

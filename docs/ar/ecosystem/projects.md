@@ -28,9 +28,9 @@
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | لوحة إدارة API السحابية: الحسابات، مفاتيح API، نشر النماذج، الخلفيات، سجلات الاستخدام | المستودع |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | محادثة سطح المكتب/الويب والصدفة | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | منصة التعاون متعدد الوكلاء: نواة دقيقة exec-only، خادم تنسيق scepter، خط تنفيذ PTC | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| [evernight](https://github.com/celestia-island/evernight) | وسيط البروتوكولات الصناعية: Modbus وS7comm وOPC UA؛ العمليات عن بعد، القياسات عن بعد، بوابات الكتابة | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | محادثة سطح المكتب/الويب والصدفة | [الوثائق (في المستودع)](https://dev.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | منصة التعاون متعدد الوكلاء: نواة دقيقة exec-only، خادم تنسيق scepter، خط تنفيذ PTC | entelecheia.docs.celestia.world |
+| [evernight](https://github.com/celestia-island/evernight) | وسيط البروتوكولات الصناعية: Modbus وS7comm وOPC UA؛ العمليات عن بعد، القياسات عن بعد، بوابات الكتابة | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | مجموعة أدوات الإشراف على الخدمات: تحديثات متدحرجة، فحوصات صحة، وكيل عكسي، استرداد من حلقات الانهيار | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | محرك توثيق Markdown الذي يشغل هذا الموقع وكل مواقع توثيق المشاريع | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -38,10 +38,10 @@
 
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | تحكم بالإصدارات موزع أصيل للذكاء الاصطناعي: عزل مساحات عمل لكل وكيل، سجلات JSONL ملحقة فقط، تاريخ لقطات | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
+| [noa](https://github.com/celestia-island/noa) | تحكم بالإصدارات موزع أصيل للذكاء الاصطناعي: عزل مساحات عمل لكل وكيل، سجلات JSONL ملحقة فقط، تاريخ لقطات | noa |
 | [seia](https://github.com/celestia-island/seia) | مكتبة بحث ويب متعددة المحركات وCLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | ماكروات خطوط أنابيب بمجمع خيوط (أنابيب رسائل مبنية على flume) | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [yuuka](https://github.com/celestia-island/yuuka) | ماكرو إجرائي لتوليد هياكل متداخلة معقدة من ماكرو بسيط | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | ماكروات خطوط أنابيب بمجمع خيوط (أنابيب رسائل مبنية على flume) | ichika |
+| [yuuka](https://github.com/celestia-island/yuuka) | ماكرو إجرائي لتوليد هياكل متداخلة معقدة من ماكرو بسيط | yuuka |
 | [aoba](https://github.com/celestia-island/aoba) | واجهة سطر أوامر Modbus ومصادر البيانات | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
 | [kou](https://github.com/celestia-island/kou) | محرك محطة افتراضية مستقل: إدارة PTY، VT100/ANSI | المستودع |
 | [hifumi](https://github.com/celestia-island/hifumi) | مكتبة تسلسل لترحيل البيانات بين الإصدارات | المستودع |
@@ -76,7 +76,7 @@
 | [docs.celestia.world](https://docs.celestia.world) | هذا الموقع — الفلسفة، الخريطة، البدء | المستودع |
 | [e.celestia.world](https://e.celestia.world) | صفحة الهبوط العامة | المستودع |
 | [dev.celestia.world](https://dev.celestia.world) | بوابة المطورين | المستودع |
-| [arona.celestia.world](https://arona.celestia.world) | لوحة إدارة API السحابية (منتج) | — |
+| [لوحة النظام](https://dev.celestia.world) | لوحة إدارة API السحابية (منتج) | — |
 
 ## لمزيد من التفاصيل
 

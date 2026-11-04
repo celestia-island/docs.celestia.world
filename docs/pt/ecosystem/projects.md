@@ -29,9 +29,9 @@ documentado no próprio repositório.
 | Projeto | Papel | Docs |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Painel de administração da API em nuvem: contas, API keys, implantação de modelos, backends, registros de uso | repositório |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI e shell | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboração multiagente: microkernel exec-only, servidor de orquestração scepter, pipeline de execução PTC | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| [evernight](https://github.com/celestia-island/evernight) | Broker de protocolos industriais: Modbus, S7comm, OPC UA; operações remotas, telemetria, portões de escrita | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI e shell | [documentação (no repositório)](https://dev.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboração multiagente: microkernel exec-only, servidor de orquestração scepter, pipeline de execução PTC | entelecheia.docs.celestia.world |
+| [evernight](https://github.com/celestia-island/evernight) | Broker de protocolos industriais: Modbus, S7comm, OPC UA; operações remotas, telemetria, portões de escrita | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | Kit de supervisão de serviços: atualizações contínuas, sondas de saúde, proxy reverso, recuperação de crash loops | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Motor de documentação Markdown que alimenta este site e todos os sites de docs dos projetos | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -39,10 +39,10 @@ documentado no próprio repositório.
 
 | Projeto | Papel | Docs |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | Controle de versão distribuído nativo de IA: isolamento de workspace por agente, logs append-only em JSONL, histórico de snapshots | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
+| [noa](https://github.com/celestia-island/noa) | Controle de versão distribuído nativo de IA: isolamento de workspace por agente, logs append-only em JSONL, histórico de snapshots | noa |
 | [seia](https://github.com/celestia-island/seia) | Biblioteca e CLI de busca web multi-motor | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Macros de pipeline com pool de threads (pipes de mensagens baseados em flume) | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro para gerar estruturas aninhadas complexas a partir de um macro simples | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | Macros de pipeline com pool de threads (pipes de mensagens baseados em flume) | ichika |
+| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro para gerar estruturas aninhadas complexas a partir de um macro simples | yuuka |
 | [aoba](https://github.com/celestia-island/aoba) | CLI de Modbus e fontes de dados | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
 | [kou](https://github.com/celestia-island/kou) | Motor de terminal virtual autônomo: gerenciamento de PTY, VT100/ANSI | repositório |
 | [hifumi](https://github.com/celestia-island/hifumi) | Biblioteca de serialização para migrar dados entre versões | repositório |
@@ -77,7 +77,7 @@ documentado no próprio repositório.
 | [docs.celestia.world](https://docs.celestia.world) | Este site — filosofia, mapa, primeiros passos | repositório |
 | [e.celestia.world](https://e.celestia.world) | Página pública de destino | repositório |
 | [dev.celestia.world](https://dev.celestia.world) | Portal do desenvolvedor | repositório |
-| [arona.celestia.world](https://arona.celestia.world) | Painel de administração da API em nuvem (produto) | — |
+| [o painel](https://dev.celestia.world) | Painel de administração da API em nuvem (produto) | — |
 
 ## Aprofundar-se
 

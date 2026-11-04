@@ -44,4 +44,4 @@ La degradación silenciosa se trata como un fallo de seguridad. Si el recuerdo d
 - [El bucle cerrado](./closed-loop.md) — dónde se sitúan las compuertas de seguridad en el flujo.
 - [Arquitectura en capas](./layered-architecture.md) — las capas que la seguridad atraviesa.
 - [Documentación de kirino](https://kirino.docs.celestia.world) — el modelo de autenticación en detalle.
-- [Documentación de evernight](https://evernight.docs.celestia.world) — intermediación de protocolos y compuertas de escritura.
+- Documentación de evernight — intermediación de protocolos y compuertas de escritura.

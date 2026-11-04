@@ -20,6 +20,6 @@ celestia-island 為 AI 驅動的工業控制構建從發現到驗證的**閉環*
 
 - **專案文件** —— `<name>.docs.celestia.world`，由各倉庫自身構建。完整清單見[站點分工](./ecosystem/sites.md)。
 - **組織存在** —— [celestia-island on GitHub](https://github.com/celestia-island)。
-- **產品入口（內測期間 WIP）** —— [arona](https://arona.celestia.world)（雲 API 管理）、[dev](https://dev.celestia.world)（開發者入口）；內測期間實際控制台運行於內部 `arona:8420`。
+- **產品入口（內測期間 WIP）** —— [dev.celestia.world](https://dev.celestia.world)（面板：帳戶、聊天、智慧代理）、匿名[參觀面](https://demo.dev.celestia.world/tour)與公司官網 [celestia.ac.cn](https://celestia.ac.cn)；模型平台自己的管理控制台在封測結束前保持部署內部。
 
 使用右下角語言切換器切換本站語言。內容以英文為準；各語種遵循同一結構。

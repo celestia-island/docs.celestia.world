@@ -20,14 +20,14 @@ fica vazia até a primeira tag de beta ser enviada.
 
 Builds de release cobrem somente Linux e Windows; macOS não faz parte do
 pipeline de release. Até o primeiro release (ou se você preferir não
-instalar nada), use o [webUI](https://shittim-chest.docs.celestia.world) do
+instalar nada), use o [webUI](https://dev.celestia.world) do
 shittim-chest.
 
 ## Painel de administração (arona)
 
 A Arona é hospedada no servidor — não há nada para instalar localmente. Abra
 a URL do painel que o seu administrador fornece
-(`https://arona.celestia.world` numa implantação pública, ou
+(`https://dev.celestia.world` numa implantação pública, ou
 `http://<host>:8420` internamente) e entre com o seu convite.
 
 ## Runtime de agentes (entelecheia/scepter, opcional)

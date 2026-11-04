@@ -20,6 +20,6 @@ celestia-island 为 AI 驱动的工业控制构建从发现到验证的**闭环*
 
 - **项目文档** —— `<name>.docs.celestia.world`，由各仓库自身构建。完整清单见[站点分工](./ecosystem/sites.md)。
 - **组织存在** —— [celestia-island on GitHub](https://github.com/celestia-island)。
-- **产品入口（内测期间 WIP）** —— [arona](https://arona.celestia.world)（云 API 管理）、[dev](https://dev.celestia.world)（开发者门户）；内测期间实际面板运行于内部 `arona:8420`。
+- **产品入口（内测期间 WIP）** —— [dev.celestia.world](https://dev.celestia.world)（面板：账户、聊天、智能体）、匿名[参观面](https://demo.dev.celestia.world/tour)与公司官网 [celestia.ac.cn](https://celestia.ac.cn)；模型平台自己的管理面板在内测结束前保持部署内部。
 
 使用右下角语言切换器切换本站语言。内容以英文为准；各语种遵循同一结构。

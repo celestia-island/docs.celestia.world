@@ -8,12 +8,12 @@ panel URL and your invitation.
 
 Registration is invite-gated: the first user of a deployment becomes the
 admin, and after that self-registration locks. Contact the maintainers for an
-invitation, then register through the Arona panel (`https://arona.celestia.world`
-in a public deployment, or `http://<host>:8420` internally).
+invitation, then register through the panel (`https://dev.celestia.world`
+in the public deployment, or your administrator's panel URL).
 
 ## 2. Create an API key
 
-In the Arona panel, create an API key for your account. This key is your
+In the panel, create an API key for your account. This key is your
 identity for everything below — model management, chat backends, and agent
 operations.
 
@@ -25,14 +25,14 @@ usage; metering and pricing are handled by the platform layer.
 
 ## 4. Chat and run agents
 
-Open [shittim-chest](https://shittim-chest.docs.celestia.world) (desktop app
+Open [shittim-chest](https://dev.celestia.world) (desktop app
 or webUI), connect with your API key, and start a conversation. For multi-agent
 work, entelecheia's scepter runtime orchestrates agents behind the same
 interface; agent logs and tool calls are visible in the UI.
 
 ## 5. Control industrial equipment
 
-With [evernight](https://evernight.docs.celestia.world) running, connect a
+With evernight running, connect a
 protocol bridge (Modbus, S7comm, OPC UA), subscribe to telemetry, and — after
 policy validation and human confirmation — issue writes. During the internal
 beta this segment runs against simulated or lab equipment; the safety chain is

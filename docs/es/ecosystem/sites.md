@@ -10,7 +10,7 @@ La documentación de este ecosistema sigue una sola regla: **el centro explica e
 | `<name>.docs.celestia.world` | cada proyecto | Guías, arquitectura, diseños, referencias — construidos desde el propio repositorio del proyecto |
 | [celestia-island.github.io](https://celestia-island.github.io) | la organización | Presencia, enlaces, activos de marca |
 | [e.celestia.world](https://e.celestia.world) | la cara pública | Página de aterrizaje, precios, blog, llamada a la acción |
-| [dev.celestia.world](https://dev.celestia.world) | desarrolladores | Portal de desarrolladores y estado |
+| [dev.celestia.world](https://dev.celestia.world) | el panel | Cuenta, chat, agentes y la consola de operación (beta por invitación) |
 
 ## La única regla: sin duplicación
 

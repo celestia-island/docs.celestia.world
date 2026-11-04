@@ -59,5 +59,5 @@ schwerster Schritt.
 ## Weiter vertiefen
 
 - Die vollständige Referenz der arona-Plattform — [arona docs](https://arona.docs.celestia.world)
-- Die chest-Werkbank und ihre Panels — [shittim-chest docs](https://shittim-chest.docs.celestia.world)
-- Agents, Workspaces und das industrielle Schreib-Gate — [entelecheia docs](https://entelecheia.docs.celestia.world)
+- Die chest-Werkbank und ihre Panels — [shittim-chest docs](https://dev.celestia.world)
+- Agents, Workspaces und das industrielle Schreib-Gate — entelecheia docs

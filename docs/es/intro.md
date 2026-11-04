@@ -20,6 +20,6 @@ La razón de todo esto es una observación simple: en la Luna un viaje de ida y 
 
 - **Documentación por proyecto** — `<name>.docs.celestia.world`, construida desde cada repositorio. Encuentra la lista completa en [Sitios y propiedad](./ecosystem/sites.md).
 - **Presencia de la organización** — [celestia-island en GitHub](https://github.com/celestia-island).
-- **Paneles de producto (WIP durante la beta)** — [arona](https://arona.celestia.world) (administración de API en la nube), [dev](https://dev.celestia.world) (portal de desarrolladores); el panel en vivo se ejecuta internamente en `arona:8420` hasta que termine la beta.
+- **Paneles de producto (WIP durante la beta)** — [dev.celestia.world](https://dev.celestia.world) (administración de API en la nube), [dev](https://dev.celestia.world) (portal de desarrolladores); el panel en vivo se ejecuta internamente en `arona:8420` hasta que termine la beta.
 
 Usa el selector de idioma (abajo a la derecha) para leer este sitio en otro idioma. El contenido se redacta en inglés; las traducciones siguen la misma estructura.

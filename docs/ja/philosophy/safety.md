@@ -66,4 +66,4 @@ LLM がオフラインになっても、プラットフォームは優雅に劣�
 - [クローズドループ](./closed-loop.md) —— フローの中で安全ゲートが置かれる場所。
 - [レイヤ化アーキテクチャ](./layered-architecture.md) —— 安全性が横断するレイヤ。
 - [kirino ドキュメント](https://kirino.docs.celestia.world) —— 認証モデルの詳細。
-- [evernight ドキュメント](https://evernight.docs.celestia.world) —— プロトコルブローカリングと書き込みゲート。
+- evernight ドキュメント —— プロトコルブローカリングと書き込みゲート。

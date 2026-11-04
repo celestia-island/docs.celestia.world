@@ -67,4 +67,4 @@ ont montré que les défaillances invisibles sont les dangereuses.
 - [La Boucle Fermée](./closed-loop.md) — où se trouvent les portes de sécurité dans le flux.
 - [Architecture en couches](./layered-architecture.md) — les couches que la sécurité traverse.
 - [Documentation de kirino](https://kirino.docs.celestia.world) — le modèle d'authentification en détail.
-- [Documentation d'evernight](https://evernight.docs.celestia.world) — courtage de protocoles et portes d'écriture.
+- Documentation d'evernight — courtage de protocoles et portes d'écriture.

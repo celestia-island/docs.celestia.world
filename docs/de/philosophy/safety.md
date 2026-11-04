@@ -68,4 +68,4 @@ sind.
 - [Der Geschlossene Regelkreis](./closed-loop.md) — wo die Sicherheitssperren im Ablauf sitzen.
 - [Geschichtete Architektur](./layered-architecture.md) — die Schichten, die Sicherheit durchzieht.
 - [kirino-Dokumentation](https://kirino.docs.celestia.world) — das Auth-Modell im Detail.
-- [evernight-Dokumentation](https://evernight.docs.celestia.world) — Protokoll-Vermittlung und Schreibsperren.
+- evernight-Dokumentation — Protokoll-Vermittlung und Schreibsperren.

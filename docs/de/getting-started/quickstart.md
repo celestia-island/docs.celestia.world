@@ -9,12 +9,12 @@ Sie Ihren Administrator nach der Panel-URL und Ihrer Einladung.
 Die Registrierung ist einladungsbasiert: Der erste Nutzer einer Bereitstellung
 wird zum Admin, danach sperrt sich die Selbstregistrierung. Kontaktieren Sie
 die Maintainer für eine Einladung und registrieren Sie sich dann über das
-Arona-Panel (`https://arona.celestia.world` in einer öffentlichen
+Panel (`https://dev.celestia.world` in einer öffentlichen
 Bereitstellung oder `http://<host>:8420` intern).
 
 ## 2. API key erstellen
 
-Erstellen Sie im Arona-Panel einen API key für Ihr Konto. Dieser Key ist Ihre
+Erstellen Sie im Panel einen API key für Ihr Konto. Dieser Key ist Ihre
 Identität für alles Folgende — Modellverwaltung, Chat-Backends und
 Agentenoperationen.
 
@@ -27,7 +27,7 @@ Chat-Backend. Das Panel zeigt Health und Nutzung; Messung und Preisgestaltung
 
 ## 4. Chatten und Agenten ausführen
 
-Öffnen Sie [shittim-chest](https://shittim-chest.docs.celestia.world)
+Öffnen Sie [shittim-chest](https://dev.celestia.world)
 (Desktop-App oder WebUI), verbinden Sie sich mit Ihrem API key und starten Sie
 eine Unterhaltung. Für Multi-Agenten-Arbeit orchestriert entelecheias
 scepter-Runtime die Agenten hinter derselben Oberfläche; Agentenprotokolle und
@@ -35,7 +35,7 @@ Tool-Aufrufe sind in der UI sichtbar.
 
 ## 5. Industrieanlagen steuern
 
-Verbinden Sie bei laufendem [evernight](https://evernight.docs.celestia.world)
+Verbinden Sie bei laufendem evernight
 eine Protokoll-Bridge (Modbus, S7comm, OPC UA), abonnieren Sie Telemetrie und
 führen Sie — nach Richtlinienprüfung und menschlicher Bestätigung —
 Schreiboperationen aus. Während der internen Beta läuft dieses Segment gegen

@@ -29,9 +29,9 @@
 | Проект | Роль | Документация |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Облачная API-админка: учётные записи, API key, развёртывание моделей, бэкенды, записи использования | репозиторий |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Чат desktop/webUI и оболочка | [shittim-chest.docs.celestia.world](https://shittim-chest.docs.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Платформа мультиагентной совместной работы: exec-only микроядро, сервер оркестрации scepter, конвейер выполнения PTC | [entelecheia.docs.celestia.world](https://entelecheia.docs.celestia.world) |
-| [evernight](https://github.com/celestia-island/evernight) | Брокер промышленных протоколов: Modbus, S7comm, OPC UA; удалённые операции, телеметрия, шлюзы записи | [evernight.docs.celestia.world](https://evernight.docs.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Чат desktop/webUI и оболочка | [документация (в репозитории)](https://dev.celestia.world) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Платформа мультиагентной совместной работы: exec-only микроядро, сервер оркестрации scepter, конвейер выполнения PTC | entelecheia.docs.celestia.world |
+| [evernight](https://github.com/celestia-island/evernight) | Брокер промышленных протоколов: Modbus, S7comm, OPC UA; удалённые операции, телеметрия, шлюзы записи | evernight.docs.celestia.world |
 | [malkuth](https://github.com/celestia-island/malkuth) | Инструментарий наблюдения за сервисами: rolling-обновления, проверки здоровья, обратный прокси, восстановление после краш-петли | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Движок Markdown-документации, питающий этот сайт и все сайты документации проектов | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -39,10 +39,10 @@
 
 | Проект | Роль | Документация |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | AI-ориентированное распределённое управление версиями: изоляция рабочих пространств агентов, append-only JSONL-журналы, история снимков | [noa.docs.celestia.world](https://noa.docs.celestia.world) |
+| [noa](https://github.com/celestia-island/noa) | AI-ориентированное распределённое управление версиями: изоляция рабочих пространств агентов, append-only JSONL-журналы, история снимков | noa |
 | [seia](https://github.com/celestia-island/seia) | Библиотека веб-поиска с несколькими движками и CLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Макросы конвейеров с пулом потоков (каналы сообщений на основе flume) | [ichika.docs.celestia.world](https://ichika.docs.celestia.world) |
-| [yuuka](https://github.com/celestia-island/yuuka) | Процедурный макрос для генерации сложных вложенных структур из простого макроса | [yuuka.docs.celestia.world](https://yuuka.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | Макросы конвейеров с пулом потоков (каналы сообщений на основе flume) | ichika |
+| [yuuka](https://github.com/celestia-island/yuuka) | Процедурный макрос для генерации сложных вложенных структур из простого макроса | yuuka |
 | [aoba](https://github.com/celestia-island/aoba) | CLI для Modbus и источников данных | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
 | [kou](https://github.com/celestia-island/kou) | Отдельный движок виртуального терминала: управление PTY, VT100/ANSI | репозиторий |
 | [hifumi](https://github.com/celestia-island/hifumi) | Библиотека сериализации для миграции данных между версиями | репозиторий |
@@ -77,7 +77,7 @@
 | [docs.celestia.world](https://docs.celestia.world) | Этот сайт — философия, карта, начало работы | репозиторий |
 | [e.celestia.world](https://e.celestia.world) | Публичная лендинг-страница | репозиторий |
 | [dev.celestia.world](https://dev.celestia.world) | Портал разработчика | репозиторий |
-| [arona.celestia.world](https://arona.celestia.world) | Облачная API-админка (продукт) | — |
+| [панель](https://dev.celestia.world) | Облачная API-админка (продукт) | — |
 
 ## Подробнее
 

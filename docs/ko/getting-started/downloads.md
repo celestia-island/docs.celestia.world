@@ -20,12 +20,12 @@ shittim-chest 데스크톱 앱은 모든 `v*` 태그에서
 
 릴리스 빌드는 Linux와 Windows만 다룹니다; macOS는 릴리스 파이프라인에
 포함되지 않습니다. 첫 릴리스 전까지(또는 설치를 원하지 않는다면)
-shittim-chest [웹UI](https://shittim-chest.docs.celestia.world)를 사용하세요.
+shittim-chest [웹UI](https://dev.celestia.world)를 사용하세요.
 
 ## 관리 패널 (arona)
 
 Arona는 서버에서 호스팅됩니다 — 로컬에 설치할 것이 없습니다. 관리자가
-제공하는 패널 URL(공개 배포에서는 `https://arona.celestia.world`, 내부에서는
+제공하는 패널 URL(공개 배포에서는 `https://dev.celestia.world`, 내부에서는
 `http://<host>:8420`)을 열고 초대장으로 로그인하세요.
 
 ## 에이전트 런타임 (entelecheia/scepter, 선택 사항)

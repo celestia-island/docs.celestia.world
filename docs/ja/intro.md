@@ -44,9 +44,10 @@ UI コンポーネント（[hikari](https://github.com/celestia-island/hikari)�
   [サイトと所有](./ecosystem/sites.md) を参照してください。
 - **組織の存在** —— [GitHub 上の celestia-island](https://github.com/celestia-island)。
 - **プロダクトパネル（ベータ期間中は WIP）** —— [dev.celestia.world](https://dev.celestia.world)
-  （クラウド API 管理パネル）、[dev](https://dev.celestia.world)
-  （開発者ポータル）。ベータ期間中、ライブパネルは内部の `arona:8420`
-  で実行されます。
+  （パネル：アカウント・チャット・エージェント）、匿名の
+  [tour](https://demo.dev.celestia.world/tour) 面、そして会社サイト
+  [celestia.ac.cn](https://celestia.ac.cn)。モデルプラットフォーム自体の管理パネルは
+  ベータ終了までデプロイ内部にとどまります。
 
 右下の言語切り替えを使って、このサイトを別の言語で読むことができます。
 コンテンツは英語で執筆され、翻訳は同じ構造に従います。

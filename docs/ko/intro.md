@@ -40,8 +40,10 @@ celestia-island는 AI 기반 산업 제어를 위한 **폐쇄 루프**를 발견
   전체 목록은 [사이트 및 소유권](./ecosystem/sites.md)에서 확인하세요.
 - **조직 프레즌스** — [celestia-island GitHub 조직](https://github.com/celestia-island).
 - **제품 패널(베타 기간 중 WIP)** — [dev.celestia.world](https://dev.celestia.world)
-  (클라우드 API 관리), [dev](https://dev.celestia.world) (개발자 포털);
-  베타가 끝날 때까지 실시간 패널은 내부 `arona:8420`에서 실행됩니다.
+  (패널: 계정, 채팅, 에이전트), 익명
+  [tour](https://demo.dev.celestia.world/tour) 페이스, 그리고 회사 사이트
+  [celestia.ac.cn](https://celestia.ac.cn); 모델 플랫폼 자체 관리 패널은 베타가
+  끝날 때까지 배포 내부에 남습니다.
 
 언어 전환기(오른쪽 하단)를 사용하여 이 사이트를 다른 언어로 읽을 수
 있습니다. 콘텐츠는 영어로 작성되며, 번역은 동일한 구조를 따릅니다.

@@ -47,8 +47,10 @@ que ce dont l'autonomie aura besoin demain.
 - **Présence de l'organisation** —
   [celestia-island sur GitHub](https://github.com/celestia-island).
 - **Panneaux produits (WIP pendant la bêta)** — [dev.celestia.world](https://dev.celestia.world)
-  (admin API cloud), [dev](https://dev.celestia.world) (portail développeur) ; le
-  panneau en direct tourne en interne sur `arona:8420` jusqu'à la fin de la bêta.
+  (le panneau : compte, chat, agents), la face [tour](https://demo.dev.celestia.world/tour)
+  anonyme, et le site de la société [celestia.ac.cn](https://celestia.ac.cn) ; le panneau
+  d'administration propre à la plateforme de modèles reste interne au déploiement
+  jusqu'à la fin de la bêta.
 
 Utilisez le sélecteur de langue (en bas à droite) pour lire ce site dans une
 autre langue. Le contenu est rédigé en anglais ; les traductions suivent la même

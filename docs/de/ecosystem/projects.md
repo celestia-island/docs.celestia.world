@@ -29,9 +29,9 @@ Repository dokumentiert.
 | Projekt | Rolle | Doku |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Cloud-API-Admin-Panel: Konten, API keys, Modellbereitstellung, Backends, Nutzungsprotokolle | Repository |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat-Desktop/WebUI und Shell | [Doku (im Repo)](https://dev.celestia.world) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-Agenten-Kollaborationsplattform: Exec-only-Microkernel, scepter-Orchestrierungsserver, PTC-Ausführungspipeline | entelecheia.docs.celestia.world |
-| [evernight](https://github.com/celestia-island/evernight) | Industrieller Protokoll-Broker: Modbus, S7comm, OPC UA; Fernoperation, Telemetrie, Schreibsperren | evernight.docs.celestia.world |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat-Desktop/WebUI und Shell | Docs (im Repo) |
+| [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-Agenten-Kollaborationsplattform: Exec-only-Microkernel, scepter-Orchestrierungsserver, PTC-Ausführungspipeline | Docs (im Repo) |
+| [evernight](https://github.com/celestia-island/evernight) | Industrieller Protokoll-Broker: Modbus, S7comm, OPC UA; Fernoperation, Telemetrie, Schreibsperren | Docs (im Repo) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Dienstüberwachungs-Toolkit: Rolling Updates, Health-Probes, Reverse Proxy, Crash-Loop-Recovery | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | Markdown-Dokumentations-Engine, die diese Seite und jede Projektdoku-Seite betreibt | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
 
@@ -76,8 +76,7 @@ Repository dokumentiert.
 | [celestia-island.github.io](https://celestia-island.github.io) | Präsenz der Organisation | Repository |
 | [docs.celestia.world](https://docs.celestia.world) | Diese Seite — Philosophie, Karte, Erste Schritte | Repository |
 | [e.celestia.world](https://e.celestia.world) | Öffentliche Landingpage | Repository |
-| [dev.celestia.world](https://dev.celestia.world) | Entwicklerportal | Repository |
-| [Panel](https://dev.celestia.world) | Cloud-API-Admin-Panel (Produkt) | — |
+| [dev.celestia.world](https://dev.celestia.world) | Panel und Entwicklerportal (Produkteinstieg) | — |
 
 ## Weiterführendes
 

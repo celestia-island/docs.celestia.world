@@ -31,7 +31,7 @@ retirement banner, and its domain is now served by evernight's gateway package.
 | Project | Role | Docs |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | Cloud API admin panel: accounts, API keys, model deployment, backends, usage records | repository |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI and shell | [docs (in repo)](https://dev.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI and shell | docs (in repo) |
 | [entelecheia](https://github.com/celestia-island/entelecheia) | Multi-agent collaboration platform: exec-only microkernel, scepter orchestration server, PTC execution pipeline | docs (in repo) |
 | [evernight](https://github.com/celestia-island/evernight) | Industrial protocol broker: Modbus, S7comm, OPC UA; remote operations, telemetry, write gates | docs (in repo) |
 | [malkuth](https://github.com/celestia-island/malkuth) | Service supervision toolkit: rolling updates, health probes, reverse proxy, crash-loop recovery | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
@@ -85,7 +85,7 @@ retirement banner, and its domain is now served by evernight's gateway package.
 | [celestia-island.github.io](https://celestia-island.github.io) | Organization presence | repository |
 | [docs.celestia.world](https://docs.celestia.world) | This site — philosophy, map, getting started | repository |
 | [e.celestia.world](https://e.celestia.world) | Public landing page | repository |
-| [dev.celestia.world](https://dev.celestia.world) | Developer portal | repository |
+| [dev.celestia.world](https://dev.celestia.world) | Panel & developer portal (product entry) | — |
 | [celestia.ac.cn](https://celestia.ac.cn) | Entelecheia public front door (.ac.cn domain) | repository |
 | [arona.docs.celestia.world](https://arona.docs.celestia.world) | arona product documentation site | repository |
 

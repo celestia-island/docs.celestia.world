@@ -26,7 +26,7 @@ celestia-island 仓库全量清单，按层分组。带文档站的仓库在 `<n
 | 项目 | 角色 | 文档 |
 | --- | --- | --- |
 | [arona](https://github.com/celestia-island/arona) | 云 API 管理面板：账户、API 密钥、模型部署、后端、用量记录 | 仓库内 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 与外壳 | [文档（仓内）](https://dev.celestia.world) |
+| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 与外壳 | 文档（仓内） |
 | [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能体协作平台：exec-only 微内核、scepter 编排服务器、PTC 执行管线 | 文档（仓内） |
 | [evernight](https://github.com/celestia-island/evernight) | 工业协议网关：Modbus、S7comm、OPC UA；远程操作、遥测、写阀门 | 文档（仓内） |
 | [malkuth](https://github.com/celestia-island/malkuth) | 服务监督工具包：滚动更新、健康探针、反向代理、崩溃循环恢复 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |

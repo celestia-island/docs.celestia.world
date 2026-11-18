@@ -17,7 +17,7 @@
 
 ## 知识产权与许可
 
-celestia-island 项目的源代码按各仓库自身的许可发布——除非另有说明，上游库采用Apache-2.0，服务层产品采用 BUSL-1.1；完整许可地图见[商业许可](./commercial-licensing.md)。各仓库的 `LICENSE` 文件管辖其自身代码。
+celestia-island 项目的源代码按各仓库自身的许可发布——除非另有说明，上游库采用SySL-1.0，服务层产品采用 BUSL-1.1；完整许可地图见[商业许可](./commercial-licensing.md)。各仓库的 `LICENSE` 文件管辖其自身代码。
 
 ## 变更
 

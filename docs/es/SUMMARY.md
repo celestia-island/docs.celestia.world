@@ -41,7 +41,10 @@
 # Meta
 
 - [Licencia](./meta/license.md)
+- [Licencia comercial](./meta/commercial-licensing.md)
 - [CLA](./meta/cla.md)
 - [Código de conducta](./meta/code-of-conduct.md)
 - [Seguridad](./meta/security.md)
+- [Términos del servicio](./meta/terms.md)
+- [Política de privacidad](./meta/privacy.md)
 - [Contribuir](./meta/CONTRIBUTING.md)

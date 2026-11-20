@@ -14,14 +14,12 @@ permissions:
   id-token: write
 
 concurrency:
-  # One group per ref. A single shared "pages" group with cancel-in-progress
-  # made every new run (another PR's build, or a master push) cancel whichever
-  # run was waiting — the farm queues, so the window is wide, and the cancelled
-  # run reads as "check never reported" rather than as a skip. Superseded PR
-  # builds on the SAME ref are still cancelled; master deploys never are
-  # (an interrupted Pages deploy is not resumable).
+  # One group per ref: a superseded run on the SAME ref is cancelled, master
+  # deploys never are (an interrupted Pages deploy is not resumable). The
+  # workflow has no pull_request trigger (dispatch + master push only), so
+  # there is no PR-cancellation half to configure.
   group: pages-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -29,11 +27,8 @@ jobs:
     # GitHub-hosted tier has been unavailable org-wide since 2026-09-24
     # (`_ledger/ci-state.md`), which left content changes undeployable while
     # the sibling docs site had already moved to the farm for exactly this
-    # reason. Fork PRs stay off the shared runners — an outside tree is not
-    # executed here; the build only needs to gate first-party PRs and master.
-    if: >-
-      github.event_name != 'pull_request' ||
-      github.event.pull_request.head.repo.full_name == github.repository
+    # reason. Runs on master pushes and manual dispatch only (no PR-time
+    # runs since the 2026-11-06 trigger-policy rework).
     runs-on: [self-hosted, linux, x64, local]
     timeout-minutes: 120
     env:

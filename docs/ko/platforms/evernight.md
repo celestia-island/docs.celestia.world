@@ -8,19 +8,19 @@ vLLM)도 관리합니다.
 
 ## 한눈에 보는 아키텍처
 
-```text
-필드: PLC / MCU / 센서 (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)
-        ▼
-   evernight (엣지 노드)
-   ├─ 프로토콜 어댑터: 폴링 → 디코딩 → 타입화된 판독값
-   ├─ 알람 엔진: 임계값 규칙 → 트리거 이벤트
-   ├─ 시계열: 이중 타임스탬프가 붙은 버퍼링된 판독값
-   ├─ 녹화/재생: 링 버퍼 → 분할 저장 → 재생 주입
-   ├─ 모델 서버 매니저: ollama/whisper/vLLM 배포 (GPU 우선)
-   └─ 노스바운드: Unix 소켓 JSON-RPC 트리거 → entelecheia
-        │
-        ▼
-   scepter (에이전트, 산업 워크플로, 쓰기 승인)
+```mermaid
+flowchart TD
+    C["필드: PLC / MCU / 센서 (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)"]
+    subgraph G["evernight (엣지 노드)"]
+        N0["프로토콜 어댑터: 폴링 → 디코딩 → 타입화된 판독값"]
+        N1["알람 엔진: 임계값 규칙 → 트리거 이벤트"]
+        N2["시계열: 이중 타임스탬프가 붙은 버퍼링된 판독값"]
+        N3["녹화/재생: 링 버퍼 → 분할 저장 → 재생 주입"]
+        N4["모델 서버 매니저: ollama/whisper/vLLM 배포 (GPU 우선)"]
+        N5["노스바운드: Unix 소켓 JSON-RPC 트리거 → entelecheia"]
+    end
+    C --> G
+    G --> B["scepter (에이전트, 산업 워크플로, 쓰기 승인)"]
 ```
 
 ## 1. 필드 프로토콜

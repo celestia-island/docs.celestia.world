@@ -4,19 +4,18 @@ Shittim Chest 是面向使用者的那一面：聊天、面板與多通道整合
 
 ## 架構一覽
 
-```text
-你
- │  桌面應用程式 · Web UI · 12+ IM 通道（discord/slack/matrix/lark/…）
- ▼
-Shittim Chest 核心（node-2:8425）
- ├─ 聊天：對話持久化於 Postgres，SSE/WS 串流
- ├─ 面板：資料網格 / 媒體管線 / 3D 孿生（面板引擎）
- ├─ 媒體管線：LLM 視覺審查、圖像生成、3D 生成（stub）
- ├─ 通道橋：雙向 IM ↔ 核心（webhooks + WS）
- └─ RPC 橋 → scepter（智能體、語意搜尋、知識庫）
-         │
-         ▼
-Arona（模型、記憶）· scepter（智能體、面板、搜尋）
+```mermaid
+flowchart TD
+    C["你"]
+    subgraph G["Shittim Chest 核心（node-2:8425）"]
+        N0["聊天：對話持久化於 Postgres，SSE/WS 串流"]
+        N1["面板：資料網格 / 媒體管線 / 3D 孿生（面板引擎）"]
+        N2["媒體管線：LLM 視覺審查、圖像生成、3D 生成（stub）"]
+        N3["通道橋：雙向 IM ↔ 核心（webhooks + WS）"]
+        N4["RPC 橋 → scepter（智能體、語意搜尋、知識庫）"]
+    end
+    C -->|"桌面應用程式 · Web UI · 12+ IM 通道（discord/slack/matrix/lark/…）"| G
+    G --> B["Arona（模型、記憶）· scepter（智能體、面板、搜尋）"]
 ```
 
 ## 1. 聊天

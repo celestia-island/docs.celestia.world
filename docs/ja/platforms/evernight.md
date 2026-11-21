@@ -9,19 +9,19 @@ MC Protocol、EtherNet/IP、EtherCAT、CAN、OPC UA、MQTT、…）を話す
 
 ## アーキテクチャの概観
 
-```text
-フィールド: PLC / MCU / センサー (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)
-        ▼
-   evernight (エッジノード)
-   ├─ プロトコルアダプタ: ポーリング → デコード → 型付き読み取り値
-   ├─ アラームエンジン: しきい値ルール → トリガーイベント
-   ├─ 時系列: 二重タイムスタンプ付きのバッファ読み取り値
-   ├─ 録画/リプレイ: リングバッファ → 分割ストレージ → リプレイ注入
-   ├─ モデルサーバーマネージャ: ollama/whisper/vLLM をデプロイ (GPU 優先)
-   └─ ノースバウンド: Unix ソケット JSON-RPC トリガー → entelecheia
-        │
-        ▼
-   scepter (エージェント、産業ワークフロー、書き込み承認)
+```mermaid
+flowchart TD
+    C["フィールド: PLC / MCU / センサー (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)"]
+    subgraph G["evernight (エッジノード)"]
+        N0["プロトコルアダプタ: ポーリング → デコード → 型付き読み取り値"]
+        N1["アラームエンジン: しきい値ルール → トリガーイベント"]
+        N2["時系列: 二重タイムスタンプ付きのバッファ読み取り値"]
+        N3["録画/リプレイ: リングバッファ → 分割ストレージ → リプレイ注入"]
+        N4["モデルサーバーマネージャ: ollama/whisper/vLLM をデプロイ (GPU 優先)"]
+        N5["ノースバウンド: Unix ソケット JSON-RPC トリガー → entelecheia"]
+    end
+    C --> G
+    G --> B["scepter (エージェント、産業ワークフロー、書き込み承認)"]
 ```
 
 ## 1. フィールドプロトコル

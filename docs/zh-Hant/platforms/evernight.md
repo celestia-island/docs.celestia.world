@@ -4,19 +4,19 @@ Evernight 是工業邊緣：一個會講各種現場協定（Modbus、S7comm、M
 
 ## 架構一覽
 
-```text
-現場：PLC / MCU / 感測器（Modbus、S7comm、MC、EtherCAT、CAN、OPC UA、…）
-        ▼
-   evernight（邊緣節點）
-   ├─ 協定轉接器：輪詢 → 解碼 → 帶型別的讀值
-   ├─ 警報引擎：閾值規則 → 觸發事件
-   ├─ 時間序列：帶雙時間戳的緩衝讀值
-   ├─ 錄製/重播：環形緩衝 → 分段儲存 → 重播注入
-   ├─ 模型伺服器管理器：部署 ollama/whisper/vLLM（GPU 優先）
-   └─ 北向：Unix-socket JSON-RPC 觸發 → entelecheia
-         │
-         ▼
-   scepter（智能體、工業工作流、寫入核准）
+```mermaid
+flowchart TD
+    C["現場：PLC / MCU / 感測器（Modbus、S7comm、MC、EtherCAT、CAN、OPC UA、…）"]
+    subgraph G["evernight（邊緣節點）"]
+        N0["協定轉接器：輪詢 → 解碼 → 帶型別的讀值"]
+        N1["警報引擎：閾值規則 → 觸發事件"]
+        N2["時間序列：帶雙時間戳的緩衝讀值"]
+        N3["錄製/重播：環形緩衝 → 分段儲存 → 重播注入"]
+        N4["模型伺服器管理器：部署 ollama/whisper/vLLM（GPU 優先）"]
+        N5["北向：Unix-socket JSON-RPC 觸發 → entelecheia"]
+    end
+    C --> G
+    G --> B["scepter（智能體、工業工作流、寫入核准）"]
 ```
 
 ## 1. 現場協定

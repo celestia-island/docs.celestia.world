@@ -9,17 +9,17 @@ long terme et clusters multi-nœuds.
 
 ## L'architecture en un coup d'œil
 
-```text
-shittim-chest / tout client OpenAI
-         │  /v1/chat/completions (clé API Bearer)
-         ▼
-    Passerelle Arona (node-2:8420)
-    ├─ Routeur : alias → équilibrage de charge au moindre nombre de requêtes en cours entre les backends
-    ├─ Passerelle mémoire : injection du rappel → chat → réécriture (épisodes)
-    └─ Plan de contrôle des agents (/ws/agent) ──► arona-agent sur les nœuds GPU
-         │
-         ▼
-    Backends : ollama · externes (compatibles OpenAI) · moteurs déployés par agent
+```mermaid
+flowchart TD
+    C["shittim-chest / tout client OpenAI"]
+    subgraph G["Passerelle Arona (node-2:8420)"]
+        N0["Routeur : alias → équilibrage de charge au moindre nombre de requêtes en cours entre les backends"]
+        N1["Passerelle mémoire : injection du rappel → chat → réécriture (épisodes)"]
+        N2["Plan de contrôle des agents (/ws/agent)"]
+    end
+    C -->|"/v1/chat/completions (clé API Bearer)"| G
+    N2 --> T["arona-agent sur les nœuds GPU"]
+    G --> B["Backends : ollama · externes (compatibles OpenAI) · moteurs déployés par agent"]
 ```
 
 Tout le trafic de gestion (tableau de bord, agents, mémoire) passe par

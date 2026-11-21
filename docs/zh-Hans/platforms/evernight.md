@@ -4,19 +4,19 @@ Evernight 是工业边缘：一个跨平台 broker，会说现场协议（Modbus
 
 ## 架构一览
 
-```text
-现场：PLC / MCU / 传感器（Modbus、S7comm、MC、EtherCAT、CAN、OPC UA、…）
-        ▼
-   evernight（边缘节点）
-   ├─ 协议适配器：轮询 → 解码 → 类型化读数
-   ├─ 告警引擎：阈值规则 → 触发事件
-   ├─ 时序：双时间戳缓冲读数
-   ├─ 录制/回放：环形缓冲 → 分段落盘 → 回放注入
-   ├─ 模型服务器管理：部署 ollama/whisper/vLLM（GPU 优先）
-   └─ 北向：Unix socket JSON-RPC 触发 → entelecheia
-        │
-        ▼
-   scepter（agent、工业工作流、写入审批）
+```mermaid
+flowchart TD
+    C["现场：PLC / MCU / 传感器（Modbus、S7comm、MC、EtherCAT、CAN、OPC UA、…）"]
+    subgraph G["evernight（边缘节点）"]
+        N0["协议适配器：轮询 → 解码 → 类型化读数"]
+        N1["告警引擎：阈值规则 → 触发事件"]
+        N2["时序：双时间戳缓冲读数"]
+        N3["录制/回放：环形缓冲 → 分段落盘 → 回放注入"]
+        N4["模型服务器管理：部署 ollama/whisper/vLLM（GPU 优先）"]
+        N5["北向：Unix socket JSON-RPC 触发 → entelecheia"]
+    end
+    C --> G
+    G --> B["scepter（agent、工业工作流、写入审批）"]
 ```
 
 ## 1. 现场协议

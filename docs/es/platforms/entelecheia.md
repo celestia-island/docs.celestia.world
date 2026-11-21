@@ -9,17 +9,18 @@ búsqueda, conocimiento y conexiones.
 
 ## Arquitectura de un vistazo
 
-```text
-Clientes: Arona (pasarela) · Shittim Chest (chat/paneles) · TUI/CLI
-        │  JSON-RPC 2.0 sobre WebSocket (token o clave de API)
-        ▼
-   runtime scepter (node-3:8424)
-   ├─ Gestor de agentes: almas L1 (PhiLia, Skopeo, Hubris, Kalos, …)
-   ├─ Cadenas de habilidades: canalizaciones de LLM + llamadas a herramientas con precarga RAG
-   ├─ PhiLia: memoria a largo plazo (vectorial + grafo, respaldada por pgvector)
-   ├─ ApoRia: base de conocimiento + índice de espacios de trabajo (búsqueda semántica)
-   ├─ OreXis: compuertas de política / seguridad sobre la ejecución de herramientas
-   └─ Reflexión: almacén de lecciones reinyectado en los prompts
+```mermaid
+flowchart TD
+    C["Clientes: Arona (pasarela) · Shittim Chest (chat/paneles) · TUI/CLI"]
+    subgraph G["runtime scepter (node-3:8424)"]
+        N0["Gestor de agentes: almas L1 (PhiLia, Skopeo, Hubris, Kalos, …)"]
+        N1["Cadenas de habilidades: canalizaciones de LLM + llamadas a herramientas con precarga RAG"]
+        N2["PhiLia: memoria a largo plazo (vectorial + grafo, respaldada por pgvector)"]
+        N3["ApoRia: base de conocimiento + índice de espacios de trabajo (búsqueda semántica)"]
+        N4["OreXis: compuertas de política / seguridad sobre la ejecución de herramientas"]
+        N5["Reflexión: almacén de lecciones reinyectado en los prompts"]
+    end
+    C -->|"JSON-RPC 2.0 sobre WebSocket (token o clave de API)"| G
 ```
 
 ## 1. Agentes (almas)

@@ -9,17 +9,17 @@ Arona はプラットフォームのコントロールプレーンです: モデ
 
 ## アーキテクチャの概観
 
-```text
-shittim-chest / 任意の OpenAI クライアント
-        │  /v1/chat/completions (Bearer API キー)
-        ▼
-   Arona ゲートウェイ (node-2:8420)
-   ├─ ルータ: エイリアス → バックエンド横断の least-count ロードバランシング
-   ├─ メモリゲートウェイ: リコール注入 → チャット → 書き戻し (エピソード)
-   └─ エージェントコントロールプレーン (/ws/agent) ──► GPU ノード上の arona-agent
-        │
-        ▼
-   バックエンド: ollama · 外部 (OpenAI 互換) · エージェントデプロイのエンジン
+```mermaid
+flowchart TD
+    C["shittim-chest / 任意の OpenAI クライアント"]
+    subgraph G["Arona ゲートウェイ (node-2:8420)"]
+        N0["ルータ: エイリアス → バックエンド横断の least-count ロードバランシング"]
+        N1["メモリゲートウェイ: リコール注入 → チャット → 書き戻し (エピソード)"]
+        N2["エージェントコントロールプレーン (/ws/agent)"]
+    end
+    C -->|"/v1/chat/completions (Bearer API キー)"| G
+    N2 --> T["GPU ノード上の arona-agent"]
+    G --> B["バックエンド: ollama · 外部 (OpenAI 互換) · エージェントデプロイのエンジン"]
 ```
 
 すべての管理トラフィック（ダッシュボード、エージェント、メモリ）は

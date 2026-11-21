@@ -9,17 +9,17 @@ Multi-Knoten-Cluster.
 
 ## Architektur auf einen Blick
 
-```text
-shittim-chest / jeder OpenAI-Client
-        │  /v1/chat/completions (Bearer API key)
-        ▼
-   Arona-Gateway (node-2:8420)
-   ├─ Router: Aliase → Least-Count-Lastverteilung über Backends
-   ├─ Memory-Gateway: Recall-Injektion → Chat → Writeback (Episoden)
-   └─ Agenten-Kontrollebene (/ws/agent) ──► arona-agent auf GPU-Knoten
-        │
-        ▼
-   Backends: ollama · external (OpenAI-kompatibel) · agenten-bereitgestellte Engines
+```mermaid
+flowchart TD
+    C["shittim-chest / jeder OpenAI-Client"]
+    subgraph G["Arona-Gateway (node-2:8420)"]
+        N0["Router: Aliase → Least-Count-Lastverteilung über Backends"]
+        N1["Memory-Gateway: Recall-Injektion → Chat → Writeback (Episoden)"]
+        N2["Agenten-Kontrollebene (/ws/agent)"]
+    end
+    C -->|"/v1/chat/completions (Bearer API key)"| G
+    N2 --> T["arona-agent auf GPU-Knoten"]
+    G --> B["Backends: ollama · external (OpenAI-kompatibel) · agenten-bereitgestellte Engines"]
 ```
 
 Der gesamte Verwaltungsdatenverkehr (Dashboard, Agenten, Speicher) läuft über

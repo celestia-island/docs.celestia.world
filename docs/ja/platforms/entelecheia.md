@@ -9,17 +9,18 @@ Arona と Chest の能力の背後にこのプラットフォームが立って�
 
 ## アーキテクチャの概観
 
-```text
-クライアント: Arona (ゲートウェイ) · Shittim Chest (チャット/パネル) · TUI/CLI
-        │  WebSocket 上の JSON-RPC 2.0 (トークンまたは API キー)
-        ▼
-   scepter ランタイム (node-3:8424)
-   ├─ エージェントマネージャ: L1 ソウル (PhiLia, Skopeo, Hubris, Kalos, …)
-   ├─ スキルチェーン: RAG プリフェッチ付きの LLM + ツール呼び出しのパイプライン
-   ├─ PhiLia: 長期メモリ (ベクトル + グラフ、pgvector バック)
-   ├─ ApoRia: ナレッジベース + ワークスペースインデックス (セマンティック検索)
-   ├─ OreXis: ツール実行へのポリシー/安全ゲート
-   └─ リフレクション: レッスンストアをプロンプトへ再注入
+```mermaid
+flowchart TD
+    C["クライアント: Arona (ゲートウェイ) · Shittim Chest (チャット/パネル) · TUI/CLI"]
+    subgraph G["scepter ランタイム (node-3:8424)"]
+        N0["エージェントマネージャ: L1 ソウル (PhiLia, Skopeo, Hubris, Kalos, …)"]
+        N1["スキルチェーン: RAG プリフェッチ付きの LLM + ツール呼び出しのパイプライン"]
+        N2["PhiLia: 長期メモリ (ベクトル + グラフ、pgvector バック)"]
+        N3["ApoRia: ナレッジベース + ワークスペースインデックス (セマンティック検索)"]
+        N4["OreXis: ツール実行へのポリシー/安全ゲート"]
+        N5["リフレクション: レッスンストアをプロンプトへ再注入"]
+    end
+    C -->|"WebSocket 上の JSON-RPC 2.0 (トークンまたは API キー)"| G
 ```
 
 ## 1. エージェント（ソウル）

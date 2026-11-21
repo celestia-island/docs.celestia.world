@@ -8,19 +8,19 @@ modèles sur le nœud (ollama / whisper / vLLM) pour l'inférence en bord.
 
 ## L'architecture en un coup d'œil
 
-```text
-Terrain : PLC / MCU / capteurs (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)
-         ▼
-    evernight (nœud de bord)
-    ├─ Adaptateurs de protocoles : interrogation → décodage → lectures typées
-    ├─ Moteur d'alarmes : règles de seuil → événements déclencheurs
-    ├─ Séries temporelles : lectures mises en tampon à double horodatage
-    ├─ Enregistrement/relecture : tampon circulaire → stockage segmenté → injection de relecture
-    ├─ Gestionnaire de serveurs de modèles : déploie ollama/whisper/vLLM (GPU d'abord)
-    └─ Nord (northbound) : déclencheurs JSON-RPC par socket Unix → entelecheia
-         │
-         ▼
-    scepter (agents, flux de travail industriels, approbation d'écriture)
+```mermaid
+flowchart TD
+    C["Terrain : PLC / MCU / capteurs (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)"]
+    subgraph G["evernight (nœud de bord)"]
+        N0["Adaptateurs de protocoles : interrogation → décodage → lectures typées"]
+        N1["Moteur d'alarmes : règles de seuil → événements déclencheurs"]
+        N2["Séries temporelles : lectures mises en tampon à double horodatage"]
+        N3["Enregistrement/relecture : tampon circulaire → stockage segmenté → injection de relecture"]
+        N4["Gestionnaire de serveurs de modèles : déploie ollama/whisper/vLLM (GPU d'abord)"]
+        N5["Nord (northbound) : déclencheurs JSON-RPC par socket Unix → entelecheia"]
+    end
+    C --> G
+    G --> B["scepter (agents, flux de travail industriels, approbation d'écriture)"]
 ```
 
 ## 1. Protocoles de terrain

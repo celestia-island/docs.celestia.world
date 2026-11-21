@@ -4,17 +4,18 @@ Entelecheia 是智能體平台：編排專精智能體（「靈魂」）的 scep
 
 ## 架構一覽
 
-```text
-用戶端：Arona（閘道）· Shittim Chest（聊天/面板）· TUI/CLI
-        │  WebSocket 上的 JSON-RPC 2.0（token 或 API 金鑰）
-        ▼
-   scepter 執行環境（node-3:8424）
-   ├─ 智能體管理器：L1 靈魂（PhiLia、Skopeo、Hubris、Kalos、…）
-   ├─ 技能鏈：LLM + 工具呼叫的管線，附 RAG 預取
-   ├─ PhiLia：長期記憶（向量 + 圖，pgvector 支撐）
-   ├─ ApoRia：知識庫 + 工作區索引（語意搜尋）
-   ├─ OreXis：工具執行上的原則/安全閘門
-   └─ 反思：教訓儲存重新注入提示詞
+```mermaid
+flowchart TD
+    C["用戶端：Arona（閘道）· Shittim Chest（聊天/面板）· TUI/CLI"]
+    subgraph G["scepter 執行環境（node-3:8424）"]
+        N0["智能體管理器：L1 靈魂（PhiLia、Skopeo、Hubris、Kalos、…）"]
+        N1["技能鏈：LLM + 工具呼叫的管線，附 RAG 預取"]
+        N2["PhiLia：長期記憶（向量 + 圖，pgvector 支撐）"]
+        N3["ApoRia：知識庫 + 工作區索引（語意搜尋）"]
+        N4["OreXis：工具執行上的原則/安全閘門"]
+        N5["反思：教訓儲存重新注入提示詞"]
+    end
+    C -->|"WebSocket 上的 JSON-RPC 2.0（token 或 API 金鑰）"| G
 ```
 
 ## 1. 智能體（靈魂）

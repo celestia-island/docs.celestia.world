@@ -8,19 +8,18 @@ Arona에서, 에이전트·패널·산업 워크플로는 entelecheia의 scepter
 
 ## 한눈에 보는 아키텍처
 
-```text
-사용자
- │  데스크톱 앱 · 웹 UI · 12+ IM 채널 (discord/slack/matrix/lark/…)
- ▼
-Shittim Chest 코어 (node-2:8425)
- ├─ 채팅: Postgres에 유지되는 대화, SSE/WS 스트리밍
- ├─ 패널: 데이터 그리드 / 미디어 파이프라인 / 3D 트윈 (패널 엔진)
- ├─ 미디어 파이프라인: LLM 비전 검토, 이미지 생성, 3D 생성 (스텁)
- ├─ 채널 브리지: 양방향 IM ↔ 코어 (웹훅 + WS)
- └─ RPC 브리지 → scepter (에이전트, 시맨틱 검색, 지식 베이스)
-        │
-        ▼
-Arona (모델, 메모리) · scepter (에이전트, 패널, 검색)
+```mermaid
+flowchart TD
+    C["사용자"]
+    subgraph G["Shittim Chest 코어 (node-2:8425)"]
+        N0["채팅: Postgres에 유지되는 대화, SSE/WS 스트리밍"]
+        N1["패널: 데이터 그리드 / 미디어 파이프라인 / 3D 트윈 (패널 엔진)"]
+        N2["미디어 파이프라인: LLM 비전 검토, 이미지 생성, 3D 생성 (스텁)"]
+        N3["채널 브리지: 양방향 IM ↔ 코어 (웹훅 + WS)"]
+        N4["RPC 브리지 → scepter (에이전트, 시맨틱 검색, 지식 베이스)"]
+    end
+    C -->|"데스크톱 앱 · 웹 UI · 12+ IM 채널 (discord/slack/matrix/lark/…)"| G
+    G --> B["Arona (모델, 메모리) · scepter (에이전트, 패널, 검색)"]
 ```
 
 ## 1. 채팅

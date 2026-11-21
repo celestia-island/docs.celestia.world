@@ -4,17 +4,17 @@ Arona 是平台控制平面：模型网关、自部署运行时管理与 Web 控
 
 ## 架构一览
 
-```text
-shittim-chest / 任意 OpenAI 兼容客户端
-        │  /v1/chat/completions（Bearer API key）
-        ▼
-   Arona 网关（node-2:8420）
-   ├─ Router：别名 → 后端间最少计数负载均衡
-   ├─ 记忆网关：召回注入 → 聊天 → 写回（episode）
-   └─ Agent 控制面（/ws/agent）──► GPU 节点上的 arona-agent
-        │
-        ▼
-   后端：ollama · external（OpenAI 兼容）· agent 部署的引擎
+```mermaid
+flowchart TD
+    C["shittim-chest / 任意 OpenAI 兼容客户端"]
+    subgraph G["Arona 网关（node-2:8420）"]
+        N0["Router：别名 → 后端间最少计数负载均衡"]
+        N1["记忆网关：召回注入 → 聊天 → 写回（episode）"]
+        N2["Agent 控制面（/ws/agent）"]
+    end
+    C -->|"/v1/chat/completions（Bearer API key）"| G
+    N2 --> T["GPU 节点上的 arona-agent"]
+    G --> B["后端：ollama · external（OpenAI 兼容）· agent 部署的引擎"]
 ```
 
 所有管理流量（面板、agent、记忆）走 WebSocket + JSON-RPC 2.0；唯一的 REST 面是 OpenAI 兼容的 `/v1/*` 端点。

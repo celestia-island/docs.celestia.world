@@ -4,17 +4,18 @@ Entelecheia 是 agent 平台：scepter 运行时编排专门化 agent（"souls"�
 
 ## 架构一览
 
-```text
-客户端：Arona（网关）· Shittim Chest（聊天/面板）· TUI/CLI
-        │  WebSocket 上的 JSON-RPC 2.0（token 或 API key）
-        ▼
-   scepter 运行时（node-3:8424）
-   ├─ Agent manager：L1 souls（PhiLia、Skopeo、Hubris、Kalos、…）
-   ├─ Skill chains：LLM + 工具调用的管线，带 RAG 预取
-   ├─ PhiLia：长期记忆（向量 + 图，pgvector 持久化）
-   ├─ ApoRia：知识库 + workspace 索引（语义搜索）
-   ├─ OreXis：工具执行的策略/安全门
-   └─ Reflection：教训库重新注入提示词
+```mermaid
+flowchart TD
+    C["客户端：Arona（网关）· Shittim Chest（聊天/面板）· TUI/CLI"]
+    subgraph G["scepter 运行时（node-3:8424）"]
+        N0["Agent manager：L1 souls（PhiLia、Skopeo、Hubris、Kalos、…）"]
+        N1["Skill chains：LLM + 工具调用的管线，带 RAG 预取"]
+        N2["PhiLia：长期记忆（向量 + 图，pgvector 持久化）"]
+        N3["ApoRia：知识库 + workspace 索引（语义搜索）"]
+        N4["OreXis：工具执行的策略/安全门"]
+        N5["Reflection：教训库重新注入提示词"]
+    end
+    C -->|"WebSocket 上的 JSON-RPC 2.0（token 或 API key）"| G
 ```
 
 ## 1. Agents（souls）

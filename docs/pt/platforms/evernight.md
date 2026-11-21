@@ -8,19 +8,19 @@ modelo no nó (ollama / whisper / vLLM) para inferência na borda.
 
 ## Arquitetura num relance
 
-```text
-Campo: PLC / MCU / sensores (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)
-        ▼
-   evernight (nó de borda)
-   ├─ Adaptadores de protocolo: polling → decodificação → leituras tipadas
-   ├─ Motor de alarmes: regras de limiar → eventos de gatilho
-   ├─ Séries temporais: leituras em buffer com timestamps duplos
-   ├─ Gravação/replay: ring buffer → armazenamento segmentado → injeção de replay
-   ├─ Gerenciador de servidores de modelo: implanta ollama/whisper/vLLM (GPU primeiro)
-   └─ Northbound: gatilhos JSON-RPC por Unix-socket → entelecheia
-        │
-        ▼
-   scepter (agentes, fluxos de trabalho industriais, aprovação de escrita)
+```mermaid
+flowchart TD
+    C["Campo: PLC / MCU / sensores (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)"]
+    subgraph G["evernight (nó de borda)"]
+        N0["Adaptadores de protocolo: polling → decodificação → leituras tipadas"]
+        N1["Motor de alarmes: regras de limiar → eventos de gatilho"]
+        N2["Séries temporais: leituras em buffer com timestamps duplos"]
+        N3["Gravação/replay: ring buffer → armazenamento segmentado → injeção de replay"]
+        N4["Gerenciador de servidores de modelo: implanta ollama/whisper/vLLM (GPU primeiro)"]
+        N5["Northbound: gatilhos JSON-RPC por Unix-socket → entelecheia"]
+    end
+    C --> G
+    G --> B["scepter (agentes, fluxos de trabalho industriais, aprovação de escrita)"]
 ```
 
 ## 1. Protocolos de campo

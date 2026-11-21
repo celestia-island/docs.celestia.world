@@ -9,19 +9,18 @@ chat, panneaux, canaux, recherche et authentification.
 
 ## L'architecture en un coup d'œil
 
-```text
-Vous
- │  application de bureau · web UI · 12+ canaux IM (discord/slack/matrix/lark/…)
- ▼
- Cœur de Shittim Chest (node-2:8425)
-  ├─ Chat : conversations persistées dans Postgres, diffusées en SSE/WS
-  ├─ Panneaux : grille de données / pipeline média / jumeau 3D (moteur de panneaux)
-  ├─ Pipeline média : revue visuelle LLM, génération d'images, gén 3D (stub)
-  ├─ Pont de canaux : IM ↔ cœur bidirectionnel (webhooks + WS)
-  └─ Pont RPC → scepter (agents, recherche sémantique, base de connaissances)
-         │
-         ▼
- Arona (modèles, mémoire) · scepter (agents, panneaux, recherche)
+```mermaid
+flowchart TD
+    C["Vous"]
+    subgraph G["Cœur de Shittim Chest (node-2:8425)"]
+        N0["Chat : conversations persistées dans Postgres, diffusées en SSE/WS"]
+        N1["Panneaux : grille de données / pipeline média / jumeau 3D (moteur de panneaux)"]
+        N2["Pipeline média : revue visuelle LLM, génération d'images, gén 3D (stub)"]
+        N3["Pont de canaux : IM ↔ cœur bidirectionnel (webhooks + WS)"]
+        N4["Pont RPC → scepter (agents, recherche sémantique, base de connaissances)"]
+    end
+    C -->|"application de bureau · web UI · 12+ canaux IM (discord/slack/matrix/lark/…)"| G
+    G --> B["Arona (modèles, mémoire) · scepter (agents, panneaux, recherche)"]
 ```
 
 ## 1. Chat

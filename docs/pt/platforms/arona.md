@@ -9,17 +9,17 @@ multinó.
 
 ## Arquitetura num relance
 
-```text
-shittim-chest / qualquer cliente OpenAI
-        │  /v1/chat/completions (Bearer API key)
-        ▼
-   gateway Arona (node-2:8420)
-   ├─ Router: aliases → balanceamento least-count entre backends
-   ├─ Memory Gateway: recall injetado → chat → writeback (episódios)
-   └─ Plano de controle de agentes (/ws/agent) ──► arona-agent em nós GPU
-        │
-        ▼
-   Backends: ollama · externos (compatíveis com OpenAI) · engines implantadas por agentes
+```mermaid
+flowchart TD
+    C["shittim-chest / qualquer cliente OpenAI"]
+    subgraph G["gateway Arona (node-2:8420)"]
+        N0["Router: aliases → balanceamento least-count entre backends"]
+        N1["Memory Gateway: recall injetado → chat → writeback (episódios)"]
+        N2["Plano de controle de agentes (/ws/agent)"]
+    end
+    C -->|"/v1/chat/completions (Bearer API key)"| G
+    N2 --> T["arona-agent em nós GPU"]
+    G --> B["Backends: ollama · externos (compatíveis com OpenAI) · engines implantadas por agentes"]
 ```
 
 Todo o tráfego de gerenciamento (dashboard, agentes, memória) roda sobre

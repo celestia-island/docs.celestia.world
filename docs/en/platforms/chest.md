@@ -8,19 +8,18 @@ guide is organized by capability: chat, panels, channels, search and auth.
 
 ## Architecture at a glance
 
-```text
-You
- │  desktop app · web UI · 12+ IM channels (discord/slack/matrix/lark/…)
- ▼
-Shittim Chest core (node-2:8425)
- ├─ Chat: conversations persisted in Postgres, streamed SSE/WS
- ├─ Panels: data grid / media pipeline / 3D twin (panel engine)
- ├─ Media pipeline: LLM vision review, image generation, 3D gen (stub)
- ├─ Channel bridge: bidirectional IM ↔ core (webhooks + WS)
- └─ RPC bridge → scepter (agents, semantic search, knowledge base)
-        │
-        ▼
-Arona (models, memory) · scepter (agents, panels, search)
+```mermaid
+flowchart TD
+    C["You"]
+    subgraph G["Shittim Chest core (node-2:8425)"]
+        N0["Chat: conversations persisted in Postgres, streamed SSE/WS"]
+        N1["Panels: data grid / media pipeline / 3D twin (panel engine)"]
+        N2["Media pipeline: LLM vision review, image generation, 3D gen (stub)"]
+        N3["Channel bridge: bidirectional IM ↔ core (webhooks + WS)"]
+        N4["RPC bridge → scepter (agents, semantic search, knowledge base)"]
+    end
+    C -->|"desktop app · web UI · 12+ IM channels (discord/slack/matrix/lark/…)"| G
+    G --> B["Arona (models, memory) · scepter (agents, panels, search)"]
 ```
 
 ## 1. Chat

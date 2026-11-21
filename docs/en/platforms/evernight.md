@@ -8,19 +8,19 @@ whisper / vLLM) for edge inference.
 
 ## Architecture at a glance
 
-```text
-Field: PLC / MCU / sensors (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)
-        ▼
-   evernight (edge node)
-   ├─ Protocol adapters: poll → decode → typed readings
-   ├─ Alarm engine: threshold rules → trigger events
-   ├─ Time series: buffered readings with double timestamps
-   ├─ Record/replay: ring buffer → segmented storage → replay injection
-   ├─ Model server manager: deploy ollama/whisper/vLLM (GPU-first)
-   └─ Northbound: Unix-socket JSON-RPC triggers → entelecheia
-        │
-        ▼
-   scepter (agents, industrial workflows, write approval)
+```mermaid
+flowchart TD
+    C["Field: PLC / MCU / sensors (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)"]
+    subgraph G["evernight (edge node)"]
+        N0["Protocol adapters: poll → decode → typed readings"]
+        N1["Alarm engine: threshold rules → trigger events"]
+        N2["Time series: buffered readings with double timestamps"]
+        N3["Record/replay: ring buffer → segmented storage → replay injection"]
+        N4["Model server manager: deploy ollama/whisper/vLLM (GPU-first)"]
+        N5["Northbound: Unix-socket JSON-RPC triggers → entelecheia"]
+    end
+    C --> G
+    G --> B["scepter (agents, industrial workflows, write approval)"]
 ```
 
 ## 1. Field protocols

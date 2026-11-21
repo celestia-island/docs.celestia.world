@@ -9,17 +9,17 @@ Arona — это управляющая плоскость платформы: �
 
 ## Архитектура одним взглядом
 
-```text
-shittim-chest / любой OpenAI-клиент
-        │  /v1/chat/completions (Bearer API key)
-        ▼
-   Шлюз Arona (node-2:8420)
-   ├─ Роутер: алиасы → балансировка least-count между бэкендами
-   ├─ Шлюз памяти: инъекция recall → чат → writeback (эпизоды)
-   └─ Контрольная плоскость агентов (/ws/agent) ──► arona-agent на GPU-узлах
-        │
-        ▼
-   Бэкенды: ollama · external (OpenAI-совместимые) · движки, развёрнутые агентами
+```mermaid
+flowchart TD
+    C["shittim-chest / любой OpenAI-клиент"]
+    subgraph G["Шлюз Arona (node-2:8420)"]
+        N0["Роутер: алиасы → балансировка least-count между бэкендами"]
+        N1["Шлюз памяти: инъекция recall → чат → writeback (эпизоды)"]
+        N2["Контрольная плоскость агентов (/ws/agent)"]
+    end
+    C -->|"/v1/chat/completions (Bearer API key)"| G
+    N2 --> T["arona-agent на GPU-узлах"]
+    G --> B["Бэкенды: ollama · external (OpenAI-совместимые) · движки, развёрнутые агентами"]
 ```
 
 Весь управляющий трафик (дашборд, агенты, память) идёт поверх WebSocket с

@@ -27,7 +27,6 @@ custom language switcher supporting 11 languages.
 
 ```text
 docs/
-├── logo.webp                 # Hub logo
 ├── lagrange.toml             # Site config and language order
 ├── theme/                    # Shared lang-switcher JS/CSS
 │   ├── lang-switcher.js

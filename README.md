@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
-<p align="center"><img src="https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/docs/logo.webp" alt="docs.celestia.world" width="200" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/celestia-island/celestia-island.github.io/main/res/logos/entelecheia.webp" alt="docs.celestia.world" width="200" /></p>
 
 <h1 align="center">docs.celestia.world</h1>
 
@@ -27,7 +27,6 @@ custom language switcher supporting 11 languages.
 
 ```text
 docs/
-├── logo.webp                 # Hub logo
 ├── lagrange.toml             # Site config and language order
 ├── theme/                    # Shared lang-switcher JS/CSS
 │   ├── lang-switcher.js

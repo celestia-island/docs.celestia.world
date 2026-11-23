@@ -23,40 +23,41 @@ concurrency:
 
 jobs:
   build:
-    # Self-hosted farm: this is the hub's only publishing lane, and the
-    # GitHub-hosted tier has been unavailable org-wide since 2026-09-24
-    # (`_ledger/ci-state.md`), which left content changes undeployable while
-    # the sibling docs site had already moved to the farm for exactly this
-    # reason. Runs on master pushes and manual dispatch only (no PR-time
-    # runs since the 2026-11-06 trigger-policy rework).
-    runs-on: [self-hosted, linux, x64, local]
+    # GitHub-hosted: the hub wears the hikari webui shell, which is rendered
+    # at build time through a Node SSR pass over the lagrange webui bundle —
+    # that needs lagrange master (the v-tagged binaries predate the webui
+    # lane), its webui sources, and Node. The preinstalled shared binary this
+    # job used to rely on does not exist on any runner, so the site silently
+    # fell back to the legacy hand-rolled chrome; on the farm the install
+    # step additionally died on registry-mirror 502s. This is the same
+    # closed loop lagrange's own docs site ships with. Runs on master pushes
+    # and manual dispatch only (no PR-time runs since the 2026-11-06
+    # trigger-policy rework).
+    runs-on: ubuntu-latest
     timeout-minutes: 120
-    env:
-      # The org runners rewrite github.com/celestia-island/* to local bare
-      # mirrors. This repository has no mirror, and the lagrange fallback below
-      # installs from git, so talk to github.com directly (same reason the
-      # sibling docs site sets this).
-      GIT_CONFIG_COUNT: "0"
     steps:
       - uses: actions/checkout@v7
 
-      # lagrange is preinstalled at /mnt/work/runner-shared/lagrange (refreshed
-      # from git master when lagrange changes); the version is printed so a
-      # stale build is visible in the log. Fall back to a local cargo install
-      # when the shared binary is missing.
-      - name: Install lagrange
-        run: |
-          set -euo pipefail
-          if [ -x /mnt/work/runner-shared/lagrange/bin/lagrange ]; then
-            /mnt/work/runner-shared/lagrange/bin/lagrange --version
-            echo "/mnt/work/runner-shared/lagrange/bin" >> "$GITHUB_PATH"
-          else
-            cargo install lagrange-library --locked \
-              || cargo install --git https://github.com/celestia-island/lagrange --branch master lagrange-library
-          fi
+      - uses: actions/checkout@v7
+        with:
+          repository: celestia-island/lagrange
+          path: lagrange
 
-      - name: Build docs
-        run: lagrange build --src docs --out _site
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - run: pnpm --dir lagrange/packages/webui install --no-frozen-lockfile
+      - run: pnpm --dir lagrange/packages/webui build:docs:all
+      - name: Build docs through the hikari webui lane
+        run: >
+          cd lagrange
+          && LAGRANGE_SKIP_LIVE=1 cargo run --release -- build
+          --src "$GITHUB_WORKSPACE/docs" --out "$GITHUB_WORKSPACE/_site"
 
       - name: Set CNAME
         run: echo "docs.celestia.world" > _site/CNAME
@@ -68,7 +69,7 @@ jobs:
   deploy:
     needs: build
     if: github.ref == 'refs/heads/master'
-    runs-on: [self-hosted, linux, x64, local]
+    runs-on: ubuntu-latest
     timeout-minutes: 120
     environment:
       name: github-pages

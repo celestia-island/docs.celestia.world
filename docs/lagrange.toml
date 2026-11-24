@@ -1,10 +1,10 @@
 [site]
 title = "Celestia World Docs"
 description = "Documentation hub for the celestia-island ecosystem — philosophy, ecosystem map, and getting started."
-# 构建期输入（徽标唯一家 = celestia-island.github.io res/logos/celestia.webp 的副本；
-# favicon.svg 同为构建输入）。lagrange 也会在未配置时自动探测这些文件名。
+# 构建期输入（徽标唯一家 = celestia-island.github.io res/logos/celestia.webp 的副本）。
+# favicon 与品牌共用同一徽标文件；lagrange 也会在未配置时自动探测这些文件名。
 logo = "logo.webp"
-favicon = "favicon.svg"
+favicon = "logo.webp"
 
 cname = "docs.celestia.world"
 

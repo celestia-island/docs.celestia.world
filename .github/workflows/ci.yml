@@ -25,14 +25,13 @@ jobs:
   build:
     # GitHub-hosted: the hub wears the hikari webui shell, which is rendered
     # at build time through a Node SSR pass over the lagrange webui bundle —
-    # that needs lagrange master (the v-tagged binaries predate the webui
-    # lane), its webui sources, and Node. The preinstalled shared binary this
-    # job used to rely on does not exist on any runner, so the site silently
-    # fell back to the legacy hand-rolled chrome; on the farm the install
-    # step additionally died on registry-mirror 502s. This is the same
-    # closed loop lagrange's own docs site ships with. Runs on master pushes
-    # and manual dispatch only (no PR-time runs since the 2026-11-06
-    # trigger-policy rework).
+    # that needs lagrange's SOURCES (the bundle is not an npm package), its
+    # webui build, and Node. Pinned to the released tag: floating master made
+    # every engine regression land on the live hub before it was reviewed,
+    # and the release line is what the project sites install from crates.io.
+    # This is the same closed loop lagrange's own docs site ships with. Runs
+    # on master pushes and manual dispatch only (no PR-time runs since the
+    # 2026-11-06 trigger-policy rework).
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -41,6 +40,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           repository: celestia-island/lagrange
+          ref: v0.3.0
           path: lagrange
 
       - uses: dtolnay/rust-toolchain@stable

@@ -10,14 +10,14 @@ Arona هو مستوى تحكّم المنصة: بوابة نماذج، ومدي�
 ```mermaid
 flowchart TD
     C["shittim-chest / any OpenAI client"]
-    subgraph G["Arona gateway (node-2:8420)"]
+    subgraph G["Arona gateway （node-2:8420）"]
         N0["Router: aliases → least-count load balancing across backends"]
-        N1["Memory Gateway: recall inject → chat → writeback (episodes)"]
-        N2["Agent control plane (/ws/agent)"]
+        N1["Memory Gateway: recall inject → chat → writeback （episodes）"]
+        N2["Agent control plane （/ws/agent）"]
     end
-    C -->|"/v1/chat/completions (Bearer API key)"| G
+    C -->|"/v1/chat/completions （Bearer API key）"| G
     N2 --> T["arona-agent on GPU nodes"]
-    G --> B["Backends: ollama · external (OpenAI-compatible) · agent-deployed engines"]
+    G --> B["Backends: ollama · external （OpenAI-compatible） · agent-deployed engines"]
 ```
 
 تجري كل حركة الإدارة (اللوحة، الوكلاء، الذاكرة) عبر WebSocket برسائل

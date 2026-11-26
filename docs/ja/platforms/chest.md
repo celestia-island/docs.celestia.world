@@ -11,15 +11,15 @@ Shittim Chest はユーザーの顔です: チャット、パネル、マルチ�
 ```mermaid
 flowchart TD
     C["あなた"]
-    subgraph G["Shittim Chest コア (node-2:8425)"]
+    subgraph G["Shittim Chest コア （node-2:8425）"]
         N0["チャット: 会話は Postgres に永続化、SSE/WS でストリーミング"]
-        N1["パネル: データグリッド / メディアパイプライン / 3D ツイン (パネルエンジン)"]
-        N2["メディアパイプライン: LLM ビジョンレビュー、画像生成、3D 生成 (スタブ)"]
-        N3["チャネルブリッジ: 双方向 IM ↔ コア (webhooks + WS)"]
-        N4["RPC ブリッジ → scepter (エージェント、セマンティック検索、ナレッジベース)"]
+        N1["パネル: データグリッド / メディアパイプライン / 3D ツイン （パネルエンジン）"]
+        N2["メディアパイプライン: LLM ビジョンレビュー、画像生成、3D 生成 （スタブ）"]
+        N3["チャネルブリッジ: 双方向 IM ↔ コア （webhooks + WS）"]
+        N4["RPC ブリッジ → scepter （エージェント、セマンティック検索、ナレッジベース）"]
     end
-    C -->|"デスクトップアプリ · Web UI · 12+ の IM チャネル (discord/slack/matrix/lark/…)"| G
-    G --> B["Arona (モデル、メモリ) · scepter (エージェント、パネル、検索)"]
+    C -->|"デスクトップアプリ · Web UI · 12+ の IM チャネル （discord/slack/matrix/lark/…）"| G
+    G --> B["Arona （モデル、メモリ） · scepter （エージェント、パネル、検索）"]
 ```
 
 ## 1. チャット

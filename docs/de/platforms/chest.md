@@ -11,15 +11,15 @@ Fähigkeiten gegliedert: Chat, Panels, Kanäle, Suche und Auth.
 ```mermaid
 flowchart TD
     C["Sie"]
-    subgraph G["Shittim-Chest-Kern (node-2:8425)"]
+    subgraph G["Shittim-Chest-Kern （node-2:8425）"]
         N0["Chat: in Postgres persistierte Gespräche, Streaming über SSE/WS"]
-        N1["Panels: Datengitter / Medien-Pipeline / 3D-Zwilling (Panel-Engine)"]
-        N2["Medien-Pipeline: LLM-Vision-Review, Bildgenerierung, 3D-Gen (Stub)"]
-        N3["Kanal-Bridge: bidirektional IM ↔ Kern (Webhooks + WS)"]
-        N4["RPC-Bridge → scepter (Agenten, semantische Suche, Wissensbasis)"]
+        N1["Panels: Datengitter / Medien-Pipeline / 3D-Zwilling （Panel-Engine）"]
+        N2["Medien-Pipeline: LLM-Vision-Review, Bildgenerierung, 3D-Gen （Stub）"]
+        N3["Kanal-Bridge: bidirektional IM ↔ Kern （Webhooks + WS）"]
+        N4["RPC-Bridge → scepter （Agenten, semantische Suche, Wissensbasis）"]
     end
-    C -->|"Desktop-App · Web-UI · 12+ IM-Kanäle (discord/slack/matrix/lark/…)"| G
-    G --> B["Arona (Modelle, Speicher) · scepter (Agenten, Panels, Suche)"]
+    C -->|"Desktop-App · Web-UI · 12+ IM-Kanäle （discord/slack/matrix/lark/…）"| G
+    G --> B["Arona （Modelle, Speicher） · scepter （Agenten, Panels, Suche）"]
 ```
 
 ## 1. Chat

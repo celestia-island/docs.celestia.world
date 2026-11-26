@@ -12,14 +12,14 @@ multinodo.
 ```mermaid
 flowchart TD
     C["shittim-chest / cualquier cliente OpenAI"]
-    subgraph G["Pasarela Arona (node-2:8420)"]
+    subgraph G["Pasarela Arona （node-2:8420）"]
         N0["Router: alias → balanceo de carga por recuento mínimo entre backends"]
-        N1["Pasarela de memoria: inyección de recuerdo → chat → reescritura (episodios)"]
-        N2["Plano de control de agentes (/ws/agent)"]
+        N1["Pasarela de memoria: inyección de recuerdo → chat → reescritura （episodios）"]
+        N2["Plano de control de agentes （/ws/agent）"]
     end
-    C -->|"/v1/chat/completions (clave de API Bearer)"| G
+    C -->|"/v1/chat/completions （clave de API Bearer）"| G
     N2 --> T["arona-agent en nodos GPU"]
-    G --> B["Backends: ollama · external (compatible con OpenAI) · motores desplegados por agentes"]
+    G --> B["Backends: ollama · external （compatible con OpenAI） · motores desplegados por agentes"]
 ```
 
 Todo el tráfico de gestión (panel, agentes, memoria) corre sobre WebSocket

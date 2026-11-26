@@ -11,14 +11,14 @@ Arona는 플랫폼의 컨트롤 플레인입니다: 모델 게이트웨이, 자�
 ```mermaid
 flowchart TD
     C["shittim-chest / 모든 OpenAI 클라이언트"]
-    subgraph G["Arona 게이트웨이 (node-2:8420)"]
+    subgraph G["Arona 게이트웨이 （node-2:8420）"]
         N0["라우터: 별칭 → 백엔드 전체에 걸친 최소 카운트 로드 밸런싱"]
-        N1["메모리 게이트웨이: 리콜 주입 → 채팅 → 라이트백 (에피소드)"]
-        N2["에이전트 컨트롤 플레인 (/ws/agent)"]
+        N1["메모리 게이트웨이: 리콜 주입 → 채팅 → 라이트백 （에피소드）"]
+        N2["에이전트 컨트롤 플레인 （/ws/agent）"]
     end
-    C -->|"/v1/chat/completions (Bearer API key)"| G
+    C -->|"/v1/chat/completions （Bearer API key）"| G
     N2 --> T["GPU 노드의 arona-agent"]
-    G --> B["백엔드: ollama · 외부 (OpenAI 호환) · 에이전트 배포 엔진"]
+    G --> B["백엔드: ollama · 외부 （OpenAI 호환） · 에이전트 배포 엔진"]
 ```
 
 모든 관리 트래픽(대시보드, 에이전트, 메모리)은 JSON-RPC 2.0 메시지를 실은

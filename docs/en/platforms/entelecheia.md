@@ -11,16 +11,16 @@ connections.
 
 ```mermaid
 flowchart TD
-    C["Clients: Arona (gateway) · Shittim Chest (chat/panels) · TUI/CLI"]
-    subgraph G["scepter runtime (node-3:8424)"]
-        N0["Agent manager: L1 souls (PhiLia, Skopeo, Hubris, Kalos, …)"]
+    C["Clients: Arona （gateway） · Shittim Chest （chat/panels） · TUI/CLI"]
+    subgraph G["scepter runtime （node-3:8424）"]
+        N0["Agent manager: L1 souls （PhiLia, Skopeo, Hubris, Kalos, …）"]
         N1["Skill chains: pipelines of LLM + tool calls with RAG prefetch"]
-        N2["PhiLia: long-term memory (vector + graph, pgvector-backed)"]
-        N3["ApoRia: knowledge base + workspace index (semantic search)"]
+        N2["PhiLia: long-term memory （vector + graph, pgvector-backed）"]
+        N3["ApoRia: knowledge base + workspace index （semantic search）"]
         N4["OreXis: policy / safety gates on tool execution"]
         N5["Reflection: lesson store re-injected into prompts"]
     end
-    C -->|"JSON-RPC 2.0 over WebSocket (token or API key)"| G
+    C -->|"JSON-RPC 2.0 over WebSocket （token or API key）"| G
 ```
 
 ## 1. Agents (souls)

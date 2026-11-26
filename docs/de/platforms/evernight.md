@@ -10,17 +10,17 @@ Modell-Server auf dem Knoten (ollama / whisper / vLLM) für die Edge-Inferenz.
 
 ```mermaid
 flowchart TD
-    C["Feld: PLC / MCU / Sensoren (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)"]
-    subgraph G["evernight (Edge-Knoten)"]
+    C["Feld: PLC / MCU / Sensoren （Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …）"]
+    subgraph G["evernight （Edge-Knoten）"]
         N0["Protokoll-Adapter: pollen → dekodieren → typisierte Messwerte"]
         N1["Alarm-Engine: Schwellwertregeln → Trigger-Ereignisse"]
         N2["Zeitreihen: gepufferte Messwerte mit doppelten Zeitstempeln"]
         N3["Record/Replay: Ringpuffer → segmentierte Speicherung → Replay-Injektion"]
-        N4["Modell-Server-Manager: ollama/whisper/vLLM bereitstellen (GPU zuerst)"]
+        N4["Modell-Server-Manager: ollama/whisper/vLLM bereitstellen （GPU zuerst）"]
         N5["Northbound: Unix-Socket-JSON-RPC-Trigger → entelecheia"]
     end
     C --> G
-    G --> B["scepter (Agenten, industrielle Workflows, Schreib-Freigabe)"]
+    G --> B["scepter （Agenten, industrielle Workflows, Schreib-Freigabe）"]
 ```
 
 ## 1. Feldprotokolle

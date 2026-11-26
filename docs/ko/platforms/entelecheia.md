@@ -9,16 +9,16 @@ scepter 런타임입니다. Arona와 Chest의 기능 뒤에는 이 플랫폼이 
 
 ```mermaid
 flowchart TD
-    C["클라이언트: Arona (게이트웨이) · Shittim Chest (채팅/패널) · TUI/CLI"]
-    subgraph G["scepter 런타임 (node-3:8424)"]
-        N0["에이전트 매니저: L1 소울 (PhiLia, Skopeo, Hubris, Kalos, …)"]
+    C["클라이언트: Arona （게이트웨이） · Shittim Chest （채팅/패널） · TUI/CLI"]
+    subgraph G["scepter 런타임 （node-3:8424）"]
+        N0["에이전트 매니저: L1 소울 （PhiLia, Skopeo, Hubris, Kalos, …）"]
         N1["스킬 체인: RAG 프리페치가 붙은 LLM + 도구 호출 파이프라인"]
-        N2["PhiLia: 장기 메모리 (벡터 + 그래프, pgvector 기반)"]
-        N3["ApoRia: 지식 베이스 + 워크스페이스 인덱스 (시맨틱 검색)"]
+        N2["PhiLia: 장기 메모리 （벡터 + 그래프, pgvector 기반）"]
+        N3["ApoRia: 지식 베이스 + 워크스페이스 인덱스 （시맨틱 검색）"]
         N4["OreXis: 도구 실행에 대한 정책 / 안전 게이트"]
         N5["성찰: 프롬프트에 재주입되는 레슨 저장소"]
     end
-    C -->|"WebSocket을 통한 JSON-RPC 2.0 (토큰 또는 API key)"| G
+    C -->|"WebSocket을 통한 JSON-RPC 2.0 （토큰 또는 API key）"| G
 ```
 
 ## 1. 에이전트 (소울)

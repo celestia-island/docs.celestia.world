@@ -12,14 +12,14 @@ Arona — это управляющая плоскость платформы: �
 ```mermaid
 flowchart TD
     C["shittim-chest / любой OpenAI-клиент"]
-    subgraph G["Шлюз Arona (node-2:8420)"]
+    subgraph G["Шлюз Arona （node-2:8420）"]
         N0["Роутер: алиасы → балансировка least-count между бэкендами"]
-        N1["Шлюз памяти: инъекция recall → чат → writeback (эпизоды)"]
-        N2["Контрольная плоскость агентов (/ws/agent)"]
+        N1["Шлюз памяти: инъекция recall → чат → writeback （эпизоды）"]
+        N2["Контрольная плоскость агентов （/ws/agent）"]
     end
-    C -->|"/v1/chat/completions (Bearer API key)"| G
+    C -->|"/v1/chat/completions （Bearer API key）"| G
     N2 --> T["arona-agent на GPU-узлах"]
-    G --> B["Бэкенды: ollama · external (OpenAI-совместимые) · движки, развёрнутые агентами"]
+    G --> B["Бэкенды: ollama · external （OpenAI-совместимые） · движки, развёрнутые агентами"]
 ```
 
 Весь управляющий трафик (дашборд, агенты, память) идёт поверх WebSocket с

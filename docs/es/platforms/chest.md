@@ -12,15 +12,15 @@ autenticación.
 ```mermaid
 flowchart TD
     C["Tú"]
-    subgraph G["Núcleo de Shittim Chest (node-2:8425)"]
+    subgraph G["Núcleo de Shittim Chest （node-2:8425）"]
         N0["Chat: conversaciones persistidas en Postgres, streaming SSE/WS"]
-        N1["Paneles: cuadrícula de datos / canalización de medios / gemelo 3D (motor de paneles)"]
-        N2["Canalización de medios: revisión de visión LLM, generación de imágenes, gen 3D (stub)"]
-        N3["Puente de canales: IM ↔ núcleo bidireccional (webhooks + WS)"]
-        N4["Puente RPC → scepter (agentes, búsqueda semántica, base de conocimiento)"]
+        N1["Paneles: cuadrícula de datos / canalización de medios / gemelo 3D （motor de paneles）"]
+        N2["Canalización de medios: revisión de visión LLM, generación de imágenes, gen 3D （stub）"]
+        N3["Puente de canales: IM ↔ núcleo bidireccional （webhooks + WS）"]
+        N4["Puente RPC → scepter （agentes, búsqueda semántica, base de conocimiento）"]
     end
-    C -->|"aplicación de escritorio · web UI · 12+ canales de IM (discord/slack/matrix/lark/…)"| G
-    G --> B["Arona (modelos, memoria) · scepter (agentes, paneles, búsqueda)"]
+    C -->|"aplicación de escritorio · web UI · 12+ canales de IM （discord/slack/matrix/lark/…）"| G
+    G --> B["Arona （modelos, memoria） · scepter （agentes, paneles, búsqueda）"]
 ```
 
 ## 1. Chat

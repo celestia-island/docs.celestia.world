@@ -11,16 +11,16 @@ connaissances et connexions.
 
 ```mermaid
 flowchart TD
-    C["Clients : Arona (passerelle) · Shittim Chest (chat/panneaux) · TUI/CLI"]
-    subgraph G["runtime scepter (node-3:8424)"]
-        N0["Gestionnaire d'agents : âmes L1 (PhiLia, Skopeo, Hubris, Kalos, …)"]
+    C["Clients : Arona （passerelle） · Shittim Chest （chat/panneaux） · TUI/CLI"]
+    subgraph G["runtime scepter （node-3:8424）"]
+        N0["Gestionnaire d'agents : âmes L1 （PhiLia, Skopeo, Hubris, Kalos, …）"]
         N1["Chaînes de compétences : pipelines d'appels LLM + outils avec préchargement RAG"]
-        N2["PhiLia : mémoire long terme (vectoriel + graphe, adossée à pgvector)"]
-        N3["ApoRia : base de connaissances + index d'espace de travail (recherche sémantique)"]
+        N2["PhiLia : mémoire long terme （vectoriel + graphe, adossée à pgvector）"]
+        N3["ApoRia : base de connaissances + index d'espace de travail （recherche sémantique）"]
         N4["OreXis : portes de politique / sécurité sur l'exécution des outils"]
         N5["Réflexion : magasin de leçons réinjecté dans les prompts"]
     end
-    C -->|"JSON-RPC 2.0 sur WebSocket (jeton ou clé API)"| G
+    C -->|"JSON-RPC 2.0 sur WebSocket （jeton ou clé API）"| G
 ```
 
 ## 1. Agents (âmes)

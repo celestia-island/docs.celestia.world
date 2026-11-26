@@ -10,17 +10,17 @@ en el nodo (ollama / whisper / vLLM) para la inferencia en el borde.
 
 ```mermaid
 flowchart TD
-    C["Campo: PLC / MCU / sensores (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)"]
-    subgraph G["evernight (nodo de borde)"]
+    C["Campo: PLC / MCU / sensores （Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …）"]
+    subgraph G["evernight （nodo de borde）"]
         N0["Adaptadores de protocolo: sondear → decodificar → lecturas tipadas"]
         N1["Motor de alarmas: reglas de umbral → eventos de disparo"]
         N2["Series temporales: lecturas en búfer con doble marca de tiempo"]
         N3["Grabación/reproducción: búfer circular → almacenamiento segmentado → inyección de reproducción"]
-        N4["Gestor de servidores de modelos: desplegar ollama/whisper/vLLM (GPU primero)"]
+        N4["Gestor de servidores de modelos: desplegar ollama/whisper/vLLM （GPU primero）"]
         N5["Northbound: disparadores JSON-RPC por socket Unix → entelecheia"]
     end
     C --> G
-    G --> B["scepter (agentes, flujos de trabajo industriales, aprobación de escritura)"]
+    G --> B["scepter （agentes, flujos de trabajo industriales, aprobación de escritura）"]
 ```
 
 ## 1. Protocolos de campo

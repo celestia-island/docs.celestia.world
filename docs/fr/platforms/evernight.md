@@ -10,17 +10,17 @@ modèles sur le nœud (ollama / whisper / vLLM) pour l'inférence en bord.
 
 ```mermaid
 flowchart TD
-    C["Terrain : PLC / MCU / capteurs (Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …)"]
-    subgraph G["evernight (nœud de bord)"]
+    C["Terrain : PLC / MCU / capteurs （Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …）"]
+    subgraph G["evernight （nœud de bord）"]
         N0["Adaptateurs de protocoles : interrogation → décodage → lectures typées"]
         N1["Moteur d'alarmes : règles de seuil → événements déclencheurs"]
         N2["Séries temporelles : lectures mises en tampon à double horodatage"]
         N3["Enregistrement/relecture : tampon circulaire → stockage segmenté → injection de relecture"]
-        N4["Gestionnaire de serveurs de modèles : déploie ollama/whisper/vLLM (GPU d'abord)"]
-        N5["Nord (northbound) : déclencheurs JSON-RPC par socket Unix → entelecheia"]
+        N4["Gestionnaire de serveurs de modèles : déploie ollama/whisper/vLLM （GPU d'abord）"]
+        N5["Nord （northbound） : déclencheurs JSON-RPC par socket Unix → entelecheia"]
     end
     C --> G
-    G --> B["scepter (agents, flux de travail industriels, approbation d'écriture)"]
+    G --> B["scepter （agents, flux de travail industriels, approbation d'écriture）"]
 ```
 
 ## 1. Protocoles de terrain

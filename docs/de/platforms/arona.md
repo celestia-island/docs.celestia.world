@@ -12,14 +12,14 @@ Multi-Knoten-Cluster.
 ```mermaid
 flowchart TD
     C["shittim-chest / jeder OpenAI-Client"]
-    subgraph G["Arona-Gateway (node-2:8420)"]
+    subgraph G["Arona-Gateway （node-2:8420）"]
         N0["Router: Aliase → Least-Count-Lastverteilung über Backends"]
-        N1["Memory-Gateway: Recall-Injektion → Chat → Writeback (Episoden)"]
-        N2["Agenten-Kontrollebene (/ws/agent)"]
+        N1["Memory-Gateway: Recall-Injektion → Chat → Writeback （Episoden）"]
+        N2["Agenten-Kontrollebene （/ws/agent）"]
     end
-    C -->|"/v1/chat/completions (Bearer API key)"| G
+    C -->|"/v1/chat/completions （Bearer API key）"| G
     N2 --> T["arona-agent auf GPU-Knoten"]
-    G --> B["Backends: ollama · external (OpenAI-kompatibel) · agenten-bereitgestellte Engines"]
+    G --> B["Backends: ollama · external （OpenAI-kompatibel） · agenten-bereitgestellte Engines"]
 ```
 
 Der gesamte Verwaltungsdatenverkehr (Dashboard, Agenten, Speicher) läuft über

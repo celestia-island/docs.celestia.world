@@ -11,15 +11,15 @@ organizado por capacidade: chat, painéis, canais, busca e auth.
 ```mermaid
 flowchart TD
     C["Você"]
-    subgraph G["Núcleo do Shittim Chest (node-2:8425)"]
+    subgraph G["Núcleo do Shittim Chest （node-2:8425）"]
         N0["Chat: conversas persistidas no Postgres, streaming SSE/WS"]
-        N1["Painéis: grade de dados / pipeline de mídia / gêmeo 3D (motor de painéis)"]
-        N2["Pipeline de mídia: revisão de visão LLM, geração de imagens, geração 3D (stub)"]
-        N3["Ponte de canais: IM ↔ núcleo, bidirecional (webhooks + WS)"]
-        N4["Ponte RPC → scepter (agentes, busca semântica, base de conhecimento)"]
+        N1["Painéis: grade de dados / pipeline de mídia / gêmeo 3D （motor de painéis）"]
+        N2["Pipeline de mídia: revisão de visão LLM, geração de imagens, geração 3D （stub）"]
+        N3["Ponte de canais: IM ↔ núcleo, bidirecional （webhooks + WS）"]
+        N4["Ponte RPC → scepter （agentes, busca semântica, base de conhecimento）"]
     end
-    C -->|"aplicativo desktop · web UI · 12+ canais de IM (discord/slack/matrix/lark/…)"| G
-    G --> B["Arona (modelos, memória) · scepter (agentes, painéis, busca)"]
+    C -->|"aplicativo desktop · web UI · 12+ canais de IM （discord/slack/matrix/lark/…）"| G
+    G --> B["Arona （modelos, memória） · scepter （agentes, painéis, busca）"]
 ```
 
 ## 1. Chat

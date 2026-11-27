@@ -41,8 +41,7 @@
 و[akivili](https://github.com/celestia-island/akivili) (مضيف الإضافات)،
 و[celestia-plugin](https://github.com/celestia-island/celestia-plugin)
 (حزمة تطوير Python)،
-و[ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
-(عرض Markdown في الطرفية)، وarcaea (بروتوكول الشخصيات)، وofficial-plugins
+وarcaea (بروتوكول الشخصيات)، وofficial-plugins
 (حزم الإضافات).
 
 **البنية التحتية** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)

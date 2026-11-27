@@ -60,7 +60,6 @@ se documenta dentro del propio repositorio, lo que exige acceso a él.
 | [akivili](https://github.com/celestia-island/akivili) | Host y SDK de plugins para extensiones de agentes | repositorio |
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | SDK de plugins y motores para Python | repositorio |
 | [shun](https://github.com/celestia-island/shun) | Instaladores, flasheadores y entrega de cargas en modo portable | repositorio |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Renderizado de Markdown dentro de interfaces de terminal | repositorio |
 | arcaea | Biblioteca del protocolo de persona | — |
 | scriptum | Interfaz de terminal para la plataforma de agentes | — |
 | official-plugins | Los paquetes de plugins de primera parte | — |

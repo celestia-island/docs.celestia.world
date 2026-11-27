@@ -60,7 +60,6 @@ celestia-island のプラットフォームリポジトリと製品の完全な�
 | [akivili](https://github.com/celestia-island/akivili) | エージェント拡張のためのプラグインホスト兼 SDK | リポジトリ内 |
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python プラグイン兼エンジン SDK | リポジトリ内 |
 | [shun](https://github.com/celestia-island/shun) | インストーラ、フラッシャ、ポータブルモードのペイロード配信 | リポジトリ内 |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | ターミナル UI 内での Markdown レンダリング | リポジトリ内 |
 | arcaea | ペルソナプロトコルライブラリ | — |
 | scriptum | エージェントプラットフォーム向けのターミナルインターフェース | — |
 | official-plugins | ファーストパーティのプラグインパッケージ | — |

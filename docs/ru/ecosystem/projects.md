@@ -60,7 +60,6 @@
 | [akivili](https://github.com/celestia-island/akivili) | Хост плагинов и SDK для расширений агентов | репозиторий |
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python SDK для плагинов и движков | репозиторий |
 | [shun](https://github.com/celestia-island/shun) | Установщики, прошивальщики и доставка полезной нагрузки в портативном режиме | репозиторий |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Рендеринг Markdown внутри терминальных интерфейсов | репозиторий |
 | arcaea | Библиотека протокола персон | — |
 | scriptum | Терминальный интерфейс для агентной платформы | — |
 | official-plugins | Пакеты плагинов от первой стороны | — |

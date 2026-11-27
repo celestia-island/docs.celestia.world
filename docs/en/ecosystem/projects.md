@@ -60,7 +60,6 @@ repository itself.
 | [akivili](https://github.com/celestia-island/akivili) | Plugin host and SDK for agent extensions | repository |
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python plugin and engine SDK | repository |
 | [shun](https://github.com/celestia-island/shun) | Installers, flashers and portable-mode payload delivery | repository |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Markdown rendering inside terminal UIs | repository |
 | arcaea | Persona protocol library | — |
 | scriptum | Terminal interface for the agent platform | — |
 | official-plugins | The first-party plugin packages | — |

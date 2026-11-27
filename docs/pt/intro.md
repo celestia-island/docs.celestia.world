@@ -43,8 +43,7 @@ dados), [himari](https://github.com/celestia-island/himari) (IR de fórmulas),
 component model), [akivili](https://github.com/celestia-island/akivili)
 (hospedeiro de plugins),
 [celestia-plugin](https://github.com/celestia-island/celestia-plugin) (SDK
-Python), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
-(Markdown no terminal), arcaea (protocolo de personas), official-plugins
+Python), arcaea (protocolo de personas), official-plugins
 (pacotes de plugins).
 
 **Infraestrutura** —

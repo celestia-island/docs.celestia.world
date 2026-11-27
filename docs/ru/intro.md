@@ -46,8 +46,7 @@ evernight-appliance (дистрибутив-апплаенс), electrode_recon (
 [tairitsu](https://github.com/celestia-island/tairitsu) (полный стек на
 Component Model), [akivili](https://github.com/celestia-island/akivili) (хост
 плагинов), [celestia-plugin](https://github.com/celestia-island/celestia-plugin)
-(Python SDK), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
-(Markdown в терминале), arcaea (протокол персон), official-plugins (пакеты
+(Python SDK), arcaea (протокол персон), official-plugins (пакеты
 плагинов).
 
 **Инфраструктура** —

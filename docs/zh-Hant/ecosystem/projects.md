@@ -55,7 +55,6 @@ celestia-island 平台倉庫與產品的清單，按層分組。帶連結的名�
 | [akivili](https://github.com/celestia-island/akivili) | 面向智能體擴充的外掛宿主與 SDK | 倉庫內 |
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python 外掛與引擎 SDK | 倉庫內 |
 | [shun](https://github.com/celestia-island/shun) | 安裝器、燒錄工具與可攜模式的負載交付 | 倉庫內 |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | 終端機 UI 內的 Markdown 渲染 | 倉庫內 |
 | arcaea | persona 協定函式庫 | — |
 | scriptum | 智能體平台的終端介面 | — |
 | official-plugins | 第一方外掛套件 | — |

@@ -43,8 +43,7 @@ formules), [kotama](https://github.com/celestia-island/kotama) (rétro-ingénier
 [tairitsu](https://github.com/celestia-island/tairitsu) (full-stack sur le
 Component Model), [akivili](https://github.com/celestia-island/akivili) (hôte de
 plugins), [celestia-plugin](https://github.com/celestia-island/celestia-plugin)
-(SDK Python), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
-(Markdown dans le terminal), arcaea (protocole de persona), official-plugins
+(SDK Python), arcaea (protocole de persona), official-plugins
 (paquets de plugins).
 
 **Infrastructure** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)

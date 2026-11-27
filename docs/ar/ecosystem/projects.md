@@ -58,7 +58,6 @@
 | [akivili](https://github.com/celestia-island/akivili) | مضيف إضافات وحزمة تطوير لامتدادات الوكلاء | المستودع |
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | حزمة تطوير إضافات ومحركات بـ Python | المستودع |
 | [shun](https://github.com/celestia-island/shun) | المثبِّتات وأدوات الوميض وتسليم حمولات الوضع المحمول | المستودع |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | عرض Markdown داخل واجهات الطرفية | المستودع |
 | arcaea | مكتبة بروتوكول الشخصيات | — |
 | scriptum | واجهة طرفية لمنصة الوكلاء | — |
 | official-plugins | حزم الإضافات التابعة للجهة الأولى | — |

@@ -39,8 +39,7 @@ evernight-appliance(어플라이언스 배포판), electrode_recon (연산 엔�
 [tairitsu](https://github.com/celestia-island/tairitsu) (컴포넌트 모델
 풀스택), [akivili](https://github.com/celestia-island/akivili) (플러그인 호스트),
 [celestia-plugin](https://github.com/celestia-island/celestia-plugin) (Python
-SDK), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
-(터미널 속 Markdown), arcaea (페르소나 프로토콜), official-plugins (플러그인
+SDK), arcaea (페르소나 프로토콜), official-plugins (플러그인
 패키지).
 
 **인프라** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)

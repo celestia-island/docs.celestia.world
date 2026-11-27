@@ -1,6 +1,6 @@
 # Code de conduite
 
-> Ceci est une traduction de référence communautaire. En cas de divergence, la version anglaise originale [`CODE_OF_CONDUCT.md`](../../en/meta/code-of-conduct.md) à la racine du dépôt fait foi.
+> Ceci est une traduction de référence communautaire. En cas de divergence, la version anglaise originale [`CODE_OF_CONDUCT.md`](code-of-conduct.md) à la racine du dépôt fait foi.
 
 ## Notre engagement
 

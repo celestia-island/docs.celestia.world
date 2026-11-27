@@ -24,7 +24,7 @@ terminal).
 [hare](https://github.com/celestia-island/hare) (ponte `no_std`),
 [kei](https://github.com/celestia-island/kei) (kernel de borda),
 [shun](https://github.com/celestia-island/shun) (instaladores e gravadores),
-electrode_recon (motor de cálculo).
+evernight-appliance (a distribuição de appliance), electrode_recon (motor de cálculo).
 
 **Bibliotecas e ferramentas** — [noa](https://github.com/celestia-island/noa)
 (controle de versão nativo de agentes),

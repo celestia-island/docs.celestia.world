@@ -22,7 +22,7 @@ shittim-chest (채팅 및 워크벤치), scriptum (터미널 클라이언트).
 [hare](https://github.com/celestia-island/hare) (`no_std` 브리지),
 [kei](https://github.com/celestia-island/kei) (엣지 커널),
 [shun](https://github.com/celestia-island/shun) (설치 프로그램 및 플래셔),
-electrode_recon (연산 엔진).
+evernight-appliance(어플라이언스 배포판), electrode_recon (연산 엔진).
 
 **라이브러리 및 도구** — [noa](https://github.com/celestia-island/noa)
 (에이전트 네이티브 버전 관리), [seia](https://github.com/celestia-island/seia)

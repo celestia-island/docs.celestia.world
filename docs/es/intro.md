@@ -26,7 +26,7 @@ fuente aún no es público. La tabla detallada está en el
 [hare](https://github.com/celestia-island/hare) (puente `no_std`),
 [kei](https://github.com/celestia-island/kei) (kernel de borde),
 [shun](https://github.com/celestia-island/shun) (instaladores y flasheadores),
-electrode_recon (motor de cálculo).
+evernight-appliance (la distribución de la appliance), electrode_recon (motor de cálculo).
 
 **Bibliotecas y herramientas** — [noa](https://github.com/celestia-island/noa)
 (control de versiones nativo para agentes),

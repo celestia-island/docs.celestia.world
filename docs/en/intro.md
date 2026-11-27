@@ -22,7 +22,7 @@ shittim-chest (chat and workbench), scriptum (terminal client).
 [hare](https://github.com/celestia-island/hare) (`no_std` bridge),
 [kei](https://github.com/celestia-island/kei) (edge kernel),
 [shun](https://github.com/celestia-island/shun) (installers and flashers),
-electrode_recon (compute engine).
+evernight-appliance (the appliance distribution), electrode_recon (compute engine).
 
 **Libraries and tools** — [noa](https://github.com/celestia-island/noa)
 (agent-native version control), [seia](https://github.com/celestia-island/seia)

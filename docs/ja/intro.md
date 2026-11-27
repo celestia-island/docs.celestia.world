@@ -25,7 +25,7 @@
 [hare](https://github.com/celestia-island/hare)（`no_std` ブリッジ）、
 [kei](https://github.com/celestia-island/kei)（エッジカーネル）、
 [shun](https://github.com/celestia-island/shun)（インストーラとフラッシャ）、
-electrode_recon（計算エンジン）。
+evernight-appliance（アプライアンス配布版）、electrode_recon（計算エンジン）。
 
 **ライブラリとツール** —— [noa](https://github.com/celestia-island/noa)
 （エージェントネイティブなバージョン管理）、[seia](https://github.com/celestia-island/seia)

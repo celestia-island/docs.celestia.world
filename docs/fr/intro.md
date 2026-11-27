@@ -26,7 +26,7 @@ terminal).
 [hare](https://github.com/celestia-island/hare) (pont `no_std`),
 [kei](https://github.com/celestia-island/kei) (noyau de périphérie),
 [shun](https://github.com/celestia-island/shun) (installateurs et programmeurs de
-flash), electrode_recon (moteur de calcul).
+flash), evernight-appliance (la distribution de l'appliance), electrode_recon (moteur de calcul).
 
 **Bibliothèques et outils** — [noa](https://github.com/celestia-island/noa)
 (contrôle de version natif agents), [seia](https://github.com/celestia-island/seia)

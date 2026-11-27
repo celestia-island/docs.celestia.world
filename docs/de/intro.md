@@ -27,7 +27,7 @@ und Plattform-Grundlagen), [hikari](https://github.com/celestia-island/hikari)
 [hare](https://github.com/celestia-island/hare) (`no_std`-Bridge),
 [kei](https://github.com/celestia-island/kei) (Edge-Kernel),
 [shun](https://github.com/celestia-island/shun) (Installer und Flasher),
-electrode_recon (Rechen-Engine).
+evernight-appliance (die Appliance-Distribution), electrode_recon (Rechen-Engine).
 
 **Bibliotheken und Werkzeuge** — [noa](https://github.com/celestia-island/noa)
 (agentennative Versionskontrolle), [seia](https://github.com/celestia-island/seia)

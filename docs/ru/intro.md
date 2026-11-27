@@ -26,7 +26,7 @@
 [hare](https://github.com/celestia-island/hare) (мост `no_std`),
 [kei](https://github.com/celestia-island/kei) (периферийное ядро),
 [shun](https://github.com/celestia-island/shun) (установщики и прошивальщики),
-electrode_recon (вычислительный движок).
+evernight-appliance (дистрибутив-апплаенс), electrode_recon (вычислительный движок).
 
 **Библиотеки и инструменты** — [noa](https://github.com/celestia-island/noa)
 (версионирование, нативное для агентов),

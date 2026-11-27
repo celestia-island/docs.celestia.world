@@ -22,7 +22,7 @@
 و[hare](https://github.com/celestia-island/hare) (جسر `no_std`)،
 و[kei](https://github.com/celestia-island/kei) (نواة الحوسبة الطرفية)،
 و[shun](https://github.com/celestia-island/shun) (المثبِّتات وأدوات الوميض)،
-وelectrode_recon (محرك حسابي).
+وevernight-appliance (توزيعة الجهاز)، electrode_recon (محرك حسابي).
 
 **المكتبات والأدوات** — [noa](https://github.com/celestia-island/noa)
 (تحكم بالإصدارات أصيل للوكلاء)، و[seia](https://github.com/celestia-island/seia)

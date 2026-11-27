@@ -45,8 +45,7 @@ evernight-appliance (die Appliance-Distribution), electrode_recon (Rechen-Engine
 (Full-Stack auf dem Component Model),
 [akivili](https://github.com/celestia-island/akivili) (Plugin-Host),
 [celestia-plugin](https://github.com/celestia-island/celestia-plugin)
-(Python-SDK), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
-(Markdown im Terminal), arcaea (Persona-Protokoll), official-plugins
+(Python-SDK), arcaea (Persona-Protokoll), official-plugins
 (Plugin-Pakete).
 
 **Infrastruktur** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)

@@ -42,8 +42,7 @@ evernight-appliance（アプライアンス配布版）、electrode_recon（計�
 サービス）、[tairitsu](https://github.com/celestia-island/tairitsu)
 （コンポーネントモデルのフルスタック）、[akivili](https://github.com/celestia-island/akivili)
 （プラグインホスト）、[celestia-plugin](https://github.com/celestia-island/celestia-plugin)
-（Python SDK）、[ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
-（ターミナル内の Markdown）、arcaea（ペルソナプロトコル）、official-plugins
+（Python SDK）、arcaea（ペルソナプロトコル）、official-plugins
 （プラグインパッケージ）。
 
 **インフラ** —— [celestia-devtools](https://github.com/celestia-island/celestia-devtools)

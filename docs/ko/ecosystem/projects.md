@@ -59,7 +59,6 @@ celestia-island 플랫폼의 저장소와 제품 전체 목록을 계층별로 �
 | [akivili](https://github.com/celestia-island/akivili) | 에이전트 확장을 위한 플러그인 호스트 및 SDK | 저장소 |
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python 플러그인 및 엔진 SDK | 저장소 |
 | [shun](https://github.com/celestia-island/shun) | 설치 프로그램, 플래셔, 포터블 모드 페이로드 전달 | 저장소 |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | 터미널 UI 내 Markdown 렌더링 | 저장소 |
 | arcaea | 페르소나 프로토콜 라이브러리 | — |
 | scriptum | 에이전트 플랫폼용 터미널 인터페이스 | — |
 | official-plugins | 퍼스트 파티 플러그인 패키지 | — |

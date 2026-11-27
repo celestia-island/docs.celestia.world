@@ -60,7 +60,6 @@ Repositories mit einer Dokumentationsseite tragen ihre eigenen
 | [akivili](https://github.com/celestia-island/akivili) | Plugin-Host und SDK für Agenten-Erweiterungen | Repository |
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python-Plugin- und Engine-SDK | Repository |
 | [shun](https://github.com/celestia-island/shun) | Installer, Flasher und Auslieferung von Portable-Mode-Payloads | Repository |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Markdown-Rendering in Terminal-UIs | Repository |
 | arcaea | Persona-Protokollbibliothek | — |
 | scriptum | Terminal-Oberfläche für die Agenten-Plattform | — |
 | official-plugins | Die First-Party-Plugin-Pakete | — |

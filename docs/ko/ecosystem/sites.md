@@ -9,7 +9,7 @@
 | 사이트 | 소유 | 콘텐츠 |
 | --- | --- | --- |
 | [docs.celestia.world](https://docs.celestia.world) | 생태계 | 철학, 생태계 지도, 시작하기, 거버넌스 (라이선스, CLA, 행동 강령, 보안, 기여) |
-| `<name>.docs.celestia.world` | 각 프로젝트 | 가이드, 아키텍처, 설계, 참조 — 프로젝트 자체 저장소에서 빌드 |
+| `<name>.docs.celestia.world` | 문서 사이트를 공개한 각 프로젝트 | 가이드, 아키텍처, 설계, 참조 — 프로젝트 자체 저장소에서 빌드 |
 | [celestia-island.github.io](https://celestia-island.github.io) | 조직 | 프레즌스, 링크, 브랜드 자산 |
 | [e.celestia.world](https://e.celestia.world) | 대외적인 얼굴 | 랜딩 페이지, 가격, 블로그, 콜 투 액션 |
 | [dev.celestia.world](https://dev.celestia.world) | 패널 | 계정, 채팅, 에이전트, 운영 콘솔 (베타 기간 초대제) |

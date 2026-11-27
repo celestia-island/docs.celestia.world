@@ -33,7 +33,7 @@
 
 # プラットフォーム
 
-- [Arona — モデルゲートウェイ、メモリ、クラスタ](./platforms/arona.md)
+- [Arona — モデルゲートウェイとデプロイパネル](./platforms/arona.md)
 - [Entelecheia — エージェントプラットフォームとメモリ](./platforms/entelecheia.md)
 - [Shittim Chest — チャット、パネル、統合](./platforms/chest.md)
 - [Evernight — 産業プロトコルブローカー](./platforms/evernight.md)

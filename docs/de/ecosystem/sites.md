@@ -9,7 +9,7 @@ und die Projektsites maßgeblich.
 | Site | Besitzt | Inhalt |
 | --- | --- | --- |
 | [docs.celestia.world](https://docs.celestia.world) | das Ökosystem | Philosophie, Ökosystem-Karte, Erste Schritte, Governance (Lizenz, CLA, CoC, Sicherheit, Mitwirken) |
-| `<name>.docs.celestia.world` | jedes Projekt | Leitfäden, Architektur, Designs, Referenzen — aus dem eigenen Repository des Projekts erstellt |
+| `<name>.docs.celestia.world` | jedes Projekt, das eine Website veröffentlicht hat | Leitfäden, Architektur, Designs, Referenzen — aus dem eigenen Repository des Projekts erstellt |
 | [celestia-island.github.io](https://celestia-island.github.io) | die Organisation | Präsenz, Links, Marken-Assets |
 | [e.celestia.world](https://e.celestia.world) | das öffentliche Gesicht | Landingpage, Preise, Blog, Call-to-Action |
 | [dev.celestia.world](https://dev.celestia.world) | das Panel | Konto, Chat, Agenten und die Bedienkonsole (während der Beta einladungsbasiert) |

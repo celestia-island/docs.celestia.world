@@ -1,51 +1,56 @@
 # Erzählung & Horizont
 
-## Latenz ist Schicksal
+## Die Form des Problems
 
-Eine Signal-Rundstrecke dauert **2,6 Sekunden** zum Mond und **6 bis 44
-Minuten** zum Mars. Maschinen, die so weit von der Erde entfernt sind, können
-nicht auf Anweisungen eines Menschen warten. Sie müssen Entscheidungen
-**lokal, sicher und vorhersehbar** treffen — mit der Befugnis zu handeln und
-der Disziplin, abzulehnen.
+Wir bauen weder einen Chatbot mit angeflanschtem Bedienpult noch ein
+Steuerungssystem mit angeflanschtem Sprachmodell. Die beiden Hälften müssen
+ein System sein, denn in dem Moment, in dem ein Modell physische Anlagen
+bewegen kann, wird jedes Nice-to-have eines Chat-Produkts zur Randbedingung
+eines Steuerungssystems: deterministisches Verhalten, begrenzte Latenz, ein
+Prüfprotokoll und eine Möglichkeit, Nein zu sagen.
 
-Das ist der Horizont, auf den dieses Ökosystem zubaut. Alles, was wir heute
-für die industrielle Steuerung bauen, ist so gewählt, dass es die *gleiche
-Form* hat, die ein autonomer Mond- oder Marsroboter brauchen wird:
+Das vollständige Argument steht unter [Warum celestia-island](./why.md). Diese
+Seite ist der Verlauf, der daraus folgt.
 
-- eine **Agenten-Entscheidungsebene**, die plant und orchestriert
-- ein **Weltmodell**, das weiß, was gerade jetzt passiert
-- eine **Sicherheitssperre**, die Nein sagen kann, gestützt auf
-  Echtzeit-Steuerung, die nie vom Netzwerk abhängt
+## Wohin es geht
 
-Der Mond ist keine Marketingstory: Er ist der Grund, warum die Schichtung
-existiert.
+**Näher an die Maschine.** Heute läuft der Regelkreis vom Webbrowser eines
+Bedienern über einen Protokoll-Broker bis zu einem Controller. Jeder Schritt
+näher an der Hardware enthält weniger Modell und weniger Netzwerk und endet bei
+einem Regelkreis, der lokal läuft und nicht auf eine Rundstrecke wartet. Diese
+Reihenfolge ist der Punkt: Die Teile, die nicht ausfallen dürfen, sind die
+Teile, die nie hinausrufen.
 
-## Der Fahrplan
+**Lokale Autonomie als Ausblick.** Dieselbe Reihenfolge verallgemeinert sich
+überall dort, wo eine Rundstrecke teuer ist — ein abgelegener Standort, eine
+unbeständige Verbindung, ein Werk, dessen Bediener nicht in der Halle ist.
+Maschinen, die nicht auf einen Menschen warten können, müssen lokal, sicher und
+vorhersehbar entscheiden: mit der Befugnis zu handeln und der Disziplin,
+abzulehnen. Das ist eine langfristige Richtung, kein datierter Plan, und der
+Grund, warum die Entscheidungsebene, das Weltmodell und die Sicherheitssperre
+als getrennte Dinge gebaut werden statt als ein Monolith.
 
-Das Ökosystem schreitet über Tore voran — eine Phase wird nur freigeschaltet,
-wenn die vorherige ihre Austrittskriterien erfüllt:
+**Wiederverwendbar durch Konstruktion.** Wie auch immer die nächste
+Bereitstellung aussieht: Sie sollte aus derselben Asset-Basis zusammengesetzt
+werden statt neu gebaut — das Wire-Protokoll, der Weltzustand, die
+Sicherheitssperren und die Aufzeichnungspipeline sind gemeinsame Assets. Ein
+Track, der ein neues startet, muss eine Architekturprüfung durchlaufen. Und
+keine Produktlinie hängt je von einem nicht veröffentlichten Kern ab — rutscht
+der Kern, rutscht nicht der Umsatz.
 
-| Phase | Ziel | Austrittskriterien |
-| --- | --- | --- |
-| **Interne Beta** | jetzt | Null P0-Sicherheitsprobleme; der gesamte Regelkreis besteht die Integrationstests; ein neuer Nutzer schafft Registrierung → Key → Chat in 30 Minuten |
-| **Öffentliche Beta** | 2026 | Offene Registrierung; öffentliche Doku, Downloads und Rechtsseiten; unabhängiges Sicherheits-Review |
-| **J1 — Industrieanlagen** | 2027-08 | Reale PLC- + MCU-Produktionsliniendemo: 100-Hz-Messung, 10-Hz-Regelkreis, Bereitstellungspakete, Abnahmetests |
-| **J3 — Verkörperte Einrichtungen** | 2029-08 | Reproduzierbares Paket für verkörperte Einrichtungen (Weltzustand + Richtlinienebene + Referenzstandort), festgelegt auf die Form *industrial embodied* |
-| **J5 — Luft- und Raumfahrt** | 2031-08 | Vollständiger Software-/Hardware-Vorschlag plus mindestens ein In-Orbit- oder Flugnachweis — kein Erbe, keine Versprechen |
-| **J5+ — Mond/Mars** | 2031+ | Autonomie-Erzählung, Forschungspartnerschaften, White Paper |
+## Was fest bleibt
 
-## Vier Tracks teilen sich eine gemeinsame Basis
+Wie der Horizont auch aussieht, drei Dinge bewegen sich nicht:
 
-1. **Track B — Industrielle Steuerung** ([evernight](https://github.com/celestia-island/evernight) Hauptbühne): Sensor-Pipelines, Aufzeichnung/Wiedergabe, schnelle Schleifen, eingebettete Knoten.
-2. **Track E — Verkörperte Intelligenz**: ein Weltzustandsdienst, eine Richtlinienebene mit kleinen lokalen Modellen, Digital-Twin-Visualisierung.
-3. **Track K — kei-Echtzeitkern**: ein deterministischer Kernel mit einer Linux-ABI-Persönlichkeitsschicht — die langfristige Antwort für begrenzte, vorhersehbare Ausführung.
-4. **Track S — Luft- und Raumfahrt**: systemweite dreifache modulare Redundanz, Flugerbe, Zertifizierungspfad.
-
-Eine Disziplin hält alle Tracks zusammen: **Drahtprotokoll, Weltzustand,
-Sicherheitssperren und die Aufzeichnungspipeline sind gemeinsame Assets.** Jeder
-Track, der ein neues startet, muss eine Architekturprüfung durchlaufen. Und die
-Produktlinien hängen nie von kei ab: Wenn kei rutscht, rutscht nicht der
-Umsatz.
+- **Sicherheit vor Autonomie.** Ein autonomes System, das nicht ablehnen kann,
+  ist nicht autonom, sondern unbewacht. Siehe
+  [Sicherheitsprinzipien](./safety.md).
+- **Der Regelkreis bleibt ganz.** Jede Fähigkeit ist nur so real wie der
+  geschlossene Regelkreis, zu dem sie gehört — siehe
+  [Der Geschlossene Regelkreis](./closed-loop.md).
+- **Struktur kommt zuerst.** Ordnung über Dutzende von Repositories kommt aus
+  Schichtung, nicht aus Disziplin im Moment — siehe
+  [Geschichtete Architektur](./layered-architecture.md).
 
 ## Weiterführendes
 

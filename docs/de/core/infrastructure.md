@@ -1,53 +1,53 @@
 # Kerninfrastruktur — Auth, RPC und Grundlagen
 
 Jede Plattform, die Sie nutzen, steht auf derselben Grundlage. Lesen Sie diese
-Seite einmal, und die Plattform-Anleitungen fügen sich von selbst zusammen:
-kirino (Zero-Trust-Auth und RBAC), plana (Protokolltypen, JSON-RPC-Transport,
-Messung, Sync-Engine) und hikari (die UI-Komponentenbibliothek).
+Seite einmal, und die Plattform-Anleitungen fügen sich zusammen: kirino
+(Zero-Trust-Auth und RBAC), plana (Protokolltypen und Plattform-Grundlagen) und
+hikari (die UI-Komponentenbibliothek).
 
 ## Authentifizierung und Autorisierung (kirino)
 
-- **Identität**: Passwort-Hashing mit Argon2id; JWT-Access-/Refresh-Tokens
-  (`TokenManager`, `kirino-session`); Login-Ratenbegrenzung und Kontosperrung.
-- **RBAC**: hierarchische Berechtigungen (agent.*, system.*, knowledge.*, …),
-  aufgelöst durch einen `GrantResolver`; Rollen bündeln Berechtigungen (admin
-  sieht alles, viewer ist rein lesend). Zuweisungen werden in Postgres
-  persistiert.
-- **Delegation**: scepter vertraut der Nutzernummer, die das Chest-Gateway
-  mitgibt (`X-User-Id` / `user_id`), und nutzt sie nur zur Workspace-Isolation —
-  die authentifizierende Schicht liegt immer upstream.
-- **Admin-Oberfläche**: Admin-Endpunkte des Panels verlangen ein dediziertes
-  `ARONA_ADMIN_TOKEN` und verweigern ohne ihn den Dienst (fail closed).
+- **Identität**: Passwort-Hashing, Sitzungstokens mit kurzer Lebensdauer,
+  Login-Ratenbegrenzung und Kontosperrung. Die Algorithmen und ihre Parameter
+  sind in [kirinos eigener Dokumentation](https://kirino.docs.celestia.world)
+  dokumentiert, nicht hier.
+- **RBAC**: Berechtigungen sind hierarchisch und werden pro Aufrufer
+  aufgelöst; Rollen bündeln Berechtigungen (ein Admin sieht alles, ein Viewer
+  ist rein lesend). Zuweisungen werden in der Plattformdatenbank persistiert.
+- **Delegation**: Ein Dienst, der hinter einem anderen sitzt, authentifiziert
+  selbst niemanden — die authentifizierende Schicht liegt immer upstream, und
+  die Identität des Aufrufers wird nur zur Workspace-Isolation
+  durchgereicht.
 
 ## Protokoll und RPC (plana)
 
-- Der gesamte Plattformdatenverkehr läuft als **JSON-RPC 2.0 über WebSocket**
-  (und Request/Response über HTTP-POST `/api/rpc`). Methoden heißen
-  `<Domain>.<Action>` — z. B. `Sync.MemoryQueryRequest`, `Cli.Search`,
-  `Mcp.CallTool`.
-- Wire-Typen leben in plana (`plana-state-sync` / `plana-types`): eine einzige
-  Wahrheitsquelle für das Protokoll; Downstream-Repos pinnen einen
-  Release-Tag.
-- Benachrichtigungen (ohne `id`) pushen Ereignisse wie Streaming-Chunks und
-  Panel-Updates; Requests tragen eine `id`, die in der Antwort zurückkommt.
-- Die Sync-Engine (`plana-sync`) ist ein server-autoritativer Zustandsbaum:
-  Clients deklarieren Viewports, der Server broadcastet Diffs mit periodischen
-  Voll-Snapshots.
+- Der Plattformdatenverkehr ist **JSON-RPC 2.0**, über WebSocket für Streaming
+  und über HTTP POST für Request/Response. Methoden heißen
+  `<Domain>.<Action>`.
+- Die Wire-Typen sind die einzige Wahrheitsquelle für das Protokoll und leben
+  in plana; Downstream-Repositories pinnen eine veröffentlichte Version,
+  statt eine Kopie zu forken.
+- Benachrichtigungen haben keine `id` und pushen Ereignisse wie
+  Streaming-Chunks und Panel-Updates; Requests tragen eine `id`, die die
+  Antwort zurückgibt.
+- Zustandsintensive Oberflächen folgen überall demselben Muster: Der Server
+  ist autoritativ, Clients deklarieren, was sie ansehen, und der Server
+  streamt die Unterschiede.
 
 ## Messung und Preisgestaltung (plana)
 
-Die Nutzung wird pro API key gemessen und anhand einer kanonischen Tabelle
-bepreist (`plana-llm-provider`-Messung): Prompt-/Completion-Tokens,
-Kostenschätzung und Quota-Durchsetzung werden über alle Dienste hinweg
-geteilt.
+Die Nutzung wird pro API key gemessen und anhand einer einzigen kanonischen
+Tabelle bepreist, die alle Dienste teilen: Prompt- und Completion-Tokens,
+Kostenschätzung und Quota-Durchsetzung sind in jedem Produkt dieselbe
+Berechnung.
 
 ## UI-Komponenten (hikari)
 
-Die Vue-Komponentenbibliothek (`@celestia-island/hikari`) stellt Buttons,
-Badges, Tabellen, Modals und Bestätigungsdialoge bereit, die jede WebUI nutzt;
-Plattform-Seiten komponieren sie mit der plana-UI-Shell. Geteilte Komponenten
-müssen stattdessen hier upstream eingereicht werden, statt pro Repo neu
-implementiert zu werden.
+Die Komponentenbibliothek stellt die Buttons, Badges, Tabellen, Modals und
+Bestätigungsdialoge bereit, die jede WebUI nutzt, sodass ein Bildschirm
+überall gleich aussieht und sich gleich verhält, wo er auch eingebunden ist.
+Geteilte Komponenten werden hier upstream eingereicht, statt pro Repository
+neu implementiert zu werden.
 
 ## Abhängigkeitsregeln
 

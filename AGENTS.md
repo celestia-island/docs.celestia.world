@@ -27,12 +27,20 @@ copied here.
      evernight, malkuth, lagrange).
    - **Mixed-criticality layers** L0–L3 with the rule: L0/L1 never depend on
      the LLM being online.
-   - Product phases: **internal beta** / **public beta** / Y1–Y5 tracks.
+   - Product phases: **internal beta** / **public beta**. Do not publish dated
+     phase tables, future track names, or horizon-specific vehicles; the
+     long-term direction is written as an outlook without dates.
    Do not invent synonyms for these; reuse them across pages.
-4. **Links point where content lives.** Every page ends with a "Where to go
+4. **The hub does not reveal unpublished sources.** A repository that is not
+   public is named **without a link** (`arona`, not
+   `[arona](https://github.com/celestia-island/arona)`); public repositories keep
+   theirs. The same restraint covers ports, internal host names, env-var
+   tables, storage paths, RPC method names and agent identities — those belong
+   to the project's own site, or nowhere in the hub.
+5. **Links point where content lives.** Every page ends with a "Where to go
    deeper" section (translated per language) linking to sibling hub pages or
    project sites.
-5. **Repository names are proper nouns.** arona, shittim-chest, entelecheia,
+6. **Repository names are proper nouns.** arona, shittim-chest, entelecheia,
    evernight, kirino, plana, hikari, malkuth, lagrange, noa, kei, scepter —
    never translated, never renamed, never linked to the wrong repo.
 

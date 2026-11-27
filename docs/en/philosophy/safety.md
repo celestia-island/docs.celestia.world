@@ -3,13 +3,12 @@
 Industrial control is safety-critical: a failure can move physical equipment.
 Safety is therefore designed into the architecture, not layered on at the end.
 
-## 1. The LLM never touches the world directly
+## 1. The model never touches the world directly
 
-In [entelecheia](https://github.com/celestia-island/entelecheia), the model
-sees only a handful of primitive tools (`exec`, `write_to_var`). All real work
-happens inside a sandboxed execution pipeline where agent code dispatches to a
-large surface of MCP tools across agents. The model cannot invent behavior;
-it can only call the primitives the platform exposes.
+A model is a planner, not an actuator. It can ask for work to be done; it
+cannot perform it. Between the model and the equipment sit a sandbox, a policy
+check, and — for irreversible actions — a human. The model cannot invent
+behaviour outside the primitives the platform exposes.
 
 ## 2. Multi-layer safety depth
 
@@ -22,27 +21,29 @@ chain, in order:
 4. **Human confirmation** — the final say for irreversible actions
 5. **Audit trail** — everything is recorded, nothing is silent
 
-## 3. Mixed-criticality: real-time never depends on the LLM
+No layer trusts the one before it. Skipping one is a defect, not a shortcut.
 
-Systems are split by response time, and **the faster layers never depend on a
-model being online**:
+## 3. Mixed-criticality: real-time never depends on the model
 
-| Layer | Cadence | Runs on | LLM dependency |
-| --- | --- | --- | --- |
-| L3 — Cognition | seconds–minutes | arona, shittim-chest, entelecheia (Linux) | primary consumer |
-| L2 — World model | 10–50 Hz | platform services | optional |
-| L1 — Reactive / edge | 10–100 Hz | evernight on SBCs; small local models | none |
-| L0 — Real-time control | 100 Hz–1 kHz | MCU fast loop, local interlocks | never |
+The system is split by response time, and **the faster a layer is, the less it
+depends on a model being online**:
 
-If the LLM drops offline, the platform degrades gracefully: either a safe
-state, or continued execution of an already-approved trajectory. Hardware
-watchdogs anchor this semantics — control never waits on a network call.
+| Layer | What it does | LLM dependency |
+| --- | --- | --- |
+| Cognition | planning, conversation, orchestration | primary consumer |
+| World state | what is true right now, not what was said | optional |
+| Reactive | local reactions on the machine itself | none |
+| Real-time control | interlocks and the fast loop | never |
+
+If the model drops offline, the platform degrades gracefully: either a safe
+state, or continued execution of an already-approved trajectory. Control never
+waits on a network call.
 
 ## 4. Zero trust, fail closed
 
 - Authentication and authorization come from
-  [kirino](https://github.com/celestia-island/kirino): JWT with short-lived
-  sessions, Argon2id password hashing, login rate limiting, and an RBAC engine.
+  [kirino](https://github.com/celestia-island/kirino), the ecosystem's
+  zero-trust auth layer. Nothing is trusted because it is inside the network.
 - Registration is invite-gated by default; the first user of a deployment
   becomes the admin, after which self-registration locks.
 - Anything not explicitly allowed is denied. Where a service has a *mock* mode,
@@ -62,4 +63,3 @@ dangerous ones.
 - [The Closed Loop](./closed-loop.md) — where safety gates sit in the flow.
 - [Layered Architecture](./layered-architecture.md) — the layers safety cuts across.
 - [kirino documentation](https://kirino.docs.celestia.world) — the auth model in detail.
-- evernight documentation — protocol brokering and write gates.

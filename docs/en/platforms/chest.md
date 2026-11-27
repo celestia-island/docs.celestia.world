@@ -1,85 +1,45 @@
 # Shittim Chest — Chat, Panels and Integrations
 
-Shittim Chest is the user face: chat, panels and multi-channel
-integrations — the layer that turns model and agent capabilities into
-something you use every day. It takes models and memory from Arona, and
-agents, panels and industrial workflows from entelecheia's scepter. This
-guide is organized by capability: chat, panels, channels, search and auth.
+Shittim Chest is the surface: chat, panels and multi-channel integrations — the
+place where the model's capability becomes something you use every day. It
+takes models and memory from Arona, and agents, panels and industrial workflows
+from entelecheia.
 
-## Architecture at a glance
+## What it does
 
 ```mermaid
-flowchart TD
-    C["You"]
-    subgraph G["Shittim Chest core （node-2:8425）"]
-        N0["Chat: conversations persisted in Postgres, streamed SSE/WS"]
-        N1["Panels: data grid / media pipeline / 3D twin （panel engine）"]
-        N2["Media pipeline: LLM vision review, image generation, 3D gen （stub）"]
-        N3["Channel bridge: bidirectional IM ↔ core （webhooks + WS）"]
-        N4["RPC bridge → scepter （agents, semantic search, knowledge base）"]
-    end
-    C -->|"desktop app · web UI · 12+ IM channels （discord/slack/matrix/lark/…）"| G
-    G --> B["Arona （models, memory） · scepter （agents, panels, search）"]
+flowchart LR
+    U["You"] --> W["Workbench: chat, panels, channels"]
+    W -->|"models and keys"| A["Model gateway"]
+    W -->|"agents, memory, search"| E["Agent platform"]
+    E --> I["Industrial write path"]
 ```
 
-## 1. Chat
+- **Chat** — conversations are persisted server-side with streaming responses,
+  so history, thinking steps and tool calls survive a reload and a restart.
+- **Panels** — a panel is created from a single prompt: the engine generates
+  the layout and components and persists them in the workspace. Editing stays
+  structural — data-source bindings, component lists and connection state are
+  visible — rather than a black box. Three kinds exist: data tables, media
+  pipelines, and 3D twins of a device fleet.
+- **Channels** — the same conversation can arrive from an instant-messaging
+  platform and be answered there, through a channel bridge.
+- **Search and knowledge** — semantic search spans the workspace and long-term
+  memory in one ranked list, and knowledge bases are retrievable from the same
+  surface.
+- **Auth** — delegated: the gateway establishes who the caller is, and roles
+  gate writes to panels and workspaces.
 
-- Conversations and messages persist in Postgres (`conversations` /
-  `messages` tables). The full history is assembled server-side.
-- Streaming via SSE with chunk replay; the desktop shell shows thinking
-  chunks and tool calls from scepter agents.
-- `chat.send` supports conversation id, model override and memory flags
-  (see the [Arona guide](./arona.md) for the memory gateway semantics).
+## How you use it
 
-## 2. Panels
+As a desktop application or in the browser, with an API key from Arona. The
+webUI is the fastest way in; the desktop app adds the native shell.
 
-Panels are created from a single prompt: the engine generates the layout and
-widgets, then persists them to scepter's workspace store
-(`.amphoreus/workspace.toml` + `.noa/views/*.view.toml`). Editing is
-structured, not black-box: the raw data-source binding, widget list and
-connection state are visible, with a per-row deep-edit dialog and a
-collapsed natural-language tuning box.
+The panel reference, channel configuration and environment variables belong to
+the product; this hub does not duplicate them.
 
-Three panel kinds:
+## Where to go deeper
 
-- **Data grid** — table views with typed fields, sort/filter/group, writes
-  go through `table.*` edit kinds with real validation and rollback.
-- **Media pipeline** — a Dify-style node graph (LLM nodes, image
-  generation, HTTP, knowledge retrieval, branching); pipelines run
-  server-side with streaming progress and can be invoked as tools by
-  agents.
-- **3D twin** — device model trees with world coordinates, scene
-  configuration and camera bookmarks.
-
-## 3. Multi-channel integrations
-
-The channel bridge connects core to IM platforms (Discord, Slack, Matrix,
-Lark, …). Inbound messages become chat turns; outbound responses stream
-back over the same channel. Each channel requires its OAuth application
-approved for production use.
-
-## 4. Semantic search and knowledge
-
-- `search.semantic` bridges to scepter's vector search (ApoRia workspace
-  index + PhiLia long-term memories fused into one ranked list).
-- Knowledge bases (create / add documents / subscribe) persist in Postgres
-  and are searchable through the same RPC surface.
-- Agent reports are indexed automatically, so past reports are
-  semantically retrievable.
-
-## 5. Auth
-
-Authentication is delegated: scepter trusts the caller user id supplied by
-the chest gateway (`X-User-Id` / `user_id`), which chest obtains from Arona
-or the invitation flow. RBAC roles (admin / operator / viewer / agent)
-gate write operations on panels and workspaces.
-
-## Env reference (subset)
-
-| Variable | Purpose |
-|---|---|
-| `DATABASE_URL` | Postgres (required) |
-| `ENTELECHEIA_SCEPTER_URL` / `WS_URL` | Agent engine RPC/WS endpoints |
-| `LLM_DEFAULT_PROVIDER_ENDPOINT` / `_API_KEY` / `_MODELS` | Chat model provider (usually Arona) |
-| `BIGMODEL_API_KEY*` | Media pipeline (GLM vision / CogView image gen) |
-| `CHANNEL_*` | IM channel credentials per platform |
+- [Arona](./arona.md) — where models, keys and usage come from.
+- [Entelecheia](./entelecheia.md) — where agents, panels and memory come from.
+- [Web UI guide](../webui/guide.md) — the same story, screen by screen.

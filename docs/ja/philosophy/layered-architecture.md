@@ -8,17 +8,16 @@
 
 | レイヤ | プロジェクト | 提供するもの |
 | --- | --- | --- |
-| **レイヤ 0 — 認証** | [kirino](https://github.com/celestia-island/kirino) | ゼロトラストプリミティブ: JWT 署名とリフレッシュ、Argon2id パスワードハッシュ、ログインレート制限、RBAC エンジン、招待ストア、セッション |
-| **レイヤ 1 — プラットフォーム** | [plana](https://github.com/celestia-island/plana) | 共有基盤: JSON-RPC 2.0 型とルーティング、サービス DTO、ネットワーク検出、SSE セッション、サーキットブレーカー、LLM 計測と価格設定 |
-| **レイヤ 2 — UI** | [hikari](https://github.com/celestia-island/hikari) | すべての WebUI が共有する UI コンポーネントライブラリ（Vue/TS + Rust） |
-| **レイヤ 3 — サービス** | [arona](https://github.com/celestia-island/arona)、[shittim-chest](https://github.com/celestia-island/shittim-chest)、[entelecheia](https://github.com/celestia-island/entelecheia)、[evernight](https://github.com/celestia-island/evernight)、[malkuth](https://github.com/celestia-island/malkuth)、[lagrange](https://github.com/celestia-island/lagrange) | ビジネスロジックのみ。レイヤ 0〜2 を利用し、各製品を実物にする振る舞いを追加する |
+| **レイヤ 0 — 認証** | [kirino](https://github.com/celestia-island/kirino) | ゼロトラスト ID: 認証、セッション、パーミッション |
+| **レイヤ 1 — プラットフォーム** | [plana](https://github.com/celestia-island/plana) | 共有プロトコル型、トランスポート、そしてすべてのサービスが必要とする基盤 |
+| **レイヤ 2 — UI** | [hikari](https://github.com/celestia-island/hikari) | すべての webUI が共有するコンポーネントライブラリ |
+| **レイヤ 3 — サービス** | arona、shittim-chest、entelecheia、evernight、[malkuth](https://github.com/celestia-island/malkuth)、[lagrange](https://github.com/celestia-island/lagrange) | ビジネスロジックのみ。レイヤ 0〜2 を利用し、各製品を実物にする振る舞いを追加する |
 
 ## ドクトリン
 
 1. **決して二重実装しない。** コードを書く前に問うこと: kirino にあるか？
-   plana にあるか？ hikari にあるか？ 例: JSON-RPC 型は plana、JWT は
-   kirino、ログインレート制限は kirino、サーキットブレーカーは plana、
-   ヘルス DTO は plana、価格設定は plana から来ます。
+   plana にあるか？ hikari にあるか？ 上流の機能を再実装するサービスは
+   機能ではなく欠陥です。
 2. **汎用機能は上流へ。** 2 つ以上のサービスが再利用する機能は、まず
    kirino、plana、または hikari に構築してから利用します。
 3. **逆方向の依存はしない。** サービスは kirino/plana/hikari に依存し、

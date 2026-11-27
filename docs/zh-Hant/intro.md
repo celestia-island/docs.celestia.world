@@ -1,25 +1,25 @@
 # 歡迎來到 celestia-island
 
-**celestia-island** 是一組面向工業 AI 控制的專案群：多智能體協作、遠端操作與安全關鍵自動化。本站承載它的 *為什麼* —— 整體哲學、生態地圖與入口；*怎麼做* 則由連結指向的各專案獨立文件站承擔。
+**celestia-island** 是一組面向工業 AI 控制的專案群：多智能體協作、遠端操作與安全關鍵自動化。本站承載它的 *為什麼*；*怎麼做* 則由各專案自己的文件承擔。
 
-## 回答三個問題
+## 專案
 
-| 問題 | 位置 | 內容 |
-| --- | --- | --- |
-| **為什麼存在？** | [哲學](./philosophy/why.md) | 要解決的問題、閉環、安全教義與長期願景 |
-| **裡面有什麼？** | [生態](./ecosystem/projects.md) | 每個專案、它在閉環中的角色及其文件位置 |
-| **怎麼開始？** | [快速開始](./getting-started/quickstart.md) | 從註冊到聊天智能體與工業控制的 30 分鐘路徑 |
+帶連結的名字是今天就能閱讀的公開倉庫。不帶連結的名字是隨平台一同交付、原始碼尚未公開的產品。完整表格見[專案地圖](./ecosystem/projects.md)。
 
-## 一段話總結
+**平台** —— [kirino](https://github.com/celestia-island/kirino)（零信任認證）、[plana](https://github.com/celestia-island/plana)（協定與平台設施）、[hikari](https://github.com/celestia-island/hikari)（UI 元件）、[provider-registry](https://github.com/celestia-island/provider-registry)（模型型錄）、arona（模型部署面板）、entelecheia（智能體編排）、shittim-chest（聊天與工作台）、scriptum（終端用戶端）。
 
-celestia-island 為 AI 驅動的工業控制構建從發現到驗證的**閉環**：發現 → 安裝 → 認證 → 部署模型 → 聊天與智能體 → 工業控制 → 驗證支撐。閉環由嚴格分層的元件拼裝而成：認證原語（[kirino](https://github.com/celestia-island/kirino)）、平台設施（[plana](https://github.com/celestia-island/plana)）、UI 元件（[hikari](https://github.com/celestia-island/hikari)），以及只實作業務邏輯的服務層（[arona](https://github.com/celestia-island/arona)、[shittim-chest](https://github.com/celestia-island/shittim-chest)、[entelecheia](https://github.com/celestia-island/entelecheia)、[evernight](https://github.com/celestia-island/evernight)）。任何能力都不實作第二遍：通用能力在上游構建一次，由全部下游服務消費。
+**工業與邊緣** —— evernight（協定代理器）、[aoba](https://github.com/celestia-island/aoba)（Modbus CLI）、[hare](https://github.com/celestia-island/hare)（`no_std` 橋接）、[kei](https://github.com/celestia-island/kei)（邊緣核心）、[shun](https://github.com/celestia-island/shun)（安裝器與燒錄工具）、electrode_recon（計算引擎）。
 
-這一切源於一個簡單的觀察：月球上訊號往返需要 2.6 秒，火星上需要 6 到 44 分鐘。那裡的機器人等不了地球上的人——它們必須本機自主。我們今天為工業控制構建的決策層、世界模型與安全門，正是未來自主所需的同一形態。
+**函式庫與工具** —— [noa](https://github.com/celestia-island/noa)（智能體原生版本控制）、[seia](https://github.com/celestia-island/seia)（網路搜尋）、[aris](https://github.com/celestia-island/aris)（瀏覽器引擎）、[shirabe](https://github.com/celestia-island/shirabe)（瀏覽器自動化）、[kou](https://github.com/celestia-island/kou)（虛擬終端機）、[ichika](https://github.com/celestia-island/ichika)（執行緒管線）、[yuuka](https://github.com/celestia-island/yuuka)（結構巨集）、[hifumi](https://github.com/celestia-island/hifumi)（帶版本的序列化）、[lacrymira](https://github.com/celestia-island/lacrymira)（帶型別的資料存取）、[himari](https://github.com/celestia-island/himari)（公式中介表示）、[kotama](https://github.com/celestia-island/kotama)（逆向工程）、[ayane](https://github.com/celestia-island/ayane)（郵件服務）、[tairitsu](https://github.com/celestia-island/tairitsu)（Component Model 全端框架）、[akivili](https://github.com/celestia-island/akivili)（外掛宿主）、[celestia-plugin](https://github.com/celestia-island/celestia-plugin)（Python SDK）、[ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)（終端機內的 Markdown）、arcaea（persona 協定）、official-plugins（外掛套件）。
 
-## 一切都在哪裡
+**基礎設施** —— [celestia-devtools](https://github.com/celestia-island/celestia-devtools)（構建與 lint 工具鏈）、[cherino](https://github.com/celestia-island/cherino)（智能體容器）、[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)（發布產物）、[sysl](https://github.com/celestia-island/sysl)（授權條款）、celestia-integration（整合測試）、fuuka（自託管 CI）、celestia-erp（業務後台）。
 
-- **專案文件** —— `<name>.docs.celestia.world`，由各倉庫自身構建。完整清單見[站點分工](./ecosystem/sites.md)。
-- **組織存在** —— [celestia-island on GitHub](https://github.com/celestia-island)。
-- **產品入口（內測期間 WIP）** —— [dev.celestia.world](https://dev.celestia.world)（面板：帳戶、聊天、智慧代理）、匿名[參觀面](https://demo.dev.celestia.world/tour)與公司官網 [celestia.ac.cn](https://celestia.ac.cn)；模型平台自己的管理控制台在封測結束前保持部署內部。
+**站點** —— [celestia-island.github.io](https://celestia-island.github.io)、[e.celestia.world](https://e.celestia.world)、[dev.celestia.world](https://dev.celestia.world)（面板，封測期間邀請制）、[celestia.ac.cn](https://celestia.ac.cn)，以及本中心站。
+
+## 接下來去哪裡
+
+- [為什麼有 celestia-island](./philosophy/why.md) —— 問題、閉環與安全教義。
+- [閉環](./philosophy/closed-loop.md) —— 發現 → 安裝 → 認證 → 部署 → 聊天與智能體 → 工業控制 → 驗證。
+- [快速開始](./getting-started/quickstart.md) —— 30 分鐘走完這條路。
 
 使用右下角語言切換器切換本站語言。內容以英文為準；各語種遵循同一結構。

@@ -1,86 +1,50 @@
 # Entelecheia — Agent Platform and Memory
 
-Entelecheia is the agent platform: the scepter runtime that orchestrates
-specialized agents (the "souls"), maintains long-term memory (PhiLia),
-provides semantic search, and hosts the industrial integration layer.
-Behind the capabilities of Arona and Chest stands this platform. This guide
-is organized by capability: agents, memory, search, knowledge and
-connections.
+Entelecheia is the agent platform: it runs the agents, keeps their long-term
+memory, answers semantic search, and carries the industrial integration layer.
+Arona and Shittim Chest are both consumers of it — the ability to hold a
+conversation with memory, or to drive a panel with an agent, comes from here.
 
-## Architecture at a glance
+## What it does
 
 ```mermaid
-flowchart TD
-    C["Clients: Arona （gateway） · Shittim Chest （chat/panels） · TUI/CLI"]
-    subgraph G["scepter runtime （node-3:8424）"]
-        N0["Agent manager: L1 souls （PhiLia, Skopeo, Hubris, Kalos, …）"]
-        N1["Skill chains: pipelines of LLM + tool calls with RAG prefetch"]
-        N2["PhiLia: long-term memory （vector + graph, pgvector-backed）"]
-        N3["ApoRia: knowledge base + workspace index （semantic search）"]
-        N4["OreXis: policy / safety gates on tool execution"]
-        N5["Reflection: lesson store re-injected into prompts"]
-    end
-    C -->|"JSON-RPC 2.0 over WebSocket （token or API key）"| G
+flowchart LR
+    C["Clients: workbench, terminal"] --> P["Agent platform"]
+    P --> AG["Agents and skills"]
+    P --> ME["Long-term memory"]
+    P --> SE["Semantic search"]
+    P --> KB["Knowledge bases"]
+    P --> IN["Industrial integration"]
 ```
 
-## 1. Agents (souls)
+- **Agents** — specialized agents, each with its own identity, tools and
+  skills. A skill chain composes model calls and tool executions into a
+  pipeline; before a call runs, the relevant memories and knowledge are
+  retrieved and injected into context.
+- **Long-term memory** — episodes, entities and artifacts are stored as nodes
+  in a memory graph and mirrored into a vector index. Recall combines
+  similarity, graph traversal and time decay, and a periodic pass consolidates
+  related nodes. Memory survives restarts.
+- **Semantic search** — one ranked list over two sources: the workspace index
+  (documents, agent reports, knowledge bases) and long-term memory.
+- **Knowledge bases** — create a collection, add documents, subscribe agents to
+  it; the same search surface retrieves from it.
+- **Reflection** — lessons learned are stored and re-injected into later
+  prompts, a second, lighter form of persistent memory alongside the graph.
+- **Industrial integration** — the write path to real equipment passes through
+  this layer, where policy checks and approvals sit.
 
-Each soul is a specialized agent with its own identity document, tools
-(MCP-style), and skills. Skill chains compose LLM calls with tool execution;
-before each call, relevant long-term memories and knowledge-base content are
-prefetched and injected into the system prompt.
+## How you use it
 
-Safety: tool execution passes through OreXis policy gates, and industrial
-writes require explicit approval flows.
+Clients connect over the platform's JSON-RPC surface with a connection token;
+the terminal interface and the chat workbench are both such clients. Running
+entelecheia yourself is optional — most deployments are hosted for you.
 
-## 2. Long-term memory (PhiLia)
+The agent catalogue, skill authoring and the operational reference belong to
+the product; this hub does not duplicate them.
 
-PhiLia is the memory service behind Arona's memory gateway:
+## Where to go deeper
 
-- **Store** — episodes, entities and artifacts are stored as nodes in a
-  memory graph, embedded and mirrored to pgvector (`philia_chunks`).
-- **Query** — semantic retrieval combines vector similarity, graph traversal
-  and recency decay (14-day half-life).
-- **Consolidate** — periodic merging links related nodes.
-- **Wire surface** — first-class methods `Sync.MemoryStoreRequest` /
-  `MemoryQueryRequest` / `MemoryDeleteRequest` (RBAC: SystemWrite / SystemRead)
-  alongside the generic `Mcp.CallTool` route.
-
-Embedding: configured via `OLLAMA_HOST` + `OLLAMA_EMBED_MODEL` (e.g.
-`nomic-embed-text`), or a remote API, falling back to a local ONNX model.
-
-## 3. Semantic search
-
-`Sync.SearchRequest` fuses two stores into one ranked list:
-
-- **ApoRia** — workspace index, agent reports and knowledge-base documents
-  (hybrid vector + keyword with RRF).
-- **PhiLia** — long-term memories (`philia_memory` source).
-
-## 4. Knowledge base
-
-Create knowledge bases, add documents and subscribe to rag subscriptions —
-all persisted in Postgres. Documents are embedded into the ApoRia store and
-retrievable through the same search surface.
-
-## 5. Reflection
-
-Lessons learned are stored in a lesson store (pgvector) and re-injected into
-future prompts — a second, lightweight persistent memory alongside PhiLia.
-
-## 6. Connecting clients
-
-- WebSocket `ws://<host>:8424/ws` — authenticate at upgrade with
-  `?token=<connection token>` (or Bearer); then `Sync.ConnectHandshake`.
-- HTTP JSON-RPC `POST /api/rpc?token=…` for request/response use.
-- Connection token: `~/.config/entelecheia/scepter.token` on the scepter node.
-
-## Env reference (subset)
-
-| Variable | Purpose |
-|---|---|
-| `SERVER_BIND_ADDRESS` | Bind address (default 127.0.0.1; set 0.0.0.0:8424 for remote clients) |
-| `DATABASE_URL` | Postgres (config.toml or env) |
-| `OLLAMA_HOST` / `OLLAMA_EMBED_MODEL` | Embedding backend |
-| `JWT_SECRET` | Persistent auth tokens (random per session when unset) |
-| `connection_token` | Scepter connection token file |
+- [Safety Principles](../philosophy/safety.md) — why the model never touches the world.
+- [Evernight](./evernight.md) — the layer below, where equipment actually moves.
+- [Shittim Chest](./chest.md) — the surface most people meet agents through.

@@ -6,11 +6,10 @@
 
 ## デスクトップアプリ（shittim-chest）
 
-shittim-chest デスクトップアプリは、すべての `v*` タグから
-[GitHub Releases](https://github.com/celestia-island/shittim-chest/releases)
-へ公開されます。インストーラは**未署名**です —— 初回起動時に OS の
+shittim-chest デスクトップアプリは、すべての `v*` タグから公開されます。
+インストーラは**未署名**です —— 初回起動時に OS の
 セキュリティ警告が表示されます。最初のベータタグがプッシュされるまで、
-ページは空のままです。
+ダウンロードページは空のままです。
 
 | プラットフォーム | アセット |
 | --- | --- |
@@ -26,30 +25,15 @@ shittim-chest の [WebUI](https://dev.celestia.world) を
 ## 管理パネル（arona）
 
 Arona はサーバーホストです —— ローカルにインストールするものはありませ
-ん。管理者が提供するパネル URL（公開デプロイメントでは
-`https://dev.celestia.world`、内部では `http://<host>:8420`）を開き、
+ん。管理者が提供するパネル URL を開き、
 招待状でサインインしてください。
 
-## エージェントランタイム（entelecheia/scepter、オプション）
+## エージェントランタイム（オプション）
 
-自分でエージェントを運用する上級ユーザー向けに、entelecheia の README は
-plana リポジトリの統合インストーラ
-（[Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh)、
-[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)）
-を定めています:
-
-```bash
-git clone https://github.com/celestia-island/plana.git
-# arona/ と並べて entelecheia、evernight、scriptum、shittim-chest もクローン
-cd arona/scripts/install
-bash celestia-install.sh --source-root ../../..
-```
-
-Windows 版（WSL2）: `.\celestia-install.ps1 -SourceRoot ..\..\..`
-
-entelecheia 本体をソースからビルドするには: `just bootstrap` がワーク
-スペースをインストールし、続いて `just dev` が TUI を起動します。前提
-条件は Rust 1.85+、Docker、`just` タスクランナーです。
+自分でエージェントプラットフォームを運用するユーザーは、entelecheia と
+plana のリポジトリで文書化されている統合インストーラに従ってください。
+すべてはエコシステム自身のリポジトリからビルドされるため、前提条件は
+Rust ツールチェーン、Docker、そして `just` タスクランナーです。
 
 ## さらに詳しく
 

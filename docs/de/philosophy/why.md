@@ -47,23 +47,24 @@ implementieren nur Geschäftslogik.** Authentifizierungs-Primitive kommen aus
 implementiert, ist ein Fehler, kein Erfolg. Die vollständige Doktrin finden Sie
 unter [Geschichtete Architektur](./layered-architecture.md).
 
-## Der Horizont: lokale Autonomie
+## Der Ausblick: lokale Autonomie
 
-Latenz ist Schicksal. Auf dem Mond dauert eine Signal-Rundstrecke 2,6 Sekunden;
-auf dem Mars 6 bis 44 Minuten. Maschinen dort können sich nicht auf einen
-Menschen auf der Erde verlassen — sie müssen Entscheidungen lokal, sicher und
-vorhersehbar treffen.
+Eine Rundstrecke ist nicht kostenlos. Wo immer die Verbindung lang,
+überlastet oder schlicht nicht vorhanden ist, kann sich eine Maschine nicht
+auf einen Menschen anderswo verlassen — sie muss lokal, sicher und vorhersehbar
+entscheiden.
 
 Die Form, die wir heute für die industrielle Steuerung bauen — eine
 Entscheidungsebene, die Agenten orchestriert, ein Weltmodell, das weiß, was
-*gerade jetzt* passiert, und eine Sicherheitssperre, die *Nein* sagt — ist
-dieselbe Form, die Mond- und Marsroboter brauchen werden. Wir bauen nicht heute
-für den Mars; wir bauen so, dass das System, das den Mars erreicht, dieses ist.
-Siehe [Erzählung & Horizont](./narrative.md).
+*gerade jetzt* passiert, und eine Sicherheitssperre, die *Nein* sagt —, ist die
+Form, die jede Bereitstellung braucht, sobald die Rundstrecke nicht mehr
+kostenlos ist. Wir bauen für diese Zukunft kein anderes System; wir bauen
+dieses so, dass es bereits die richtige Form hat. Siehe
+[Erzählung & Horizont](./narrative.md).
 
 ## Weiterführendes
 
 - [Der Geschlossene Regelkreis](./closed-loop.md) — der Regelkreis, Segment für Segment.
 - [Geschichtete Architektur](./layered-architecture.md) — wie die Teile geordnet bleiben.
 - [Sicherheitsprinzipien](./safety.md) — was sicherheitskritisch hier bedeutet.
-- [Erzählung & Horizont](./narrative.md) — der Fünfjahresplan und die Begründung dahinter.
+- [Erzählung & Horizont](./narrative.md) — der Verlauf und die Begründung dahinter.

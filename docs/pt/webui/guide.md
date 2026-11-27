@@ -1,62 +1,61 @@
-# Web UI — a jornada começa na sua primeira frase
+# Web UI — a jornada a partir da sua primeira frase
 
-Duas superfícies, um fluxo: **arona** é o plano de controle headless (modelos, chaves,
-registro, memória); **shittim-chest** é a bancada que você realmente vê (chat, painéis,
-enxergar o mundo). Toda tela abaixo é uma visão da bancada — a bancada conversa com a
-arona pela sua superfície RPC; a própria arona não inclui UI.
+Uma conta, uma chave, uma conversa. Esta página percorre o mesmo caminho que o
+produto percorre — um modelo fica disponível, uma chave o autentica, um turno
+roda com memória e um painel o transforma em algo que você pode operar.
 
-![Console do backend da bancada](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-dashboard.png)
+![O dashboard](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-dashboard.png)
 
 ## Modelos: da fonte à invocação
 
-Um modelo vai de "existir" a "pronto para o chat" em quatro estágios: **fonte** (o
-catálogo de Providers — metadados, não inferência) → **registro** (um backend `ollama`
-ou `external` compatível com OpenAI, persistido entre reinícios) → **implantação** (a
-página Agents entrega um ID de modelo a um nó `arona-agent`; um nome de modelo vazio
-escolhe automaticamente o nó mais ocioso) → **roteamento** (a página Models;
-balanceamento de carga least-in-flight com afinidade de sessão). Backends externos
-ficam fail-closed até a primeira sonda ter sucesso. A API exata de cada passo está
-nos [arona docs](https://arona.docs.celestia.world).
+Um modelo vai de "existir" a "pronto para o chat" em quatro estágios: **fonte**
+(o catálogo de provedores — metadados, não inferência) → **registro** (um
+backend, seja um runtime local ou qualquer serviço compatível com OpenAI; ele
+sobrevive a reinícios) → **implantação** (um ID de modelo é entregue a um nó,
+que o baixa e inicia o runtime) → **roteamento** (balanceamento de carga
+least-in-flight com afinidade de sessão). Um backend que ainda não passou pela
+primeira sonda de saúde é recusado em vez de testado.
 
 ## Identidade e medição
 
-![Chaves de API da bancada](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-apikeys.png)
+![Chaves de API](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-apikeys.png)
 
-![Faturamento da bancada](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-billing.png)
+![Uso e faturamento](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-billing.png)
 
-**Chaves de API** são a sua identidade — o gateway autentica `/v1/*` com tokens Bearer,
-e tanto o `curl` quanto a bancada apresentam uma na entrada. **Uso** é um registro por
-chamada, por chave: tokens, modelo, backend, custo. Os níveis de **Faturamento** definem
-cotas (USD / tokens / limites de taxa); atingir uma delas é uma recusa direta, não uma
-desaceleração.
+**As chaves de API** são a sua identidade — o gateway autentica com um token
+Bearer, e tanto o `curl` quanto a bancada apresentam uma na entrada. **O uso**
+é um registro por chamada e por chave: tokens, modelo, backend, custo. Os
+níveis de **faturamento** definem cotas; atingir uma delas é uma recusa direta,
+não uma desaceleração.
 
 ## Chat e memória
 
-![Chat da bancada](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-playground.png)
+![Chat](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-playground.png)
 
-Cada turno de chat passa pelo serviço de memória — o selo em cada turno diz se
-isso aconteceu. `Memory on` significa que memórias de longo prazo relevantes foram
-injetadas antes do roteamento; `Memory offline` significa que o serviço de memória
-está inalcançável (um sinal de honestidade, não um bug); `disabled` significa que
-nada relevante foi encontrado. Turnos concluídos são extraídos em episódios e
-persistidos, de modo que a memória sobrevive a reinícios — e entradas de write-back
-podem ser apagadas diretamente da página Memory.
+Cada turno passa pelo serviço de memória — o selo em cada turno diz se isso
+aconteceu. `Memory on` significa que memórias de longo prazo relevantes foram
+injetadas antes do roteamento; `Memory offline` significa que o serviço de
+memória está inalcançável (um sinal de honestidade, não um bug); `disabled`
+significa que nada relevante foi encontrado. Os turnos concluídos são extraídos
+e persistidos, então a memória sobrevive a reinícios — e as entradas de
+writeback podem ser apagadas diretamente na página de Memória.
 
 ## Painéis e controle industrial
 
-![Agentes da bancada](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-agents.png)
+![Agentes](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-agents.png)
 
-Um prompt cria um painel; o motor gera o layout e o persiste no armazenamento de
-workspaces do scepter. A edição é estrutural — vínculos de fonte de dados, listas de
-componentes, estados de conexão — não uma caixa-preta. Topology e Holographic são duas
-visões da mesma frota; Reports adiciona busca semântica sobre o histórico. Escritas
-industriais passam por validação de política e **aprovação humana** antes de qualquer
-coisa se mover: o fim do ciclo fechado, e seu passo mais pesado.
+Um único prompt cria um painel; o motor gera o layout e o persiste no
+workspace. A edição é estrutural — vínculos de fonte de dados, listas de
+componentes, estados de conexão —, não uma caixa-preta. Topology e Holographic
+são duas vistas da mesma frota; Reports acrescenta busca semântica sobre o
+histórico. As escritas industriais passam por validação de política e por
+**aprovação humana** antes de qualquer movimento: o fim do ciclo fechado, e o
+seu passo mais pesado.
 
-![Login da bancada](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-login.png)
+![Entrada](https://raw.githubusercontent.com/celestia-island/docs.celestia.world/master/res/screenshots/arona-login.png)
 
-## Para ir mais fundo
+## Aprofundar-se
 
-- A referência completa da plataforma arona — [arona docs](https://arona.docs.celestia.world)
-- A bancada de trabalho do chest e seus painéis — [shittim-chest docs](https://dev.celestia.world)
-- Agentes, workspaces e o gate de escrita industrial — entelecheia docs
+- [Arona](../platforms/arona.md) — o gateway e o painel de implantação.
+- [Shittim Chest](../platforms/chest.md) — a bancada e os seus painéis.
+- [Entelecheia](../platforms/entelecheia.md) — agentes, workspaces e o portão de escrita industrial.

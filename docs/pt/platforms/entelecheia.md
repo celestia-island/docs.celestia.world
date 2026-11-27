@@ -1,89 +1,55 @@
 # Entelecheia — Plataforma de Agentes e Memória
 
-O Entelecheia é a plataforma de agentes: o runtime scepter que orquestra
-agentes especializados (as "almas"), mantém memória de longo prazo (PhiLia),
-fornece busca semântica e hospeda a camada de integração industrial. Atrás
-das capacidades da Arona e do Chest está esta plataforma. Este guia é
-organizado por capacidade: agentes, memória, busca, conhecimento e conexões.
+A Entelecheia é a plataforma de agentes: ela executa os agentes, mantém a
+memória de longo prazo deles, responde à busca semântica e carrega a camada de
+integração industrial. A Arona e o Shittim Chest são ambos consumidores dela — a
+capacidade de manter uma conversa com memória, ou de conduzir um painel com um
+agente, vem daqui.
 
-## Arquitetura num relance
+## O que ela faz
 
 ```mermaid
-flowchart TD
-    C["Clientes: Arona （gateway） · Shittim Chest （chat/painéis） · TUI/CLI"]
-    subgraph G["runtime scepter （node-3:8424）"]
-        N0["Gerenciador de agentes: almas L1 （PhiLia, Skopeo, Hubris, Kalos, …）"]
-        N1["Cadeias de habilidades: pipelines de LLM + chamadas de ferramentas com prefetch RAG"]
-        N2["PhiLia: memória de longo prazo （vetorial + grafo, com suporte a pgvector）"]
-        N3["ApoRia: base de conhecimento + índice de workspace （busca semântica）"]
-        N4["OreXis: portões de política/segurança na execução de ferramentas"]
-        N5["Reflexão: armazenamento de lições reinjetadas nos prompts"]
-    end
-    C -->|"JSON-RPC 2.0 sobre WebSocket （token ou API key）"| G
+flowchart LR
+    C["Clients: workbench, terminal"] --> P["Agent platform"]
+    P --> AG["Agents and skills"]
+    P --> ME["Long-term memory"]
+    P --> SE["Semantic search"]
+    P --> KB["Knowledge bases"]
+    P --> IN["Industrial integration"]
 ```
 
-## 1. Agentes (almas)
+- **Agentes** — agentes especializados, cada um com a sua própria identidade,
+  ferramentas e habilidades. Uma cadeia de habilidades compõe chamadas de modelo
+  e execuções de ferramentas num pipeline; antes de uma chamada rodar, as
+  memórias e o conhecimento relevantes são recuperados e injetados no contexto.
+- **Memória de longo prazo** — episódios, entidades e artefatos são armazenados
+  como nós num grafo de memória e espelhados num índice vetorial. O recall
+  combina similaridade, travessia do grafo e decaimento temporal, e uma
+  passagem periódica consolida nós relacionados. A memória sobrevive a
+  reinícios.
+- **Busca semântica** — uma única lista ranqueada sobre duas fontes: o índice do
+  workspace (documentos, relatórios de agentes, bases de conhecimento) e a
+  memória de longo prazo.
+- **Bases de conhecimento** — crie uma coleção, adicione documentos, inscreva
+  agentes nela; a mesma superfície de busca recupera a partir dela.
+- **Reflexão** — as lições aprendidas são armazenadas e reinjetadas em prompts
+  posteriores, uma segunda forma mais leve de memória persistente ao lado do
+  grafo.
+- **Integração industrial** — o caminho de escrita para equipamento real passa
+  por esta camada, onde ficam as verificações de política e as aprovações.
 
-Cada alma é um agente especializado com o seu próprio documento de
-identidade, ferramentas (estilo MCP) e habilidades. Cadeias de habilidades
-compõem chamadas de LLM com execução de ferramentas; antes de cada chamada,
-memórias de longo prazo relevantes e conteúdo da base de conhecimento são
-pré-buscados e injetados no prompt de sistema.
+## Como você a usa
 
-Segurança: a execução de ferramentas passa pelos portões de política do
-OreXis, e escritas industriais exigem fluxos de aprovação explícitos.
+Os clientes conectam-se pela superfície JSON-RPC da plataforma com um token de
+conexão; a interface de terminal e a bancada de chat são ambos esses clientes.
+Executar a entelecheia por conta própria é opcional — a maioria das implantações
+é hospedada para você.
 
-## 2. Memória de longo prazo (PhiLia)
+O catálogo de agentes, a autoria de habilidades e a referência operacional
+pertencem ao produto; este hub não as duplica.
 
-O PhiLia é o serviço de memória por trás do gateway de memória da Arona:
+## Aprofundar-se
 
-- **Armazenar** — episódios, entidades e artefatos são guardados como nós num
-  grafo de memória, convertidos em embeddings e espelhados no pgvector
-  (`philia_chunks`).
-- **Consultar** — a recuperação semântica combina similaridade vetorial,
-  travessia de grafo e decaimento de recência (meia-vida de 14 dias).
-- **Consolidar** — fusões periódicas ligam nós relacionados.
-- **Superfície de transmissão** — métodos de primeira classe
-  `Sync.MemoryStoreRequest` / `MemoryQueryRequest` / `MemoryDeleteRequest`
-  (RBAC: SystemWrite / SystemRead) ao lado da rota genérica `Mcp.CallTool`.
-
-Embedding: configurado via `OLLAMA_HOST` + `OLLAMA_EMBED_MODEL` (p. ex.
-`nomic-embed-text`), ou uma API remota, com fallback para um modelo ONNX
-local.
-
-## 3. Busca semântica
-
-O `Sync.SearchRequest` funde dois armazenamentos numa única lista ranqueada:
-
-- **ApoRia** — índice de workspace, relatórios de agentes e documentos da
-  base de conhecimento (híbrido vetorial + palavras-chave com RRF).
-- **PhiLia** — memórias de longo prazo (fonte `philia_memory`).
-
-## 4. Base de conhecimento
-
-Crie bases de conhecimento, adicione documentos e assine inscrições rag —
-tudo persistido no Postgres. Documentos são convertidos em embeddings no
-armazenamento do ApoRia e recuperáveis pela mesma superfície de busca.
-
-## 5. Reflexão
-
-Lições aprendidas são guardadas num armazenamento de lições (pgvector) e
-reinjetadas em prompts futuros — uma segunda memória persistente e leve ao
-lado do PhiLia.
-
-## 6. Conectando clientes
-
-- WebSocket `ws://<host>:8424/ws` — autentique no upgrade com
-  `?token=<connection token>` (ou Bearer); depois `Sync.ConnectHandshake`.
-- HTTP JSON-RPC `POST /api/rpc?token=…` para uso de requisição/resposta.
-- Token de conexão: `~/.config/entelecheia/scepter.token` no nó do scepter.
-
-## Referência de env (subconjunto)
-
-| Variável | Finalidade |
-|---|---|
-| `SERVER_BIND_ADDRESS` | Endereço de bind (padrão 127.0.0.1; defina 0.0.0.0:8424 para clientes remotos) |
-| `DATABASE_URL` | Postgres (config.toml ou env) |
-| `OLLAMA_HOST` / `OLLAMA_EMBED_MODEL` | Backend de embedding |
-| `JWT_SECRET` | Tokens de autenticação persistentes (aleatórios por sessão quando não definido) |
-| `connection_token` | Arquivo de token de conexão do scepter |
+- [Princípios de Segurança](../philosophy/safety.md) — por que o modelo nunca toca o mundo.
+- [Evernight](./evernight.md) — a camada abaixo, onde o equipamento de fato se move.
+- [Shittim Chest](./chest.md) — a superfície pela qual a maioria das pessoas conhece os agentes.

@@ -1,72 +1,87 @@
 # 프로젝트 지도
 
-celestia-island 저장소의 전체 목록으로, 계층별로 정리되어 있습니다. 문서
-사이트가 표시된 저장소는 `<name>.docs.celestia.world`에서 자체 *방법* 문서를
-제공합니다; 나머지는 저장소 안에서 문서화됩니다.
+celestia-island 플랫폼의 저장소와 제품 전체 목록을 계층별로 정리했습니다.
+링크가 있는 이름은 오늘 바로 읽을 수 있는 공개 저장소입니다; 링크가 없는
+이름은 플랫폼과 함께 배포되지만 아직 소스가 공개되지 않은 제품입니다. 문서
+사이트가 표시된 저장소는 자체 *방법* 문서를 제공합니다; 나머지는 저장소
+안에서 문서화됩니다.
 
 ## 계층 0 — 인증
 
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
-| [kirino](https://github.com/celestia-island/kirino) | 제로 트러스트 인증 및 RBAC: JWT 세션, Argon2id 해싱, 로그인 비율 제한, 권한 엔진 | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
+| [kirino](https://github.com/celestia-island/kirino) | 제로 트러스트 인증 및 권한 부여: 세션, 권한, 비율 제한 | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
 
 ## 계층 1 — 플랫폼
 
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
-| [plana](https://github.com/celestia-island/plana) | 공유 타입, JSON-RPC 클라이언트 및 서버, SSE 세션, 회로 차단기, LLM 계량 및 가격 책정, 관리 UI 셸 | 저장소 |
-| [provider-registry](https://github.com/celestia-island/provider-registry) | 모델 및 공급자 레지스트리 (entrypoint TOML 형식) | 저장소 |
+| [plana](https://github.com/celestia-island/plana) | 공유 프로토콜 타입, 전송, 계량, 그리고 모든 서비스가 소비하는 기반 기능 | 저장소 |
+| [provider-registry](https://github.com/celestia-island/provider-registry) | 제품 전반이 공유하는 모델 및 제공자 카탈로그 | 저장소 |
 
 ## 계층 2 — UI
 
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
-| [hikari](https://github.com/celestia-island/hikari) | 모든 웹UI가 공유하는 UI 컴포넌트 라이브러리 (Vue/TS + Rust) | 저장소 |
+| [hikari](https://github.com/celestia-island/hikari) | 모든 웹UI가 공유하는 UI 컴포넌트 라이브러리 | 저장소 |
 
 ## 계층 3 — 서비스
 
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
-| [arona](https://github.com/celestia-island/arona) | 클라우드 API 관리 패널: 계정, API key, 모델 배포, 백엔드, 사용 기록 | 저장소 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 채팅 데스크톱/웹UI 및 셸 | 문서(저장소 내) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | 다중 에이전트 협업 플랫폼: exec 전용 마이크로커널, scepter 오케스트레이션 서버, PTC 실행 파이프라인 | 문서(저장소 내) |
-| [evernight](https://github.com/celestia-island/evernight) | 산업 프로토콜 브로커: Modbus, S7comm, OPC UA; 원격 운영, 텔레메트리, 쓰기 게이트 | 문서(저장소 내) |
-| [malkuth](https://github.com/celestia-island/malkuth) | 서비스 감독 도구 키트: 롤링 업데이트, 헬스 프로브, 리버스 프록시, 크래시 루프 복구 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | 이 사이트와 모든 프로젝트 문서 사이트를 구동하는 마크다운 문서 엔진 | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| arona | 모델 게이트웨이 및 배포 패널: 키, 백엔드, 라우팅, 사용량 | [Arona](../platforms/arona.md) |
+| shittim-chest | 채팅, 패널 및 연동 — 워크벤치 표면 | [Shittim Chest](../platforms/chest.md) |
+| entelecheia | 에이전트 플랫폼: 에이전트, 장기 메모리, 시맨틱 검색, 산업 연동 | [Entelecheia](../platforms/entelecheia.md) |
+| evernight | 산업 프로토콜 브로커: 필드 프로토콜, 알람, 기록, 엣지 추론 | [Evernight](../platforms/evernight.md) |
+| [malkuth](https://github.com/celestia-island/malkuth) | 서비스 감독: 롤링 업데이트, 헬스 프로브, 리버스 프록시, 크래시 복구 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
+| [lagrange](https://github.com/celestia-island/lagrange) | 이 사이트와 모든 프로젝트 문서 사이트의 기반이 되는 문서 엔진 | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| celestia-erp | 비즈니스 백오피스: 조직, 과금, 인보이스 | — |
+| electrode_recon | 전극 미세구조 연산 엔진 — 엔진 패브릭 위의 첫 외부 인스턴스 | — |
 
 ## 도구 및 라이브러리
 
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | AI 네이티브 분산 버전 관리: 에이전트별 작업 공간 격리, JSONL 추가 전용 로그, 스냅샷 히스토리 | noa |
-| [seia](https://github.com/celestia-island/seia) | 다중 엔진 웹 검색 라이브러리 및 CLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | 스레드 풀 파이프라인 매크로 (flume 기반 메시지 파이프) | ichika |
-| [yuuka](https://github.com/celestia-island/yuuka) | 단순 매크로에서 복잡한 중첩 구조를 생성하는 절차 매크로 | yuuka |
-| [aoba](https://github.com/celestia-island/aoba) | Modbus 및 데이터 소스 CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
-| [kou](https://github.com/celestia-island/kou) | 독립형 가상 터미널 엔진: PTY 관리, VT100/ANSI | 저장소 |
-| [hifumi](https://github.com/celestia-island/hifumi) | 버전 간 데이터 마이그레이션용 직렬화 라이브러리 | 저장소 |
-| [aris](https://github.com/celestia-island/aris) | servo에서 파생된 브라우저 엔진, 라이브러리로 임베드 가능 (디지털 트윈용 WebGL) | 저장소 |
-| [shirabe](https://github.com/celestia-island/shirabe) | 가벼운 Rust 네이티브 브라우저 자동화 및 디버그 라이브러리 | 저장소 |
-| [tairitsu](https://github.com/celestia-island/tairitsu) | WASM 컴포넌트 모델 기반 풀스택 프레임워크 | 저장소 |
-| [akivili](https://github.com/celestia-island/akivili) | 플러그인 패브릭 및 SDK: 플러그인 레지스트리, 호스트 중개, guard, TypeScript/WASM 실행 파이프라인 | 저장소 |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | ratatui TUI용 마크다운 렌더링 | 저장소 |
-| [arcaea](https://github.com/celestia-island/arcaea) | celestia persona 프로토콜용 Rust 라이브러리 | 저장소 |
-| [scriptum](https://github.com/celestia-island/scriptum) | entelecheia용 터미널 인터페이스 (TUI): scepter 서버와 대화하는 "단순 디스플레이" | 저장소 |
+| [noa](https://github.com/celestia-island/noa) | 격리된 워크스페이스를 갖춘 에이전트 네이티브 분산 버전 관리 | [저장소](https://github.com/celestia-island/noa) |
+| [seia](https://github.com/celestia-island/seia) | 다중 엔진 웹 검색 | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
+| [aoba](https://github.com/celestia-island/aoba) | 다중 프로토콜 디버깅 및 시뮬레이션 CLI (Modbus RTU 등) | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | 메시지 파이프 위의 스레드 풀 파이프라인 | 저장소 |
+| [yuuka](https://github.com/celestia-island/yuuka) | 조합된 중첩 구조와 JSON 병합/패치를 위한 매크로 | 저장소 |
+| [kou](https://github.com/celestia-island/kou) | 가상 터미널 엔진: PTY, VT100/ANSI, 인라인 그래픽 | 저장소 |
+| [hifumi](https://github.com/celestia-island/hifumi) | 버전 간 데이터 마이그레이션을 위한 직렬화 | 저장소 |
+| [lacrymira](https://github.com/celestia-island/lacrymira) | 하나의 명령 표면 뒤에 숨긴 SQL 및 KV용 타입 지정 데이터 접근 | 저장소 |
+| [himari](https://github.com/celestia-island/himari) | 차원을 갖는 수식 중간 표현 | 저장소 |
+| [kotama](https://github.com/celestia-island/kotama) | 리버스 엔지니어링 툴킷: 분해, 디컴파일, 교차 참조 | 저장소 |
+| [ayane](https://github.com/celestia-island/ayane) | 메일 서비스: 제어 평면, 웹메일, 보호 | 저장소 |
+| [aris](https://github.com/celestia-island/aris) | servo에서 파생되어 라이브러리로 임베드 가능한 순수 Rust 브라우저 엔진 | 저장소 |
+| [shirabe](https://github.com/celestia-island/shirabe) | 헤드리스 브라우저 자동화 및 디버깅 | 저장소 |
+| [tairitsu](https://github.com/celestia-island/tairitsu) | WASM 컴포넌트 모델 위의 풀스택 프레임워크 | 저장소 |
+| [akivili](https://github.com/celestia-island/akivili) | 에이전트 확장을 위한 플러그인 호스트 및 SDK | 저장소 |
+| [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python 플러그인 및 엔진 SDK | 저장소 |
+| [shun](https://github.com/celestia-island/shun) | 설치 프로그램, 플래셔, 포터블 모드 페이로드 전달 | 저장소 |
+| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | 터미널 UI 내 Markdown 렌더링 | 저장소 |
+| arcaea | 페르소나 프로토콜 라이브러리 | 저장소 |
+| scriptum | 에이전트 플랫폼용 터미널 인터페이스 | — |
+| official-plugins | 퍼스트 파티 플러그인 패키지 | 저장소 |
 
 ## 엣지 및 하드웨어
 
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
-| [kei](https://github.com/celestia-island/kei) | ARM64/RISC-V 엣지 디바이스용 Rust OS 커널; 장기 지평을 위한 결정적 실시간 코어 | 저장소 |
-| [hare](https://github.com/celestia-island/hare) | 산업 엣지용 no_std 브리지 크레이트: wire 프로토콜, 하드웨어 매니페스트, 프로토콜 허브(Modbus/MC/S7), HAL 트레이트, ANSI/VT | 저장소 |
+| [kei](https://github.com/celestia-island/kei) | ARM64 및 RISC-V 엣지 게이트웨이용 Rust 커널 | 저장소 |
+| [hare](https://github.com/celestia-island/hare) | 임베디드 산업 노드용 `no_std` 브리지 라이브러리 | 저장소 |
+| evernight-appliance | 어플라이언스 배포판: 부트 펌웨어, 플래셔, 드라이버 계약 | — |
 
-## 인프라 및 도구
+## 인프라 및 툴링
 
 | 프로젝트 | 역할 | 문서 |
 | --- | --- | --- |
-| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | 공유 개발 도구 체인: justfile 레시피, 패치 등록, 린팅 | 저장소 |
-| [celestia-integration](https://github.com/celestia-island/celestia-integration) | 전체 루프에 대한 실제 하드웨어 통합 테스트 스위트 | 저장소 |
-| [sysl](https://github.com/celestia-island/sysl) | Synthetic Source License (SySL): AI 생성 코드를 위해 설계된 라이선스 | 저장소 |
+| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | 공유 개발 툴체인: 빌드 레시피, 린팅, 릴리스 게이트 | 저장소 |
+| [cherino](https://github.com/celestia-island/cherino) | 에이전트 실행을 위한 샌드박스 컨테이너 추상화 | 저장소 |
+| [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts) | 릴리스용 공개 바이너리 및 이미지 아티팩트 호스팅 | 저장소 |
+| celestia-integration | 루프 전체를 위한 저장소 간 통합 테스트 | — |
+| fuuka | 자체 호스팅 CI 실행 평면 | — |
+| [sysl](https://github.com/celestia-island/sysl) | 이 코드 대부분이 사용하는 Synthetic Source License | 저장소 |
 
 ## 웹 프레즌스
 
@@ -75,10 +90,11 @@ celestia-island 저장소의 전체 목록으로, 계층별로 정리되어 있�
 | [celestia-island.github.io](https://celestia-island.github.io) | 조직 프레즌스 | 저장소 |
 | [docs.celestia.world](https://docs.celestia.world) | 이 사이트 — 철학, 지도, 시작하기 | 저장소 |
 | [e.celestia.world](https://e.celestia.world) | 공개 랜딩 페이지 | 저장소 |
-| [dev.celestia.world](https://dev.celestia.world) | 패널과 개발자 포털(제품 입구) | — |
+| [dev.celestia.world](https://dev.celestia.world) | 패널 및 개발자 대시보드 (베타 기간 초대제) | 저장소 |
+| [celestia.ac.cn](https://celestia.ac.cn) | 회사 및 엔터프라이즈 서비스 사이트 | 저장소 |
 
 ## 더 알아보기
 
-- [계층형 아키텍처](../philosophy/layered-architecture.md) — 이 계층들이 존재하는 이유.
-- [폐쇄 루프](../philosophy/closed-loop.md) — 루프를 따라 프로젝트가 협력하는 방식.
-- [사이트 및 소유권](./sites.md) — 누가 무엇을 문서화하고 어디에 있는지.
+- [계층 구조](../philosophy/layered-architecture.md) — 이 계층들이 존재하는 이유.
+- [폐쇄 루프](../philosophy/closed-loop.md) — 프로젝트들이 루프 위에서 협력하는 방식.
+- [사이트 및 소유권](./sites.md) — 누가 무엇을 어디에 문서화하는지.

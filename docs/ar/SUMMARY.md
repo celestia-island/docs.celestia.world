@@ -33,7 +33,7 @@
 
 # المنصات
 
-- [Arona — بوابة النماذج والذاكرة والعنقود](./platforms/arona.md)
+- [Arona — بوابة النماذج ولوحة النشر](./platforms/arona.md)
 - [Entelecheia — منصة الوكلاء والذاكرة](./platforms/entelecheia.md)
 - [Shittim Chest — المحادثة واللوحات والتكاملات](./platforms/chest.md)
 - [Evernight — وسيط البروتوكولات الصناعية](./platforms/evernight.md)

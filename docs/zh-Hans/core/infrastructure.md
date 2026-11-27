@@ -1,40 +1,27 @@
 # 核心基础设施 — 认证、RPC 与地基
 
-你用的每个平台都站在同一片地基上。把这篇读一遍，平台指南里的零件就都
-对上了：kirino（零信任认证与 RBAC）、plana（协议类型、JSON-RPC 传输、计量、
-同步引擎）、hikari（UI 组件库）。
+你用的每个平台都站在同一片地基上。把这页读一遍，平台指南里的零件就都对上了：kirino（零信任认证与 RBAC）、plana（协议类型与平台设施）和 hikari（UI 组件库）。
 
 ## 认证与授权（kirino）
 
-- **身份**：Argon2id 密码哈希；JWT 访问/刷新 token（`TokenManager`、
-  `kirino-session`）；登录限流与账户锁定。
-- **RBAC**：层级权限（agent.*、system.*、knowledge.* 等）由 `GrantResolver`
-  解析；角色捆绑权限（admin 全量、viewer 只读）。分配持久化于 Postgres。
-- **委托**：scepter 信任 chest 网关提供的调用者用户 id（`X-User-Id` /
-  `user_id`），仅用于 workspace 隔离——认证层总是在上游。
-- **管理面**：面板管理端点要求专用 `ARONA_ADMIN_TOKEN`，缺失时 fail-closed。
+- **身份**：密码哈希、短生命周期的会话令牌、登录限流与账户锁定。算法及其参数记录在 [kirino 自己的文档](https://kirino.docs.celestia.world)里，不在这里。
+- **RBAC**：权限是层级的，按调用者解析；角色捆绑权限（管理员看到一切，只读者只读）。分配持久化于平台数据库。
+- **委托**：处在另一服务背后的服务自己不认证任何人——认证层总是在上游，调用者身份只为工作区隔离而透传。
 
 ## 协议与 RPC（plana）
 
-- 所有平台流量是 **WebSocket 上的 JSON-RPC 2.0**（以及 HTTP POST
-  `/api/rpc` 的请求/响应）。方法名为 `<Domain>.<Action>`——如
-  `Sync.MemoryQueryRequest`、`Cli.Search`、`Mcp.CallTool`。
-- 线协议类型在 plana（`plana-state-sync` / `plana-types`）：协议单一事实源；
-  下游仓库钉发布的 tag。
-- 通知（无 `id`）推送流式块与面板更新等事件；请求带 `id`，响应回显。
-- 同步引擎（`plana-sync`）是服务端权威状态树：客户端声明视口，服务端广播
-  diff 并周期性全量快照。
+- 平台流量是 **JSON-RPC 2.0**，流式走 WebSocket，请求/响应走 HTTP POST。方法名为 `<Domain>.<Action>`。
+- wire 类型是协议的单一事实源，住在 plana；下游仓库钉一个已发布版本，而不是 fork 一份副本。
+- 通知没有 `id`，推送流式块与面板更新等事件；请求带 `id`，响应回显。
+- 状态密集的界面在任何地方都遵循同一模式：服务端权威，客户端声明自己在看什么，服务端推送差异。
 
 ## 计量与定价（plana）
 
-按 API key 计量用量，从统一定价表（`plana-llm-provider` metering）计价：
-prompt/completion token、成本估算与配额强制跨服务共享。
+用量按 API 密钥计量，并按一张由所有服务共享的规范价目表定价：prompt 与 completion token、成本估算与配额强制，在每个产品里都是同一套计算。
 
 ## UI 组件（hikari）
 
-Vue 组件库（`@celestia-island/hikari`）提供每个 webui 使用的按钮、徽章、
-表格、弹窗与确认对话框；平台页面用 plana UI shell 组合它们。共享组件必须
-上提到这里，而不是每仓重新实现。
+组件库提供每个 webUI 都用的按钮、徽章、表格、弹窗与确认对话框，让同一屏无论挂在哪里，外观与行为都一致。共享组件在这里上提，而不是每个仓库重新实现。
 
 ## 依赖规则
 

@@ -1,85 +1,101 @@
 # Mapa de Projetos
 
-O inventário completo dos repositórios do celestia-island, agrupados por
-camada. Repositórios marcados com um site de documentação carregam as suas
-próprias docs de *como* em `<name>.docs.celestia.world`; todo o resto é
+O inventário dos repositórios e produtos da plataforma celestia-island,
+agrupados por camada. Um nome com link é um repositório público que você pode
+ler hoje; um nome sem link é um produto que acompanha a plataforma mas cujo
+código-fonte ainda não é público. Repositórios marcados com um site de
+documentação carregam as suas próprias docs de *como*; todo o resto é
 documentado no próprio repositório.
 
 ## Camada 0 — Auth
 
 | Projeto | Papel | Docs |
 | --- | --- | --- |
-| [kirino](https://github.com/celestia-island/kirino) | Autenticação de confiança zero e RBAC: sessões JWT, hash Argon2id, limite de taxa de login, motor de permissões | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
+| [kirino](https://github.com/celestia-island/kirino) | Autenticação e autorização de confiança zero: sessões, permissões, limite de taxa | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
 
 ## Camada 1 — Plataforma
 
 | Projeto | Papel | Docs |
 | --- | --- | --- |
-| [plana](https://github.com/celestia-island/plana) | Tipos compartilhados, cliente e servidor JSON-RPC, sessões SSE, circuit breakers, medição e preços de LLM, shell da UI de administração | repositório |
-| [provider-registry](https://github.com/celestia-island/provider-registry) | Registro de modelos e provedores (formato TOML de entrypoint) | repositório |
+| [plana](https://github.com/celestia-island/plana) | Tipos de protocolo compartilhados, transporte, medição e as facilidades que todo serviço consome | repositório |
+| [provider-registry](https://github.com/celestia-island/provider-registry) | Catálogo de modelos e provedores compartilhado entre os produtos | repositório |
 
 ## Camada 2 — UI
 
 | Projeto | Papel | Docs |
 | --- | --- | --- |
-| [hikari](https://github.com/celestia-island/hikari) | Biblioteca de componentes de UI (Vue/TS + Rust) compartilhada por todos os webUIs | repositório |
+| [hikari](https://github.com/celestia-island/hikari) | A biblioteca de componentes de UI compartilhada por toda webUI | repositório |
 
 ## Camada 3 — Serviços
 
 | Projeto | Papel | Docs |
 | --- | --- | --- |
-| [arona](https://github.com/celestia-island/arona) | Painel de administração da API em nuvem: contas, API keys, implantação de modelos, backends, registros de uso | repositório |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | Chat desktop/webUI e shell | docs (no repositório) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | Plataforma de colaboração multiagente: microkernel exec-only, servidor de orquestração scepter, pipeline de execução PTC | docs (no repositório) |
-| [evernight](https://github.com/celestia-island/evernight) | Broker de protocolos industriais: Modbus, S7comm, OPC UA; operações remotas, telemetria, portões de escrita | docs (no repositório) |
-| [malkuth](https://github.com/celestia-island/malkuth) | Kit de supervisão de serviços: atualizações contínuas, sondas de saúde, proxy reverso, recuperação de crash loops | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | Motor de documentação Markdown que alimenta este site e todos os sites de docs dos projetos | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| arona | Gateway de modelos e painel de implantação: chaves, backends, roteamento, uso | [Arona](../platforms/arona.md) |
+| shittim-chest | Chat, painéis e integrações — a superfície da bancada | [Shittim Chest](../platforms/chest.md) |
+| entelecheia | Plataforma de agentes: agentes, memória de longo prazo, busca semântica, integração industrial | [Entelecheia](../platforms/entelecheia.md) |
+| evernight | Broker de protocolos industriais: protocolos de campo, alarmes, gravação, inferência de borda | [Evernight](../platforms/evernight.md) |
+| [malkuth](https://github.com/celestia-island/malkuth) | Supervisão de serviços: atualizações graduais, sondas de saúde, proxy reverso, recuperação de falhas | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
+| [lagrange](https://github.com/celestia-island/lagrange) | O motor de documentação por trás deste site e de todo site de documentação de projeto | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| celestia-erp | Back office empresarial: organizações, faturamento, faturas | — |
+| electrode_recon | Motor de cálculo da microestrutura de eletrodos — a primeira instância externa na malha de motores | — |
 
 ## Ferramentas e bibliotecas
 
 | Projeto | Papel | Docs |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | Controle de versão distribuído nativo de IA: isolamento de workspace por agente, logs append-only em JSONL, histórico de snapshots | noa |
-| [seia](https://github.com/celestia-island/seia) | Biblioteca e CLI de busca web multi-motor | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | Macros de pipeline com pool de threads (pipes de mensagens baseados em flume) | ichika |
-| [yuuka](https://github.com/celestia-island/yuuka) | Proc-macro para gerar estruturas aninhadas complexas a partir de um macro simples | yuuka |
-| [aoba](https://github.com/celestia-island/aoba) | CLI de Modbus e fontes de dados | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
-| [kou](https://github.com/celestia-island/kou) | Motor de terminal virtual autônomo: gerenciamento de PTY, VT100/ANSI | repositório |
-| [hifumi](https://github.com/celestia-island/hifumi) | Biblioteca de serialização para migrar dados entre versões | repositório |
-| [aris](https://github.com/celestia-island/aris) | Motor de navegador derivado do servo, incorporável como biblioteca (WebGL para gêmeos digitais) | repositório |
-| [shirabe](https://github.com/celestia-island/shirabe) | Biblioteca leve de automação e depuração de navegador nativa em Rust | repositório |
-| [tairitsu](https://github.com/celestia-island/tairitsu) | Framework full-stack alimentado pelo Modelo de Componentes WASM | repositório |
-| [akivili](https://github.com/celestia-island/akivili) | Malha de plugins e SDK: registro de plugins, mediação do host, guard e pipeline de execução TypeScript/WASM | repositório |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Renderização de Markdown para TUIs ratatui | repositório |
-| [arcaea](https://github.com/celestia-island/arcaea) | Biblioteca Rust para o protocolo de persona celestia | repositório |
-| [scriptum](https://github.com/celestia-island/scriptum) | Interface de terminal (TUI) para o entelecheia: um "display burro" que conversa com o servidor scepter | repositório |
+| [noa](https://github.com/celestia-island/noa) | Controle de versão distribuído nativo de agentes, com workspaces isolados | [repositório](https://github.com/celestia-island/noa) |
+| [seia](https://github.com/celestia-island/seia) | Busca na web com múltiplos motores | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
+| [aoba](https://github.com/celestia-island/aoba) | CLI de depuração e simulação multiprotocolo (Modbus RTU e afins) | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | Pipelines de pool de threads sobre pipes de mensagens | repositório |
+| [yuuka](https://github.com/celestia-island/yuuka) | Macros para estruturas aninhadas compostas e merge/patch de JSON | repositório |
+| [kou](https://github.com/celestia-island/kou) | Motor de terminal virtual: PTY, VT100/ANSI, gráficos em linha | repositório |
+| [hifumi](https://github.com/celestia-island/hifumi) | Serialização para migrar dados entre versões | repositório |
+| [lacrymira](https://github.com/celestia-island/lacrymira) | Acesso tipado a dados para SQL e KV por uma única superfície de comandos | repositório |
+| [himari](https://github.com/celestia-island/himari) | Representação intermediária de fórmulas dimensionadas | repositório |
+| [kotama](https://github.com/celestia-island/kotama) | Kit de engenharia reversa: dissecção, descompilação, referências cruzadas | repositório |
+| [ayane](https://github.com/celestia-island/ayane) | Serviço de e-mail: plano de controle, webmail e proteção | repositório |
+| [aris](https://github.com/celestia-island/aris) | Um motor de navegador em Rust puro derivado do servo, embutível como biblioteca | repositório |
+| [shirabe](https://github.com/celestia-island/shirabe) | Automação e depuração de navegador headless | repositório |
+| [tairitsu](https://github.com/celestia-island/tairitsu) | Framework full-stack sobre o WASM Component Model | repositório |
+| [akivili](https://github.com/celestia-island/akivili) | Hospedeiro de plugins e SDK para extensões de agentes | repositório |
+| [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | SDK de plugins em Python e de motores | repositório |
+| [shun](https://github.com/celestia-island/shun) | Instaladores, gravadores e entrega de carga em modo portátil | repositório |
+| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Renderização de Markdown dentro de UIs de terminal | repositório |
+| arcaea | Biblioteca do protocolo de personas | repositório |
+| scriptum | Interface de terminal para a plataforma de agentes | — |
+| official-plugins | Os pacotes de plugins oficiais | repositório |
 
-## Edge e hardware
+## Borda e hardware
 
 | Projeto | Papel | Docs |
 | --- | --- | --- |
-| [kei](https://github.com/celestia-island/kei) | Kernel de SO Rust para dispositivos edge ARM64/RISC-V; núcleo de tempo real determinístico para o horizonte de longo prazo | repositório |
-| [hare](https://github.com/celestia-island/hare) | Crates de ponte no_std para o edge industrial: protocolo wire, manifesto de hardware, hub de protocolos (Modbus/MC/S7), traits HAL, ANSI/VT | repositório |
+| [kei](https://github.com/celestia-island/kei) | Kernel em Rust para gateways de borda ARM64 e RISC-V | repositório |
+| [hare](https://github.com/celestia-island/hare) | Biblioteca de ponte `no_std` para nós industriais embarcados | repositório |
+| evernight-appliance | A distribuição de appliance: firmware de boot, gravador, contrato de driver | — |
 
-## Infraestrutura e ferramentas
+## Infraestrutura e ferramental
 
 | Projeto | Papel | Docs |
 | --- | --- | --- |
-| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | Toolchain de desenvolvimento compartilhado: receitas justfile, registro de patches, linting | repositório |
-| [celestia-integration](https://github.com/celestia-island/celestia-integration) | Suites de teste de integração em hardware real para o ciclo completo | repositório |
-| [sysl](https://github.com/celestia-island/sysl) | Synthetic Source License (SySL): uma licença projetada para código gerado por IA | repositório |
+| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | Toolchain de desenvolvimento compartilhado: receitas de build, linting, portões de release | repositório |
+| [cherino](https://github.com/celestia-island/cherino) | Abstração de contêiner em sandbox para a execução de agentes | repositório |
+| [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts) | Hospedagem pública de binários e imagens para releases | repositório |
+| celestia-integration | Testes de integração entre repositórios para todo o ciclo | — |
+| fuuka | Plano de execução de CI auto-hospedada | — |
+| [sysl](https://github.com/celestia-island/sysl) | A Synthetic Source License que a maior parte deste código usa | repositório |
 
-## Presença web
+## Presença na web
 
 | Propriedade | Papel | Docs |
 | --- | --- | --- |
 | [celestia-island.github.io](https://celestia-island.github.io) | Presença da organização | repositório |
 | [docs.celestia.world](https://docs.celestia.world) | Este site — filosofia, mapa, primeiros passos | repositório |
-| [e.celestia.world](https://e.celestia.world) | Página pública de destino | repositório |
-| [dev.celestia.world](https://dev.celestia.world) | Painel e portal do desenvolvedor (entrada do produto) | — |
+| [e.celestia.world](https://e.celestia.world) | Página de destino pública | repositório |
+| [dev.celestia.world](https://dev.celestia.world) | Painel e dashboard do desenvolvedor (por convite durante o beta) | repositório |
+| [celestia.ac.cn](https://celestia.ac.cn) | Site da empresa e dos serviços empresariais | repositório |
 
 ## Aprofundar-se
 
-- [Arquitetura em Camadas](../philosophy/layered-architecture.md) — por que essas camadas existem.
+- [Arquitetura em Camadas](../philosophy/layered-architecture.md) — por que estas camadas existem.
 - [O Ciclo Fechado](../philosophy/closed-loop.md) — como os projetos cooperam ao longo do ciclo.
-- [Sites e Responsabilidade](./sites.md) — quem documenta o quê e onde.
+- [Sites e Responsabilidade](./sites.md) — quem documenta o quê, e onde.

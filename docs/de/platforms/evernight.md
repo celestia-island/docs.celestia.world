@@ -1,67 +1,53 @@
 # Evernight — Industrieller Protokoll-Broker
 
 Evernight ist die industrielle Edge: ein plattformübergreifender Broker, der
-die Feldprotokolle spricht (Modbus, S7comm, MC Protocol, EtherNet/IP,
-EtherCAT, CAN, OPC UA, MQTT, …), Sensoren abfragt, Alarme auswertet und
-Ereignisse in den celestia-island-Stack pusht. Er verwaltet außerdem
-Modell-Server auf dem Knoten (ollama / whisper / vLLM) für die Edge-Inferenz.
+die Protokolle spricht, die an einem realen Standort vorkommen — Modbus,
+S7comm, MC Protocol, EtherNet/IP, EtherCAT, CAN, OPC UA, MQTT —, Sensoren
+abfragt, Alarme auswertet und Ereignisse nach oben in die Plattform pusht. Er
+verwaltet außerdem Modell-Runtimes auf demselben Knoten für Inferenz, die
+lokal bleibt.
 
-## Architektur auf einen Blick
+## Was es tut
 
 ```mermaid
-flowchart TD
-    C["Feld: PLC / MCU / Sensoren （Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …）"]
-    subgraph G["evernight （Edge-Knoten）"]
-        N0["Protokoll-Adapter: pollen → dekodieren → typisierte Messwerte"]
-        N1["Alarm-Engine: Schwellwertregeln → Trigger-Ereignisse"]
-        N2["Zeitreihen: gepufferte Messwerte mit doppelten Zeitstempeln"]
-        N3["Record/Replay: Ringpuffer → segmentierte Speicherung → Replay-Injektion"]
-        N4["Modell-Server-Manager: ollama/whisper/vLLM bereitstellen （GPU zuerst）"]
-        N5["Northbound: Unix-Socket-JSON-RPC-Trigger → entelecheia"]
-    end
-    C --> G
-    G --> B["scepter （Agenten, industrielle Workflows, Schreib-Freigabe）"]
+flowchart LR
+    F["Field devices and controllers"] --> B["Protocol broker"]
+    B --> AL["Alarms and events"]
+    B --> RE["Recording and replay"]
+    B --> ED["Edge inference"]
+    B -->|"northbound"| P["Platform: agents, panels, approvals"]
 ```
 
-## 1. Feldprotokolle
+- **Feldprotokolle** — Adapter wandeln das Lesen und Schreiben jedes Protokolls
+  in typisierte Messwerte und Kommandos um. Schreibvorgänge sind gesperrt: Eine
+  industrielle Schreiboperation braucht vorab Richtlinienprüfung und
+  menschliche Freigabe upstream, bevor sich etwas bewegt.
+- **Erfassung und Alarme** — jede Station pollt in ihrem eigenen
+  konfigurierbaren Zyklus; Fehler erscheinen als Health-Ereignisse statt als
+  Stille. Alarmregeln werten Messwerte aus und emittieren geroutete Ereignisse.
+- **Zeit und Aufzeichnung** — Messwerte tragen sowohl einen Wanduhr- als auch
+  einen monotonen Zeitstempel, sodass Anzeige und Reihenfolge nie
+  auseinanderlaufen. Die Aufzeichnungspipeline hält einen Ringpuffer und
+  schreibt Segmente auf die Platte; sie kann sie zurück in den Trigger-Pfad
+  wiedergeben — die Voraussetzung für Weltzustand und Lernen gleichermaßen.
+- **Edge-Modell-Serving** — Modell-Runtimes werden auf dem Knoten selbst
+  bereitgestellt und überwacht, GPU bevorzugt mit CPU-Fallback. Das macht
+  reaktive Inferenz unabhängig von einem online verfügbaren Modell.
+- **Northbound** — Ereignisse fließen über einen lokalen Socket nach oben in
+  die Plattform; Geräte- und Cloud-Gateways registrieren Knotenidentität und
+  Telemetrie. Jede physische I/O läuft über evernight.
 
-Adapter wandeln das native Lesen/Schreiben jedes Protokolls in typisierte
-Messwerte und Kommandos um. Der Schreibpfad ist gesichert: Industrielle
-Schreiboperationen verlangen eine Richtlinienprüfung und menschliche Freigabe
-in der Plattform (OreXis + Freigabe-Flows).
+## So nutzen Sie es
 
-## 2. Erfassung und Alarme
+Auf der Maschine, die die Anlagen berührt. Alles darüber — Agenten, Panels,
+Freigaben — spricht über die Plattform mit evernight, nie direkt mit dem
+Feldbus.
 
-- Abfrageschleifen pro Station mit konfigurierbaren Perioden; Fehler
-  erscheinen als Health-Ereignisse.
-- Die Alarm-Engine wertet Schwellwertregeln über die Messwerte aus und
-  emittiert topic-geroutete Ereignisse an die Northbound-Trigger-Senke.
+Die Protokollkonfiguration, die Appliance-Distribution und die
+Treibervertrag gehören zum Produkt; dieser Hub dupliziert sie nicht.
 
-## 3. Zeit und Aufzeichnung
+## Weiterführendes
 
-Messwerte tragen doppelte Zeitstempel (Wallclock für Anzeige/Audit, monoton
-für Ordnung/Fusion). Eine Record-/Replay-Pipeline hält einen Ringpuffer,
-persistiert Segmente und kann wiedergegebene Daten zurück in die
-Trigger-Pipeline injizieren — die gemeinsame Voraussetzung für die
-Weltzustands- und Lernschichten.
-
-## 4. Edge-Modell-Serving
-
-`model_server` verwaltet die Modell-Runtimes auf dem Knoten:
-Modellbereitstellung in Containern (ollama, whisper.cpp, vLLM) mit
-GPU-zuerst-/CPU-Fallback-Platzierung — der Baustein für reaktive Edge-Inferenz,
-die nie von einem online verfügbaren LLM abhängt.
-
-## 5. Northbound-Integration
-
-Ereignisse fließen über eine Unix-Socket-JSON-RPC-Trigger-Senke
-(topic-geroutet) zu entelecheias scepter; das Gerät↔Cloud-Gateway registriert
-Knotenidentität und Telemetrie. Alles Physische wird über evernight geroutet.
-
-## Env-Referenz (Auszug)
-
-| Variable | Zweck |
-|---|---|
-| `EVERNIGHT_SOCK` | Unix-Socket für Trigger/Telemetrie zu scepter |
-| `EVERNIGHT_*` | Verbindungskonfiguration je Protokoll |
-| container/GPU env | Modell-Server-Bereitstellung (ollama/vLLM-Runtimes) |
+- [Sicherheitsprinzipien](../philosophy/safety.md) — warum Schreibvorgänge gesperrt sind.
+- [Entelecheia](./entelecheia.md) — die Schicht darüber, in der Freigaben sitzen.
+- [Der Geschlossene Regelkreis](../philosophy/closed-loop.md) — wo dieses Segment hineinpasst.

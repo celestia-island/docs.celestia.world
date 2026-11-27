@@ -1,48 +1,50 @@
 # Narrative & Horizon
 
-## Latency is destiny
+## The shape of the problem
 
-A signal round-trip takes **2.6 seconds** to the Moon and **6 to 44 minutes**
-to Mars. Machines that far from Earth cannot wait for instructions from a
-human. They must make decisions **locally, safely, and predictably** — with
-the authority to act and the discipline to refuse.
+We are not building a chatbot with a control panel bolted on, and we are not
+building a control system with a language model bolted on. The two halves have
+to be one system, because the moment a model can move physical equipment,
+every nice-to-have of a chat product becomes a constraint of a control system:
+deterministic behavior, bounded latency, an audit trail, and a way to say no.
 
-That is the horizon this ecosystem is built toward. Everything we build for
-industrial control today is chosen so that it is the *same shape* an
-autonomous lunar or Martian robot will need:
+The full argument is on [Why celestia-island](./why.md). This page is the
+trajectory that follows from it.
 
-- an **agent decision layer** that plans and orchestrates
-- a **world model** that knows what is happening right now
-- a **safety gate** that can say no, backed by real-time control that never
-  depends on the network
+## Where it goes
 
-The Moon is not a marketing story: it is the reason the layering exists.
+**Closer to the machine.** Today the loop runs from an operator's web browser
+to a protocol broker to a controller. Each step closer to the hardware has less
+model in it and less network in it, ending at a loop that runs locally and does
+not wait for a round trip. That ordering is the point: the parts that must not
+fail are the parts that never call out.
 
-## The road
+**Local autonomy as an outlook.** The same ordering generalizes wherever a
+round trip is expensive — a remote site, an intermittent link, a plant whose
+operator is not on the floor. Machines that cannot wait for a human must decide
+locally, safely, and predictably: with the authority to act and the discipline
+to refuse. That is a long-term direction, not a dated plan, and it is why the
+decision layer, the world model, and the safety gate are built as separate
+things rather than one monolith.
 
-The ecosystem advances through gates — a phase is unlocked only when the
-previous one meets its exit criteria:
+**Reusable by construction.** Whatever the next deployment looks like, it
+should be assembled from the same asset base rather than rebuilt: the wire
+protocol, the world state, the safety gates and the recording pipeline are
+shared assets. A track that starts a new one has to pass architecture review.
+And no product line ever depends on an unreleased core — if the core slips,
+revenue does not.
 
-| Phase | Target | Exit criteria |
-| --- | --- | --- |
-| **Internal beta** | now | Zero P0 security issues; the full loop passes integration tests; a new user walks register → key → chat in 30 minutes |
-| **Public beta** | 2026 | Open registration; public docs, downloads, and legal pages; independent security review |
-| **Y1 — Industrial lines** | 2027-08 | Real PLC + MCU production-line demo: 100 Hz sensing, 10 Hz closed loop, deployment packages, acceptance tests |
-| **Y3 — Embodied facilities** | 2029-08 | Replicable embodied facility package (world state + policy layer + reference site), locked to the *industrial embodied* form |
-| **Y5 — Aerospace** | 2031-08 | Full software/hardware proposal plus at least one in-orbit or flight proof — no heritage, no sales |
-| **Y5+ — Lunar/Martian** | 2031+ | Autonomy narrative, research partnerships, white paper |
+## What stays fixed
 
-## Four tracks share one asset base
+Whatever the horizon, three things do not move:
 
-1. **Track B — Industrial control** ([evernight](https://github.com/celestia-island/evernight) main stage): sensor pipelines, recording/replay, fast loops, embedded nodes.
-2. **Track E — Embodied intelligence**: a world-state service, a policy layer with small local models, digital-twin visualization.
-3. **Track K — kei real-time core**: a deterministic kernel with a Linux ABI personality layer — the long-term answer for bounded, predictable execution.
-4. **Track S — Aerospace**: system-level triple-modular redundancy, flight heritage, certification track.
-
-One discipline holds all tracks together: **wire protocol, world state, safety
-gates, and the recording pipeline are shared assets.** Any track that starts a
-new one must pass architecture review. And the product lines never depend on
-kei: if kei slips, revenue does not.
+- **Safety before autonomy.** An autonomous system that cannot refuse is not
+  autonomous, it is unguarded. See [Safety Principles](./safety.md).
+- **The loop stays whole.** Every capability is only as real as the closed loop
+  it belongs to — see [The Closed Loop](./closed-loop.md).
+- **Structure comes first.** Order across dozens of repositories comes from
+  layering, not from discipline in the moment — see
+  [Layered Architecture](./layered-architecture.md).
 
 ## Where to go deeper
 

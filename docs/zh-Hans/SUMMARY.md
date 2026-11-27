@@ -33,7 +33,7 @@
 
 # 平台
 
-- [Arona — 模型网关、长期记忆与集群](./platforms/arona.md)
+- [Arona — 模型网关与部署面板](./platforms/arona.md)
 - [Entelecheia — Agent 平台与记忆](./platforms/entelecheia.md)
 - [Shittim Chest — 聊天、面板与多渠道集成](./platforms/chest.md)
 - [Evernight — 工业协议 Broker](./platforms/evernight.md)

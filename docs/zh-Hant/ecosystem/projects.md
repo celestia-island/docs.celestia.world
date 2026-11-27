@@ -1,79 +1,93 @@
 # 專案地圖
 
-celestia-island 倉庫全量清單，按層分組。帶文件站的倉庫在 `<name>.docs.celestia.world` 維護自己的 *怎麼做* 文件；其餘在倉庫內文件化。
+celestia-island 平台倉庫與產品的清單，按層分組。帶連結的名字是今天就能閱讀的公開倉庫；不帶連結的名字是隨平台一同交付、原始碼尚未公開的產品。標有文件站的倉庫在該站維護自己的 *怎麼做* 文件；其餘在倉庫內部文件化。
 
 ## 第 0 層 — 認證
 
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
-| [kirino](https://github.com/celestia-island/kirino) | 零信任認證與 RBAC：JWT 工作階段、Argon2id 雜湊、登入限流、權限引擎 | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
+| [kirino](https://github.com/celestia-island/kirino) | 零信任認證與授權：工作階段、權限、限流 | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
 
 ## 第 1 層 — 平台
 
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
-| [plana](https://github.com/celestia-island/plana) | 共享型別、JSON-RPC 用戶端與伺服端、SSE 工作階段、斷路器、LLM 計量與定價、管理 UI 外殼 | 倉庫內 |
-| [provider-registry](https://github.com/celestia-island/provider-registry) | 模型與提供者註冊表（entrypoint TOML 格式） | 倉庫內 |
+| [plana](https://github.com/celestia-island/plana) | 共享協定型別、傳輸、計量，以及每個服務都會消費的設施 | 倉庫內 |
+| [provider-registry](https://github.com/celestia-island/provider-registry) | 跨產品共享的模型與提供者型錄 | 倉庫內 |
 
 ## 第 2 層 — UI
 
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
-| [hikari](https://github.com/celestia-island/hikari) | 全部 WebUI 共享的 UI 元件庫（Vue/TS + Rust） | 倉庫內 |
+| [hikari](https://github.com/celestia-island/hikari) | 全體 WebUI 共享的 UI 元件庫 | 倉庫內 |
 
 ## 第 3 層 — 服務
 
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
-| [arona](https://github.com/celestia-island/arona) | 雲 API 管理控制台：帳戶、API 金鑰、模型部署、後端、用量紀錄 | 倉庫內 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | 聊天桌面/WebUI 與外殼 | 文件（倉內） |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | 多智能體協作平台：exec-only 微核心、scepter 編排伺服器、PTC 執行管線 | 文件（倉內） |
-| [evernight](https://github.com/celestia-island/evernight) | 工業協定閘道：Modbus、S7comm、OPC UA；遠端操作、遙測、寫入閥門 | 文件（倉內） |
-| [malkuth](https://github.com/celestia-island/malkuth) | 服務監督工具包：滾動更新、健康探針、反向代理、崩潰迴圈恢復 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
+| arona | 模型閘道與部署面板：金鑰、後端、路由、用量 | [Arona](../platforms/arona.md) |
+| shittim-chest | 聊天、面板與整合——工作台介面 | [Shittim Chest](../platforms/chest.md) |
+| entelecheia | 智能體平台：智能體、長期記憶、語意搜尋、工業整合 | [Entelecheia](../platforms/entelecheia.md) |
+| evernight | 工業協定代理器：現場協定、警報、錄製、邊緣推論 | [Evernight](../platforms/evernight.md) |
+| [malkuth](https://github.com/celestia-island/malkuth) | 服務監督：滾動更新、健康探針、反向代理、崩潰恢復 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
 | [lagrange](https://github.com/celestia-island/lagrange) | 支撐本站與所有專案文件站的 Markdown 文件引擎 | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| celestia-erp | 業務後台：組織、帳務、發票 | — |
+| electrode_recon | 電極微觀結構計算引擎——引擎織布上的第一個外部實例 | — |
 
 ## 工具與函式庫
 
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | AI 原生分散式版本控制：每智能體工作區隔離、JSONL 追加日誌、快照歷史 | [倉庫](https://github.com/celestia-island/noa) |
-| [seia](https://github.com/celestia-island/seia) | 多引擎網路搜尋函式庫與 CLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | 執行緒池管線巨集（基於 flume 訊息管線） | [倉庫](https://github.com/celestia-island/ichika) |
-| [yuuka](https://github.com/celestia-island/yuuka) | 用簡單巨集生成複雜巢狀結構的 proc-macro | [倉庫](https://github.com/celestia-island/yuuka) |
-| [aoba](https://github.com/celestia-island/aoba) | Modbus 與資料源 CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
-| [kou](https://github.com/celestia-island/kou) | 獨立虛擬終端機引擎：PTY 管理、VT100/ANSI | 倉庫內 |
-| [hifumi](https://github.com/celestia-island/hifumi) | 資料跨版本遷移的序列化函式庫 | 倉庫內 |
-| [aris](https://github.com/celestia-island/aris) | 源自 servo 的瀏覽器引擎，可作函式庫嵌入（數位孿生的 WebGL） | 倉庫內 |
-| [shirabe](https://github.com/celestia-island/shirabe) | 輕量 Rust 原生瀏覽器自動化與除錯函式庫 | 倉庫內 |
-| [tairitsu](https://github.com/celestia-island/tairitsu) | 基於 WASM Component Model 的全端框架 | 倉庫內 |
-| [akivili](https://github.com/celestia-island/akivili) | 外掛織造層與 SDK：外掛註冊表、宿主中介、guard 與 TypeScript/WASM 執行管線 | 倉庫內 |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | 面向 ratatui TUI 的 Markdown 渲染 | 倉庫內 |
-| [arcaea](https://github.com/celestia-island/arcaea) | celestia persona 協定的 Rust 函式庫 | 倉庫內 |
-| [scriptum](https://github.com/celestia-island/scriptum) | entelecheia 的終端介面（TUI）：與 scepter 伺服器對話的「啞顯示」 | 倉庫內 |
+| [noa](https://github.com/celestia-island/noa) | 智能體原生分散式版本控制，具隔離工作區 | [倉庫](https://github.com/celestia-island/noa) |
+| [seia](https://github.com/celestia-island/seia) | 多引擎網路搜尋 | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
+| [aoba](https://github.com/celestia-island/aoba) | 多協定除錯與模擬 CLI（Modbus RTU 等） | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | 建於訊息管線之上的執行緒池管線 | 倉庫內 |
+| [yuuka](https://github.com/celestia-island/yuuka) | 組合巢狀結構與 JSON 合併/修補的巨集 | 倉庫內 |
+| [kou](https://github.com/celestia-island/kou) | 虛擬終端機引擎：PTY、VT100/ANSI、行內圖形 | 倉庫內 |
+| [hifumi](https://github.com/celestia-island/hifumi) | 供資料跨版本遷移的序列化 | 倉庫內 |
+| [lacrymira](https://github.com/celestia-island/lacrymira) | 統一命令面之後的 SQL 與 KV 帶型別資料存取 | 倉庫內 |
+| [himari](https://github.com/celestia-island/himari) | 帶量綱的公式中介表示 | 倉庫內 |
+| [kotama](https://github.com/celestia-island/kotama) | 逆向工程工具包：剖析、反編譯、交叉引用 | 倉庫內 |
+| [ayane](https://github.com/celestia-island/ayane) | 郵件服務：控制平面、webmail 與防護 | 倉庫內 |
+| [aris](https://github.com/celestia-island/aris) | 源自 servo 的純 Rust 瀏覽器引擎，可作函式庫嵌入 | 倉庫內 |
+| [shirabe](https://github.com/celestia-island/shirabe) | 無頭瀏覽器自動化與除錯 | 倉庫內 |
+| [tairitsu](https://github.com/celestia-island/tairitsu) | 建於 WASM Component Model 的全端框架 | 倉庫內 |
+| [akivili](https://github.com/celestia-island/akivili) | 面向智能體擴充的外掛宿主與 SDK | 倉庫內 |
+| [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python 外掛與引擎 SDK | 倉庫內 |
+| [shun](https://github.com/celestia-island/shun) | 安裝器、燒錄工具與可攜模式的負載交付 | 倉庫內 |
+| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | 終端機 UI 內的 Markdown 渲染 | 倉庫內 |
+| arcaea | persona 協定函式庫 | 倉庫內 |
+| scriptum | 智能體平台的終端介面 | — |
+| official-plugins | 第一方外掛套件 | 倉庫內 |
 
 ## 邊緣與硬體
 
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
-| [kei](https://github.com/celestia-island/kei) | ARM64/RISC-V 邊緣設備的 Rust 核心；長期地平線的確定性即時核心 | 倉庫內 |
-| [hare](https://github.com/celestia-island/hare) | 面向工業邊緣的 no_std 橋接 crate：wire 協定、硬體 manifest、協定中樞（Modbus/MC/S7）、HAL trait、ANSI/VT | 倉庫內 |
+| [kei](https://github.com/celestia-island/kei) | 面向 ARM64 與 RISC-V 邊緣閘道的 Rust 核心 | 倉庫內 |
+| [hare](https://github.com/celestia-island/hare) | 面向嵌入式工業節點的 `no_std` 橋接函式庫 | 倉庫內 |
+| evernight-appliance | 硬體機分發：開機韌體、燒錄工具、驅動契約 | — |
 
 ## 基礎設施與工具鏈
 
 | 專案 | 角色 | 文件 |
 | --- | --- | --- |
-| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | 共享開發工具鏈：justfile 配方、補丁註冊、lint | 倉庫內 |
-| [celestia-integration](https://github.com/celestia-island/celestia-integration) | 全閉環實機整合測試套件 | 倉庫內 |
-| [sysl](https://github.com/celestia-island/sysl) | Synthetic Source License（SySL）：為 AI 生成程式碼設計的授權條款 | 倉庫內 |
+| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | 共享開發工具鏈：構建配方、lint、發布閘門 | 倉庫內 |
+| [cherino](https://github.com/celestia-island/cherino) | 供智能體執行使用的沙箱化容器抽象 | 倉庫內 |
+| [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts) | 發布用的公開二進位檔與映像產物託管 | 倉庫內 |
+| celestia-integration | 全閉環的跨倉整合測試 | — |
+| fuuka | 自託管 CI 執行平面 | — |
+| [sysl](https://github.com/celestia-island/sysl) | 這份程式碼多數採用的 Synthetic Source License | 倉庫內 |
 
 ## 站點
 
 | 資產 | 角色 | 文件 |
 | --- | --- | --- |
 | [celestia-island.github.io](https://celestia-island.github.io) | 組織存在 | 倉庫內 |
-| [docs.celestia.world](https://docs.celestia.world) | 本站 —— 哲學、地圖、快速開始 | 倉庫內 |
+| [docs.celestia.world](https://docs.celestia.world) | 本站——哲學、地圖、快速開始 | 倉庫內 |
 | [e.celestia.world](https://e.celestia.world) | 公開落地頁 | 倉庫內 |
-| [dev.celestia.world](https://dev.celestia.world) | 面板與開發者入口（產品入口） | — |
+| [dev.celestia.world](https://dev.celestia.world) | 面板與開發者儀表板（封測期間邀請制） | 倉庫內 |
+| [celestia.ac.cn](https://celestia.ac.cn) | 公司與企業服務站 | 倉庫內 |
 
 ## 深入閱讀
 

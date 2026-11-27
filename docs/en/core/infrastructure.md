@@ -1,50 +1,47 @@
 # Core Infrastructure — Auth, RPC and Foundations
 
-Every platform you use sits on the same foundation. Read this once and
-the platform guides click into place: kirino (zero-trust auth and RBAC),
-plana (protocol types, JSON-RPC transport, metering, sync engine) and
-hikari (the UI component library).
+Every platform you use sits on the same foundation. Read this once and the
+platform guides click into place: kirino (zero-trust auth and RBAC), plana
+(protocol types and platform facilities) and hikari (the UI component library).
 
 ## Authentication and authorization (kirino)
 
-- **Identity**: password hashing with Argon2id; JWT access/refresh tokens
-  (`TokenManager`, `kirino-session`); login rate limiting and account
-  locking.
-- **RBAC**: hierarchical permissions (agent.*, system.*, knowledge.*, …)
-  resolved by a `GrantResolver`; roles bundle permissions (admin sees all,
-  viewer is read-only). Assignments persist in Postgres.
-- **Delegation**: scepter trusts the caller user id supplied by the chest
-  gateway (`X-User-Id` / `user_id`) and uses it only for workspace
-  isolation — the authenticating layer is always upstream.
-- **Admin surface**: panel admin endpoints require a dedicated
-  `ARONA_ADMIN_TOKEN` and fail closed without it.
+- **Identity**: password hashing, session tokens with short lifetimes, login
+  rate limiting and account locking. The algorithms and their parameters are
+  documented in [kirino's own docs](https://kirino.docs.celestia.world), not
+  here.
+- **RBAC**: permissions are hierarchical and resolved per caller; roles bundle
+  permissions (an admin sees everything, a viewer is read-only). Assignments
+  persist in the platform database.
+- **Delegation**: a service that sits behind another authenticates nobody
+  itself — the authenticating layer is always upstream, and the caller identity
+  is passed through for workspace isolation only.
 
 ## Protocol and RPC (plana)
 
-- All platform traffic is **JSON-RPC 2.0 over WebSocket** (and
-  request/response via HTTP POST `/api/rpc`). Methods are named
-  `<Domain>.<Action>` — e.g. `Sync.MemoryQueryRequest`, `Cli.Search`,
-  `Mcp.CallTool`.
-- Wire types live in plana (`plana-state-sync` / `plana-types`): one source
-  of truth for the protocol; downstream repos pin a released tag.
-- Notifications (no `id`) push events like streaming chunks and panel
-  updates; requests carry an `id` echoed in the response.
-- The sync engine (`plana-sync`) is a server-authoritative state tree:
-  clients declare viewports, the server broadcasts diffs with periodic full
-  snapshots.
+- Platform traffic is **JSON-RPC 2.0**, over WebSocket for streaming and over
+  HTTP POST for request/response. Method names are `<Domain>.<Action>`.
+- The wire types are the single source of truth for the protocol and live in
+  plana; downstream repositories pin a released version rather than forking a
+  copy.
+- Notifications have no `id` and push events such as streaming chunks and panel
+  updates; requests carry an `id` that the response echoes.
+- State-heavy surfaces follow the same pattern everywhere: the server is
+  authoritative, clients declare what they are looking at, and the server
+  streams the difference.
 
 ## Metering and pricing (plana)
 
-Usage is metered per API key and priced from a canonical table
-(`plana-llm-provider` metering): prompts/completions tokens, cost
-estimation and quota enforcement are shared across services.
+Usage is metered per API key and priced from one canonical table shared by
+every service: prompt and completion tokens, cost estimation and quota
+enforcement are the same computation in every product.
 
 ## UI components (hikari)
 
-The Vue component library (`@celestia-island/hikari`) provides buttons,
-badges, tables, modals and confirm dialogs used by every webui; platform
-pages compose them with the plana UI shell. Shared components must be
-upstreamed here rather than re-implemented per repo.
+The component library provides the buttons, badges, tables, modals and confirm
+dialogs that every webUI uses, so that a screen looks and behaves the same
+wherever it is mounted. Shared components are upstreamed here rather than
+re-implemented per repository.
 
 ## Dependency rules
 

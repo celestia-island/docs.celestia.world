@@ -1,51 +1,57 @@
 # Récit & Horizon
 
-## La latence, c'est le destin
+## La forme du problème
 
-Un aller-retour de signal prend **2,6 secondes** vers la Lune et **de 6 à 44
-minutes** vers Mars. Les machines aussi éloignées de la Terre ne peuvent pas
-attendre les instructions d'un humain. Elles doivent prendre des décisions
-**localement, en toute sécurité et de manière prévisible** — avec l'autorité
-d'agir et la discipline de refuser.
+Nous ne construisons pas un chatbot sur lequel on a greffé un panneau de
+contrôle, et nous ne construisons pas un système de contrôle sur lequel on a
+greffé un modèle de langage. Les deux moitiés doivent former un seul système,
+car dès l'instant où un modèle peut déplacer un équipement physique, chaque
+agrément d'un produit de chat devient une contrainte d'un système de contrôle :
+un comportement déterministe, une latence bornée, un journal d'audit et un
+moyen de dire non.
 
-C'est l'horizon vers lequel cet écosystème est construit. Tout ce que nous
-construisons aujourd'hui pour le contrôle industriel est choisi pour avoir la
-*même forme* que ce dont un robot lunaire ou martien autonome aura besoin :
+L'argument complet se trouve dans [Pourquoi celestia-island](./why.md). Cette
+page présente la trajectoire qui en découle.
 
-- une **couche de décision d'agents** qui planifie et orchestre
-- un **modèle du monde** qui sait ce qui se passe à l'instant présent
-- une **porte de sécurité** qui peut dire non, appuyée par un contrôle temps
-  réel qui ne dépend jamais du réseau
+## Où cela mène
 
-La Lune n'est pas une histoire marketing : c'est la raison pour laquelle la
-stratification existe.
+**Plus près de la machine.** Aujourd'hui, la boucle va du navigateur web d'un
+opérateur à un courtier de protocoles, puis à un automate. Chaque étape plus
+proche du matériel contient moins de modèle et moins de réseau, jusqu'à une
+boucle qui s'exécute localement et n'attend aucun aller-retour. Cet ordre est
+tout l'enjeu : les parties qui ne doivent pas échouer sont celles qui
+n'appellent jamais l'extérieur.
 
-## La feuille de route
+**L'autonomie locale comme perspective.** Ce même ordre se généralise partout
+où un aller-retour coûte cher — un site distant, une liaison intermittente,
+une usine dont l'opérateur n'est pas sur le terrain. Les machines qui ne
+peuvent pas attendre un humain doivent décider localement, en toute sécurité et
+de manière prévisible : avec l'autorité d'agir et la discipline de refuser.
+C'est une direction de long terme, pas un plan daté, et c'est pourquoi la couche
+de décision, le modèle du monde et la porte de sécurité sont construits comme
+des choses séparées plutôt que comme un monolithe.
 
-L'écosystème avance par étapes — une phase n'est débloquée que lorsque la
-précédente remplit ses critères de sortie :
+**Réutilisable par construction.** Quelle que soit la forme du prochain
+déploiement, il devrait être assemblé à partir de la même base d'actifs plutôt
+que reconstruit : le protocole filaire, l'état du monde, les portes de sécurité
+et le pipeline d'enregistrement sont des actifs partagés. Une piste qui en
+démarre un nouveau doit passer une revue d'architecture. Et aucune gamme de
+produits ne dépend jamais d'un cœur non publié — si le cœur glisse, le chiffre
+d'affaires ne suit pas.
 
-| Phase | Cible | Critères de sortie |
-| --- | --- | --- |
-| **Bêta interne** | maintenant | Zéro problème de sécurité P0 ; la boucle entière passe les tests d'intégration ; un nouvel utilisateur parcourt compte → clé → chat en 30 minutes |
-| **Bêta publique** | 2026 | Inscription ouverte ; documentation publique, téléchargements et pages légales ; revue de sécurité indépendante |
-| **Y1 — Lignes industrielles** | 2027-08 | Démo de ligne de production PLC + MCU réels : capteurs à 100 Hz, boucle fermée à 10 Hz, paquets de déploiement, tests d'acceptation |
-| **Y3 — Installations incarnées** | 2029-08 | Paquet d'installation incarnée réplicable (état du monde + couche de politique + site de référence), verrouillé sur la forme *industriel incarné* |
-| **Y5 — Aérospatial** | 2031-08 | Proposition logiciel/matériel complète plus au moins une preuve en orbite ou en vol — pas d'héritage, pas de ventes |
-| **Y5+ — Lunaire/Martien** | 2031+ | Récit d'autonomie, partenariats de recherche, livre blanc |
+## Ce qui ne bouge pas
 
-## Quatre pistes partagent une même base d'actifs
+Quel que soit l'horizon, trois choses ne bougent pas :
 
-1. **Piste B — Contrôle industriel** ([evernight](https://github.com/celestia-island/evernight) en scène principale) : pipelines de capteurs, enregistrement/relecture, boucles rapides, nœuds embarqués.
-2. **Piste E — Intelligence incarnée** : un service d'état du monde, une couche de politique avec de petits modèles locaux, une visualisation en jumeau numérique.
-3. **Piste K — noyau temps réel kei** : un noyau déterministe avec une couche de personnalité ABI Linux — la réponse à long terme pour une exécution bornée et prévisible.
-4. **Piste S — Aérospatial** : redondance modulaire triple au niveau système, héritage de vol, filière de certification.
-
-Une discipline tient toutes les pistes ensemble : **protocole filaire, état du
-monde, portes de sécurité et pipeline d'enregistrement sont des actifs
-partagés.** Toute piste qui en démarre une nouvelle doit passer une revue
-d'architecture. Et les gammes de produits ne dépendent jamais de kei : si kei
-glisse, le chiffre d'affaires ne suit pas.
+- **La sécurité avant l'autonomie.** Un système autonome qui ne sait pas
+  refuser n'est pas autonome, il est sans garde-fou. Voir
+  [Principes de sécurité](./safety.md).
+- **La boucle reste entière.** Chaque capacité n'est réelle qu'à travers la
+  boucle fermée à laquelle elle appartient — voir
+  [La Boucle Fermée](./closed-loop.md).
+- **La structure passe en premier.** L'ordre entre des dizaines de dépôts vient
+  de la stratification, pas de la discipline du moment — voir
+  [Architecture en couches](./layered-architecture.md).
 
 ## Pour aller plus loin
 

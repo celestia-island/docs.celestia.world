@@ -2,51 +2,70 @@
 
 **celestia-island** é um conjunto de projetos para controle industrial com IA:
 colaboração multiagente, operações remotas e automação de segurança crítica.
-Este site é o seu *porquê* — a filosofia, o mapa do ecossistema e o ponto de
-entrada. O *como* mora nos sites de documentação de cada projeto, com links a
-partir daqui.
+Este site é o seu *porquê*; o *como* pertence a cada projeto.
 
-## Respondendo a três perguntas
+## Os projetos
 
-| Pergunta | Onde | O que você vai encontrar |
-| --- | --- | --- |
-| **Por que isso existe?** | [Filosofia](./philosophy/why.md) | O problema que resolvemos, o ciclo fechado, a doutrina de segurança e o horizonte de longo prazo |
-| **O que há dentro?** | [Ecossistema](./ecosystem/projects.md) | Cada projeto, seu papel no ciclo e onde mora a sua documentação |
-| **Como começo?** | [Começar](./getting-started/quickstart.md) | O caminho de 30 minutos da conta até um agente de chat funcional e controle industrial |
+Um nome com link é um repositório público que você pode ler hoje. Um nome sem
+link é um produto que acompanha a plataforma e cujo código-fonte ainda não é
+público. A tabela detalhada está no [Mapa de Projetos](./ecosystem/projects.md).
 
-## O resumo em um parágrafo
+**Plataforma** — [kirino](https://github.com/celestia-island/kirino) (auth de
+confiança zero), [plana](https://github.com/celestia-island/plana) (protocolo e
+facilidades de plataforma), [hikari](https://github.com/celestia-island/hikari)
+(componentes de UI),
+[provider-registry](https://github.com/celestia-island/provider-registry)
+(catálogo de modelos), arona (painel de implantação de modelos), entelecheia
+(orquestração de agentes), shittim-chest (chat e bancada), scriptum (cliente de
+terminal).
 
-celestia-island constrói o **ciclo fechado** da descoberta à verificação para o
-controle industrial com IA: descobrir → instalar → autenticar → implantar um
-modelo → conversar e executar agentes → controlar equipamentos industriais →
-verificar tudo. O ciclo é montado a partir de peças pequenas e estritamente em
-camadas: primitivas de autenticação ([kirino](https://github.com/celestia-island/kirino)),
-facilidades de plataforma ([plana](https://github.com/celestia-island/plana)),
-componentes de UI ([hikari](https://github.com/celestia-island/hikari)) e
-serviços que implementam apenas lógica de negócio ([arona](https://github.com/celestia-island/arona),
-[shittim-chest](https://github.com/celestia-island/shittim-chest),
-[entelecheia](https://github.com/celestia-island/entelecheia),
-[evernight](https://github.com/celestia-island/evernight)). Nada é nunca
-implementado duas vezes: capacidade genérica é construída uma vez a montante e
-consumida por todos os serviços a jusante.
+**Industrial e borda** — evernight (broker de protocolos),
+[aoba](https://github.com/celestia-island/aoba) (CLI Modbus),
+[hare](https://github.com/celestia-island/hare) (ponte `no_std`),
+[kei](https://github.com/celestia-island/kei) (kernel de borda),
+[shun](https://github.com/celestia-island/shun) (instaladores e gravadores),
+electrode_recon (motor de cálculo).
 
-A razão de tudo isso é uma observação simples: na Lua, uma ida e volta leva 2,6
-segundos; em Marte, de 6 a 44 minutos. Robôs lá fora não podem esperar por um
-humano na Terra — eles precisam ser localmente autônomos. A camada de decisão,
-o modelo de mundo e os portões de segurança que construímos hoje para o
-controle industrial têm a mesma forma que a autonomia precisará amanhã.
+**Bibliotecas e ferramentas** — [noa](https://github.com/celestia-island/noa)
+(controle de versão nativo de agentes),
+[seia](https://github.com/celestia-island/seia) (busca na web),
+[aris](https://github.com/celestia-island/aris) (motor de navegador),
+[shirabe](https://github.com/celestia-island/shirabe) (automação de navegador),
+[kou](https://github.com/celestia-island/kou) (terminal virtual),
+[ichika](https://github.com/celestia-island/ichika) (pipelines de threads),
+[yuuka](https://github.com/celestia-island/yuuka) (macros de estrutura),
+[hifumi](https://github.com/celestia-island/hifumi) (serialização versionada),
+[lacrymira](https://github.com/celestia-island/lacrymira) (acesso tipado a
+dados), [himari](https://github.com/celestia-island/himari) (IR de fórmulas),
+[kotama](https://github.com/celestia-island/kotama) (engenharia reversa),
+[ayane](https://github.com/celestia-island/ayane) (serviço de e-mail),
+[tairitsu](https://github.com/celestia-island/tairitsu) (full-stack com
+component model), [akivili](https://github.com/celestia-island/akivili)
+(hospedeiro de plugins),
+[celestia-plugin](https://github.com/celestia-island/celestia-plugin) (SDK
+Python), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
+(Markdown no terminal), arcaea (protocolo de personas), official-plugins
+(pacotes de plugins).
 
-## Onde tudo mora
+**Infraestrutura** —
+[celestia-devtools](https://github.com/celestia-island/celestia-devtools)
+(toolchain de build e lint),
+[cherino](https://github.com/celestia-island/cherino) (contêineres de agentes),
+[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+(artefatos de release), [sysl](https://github.com/celestia-island/sysl) (a
+licença), celestia-integration (testes de integração), fuuka (CI
+auto-hospedada), celestia-erp (back office empresarial).
 
-- **Documentação por projeto** — `<name>.docs.celestia.world`, construída a
-  partir de cada repositório. A lista completa está em
-  [Sites e Responsabilidade](./ecosystem/sites.md).
-- **Presença da organização** — [celestia-island no GitHub](https://github.com/celestia-island).
-- **Entradas de produto (WIP durante a beta)** — [dev.celestia.world](https://dev.celestia.world)
-  (o painel: conta, chat, agentes), a face [tour](https://demo.dev.celestia.world/tour)
-  anônima e o site da empresa [celestia.ac.cn](https://celestia.ac.cn); o painel
-  administrativo próprio da plataforma de modelos permanece interno à implantação
-  até o fim da beta.
+**Sites** — [celestia-island.github.io](https://celestia-island.github.io),
+[e.celestia.world](https://e.celestia.world),
+[dev.celestia.world](https://dev.celestia.world) (o painel, por convite durante
+o beta), [celestia.ac.cn](https://celestia.ac.cn), e este hub.
+
+## Para onde ir agora
+
+- [Por que celestia-island](./philosophy/why.md) — o problema, o ciclo fechado, a doutrina de segurança.
+- [O Ciclo Fechado](./philosophy/closed-loop.md) — descobrir → instalar → autenticar → implantar → conversar e executar agentes → controle industrial → verificar.
+- [Início Rápido](./getting-started/quickstart.md) — o caminho de 30 minutos por tudo isso.
 
 Use o seletor de idioma (canto inferior direito) para ler este site em outro
 idioma. O conteúdo é redigido em inglês; as traduções seguem a mesma estrutura.

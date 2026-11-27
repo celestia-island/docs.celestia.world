@@ -6,11 +6,10 @@ todo o resto é hospedado pelo seu administrador ou é opcional.
 
 ## Aplicativo desktop (shittim-chest)
 
-O aplicativo desktop do shittim-chest é publicado no
-[GitHub Releases](https://github.com/celestia-island/shittim-chest/releases)
-a partir de toda tag `v*`. Os instaladores são **não assinados** — espere um
-aviso de segurança do sistema operacional no primeiro lançamento. A página
-fica vazia até a primeira tag de beta ser enviada.
+O aplicativo desktop do shittim-chest é publicado a partir de toda tag `v*`. Os
+instaladores são **não assinados** — espere um aviso de segurança do sistema
+operacional no primeiro lançamento. A página de download fica vazia até que a
+primeira tag de beta seja enviada.
 
 | Plataforma | Asset |
 | --- | --- |
@@ -25,30 +24,15 @@ shittim-chest.
 
 ## Painel de administração (arona)
 
-A Arona é hospedada no servidor — não há nada para instalar localmente. Abra
-a URL do painel que o seu administrador fornece
-(`https://dev.celestia.world` numa implantação pública, ou
-`http://<host>:8420` internamente) e entre com o seu convite.
+A Arona é hospedada no servidor — não há nada para instalar localmente. Abra a
+URL do painel que o seu administrador fornece e entre com o seu convite.
 
-## Runtime de agentes (entelecheia/scepter, opcional)
+## Runtime de agentes (opcional)
 
-Para usuários avançados que executam agentes por conta própria, o README do
-entelecheia prescreve o instalador unificado do repositório plana
-([Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh),
-[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)):
-
-```bash
-git clone https://github.com/celestia-island/plana.git
-# Clone também entelecheia, evernight, scriptum e shittim-chest ao lado de arona/
-cd arona/scripts/install
-bash celestia-install.sh --source-root ../../..
-```
-
-Equivalente no Windows (WSL2): `.\celestia-install.ps1 -SourceRoot ..\..\..`
-
-Para compilar o próprio entelecheia a partir do código-fonte: `just
-bootstrap` instala o workspace, depois `just dev` inicia a TUI. Os
-pré-requisitos são Rust 1.85+, Docker e o executor de tarefas `just`.
+Quem executa a plataforma de agentes por conta própria segue o instalador
+unificado documentado nos repositórios entelecheia e plana. Tudo é construído a
+partir dos próprios repositórios do ecossistema, então os pré-requisitos são um
+toolchain Rust, Docker e o executor de tarefas `just`.
 
 ## Aprofundar-se
 

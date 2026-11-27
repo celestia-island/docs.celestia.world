@@ -1,95 +1,47 @@
 # Shittim Chest — Chat, paneles e integraciones
 
-Shittim Chest es la cara del usuario: chat, paneles e integraciones
-multicanal — la capa que convierte las capacidades de modelos y agentes en
-algo que usas a diario. Toma modelos y memoria de Arona, y agentes,
-paneles y flujos de trabajo industriales del scepter de entelecheia. Esta
-guía se organiza por capacidad: chat, paneles, canales, búsqueda y
-autenticación.
+Shittim Chest es la superficie: chat, paneles e integraciones multicanal — el
+lugar donde la capacidad del modelo se convierte en algo que usas a diario. Toma
+modelos y memoria de Arona, y agentes, paneles y flujos de trabajo industriales
+de entelecheia.
 
-## Arquitectura de un vistazo
+## Qué hace
 
 ```mermaid
-flowchart TD
-    C["Tú"]
-    subgraph G["Núcleo de Shittim Chest （node-2:8425）"]
-        N0["Chat: conversaciones persistidas en Postgres, streaming SSE/WS"]
-        N1["Paneles: cuadrícula de datos / canalización de medios / gemelo 3D （motor de paneles）"]
-        N2["Canalización de medios: revisión de visión LLM, generación de imágenes, gen 3D （stub）"]
-        N3["Puente de canales: IM ↔ núcleo bidireccional （webhooks + WS）"]
-        N4["Puente RPC → scepter （agentes, búsqueda semántica, base de conocimiento）"]
-    end
-    C -->|"aplicación de escritorio · web UI · 12+ canales de IM （discord/slack/matrix/lark/…）"| G
-    G --> B["Arona （modelos, memoria） · scepter （agentes, paneles, búsqueda）"]
+flowchart LR
+    U["You"] --> W["Workbench: chat, panels, channels"]
+    W -->|"models and keys"| A["Model gateway"]
+    W -->|"agents, memory, search"| E["Agent platform"]
+    E --> I["Industrial write path"]
 ```
 
-## 1. Chat
+- **Chat** — las conversaciones se guardan en el servidor con respuestas en
+  streaming, de modo que el historial, los pasos de pensamiento y las llamadas a
+  herramientas sobreviven a una recarga y a un reinicio.
+- **Paneles** — un panel se crea a partir de un solo prompt: el motor genera la
+  disposición y los componentes y los persiste en el espacio de trabajo. La
+  edición sigue siendo estructural — las vinculaciones de fuentes de datos, las
+  listas de componentes y el estado de las conexiones son visibles — en lugar de
+  una caja negra. Existen tres tipos: tablas de datos, canalizaciones de medios
+  y gemelos 3D de una flota de dispositivos.
+- **Canales** — la misma conversación puede llegar desde una plataforma de
+  mensajería instantánea y responderse allí, a través de un puente de canales.
+- **Búsqueda y conocimiento** — la búsqueda semántica abarca el espacio de
+  trabajo y la memoria a largo plazo en una sola lista clasificada, y las bases
+  de conocimiento se recuperan desde la misma superficie.
+- **Autenticación** — delegada: la pasarela establece quién es el llamador, y
+  los roles gobiernan las escrituras sobre paneles y espacios de trabajo.
 
-- Las conversaciones y los mensajes persisten en Postgres (tablas
-  `conversations` / `messages`). El historial completo se ensambla en el
-  servidor.
-- Streaming vía SSE con repetición de fragmentos; el shell de escritorio
-  muestra los fragmentos de pensamiento y las llamadas a herramientas de
-  los agentes de scepter.
-- `chat.send` admite id de conversación, anulación de modelo y flags de
-  memoria (consulta la [guía de Arona](./arona.md) para la semántica de la
-  pasarela de memoria).
+## Cómo se usa
 
-## 2. Paneles
+Como aplicación de escritorio o en el navegador, con una clave de API de Arona.
+La webUI es la vía más rápida; la aplicación de escritorio añade el shell nativo.
 
-Los paneles se crean a partir de un solo prompt: el motor genera la
-disposición y los widgets, y luego los persiste en el almacén de espacios
-de trabajo de scepter (`.amphoreus/workspace.toml` +
-`.noa/views/*.view.toml`). La edición es estructurada, no una caja negra:
-la vinculación cruda de la fuente de datos, la lista de widgets y el
-estado de la conexión son visibles, con un diálogo de edición profunda por
-fila y una caja plegada de ajuste en lenguaje natural.
+La referencia de paneles, la configuración de canales y las variables de entorno
+pertenecen al producto; este centro no las duplica.
 
-Tres tipos de paneles:
+## Para profundizar
 
-- **Cuadrícula de datos** — vistas de tabla con campos tipados,
-  ordenar/filtrar/agrupar; las escrituras pasan por los tipos de edición
-  `table.*` con validación y reversión reales.
-- **Canalización de medios** — un grafo de nodos al estilo Dify (nodos
-  LLM, generación de imágenes, HTTP, recuperación de conocimiento,
-  ramificación); las canalizaciones se ejecutan en el servidor con
-  progreso en streaming y los agentes pueden invocarlas como
-  herramientas.
-- **Gemelo 3D** — árboles de modelos de dispositivos con coordenadas del
-  mundo, configuración de escena y marcadores de cámara.
-
-## 3. Integraciones multicanal
-
-El puente de canales conecta el núcleo con las plataformas de IM (Discord,
-Slack, Matrix, Lark, …). Los mensajes entrantes se convierten en turnos de
-chat; las respuestas salientes vuelven en streaming por el mismo canal.
-Cada canal requiere su aplicación OAuth aprobada para uso en producción.
-
-## 4. Búsqueda semántica y conocimiento
-
-- `search.semantic` tiende un puente hacia la búsqueda vectorial de
-  scepter (índice de espacios de trabajo de ApoRia + memorias a largo
-  plazo de PhiLia fusionadas en una sola lista clasificada).
-- Las bases de conocimiento (crear / añadir documentos / suscribirse)
-  persisten en Postgres y se pueden buscar a través de la misma superficie
-  RPC.
-- Los informes de agentes se indexan automáticamente, de modo que los
-  informes pasados son recuperables semánticamente.
-
-## 5. Autenticación
-
-La autenticación es delegada: scepter confía en el id de usuario de la
-llamada suministrado por la pasarela de chest (`X-User-Id` / `user_id`),
-que chest obtiene de Arona o del flujo de invitación. Los roles RBAC
-(admin / operator / viewer / agent) gobiernan las operaciones de escritura
-sobre paneles y espacios de trabajo.
-
-## Referencia de variables de entorno (subconjunto)
-
-| Variable | Propósito |
-|---|---|
-| `DATABASE_URL` | Postgres (obligatorio) |
-| `ENTELECHEIA_SCEPTER_URL` / `WS_URL` | Endpoints RPC/WS del motor de agentes |
-| `LLM_DEFAULT_PROVIDER_ENDPOINT` / `_API_KEY` / `_MODELS` | Proveedor de modelos de chat (normalmente Arona) |
-| `BIGMODEL_API_KEY*` | Canalización de medios (visión GLM / generación de imágenes CogView) |
-| `CHANNEL_*` | Credenciales de canales de IM por plataforma |
+- [Arona](./arona.md) — de dónde vienen los modelos, las claves y el uso.
+- [Entelecheia](./entelecheia.md) — de dónde vienen los agentes, los paneles y la memoria.
+- [Guía de la interfaz web](../webui/guide.md) — la misma historia, pantalla por pantalla.

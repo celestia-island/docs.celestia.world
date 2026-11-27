@@ -1,73 +1,88 @@
 # プロジェクトマップ
 
-celestia-island リポジトリの完全な一覧をレイヤ別にまとめています。
-ドキュメントサイトを持つリポジトリは `<name>.docs.celestia.world` に
-独自の *how* ドキュメントを置いています。それ以外はリポジトリ内で
-文書化されています。
+celestia-island のプラットフォームリポジトリと製品の完全な一覧を、レイヤ
+別にまとめています。リンク付きの名前は、今日そのまま読める公開
+リポジトリです。リンクのない名前は、プラットフォームに同梱される製品で、
+ソースはまだ公開されていないものです。ドキュメントサイトを持つと
+記されたリポジトリは独自の *how* ドキュメントを持ち、それ以外は
+リポジトリ内で文書化されています。
 
 ## レイヤ 0 — 認証
 
 | プロジェクト | 役割 | ドキュメント |
 | --- | --- | --- |
-| [kirino](https://github.com/celestia-island/kirino) | ゼロトラスト認証と RBAC: JWT セッション、Argon2id ハッシュ、ログインレート制限、権限エンジン | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
+| [kirino](https://github.com/celestia-island/kirino) | ゼロトラスト認証と認可: セッション、パーミッション、レート制限 | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
 
 ## レイヤ 1 — プラットフォーム
 
 | プロジェクト | 役割 | ドキュメント |
 | --- | --- | --- |
-| [plana](https://github.com/celestia-island/plana) | 共有型、JSON-RPC クライアントとサーバー、SSE セッション、サーキットブレーカー、LLM 計測と価格設定、管理 UI シェル | リポジトリ内 |
-| [provider-registry](https://github.com/celestia-island/provider-registry) | モデルとプロバイダのレジストリ（エントリーポイント TOML 形式） | リポジトリ内 |
+| [plana](https://github.com/celestia-island/plana) | 共有プロトコル型、トランスポート、計測、そしてすべてのサービスが利用する基盤 | リポジトリ内 |
+| [provider-registry](https://github.com/celestia-island/provider-registry) | 製品間で共有されるモデルとプロバイダのカタログ | リポジトリ内 |
 
 ## レイヤ 2 — UI
 
 | プロジェクト | 役割 | ドキュメント |
 | --- | --- | --- |
-| [hikari](https://github.com/celestia-island/hikari) | すべての WebUI が共有する UI コンポーネントライブラリ（Vue/TS + Rust） | リポジトリ内 |
+| [hikari](https://github.com/celestia-island/hikari) | すべての webUI が共有する UI コンポーネントライブラリ | リポジトリ内 |
 
 ## レイヤ 3 — サービス
 
 | プロジェクト | 役割 | ドキュメント |
 | --- | --- | --- |
-| [arona](https://github.com/celestia-island/arona) | クラウド API 管理パネル: アカウント、API キー、モデルデプロイ、バックエンド、利用記録 | リポジトリ内 |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | チャットデスクトップ/WebUI とシェル | ドキュメント（リポジトリ内） |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | マルチエージェントコラボレーションプラットフォーム: exec のみのマイクロカーネル、scepter オーケストレーションサーバー、PTC 実行パイプライン | ドキュメント（リポジトリ内） |
-| [evernight](https://github.com/celestia-island/evernight) | 産業プロトコルブローカー: Modbus、S7comm、OPC UA。遠隔運用、テレメトリ、書き込みゲート | ドキュメント（リポジトリ内） |
-| [malkuth](https://github.com/celestia-island/malkuth) | サービス監視ツールキット: ローリングアップデート、ヘルスプローブ、リバースプロキシ、クラッシュループ復旧 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | 本サイトとすべてのプロジェクトドキュメントサイトを支える Markdown ドキュメントエンジン | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| arona | モデルゲートウェイとデプロイパネル: キー、バックエンド、ルーティング、利用量 | [Arona](../platforms/arona.md) |
+| shittim-chest | チャット、パネル、統合 —— ワークベンチのサーフェス | [Shittim Chest](../platforms/chest.md) |
+| entelecheia | エージェントプラットフォーム: エージェント、長期メモリ、セマンティック検索、産業統合 | [Entelecheia](../platforms/entelecheia.md) |
+| evernight | 産業プロトコルブローカー: フィールドプロトコル、アラーム、録画、エッジ推論 | [Evernight](../platforms/evernight.md) |
+| [malkuth](https://github.com/celestia-island/malkuth) | サービス監視: ローリングアップデート、ヘルスプローブ、リバースプロキシ、クラッシュ復旧 | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
+| [lagrange](https://github.com/celestia-island/lagrange) | 本サイトとすべてのプロジェクトドキュメントサイトを支えるドキュメントエンジン | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| celestia-erp | ビジネスバックオフィス: 組織、課金、請求書 | — |
+| electrode_recon | 電極ミクロ構造の計算エンジン —— エンジンファブリック上の最初の外部インスタンス | — |
 
 ## ツールとライブラリ
 
 | プロジェクト | 役割 | ドキュメント |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | AI ネイティブ分散バージョン管理: エージェントごとのワークスペース分離、JSONL 追記ログ、スナップショット履歴 | noa |
-| [seia](https://github.com/celestia-island/seia) | マルチエンジンウェブ検索ライブラリと CLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | スレッドプールパイプラインマクロ（flume ベースのメッセージパイプ） | ichika |
-| [yuuka](https://github.com/celestia-island/yuuka) | シンプルなマクロから複雑な入れ子構造を生成する proc マクロ | yuuka |
-| [aoba](https://github.com/celestia-island/aoba) | Modbus とデータソース CLI | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
-| [kou](https://github.com/celestia-island/kou) | スタンドアロンの仮想ターミナルエンジン: PTY 管理、VT100/ANSI | リポジトリ内 |
-| [hifumi](https://github.com/celestia-island/hifumi) | バージョン間でデータを移行するためのシリアライゼーションライブラリ | リポジトリ内 |
-| [aris](https://github.com/celestia-island/aris) | servo 由来のブラウザエンジン。ライブラリとして埋め込み可能（デジタルツイン用 WebGL） | リポジトリ内 |
-| [shirabe](https://github.com/celestia-island/shirabe) | 軽量な Rust ネイティブのブラウザ自動化・デバッグライブラリ | リポジトリ内 |
-| [tairitsu](https://github.com/celestia-island/tairitsu) | WASM Component Model を活用したフルスタックフレームワーク | リポジトリ内 |
-| [akivili](https://github.com/celestia-island/akivili) | プラグインファブリック兼 SDK。プラグインレジストリ、ホスト仲介、guard、TypeScript/WASM 実行パイプライン | リポジトリ内 |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | ratatui TUI 向け Markdown レンダリング | リポジトリ内 |
-| [arcaea](https://github.com/celestia-island/arcaea) | celestia ペルソナプロトコルの Rust ライブラリ | リポジトリ内 |
-| [scriptum](https://github.com/celestia-island/scriptum) | entelecheia 向けターミナルインターフェース（TUI）: scepter サーバーと対話する「ダムディスプレイ」 | リポジトリ内 |
+| [noa](https://github.com/celestia-island/noa) | エージェントネイティブな分散バージョン管理（分離されたワークスペース付き） | [リポジトリ](https://github.com/celestia-island/noa) |
+| [seia](https://github.com/celestia-island/seia) | マルチエンジンのウェブ検索 | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
+| [aoba](https://github.com/celestia-island/aoba) | マルチプロトコルのデバッグとシミュレーション用 CLI（Modbus RTU など） | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | メッセージパイプ上のスレッドプールパイプライン | リポジトリ内 |
+| [yuuka](https://github.com/celestia-island/yuuka) | 入れ子構造の合成と JSON マージ/パッチのためのマクロ | リポジトリ内 |
+| [kou](https://github.com/celestia-island/kou) | 仮想ターミナルエンジン: PTY、VT100/ANSI、インライングラフィックス | リポジトリ内 |
+| [hifumi](https://github.com/celestia-island/hifumi) | バージョン間でデータを移行するためのシリアライゼーション | リポジトリ内 |
+| [lacrymira](https://github.com/celestia-island/lacrymira) | 1 つのコマンドサーフェスの背後にある SQL と KV の型付きデータアクセス | リポジトリ内 |
+| [himari](https://github.com/celestia-island/himari) | 次元を持つ数式の中間表現 | リポジトリ内 |
+| [kotama](https://github.com/celestia-island/kotama) | リバースエンジニアリングツールキット: 解析、逆コンパイル、クロスリファレンス | リポジトリ内 |
+| [ayane](https://github.com/celestia-island/ayane) | メールサービス: コントロールプレーン、ウェブメール、保護 | リポジトリ内 |
+| [aris](https://github.com/celestia-island/aris) | servo 由来の純 Rust ブラウザエンジン。ライブラリとして埋め込み可能 | リポジトリ内 |
+| [shirabe](https://github.com/celestia-island/shirabe) | ヘッドレスなブラウザ自動化とデバッグ | リポジトリ内 |
+| [tairitsu](https://github.com/celestia-island/tairitsu) | WASM Component Model 上のフルスタックフレームワーク | リポジトリ内 |
+| [akivili](https://github.com/celestia-island/akivili) | エージェント拡張のためのプラグインホスト兼 SDK | リポジトリ内 |
+| [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python プラグイン兼エンジン SDK | リポジトリ内 |
+| [shun](https://github.com/celestia-island/shun) | インストーラ、フラッシャ、ポータブルモードのペイロード配信 | リポジトリ内 |
+| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | ターミナル UI 内での Markdown レンダリング | リポジトリ内 |
+| arcaea | ペルソナプロトコルライブラリ | リポジトリ内 |
+| scriptum | エージェントプラットフォーム向けのターミナルインターフェース | — |
+| official-plugins | ファーストパーティのプラグインパッケージ | リポジトリ内 |
 
 ## エッジとハードウェア
 
 | プロジェクト | 役割 | ドキュメント |
 | --- | --- | --- |
-| [kei](https://github.com/celestia-island/kei) | ARM64/RISC-V エッジデバイス向け Rust OS カーネル。長期的展望のための決定論的リアルタイムコア | リポジトリ内 |
-| [hare](https://github.com/celestia-island/hare) | 産業エッジ向け no_std ブリッジクレート。wire プロトコル、ハードウェアマニフェスト、プロトコルハブ（Modbus/MC/S7）、HAL トレイト、ANSI/VT | リポジトリ内 |
+| [kei](https://github.com/celestia-island/kei) | ARM64 と RISC-V のエッジゲートウェイ向け Rust カーネル | リポジトリ内 |
+| [hare](https://github.com/celestia-island/hare) | 組み込み産業ノード向けの `no_std` ブリッジライブラリ | リポジトリ内 |
+| evernight-appliance | アプライアンス配布: 起動ファームウェア、フラッシャ、ドライバ契約 | — |
 
 ## インフラストラクチャとツーリング
 
 | プロジェクト | 役割 | ドキュメント |
 | --- | --- | --- |
-| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | 共有開発ツールチェーン: justfile レシピ、パッチ登録、リンティング | リポジトリ内 |
-| [celestia-integration](https://github.com/celestia-island/celestia-integration) | ループ全体を対象とした実ハードウェア統合テストスイート | リポジトリ内 |
-| [sysl](https://github.com/celestia-island/sysl) | Synthetic Source License（SySL）: AI 生成コード向けに設計されたライセンス | リポジトリ内 |
+| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | 共有開発ツールチェーン: ビルドレシピ、リンティング、リリースゲート | リポジトリ内 |
+| [cherino](https://github.com/celestia-island/cherino) | エージェント実行のためのサンドボックス化されたコンテナ抽象 | リポジトリ内 |
+| [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts) | リリース用バイナリとイメージ成果物の公開ホスティング | リポジトリ内 |
+| celestia-integration | ループ全体を対象としたクロスリポジトリ統合テスト | — |
+| fuuka | セルフホストの CI 実行プレーン | — |
+| [sysl](https://github.com/celestia-island/sysl) | このコードの大半が使う Synthetic Source License | リポジトリ内 |
 
 ## ウェブプレゼンス
 
@@ -76,7 +91,8 @@ celestia-island リポジトリの完全な一覧をレイヤ別にまとめて�
 | [celestia-island.github.io](https://celestia-island.github.io) | 組織の存在 | リポジトリ内 |
 | [docs.celestia.world](https://docs.celestia.world) | 本サイト —— 哲学、マップ、始め方 | リポジトリ内 |
 | [e.celestia.world](https://e.celestia.world) | 公開ランディングページ | リポジトリ内 |
-| [dev.celestia.world](https://dev.celestia.world) | パネルと開発者ポータル（製品入口） | — |
+| [dev.celestia.world](https://dev.celestia.world) | パネルと開発者ダッシュボード（ベータ期間中は招待制） | リポジトリ内 |
+| [celestia.ac.cn](https://celestia.ac.cn) | 会社とエンタープライズサービスサイト | リポジトリ内 |
 
 ## さらに詳しく
 

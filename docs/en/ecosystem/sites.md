@@ -9,7 +9,7 @@ project sites authoritative.
 | Site | Owns | Content |
 | --- | --- | --- |
 | [docs.celestia.world](https://docs.celestia.world) | the ecosystem | Philosophy, ecosystem map, getting started, governance (license, CLA, CoC, security, contributing) |
-| `<name>.docs.celestia.world` | each project | Guides, architecture, designs, references — built from the project's own repository |
+| `<name>.docs.celestia.world` | each project that has published one | Guides, architecture, designs, references — built from the project's own repository |
 | [celestia-island.github.io](https://celestia-island.github.io) | the organization | Presence, links, brand assets |
 | [e.celestia.world](https://e.celestia.world) | the public face | Landing page, pricing, blog, call-to-action |
 | [dev.celestia.world](https://dev.celestia.world) | the panel | Account, chat, agents, and the operator console (invite-gated during the beta) |

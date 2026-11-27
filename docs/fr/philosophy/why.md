@@ -47,21 +47,22 @@ fonctionnalité amont est un bug, pas une réussite. Voir
 
 ## L'horizon : l'autonomie locale
 
-La latence, c'est le destin. Sur la Lune, un aller-retour de signal prend 2,6
-secondes ; sur Mars, de 6 à 44 minutes. Les machines là-bas ne peuvent pas
-dépendre d'un humain sur Terre — elles doivent prendre des décisions
-localement, en toute sécurité et de manière prévisible.
+Un aller-retour n'est jamais gratuit. Partout où la liaison est longue,
+saturée ou simplement absente, une machine ne peut pas dépendre d'un humain
+situé ailleurs — elle doit décider localement, en toute sécurité et de manière
+prévisible.
 
 La forme que nous construisons aujourd'hui pour le contrôle industriel — une
 couche de décision qui orchestre les agents, un modèle du monde qui sait ce qui
-se passe *maintenant* et une porte de sécurité qui dit *non* — est la même dont
-les robots lunaires et martiens auront besoin. Nous ne construisons pas pour
-Mars aujourd'hui ; nous construisons pour que le système qui atteindra Mars
-soit celui-ci. Voir [Récit & Horizon](./narrative.md).
+se passe *maintenant* et une porte de sécurité qui dit *non* — est la forme
+dont tout déploiement a besoin dès que l'aller-retour cesse d'être gratuit. Nous
+ne construisons pas un autre système pour cet avenir ; nous construisons
+celui-ci pour qu'il ait déjà la bonne forme. Voir
+[Récit & Horizon](./narrative.md).
 
 ## Pour aller plus loin
 
 - [La Boucle Fermée](./closed-loop.md) — la boucle, segment par segment.
 - [Architecture en couches](./layered-architecture.md) — comment les pièces restent ordonnées.
-- [Principes de sécurité](./safety.md) — ce que « critique pour la sécurité » signifie ici.
-- [Récit & Horizon](./narrative.md) — la feuille de route sur cinq ans et le raisonnement qui la sous-tend.
+- [Principes de sécurité](./safety.md) — ce que « critique pour la sécurité » veut dire ici.
+- [Récit & Horizon](./narrative.md) — la trajectoire et le raisonnement derrière elle.

@@ -20,7 +20,7 @@ Arona 由服务器托管——本地无需安装任何东西。打开管理员�
 
 ## 智能体运行时（可选）
 
-自己运行智能体平台的用户，请使用 [plana](https://github.com/celestia-island/plana/tree/master/scripts/install)（[Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh)、[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)）中的统一安装器。一切都由生态自身的仓库构建，因此前置要求是 Rust 工具链、Docker 与 `just` 任务运行器。
+自己运行智能体平台的用户，请使用 [plana](https://github.com/celestia-island/plana/tree/master/scripts/install) 中的统一安装器（[Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh)、[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)）。一切都由生态自身的仓库构建，因此前置要求是 Rust 工具链、Docker 与 `just` 任务运行器。
 
 ## 深入阅读
 

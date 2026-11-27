@@ -25,11 +25,13 @@ copied here.
    - **Layer 0** (kirino, auth) / **Layer 1** (plana, platform) / **Layer 2**
      (hikari, UI) / **Layer 3** (services: arona, shittim-chest, entelecheia,
      evernight, malkuth, lagrange).
-   - **Mixed-criticality layers**: the real-time layers never depend on a
-     model being online. Name the layers by role (cognition / world state /
-     reactive / real-time control), not by frequency bands or hardware form
-     factors — those are implementation detail.
-   - Product phases: **internal beta** / **public beta**. Do not publish dated
+   - **Mixed-criticality tiers** — a *second*, independent axis from the
+     four layers above: the real-time tiers never depend on a model being
+     online. Name them by role (cognition / world state / reactive / real-time
+     control), not by frequency bands or hardware form factors; those are
+     implementation detail. Never write "L0–L3" for this axis — that notation
+     belongs to the four layers only.
+   - **Product phases**: internal beta / public beta. Do not publish dated
      phase tables, future track names, or horizon-specific vehicles; the
      long-term direction is written as an outlook without dates.
    Do not invent synonyms for these; reuse them across pages.

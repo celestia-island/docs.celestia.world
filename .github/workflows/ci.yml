@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           repository: celestia-island/lagrange
-          ref: v0.3.22
+          ref: v0.3.23
           path: lagrange
 
       - uses: dtolnay/rust-toolchain@stable

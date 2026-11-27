@@ -1,6 +1,6 @@
 # 行为准则
 
-> 本文为社区参考翻译。如有歧义，以仓库根目录下的英文原版 [`CODE_OF_CONDUCT.md`](../../en/meta/code-of-conduct.md) 为准。
+> 本文为社区参考翻译。如有歧义，以仓库根目录下的英文原版 [`CODE_OF_CONDUCT.md`](code-of-conduct.md) 为准。
 
 ## 我们的承诺
 

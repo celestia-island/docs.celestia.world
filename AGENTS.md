@@ -25,8 +25,10 @@ copied here.
    - **Layer 0** (kirino, auth) / **Layer 1** (plana, platform) / **Layer 2**
      (hikari, UI) / **Layer 3** (services: arona, shittim-chest, entelecheia,
      evernight, malkuth, lagrange).
-   - **Mixed-criticality layers** L0–L3 with the rule: L0/L1 never depend on
-     the LLM being online.
+   - **Mixed-criticality layers**: the real-time layers never depend on a
+     model being online. Name the layers by role (cognition / world state /
+     reactive / real-time control), not by frequency bands or hardware form
+     factors — those are implementation detail.
    - Product phases: **internal beta** / **public beta**. Do not publish dated
      phase tables, future track names, or horizon-specific vehicles; the
      long-term direction is written as an outlook without dates.
@@ -41,7 +43,7 @@ copied here.
    deeper" section (translated per language) linking to sibling hub pages or
    project sites.
 6. **Repository names are proper nouns.** arona, shittim-chest, entelecheia,
-   evernight, kirino, plana, hikari, malkuth, lagrange, noa, kei, scepter —
+   evernight, kirino, plana, hikari, malkuth, lagrange, noa, kei —
    never translated, never renamed, never linked to the wrong repo.
 
 ## 3. Language policy

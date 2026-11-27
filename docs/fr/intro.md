@@ -50,6 +50,9 @@ plugins), [celestia-plugin](https://github.com/celestia-island/celestia-plugin)
 **Infrastructure** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
 (chaîne d'outils de build et de lint),
 [cherino](https://github.com/celestia-island/cherino) (conteneurs d'agents),
+[malkuth](https://github.com/celestia-island/malkuth) (supervision de services),
+[lagrange](https://github.com/celestia-island/lagrange) (le moteur de
+documentation qui construit ce site),
 [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
 (artefacts de release), [sysl](https://github.com/celestia-island/sysl) (la
 licence), celestia-integration (tests d'intégration), fuuka (CI auto-hébergée),

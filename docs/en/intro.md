@@ -45,7 +45,10 @@ packages).
 
 **Infrastructure** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
 (build and lint toolchain), [cherino](https://github.com/celestia-island/cherino)
-(agent containers), [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+(agent containers), [malkuth](https://github.com/celestia-island/malkuth)
+(service supervision), [lagrange](https://github.com/celestia-island/lagrange)
+(the documentation engine behind this site),
+[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
 (release artifacts), [sysl](https://github.com/celestia-island/sysl) (the
 license), celestia-integration (integration tests), fuuka (self-hosted CI),
 celestia-erp (business back office).

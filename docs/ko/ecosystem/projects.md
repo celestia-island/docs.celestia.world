@@ -4,7 +4,7 @@ celestia-island 플랫폼의 저장소와 제품 전체 목록을 계층별로 �
 링크가 있는 이름은 오늘 바로 읽을 수 있는 공개 저장소입니다; 링크가 없는
 이름은 플랫폼과 함께 배포되지만 아직 소스가 공개되지 않은 제품입니다. 문서
 사이트가 표시된 저장소는 자체 *방법* 문서를 제공합니다; 나머지는 저장소
-안에서 문서화됩니다.
+안에서 문서화되며, 열람하려면 해당 저장소에 대한 접근 권한이 필요합니다.
 
 ## 계층 0 — 인증
 
@@ -60,9 +60,9 @@ celestia-island 플랫폼의 저장소와 제품 전체 목록을 계층별로 �
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python 플러그인 및 엔진 SDK | 저장소 |
 | [shun](https://github.com/celestia-island/shun) | 설치 프로그램, 플래셔, 포터블 모드 페이로드 전달 | 저장소 |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | 터미널 UI 내 Markdown 렌더링 | 저장소 |
-| arcaea | 페르소나 프로토콜 라이브러리 | 저장소 |
+| arcaea | 페르소나 프로토콜 라이브러리 | — |
 | scriptum | 에이전트 플랫폼용 터미널 인터페이스 | — |
-| official-plugins | 퍼스트 파티 플러그인 패키지 | 저장소 |
+| official-plugins | 퍼스트 파티 플러그인 패키지 | — |
 
 ## 엣지 및 하드웨어
 

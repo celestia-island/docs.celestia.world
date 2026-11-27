@@ -47,7 +47,10 @@
 
 **البنية التحتية** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
 (سلسلة أدوات البناء والفحص)، و[cherino](https://github.com/celestia-island/cherino)
-(حاويات الوكلاء)، و[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+(حاويات الوكلاء)، و[malkuth](https://github.com/celestia-island/malkuth)
+(الإشراف على الخدمات)، و[lagrange](https://github.com/celestia-island/lagrange)
+(محرّك التوثيق الذي يبني هذا الموقع)،
+و[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
 (مخرجات الإصدارات)، و[sysl](https://github.com/celestia-island/sysl)
 (الترخيص)، وcelestia-integration (اختبارات التكامل)، وfuuka (التكامل
 المستمر المُستضاف ذاتيًا)، وcelestia-erp (الأنظمة الإدارية الخلفية للأعمال).

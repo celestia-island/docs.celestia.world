@@ -5,7 +5,7 @@ celestia-island のプラットフォームリポジトリと製品の完全な�
 リポジトリです。リンクのない名前は、プラットフォームに同梱される製品で、
 ソースはまだ公開されていないものです。ドキュメントサイトを持つと
 記されたリポジトリは独自の *how* ドキュメントを持ち、それ以外は
-リポジトリ内で文書化されています。
+リポジトリ内で文書化されており、閲覧にはそのリポジトリへのアクセスが必要です。
 
 ## レイヤ 0 — 認証
 
@@ -61,9 +61,9 @@ celestia-island のプラットフォームリポジトリと製品の完全な�
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python プラグイン兼エンジン SDK | リポジトリ内 |
 | [shun](https://github.com/celestia-island/shun) | インストーラ、フラッシャ、ポータブルモードのペイロード配信 | リポジトリ内 |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | ターミナル UI 内での Markdown レンダリング | リポジトリ内 |
-| arcaea | ペルソナプロトコルライブラリ | リポジトリ内 |
+| arcaea | ペルソナプロトコルライブラリ | — |
 | scriptum | エージェントプラットフォーム向けのターミナルインターフェース | — |
-| official-plugins | ファーストパーティのプラグインパッケージ | リポジトリ内 |
+| official-plugins | ファーストパーティのプラグインパッケージ | — |
 
 ## エッジとハードウェア
 

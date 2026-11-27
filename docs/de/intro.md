@@ -52,6 +52,9 @@ electrode_recon (Rechen-Engine).
 **Infrastruktur** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
 (Build- und Lint-Toolchain),
 [cherino](https://github.com/celestia-island/cherino) (Agenten-Container),
+[malkuth](https://github.com/celestia-island/malkuth) (Service-Überwachung),
+[lagrange](https://github.com/celestia-island/lagrange) (die Dokumentations-Engine
+hinter dieser Seite),
 [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
 (Release-Artefakte), [sysl](https://github.com/celestia-island/sysl) (die
 Lizenz), celestia-integration (Integrationstests), fuuka (selbst gehostete

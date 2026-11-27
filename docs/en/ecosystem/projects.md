@@ -4,7 +4,8 @@ The inventory of the celestia-island platform repositories and products, grouped
 by layer. A name with a link is a public repository you can read today; a name
 without one is a product that ships with the platform but whose source is not
 public yet. Repositories marked with a documentation site carry their own *how*
-docs; everything else is documented inside the repository itself.
+docs; the rest are documented in their repository, which needs access to the
+repository itself.
 
 ## Layer 0 — Auth
 
@@ -60,9 +61,9 @@ docs; everything else is documented inside the repository itself.
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python plugin and engine SDK | repository |
 | [shun](https://github.com/celestia-island/shun) | Installers, flashers and portable-mode payload delivery | repository |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Markdown rendering inside terminal UIs | repository |
-| arcaea | Persona protocol library | repository |
+| arcaea | Persona protocol library | — |
 | scriptum | Terminal interface for the agent platform | — |
-| official-plugins | The first-party plugin packages | repository |
+| official-plugins | The first-party plugin packages | — |
 
 ## Edge & hardware
 

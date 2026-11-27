@@ -29,8 +29,12 @@ URL do painel que o seu administrador fornece e entre com o seu convite.
 
 ## Runtime de agentes (opcional)
 
-Quem executa a plataforma de agentes por conta própria segue o instalador
-unificado documentado nos repositórios entelecheia e plana. Tudo é construído a
+Quem executa a plataforma de agentes por conta própria usa o instalador
+unificado em
+[plana](https://github.com/celestia-island/plana/tree/master/scripts/install)
+([Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh),
+[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)).
+Tudo é construído a
 partir dos próprios repositórios do ecossistema, então os pré-requisitos são um
 toolchain Rust, Docker e o executor de tarefas `just`.
 

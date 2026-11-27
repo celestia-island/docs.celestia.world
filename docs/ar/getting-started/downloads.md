@@ -27,8 +27,11 @@ Arona مُستضاف على الخادم — لا يوجد ما تثبّته م�
 
 ## بيئة تشغيل الوكلاء (اختياري)
 
-من يشغّل منصة الوكلاء بنفسه يتبع المثبِّت الموحَّد الموثَّق في مستودعي
-entelecheia وplana. وكل شيء يُبنى من مستودعات المنظومة نفسها، لذا فالمتطلبات
+من يشغّل منصة الوكلاء بنفسه يستخدم المثبِّت الموحَّد في
+[plana](https://github.com/celestia-island/plana/tree/master/scripts/install)
+([Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh)،
+‏[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)).
+وكل شيء يُبنى من مستودعات المنظومة نفسها، لذا فالمتطلبات
 المسبقة هي سلسلة أدوات Rust، وDocker، وأداة تشغيل المهام `just`.
 
 ## لمزيد من التفاصيل

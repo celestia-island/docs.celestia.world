@@ -30,10 +30,13 @@ invitation.
 
 ## Runtime d'agents (optionnel)
 
-Les utilisateurs qui exécutent eux-mêmes la plateforme d'agents suivent
-l'installateur unifié documenté dans les dépôts entelecheia et plana. Tout est
-construit à partir des dépôts de l'écosystème lui-même, donc les prérequis sont
-une chaîne d'outils Rust, Docker et le lanceur de tâches `just`.
+Les utilisateurs qui exécutent eux-mêmes la plateforme d'agents utilisent
+l'installateur unifié de
+[plana](https://github.com/celestia-island/plana/tree/master/scripts/install)
+([Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh),
+[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)).
+Tout est construit à partir des dépôts de l'écosystème lui-même, donc les
+prérequis sont une chaîne d'outils Rust, Docker et le lanceur de tâches `just`.
 
 ## Pour aller plus loin
 

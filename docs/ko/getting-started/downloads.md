@@ -27,9 +27,13 @@ Arona는 서버에서 호스팅됩니다 — 로컬에 설치할 것은 없습�
 
 ## 에이전트 런타임 (선택 사항)
 
-에이전트 플랫폼을 직접 운영하려는 사용자는 entelecheia 및 plana 저장소에
-문서화된 통합 설치 프로그램을 따릅니다. 모든 것이 생태계 자체 저장소에서
-빌드되므로, 사전 요구 사항은 Rust 툴체인, Docker, `just` 작업 실행기입니다.
+에이전트 플랫폼을 직접 운영하려는 사용자는
+[plana](https://github.com/celestia-island/plana/tree/master/scripts/install)의
+통합 설치 프로그램을
+([Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh),
+[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1))
+사용합니다. 모든 것이 생태계 자체 저장소에서 빌드되므로, 사전 요구 사항은
+Rust 툴체인, Docker, `just` 작업 실행기입니다.
 
 ## 더 알아보기
 

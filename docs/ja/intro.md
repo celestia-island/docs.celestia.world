@@ -48,7 +48,9 @@ electrode_recon（計算エンジン）。
 
 **インフラ** —— [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
 （ビルドとリントのツールチェーン）、[cherino](https://github.com/celestia-island/cherino)
-（エージェントコンテナ）、[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+（エージェントコンテナ）、[malkuth](https://github.com/celestia-island/malkuth)
+（サービス監視）、[lagrange](https://github.com/celestia-island/lagrange)
+（このサイトをビルドするドキュメントエンジン）、[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
 （リリース成果物）、[sysl](https://github.com/celestia-island/sysl)（ライセンス）、
 celestia-integration（統合テスト）、fuuka（セルフホスト CI）、celestia-erp
 （ビジネスバックオフィス）。

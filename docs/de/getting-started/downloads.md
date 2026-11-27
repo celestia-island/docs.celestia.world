@@ -29,8 +29,11 @@ Ihrer Einladung an.
 
 ## Agenten-Runtime (optional)
 
-Nutzer, die die Agenten-Plattform selbst betreiben, folgen dem einheitlichen
-Installer, der in den Repositories entelecheia und plana dokumentiert ist.
+Nutzer, die die Agenten-Plattform selbst betreiben, verwenden den einheitlichen
+Installer in
+[plana](https://github.com/celestia-island/plana/tree/master/scripts/install)
+([Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh),
+[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)).
 Alles wird aus den Repositories des Ökosystems selbst gebaut; die
 Voraussetzungen sind daher eine Rust-Toolchain, Docker und der Task-Runner
 `just`.

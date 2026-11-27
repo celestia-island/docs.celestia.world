@@ -54,6 +54,9 @@ Component Model), [akivili](https://github.com/celestia-island/akivili) (хос�
 [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
 (инструментарий сборки и линтинга),
 [cherino](https://github.com/celestia-island/cherino) (контейнеры агентов),
+[malkuth](https://github.com/celestia-island/malkuth) (наблюдение за сервисами),
+[lagrange](https://github.com/celestia-island/lagrange) (движок документации,
+собирающий этот сайт),
 [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
 (релизные артефакты),
 [sysl](https://github.com/celestia-island/sysl) (лицензия),

@@ -1,6 +1,6 @@
 # 專案地圖
 
-celestia-island 平台倉庫與產品的清單，按層分組。帶連結的名字是今天就能閱讀的公開倉庫；不帶連結的名字是隨平台一同交付、原始碼尚未公開的產品。標有文件站的倉庫在該站維護自己的 *怎麼做* 文件；其餘在倉庫內部文件化。
+celestia-island 平台倉庫與產品的清單，按層分組。帶連結的名字是今天就能閱讀的公開倉庫；不帶連結的名字是隨平台一同交付、原始碼尚未公開的產品。標有文件站的倉庫在該站維護自己的 *怎麼做* 文件；其餘在倉庫內部文件化，需要該倉庫的存取權限。
 
 ## 第 0 層 — 認證
 
@@ -56,9 +56,9 @@ celestia-island 平台倉庫與產品的清單，按層分組。帶連結的名�
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python 外掛與引擎 SDK | 倉庫內 |
 | [shun](https://github.com/celestia-island/shun) | 安裝器、燒錄工具與可攜模式的負載交付 | 倉庫內 |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | 終端機 UI 內的 Markdown 渲染 | 倉庫內 |
-| arcaea | persona 協定函式庫 | 倉庫內 |
+| arcaea | persona 協定函式庫 | — |
 | scriptum | 智能體平台的終端介面 | — |
-| official-plugins | 第一方外掛套件 | 倉庫內 |
+| official-plugins | 第一方外掛套件 | — |
 
 ## 邊緣與硬體
 

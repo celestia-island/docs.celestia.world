@@ -1,6 +1,6 @@
 # 项目地图
 
-celestia-island 平台仓库与产品的全量清单，按层分组。带链接的名字是今天就可以阅读的公开仓库；不带链接的名字是随平台一起交付、但源码尚未公开的产品。标注了文档站的仓库维护自己的 *怎么做* 文档；其余的在仓库自身内部文档化。
+celestia-island 平台仓库与产品的全量清单，按层分组。带链接的名字是今天就可以阅读的公开仓库；不带链接的名字是随平台一起交付、但源码尚未公开的产品。标注了文档站的仓库维护自己的 *怎么做* 文档；其余的在仓库自身内部文档化，需要该仓库的访问权限。
 
 ## 第 0 层 — 认证
 
@@ -56,9 +56,9 @@ celestia-island 平台仓库与产品的全量清单，按层分组。带链接�
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python 插件与引擎 SDK | 仓库内 |
 | [shun](https://github.com/celestia-island/shun) | 安装器、刷写工具与便携模式载荷分发 | 仓库内 |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | 终端 UI 内的 Markdown 渲染 | 仓库内 |
-| arcaea | 人格协议库 | 仓库内 |
+| arcaea | 人格协议库 | — |
 | scriptum | 智能体平台的终端界面 | — |
-| official-plugins | 一方的插件包 | 仓库内 |
+| official-plugins | 一方的插件包 | — |
 
 ## 边缘与硬件
 

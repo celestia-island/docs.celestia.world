@@ -27,8 +27,11 @@ Arona размещается на сервере — локально устан
 
 ## Рантайм агентов (необязательно)
 
-Пользователи, которые запускают агентную платформу сами, следуют
-унифицированному установщику, описанному в репозиториях entelecheia и plana.
+Пользователи, которые запускают агентную платформу сами, используют
+унифицированный установщик в
+[plana](https://github.com/celestia-island/plana/tree/master/scripts/install)
+([Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh),
+[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)).
 Всё собирается из собственных репозиториев экосистемы, поэтому необходимые
 условия — тулчейн Rust, Docker и средство запуска задач `just`.
 

@@ -32,9 +32,9 @@ monólito.
 **Reutilizável por construção.** Seja qual for o formato da próxima implantação,
 ela deve ser montada a partir da mesma base de ativos em vez de reconstruída: o
 protocolo de rede, o estado do mundo, os portões de segurança e o pipeline de
-gravação são ativos compartilhados. Uma trilha que comece um novo precisa passar
-por revisão de arquitetura. E nenhuma linha de produto depende jamais de um
-núcleo não lançado — se o núcleo atrasar, a receita não atrasa.
+gravação são ativos compartilhados. Qualquer coisa que comece um novo precisa
+passar por revisão de arquitetura. E nenhuma linha de produto depende jamais de
+um núcleo não lançado — se o núcleo atrasar, a receita não atrasa.
 
 ## O que fica fixo
 
@@ -53,4 +53,4 @@ Qualquer que seja o horizonte, três coisas não se movem:
 
 - [Por que celestia-island](./why.md) — a definição do problema por trás do horizonte.
 - [Princípios de Segurança](./safety.md) — a semântica de tempo real em que a narrativa se apoia.
-- [Mapa de Projetos](../ecosystem/projects.md) — onde mora o trabalho de cada trilha hoje.
+- [Mapa de Projetos](../ecosystem/projects.md) — onde mora o trabalho hoje.

@@ -30,8 +30,11 @@ Arona はサーバーホストです —— ローカルにインストールす
 
 ## エージェントランタイム（オプション）
 
-自分でエージェントプラットフォームを運用するユーザーは、entelecheia と
-plana のリポジトリで文書化されている統合インストーラに従ってください。
+自分でエージェントプラットフォームを運用するユーザーは、
+[plana](https://github.com/celestia-island/plana/tree/master/scripts/install)
+の統合インストーラを使います
+（[Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh)、
+[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)）。
 すべてはエコシステム自身のリポジトリからビルドされるため、前提条件は
 Rust ツールチェーン、Docker、そして `just` タスクランナーです。
 

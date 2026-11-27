@@ -5,7 +5,7 @@ gruppiert nach Schicht. Ein Name mit Link ist ein öffentliches Repository, das
 Sie heute lesen können; ein Name ohne Link ist ein Produkt, das mit der
 Plattform ausgeliefert wird, dessen Quelle aber noch nicht öffentlich ist.
 Repositories mit einer Dokumentationsseite tragen ihre eigenen
-*Wie*-Dokumente; alles andere ist im Repository selbst dokumentiert.
+*Wie*-Dokumente; alles andere ist im Repository selbst dokumentiert, was Zugriff auf das Repository voraussetzt.
 
 ## Schicht 0 — Auth
 
@@ -61,9 +61,9 @@ Repositories mit einer Dokumentationsseite tragen ihre eigenen
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | Python-Plugin- und Engine-SDK | Repository |
 | [shun](https://github.com/celestia-island/shun) | Installer, Flasher und Auslieferung von Portable-Mode-Payloads | Repository |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Markdown-Rendering in Terminal-UIs | Repository |
-| arcaea | Persona-Protokollbibliothek | Repository |
+| arcaea | Persona-Protokollbibliothek | — |
 | scriptum | Terminal-Oberfläche für die Agenten-Plattform | — |
-| official-plugins | Die First-Party-Plugin-Pakete | Repository |
+| official-plugins | Die First-Party-Plugin-Pakete | — |
 
 ## Edge & Hardware
 

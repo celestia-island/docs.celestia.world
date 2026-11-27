@@ -51,6 +51,9 @@ Python), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
 [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
 (toolchain de build e lint),
 [cherino](https://github.com/celestia-island/cherino) (contêineres de agentes),
+[malkuth](https://github.com/celestia-island/malkuth) (supervisão de serviços),
+[lagrange](https://github.com/celestia-island/lagrange)
+(o motor de documentação por trás deste site),
 [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
 (artefatos de release), [sysl](https://github.com/celestia-island/sysl) (a
 licença), celestia-integration (testes de integração), fuuka (CI

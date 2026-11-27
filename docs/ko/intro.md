@@ -45,7 +45,10 @@ SDK), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
 
 **인프라** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
 (빌드 및 린트 툴체인), [cherino](https://github.com/celestia-island/cherino)
-(에이전트 컨테이너), [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+(에이전트 컨테이너), [malkuth](https://github.com/celestia-island/malkuth)
+(서비스 감독), [lagrange](https://github.com/celestia-island/lagrange)
+(이 사이트를 빌드하는 문서 엔진),
+[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
 (릴리스 아티팩트), [sysl](https://github.com/celestia-island/sysl) (라이선스),
 celestia-integration (통합 테스트), fuuka (자체 호스팅 CI), celestia-erp
 (비즈니스 백오피스).

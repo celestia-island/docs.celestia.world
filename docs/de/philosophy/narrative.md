@@ -14,7 +14,7 @@ Seite ist der Verlauf, der daraus folgt.
 
 ## Wohin es geht
 
-**Näher an die Maschine.** Heute läuft der Regelkreis vom Webbrowser eines
+**Näher an die Maschine.** Heute läuft der Regelkreis von Webbrowser eines
 Bedienern über einen Protokoll-Broker bis zu einem Controller. Jeder Schritt
 näher an der Hardware enthält weniger Modell und weniger Netzwerk und endet bei
 einem Regelkreis, der lokal läuft und nicht auf eine Rundstrecke wartet. Diese
@@ -31,10 +31,10 @@ Grund, warum die Entscheidungsebene, das Weltmodell und die Sicherheitssperre
 als getrennte Dinge gebaut werden statt als ein Monolith.
 
 **Wiederverwendbar durch Konstruktion.** Wie auch immer die nächste
-Bereitstellung aussieht: Sie sollte aus derselben Asset-Basis zusammengesetzt
+Bereitstellung aussieht: Sie sollte aus der gleichen Asset-Basis zusammengesetzt
 werden statt neu gebaut — das Wire-Protokoll, der Weltzustand, die
-Sicherheitssperren und die Aufzeichnungspipeline sind gemeinsame Assets. Ein
-Track, der ein neues startet, muss eine Architekturprüfung durchlaufen. Und
+Sicherheitssperren und die Aufzeichnungspipeline sind gemeinsame Assets. Alles,
+was ein neues startet, muss eine Architekturprüfung durchlaufen. Und
 keine Produktlinie hängt je von einem nicht veröffentlichten Kern ab — rutscht
 der Kern, rutscht nicht der Umsatz.
 
@@ -56,4 +56,4 @@ Wie der Horizont auch aussieht, drei Dinge bewegen sich nicht:
 
 - [Warum celestia-island](./why.md) — die Problemstellung hinter dem Horizont.
 - [Sicherheitsprinzipien](./safety.md) — die Echtzeit-Semantik, auf der die Erzählung aufbaut.
-- [Projektübersicht](../ecosystem/projects.md) — wo die Arbeit jedes Tracks heute lebt.
+- [Projektübersicht](../ecosystem/projects.md) — wo die Arbeit heute lebt.

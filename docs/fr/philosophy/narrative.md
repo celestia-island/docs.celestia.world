@@ -34,8 +34,8 @@ des choses séparées plutôt que comme un monolithe.
 **Réutilisable par construction.** Quelle que soit la forme du prochain
 déploiement, il devrait être assemblé à partir de la même base d'actifs plutôt
 que reconstruit : le protocole filaire, l'état du monde, les portes de sécurité
-et le pipeline d'enregistrement sont des actifs partagés. Une piste qui en
-démarre un nouveau doit passer une revue d'architecture. Et aucune gamme de
+et le pipeline d'enregistrement sont des actifs partagés. Ce qui en démarre un
+nouveau doit passer une revue d'architecture. Et aucune gamme de
 produits ne dépend jamais d'un cœur non publié — si le cœur glisse, le chiffre
 d'affaires ne suit pas.
 
@@ -57,4 +57,4 @@ Quel que soit l'horizon, trois choses ne bougent pas :
 
 - [Pourquoi celestia-island](./why.md) — l'énoncé du problème derrière l'horizon.
 - [Principes de sécurité](./safety.md) — la sémantique temps réel sur laquelle repose le récit.
-- [Carte des projets](../ecosystem/projects.md) — où vit le travail de chaque piste aujourd'hui.
+- [Carte des projets](../ecosystem/projects.md) — où vit le travail aujourd'hui.

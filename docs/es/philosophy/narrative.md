@@ -33,7 +33,7 @@ un monolito.
 despliegue, debería ensamblarse a partir de la misma base de activos en lugar de
 reconstruirse: el protocolo de red, el estado del mundo, las compuertas de
 seguridad y la canalización de grabación son activos compartidos. Cualquier
-track que empiece uno nuevo debe pasar la revisión de arquitectura. Y ninguna
+cosa que empiece uno nuevo debe pasar la revisión de arquitectura. Y ninguna
 línea de producto depende nunca de un núcleo sin publicar: si el núcleo se
 retrasa, los ingresos no.
 
@@ -54,4 +54,4 @@ Sea cual sea el horizonte, tres cosas no se mueven:
 
 - [Por qué celestia-island](./why.md) — el planteamiento del problema detrás del horizonte.
 - [Principios de seguridad](./safety.md) — la semántica de tiempo real sobre la que se asienta la narrativa.
-- [Mapa de proyectos](../ecosystem/projects.md) — dónde vive hoy el trabajo de cada track.
+- [Mapa de proyectos](../ecosystem/projects.md) — dónde vive hoy el trabajo.

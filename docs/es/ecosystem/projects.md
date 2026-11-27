@@ -5,7 +5,7 @@ agrupados por capa. Un nombre con enlace es un repositorio público que puedes
 leer hoy; un nombre sin enlace es un producto que se distribuye con la
 plataforma pero cuyo código fuente aún no es público. Los repositorios marcados
 con un sitio de documentación llevan sus propias guías del *cómo*; todo lo demás
-se documenta dentro del propio repositorio.
+se documenta dentro del propio repositorio, lo que exige acceso a él.
 
 ## Capa 0 — Autenticación
 
@@ -61,9 +61,9 @@ se documenta dentro del propio repositorio.
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | SDK de plugins y motores para Python | repositorio |
 | [shun](https://github.com/celestia-island/shun) | Instaladores, flasheadores y entrega de cargas en modo portable | repositorio |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Renderizado de Markdown dentro de interfaces de terminal | repositorio |
-| arcaea | Biblioteca del protocolo de persona | repositorio |
+| arcaea | Biblioteca del protocolo de persona | — |
 | scriptum | Interfaz de terminal para la plataforma de agentes | — |
-| official-plugins | Los paquetes de plugins de primera parte | repositorio |
+| official-plugins | Los paquetes de plugins de primera parte | — |
 
 ## Borde y hardware
 

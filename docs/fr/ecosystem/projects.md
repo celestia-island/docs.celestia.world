@@ -5,7 +5,7 @@ par couche. Un nom accompagné d'un lien est un dépôt public que vous pouvez l
 dès aujourd'hui ; un nom sans lien est un produit livré avec la plateforme mais
 dont la source n'est pas encore publique. Les dépôts marqués d'un site de
 documentation portent leurs propres docs *how* ; tout le reste est documenté
-dans le dépôt lui-même.
+dans le dépôt lui-même, ce qui suppose d'y avoir accès.
 
 ## Couche 0 — Auth
 
@@ -61,9 +61,9 @@ dans le dépôt lui-même.
 | [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | SDK de plugins et de moteurs Python | dépôt |
 | [shun](https://github.com/celestia-island/shun) | Installateurs, programmeurs de flash et livraison de charges utiles en mode portable | dépôt |
 | [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | Rendu Markdown dans les interfaces terminal | dépôt |
-| arcaea | Bibliothèque de protocole de persona | dépôt |
+| arcaea | Bibliothèque de protocole de persona | — |
 | scriptum | Interface terminal de la plateforme d'agents | — |
-| official-plugins | Les paquets de plugins de première partie | dépôt |
+| official-plugins | Les paquets de plugins de première partie | — |
 
 ## Périphérie & matériel
 

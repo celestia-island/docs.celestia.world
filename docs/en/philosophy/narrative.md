@@ -30,7 +30,7 @@ things rather than one monolith.
 **Reusable by construction.** Whatever the next deployment looks like, it
 should be assembled from the same asset base rather than rebuilt: the wire
 protocol, the world state, the safety gates and the recording pipeline are
-shared assets. A track that starts a new one has to pass architecture review.
+shared assets. Anything that starts a new one has to pass architecture review.
 And no product line ever depends on an unreleased core — if the core slips,
 revenue does not.
 
@@ -50,4 +50,4 @@ Whatever the horizon, three things do not move:
 
 - [Why celestia-island](./why.md) — the problem statement behind the horizon.
 - [Safety Principles](./safety.md) — the real-time semantics the narrative builds on.
-- [Projects Map](../ecosystem/projects.md) — where each track's work lives today.
+- [Projects Map](../ecosystem/projects.md) — where the work lives today.

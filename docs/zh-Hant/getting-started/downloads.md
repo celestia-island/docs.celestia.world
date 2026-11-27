@@ -20,7 +20,7 @@ Arona 由伺服器託管——本機沒有任何要安裝的東西。開啟管�
 
 ## 智能體執行環境（可選）
 
-自行執行智能體平台的使用者，請遵循 entelecheia 與 plana 倉庫所記載的統一安裝器。一切都從生態自身的倉庫構建，因此先決條件是 Rust 工具鏈、Docker 與 `just` 任務執行器。
+自行執行智能體平台的使用者，請使用 [plana](https://github.com/celestia-island/plana/tree/master/scripts/install) 中的統一安裝器（[Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh)、[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)）。一切都從生態自身的倉庫構建，因此先決條件是 Rust 工具鏈、Docker 與 `just` 任務執行器。
 
 ## 深入閱讀
 

@@ -27,10 +27,12 @@ URL your administrator provides and sign in with your invitation.
 
 ## Agent runtime (optional)
 
-Users who run the agent platform themselves follow the unified installer
-documented in the entelecheia and plana repositories. Everything is built from
-the ecosystem's own repositories, so the prerequisites are a Rust toolchain,
-Docker, and the `just` task runner.
+Users who run the agent platform themselves use the unified installer in
+[plana](https://github.com/celestia-island/plana/tree/master/scripts/install)
+([Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh),
+[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)).
+Everything is built from the ecosystem's own repositories, so the prerequisites
+are a Rust toolchain, Docker, and the `just` task runner.
 
 ## Where to go deeper
 

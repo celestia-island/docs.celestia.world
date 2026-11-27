@@ -33,7 +33,7 @@
 
 # Plataformas
 
-- [Arona — Pasarela de modelos, memoria y clúster](./platforms/arona.md)
+- [Arona — Pasarela de modelos y panel de despliegue](./platforms/arona.md)
 - [Entelecheia — Plataforma de agentes y memoria](./platforms/entelecheia.md)
 - [Shittim Chest — Chat, paneles e integraciones](./platforms/chest.md)
 - [Evernight — Broker de protocolos industriales](./platforms/evernight.md)

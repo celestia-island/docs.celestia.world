@@ -13,18 +13,17 @@
 | # | 区間 | 何が起きるか | プロジェクト |
 | --- | --- | --- | --- |
 | 1 | **発見** | 潜在ユーザーがエコシステムを見つけ、その哲学を理解し、エントリーポイントを選ぶ | [docs.celestia.world](https://docs.celestia.world)（本サイト）、[celestia-island.github.io](https://celestia-island.github.io)、[e.celestia.world](https://e.celestia.world) |
-| 2 | **インストール** | 動作するシステムを手に入れる: 管理パネル、デスクトップ/ウェブシェル、監視下のサービス | [arona](https://github.com/celestia-island/arona)（クラウド API 管理パネル）、[shittim-chest](https://github.com/celestia-island/shittim-chest)（チャットデスクトップ/WebUI）、[malkuth](https://github.com/celestia-island/malkuth)（サービス監視） |
+| 2 | **インストール** | 動作するシステムを手に入れる: 管理パネル、デスクトップ/ウェブシェル、監視下のサービス | arona（クラウド API 管理パネル）、shittim-chest（チャットデスクトップ/WebUI）、[malkuth](https://github.com/celestia-island/malkuth)（サービス監視） |
 | 3 | **認証** | ゼロトラスト ID: 登録（招待制）、レート制限付きログイン、API キー、RBAC | [kirino](https://github.com/celestia-island/kirino)（認証プリミティブと RBAC エンジン） |
-| 4 | **モデルデプロイ** | モデルランタイムを選び、ノードにデプロイし、チャットバックエンドにバインドし、利用量を計測する | [arona](https://github.com/celestia-island/arona)（パネル + バックエンド）、[entelecheia](https://github.com/celestia-island/entelecheia)（scepter ランタイム）、[plana](https://github.com/celestia-island/plana)（計測と価格設定） |
-| 5 | **チャットとエージェント** | モデルと対話し、マルチエージェントコラボレーションを実行し、会話を保持し、メモリを管理する | [shittim-chest](https://github.com/celestia-island/shittim-chest)（UI とチャット）、[entelecheia](https://github.com/celestia-island/entelecheia)（エージェントオーケストレーション）、[noa](https://github.com/celestia-island/noa)（AI ネイティブバージョン管理） |
-| 6 | **産業制御** | 遠隔運用とプロトコルブローカリング: Modbus、S7comm、OPC UA。テレメトリと書き込みゲート | [evernight](https://github.com/celestia-island/evernight)（プロトコルブローカー）、[aoba](https://github.com/celestia-island/aoba)（Modbus とデータソース CLI） |
-| 7 | **検証とサポート** | 実ハードウェアでの統合テスト、監視と自己修復、利用記録、フィードバックチャネル | [celestia-integration](https://github.com/celestia-island/celestia-integration)、[malkuth](https://github.com/celestia-island/malkuth)、[plana](https://github.com/celestia-island/plana)（利用記録） |
+| 4 | **モデルデプロイ** | モデルランタイムを選び、ノードにデプロイし、チャットバックエンドにバインドし、利用量を計測する | arona（パネル + バックエンド）、entelecheia（エージェントランタイム）、[plana](https://github.com/celestia-island/plana)（計測と価格設定） |
+| 5 | **チャットとエージェント** | モデルと対話し、マルチエージェントコラボレーションを実行し、会話を保持し、メモリを管理する | shittim-chest（UI とチャット）、entelecheia（エージェントオーケストレーション）、[noa](https://github.com/celestia-island/noa)（AI ネイティブバージョン管理） |
+| 6 | **産業制御** | 遠隔運用とプロトコルブローカリング: Modbus、S7comm、OPC UA。テレメトリと書き込みゲート | evernight（プロトコルブローカー）、[aoba](https://github.com/celestia-island/aoba)（Modbus とデータソース CLI） |
+| 7 | **検証とサポート** | 実ハードウェアでの統合テスト、監視と自己修復、利用記録、フィードバックチャネル | celestia-integration、[malkuth](https://github.com/celestia-island/malkuth)、[plana](https://github.com/celestia-island/plana)（利用記録） |
 
 ## ループの振る舞い
 
-- **すべてのステップがテスト可能。** 各区間には
-  [celestia-integration](https://github.com/celestia-island/celestia-integration)
-  に定義された受け入れテストがあります。ループ全体が実ノードで成功する
+- **すべてのステップがテスト可能。** 各区間には celestia-integration に
+  定義された受け入れテストがあります。ループ全体が実ノードで成功する
   まで、リリースはグリーンになりません。
 - **すべてのステップが観測可能。** 監視、ヘルスエンドポイント、利用記録
   により、各区間の状態は想定ではなく可視化されます。

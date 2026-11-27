@@ -1,120 +1,48 @@
-# Arona — Model Gateway, Memory and Cluster
+# Arona — Model Gateway and Deployment Panel
 
-Arona is the platform control plane: model gateway, self-deployment
-runtime manager and web dashboard. The problem it solves is turning "a model
-downloaded to some machine" into something the whole platform can route,
-meter and remember. This guide is organized by capability: model routing,
-long-term memory, and multi-node clusters.
+Arona is where models become something the platform can use: an
+OpenAI-compatible gateway in front of your own hardware, plus the console that
+manages it. It answers one question — how does a model go from "downloaded
+somewhere" to "available to everyone on the platform, metered, and routable".
 
-## Architecture at a glance
+## What it does
 
 ```mermaid
-flowchart TD
-    C["shittim-chest / any OpenAI client"]
-    subgraph G["Arona gateway （node-2:8420）"]
-        N0["Router: aliases → least-count load balancing across backends"]
-        N1["Memory Gateway: recall inject → chat → writeback （episodes）"]
-        N2["Agent control plane （/ws/agent）"]
-    end
-    C -->|"/v1/chat/completions （Bearer API key）"| G
-    N2 --> T["arona-agent on GPU nodes"]
-    G --> B["Backends: ollama · external （OpenAI-compatible） · agent-deployed engines"]
+flowchart LR
+    C["Your client"] -->|"OpenAI-compatible /v1"| G["Model gateway"]
+    P["Management panel"] --> G
+    G --> R["Routing with session affinity"]
+    R --> B1["A runtime on a node"]
+    R --> B2["Any OpenAI-compatible backend"]
+    G --> M["Metering and quotas"]
 ```
 
-All management traffic (dashboard, agents, memory) runs over WebSocket with
-JSON-RPC 2.0 messages; the only REST surface is the OpenAI-compatible
-`/v1/*` endpoints.
+- **Gateway** — serves the OpenAI-compatible `/v1/*` endpoints, so any
+  OpenAI-compatible client can talk to models you host yourself.
+- **Deployment** — downloads model weights onto GPU nodes, starts the runtime
+  there, and registers the result as a routable backend. Stopping the
+  deployment unregisters it again.
+- **Routing** — backends are registered as a local runtime or as any
+  OpenAI-compatible service, health-probed, and routed to with session
+  affinity. A backend that has not passed its first health probe is refused
+  rather than tried.
+- **Identity and metering** — API keys authenticate `/v1/*`; every call is
+  recorded per key with tokens, model, backend and cost, and tiers enforce
+  quotas.
 
-## 1. Models
+## How you use it
 
-### Register a backend
+Most people meet Arona through the panel: create an API key, point a model at a
+node, watch health and usage. Chat itself lives elsewhere — the workbench talks
+to Arona over its RPC surface, and Arona ships no chat UI of its own.
 
-Backends are registered as `ollama` or `external` (any OpenAI-compatible
-server — vLLM, TGI, LMDeploy, TileRT's router, …):
+The exact API surface, deployment recipes and configuration reference belong
+to the product; this hub does not duplicate them.
 
-```bash
-POST /api/admin/backends        # Bearer ADMIN_TOKEN
-  {"type": "ollama", "name": "node3-ollama", "url": "http://host:11434"}
-  {"type": "external", "name": "my-vllm", "url": "http://host:8000",
-   "api_key": "...", "models": ["qwen2.5-72b"]}
-```
+> Early development. Not yet ready for public use.
 
-Registered backends persist across restarts (`backend_configs` table) and are
-health-probed continuously: external backends are fail-closed until their
-first successful `/v1/models` probe, and their model list is refreshed
-dynamically.
+## Where to go deeper
 
-### Self-deploy a model on a node
-
-The `arona-agent` binary runs on GPU machines and connects back to the panel.
-Deploy a model from the dashboard **Agents** page (or via `agents.deploy` with
-an empty `agent_id` to auto-target the least-loaded node). The agent downloads
-the model (HuggingFace or Ollama registry), starts the engine (llama.cpp /
-vLLM / Ollama), and reports the engine endpoint — the panel automatically
-registers it as a routable `agent-{model}` backend and removes it on stop.
-
-Engine bind address: set `ARONA_AGENT_BIND_ADDR=0.0.0.0` on nodes that must
-serve traffic to the panel. Note: engine ports are unauthenticated — deploy
-only on trusted networks.
-
-### Conversation affinity
-
-Conversations are pinned to one backend (session affinity), which lets
-runtime KV caches be reused. If a pinned backend goes unhealthy, the router
-falls back and re-pins.
-
-## 2. Long-term memory
-
-Arona is a **memory gateway**: it does not train models — it orchestrates a
-memory service (entelecheia's PhiLia agent) around your existing model.
-
-### Enable
-
-```bash
-ARONA_MEMORY_URL=ws://<scepter-host>:8424/ws
-ARONA_MEMORY_TOKEN=<scepter connection token>
-ARONA_MEMORY_WRITEBACK=1        # default on; 0 disables writeback
-```
-
-### What happens per chat
-
-1. **Recall** — the last user message is embedded and queried against the
-   memory service; relevant memories are injected as a
-   `## Relevant Long-Term Memories` system section (idempotent).
-2. **Chat** — the assembled context is routed to the model.
-3. **Writeback** — the completed turn is extracted heuristically
-   (`User: … / Assistant: …`, zero LLM calls) and stored as an episode in the
-   memory graph (pgvector-backed, survives restarts).
-4. **State** — every response reports `memory: enabled | disabled | offline`;
-   the REST surface adds an `X-Arona-Memory` header. Failures never block the
-   chat; `offline` means the memory service is unreachable and is always
-   visible in the UI.
-
-Per-call override: `chat.send` accepts `memory: true|false`.
-
-### Manage
-
-The dashboard **Memory** page shows recall/writeback/delete activity and lets
-you delete stored nodes. Sessions persist server-side: pass `conversation_id`
-to `chat.send` and the server assembles history instead of the client.
-
-## 3. Operations
-
-- **Auth**: registration locks after the first admin bootstrap
-  (`ARONA_REGISTRATION_OPEN=1` re-opens). Admin endpoints require
-  `ARONA_ADMIN_TOKEN`; they fail closed without it.
-- **Metering**: usage and cost are recorded per API key (`usage.list`,
-  billing tiers with quota and rate limits).
-- **Health**: `/api/health` and `/v1/health` report version and build hash.
-
-## Env reference
-
-| Variable | Purpose |
-|---|---|
-| `DATABASE_URL` | Postgres (required) |
-| `JWT_SECRET` | Token signing (required outside mock mode) |
-| `ARONA_HOST` / `ARONA_PORT` | Bind address (default `0.0.0.0:8420`) |
-| `ARONA_ADMIN_TOKEN` | Bearer token for `/api/admin/*` |
-| `ARONA_REGISTRATION_OPEN` | Re-open self-registration |
-| `ARONA_MEMORY_URL` / `ARONA_MEMORY_TOKEN` / `ARONA_MEMORY_WRITEBACK` | Memory gateway |
-| `ARONA_AGENT_NAME` / `ARONA_PANEL_URL` / `ARONA_AGENT_BIND_ADDR` | Agent node |
+- [Shittim Chest](./chest.md) — the surface that consumes Arona.
+- [Entelecheia](./entelecheia.md) — the agent platform behind chat.
+- [Quickstart](../getting-started/quickstart.md) — deploy your first model.

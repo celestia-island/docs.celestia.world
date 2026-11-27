@@ -1,84 +1,99 @@
 # خريطة المشاريع
 
-الجرد الكامل لمستودعات celestia-island، مجمعة حسب الطبقة. المستودعات الموسومة
-بموقع توثيق تحمل وثائق *كيف* الخاصة بها على `<name>.docs.celestia.world`؛ وكل
-ما عداها موثق في مستودعها.
+جرد مستودعات منصة celestia-island ومنتجاتها، مجمَّعًا حسب الطبقة. الاسم الموصول
+رابطًا مستودع عام يمكنك قراءته اليوم؛ والاسم غير الموصول رابطًا منتجٌ يُشحن مع
+المنصة ولم يصبح مصدره عامًّا بعد. والمستودعات المعلَّمة بموقع توثيق تحمل توثيق
+*كيف* الخاص بها؛ وكل ما عداها موثَّق داخل المستودع نفسه، وهو ما يتطلّب صلاحية الوصول إليه.
 
 ## الطبقة 0 — المصادقة
 
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
-| [kirino](https://github.com/celestia-island/kirino) | مصادقة الثقة الصفرية وRBAC: جلسات JWT، تجزئة Argon2id، تقييد معدل تسجيل الدخول، محرك الأذونات | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
+| [kirino](https://github.com/celestia-island/kirino) | مصادقة وتفويض الثقة الصفرية: الجلسات، والأذونات، وتقييد المعدل | [kirino.docs.celestia.world](https://kirino.docs.celestia.world) |
 
 ## الطبقة 1 — المنصة
 
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
-| [plana](https://github.com/celestia-island/plana) | أنواع مشتركة، عميل وخادم JSON-RPC، جلسات SSE، قواطع دائرة، قياس LLM وتسعيره، صدفة لوحة الإدارة | المستودع |
-| [provider-registry](https://github.com/celestia-island/provider-registry) | سجل النماذج والمزودين (تنسيق TOML لنقطة الدخول) | المستودع |
+| [plana](https://github.com/celestia-island/plana) | أنواع البروتوكول المشتركة، والنقل، والقياس، والمرافق التي تستهلكها كل خدمة | المستودع |
+| [provider-registry](https://github.com/celestia-island/provider-registry) | كتالوج النماذج والمزوّدين المشترك بين المنتجات | المستودع |
 
 ## الطبقة 2 — الواجهة
 
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
-| [hikari](https://github.com/celestia-island/hikari) | مكتبة مكونات واجهة (Vue/TS + Rust) تشترك فيها كل واجهات الويب | المستودع |
+| [hikari](https://github.com/celestia-island/hikari) | مكتبة مكونات الواجهة التي تشترك فيها كل واجهات الويب | المستودع |
 
 ## الطبقة 3 — الخدمات
 
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
-| [arona](https://github.com/celestia-island/arona) | لوحة إدارة API السحابية: الحسابات، مفاتيح API، نشر النماذج، الخلفيات، سجلات الاستخدام | المستودع |
-| [shittim-chest](https://github.com/celestia-island/shittim-chest) | محادثة سطح المكتب/الويب والصدفة | الوثائق (في المستودع) |
-| [entelecheia](https://github.com/celestia-island/entelecheia) | منصة التعاون متعدد الوكلاء: نواة دقيقة exec-only، خادم تنسيق scepter، خط تنفيذ PTC | الوثائق (في المستودع) |
-| [evernight](https://github.com/celestia-island/evernight) | وسيط البروتوكولات الصناعية: Modbus وS7comm وOPC UA؛ العمليات عن بعد، القياسات عن بعد، بوابات الكتابة | الوثائق (في المستودع) |
-| [malkuth](https://github.com/celestia-island/malkuth) | مجموعة أدوات الإشراف على الخدمات: تحديثات متدحرجة، فحوصات صحة، وكيل عكسي، استرداد من حلقات الانهيار | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
-| [lagrange](https://github.com/celestia-island/lagrange) | محرك توثيق Markdown الذي يشغل هذا الموقع وكل مواقع توثيق المشاريع | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| arona | بوابة النماذج ولوحة النشر: المفاتيح، والخلفيات، والتوجيه، والاستخدام | [Arona](../platforms/arona.md) |
+| shittim-chest | المحادثة واللوحات والتكاملات — سطح منصة العمل | [Shittim Chest](../platforms/chest.md) |
+| entelecheia | منصة الوكلاء: الوكلاء، والذاكرة طويلة الأمد، والبحث الدلالي، والتكامل الصناعي | [Entelecheia](../platforms/entelecheia.md) |
+| evernight | وسيط البروتوكولات الصناعية: بروتوكولات الميدان، والإنذارات، والتسجيل، والاستدلال على الطرفية | [Evernight](../platforms/evernight.md) |
+| [malkuth](https://github.com/celestia-island/malkuth) | الإشراف على الخدمات: التحديثات المتدرجة، وفحوص الصحة، والوكيل العكسي، والتعافي من الأعطال | [malkuth.docs.celestia.world](https://malkuth.docs.celestia.world) |
+| [lagrange](https://github.com/celestia-island/lagrange) | محرك التوثيق وراء هذا الموقع ووراء موقع توثيق كل مشروع | [lagrange.docs.celestia.world](https://lagrange.docs.celestia.world) |
+| celestia-erp | الأنظمة الإدارية الخلفية للأعمال: المؤسسات، والفوترة، والفواتير | — |
+| electrode_recon | محرك حسابي لبنية الإلكترود الدقيقة — أول نسخة خارجية على نسيج المحرك | — |
 
 ## الأدوات والمكتبات
 
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
-| [noa](https://github.com/celestia-island/noa) | تحكم بالإصدارات موزع أصيل للذكاء الاصطناعي: عزل مساحات عمل لكل وكيل، سجلات JSONL ملحقة فقط، تاريخ لقطات | noa |
-| [seia](https://github.com/celestia-island/seia) | مكتبة بحث ويب متعددة المحركات وCLI | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
-| [ichika](https://github.com/celestia-island/ichika) | ماكروات خطوط أنابيب بمجمع خيوط (أنابيب رسائل مبنية على flume) | ichika |
-| [yuuka](https://github.com/celestia-island/yuuka) | ماكرو إجرائي لتوليد هياكل متداخلة معقدة من ماكرو بسيط | yuuka |
-| [aoba](https://github.com/celestia-island/aoba) | واجهة سطر أوامر Modbus ومصادر البيانات | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
-| [kou](https://github.com/celestia-island/kou) | محرك محطة افتراضية مستقل: إدارة PTY، VT100/ANSI | المستودع |
-| [hifumi](https://github.com/celestia-island/hifumi) | مكتبة تسلسل لترحيل البيانات بين الإصدارات | المستودع |
-| [aris](https://github.com/celestia-island/aris) | محرك متصفح مشتق من servo، قابل للتضمين كمكتبة (WebGL للتوائم الرقمية) | المستودع |
-| [shirabe](https://github.com/celestia-island/shirabe) | مكتبة أتمتة وتصحيح متصفح خفيفة أصلية في Rust | المستودع |
-| [tairitsu](https://github.com/celestia-island/tairitsu) | إطار عمل كامل الحزمة يعمل بنموذج مكونات WASM | المستودع |
-| [akivili](https://github.com/celestia-island/akivili) | نسيج إضافات وSDK: سجل الإضافات، توسط المضيف، guard، وخط تنفيذ TypeScript/WASM | المستودع |
-| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | عرض Markdown لواجهات ratatui الطرفية | المستودع |
-| [arcaea](https://github.com/celestia-island/arcaea) | مكتبة Rust لبروتوكول شخصية celestia | المستودع |
-| [scriptum](https://github.com/celestia-island/scriptum) | واجهة طرفية (TUI) لـ entelecheia: «شاشة غبية» تتحدث إلى خادم scepter | المستودع |
+| [noa](https://github.com/celestia-island/noa) | تحكم بالإصدارات موزَّع وأصيل للوكلاء مع مساحات عمل معزولة | [المستودع](https://github.com/celestia-island/noa) |
+| [seia](https://github.com/celestia-island/seia) | بحث على الويب متعدد المحركات | [seia.docs.celestia.world](https://seia.docs.celestia.world) |
+| [aoba](https://github.com/celestia-island/aoba) | واجهة سطرية متعددة البروتوكولات للتنقيح والمحاكاة (Modbus RTU وغيره) | [aoba.docs.celestia.world](https://aoba.docs.celestia.world) |
+| [ichika](https://github.com/celestia-island/ichika) | خطوط أنابيب تجمّعات الخيوط فوق أنابيب الرسائل | المستودع |
+| [yuuka](https://github.com/celestia-island/yuuka) | ماكروهات للبُنى المتداخلة المركّبة ودمج/ترقيع JSON | المستودع |
+| [kou](https://github.com/celestia-island/kou) | محرك طرفية افتراضية: PTY، وVT100/ANSI، ورسوميات داخلية | المستودع |
+| [hifumi](https://github.com/celestia-island/hifumi) | تسلسل لترحيل البيانات بين الإصدارات | المستودع |
+| [lacrymira](https://github.com/celestia-island/lacrymira) | وصول مُنمَّط إلى البيانات لـ SQL وKV خلف سطح أوامر واحد | المستودع |
+| [himari](https://github.com/celestia-island/himari) | تمثيل وسيط للصيغ ذات الأبعاد | المستودع |
+| [kotama](https://github.com/celestia-island/kotama) | عدة أدوات الهندسة العكسية: التشريح، وفك الترجمة، والإحالات المتبادلة | المستودع |
+| [ayane](https://github.com/celestia-island/ayane) | خدمة بريد: مستوى التحكم، والبريد على الويب، والحماية | المستودع |
+| [aris](https://github.com/celestia-island/aris) | محرك متصفح مكتوب بـ Rust خالص مشتق من servo، قابل للتضمين كمكتبة | المستودع |
+| [shirabe](https://github.com/celestia-island/shirabe) | أتمتة متصفح بلا واجهة وتنقيحها | المستودع |
+| [tairitsu](https://github.com/celestia-island/tairitsu) | حزمة كاملة على نموذج مكوّنات WASM | المستودع |
+| [akivili](https://github.com/celestia-island/akivili) | مضيف إضافات وحزمة تطوير لامتدادات الوكلاء | المستودع |
+| [celestia-plugin](https://github.com/celestia-island/celestia-plugin) | حزمة تطوير إضافات ومحركات بـ Python | المستودع |
+| [shun](https://github.com/celestia-island/shun) | المثبِّتات وأدوات الوميض وتسليم حمولات الوضع المحمول | المستودع |
+| [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown) | عرض Markdown داخل واجهات الطرفية | المستودع |
+| arcaea | مكتبة بروتوكول الشخصيات | — |
+| scriptum | واجهة طرفية لمنصة الوكلاء | — |
+| official-plugins | حزم الإضافات التابعة للجهة الأولى | — |
 
-## الحافة والعتاد
+## الطرفية والعتاد
 
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
-| [kei](https://github.com/celestia-island/kei) | نواة نظام Rust لأجهزة ARM64/RISC-V الطرفية؛ نواة زمن حقيقي حتمية للأفق الطويل | المستودع |
-| [hare](https://github.com/celestia-island/hare) | حِزم جسر no_std للحافة الصناعية: بروتوكول wire، بيان العتاد، محور البروتوكولات (Modbus/MC/S7)، سمات HAL، ANSI/VT | المستودع |
+| [kei](https://github.com/celestia-island/kei) | نواة Rust لبوابات الحوسبة الطرفية على ARM64 وRISC-V | المستودع |
+| [hare](https://github.com/celestia-island/hare) | مكتبة جسر `no_std` للعقد الصناعية المدمجة | المستودع |
+| evernight-appliance | توزيعة الجهاز: برنامج الإقلاع الثابت، وأداة الوميض، وعقد السائق | — |
 
 ## البنية التحتية والأدوات
 
 | المشروع | الدور | التوثيق |
 | --- | --- | --- |
-| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | سلسلة أدوات تطوير مشتركة: وصفات justfile، تسجيل التصحيحات، فحص الأكواد | المستودع |
-| [celestia-integration](https://github.com/celestia-island/celestia-integration) | مجموعات اختبار تكامل على عتاد حقيقي للحلقة الكاملة | المستودع |
-| [sysl](https://github.com/celestia-island/sysl) | ترخيص المصدر التركيبي (SySL): ترخيص مصمم للكود المولد بالذكاء الاصطناعي | المستودع |
+| [celestia-devtools](https://github.com/celestia-island/celestia-devtools) | سلسلة التطوير المشتركة: وصفات البناء، والفحص، وبوابات الإصدار | المستودع |
+| [cherino](https://github.com/celestia-island/cherino) | تجريد حاويات معزولة لتنفيذ الوكلاء | المستودع |
+| [celestia-artifacts](https://github.com/celestia-island/celestia-artifacts) | استضافة عامة للملفات التنفيذية والصور للمشاريع | المستودع |
+| celestia-integration | اختبارات تكامل عابرة للمستودعات تشمل الحلقة كلها | — |
+| fuuka | مستوى تنفيذ التكامل المستمر المُستضاف ذاتيًا | — |
+| [sysl](https://github.com/celestia-island/sysl) | رخصة المصدر التركيبي التي يستخدمها معظم هذا الكود | المستودع |
 
 ## الحضور على الويب
 
 | الموقع | الدور | التوثيق |
 | --- | --- | --- |
 | [celestia-island.github.io](https://celestia-island.github.io) | حضور المنظمة | المستودع |
-| [docs.celestia.world](https://docs.celestia.world) | هذا الموقع — الفلسفة، الخريطة، البدء | المستودع |
+| [docs.celestia.world](https://docs.celestia.world) | هذا الموقع — الفلسفة، والخريطة، والبدء | المستودع |
 | [e.celestia.world](https://e.celestia.world) | صفحة الهبوط العامة | المستودع |
-| [dev.celestia.world](https://dev.celestia.world) | اللوحة وبوابة المطورين (مدخل المنتج) | — |
+| [dev.celestia.world](https://dev.celestia.world) | اللوحة ولوحة المطوّر (بالدعوة خلال النسخة التجريبية) | المستودع |
+| [celestia.ac.cn](https://celestia.ac.cn) | موقع الشركة وخدمات المؤسسات | المستودع |
 
 ## لمزيد من التفاصيل
 
 - [البنية الطبقية](../philosophy/layered-architecture.md) — لماذا توجد هذه الطبقات.
-- [الحلقة المغلقة](../philosophy/closed-loop.md) — كيف تتعاون المشاريع على طول الحلقة.
-- [المواقع والمسؤوليات](./sites.md) — من يوثق ماذا، وأين.
+- [الحلقة المغلقة](../philosophy/closed-loop.md) — كيف تتعاون المشاريع على امتداد الحلقة.
+- [المواقع والمسؤوليات](./sites.md) — من يوثّق ماذا، وأين.

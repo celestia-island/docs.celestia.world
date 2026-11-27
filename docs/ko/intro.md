@@ -1,49 +1,68 @@
-# celestia-island 문서에 오신 것을 환영합니다
+# celestia-island에 오신 것을 환영합니다
 
-**celestia-island**는 산업용 AI 제어를 위한 프로젝트 모음입니다: 다중 에이전트
-협업, 원격 운영, 안전 필수(safety-critical) 자동화가 포함됩니다. 이 사이트는
-그 *이유* — 철학, 생태계 지도, 진입점 — 를 담고 있습니다. *방법* 은 각
-프로젝트별 문서 사이트에 있으며 여기에서 연결됩니다.
+**celestia-island**는 산업 AI 제어를 위한 프로젝트 모음입니다: 다중 에이전트
+협업, 원격 운영, 안전 필수 자동화. 이 사이트는 그 *왜*를 다룹니다. *어떻게*는
+프로젝트별 문서에 있습니다.
 
-## 세 가지 질문에 대한 답변
+## 프로젝트
 
-| 질문 | 위치 | 찾을 수 있는 내용 |
-| --- | --- | --- |
-| **왜 존재하나요?** | [철학](./philosophy/why.md) | 우리가 해결하려는 문제, 폐쇄 루프, 안전 원칙, 장기적 지평 |
-| **무엇이 있나요?** | [생태계](./ecosystem/projects.md) | 모든 프로젝트, 루프 안에서의 역할, 문서가 있는 곳 |
-| **어떻게 시작하나요?** | [시작하기](./getting-started/quickstart.md) | 계정부터 동작하는 채팅 에이전트와 산업 제어까지 30분 경로 |
+링크가 있는 이름은 오늘 바로 읽을 수 있는 공개 저장소입니다. 링크가 없는
+이름은 플랫폼과 함께 배포되는 제품으로, 아직 소스가 공개되지 않았습니다.
+자세한 표는 [프로젝트 지도](./ecosystem/projects.md)에 있습니다.
 
-## 한 문단 요약
+**플랫폼** — [kirino](https://github.com/celestia-island/kirino) (제로 트러스트
+인증), [plana](https://github.com/celestia-island/plana) (프로토콜 및 플랫폼
+기반 기능), [hikari](https://github.com/celestia-island/hikari) (UI 컴포넌트),
+[provider-registry](https://github.com/celestia-island/provider-registry) (모델
+카탈로그), arona (모델 배포 패널), entelecheia (에이전트 오케스트레이션),
+shittim-chest (채팅 및 워크벤치), scriptum (터미널 클라이언트).
 
-celestia-island는 AI 기반 산업 제어를 위한 **폐쇄 루프**를 발견에서 검증까지
-구축합니다: 발견 → 설치 → 인증 → 모델 배포 → 채팅 및 에이전트 실행 → 산업
-장비 제어 → 모든 것 검증. 루프는 작고 엄격하게 계층화된 조각들로
-조립됩니다: 인증 프리미티브([kirino](https://github.com/celestia-island/kirino)),
-플랫폼 기반 시설([plana](https://github.com/celestia-island/plana)), UI
-컴포넌트([hikari](https://github.com/celestia-island/hikari)), 그리고
-비즈니스 로직만 구현하는 서비스들([arona](https://github.com/celestia-island/arona),
-[shittim-chest](https://github.com/celestia-island/shittim-chest),
-[entelecheia](https://github.com/celestia-island/entelecheia),
-[evernight](https://github.com/celestia-island/evernight))로 구성됩니다.
-어떤 것도 두 번 구현되지 않습니다: 일반 기능은 상류에서 한 번 구축되고,
-모든 서비스가 하류에서 이를 소비합니다.
+**산업 및 엣지** — evernight (프로토콜 브로커),
+[aoba](https://github.com/celestia-island/aoba) (Modbus CLI),
+[hare](https://github.com/celestia-island/hare) (`no_std` 브리지),
+[kei](https://github.com/celestia-island/kei) (엣지 커널),
+[shun](https://github.com/celestia-island/shun) (설치 프로그램 및 플래셔),
+evernight-appliance(어플라이언스 배포판), electrode_recon (연산 엔진).
 
-이 모든 것의 이유는 단순한 관찰에서 비롯됩니다: 달에서는 왕복 통신이 2.6초,
-화성에서는 6분에서 44분이 걸립니다. 그곳의 로봇은 지구의 인간을 기다릴 수
-없습니다 — 로컬에서 자율적으로 동작해야 합니다. 우리가 오늘 산업 제어를 위해
-구축하는 의사결정 계층, 세계 모델, 안전 게이트는 내일의 자율성이 필요로 할
-것과 같은 형태입니다.
+**라이브러리 및 도구** — [noa](https://github.com/celestia-island/noa)
+(에이전트 네이티브 버전 관리), [seia](https://github.com/celestia-island/seia)
+(웹 검색), [aris](https://github.com/celestia-island/aris) (브라우저 엔진),
+[shirabe](https://github.com/celestia-island/shirabe) (브라우저 자동화),
+[kou](https://github.com/celestia-island/kou) (가상 터미널),
+[ichika](https://github.com/celestia-island/ichika) (스레드 파이프라인),
+[yuuka](https://github.com/celestia-island/yuuka) (구조 매크로),
+[hifumi](https://github.com/celestia-island/hifumi) (버전별 직렬화),
+[lacrymira](https://github.com/celestia-island/lacrymira) (타입 지정 데이터 접근),
+[himari](https://github.com/celestia-island/himari) (수식 IR),
+[kotama](https://github.com/celestia-island/kotama) (리버스 엔지니어링),
+[ayane](https://github.com/celestia-island/ayane) (메일 서비스),
+[tairitsu](https://github.com/celestia-island/tairitsu) (컴포넌트 모델
+풀스택), [akivili](https://github.com/celestia-island/akivili) (플러그인 호스트),
+[celestia-plugin](https://github.com/celestia-island/celestia-plugin) (Python
+SDK), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
+(터미널 속 Markdown), arcaea (페르소나 프로토콜), official-plugins (플러그인
+패키지).
 
-## 모든 것이 있는 곳
+**인프라** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
+(빌드 및 린트 툴체인), [cherino](https://github.com/celestia-island/cherino)
+(에이전트 컨테이너), [malkuth](https://github.com/celestia-island/malkuth)
+(서비스 감독), [lagrange](https://github.com/celestia-island/lagrange)
+(이 사이트를 빌드하는 문서 엔진),
+[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+(릴리스 아티팩트), [sysl](https://github.com/celestia-island/sysl) (라이선스),
+celestia-integration (통합 테스트), fuuka (자체 호스팅 CI), celestia-erp
+(비즈니스 백오피스).
 
-- **프로젝트별 문서** — 각 저장소에서 빌드된 `<name>.docs.celestia.world`.
-  전체 목록은 [사이트 및 소유권](./ecosystem/sites.md)에서 확인하세요.
-- **조직 프레즌스** — [celestia-island GitHub 조직](https://github.com/celestia-island).
-- **제품 입구(베타 기간 중 WIP)** — [dev.celestia.world](https://dev.celestia.world)
-  (패널: 계정, 채팅, 에이전트), 익명
-  [tour](https://demo.dev.celestia.world/tour) 페이스, 그리고 회사 사이트
-  [celestia.ac.cn](https://celestia.ac.cn); 모델 플랫폼 자체 관리 패널은 베타가
-  끝날 때까지 배포 내부에 남습니다.
+**사이트** — [celestia-island.github.io](https://celestia-island.github.io),
+[e.celestia.world](https://e.celestia.world),
+[dev.celestia.world](https://dev.celestia.world) (패널, 베타 기간 중 초대제),
+[celestia.ac.cn](https://celestia.ac.cn), 그리고 이 허브.
 
-언어 전환기(오른쪽 하단)를 사용하여 이 사이트를 다른 언어로 읽을 수
-있습니다. 콘텐츠는 영어로 작성되며, 번역은 동일한 구조를 따릅니다.
+## 다음에 볼 곳
+
+- [왜 celestia-island인가](./philosophy/why.md) — 문제, 폐쇄 루프, 안전 원칙.
+- [폐쇄 루프](./philosophy/closed-loop.md) — 발견 → 설치 → 인증 → 배포 → 채팅과 에이전트 → 산업 제어 → 검증.
+- [빠른 시작](./getting-started/quickstart.md) — 그 경로를 30분에 걷는 길.
+
+오른쪽 아래의 언어 전환기로 이 사이트를 다른 언어로 읽을 수 있습니다.
+콘텐츠는 영어로 작성되며, 번역은 동일한 구조를 따릅니다.

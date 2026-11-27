@@ -10,7 +10,7 @@
 | サイト | 所有 | コンテンツ |
 | --- | --- | --- |
 | [docs.celestia.world](https://docs.celestia.world) | エコシステム | 哲学、エコシステムマップ、始め方、ガバナンス（ライセンス、CLA、CoC、セキュリティ、コントリビュート） |
-| `<name>.docs.celestia.world` | 各プロジェクト | ガイド、アーキテクチャ、設計、リファレンス —— 各プロジェクトのリポジトリから構築 |
+| `<name>.docs.celestia.world` | ドキュメントサイトを公開している各プロジェクト | ガイド、アーキテクチャ、設計、リファレンス —— 各プロジェクトのリポジトリから構築 |
 | [celestia-island.github.io](https://celestia-island.github.io) | 組織 | プレゼンス、リンク、ブランドアセット |
 | [e.celestia.world](https://e.celestia.world) | 公開の顔 | ランディングページ、価格、ブログ、コールトゥアクション |
 | [dev.celestia.world](https://dev.celestia.world) | パネル | アカウント・チャット・エージェント・運用コンソール（ベータは招待制） |

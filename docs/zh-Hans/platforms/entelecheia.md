@@ -1,67 +1,34 @@
-# Entelecheia — Agent 平台与记忆
+# Entelecheia — 智能体平台与记忆
 
-Entelecheia 是 agent 平台：scepter 运行时编排专门化 agent（"souls"）、维护长期记忆（PhiLia）、提供语义搜索，并承载工业集成层。Arona 与 Chest 的能力背后都是它。本文按功能模块展开：agents、记忆、搜索、知识库与连接。
+Entelecheia 是智能体平台：它运行智能体、保管它们的长期记忆、回答语义搜索，并承载工业集成层。Arona 与 Shittim Chest 都是它的消费者——能带着记忆完成一段对话，或用智能体驱动一块面板，能力都来自这里。
 
-## 架构一览
+## 它做什么
 
 ```mermaid
-flowchart TD
-    C["客户端：Arona（网关）· Shittim Chest（聊天/面板）· TUI/CLI"]
-    subgraph G["scepter 运行时（node-3:8424）"]
-        N0["Agent manager：L1 souls（PhiLia、Skopeo、Hubris、Kalos、…）"]
-        N1["Skill chains：LLM + 工具调用的管线，带 RAG 预取"]
-        N2["PhiLia：长期记忆（向量 + 图，pgvector 持久化）"]
-        N3["ApoRia：知识库 + workspace 索引（语义搜索）"]
-        N4["OreXis：工具执行的策略/安全门"]
-        N5["Reflection：教训库重新注入提示词"]
-    end
-    C -->|"WebSocket 上的 JSON-RPC 2.0（token 或 API key）"| G
+flowchart LR
+    C["客户端：工作台、终端"] --> P["智能体平台"]
+    P --> AG["智能体与技能"]
+    P --> ME["长期记忆"]
+    P --> SE["语义搜索"]
+    P --> KB["知识库"]
+    P --> IN["工业集成"]
 ```
 
-## 1. Agents（souls）
+- **智能体** —— 专门化的智能体，各自拥有独立的身份、工具与技能。技能链把模型调用与工具执行组合成管线；在调用运行之前，相关记忆与知识会被检索并注入上下文。
+- **长期记忆** —— 情节、实体与制品作为节点存入记忆图，并镜像到向量索引。召回组合相似度、图遍历与时间衰减，并有周期性任务合并相关节点。记忆熬得过重启。
+- **语义搜索** —— 一份排序列表覆盖两个来源：工作区索引（文档、智能体报告、知识库）与长期记忆。
+- **知识库** —— 创建一个集合、加入文档、订阅智能体；同一搜索界面即可从中检索。
+- **反思** —— 经验教训被保存，并重新注入后续提示词，是与记忆图并行的第二种更轻的持久记忆形态。
+- **工业集成** —— 通往真实设备的写路径经过这一层，策略校验与审批就在此处。
 
-每个 soul 是带独立身份文档、工具（MCP 风格）与技能的专门化 agent。Skill chains 把 LLM 调用与工具执行组合成管线；每次调用前，相关长期记忆与知识库内容被预取并注入 system prompt。
+## 怎么用
 
-安全：工具执行经过 OreXis 策略门；工业写入需要显式审批流。
+客户端凭连接令牌通过平台的 JSON-RPC 接口连接；终端界面与聊天工作台都是这样的客户端。自己运行 entelecheia 是可选的——大多数部署由平台为你托管。
 
-## 2. 长期记忆（PhiLia）
+智能体目录、技能编写与运维参考属于产品本身；本站不重复它们。
 
-PhiLia 是 Arona 记忆网关背后的记忆服务：
+## 深入阅读
 
-- **存储** — episode、entity 与 artifact 作为节点存入记忆图，嵌入后镜像到 pgvector（`philia_chunks`）。
-- **查询** — 语义检索组合向量相似度、图遍历与时间衰减（14 天半衰期）。
-- **整合** — 周期性 consolidate 把相关节点链接合并。
-- **线协议面** — 一等方法 `Sync.MemoryStoreRequest` / `MemoryQueryRequest` / `MemoryDeleteRequest`（RBAC：SystemWrite / SystemRead），另有通用 `Mcp.CallTool` 路由。
-
-嵌入：`OLLAMA_HOST` + `OLLAMA_EMBED_MODEL`（如 `nomic-embed-text`）或远程 API，回退本地 ONNX 模型。
-
-## 3. 语义搜索
-
-`Sync.SearchRequest` 融合两个库为单一排序列表：
-
-- **ApoRia** — workspace 索引、agent 报告与知识库文档（向量 + 关键词 hybrid，RRF 融合）。
-- **PhiLia** — 长期记忆（`philia_memory` source）。
-
-## 4. 知识库
-
-创建知识库、添加文档、订阅 rag subscription——全部 Postgres 持久化。文档嵌入 ApoRia 库，同一搜索面可检索。
-
-## 5. Reflection
-
-经验教训存入教训库（pgvector）并在后续提示词中重新注入——与 PhiLia 并行的第二套轻量持久记忆。
-
-## 6. 连接客户端
-
-- WebSocket `ws://<host>:8424/ws` — upgrade 时 `?token=<connection token>`（或 Bearer）鉴权；随后 `Sync.ConnectHandshake`。
-- HTTP JSON-RPC `POST /api/rpc?token=…` 用于请求/响应。
-- 连接 token：scepter 节点上的 `~/.config/entelecheia/scepter.token`。
-
-## 环境变量参考（节选）
-
-| 变量 | 用途 |
-|---|---|
-| `SERVER_BIND_ADDRESS` | 绑定地址（默认 127.0.0.1；远程客户端需 0.0.0.0:8424） |
-| `DATABASE_URL` | Postgres（config.toml 或 env） |
-| `OLLAMA_HOST` / `OLLAMA_EMBED_MODEL` | 嵌入后端 |
-| `JWT_SECRET` | 持久化认证 token（未设置时每次会话随机） |
-| `connection_token` | scepter 连接 token 文件 |
+- [安全原则](../philosophy/safety.md) —— 为什么模型永不直接触碰世界。
+- [Evernight](./evernight.md) —— 下面那一层，设备真正移动的地方。
+- [Shittim Chest](./chest.md) —— 大多数人接触智能体的界面。

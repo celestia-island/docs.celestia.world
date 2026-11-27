@@ -33,7 +33,7 @@
 
 # Plattformen
 
-- [Arona — Modell-Gateway, Speicher und Cluster](./platforms/arona.md)
+- [Arona — Modell-Gateway und Bereitstellungs-Panel](./platforms/arona.md)
 - [Entelecheia — Agenten-Plattform und Speicher](./platforms/entelecheia.md)
 - [Shittim Chest — Chat, Panels und Integrationen](./platforms/chest.md)
 - [Evernight — Industrieller Protokoll-Broker](./platforms/evernight.md)

@@ -1,41 +1,57 @@
 # Narrativa y horizonte
 
-## La latencia es el destino
+## La forma del problema
 
-Un viaje de ida y vuelta de la señal tarda **2.6 segundos** hasta la Luna y **de 6 a 44 minutos** hasta Marte. Las máquinas tan lejos de la Tierra no pueden esperar instrucciones de un humano. Deben tomar decisiones **localmente, de forma segura y predecible** — con la autoridad para actuar y la disciplina para negarse.
+No estamos construyendo un chatbot con un panel de control atornillado, ni un
+sistema de control con un modelo de lenguaje atornillado. Las dos mitades tienen
+que ser un solo sistema, porque en el momento en que un modelo puede mover
+equipos físicos, cada detalle agradable de un producto de chat se convierte en
+una restricción de un sistema de control: comportamiento determinista, latencia
+acotada, una pista de auditoría y una forma de decir que no.
 
-Ese es el horizonte hacia el que se construye este ecosistema. Todo lo que construimos hoy para el control industrial se elige para que tenga la *misma forma* que necesitará un robot autónomo lunar o marciano:
+El argumento completo está en [Por qué celestia-island](./why.md). Esta página
+es la trayectoria que se deriva de él.
 
-- una **capa de decisión de agentes** que planifica y orquesta
-- un **modelo del mundo** que sabe qué está pasando en este momento
-- una **compuerta de seguridad** que pueda decir no, respaldada por un control en tiempo real que nunca depende de la red
+## Hacia dónde va
 
-La Luna no es una historia de marketing: es la razón por la que existe la estratificación.
+**Más cerca de la máquina.** Hoy el bucle va del navegador de un operador a un
+broker de protocolos y de ahí a un controlador. Cada paso más cerca del hardware
+lleva menos modelo y menos red, hasta terminar en un bucle que se ejecuta
+localmente y no espera a un viaje de ida y vuelta. Ese orden es lo importante:
+las partes que no deben fallar son las que nunca llaman al exterior.
 
-## La hoja de ruta
+**La autonomía local como horizonte.** Ese mismo orden se generaliza allí donde
+un viaje de ida y vuelta es caro — una sede remota, un enlace intermitente, una
+planta cuyo operador no está en la nave. Las máquinas que no pueden esperar a un
+humano deben decidir localmente, de forma segura y predecible: con la autoridad
+para actuar y la disciplina para negarse. Es una dirección a largo plazo, no un
+plan con fechas, y es la razón por la que la capa de decisión, el modelo del
+mundo y la compuerta de seguridad se construyen como cosas separadas en lugar de
+un monolito.
 
-El ecosistema avanza a través de puertas — una fase solo se desbloquea cuando la anterior cumple sus criterios de salida:
+**Reutilizable por construcción.** Sea cual sea el aspecto del próximo
+despliegue, debería ensamblarse a partir de la misma base de activos en lugar de
+reconstruirse: el protocolo de red, el estado del mundo, las compuertas de
+seguridad y la canalización de grabación son activos compartidos. Cualquier
+cosa que empiece uno nuevo debe pasar la revisión de arquitectura. Y ninguna
+línea de producto depende nunca de un núcleo sin publicar: si el núcleo se
+retrasa, los ingresos no.
 
-| Fase | Objetivo | Criterios de salida |
-| --- | --- | --- |
-| **Beta interna** | ahora | Cero problemas de seguridad P0; todo el bucle pasa las pruebas de integración; un usuario nuevo recorre registro → clave → chat en 30 minutos |
-| **Beta pública** | 2026 | Registro abierto; documentación pública, descargas y páginas legales; revisión de seguridad independiente |
-| **Y1 — Líneas industriales** | 2027-08 | Demo de línea de producción real con PLC + MCU: sensado a 100 Hz, bucle cerrado a 10 Hz, paquetes de despliegue, pruebas de aceptación |
-| **Y3 — Instalaciones corpóreas** | 2029-08 | Paquete de instalación corpórea replicable (estado del mundo + capa de políticas + sitio de referencia), fijado a la forma *industrial corpórea* |
-| **Y5 — Aeroespacial** | 2031-08 | Propuesta completa de software/hardware más al menos una prueba en órbita o en vuelo — sin herencia, sin ventas |
-| **Y5+ — Lunar/Marciano** | 2031+ | Narrativa de autonomía, colaboraciones de investigación, white paper |
+## Lo que permanece fijo
 
-## Cuatro tracks comparten una base de activos
+Sea cual sea el horizonte, tres cosas no se mueven:
 
-1. **Track B — Control industrial** ([evernight](https://github.com/celestia-island/evernight) en el escenario principal): canalizaciones de sensores, grabación/reproducción, bucles rápidos, nodos embebidos.
-2. **Track E — Inteligencia corpórea**: un servicio de estado del mundo, una capa de políticas con pequeños modelos locales, visualización de gemelo digital.
-3. **Track K — Núcleo de tiempo real kei**: un kernel determinista con una capa de personalidad ABI Linux — la respuesta a largo plazo para una ejecución acotada y predecible.
-4. **Track S — Aeroespacial**: redundancia modular triple a nivel de sistema, herencia de vuelo, trayectoria de certificación.
-
-Una disciplina mantiene unidos todos los tracks: **el protocolo de red, el estado del mundo, las compuertas de seguridad y la canalización de grabación son activos compartidos.** Cualquier track que empiece uno nuevo debe pasar la revisión de arquitectura. Y las líneas de producto nunca dependen de kei: si kei se retrasa, los ingresos no.
+- **La seguridad antes que la autonomía.** Un sistema autónomo que no puede
+  negarse no es autónomo, está sin vigilancia. Consulta
+  [Principios de seguridad](./safety.md).
+- **El bucle sigue entero.** Cada capacidad es tan real como el bucle cerrado al
+  que pertenece — consulta [El bucle cerrado](./closed-loop.md).
+- **La estructura va primero.** El orden entre docenas de repositorios viene de
+  la estratificación, no de la disciplina del momento — consulta
+  [Arquitectura en capas](./layered-architecture.md).
 
 ## Para profundizar
 
 - [Por qué celestia-island](./why.md) — el planteamiento del problema detrás del horizonte.
 - [Principios de seguridad](./safety.md) — la semántica de tiempo real sobre la que se asienta la narrativa.
-- [Mapa de proyectos](../ecosystem/projects.md) — dónde vive hoy el trabajo de cada track.
+- [Mapa de proyectos](../ecosystem/projects.md) — dónde vive hoy el trabajo.

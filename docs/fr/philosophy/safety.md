@@ -4,14 +4,13 @@ Le contrôle industriel est critique pour la sécurité : une défaillance peut
 déplacer des équipements physiques. La sécurité est donc conçue dans
 l'architecture, pas ajoutée à la fin.
 
-## 1. Le LLM ne touche jamais le monde directement
+## 1. Le modèle ne touche jamais le monde directement
 
-Dans [entelecheia](https://github.com/celestia-island/entelecheia), le modèle ne
-voit qu'une poignée d'outils primitifs (`exec`, `write_to_var`). Tout le travail
-réel se déroule dans un pipeline d'exécution sandboxé où le code des agents
-répartit les tâches sur une large surface d'outils MCP entre les agents. Le
-modèle ne peut pas inventer de comportement ; il ne peut appeler que les
-primitives que la plateforme expose.
+Un modèle est un planificateur, pas un actionneur. Il peut demander qu'un
+travail soit fait ; il ne peut pas l'accomplir. Entre le modèle et
+l'équipement se trouvent un bac à sable, une vérification de politique et — pour
+les actions irréversibles — un humain. Le modèle ne peut pas inventer de
+comportement en dehors des primitives que la plateforme expose.
 
 ## 2. Une profondeur de sécurité multicouche
 
@@ -24,29 +23,31 @@ dans l'ordre :
 4. **Confirmation humaine** — le dernier mot pour les actions irréversibles
 5. **Journal d'audit** — tout est enregistré, rien n'est silencieux
 
-## 3. Criticité mixte : le temps réel ne dépend jamais du LLM
+Aucune couche ne fait confiance à la précédente. En sauter une est un défaut,
+pas un raccourci.
 
-Les systèmes sont répartis par temps de réponse, et **les couches les plus
-rapides ne dépendent jamais d'un modèle en ligne** :
+## 3. Criticité mixte : le temps réel ne dépend jamais du modèle
 
-| Couche | Cadence | S'exécute sur | Dépendance LLM |
-| --- | --- | --- | --- |
-| L3 — Cognition | secondes–minutes | arona, shittim-chest, entelecheia (Linux) | consommateur principal |
-| L2 — Modèle du monde | 10–50 Hz | services de plateforme | optionnelle |
-| L1 — Réactif / périphérie | 10–100 Hz | evernight sur SBC ; petits modèles locaux | aucune |
-| L0 — Contrôle temps réel | 100 Hz–1 kHz | boucle rapide MCU, verrouillages locaux | jamais |
+Le système est réparti par temps de réponse, et **plus une couche est rapide,
+moins elle dépend d'un modèle en ligne** :
 
-Si le LLM passe hors ligne, la plateforme se dégrade gracieusement : soit un
-état sûr, soit la poursuite de l'exécution d'une trajectoire déjà approuvée.
-Des watchdogs matériels ancrent cette sémantique — le contrôle n'attend jamais
-un appel réseau.
+| Couche | Ce qu'elle fait | Dépendance LLM |
+| --- | --- | --- |
+| Cognition | planification, conversation, orchestration | consommateur principal |
+| État du monde | ce qui est vrai maintenant, pas ce qui a été dit | optionnelle |
+| Réactif | réactions locales sur la machine elle-même | aucune |
+| Contrôle temps réel | verrouillages et boucle rapide | jamais |
+
+Si le modèle passe hors ligne, la plateforme se dégrade gracieusement : soit un
+état sûr, soit la poursuite de l'exécution d'une trajectoire déjà approuvée. Le
+contrôle n'attend jamais un appel réseau.
 
 ## 4. Zero trust, échec par fermeture
 
 - L'authentification et l'autorisation viennent de
-  [kirino](https://github.com/celestia-island/kirino) : JWT avec sessions à
-  courte durée, hachage de mots de passe Argon2id, limitation de débit des
-  connexions et moteur RBAC.
+  [kirino](https://github.com/celestia-island/kirino), la couche
+  d'authentification zero-trust de l'écosystème. Rien n'est digne de confiance
+  du seul fait d'être à l'intérieur du réseau.
 - L'inscription est limitée sur invitation par défaut ; le premier utilisateur
   d'un déploiement devient l'administrateur, après quoi l'auto-inscription se
   verrouille.
@@ -67,4 +68,3 @@ ont montré que les défaillances invisibles sont les dangereuses.
 - [La Boucle Fermée](./closed-loop.md) — où se trouvent les portes de sécurité dans le flux.
 - [Architecture en couches](./layered-architecture.md) — les couches que la sécurité traverse.
 - [Documentation de kirino](https://kirino.docs.celestia.world) — le modèle d'authentification en détail.
-- Documentation d'evernight — courtage de protocoles et portes d'écriture.

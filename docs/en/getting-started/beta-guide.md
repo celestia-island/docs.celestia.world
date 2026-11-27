@@ -5,16 +5,13 @@ registration to industrial control. Participation is by invitation only.
 
 ## What the beta covers
 
-1. **Register an account and create an API key** in the
-   [Arona](https://github.com/celestia-island/arona) cloud API admin panel.
-   The panel is internal-only during the beta (`arona:8420` on the deployment
-   host).
+1. **Register an account and create an API key** in the Arona cloud API admin
+   panel. The panel stays internal during the beta.
 2. **Deploy a model** and bind it to a chat backend through the panel.
-3. **Chat and run agents** from the
-   [shittim-chest](https://github.com/celestia-island/shittim-chest) desktop
-   app; agent orchestration is provided by entelecheia's **scepter** runtime.
+3. **Chat and run agents** from the shittim-chest desktop app; agent
+   orchestration is provided by the agent platform behind it.
 4. **Industrial control**: remote operations and protocol brokering run
-   through [evernight](https://github.com/celestia-island/evernight).
+   through evernight.
 
 ## Getting access
 
@@ -25,14 +22,10 @@ registration to industrial control. Participation is by invitation only.
 
 ## Reporting bugs
 
-Report issues on GitHub, one issue per bug, using the issue templates:
-
-| Product | Repository |
-| --- | --- |
-| Chat desktop/web — shittim-chest | [celestia-island/shittim-chest](https://github.com/celestia-island/shittim-chest/issues) |
-| Agent orchestration — entelecheia/scepter | [celestia-island/entelecheia](https://github.com/celestia-island/entelecheia/issues) |
-| Industrial control — evernight | [celestia-island/evernight](https://github.com/celestia-island/evernight/issues) |
-| Admin panel & platform — arona/plana | [celestia-island/arona](https://github.com/celestia-island/arona/issues) |
+Report issues on GitHub, one issue per bug, using the issue templates. The
+bug tracker for each product is the product's repository; if you do not have
+access to a repository, send the report through the channels in
+[Contributing](../meta/CONTRIBUTING.md) instead.
 
 Always include: environment info (OS, product versions), steps to reproduce,
 expected vs. actual behavior, and any relevant logs.
@@ -41,8 +34,8 @@ expected vs. actual behavior, and any relevant logs.
 
 - The Arona panel is **internal-only** and not exposed publicly during the beta.
 - Registration is closed by default; open registration is not yet available.
-- WebRTC device relay and live SCADA telemetry require a running scepter
-  instance; without it the UI falls back to simulated demo data.
+- Live device telemetry needs a running agent platform; without it the UI falls
+  back to simulated demo data.
 - Mobile apps and IDE plugins are not part of this beta.
 - Some documentation languages are partial translations.
 

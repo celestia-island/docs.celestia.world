@@ -8,17 +8,16 @@ capability never gets reimplemented.**
 
 | Layer | Projects | What they provide |
 | --- | --- | --- |
-| **Layer 0 — Auth** | [kirino](https://github.com/celestia-island/kirino) | Zero-trust primitives: JWT signing and refresh, Argon2id password hashing, login rate limiting, RBAC engine, invitation store, sessions |
-| **Layer 1 — Platform** | [plana](https://github.com/celestia-island/plana) | Shared facilities: JSON-RPC 2.0 types and routing, service DTOs, network detection, SSE sessions, circuit breakers, LLM metering and pricing |
-| **Layer 2 — UI** | [hikari](https://github.com/celestia-island/hikari) | UI component library (Vue/TS + Rust) shared by every webUI |
-| **Layer 3 — Services** | [arona](https://github.com/celestia-island/arona), [shittim-chest](https://github.com/celestia-island/shittim-chest), [entelecheia](https://github.com/celestia-island/entelecheia), [evernight](https://github.com/celestia-island/evernight), [malkuth](https://github.com/celestia-island/malkuth), [lagrange](https://github.com/celestia-island/lagrange) | Business logic only. They consume Layers 0–2 and add the behavior that makes each product real |
+| **Layer 0 — Auth** | [kirino](https://github.com/celestia-island/kirino) | Zero-trust identity: authentication, sessions, permissions |
+| **Layer 1 — Platform** | [plana](https://github.com/celestia-island/plana) | Shared protocol types, transport, and the facilities every service needs |
+| **Layer 2 — UI** | [hikari](https://github.com/celestia-island/hikari) | The component library shared by every webUI |
+| **Layer 3 — Services** | arona, shittim-chest, entelecheia, evernight, [malkuth](https://github.com/celestia-island/malkuth), [lagrange](https://github.com/celestia-island/lagrange) | Business logic only. They consume Layers 0–2 and add the behavior that makes each product real |
 
 ## The doctrine
 
 1. **Never implement twice.** Before writing code, ask: does kirino have it?
-   does plana have it? does hikari have it? Example: JSON-RPC types come from
-   plana, JWT from kirino, login rate limiting from kirino, circuit breakers
-   from plana, health DTOs from plana, pricing from plana.
+   does plana have it? does hikari have it? A service that reimplements an
+   upstream capability is a defect, not a feature.
 2. **Generic capability goes upstream.** A feature that two or more services
    will reuse is built into kirino, plana, or hikari first, then consumed.
 3. **No reverse dependencies.** Services depend on kirino/plana/hikari; plana

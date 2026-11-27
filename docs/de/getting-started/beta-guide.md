@@ -6,18 +6,14 @@ nur auf Einladung.
 
 ## Was die Beta abdeckt
 
-1. **Ein Konto registrieren und einen API key erstellen** im
-   [Arona](https://github.com/celestia-island/arona) Cloud-API-Admin-Panel.
-   Das Panel ist während der Beta nur intern erreichbar (`arona:8420` auf dem
-   Bereitstellungs-Host).
+1. **Ein Konto registrieren und einen API key erstellen** im Arona
+   Cloud-API-Admin-Panel. Das Panel bleibt während der Beta intern.
 2. **Ein Modell bereitstellen** und es über das Panel an ein Chat-Backend
    binden.
-3. **Chatten und Agenten ausführen** über die
-   [shittim-chest](https://github.com/celestia-island/shittim-chest)
-   Desktop-App; die Agenten-Orchestrierung übernimmt entelecheias **scepter**-
-   Runtime.
+3. **Chatten und Agenten ausführen** über die shittim-chest Desktop-App; die
+   Agenten-Orchestrierung übernimmt die Agenten-Plattform dahinter.
 4. **Industrielle Steuerung**: Fernoperation und Protokoll-Vermittlung laufen
-   über [evernight](https://github.com/celestia-island/evernight).
+   über evernight.
 
 ## Zugang erhalten
 
@@ -30,14 +26,10 @@ nur auf Einladung.
 
 ## Bugs melden
 
-Melden Sie Probleme auf GitHub, ein Issue pro Bug, mit den Issue-Vorlagen:
-
-| Produkt | Repository |
-| --- | --- |
-| Chat-Desktop/Web — shittim-chest | [celestia-island/shittim-chest](https://github.com/celestia-island/shittim-chest/issues) |
-| Agenten-Orchestrierung — entelecheia/scepter | [celestia-island/entelecheia](https://github.com/celestia-island/entelecheia/issues) |
-| Industrielle Steuerung — evernight | [celestia-island/evernight](https://github.com/celestia-island/evernight/issues) |
-| Admin-Panel & Plattform — arona/plana | [celestia-island/arona](https://github.com/celestia-island/arona/issues) |
+Melden Sie Probleme auf GitHub, ein Issue pro Bug, mit den Issue-Vorlagen. Der
+Bugtracker für jedes Produkt ist das Repository des Produkts; wenn Sie keinen
+Zugang zu einem Repository haben, senden Sie den Bericht stattdessen über die
+Kanäle in [Mitwirken](../meta/CONTRIBUTING.md).
 
 Geben Sie immer an: Umgebungsinformationen (OS, Produktversionen), Schritte zur
 Reproduktion, erwartetes vs. tatsächliches Verhalten sowie relevante Logs.
@@ -48,8 +40,8 @@ Reproduktion, erwartetes vs. tatsächliches Verhalten sowie relevante Logs.
   erreichbar.
 - Die Registrierung ist standardmäßig geschlossen; offene Registrierung ist
   noch nicht verfügbar.
-- WebRTC-Geräte-Relay und Live-SCADA-Telemetrie erfordern eine laufende
-  scepter-Instanz; ohne sie fällt die UI auf simulierte Demo-Daten zurück.
+- Live-Gerätetelemetrie braucht eine laufende Agenten-Plattform; ohne sie fällt
+  die UI auf simulierte Demo-Daten zurück.
 - Mobile Apps und IDE-Plugins sind nicht Teil dieser Beta.
 - Einige Dokumentationssprachen sind Teilübersetzungen.
 

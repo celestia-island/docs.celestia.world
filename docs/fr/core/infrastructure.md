@@ -1,57 +1,51 @@
 # Infrastructure centrale — Auth, RPC et fondations
 
 Toutes les plateformes que vous utilisez reposent sur la même fondation. Lisez
-cette page une fois et les guides de plateforme s'assemblent d'eux-mêmes :
-kirino (authentification zero-trust et RBAC), plana (types de protocole,
-transport JSON-RPC, mesure, moteur de synchronisation) et hikari (la
-bibliothèque de composants UI).
+cette page une fois et les guides de plateforme s'assemblent d'eux-mêmes : kirino
+(authentification zero-trust et RBAC), plana (types de protocole et
+infrastructures de plateforme) et hikari (la bibliothèque de composants UI).
 
 ## Authentification et autorisation (kirino)
 
-- **Identité** : hachage de mots de passe avec Argon2id ; jetons JWT
-  d'accès/rafraîchissement (`TokenManager`, `kirino-session`) ; limitation de
-  débit des connexions et verrouillage des comptes.
-- **RBAC** : permissions hiérarchiques (agent.*, system.*, knowledge.*, …)
-  résolues par un `GrantResolver` ; les rôles regroupent des permissions
-  (admin voit tout, viewer est en lecture seule). Les affectations persistent
-  dans Postgres.
-- **Délégation** : scepter se fie à l'identifiant utilisateur de l'appelant
-  fourni par la passerelle chest (`X-User-Id` / `user_id`) et ne l'utilise que
-  pour l'isolation des espaces de travail — la couche qui authentifie est
-  toujours en amont.
-- **Surface d'administration** : les endpoints d'administration du panneau
-  exigent un `ARONA_ADMIN_TOKEN` dédié et échouent en mode fail-closed sans
-  lui.
+- **Identité** : hachage de mots de passe, jetons de session à durée de vie
+  courte, limitation de débit des connexions et verrouillage des comptes. Les
+  algorithmes et leurs paramètres sont documentés dans la
+  [documentation de kirino](https://kirino.docs.celestia.world), pas ici.
+- **RBAC** : les permissions sont hiérarchiques et résolues par appelant ; les
+  rôles regroupent des permissions (un administrateur voit tout, un lecteur est
+  en lecture seule). Les affectations persistent dans la base de la plateforme.
+- **Délégation** : un service qui se trouve derrière un autre n'authentifie
+  personne lui-même — la couche qui authentifie est toujours en amont, et
+  l'identité de l'appelant est transmise uniquement pour l'isolation des espaces
+  de travail.
 
 ## Protocole et RPC (plana)
 
-- Tout le trafic de la plateforme est du **JSON-RPC 2.0 sur WebSocket** (et
-  requête/réponse via HTTP POST `/api/rpc`). Les méthodes sont nommées
-  `<Domaine>.<Action>` — par ex. `Sync.MemoryQueryRequest`, `Cli.Search`,
-  `Mcp.CallTool`.
-- Les types du protocole vivent dans plana (`plana-state-sync` /
-  `plana-types`) : une seule source de vérité pour le protocole ; les dépôts
-  en aval épinglent un tag publié.
-- Les notifications (sans `id`) poussent des événements comme les fragments
-  de streaming et les mises à jour du panneau ; les requêtes portent un `id`
-  renvoyé en écho dans la réponse.
-- Le moteur de synchronisation (`plana-sync`) est un arbre d'état autoritaire
-  côté serveur : les clients déclarent des viewports, le serveur diffuse des
-  diffs avec des instantanés complets périodiques.
+- Le trafic de la plateforme est du **JSON-RPC 2.0**, sur WebSocket pour le
+  streaming et en HTTP POST pour le requête/réponse. Les noms de méthodes sont
+  de la forme `<Domaine>.<Action>`.
+- Les types du protocole sont l'unique source de vérité du protocole et vivent
+  dans plana ; les dépôts en aval épinglent une version publiée plutôt que de
+  forker une copie.
+- Les notifications n'ont pas d'`id` et poussent des événements comme les
+  fragments de streaming et les mises à jour du panneau ; les requêtes portent
+  un `id` renvoyé en écho dans la réponse.
+- Les surfaces chargées en état suivent partout le même motif : le serveur est
+  autoritaire, les clients déclarent ce qu'ils regardent, et le serveur diffuse
+  la différence.
 
 ## Mesure et tarification (plana)
 
-L'usage est mesuré par clé API et tarifé depuis une table canonique (mesure
-de `plana-llm-provider`) : jetons de prompts/completions, estimation des
-coûts et application des quotas sont partagés entre les services.
+L'usage est mesuré par clé API et tarifé depuis une table canonique unique
+partagée par tous les services : jetons de prompt et de complétion, estimation
+des coûts et application des quotas sont le même calcul dans chaque produit.
 
 ## Composants UI (hikari)
 
-La bibliothèque de composants Vue (`@celestia-island/hikari`) fournit les
-boutons, badges, tableaux, modales et dialogues de confirmation utilisés par
-chaque webUI ; les pages des plateformes les composent avec le shell UI de
-plana. Les composants partagés doivent remonter ici plutôt que d'être
-réimplémentés par dépôt.
+La bibliothèque de composants fournit les boutons, badges, tableaux, modales et
+dialogues de confirmation utilisés par chaque webUI, afin qu'un écran ait la
+même apparence et le même comportement partout où il est monté. Les composants
+partagés remontent ici plutôt que d'être réimplémentés par dépôt.
 
 ## Règles de dépendances
 

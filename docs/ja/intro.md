@@ -2,52 +2,69 @@
 
 **celestia-island** は産業用 AI 制御のためのプロジェクト群です。マルチ
 エージェントコラボレーション、遠隔運用、そして安全性重視の自動化を
-実現します。このサイトはその *why* —— 哲学、エコシステムマップ、
-そしてエントリーポイントをまとめたものです。*how* は、ここから
-リンクされる各プロジェクトのドキュメントサイトにあります。
+対象とします。このサイトはその *why* にあたります。*how* は各プロジェクト
+のドキュメントにあります。
 
-## 3 つの問いに答える
+## プロジェクト
 
-| 問い | どこ | 見つかるもの |
-| --- | --- | --- |
-| **なぜこれが存在するのか？** | [哲学](./philosophy/why.md) | 解決しようとしている問題、クローズドループ、安全のドクトリン、長期的な展望 |
-| **中身は何か？** | [エコシステム](./ecosystem/projects.md) | すべてのプロジェクト、ループ内での役割、ドキュメントの置き場所 |
-| **どう始めるか？** | [始め方](./getting-started/quickstart.md) | アカウント作成から動作するチャットエージェントと産業制御まで 30 分でたどる道筋 |
+リンク付きの名前は、今日そのまま読める公開リポジトリです。リンクのない
+名前は、プラットフォームに同梱される製品で、ソースはまだ公開されて
+いないものです。詳細な一覧表は [プロジェクトマップ](./ecosystem/projects.md)
+にあります。
 
-## 1 段落の要約
+**プラットフォーム** —— [kirino](https://github.com/celestia-island/kirino)
+（ゼロトラスト認証）、[plana](https://github.com/celestia-island/plana)
+（プロトコルとプラットフォーム基盤）、[hikari](https://github.com/celestia-island/hikari)
+（UI コンポーネント）、[provider-registry](https://github.com/celestia-island/provider-registry)
+（モデルカタログ）、arona（モデルデプロイパネル）、entelecheia（エージェント
+オーケストレーション）、shittim-chest（チャットとワークベンチ）、scriptum
+（ターミナルクライアント）。
 
-celestia-island は、AI による産業制御のために**発見から検証までの
-クローズドループ**を構築します。発見 → インストール → 認証 → モデル
-デプロイ → チャットとエージェント実行 → 産業機器の制御 → すべての
-検証。このループは小さく厳密にレイヤ化された部品から組み立てられます。
-認証プリミティブ（[kirino](https://github.com/celestia-island/kirino)）、
-プラットフォーム基盤（[plana](https://github.com/celestia-island/plana)）、
-UI コンポーネント（[hikari](https://github.com/celestia-island/hikari)）、
-そしてビジネスロジックのみを実装するサービス群
-（[arona](https://github.com/celestia-island/arona)、
-[shittim-chest](https://github.com/celestia-island/shittim-chest)、
-[entelecheia](https://github.com/celestia-island/entelecheia)、
-[evernight](https://github.com/celestia-island/evernight)）です。
-何かが二重実装されることは決してありません。汎用機能は上流で一度
-構築され、下流のすべてのサービスがそれを利用します。
+**産業とエッジ** —— evernight（プロトコルブローカー）、
+[aoba](https://github.com/celestia-island/aoba)（Modbus CLI）、
+[hare](https://github.com/celestia-island/hare)（`no_std` ブリッジ）、
+[kei](https://github.com/celestia-island/kei)（エッジカーネル）、
+[shun](https://github.com/celestia-island/shun)（インストーラとフラッシャ）、
+evernight-appliance（アプライアンス配布版）、electrode_recon（計算エンジン）。
 
-その理由は単純な観察にあります。月までの往復には 2.6 秒、火星まで
-は 6〜44 分かかります。そこにあるロボットは地球の人間を待つことが
-できません —— 現地で自律的に動作しなければならないのです。私たちが
-今日産業制御のために構築している意思決定層、世界モデル、安全ゲートは、
-将来の自律性が必要とするものと同じ形なのです。
+**ライブラリとツール** —— [noa](https://github.com/celestia-island/noa)
+（エージェントネイティブなバージョン管理）、[seia](https://github.com/celestia-island/seia)
+（ウェブ検索）、[aris](https://github.com/celestia-island/aris)（ブラウザ
+エンジン）、[shirabe](https://github.com/celestia-island/shirabe)（ブラウザ
+自動化）、[kou](https://github.com/celestia-island/kou)（仮想ターミナル）、
+[ichika](https://github.com/celestia-island/ichika)（スレッドパイプライン）、
+[yuuka](https://github.com/celestia-island/yuuka)（構造マクロ）、
+[hifumi](https://github.com/celestia-island/hifumi)（バージョン付き
+シリアライゼーション）、[lacrymira](https://github.com/celestia-island/lacrymira)
+（型付きデータアクセス）、[himari](https://github.com/celestia-island/himari)
+（数式 IR）、[kotama](https://github.com/celestia-island/kotama)（リバース
+エンジニアリング）、[ayane](https://github.com/celestia-island/ayane)（メール
+サービス）、[tairitsu](https://github.com/celestia-island/tairitsu)
+（コンポーネントモデルのフルスタック）、[akivili](https://github.com/celestia-island/akivili)
+（プラグインホスト）、[celestia-plugin](https://github.com/celestia-island/celestia-plugin)
+（Python SDK）、[ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
+（ターミナル内の Markdown）、arcaea（ペルソナプロトコル）、official-plugins
+（プラグインパッケージ）。
 
-## すべての配置場所
+**インフラ** —— [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
+（ビルドとリントのツールチェーン）、[cherino](https://github.com/celestia-island/cherino)
+（エージェントコンテナ）、[malkuth](https://github.com/celestia-island/malkuth)
+（サービス監視）、[lagrange](https://github.com/celestia-island/lagrange)
+（このサイトをビルドするドキュメントエンジン）、[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+（リリース成果物）、[sysl](https://github.com/celestia-island/sysl)（ライセンス）、
+celestia-integration（統合テスト）、fuuka（セルフホスト CI）、celestia-erp
+（ビジネスバックオフィス）。
 
-- **プロジェクト別ドキュメント** —— `<name>.docs.celestia.world`。
-  各リポジトリから構築されます。完全な一覧は
-  [サイトと所有](./ecosystem/sites.md) を参照してください。
-- **組織の存在** —— [GitHub 上の celestia-island](https://github.com/celestia-island)。
-- **プロダクト入口（ベータ期間中は WIP）** —— [dev.celestia.world](https://dev.celestia.world)
-  （パネル：アカウント・チャット・エージェント）、匿名の
-  [tour](https://demo.dev.celestia.world/tour) 面、そして会社サイト
-  [celestia.ac.cn](https://celestia.ac.cn)。モデルプラットフォーム自体の管理パネルは
-  ベータ終了までデプロイ内部にとどまります。
+**サイト** —— [celestia-island.github.io](https://celestia-island.github.io)、
+[e.celestia.world](https://e.celestia.world)、
+[dev.celestia.world](https://dev.celestia.world)（パネル。ベータ期間中は
+招待制）、[celestia.ac.cn](https://celestia.ac.cn)、そしてこのハブです。
+
+## 次に進む先
+
+- [なぜ celestia-island なのか](./philosophy/why.md) —— 課題、クローズドループ、安全のドクトリン。
+- [クローズドループ](./philosophy/closed-loop.md) —— 発見 → インストール → 認証 → デプロイ → チャットとエージェント → 産業制御 → 検証。
+- [クイックスタート](./getting-started/quickstart.md) —— それを 30 分でたどる道筋。
 
 右下の言語切り替えを使って、このサイトを別の言語で読むことができます。
 コンテンツは英語で執筆され、翻訳は同じ構造に従います。

@@ -1,6 +1,6 @@
 # 요약
 
-[환영](./intro.md)
+[환영합니다](./intro.md)
 
 ---
 
@@ -8,9 +8,9 @@
 
 - [왜](./philosophy/why.md)
 - [폐쇄 루프](./philosophy/closed-loop.md)
-- [계층형 아키텍처](./philosophy/layered-architecture.md)
+- [계층 구조](./philosophy/layered-architecture.md)
 - [안전 원칙](./philosophy/safety.md)
-- [내러티브와 지평](./philosophy/narrative.md)
+- [내러티브 & 지평](./philosophy/narrative.md)
 
 # 핵심 인프라
 
@@ -33,9 +33,9 @@
 
 # 플랫폼
 
-- [Arona — 모델 게이트웨이, 메모리 및 클러스터](./platforms/arona.md)
+- [Arona — 모델 게이트웨이 및 배포 패널](./platforms/arona.md)
 - [Entelecheia — 에이전트 플랫폼 및 메모리](./platforms/entelecheia.md)
-- [Shittim Chest — 채팅, 패널 및 통합](./platforms/chest.md)
+- [Shittim Chest — 채팅, 패널 및 연동](./platforms/chest.md)
 - [Evernight — 산업 프로토콜 브로커](./platforms/evernight.md)
 
 # 메타

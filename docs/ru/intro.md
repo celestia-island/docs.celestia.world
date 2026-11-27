@@ -1,54 +1,78 @@
 # Добро пожаловать в celestia-island
 
 **celestia-island** — это набор проектов для промышленного ИИ-управления:
-совместная работа мультиагентов, удалённые операции и управление, критичное к
-безопасности. Этот сайт — его *почему*: философия, карта экосистемы и точка
-входа. *Как* описано на сайтах документации отдельных проектов, на которые
-здесь есть ссылки.
+совместная работа мультиагентов, удалённые операции и автоматизация, критичная
+к безопасности. Этот сайт — его *почему*. *Как* описано на сайтах
+документации отдельных проектов.
 
-## Ответы на три вопроса
+## Проекты
 
-| Вопрос | Где | Что вы найдёте |
-| --- | --- | --- |
-| **Почему это существует?** | [Философия](./philosophy/why.md) | Проблема, которую мы решаем, замкнутый цикл, доктрина безопасности и долгосрочный горизонт |
-| **Что внутри?** | [Экосистема](./ecosystem/projects.md) | Каждый проект, его роль в цикле и место его документации |
-| **С чего начать?** | [Начало работы](./getting-started/quickstart.md) | Путь за 30 минут от учётной записи до работающего чат-агента и промышленного управления |
+Название со ссылкой — это публичный репозиторий, который можно прочитать уже
+сейчас. Название без ссылки — продукт, который поставляется с платформой, но
+его исходный код пока не публичен. Подробная таблица — в разделе
+[Карта проектов](./ecosystem/projects.md).
 
-## Краткое резюме
+**Платформа** — [kirino](https://github.com/celestia-island/kirino)
+(аутентификация с нулевым доверием),
+[plana](https://github.com/celestia-island/plana) (протокол и платформенные
+средства), [hikari](https://github.com/celestia-island/hikari) (UI-компоненты),
+[provider-registry](https://github.com/celestia-island/provider-registry)
+(каталог моделей), arona (панель развёртывания моделей), entelecheia
+(оркестрация агентов), shittim-chest (чат и рабочее место), scriptum
+(терминальный клиент).
 
-celestia-island строит **замкнутый цикл** от обнаружения до проверки для
-ИИ-управляемого промышленного производства: обнаружить → установить →
-аутентифицироваться → развернуть модель → общаться с чатом и запускать агентов
-→ управлять промышленным оборудованием → проверить всё. Цикл собирается из
-небольших строго слоистых компонентов: примитивы аутентификации
-([kirino](https://github.com/celestia-island/kirino)), платформенные средства
-([plana](https://github.com/celestia-island/plana)), UI-компоненты
-([hikari](https://github.com/celestia-island/hikari)) и сервисы, реализующие
-только бизнес-логику ([arona](https://github.com/celestia-island/arona),
-[shittim-chest](https://github.com/celestia-island/shittim-chest),
-[entelecheia](https://github.com/celestia-island/entelecheia),
-[evernight](https://github.com/celestia-island/evernight)). Ничто никогда не
-реализуется дважды: общая функциональность создаётся выше по потоку один раз,
-а каждый сервис ниже по потоку её потребляет.
+**Промышленность и периферия** — evernight (брокер протоколов),
+[aoba](https://github.com/celestia-island/aoba) (CLI для Modbus),
+[hare](https://github.com/celestia-island/hare) (мост `no_std`),
+[kei](https://github.com/celestia-island/kei) (периферийное ядро),
+[shun](https://github.com/celestia-island/shun) (установщики и прошивальщики),
+evernight-appliance (дистрибутив-апплаенс), electrode_recon (вычислительный движок).
 
-Причина всего этого — простое наблюдение: на Луне круговой обмен сигналом
-занимает 2,6 секунды, на Марсе — от 6 до 44 минут. Роботы там не могут ждать
-человека на Земле — они должны быть автономны на месте. Слой принятия
-решений, модель мира и защитные барьеры безопасности, которые мы строим
-сегодня для промышленного управления, имеют ту же форму, какая понадобится
-автономии завтра.
+**Библиотеки и инструменты** — [noa](https://github.com/celestia-island/noa)
+(версионирование, нативное для агентов),
+[seia](https://github.com/celestia-island/seia) (веб-поиск),
+[aris](https://github.com/celestia-island/aris) (браузерный движок),
+[shirabe](https://github.com/celestia-island/shirabe) (автоматизация браузера),
+[kou](https://github.com/celestia-island/kou) (виртуальный терминал),
+[ichika](https://github.com/celestia-island/ichika) (конвейеры потоков),
+[yuuka](https://github.com/celestia-island/yuuka) (макросы структур),
+[hifumi](https://github.com/celestia-island/hifumi) (версионированная
+сериализация), [lacrymira](https://github.com/celestia-island/lacrymira)
+(типизированный доступ к данным),
+[himari](https://github.com/celestia-island/himari) (промежуточное
+представление формул),
+[kotama](https://github.com/celestia-island/kotama) (реверс-инжиниринг),
+[ayane](https://github.com/celestia-island/ayane) (почтовый сервис),
+[tairitsu](https://github.com/celestia-island/tairitsu) (полный стек на
+Component Model), [akivili](https://github.com/celestia-island/akivili) (хост
+плагинов), [celestia-plugin](https://github.com/celestia-island/celestia-plugin)
+(Python SDK), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
+(Markdown в терминале), arcaea (протокол персон), official-plugins (пакеты
+плагинов).
 
-## Где что находится
+**Инфраструктура** —
+[celestia-devtools](https://github.com/celestia-island/celestia-devtools)
+(инструментарий сборки и линтинга),
+[cherino](https://github.com/celestia-island/cherino) (контейнеры агентов),
+[malkuth](https://github.com/celestia-island/malkuth) (наблюдение за сервисами),
+[lagrange](https://github.com/celestia-island/lagrange) (движок документации,
+собирающий этот сайт),
+[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+(релизные артефакты),
+[sysl](https://github.com/celestia-island/sysl) (лицензия),
+celestia-integration (интеграционные тесты), fuuka (собственный CI),
+celestia-erp (бизнес-бэк-офис).
 
-- **Документация по каждому проекту** — `<name>.docs.celestia.world`,
-  собирается из каждого репозитория. Полный список — в разделе
-  [Сайты и владельцы](./ecosystem/sites.md).
-- **Присутствие организации** — [celestia-island на GitHub](https://github.com/celestia-island).
-- **Продуктовые входы (WIP на время беты)** — [dev.celestia.world](https://dev.celestia.world)
-  (панель: аккаунт, чат, агенты), анонимная страница
-  [tour](https://demo.dev.celestia.world/tour) и сайт компании
-  [celestia.ac.cn](https://celestia.ac.cn); собственная админ-панель платформы
-  моделей остаётся внутренней для развёртывания до конца беты.
+**Сайты** — [celestia-island.github.io](https://celestia-island.github.io),
+[e.celestia.world](https://e.celestia.world),
+[dev.celestia.world](https://dev.celestia.world) (панель, во время беты по
+приглашениям), [celestia.ac.cn](https://celestia.ac.cn) и этот хаб.
+
+## Куда двигаться дальше
+
+- [Почему celestia-island](./philosophy/why.md) — проблема, замкнутый цикл, доктрина безопасности.
+- [Замкнутый цикл](./philosophy/closed-loop.md) — обнаружить → установить → аутентифицироваться → развернуть → чат и агенты → промышленное управление → проверить.
+- [Краткое руководство](./getting-started/quickstart.md) — путь через всё это за 30 минут.
 
 Используйте переключатель языков (внизу справа), чтобы читать этот сайт на
 другом языке. Контент пишется на английском; переводы следуют той же

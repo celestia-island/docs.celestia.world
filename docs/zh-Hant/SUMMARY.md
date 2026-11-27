@@ -33,7 +33,7 @@
 
 # 平台
 
-- [Arona —— 模型閘道、記憶與叢集](./platforms/arona.md)
+- [Arona —— 模型閘道與部署面板](./platforms/arona.md)
 - [Entelecheia —— 智能體平台與記憶](./platforms/entelecheia.md)
 - [Shittim Chest —— 聊天、面板與整合](./platforms/chest.md)
 - [Evernight —— 工業協定代理器](./platforms/evernight.md)

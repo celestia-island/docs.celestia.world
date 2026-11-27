@@ -9,18 +9,17 @@
 
 | Слой | Проекты | Что они дают |
 | --- | --- | --- |
-| **Слой 0 — Аутентификация** | [kirino](https://github.com/celestia-island/kirino) | Примитивы нулевого доверия: подпись и обновление JWT, хеширование паролей Argon2id, ограничение частоты входа, движок RBAC, хранилище приглашений, сессии |
-| **Слой 1 — Платформа** | [plana](https://github.com/celestia-island/plana) | Общие средства: типы и маршрутизация JSON-RPC 2.0, DTO сервисов, определение сети, SSE-сессии, предохранители, учёт и тарификация LLM |
-| **Слой 2 — UI** | [hikari](https://github.com/celestia-island/hikari) | Библиотека UI-компонентов (Vue/TS + Rust), общая для всех webUI |
-| **Слой 3 — Сервисы** | [arona](https://github.com/celestia-island/arona), [shittim-chest](https://github.com/celestia-island/shittim-chest), [entelecheia](https://github.com/celestia-island/entelecheia), [evernight](https://github.com/celestia-island/evernight), [malkuth](https://github.com/celestia-island/malkuth), [lagrange](https://github.com/celestia-island/lagrange) | Только бизнес-логика. Они потребляют слои 0–2 и добавляют поведение, делающее каждый продукт реальным |
+| **Слой 0 — Аутентификация** | [kirino](https://github.com/celestia-island/kirino) | Идентичность с нулевым доверием: аутентификация, сессии, разрешения |
+| **Слой 1 — Платформа** | [plana](https://github.com/celestia-island/plana) | Общие типы протокола, транспорт и средства, нужные каждому сервису |
+| **Слой 2 — UI** | [hikari](https://github.com/celestia-island/hikari) | Библиотека компонентов, общая для всех webUI |
+| **Слой 3 — Сервисы** | arona, shittim-chest, entelecheia, evernight, [malkuth](https://github.com/celestia-island/malkuth), [lagrange](https://github.com/celestia-island/lagrange) | Только бизнес-логика. Они потребляют слои 0–2 и добавляют поведение, делающее каждый продукт реальным |
 
 ## Доктрина
 
 1. **Никогда не реализовывать дважды.** Перед написанием кода спросите: есть
-   ли это в kirino? есть ли это в plana? есть ли это в hikari? Пример: типы
-   JSON-RPC приходят из plana, JWT — из kirino, ограничение частоты входа — из
-   kirino, предохранители — из plana, DTO здоровья — из plana, тарификация —
-   из plana.
+   ли это в kirino? есть ли это в plana? есть ли это в hikari? Сервис, который
+   повторно реализует функциональность вышестоящего слоя, — это дефект, а не
+   возможность.
 2. **Общая функциональность идёт наверх.** Функция, которую будут
    использовать два и более сервисов, сначала встраивается в kirino, plana
    или hikari, а затем потребляется.

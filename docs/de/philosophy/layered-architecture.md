@@ -8,17 +8,16 @@ upstream-Fähigkeiten; generische Fähigkeiten werden nie neu implementiert.**
 
 | Schicht | Projekte | Was sie bereitstellen |
 | --- | --- | --- |
-| **Schicht 0 — Auth** | [kirino](https://github.com/celestia-island/kirino) | Zero-Trust-Primitive: JWT-Signierung und -Erneuerung, Argon2id-Passwort-Hashing, Login-Ratenbegrenzung, RBAC-Engine, Einladungsspeicher, Sitzungen |
-| **Schicht 1 — Plattform** | [plana](https://github.com/celestia-island/plana) | Gemeinsame Grundlagen: JSON-RPC-2.0-Typen und -Routing, Dienst-DTOs, Netzwerkerkennung, SSE-Sitzungen, Circuit Breaker, LLM-Messung und -Preisgestaltung |
-| **Schicht 2 — UI** | [hikari](https://github.com/celestia-island/hikari) | UI-Komponentenbibliothek (Vue/TS + Rust), die von jeder WebUI geteilt wird |
-| **Schicht 3 — Dienste** | [arona](https://github.com/celestia-island/arona), [shittim-chest](https://github.com/celestia-island/shittim-chest), [entelecheia](https://github.com/celestia-island/entelecheia), [evernight](https://github.com/celestia-island/evernight), [malkuth](https://github.com/celestia-island/malkuth), [lagrange](https://github.com/celestia-island/lagrange) | Nur Geschäftslogik. Sie konsumieren die Schichten 0–2 und ergänzen das Verhalten, das jedes Produkt real macht |
+| **Schicht 0 — Auth** | [kirino](https://github.com/celestia-island/kirino) | Zero-Trust-Identität: Authentifizierung, Sitzungen, Berechtigungen |
+| **Schicht 1 — Plattform** | [plana](https://github.com/celestia-island/plana) | Gemeinsame Protokolltypen, Transport und die Grundlagen, die jeder Dienst braucht |
+| **Schicht 2 — UI** | [hikari](https://github.com/celestia-island/hikari) | Die Komponentenbibliothek, die jede WebUI teilt |
+| **Schicht 3 — Dienste** | arona, shittim-chest, entelecheia, evernight, [malkuth](https://github.com/celestia-island/malkuth), [lagrange](https://github.com/celestia-island/lagrange) | Nur Geschäftslogik. Sie konsumieren die Schichten 0–2 und ergänzen das Verhalten, das jedes Produkt real macht |
 
 ## Die Doktrin
 
 1. **Nie doppelt implementieren.** Bevor Sie Code schreiben, fragen Sie: hat
-   kirino das? hat plana das? hat hikari das? Beispiel: JSON-RPC-Typen kommen
-   aus plana, JWT aus kirino, Login-Ratenbegrenzung aus kirino, Circuit Breaker
-   aus plana, Health-DTOs aus plana, Preisgestaltung aus plana.
+   kirino das? hat plana das? hat hikari das? Ein Dienst, der eine
+   upstream-Fähigkeit neu implementiert, ist ein Defekt, keine Funktion.
 2. **Generische Fähigkeiten gehen upstream.** Eine Funktion, die zwei oder
    mehr Dienste wiederverwenden, wird zuerst in kirino, plana oder hikari
    gebaut und dann konsumiert.

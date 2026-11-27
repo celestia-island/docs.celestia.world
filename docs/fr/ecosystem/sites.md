@@ -9,7 +9,7 @@ sites de projets autoritaires.
 | Site | Possède | Contenu |
 | --- | --- | --- |
 | [docs.celestia.world](https://docs.celestia.world) | l'écosystème | Philosophie, carte de l'écosystème, bien démarrer, gouvernance (licence, CLA, CoC, sécurité, contribution) |
-| `<name>.docs.celestia.world` | chaque projet | Guides, architecture, designs, références — construits depuis le dépôt du projet lui-même |
+| `<name>.docs.celestia.world` | chaque projet ayant publié un site | Guides, architecture, designs, références — construits depuis le dépôt du projet lui-même |
 | [celestia-island.github.io](https://celestia-island.github.io) | l'organisation | Présence, liens, actifs de marque |
 | [e.celestia.world](https://e.celestia.world) | la face publique | Page d'accueil, tarification, blog, appel à l'action |
 | [dev.celestia.world](https://dev.celestia.world) | le panneau | Compte, chat, agents et la console d'exploitation (bêta sur invitation) |

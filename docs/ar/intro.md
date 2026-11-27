@@ -1,49 +1,71 @@
 # مرحبًا بك في celestia-island
 
-**celestia-island** هي مجموعة مشاريع للتحكم الصناعي بالذكاء الاصطناعي: تعاون
-متعدد الوكلاء، وعمليات عن بعد، وأتمتة حرجة السلامة. هذا الموقع هو *لماذا* هذه
-المجموعة — الفلسفة، وخريطة المنظومة، ونقطة الدخول. أما *كيف* فتجدها في مواقع
-التوثيق الخاصة بكل مشروع، المربوطة من هنا.
+**celestia-island** مجموعة من المشاريع للتحكم الصناعي بالذكاء الاصطناعي:
+التعاون بين وكلاء متعددين، والعمليات عن بُعد، والأتمتة الحرجة السلامة.
+هذا الموقع هو *لماذا*؛ أما *كيف* فهي من نصيب كل مشروع على حِدة.
 
-## الإجابة عن ثلاثة أسئلة
+## المشاريع
 
-| السؤال | أين | ما ستجده |
-| --- | --- | --- |
-| **لماذا يوجد هذا؟** | [الفلسفة](./philosophy/why.md) | المشكلة التي نحلها، والحلقة المغلقة، وعقيدة السلامة، والأفق طويل المدى |
-| **ماذا يوجد في الداخل؟** | [المنظومة](./ecosystem/projects.md) | كل مشروع، ودوره في الحلقة، وأين يقع توثيقه |
-| **كيف أبدأ؟** | [ابدأ من هنا](./getting-started/quickstart.md) | مسار 30 دقيقة من الحساب إلى وكيل محادثة يعمل والتحكم الصناعي |
+الاسم الموصول رابطًا هو مستودع عام يمكنك قراءته اليوم. والاسم غير الموصول
+رابطًا منتجٌ يُشحن مع المنصة ولم يصبح مصدره عامًّا بعد. الجدول التفصيلي في
+[خريطة المشاريع](./ecosystem/projects.md).
 
-## ملخص في فقرة واحدة
+**المنصة** — [kirino](https://github.com/celestia-island/kirino) (مصادقة
+الثقة الصفرية)، و[plana](https://github.com/celestia-island/plana) (البروتوكول
+ومرافق المنصة)، و[hikari](https://github.com/celestia-island/hikari) (مكونات
+الواجهة)، و[provider-registry](https://github.com/celestia-island/provider-registry)
+(كتالوج النماذج)، وarona (لوحة نشر النماذج)، وentelecheia (تنسيق الوكلاء)،
+وshittim-chest (المحادثة ومنصة العمل)، وscriptum (عميل الطرفية).
 
-تبني celestia-island **الحلقة المغلقة** من الاكتشاف إلى التحقق للتحكم الصناعي
-المدفوع بالذكاء الاصطناعي: اكتشف ← ثبّت ← وثّق الهوية ← انشر نموذجًا ← تحدث
-وشغّل الوكلاء ← تحكم في المعدات الصناعية ← تحقق من كل شيء. تتألف الحلقة من
-قطع صغيرة ذات طبقات صارمة: بدائيات المصادقة
-([kirino](https://github.com/celestia-island/kirino))، ومرافق المنصة
-([plana](https://github.com/celestia-island/plana))، ومكونات الواجهة
-([hikari](https://github.com/celestia-island/hikari))، وخدمات لا تنفذ سوى منطق
-الأعمال ([arona](https://github.com/celestia-island/arona) و
-[shittim-chest](https://github.com/celestia-island/shittim-chest) و
-[entelecheia](https://github.com/celestia-island/entelecheia) و
-[evernight](https://github.com/celestia-island/evernight)). لا يُنفَّذ أي شيء
-مرتين أبدًا: القدرة العامة تُبنى في المنبع مرة واحدة، وتستهلكها كل خدمة في
-المصب.
+**الصناعة والحوسبة الطرفية** — evernight (وسيط البروتوكولات)،
+و[aoba](https://github.com/celestia-island/aoba) (واجهة Modbus سطرية)،
+و[hare](https://github.com/celestia-island/hare) (جسر `no_std`)،
+و[kei](https://github.com/celestia-island/kei) (نواة الحوسبة الطرفية)،
+و[shun](https://github.com/celestia-island/shun) (المثبِّتات وأدوات الوميض)،
+وevernight-appliance (توزيعة الجهاز)، وelectrode_recon (محرك حسابي).
 
-والسبب وراء كل ذلك ملاحظة بسيطة: على القمر تستغرق الرحلة ذهابًا وإيابًا 2.6
-ثانية، وعلى المريخ من 6 إلى 44 دقيقة. الروبوتات هناك لا يمكنها انتظار إنسان
-على الأرض — يجب أن تكون مستقلة محليًا. طبقة القرار، ونموذج العالم، وبوابات
-السلامة التي نبنيها اليوم للتحكم الصناعي هي نفس الشكل الذي ستحتاجه
-الاستقلالية غدًا.
+**المكتبات والأدوات** — [noa](https://github.com/celestia-island/noa)
+(تحكم بالإصدارات أصيل للوكلاء)، و[seia](https://github.com/celestia-island/seia)
+(البحث على الويب)، و[aris](https://github.com/celestia-island/aris) (محرك
+متصفح)، و[shirabe](https://github.com/celestia-island/shirabe) (أتمتة
+المتصفح)، و[kou](https://github.com/celestia-island/kou) (طرفية افتراضية)،
+و[ichika](https://github.com/celestia-island/ichika) (خطوط أنابيب الخيوط)،
+و[yuuka](https://github.com/celestia-island/yuuka) (ماكروهات البُنى
+البياناتية)، و[hifumi](https://github.com/celestia-island/hifumi) (تسلسل
+الإصدارات)، و[lacrymira](https://github.com/celestia-island/lacrymira) (وصول
+مُنمَّط إلى البيانات)، و[himari](https://github.com/celestia-island/himari)
+(تمثيل وسيط للصيغ)، و[kotama](https://github.com/celestia-island/kotama)
+(الهندسة العكسية)، و[ayane](https://github.com/celestia-island/ayane) (خدمة
+البريد)، و[tairitsu](https://github.com/celestia-island/tairitsu)
+(حزمة كاملة على نموذج المكوّنات)،
+و[akivili](https://github.com/celestia-island/akivili) (مضيف الإضافات)،
+و[celestia-plugin](https://github.com/celestia-island/celestia-plugin)
+(حزمة تطوير Python)،
+و[ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
+(عرض Markdown في الطرفية)، وarcaea (بروتوكول الشخصيات)، وofficial-plugins
+(حزم الإضافات).
 
-## أين يوجد كل شيء
+**البنية التحتية** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
+(سلسلة أدوات البناء والفحص)، و[cherino](https://github.com/celestia-island/cherino)
+(حاويات الوكلاء)، و[malkuth](https://github.com/celestia-island/malkuth)
+(الإشراف على الخدمات)، و[lagrange](https://github.com/celestia-island/lagrange)
+(محرّك التوثيق الذي يبني هذا الموقع)،
+و[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+(مخرجات الإصدارات)، و[sysl](https://github.com/celestia-island/sysl)
+(الترخيص)، وcelestia-integration (اختبارات التكامل)، وfuuka (التكامل
+المستمر المُستضاف ذاتيًا)، وcelestia-erp (الأنظمة الإدارية الخلفية للأعمال).
 
-- **توثيق كل مشروع** — `<name>.docs.celestia.world`، مبني من كل مستودع.
-  ابحث عن القائمة الكاملة في [المواقع والمسؤوليات](./ecosystem/sites.md).
-- **حضور المنظمة** — [celestia-island على GitHub](https://github.com/celestia-island).
-- **مداخل المنتجات (قيد التطوير أثناء النسخة التجريبية)** — [dev.celestia.world](https://dev.celestia.world)
-  (اللوحة: الحساب، الدردشة، الوكلاء)، وواجهة [tour](https://demo.dev.celestia.world/tour)
-  المجهولة، وموقع الشركة [celestia.ac.cn](https://celestia.ac.cn)؛ لوحة إدارة منصة
-  النماذج نفسها تبقى داخلية للنشر حتى انتهاء النسخة التجريبية.
+**المواقع** — [celestia-island.github.io](https://celestia-island.github.io)،
+و[e.celestia.world](https://e.celestia.world)،
+و[dev.celestia.world](https://dev.celestia.world) (اللوحة، والوصول إليها
+بالدعوة خلال النسخة التجريبية)،
+و[celestia.ac.cn](https://celestia.ac.cn)، وهذا المركز.
+
+## إلى أين تذهب بعد ذلك
+
+- [لماذا celestia-island](./philosophy/why.md) — المشكلة، والحلقة المغلقة، وعقيدة السلامة.
+- [الحلقة المغلقة](./philosophy/closed-loop.md) — اكتشف ← ثبّت ← وثّق الهوية ← انشر ← تحدث وشغّل الوكلاء ← تحكم صناعيًا ← تحقق.
+- [البدء السريع](./getting-started/quickstart.md) — مسار 30 دقيقة عبرها.
 
 استخدم مبدل اللغة (أسفل اليمين) لقراءة هذا الموقع بلغة أخرى. المحتوى مكتوب
 بالإنجليزية؛ وتتبع الترجمات البنية نفسها.

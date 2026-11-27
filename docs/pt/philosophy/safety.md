@@ -1,68 +1,67 @@
 # Princípios de Segurança
 
-O controle industrial é de segurança crítica: uma falha pode mover
-equipamentos físicos. Por isso, a segurança é projetada na arquitetura, não
-acrescentada no final.
+Controle industrial é segurança crítica: uma falha pode mover equipamento
+físico. A segurança, portanto, é projetada na arquitetura, não acrescentada no
+final.
 
-## 1. O LLM nunca toca o mundo diretamente
+## 1. O modelo nunca toca o mundo diretamente
 
-No [entelecheia](https://github.com/celestia-island/entelecheia), o modelo vê
-apenas um punhado de ferramentas primitivas (`exec`, `write_to_var`). Todo o
-trabalho real acontece dentro de um pipeline de execução em sandbox, no qual o
-código dos agentes despacha para uma grande superfície de ferramentas MCP
-entre agentes. O modelo não pode inventar comportamento; ele só pode chamar as
-primitivas que a plataforma expõe.
+Um modelo é um planejador, não um atuador. Ele pode pedir que um trabalho seja
+feito; não pode executá-lo. Entre o modelo e o equipamento ficam uma sandbox,
+uma verificação de política e — para ações irreversíveis — um humano. O modelo
+não pode inventar comportamento fora das primitivas que a plataforma expõe.
 
 ## 2. Profundidade de segurança em múltiplas camadas
 
-Toda operação que pode afetar o mundo físico passa pela cadeia completa, nesta
+Toda operação que possa afetar o mundo físico passa pela cadeia completa, em
 ordem:
 
-1. **Revisão de instruções** — o que foi dito ao modelo para fazer
+1. **Revisão da instrução** — o que foi ordenado ao modelo
 2. **Execução em sandbox** — o código roda isolado, com restrições de política
-3. **Validação de política** — o portão de escrita: a operação corresponde à política?
+3. **Validação de política** — o portão de escrita: a operação obedece à política?
 4. **Confirmação humana** — a palavra final para ações irreversíveis
-5. **Trilha de auditoria** — tudo é registrado, nada é silencioso
+5. **Trilha de auditoria** — tudo é registrado, nada fica silencioso
 
-## 3. Criticidade mista: o tempo real nunca depende do LLM
+Nenhuma camada confia na anterior. Pular uma delas é um defeito, não um atalho.
 
-Os sistemas são divididos por tempo de resposta, e **as camadas mais rápidas
-nunca dependem de um modelo estar online**:
+## 3. Criticalidade mista: o tempo real nunca depende do modelo
 
-| Camada | Cadência | Roda em | Dependência de LLM |
-| --- | --- | --- | --- |
-| L3 — Cognição | segundos–minutos | arona, shittim-chest, entelecheia (Linux) | consumidora principal |
-| L2 — Modelo de mundo | 10–50 Hz | serviços de plataforma | opcional |
-| L1 — Reativo / borda | 10–100 Hz | evernight em SBCs; pequenos modelos locais | nenhuma |
-| L0 — Controle em tempo real | 100 Hz–1 kHz | loop rápido em MCU, intertravamentos locais | nunca |
+O sistema é dividido por tempo de resposta, e **quanto mais rápida uma camada,
+menos ela depende de um modelo estar online**:
 
-Se o LLM cair offline, a plataforma degrada com elegância: ou para um estado
-seguro, ou continua executando uma trajetória já aprovada. Watchdogs de
-hardware ancoram essa semântica — o controle nunca espera por uma chamada de
-rede.
+| Camada | O que faz | Dependência de LLM |
+| --- | --- | --- |
+| Cognição | planejamento, conversa, orquestração | consumidor primário |
+| Estado do mundo | o que é verdade agora, não o que foi dito | opcional |
+| Reativa | reações locais na própria máquina | nenhuma |
+| Controle em tempo real | intertravamentos e o laço rápido | nunca |
 
-## 4. Zero trust, bloqueio por padrão
+Se o modelo fica offline, a plataforma degrada com elegância: ou um estado
+seguro, ou a continuação da execução de uma trajetória já aprovada. O controle
+nunca espera por uma chamada de rede.
 
-- Autenticação e autorização vêm do [kirino](https://github.com/celestia-island/kirino):
-  JWT com sessões de curta duração, hash de senhas Argon2id, limite de taxa de
-  login e um motor RBAC.
+## 4. Confiança zero, falha fechada
+
+- Autenticação e autorização vêm do
+  [kirino](https://github.com/celestia-island/kirino), a camada de autenticação
+  de confiança zero do ecossistema. Nada é confiável só porque está dentro da
+  rede.
 - O registro é fechado por convite por padrão; o primeiro usuário de uma
-  implantação torna-se o admin, após o que o auto-registro trava.
-- Tudo o que não é explicitamente permitido é negado. Quando um serviço tem um
-  modo *mock*, o modo mock está desligado por padrão e se recusa a rodar em
-  implantações de produção sem um flag explícito.
+  implantação torna-se o admin, depois disso o auto-registro trava.
+- Tudo o que não é explicitamente permitido é negado. Onde um serviço tem um
+  modo *mock*, ele fica desligado por padrão e se recusa a rodar em implantações
+  de produção sem uma flag explícita.
 
-## 5. Falhas são ruidosas
+## 5. As falhas são ruidosas
 
-A degradação silenciosa é tratada como um bug de segurança. Se a memória
-falha, um backend está inalcançável ou uma implantação falha, a resposta da
-API e a UI devem dizê-lo explicitamente — sem sucesso falso, sem cair para
-dados fictícios. Essa regra existe porque incidentes reais mostraram que as
+Degradação silenciosa é tratada como bug de segurança. Se o recall de memória
+falha, um backend está inalcançável ou uma implantação falha, a resposta da API
+e a UI precisam dizer isso explicitamente — sem sucesso falso, sem cair para
+dados fingidos. Essa regra existe porque incidentes reais mostraram que as
 falhas invisíveis são as perigosas.
 
 ## Aprofundar-se
 
-- [O Ciclo Fechado](./closed-loop.md) — onde os portões de segurança se situam no fluxo.
+- [O Ciclo Fechado](./closed-loop.md) — onde os portões de segurança ficam no fluxo.
 - [Arquitetura em Camadas](./layered-architecture.md) — as camadas que a segurança atravessa.
 - [Documentação do kirino](https://kirino.docs.celestia.world) — o modelo de autenticação em detalhe.
-- Documentação do evernight — intermediação de protocolos e portões de escrita.

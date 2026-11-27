@@ -6,11 +6,9 @@ your administrator or optional.
 
 ## Desktop app (shittim-chest)
 
-The shittim-chest desktop app is published to
-[GitHub Releases](https://github.com/celestia-island/shittim-chest/releases)
-from every `v*` tag. Installers are **unsigned** — expect an OS security
-warning on first launch. The page stays empty until the first beta tag is
-pushed.
+The shittim-chest desktop app is published from every `v*` tag. Installers are
+**unsigned** — expect an OS security warning on first launch. The download page
+stays empty until the first beta tag is pushed.
 
 | Platform | Asset |
 | --- | --- |
@@ -25,29 +23,16 @@ shittim-chest [webUI](https://dev.celestia.world).
 ## Admin panel (arona)
 
 Arona is server-hosted — there is nothing to install locally. Open the panel
-URL your administrator provides (`https://dev.celestia.world` in a public
-deployment, or `http://<host>:8420` internally) and sign in with your
-invitation.
+URL your administrator provides and sign in with your invitation.
 
-## Agent runtime (entelecheia/scepter, optional)
+## Agent runtime (optional)
 
-For advanced users who run agents themselves, entelecheia's README prescribes
-the unified installer from the plana repo
+Users who run the agent platform themselves use the unified installer in
+[plana](https://github.com/celestia-island/plana/tree/master/scripts/install)
 ([Linux/macOS](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.sh),
-[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)):
-
-```bash
-git clone https://github.com/celestia-island/plana.git
-# Also clone entelecheia, evernight, scriptum, shittim-chest alongside arona/
-cd arona/scripts/install
-bash celestia-install.sh --source-root ../../..
-```
-
-Windows equivalent (WSL2): `.\celestia-install.ps1 -SourceRoot ..\..\..`
-
-To build entelecheia itself from source: `just bootstrap` installs the
-workspace, then `just dev` launches the TUI. Prerequisites are Rust 1.85+,
-Docker, and the `just` task runner.
+[Windows](https://github.com/celestia-island/plana/blob/master/scripts/install/celestia-install.ps1)).
+Everything is built from the ecosystem's own repositories, so the prerequisites
+are a Rust toolchain, Docker, and the `just` task runner.
 
 ## Where to go deeper
 

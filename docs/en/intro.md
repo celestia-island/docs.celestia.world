@@ -1,50 +1,68 @@
 # Welcome to celestia-island
 
-**celestia-island** is a suite of projects for industrial AI control: multi-agent
-collaboration, remote operations, and safety-critical automation. This site is
-its *why* — the philosophy, the ecosystem map, and the entry point. The *how*
-lives in per-project documentation sites linked from here.
+**celestia-island** is a suite of projects for industrial AI control:
+multi-agent collaboration, remote operations, and safety-critical automation.
+This site is its *why*; the *how* belongs to each project.
 
-## Answering three questions
+## The projects
 
-| Question | Where | What you will find |
-| --- | --- | --- |
-| **Why does this exist?** | [Philosophy](./philosophy/why.md) | The problem we are solving, the closed loop, the safety doctrine, and the long-term horizon |
-| **What is inside?** | [Ecosystem](./ecosystem/projects.md) | Every project, its role in the loop, and where its documentation lives |
-| **How do I start?** | [Get Started](./getting-started/quickstart.md) | The 30-minute path from account to a working chat agent and industrial control |
+A linked name is a public repository you can read today. An unlinked name is a
+product that ships with the platform whose source is not public yet. The
+detailed table is in the [Projects Map](./ecosystem/projects.md).
 
-## The one-paragraph summary
+**Platform** — [kirino](https://github.com/celestia-island/kirino) (zero-trust
+auth), [plana](https://github.com/celestia-island/plana) (protocol and platform
+facilities), [hikari](https://github.com/celestia-island/hikari) (UI components),
+[provider-registry](https://github.com/celestia-island/provider-registry) (model
+catalogue), arona (model deployment panel), entelecheia (agent orchestration),
+shittim-chest (chat and workbench), scriptum (terminal client).
 
-celestia-island builds the **closed loop** from discovery to verification for
-AI-driven industrial control: discover → install → authenticate → deploy a
-model → chat and run agents → control industrial equipment → verify everything.
-The loop is assembled from small, strictly layered pieces: authentication
-primitives ([kirino](https://github.com/celestia-island/kirino)), platform
-facilities ([plana](https://github.com/celestia-island/plana)), UI components
-([hikari](https://github.com/celestia-island/hikari)), and services that only
-implement business logic ([arona](https://github.com/celestia-island/arona),
-[shittim-chest](https://github.com/celestia-island/shittim-chest),
-[entelecheia](https://github.com/celestia-island/entelecheia),
-[evernight](https://github.com/celestia-island/evernight)). Nothing is ever
-implemented twice: generic capability is built upstream once, and consumed by
-every service downstream.
+**Industrial and edge** — evernight (protocol broker),
+[aoba](https://github.com/celestia-island/aoba) (Modbus CLI),
+[hare](https://github.com/celestia-island/hare) (`no_std` bridge),
+[kei](https://github.com/celestia-island/kei) (edge kernel),
+[shun](https://github.com/celestia-island/shun) (installers and flashers),
+evernight-appliance (the appliance distribution), electrode_recon (compute engine).
 
-The reason for all of it is a simple observation: on the Moon a round-trip
-takes 2.6 seconds, on Mars 6 to 44 minutes. Robots out there cannot wait for a
-human on Earth — they must be locally autonomous. The decision layer, world
-model, and safety gates we are building for industrial control today are the
-same shape that autonomy will need tomorrow.
+**Libraries and tools** — [noa](https://github.com/celestia-island/noa)
+(agent-native version control), [seia](https://github.com/celestia-island/seia)
+(web search), [aris](https://github.com/celestia-island/aris) (browser engine),
+[shirabe](https://github.com/celestia-island/shirabe) (browser automation),
+[kou](https://github.com/celestia-island/kou) (virtual terminal),
+[ichika](https://github.com/celestia-island/ichika) (thread pipelines),
+[yuuka](https://github.com/celestia-island/yuuka) (structure macros),
+[hifumi](https://github.com/celestia-island/hifumi) (versioned serialization),
+[lacrymira](https://github.com/celestia-island/lacrymira) (typed data access),
+[himari](https://github.com/celestia-island/himari) (formula IR),
+[kotama](https://github.com/celestia-island/kotama) (reverse engineering),
+[ayane](https://github.com/celestia-island/ayane) (mail service),
+[tairitsu](https://github.com/celestia-island/tairitsu) (component-model
+full-stack), [akivili](https://github.com/celestia-island/akivili) (plugin host),
+[celestia-plugin](https://github.com/celestia-island/celestia-plugin) (Python
+SDK), [ratatui-markdown](https://github.com/celestia-island/ratatui-markdown)
+(Markdown in the terminal), arcaea (persona protocol), official-plugins (plugin
+packages).
 
-## Where everything lives
+**Infrastructure** — [celestia-devtools](https://github.com/celestia-island/celestia-devtools)
+(build and lint toolchain), [cherino](https://github.com/celestia-island/cherino)
+(agent containers), [malkuth](https://github.com/celestia-island/malkuth)
+(service supervision), [lagrange](https://github.com/celestia-island/lagrange)
+(the documentation engine behind this site),
+[celestia-artifacts](https://github.com/celestia-island/celestia-artifacts)
+(release artifacts), [sysl](https://github.com/celestia-island/sysl) (the
+license), celestia-integration (integration tests), fuuka (self-hosted CI),
+celestia-erp (business back office).
 
-- **Per-project documentation** — `<name>.docs.celestia.world`, built from each
-  repository. Find the full list in [Sites & Ownership](./ecosystem/sites.md).
-- **Organization presence** — [celestia-island on GitHub](https://github.com/celestia-island).
-- **Product entries (WIP during the beta)** — [dev.celestia.world](https://dev.celestia.world)
-  (the panel: account, chat, agents), the anonymous
-  [tour](https://demo.dev.celestia.world/tour) face, and the company site
-  [celestia.ac.cn](https://celestia.ac.cn); the model platform's own admin
-  panel stays deployment-internal until the beta ends.
+**Sites** — [celestia-island.github.io](https://celestia-island.github.io),
+[e.celestia.world](https://e.celestia.world),
+[dev.celestia.world](https://dev.celestia.world) (the panel, invite-gated during
+the beta), [celestia.ac.cn](https://celestia.ac.cn), and this hub.
+
+## Where to go next
+
+- [Why celestia-island](./philosophy/why.md) — the problem, the closed loop, the safety doctrine.
+- [The Closed Loop](./philosophy/closed-loop.md) — discover → install → authenticate → deploy → chat and agents → industrial control → verify.
+- [Quickstart](./getting-started/quickstart.md) — the 30-minute path through it.
 
 Use the language switcher (bottom-right) to read this site in another language.
 Content is authored in English; translations follow the same structure.

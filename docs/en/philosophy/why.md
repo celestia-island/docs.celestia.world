@@ -41,21 +41,22 @@ components from [hikari](../ecosystem/projects.md). A service that
 reimplements an upstream feature is a bug, not an achievement. See
 [Layered Architecture](./layered-architecture.md) for the full doctrine.
 
-## The horizon: local autonomy
+## The outlook: local autonomy
 
-Latency is destiny. On the Moon a signal round-trip takes 2.6 seconds; on Mars
-it takes 6 to 44 minutes. Machines there cannot depend on a human on Earth —
-they must make decisions locally, safely, and predictably.
+A round trip is not free. Wherever the link is long, congested, or simply not
+there, a machine cannot depend on a human somewhere else — it has to decide
+locally, safely, and predictably.
 
 The shape we are building for industrial control today — a decision layer that
 orchestrates agents, a world model that knows what is happening *now*, and a
-safety gate that says *no* — is the same shape lunar and Martian robots will
-need. We are not building for Mars today; we are building so that the system
-that reaches Mars is this one. See [Narrative & Horizon](./narrative.md).
+safety gate that says *no* — is the shape any deployment needs once the round
+trip stops being free. We are not building a different system for that future;
+we are building this one so it is already the right shape. See
+[Narrative & Horizon](./narrative.md).
 
 ## Where to go deeper
 
 - [The Closed Loop](./closed-loop.md) — the loop, segment by segment.
 - [Layered Architecture](./layered-architecture.md) — how the pieces stay ordered.
 - [Safety Principles](./safety.md) — what safety-critical means here.
-- [Narrative & Horizon](./narrative.md) — the five-year road and the reasoning behind it.
+- [Narrative & Horizon](./narrative.md) — the trajectory and the reasoning behind it.

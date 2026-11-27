@@ -4,14 +4,13 @@ Industrielle Steuerung ist sicherheitskritisch: Ein Fehler kann physische
 Anlagen bewegen. Sicherheit wird daher in die Architektur hineinentworfen,
 nicht am Ende aufgesetzt.
 
-## 1. Das LLM berührt die Welt nie direkt
+## 1. Das Modell berührt die Welt nie direkt
 
-In [entelecheia](https://github.com/celestia-island/entelecheia) sieht das
-Modell nur eine Handvoll primitiver Werkzeuge (`exec`, `write_to_var`). Alle
-echte Arbeit geschieht in einer sandboxed Ausführungspipeline, in der
-Agentencode über eine große Fläche von MCP-Tools auf mehrere Agenten
-verteilt wird. Das Modell kann kein Verhalten erfinden; es kann nur die
-Primitive aufrufen, die die Plattform bereitstellt.
+Ein Modell ist ein Planer, kein Aktuator. Es kann Arbeit anfordern; ausführen
+kann es sie nicht. Zwischen dem Modell und der Anlage stehen eine Sandbox, eine
+Richtlinienprüfung und — bei irreversiblen Aktionen — ein Mensch. Das Modell
+kann kein Verhalten erfinden, das außerhalb der Primitive liegt, die die
+Plattform bereitstellt.
 
 ## 2. Sicherheit in mehreren Schichten
 
@@ -24,29 +23,30 @@ nach die vollständige Kette:
 4. **Menschliche Bestätigung** — das letzte Wort bei irreversiblen Aktionen
 5. **Prüfprotokoll** — alles wird aufgezeichnet, nichts ist still
 
-## 3. Gemischte Kritikalität: Echtzeit hängt nie vom LLM ab
+Keine Schicht vertraut der vorherigen. Eine zu überspringen ist ein Defekt,
+keine Abkürzung.
 
-Die Systeme sind nach Antwortzeit getrennt, und **die schnelleren Schichten
-hängen nie davon ab, dass ein Modell online ist**:
+## 3. Gemischte Kritikalität: Echtzeit hängt nie vom Modell ab
 
-| Schicht | Takt | Läuft auf | LLM-Abhängigkeit |
-| --- | --- | --- | --- |
-| L3 — Kognition | Sekunden–Minuten | arona, shittim-chest, entelecheia (Linux) | primärer Konsument |
-| L2 — Weltmodell | 10–50 Hz | Plattform-Dienste | optional |
-| L1 — Reaktiv / Edge | 10–100 Hz | evernight auf SBCs; kleine lokale Modelle | keine |
-| L0 — Echtzeit-Steuerung | 100 Hz–1 kHz | MCU-Schnellschleife, lokale Verriegelungen | nie |
+Das System ist nach Antwortzeit getrennt, und **je schneller eine Schicht ist,
+desto weniger hängt sie davon ab, dass ein Modell online ist**:
 
-Fällt das LLM offline, degradiert die Plattform kontrolliert: entweder in
+| Schicht | Was sie tut | LLM-Abhängigkeit |
+| --- | --- | --- |
+| Kognition | Planung, Konversation, Orchestrierung | primärer Konsument |
+| Weltzustand | was gerade jetzt gilt, nicht was gesagt wurde | optional |
+| Reaktiv | lokale Reaktionen auf der Maschine selbst | keine |
+| Echtzeit-Steuerung | Verriegelungen und die schnelle Schleife | nie |
+
+Fällt das Modell offline, degradiert die Plattform kontrolliert: entweder in
 einen sicheren Zustand oder in die Fortführung einer bereits genehmigten
-Trajektorie. Hardware-Watchdogs verankern diese Semantik — Steuerung wartet nie
-auf einen Netzwerkaufruf.
+Trajektorie. Steuerung wartet nie auf einen Netzwerkaufruf.
 
 ## 4. Zero Trust, fail closed
 
 - Authentifizierung und Autorisierung kommen aus
-  [kirino](https://github.com/celestia-island/kirino): JWT mit kurzlebigen
-  Sitzungen, Argon2id-Passwort-Hashing, Login-Ratenbegrenzung und eine
-  RBAC-Engine.
+  [kirino](https://github.com/celestia-island/kirino), der Zero-Trust-Auth-Schicht
+  des Ökosystems. Nichts wird vertraut, nur weil es im Netzwerk liegt.
 - Die Registrierung ist standardmäßig einladungsbasiert; der erste Nutzer
   einer Bereitstellung wird zum Admin, danach sperrt sich die
   Selbstregistrierung.
@@ -68,4 +68,3 @@ sind.
 - [Der Geschlossene Regelkreis](./closed-loop.md) — wo die Sicherheitssperren im Ablauf sitzen.
 - [Geschichtete Architektur](./layered-architecture.md) — die Schichten, die Sicherheit durchzieht.
 - [kirino-Dokumentation](https://kirino.docs.celestia.world) — das Auth-Modell im Detail.
-- evernight-Dokumentation — Protokoll-Vermittlung und Schreibsperren.

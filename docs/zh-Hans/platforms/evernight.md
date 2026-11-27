@@ -1,54 +1,32 @@
-# Evernight — 工业协议 Broker
+# Evernight — 工业协议网关
 
-Evernight 是工业边缘：一个跨平台 broker，会说现场协议（Modbus、S7comm、MC Protocol、EtherNet/IP、EtherCAT、CAN、OPC UA、MQTT 等），轮询传感器、评估告警，并把事件推入 celestia-island 栈。它还管理节点上的模型服务器（ollama / whisper / vLLM）用于边缘推理。
+Evernight 是工业边缘：一个跨平台的网关，会说真实现场出现的那些协议——Modbus、S7comm、MC Protocol、EtherNet/IP、EtherCAT、CAN、OPC UA、MQTT——轮询传感器、评估告警，并把事件推入平台。它还在同一节点上管理模型运行时，用于留在本地的推理。
 
-## 架构一览
+## 它做什么
 
 ```mermaid
-flowchart TD
-    C["现场：PLC / MCU / 传感器（Modbus、S7comm、MC、EtherCAT、CAN、OPC UA、…）"]
-    subgraph G["evernight（边缘节点）"]
-        N0["协议适配器：轮询 → 解码 → 类型化读数"]
-        N1["告警引擎：阈值规则 → 触发事件"]
-        N2["时序：双时间戳缓冲读数"]
-        N3["录制/回放：环形缓冲 → 分段落盘 → 回放注入"]
-        N4["模型服务器管理：部署 ollama/whisper/vLLM（GPU 优先）"]
-        N5["北向：Unix socket JSON-RPC 触发 → entelecheia"]
-    end
-    C --> G
-    G --> B["scepter（agent、工业工作流、写入审批）"]
+flowchart LR
+    F["现场设备与控制器"] --> B["协议网关"]
+    B --> AL["告警与事件"]
+    B --> RE["录制与回放"]
+    B --> ED["边缘推理"]
+    B -->|"northbound"| P["平台：智能体、面板、审批"]
 ```
 
-## 1. 现场协议
+- **现场协议** —— 适配器把各协议的读与写转换为类型化读数与命令。写操作有门控：工业写入需要上游的策略校验与人工审批，然后才有任何动作。
+- **感知与告警** —— 每个站按自己可配置的周期轮询；失败以健康事件呈现，而不是沉默。告警规则评估读数并发出带路由的事件。
+- **时间与录制** —— 读数同时携带墙钟与单调时间戳，因此显示与排序永不失和。录制管线维护环形缓冲并把分段写入磁盘，还能把它们回放进触发路径——这是世界状态与学习共同的前提。
+- **边缘模型服务** —— 模型运行时在节点本身上部署与监督，GPU 优先、CPU 回退。正是它让反应式推理不依赖于在线的模型。
+- **北向** —— 事件经由本地 socket 流入平台；设备与云网关注册节点身份与遥测。一切物理 I/O 都经过 evernight。
 
-适配器把各协议的读写转换为类型化读数与命令。写路径有门控：工业写入需要
-平台侧的策略校验与人工审批（OreXis + 审批流）。
+## 怎么用
 
-## 2. 感知与告警
+运行在接触设备的那台机器上。它之上的一切——智能体、面板、审批——都通过平台与它对话，从不直接面对现场总线。
 
-- 每站独立轮询循环、周期可配；失败以上报健康事件呈现。
-- 告警引擎对读数评估阈值规则，向触发 sink 发出带 topic 路由的事件。
+协议配置、设备发行版与驱动契约属于产品本身；本站不重复它们。
 
-## 3. 时间与录制
+## 深入阅读
 
-读数携带双时间戳（墙钟用于显示/审计，单调用于排序/融合）。录制/回放管线
-维护环形缓冲、分段落盘，可把回放数据重新注入触发管线——是世界状态与
-学习层的共同前提。
-
-## 4. 边缘模型服务
-
-`model_server` 管理节点上的模型运行时：容器化部署模型（ollama、whisper.cpp、
-vLLM），GPU 优先、CPU 回退——是"反应式边缘推理永远不依赖在线 LLM"的构件。
-
-## 5. 北向集成
-
-事件经 Unix-socket JSON-RPC 触发 sink（topic 路由）流入 entelecheia 的
-scepter；设备↔云网关注册节点身份与遥测。一切物理 I/O 都经过 evernight。
-
-## 环境变量参考（节选）
-
-| 变量 | 用途 |
-|---|---|
-| `EVERNIGHT_SOCK` | 到 scepter 的触发/遥测 Unix socket |
-| `EVERNIGHT_*` | 各协议连接配置 |
-| 容器/GPU 环境 | 模型服务器部署（ollama/vLLM 运行时） |
+- [安全原则](../philosophy/safety.md) —— 为什么写操作有门控。
+- [Entelecheia](./entelecheia.md) —— 上面那一层，审批所在之处。
+- [闭环](../philosophy/closed-loop.md) —— 这一环嵌在哪里。

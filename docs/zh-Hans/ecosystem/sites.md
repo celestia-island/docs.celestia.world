@@ -7,7 +7,7 @@
 | 站点 | 拥有 | 内容 |
 | --- | --- | --- |
 | [docs.celestia.world](https://docs.celestia.world) | 生态 | 哲学、生态地图、快速开始、治理（许可证、CLA、行为准则、安全、贡献指南） |
-| `<name>.docs.celestia.world` | 每个项目 | 指南、架构、设计、参考——由项目自身仓库构建 |
+| `<name>.docs.celestia.world` | 每个已发布文档站的项目 | 指南、架构、设计、参考——由项目自身仓库构建 |
 | [celestia-island.github.io](https://celestia-island.github.io) | 组织 | 存在、链接、品牌资产 |
 | [e.celestia.world](https://e.celestia.world) | 公众面孔 | 落地页、定价、博客、行动号召 |
 | [dev.celestia.world](https://dev.celestia.world) | 面板与开发者门户 | 账户、聊天、智能体与运营控制台（内测期间邀请制） |

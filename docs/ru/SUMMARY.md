@@ -33,7 +33,7 @@
 
 # Платформы
 
-- [Arona — шлюз моделей, память и кластер](./platforms/arona.md)
+- [Arona — шлюз моделей и панель развёртывания](./platforms/arona.md)
 - [Entelecheia — агентная платформа и память](./platforms/entelecheia.md)
 - [Shittim Chest — чат, панели и интеграции](./platforms/chest.md)
 - [Evernight — брокер промышленных протоколов](./platforms/evernight.md)

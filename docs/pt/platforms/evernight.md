@@ -1,68 +1,52 @@
 # Evernight — Broker de Protocolos Industriais
 
-O Evernight é a borda industrial: um broker multiplataforma que fala os
-protocolos de campo (Modbus, S7comm, MC Protocol, EtherNet/IP, EtherCAT,
-CAN, OPC UA, MQTT, …), faz polling de sensores, avalia alarmes e faz push de
-eventos para a stack celestia-island. Ele também gerencia servidores de
-modelo no nó (ollama / whisper / vLLM) para inferência na borda.
+A Evernight é a borda industrial: um broker multiplataforma que fala os
+protocolos encontrados num site real — Modbus, S7comm, MC Protocol, EtherNet/IP,
+EtherCAT, CAN, OPC UA, MQTT —, consulta sensores, avalia alarmes e empurra
+eventos para dentro da plataforma. Ela também gerencia runtimes de modelo no
+mesmo nó, para inferência que permanece local.
 
-## Arquitetura num relance
+## O que ela faz
 
 ```mermaid
-flowchart TD
-    C["Campo: PLC / MCU / sensores （Modbus, S7comm, MC, EtherCAT, CAN, OPC UA, …）"]
-    subgraph G["evernight （nó de borda）"]
-        N0["Adaptadores de protocolo: polling → decodificação → leituras tipadas"]
-        N1["Motor de alarmes: regras de limiar → eventos de gatilho"]
-        N2["Séries temporais: leituras em buffer com timestamps duplos"]
-        N3["Gravação/replay: ring buffer → armazenamento segmentado → injeção de replay"]
-        N4["Gerenciador de servidores de modelo: implanta ollama/whisper/vLLM （GPU primeiro）"]
-        N5["Northbound: gatilhos JSON-RPC por Unix-socket → entelecheia"]
-    end
-    C --> G
-    G --> B["scepter （agentes, fluxos de trabalho industriais, aprovação de escrita）"]
+flowchart LR
+    F["Field devices and controllers"] --> B["Protocol broker"]
+    B --> AL["Alarms and events"]
+    B --> RE["Recording and replay"]
+    B --> ED["Edge inference"]
+    B -->|"northbound"| P["Platform: agents, panels, approvals"]
 ```
 
-## 1. Protocolos de campo
+- **Protocolos de campo** — adaptadores transformam a leitura e a escrita de
+  cada protocolo em leituras e comandos tipados. As escritas são controladas por
+  portão: uma escrita industrial precisa de validação de política e de aprovação
+  humana a montante antes de qualquer movimento.
+- **Sensoriamento e alarmes** — cada estação consulta no seu próprio ciclo
+  configurável; as falhas aparecem como eventos de saúde em vez de silêncio. As
+  regras de alarme avaliam as leituras e emitem eventos roteados.
+- **Tempo e gravação** — as leituras carregam tanto um timestamp de relógio de
+  parede quanto um monotônico, para que exibição e ordenação nunca discordem. O
+  pipeline de gravação mantém um buffer circular e escreve segmentos em disco,
+  e pode reproduzi-los de volta no caminho de gatilho — o pré-requisito tanto
+  para o estado do mundo quanto para o aprendizado.
+- **Serviço de modelos na borda** — runtimes de modelo são implantados e
+  supervisionados no próprio nó, com preferência por GPU e fallback para CPU.
+  É isso que torna a inferência reativa independente de um modelo online.
+- **Norte** — os eventos sobem para a plataforma por um socket local; gateways
+  de dispositivo e de nuvem registram a identidade do nó e a telemetria. Toda
+  E/S física passa pela evernight.
 
-Adaptadores convertem a leitura/escrita nativa de cada protocolo em leituras
-e comandos tipados. O caminho de escrita é protegido por portões: escritas
-industriais exigem validação de política e aprovação humana na plataforma
-(OreXis + fluxos de aprovação).
+## Como você a usa
 
-## 2. Sensoriamento e alarmes
+Na máquina que toca o equipamento. Tudo acima dela — agentes, painéis,
+aprovações — fala com ela pela plataforma, nunca diretamente com o barramento
+de campo.
 
-- Laços de polling por estação com períodos configuráveis; falhas aparecem
-  como eventos de saúde.
-- O motor de alarmes avalia regras de limiar sobre as leituras e emite
-  eventos roteados por tópico para o coletor de gatilhos northbound.
+A configuração de protocolos, a distribuição de appliance e a referência de
+drivers pertencem ao produto; este hub não as duplica.
 
-## 3. Tempo e gravação
+## Aprofundar-se
 
-Leituras carregam timestamps duplos (relógio de parede para
-exibição/auditoria, monótono para ordenação/fusão). Um pipeline de
-gravação/replay mantém um ring buffer, persiste segmentos e pode injetar
-dados reproduzidos de volta no pipeline de gatilhos — o pré-requisito
-compartilhado para as camadas de estado do mundo e de aprendizado.
-
-## 4. Servir modelos na borda
-
-O `model_server` gerencia runtimes de modelo no nó: implantação de modelos
-em contêineres (ollama, whisper.cpp, vLLM) com alocação GPU primeiro, CPU
-como fallback — o bloco de construção para inferência reativa na borda que
-nunca depende de um LLM online.
-
-## 5. Integração northbound
-
-Eventos fluem para o scepter do entelecheia via um coletor de gatilhos
-JSON-RPC por Unix-socket (roteado por tópico); o gateway
-dispositivo↔nuvem registra identidade e telemetria do nó. Tudo o que é
-físico passa pelo evernight.
-
-## Referência de env (subconjunto)
-
-| Variável | Finalidade |
-|---|---|
-| `EVERNIGHT_SOCK` | Socket Unix para gatilhos/telemetria para o scepter |
-| `EVERNIGHT_*` | Configuração de conexão por protocolo |
-| env de contêiner/GPU | Implantação de servidores de modelo (runtimes ollama/vLLM) |
+- [Princípios de Segurança](../philosophy/safety.md) — por que as escritas passam por portão.
+- [Entelecheia](./entelecheia.md) — a camada acima, onde ficam as aprovações.
+- [O Ciclo Fechado](../philosophy/closed-loop.md) — onde este segmento se encaixa.

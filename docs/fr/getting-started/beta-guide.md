@@ -7,16 +7,13 @@ invitation.
 ## Ce que couvre la bêta
 
 1. **Enregistrer un compte et créer une clé API** dans le panneau
-   d'administration API cloud [Arona](https://github.com/celestia-island/arona).
-   Le panneau est interne uniquement pendant la bêta (`arona:8420` sur l'hôte
-   du déploiement).
+   d'administration API cloud Arona. Le panneau reste interne pendant la bêta.
 2. **Déployer un modèle** et le lier à un backend de chat via le panneau.
 3. **Chatter et exécuter des agents** depuis l'application de bureau
-   [shittim-chest](https://github.com/celestia-island/shittim-chest) ;
-   l'orchestration des agents est fournie par le runtime **scepter**
-   d'entelecheia.
+   shittim-chest ; l'orchestration des agents est fournie par la plateforme
+   d'agents qui se trouve derrière.
 4. **Contrôle industriel** : les opérations à distance et le courtage de
-   protocoles passent par [evernight](https://github.com/celestia-island/evernight).
+   protocoles passent par evernight.
 
 ## Obtenir l'accès
 
@@ -28,15 +25,10 @@ invitation.
 
 ## Signaler des bugs
 
-Signalez les problèmes sur GitHub, un problème par bug, en utilisant les
-modèles d'issue :
-
-| Produit | Dépôt |
-| --- | --- |
-| Chat desktop/web — shittim-chest | [celestia-island/shittim-chest](https://github.com/celestia-island/shittim-chest/issues) |
-| Orchestration d'agents — entelecheia/scepter | [celestia-island/entelecheia](https://github.com/celestia-island/entelecheia/issues) |
-| Contrôle industriel — evernight | [celestia-island/evernight](https://github.com/celestia-island/evernight/issues) |
-| Panneau d'administration & plateforme — arona/plana | [celestia-island/arona](https://github.com/celestia-island/arona/issues) |
+Signalez les problèmes sur GitHub, un problème par bug, en utilisant les modèles
+d'issue. Le suivi des bugs de chaque produit est le dépôt du produit ; si vous
+n'avez pas accès à un dépôt, envoyez plutôt votre rapport via les canaux listés
+dans [Contribuer](../meta/CONTRIBUTING.md).
 
 Incluez toujours : les informations d'environnement (OS, versions des
 produits), les étapes pour reproduire, le comportement attendu par rapport au
@@ -48,9 +40,8 @@ comportement réel, et les journaux pertinents.
   pendant la bêta.
 - L'inscription est fermée par défaut ; l'inscription ouverte n'est pas encore
   disponible.
-- Le relais de dispositifs WebRTC et la télémétrie SCADA en direct exigent une
-  instance scepter en fonctionnement ; sans elle, l'UI retombe sur des données
-  de démo simulées.
+- La télémétrie des dispositifs en direct nécessite une plateforme d'agents en
+  fonctionnement ; sans elle, l'UI retombe sur des données de démo simulées.
 - Les applications mobiles et les plugins IDE ne font pas partie de cette bêta.
 - Certaines langues de documentation sont des traductions partielles.
 

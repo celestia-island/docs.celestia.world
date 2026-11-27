@@ -1,121 +1,48 @@
-# Arona — 모델 게이트웨이, 메모리 및 클러스터
+# Arona — 모델 게이트웨이 및 배포 패널
 
-Arona는 플랫폼의 컨트롤 플레인입니다: 모델 게이트웨이, 자체 배포 런타임
-매니저, 웹 대시보드. 이것이 풀려는 문제는 "어떤 머신에 내려받은 모델"을
-플랫폼 전체가 라우팅하고, 계량하고, 기억할 수 있는 것으로 바꾸는 일입니다.
-이 가이드는 기능별로 구성되어 있습니다: 모델 라우팅, 장기 메모리, 그리고
-다중 노드 클러스터.
+Arona는 모델이 플랫폼이 쓸 수 있는 무언가가 되는 곳입니다: 자체 하드웨어 앞에
+놓인 OpenAI 호환 게이트웨이와, 그것을 관리하는 콘솔입니다. 한 가지 질문에
+답합니다 — 모델은 어떻게 "어딘가에 내려받힌" 상태에서 "플랫폼의 모든
+사람이 쓸 수 있고, 계량되고, 라우팅 가능한" 상태가 되는가.
 
-## 한눈에 보는 아키텍처
+## 하는 일
 
 ```mermaid
-flowchart TD
-    C["shittim-chest / 모든 OpenAI 클라이언트"]
-    subgraph G["Arona 게이트웨이 （node-2:8420）"]
-        N0["라우터: 별칭 → 백엔드 전체에 걸친 최소 카운트 로드 밸런싱"]
-        N1["메모리 게이트웨이: 리콜 주입 → 채팅 → 라이트백 （에피소드）"]
-        N2["에이전트 컨트롤 플레인 （/ws/agent）"]
-    end
-    C -->|"/v1/chat/completions （Bearer API key）"| G
-    N2 --> T["GPU 노드의 arona-agent"]
-    G --> B["백엔드: ollama · 외부 （OpenAI 호환） · 에이전트 배포 엔진"]
+flowchart LR
+    C["Your client"] -->|"OpenAI-compatible /v1"| G["Model gateway"]
+    P["Management panel"] --> G
+    G --> R["Routing with session affinity"]
+    R --> B1["A runtime on a node"]
+    R --> B2["Any OpenAI-compatible backend"]
+    G --> M["Metering and quotas"]
 ```
 
-모든 관리 트래픽(대시보드, 에이전트, 메모리)은 JSON-RPC 2.0 메시지를 실은
-WebSocket으로 실행됩니다; 유일한 REST 표면은 OpenAI 호환 `/v1/*`
-엔드포인트입니다.
+- **게이트웨이** — OpenAI 호환 `/v1/*` 엔드포인트를 제공하므로, 어떤
+  OpenAI 호환 클라이언트든 직접 호스팅한 모델과 대화할 수 있습니다.
+- **배포** — 모델 가중치를 GPU 노드로 내려받아 그곳에서 런타임을 시작하고,
+  결과를 라우팅 가능한 백엔드로 등록합니다. 배포를 중지하면 다시
+  등록이 해제됩니다.
+- **라우팅** — 백엔드는 로컬 런타임 또는 임의의 OpenAI 호환 서비스로
+  등록되고, 헬스 프로브를 거친 뒤 세션 친화성으로 라우팅됩니다. 첫 헬스
+  프로브를 통과하지 못한 백엔드는 시도되지 않고 거부됩니다.
+- **신원과 계량** — API key가 `/v1/*`를 인증합니다; 모든 호출은 키별로
+  토큰, 모델, 백엔드, 비용과 함께 기록되며, 등급(tier)이 할당량을
+  적용합니다.
 
-## 1. 모델
+## 사용 방법
 
-### 백엔드 등록
+대부분의 사람은 패널을 통해 Arona를 만납니다: API key를 만들고, 모델을
+노드에 지정하고, 헬스와 사용량을 확인합니다. 채팅 자체는 다른 곳에
+있습니다 — 워크벤치가 RPC 표면을 통해 Arona와 대화하며, Arona는 자체 채팅
+UI를 제공하지 않습니다.
 
-백엔드는 `ollama` 또는 `external`(vLLM, TGI, LMDeploy, TileRT의 라우터 등
-모든 OpenAI 호환 서버)로 등록됩니다:
+정확한 API 표면, 배포 레시피, 설정 참조는 제품에 속하며 이 허브는 그것을
+중복하지 않습니다.
 
-```bash
-POST /api/admin/backends        # Bearer ADMIN_TOKEN
-  {"type": "ollama", "name": "node3-ollama", "url": "http://host:11434"}
-  {"type": "external", "name": "my-vllm", "url": "http://host:8000",
-   "api_key": "...", "models": ["qwen2.5-72b"]}
-```
+> 초기 개발 단계입니다. 아직 공개 사용에 적합하지 않습니다.
 
-등록된 백엔드는 재시작 후에도 유지되며(`backend_configs` 테이블) 지속적으로
-헬스 프로브됩니다: 외부 백엔드는 첫 `/v1/models` 프로브가 성공할 때까지
-실패 폐쇄(fail-closed) 상태이며, 모델 목록은 동적으로 갱신됩니다.
+## 더 알아보기
 
-### 노드에 모델 자체 배포하기
-
-`arona-agent` 바이너리는 GPU 머신에서 실행되어 패널로 역방향 연결됩니다.
-대시보드 **Agents** 페이지에서(또는 `agent_id`를 비워 가장 덜 부하가 걸린
-노드를 자동 선택하는 `agents.deploy`로) 모델을 배포하세요. 에이전트는
-모델을 내려받고(HuggingFace 또는 Ollama 레지스트리), 엔진(llama.cpp /
-vLLM / Ollama)을 시작하고, 엔진 엔드포인트를 보고합니다 — 패널은 이를
-라우팅 가능한 `agent-{model}` 백엔드로 자동 등록하고 중지 시 제거합니다.
-
-엔진 바인드 주소: 패널에 트래픽을 제공해야 하는 노드에서는
-`ARONA_AGENT_BIND_ADDR=0.0.0.0`을 설정하세요. 참고: 엔진 포트는 인증되지
-않습니다 — 신뢰할 수 있는 네트워크에서만 배포하세요.
-
-### 대화 어피니티
-
-대화는 하나의 백엔드에 고정됩니다(세션 어피니티), 이로써 런타임 KV 캐시를
-재사용할 수 있습니다. 고정된 백엔드가 비정상이 되면 라우터는 폴백한 뒤 다시
-고정합니다.
-
-## 2. 장기 메모리
-
-Arona는 **메모리 게이트웨이**입니다: 모델을 학습하지 않습니다 — 기존
-모델 주변에 메모리 서비스(entelecheia의 PhiLia 에이전트)를 오케스트레이션할
-뿐입니다.
-
-### 활성화
-
-```bash
-ARONA_MEMORY_URL=ws://<scepter-host>:8424/ws
-ARONA_MEMORY_TOKEN=<scepter 연결 토큰>
-ARONA_MEMORY_WRITEBACK=1        # 기본 켜짐; 0이면 라이트백 비활성화
-```
-
-### 채팅마다 일어나는 일
-
-1. **리콜** — 마지막 사용자 메시지가 임베딩되어 메모리 서비스에 조회되고,
-   관련 메모리가 `## Relevant Long-Term Memories` 시스템 섹션으로
-   주입됩니다(멱등).
-2. **채팅** — 조립된 컨텍스트가 모델로 라우팅됩니다.
-3. **라이트백** — 완료된 턴이 휴리스틱으로 추출되어(`User: … /
-   Assistant: …`, LLM 호출 없이) 메모리 그래프에 에피소드로 저장됩니다
-   (pgvector 기반, 재시작 후에도 유지).
-4. **상태** — 모든 응답은 `memory: enabled | disabled | offline`을
-   보고합니다; REST 표면은 `X-Arona-Memory` 헤더를 추가합니다. 실패가
-   채팅을 막는 일은 결코 없습니다; `offline`은 메모리 서비스에 도달할 수
-   없다는 뜻이며 항상 UI에 표시됩니다.
-
-호출별 재정의: `chat.send`는 `memory: true|false`를 받습니다.
-
-### 관리
-
-대시보드 **Memory** 페이지는 리콜/라이트백/삭제 활동을 보여주고 저장된
-노드를 삭제할 수 있게 합니다. 세션은 서버 쪽에 유지됩니다: `chat.send`에
-`conversation_id`를 전달하면 클라이언트가 아니라 서버가 이력을 조립합니다.
-
-## 3. 운영
-
-- **인증**: 첫 관리자 부트스트랩 이후 등록이 잠깁니다
-  (`ARONA_REGISTRATION_OPEN=1`로 다시 열립니다). 관리 엔드포인트는
-  `ARONA_ADMIN_TOKEN`을 요구합니다; 이 토큰이 없으면 실패
-  폐쇄(fail-closed)됩니다.
-- **계량**: 사용량과 비용이 API key별로 기록됩니다(`usage.list`, 쿼터와
-  비율 제한이 있는 빌링 티어).
-- **헬스**: `/api/health`와 `/v1/health`가 버전과 빌드 해시를 보고합니다.
-
-## 환경 변수 참조
-
-| 변수 | 용도 |
-|---|---|
-| `DATABASE_URL` | Postgres (필수) |
-| `JWT_SECRET` | 토큰 서명 (모의 모드 밖에서는 필수) |
-| `ARONA_HOST` / `ARONA_PORT` | 바인드 주소 (기본 `0.0.0.0:8420`) |
-| `ARONA_ADMIN_TOKEN` | `/api/admin/*`용 Bearer 토큰 |
-| `ARONA_REGISTRATION_OPEN` | 셀프 등록 다시 열기 |
-| `ARONA_MEMORY_URL` / `ARONA_MEMORY_TOKEN` / `ARONA_MEMORY_WRITEBACK` | 메모리 게이트웨이 |
-| `ARONA_AGENT_NAME` / `ARONA_PANEL_URL` / `ARONA_AGENT_BIND_ADDR` | 에이전트 노드 |
+- [Shittim Chest](./chest.md) — Arona를 소비하는 표면.
+- [Entelecheia](./entelecheia.md) — 채팅 뒤의 에이전트 플랫폼.
+- [빠른 시작](../getting-started/quickstart.md) — 첫 모델을 배포하기.

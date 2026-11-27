@@ -1,52 +1,56 @@
 # Narrativa e Horizonte
 
-## A latência é o destino
+## O formato do problema
 
-Uma ida e volta de sinal leva **2,6 segundos** até a Lua e **de 6 a 44
-minutos** até Marte. Máquinas tão longe da Terra não podem esperar instruções
-de um humano. Elas precisam tomar decisões **localmente, com segurança e
-previsibilidade** — com a autoridade para agir e a disciplina para recusar.
+Não estamos construindo um chatbot com um painel de controle aparafusado, e
+também não estamos construindo um sistema de controle com um modelo de
+linguagem aparafusado. As duas metades têm de ser um sistema só, porque no
+momento em que um modelo pode mover equipamento físico todo item de conforto de
+um produto de chat vira uma restrição de um sistema de controle: comportamento
+determinístico, latência limitada, trilha de auditoria e uma forma de dizer não.
 
-Esse é o horizonte para o qual este ecossistema é construído. Tudo o que
-construímos hoje para o controle industrial é escolhido de modo a ter a
-*mesma forma* que um robô autônomo lunar ou marciano precisará:
+O argumento completo está em [Por que celestia-island](./why.md). Esta página é
+a trajetória que decorre dele.
 
-- uma **camada de decisão de agentes** que planeja e orquestra
-- um **modelo de mundo** que sabe o que está acontecendo agora
-- um **portão de segurança** capaz de dizer não, respaldado por controle em
-  tempo real que nunca depende da rede
+## Para onde vai
 
-A Lua não é uma história de marketing: é a razão pela qual as camadas existem.
+**Mais perto da máquina.** Hoje o ciclo vai do navegador de um operador a um
+broker de protocolos e daí a um controlador. Cada passo mais perto do hardware
+tem menos modelo dentro e menos rede dentro, terminando num laço que roda
+localmente e não espera por uma ida e volta. Essa ordenação é o ponto: as partes
+que não podem falhar são as partes que nunca chamam para fora.
 
-## O caminho
+**Autonomia local como horizonte.** A mesma ordenação vale onde quer que uma
+ida e volta seja cara — um site remoto, um enlace intermitente, uma planta cujo
+operador não está no chão de fábrica. Máquinas que não podem esperar por um
+humano precisam decidir localmente, com segurança e de forma previsível: com a
+autoridade de agir e a disciplina de recusar. Essa é uma direção de longo prazo,
+não um plano com data, e é por isso que a camada de decisão, o modelo de mundo e
+o portão de segurança são construídos como coisas separadas em vez de um
+monólito.
 
-O ecossistema avança por portões — uma fase só é desbloqueada quando a
-anterior cumpre os seus critérios de saída:
+**Reutilizável por construção.** Seja qual for o formato da próxima implantação,
+ela deve ser montada a partir da mesma base de ativos em vez de reconstruída: o
+protocolo de rede, o estado do mundo, os portões de segurança e o pipeline de
+gravação são ativos compartilhados. Qualquer coisa que comece um novo precisa
+passar por revisão de arquitetura. E nenhuma linha de produto depende jamais de
+um núcleo não lançado — se o núcleo atrasar, a receita não atrasa.
 
-| Fase | Alvo | Critérios de saída |
-| --- | --- | --- |
-| **Beta interna** | agora | Zero problemas de segurança P0; o ciclo completo passa nos testes de integração; um novo usuário percorre registro → key → chat em 30 minutos |
-| **Beta pública** | 2026 | Registro aberto; documentação pública, downloads e páginas legais; revisão de segurança independente |
-| **Y1 — Linhas industriais** | 2027-08 | Demonstração em linha de produção com PLC + MCU reais: sensoriamento a 100 Hz, ciclo fechado a 10 Hz, pacotes de implantação, testes de aceite |
-| **Y3 — Instalações corporificadas** | 2029-08 | Pacote replicável de instalação corporificada (estado do mundo + camada de políticas + site de referência), fixado à forma *industrial embodied* |
-| **Y5 — Aeroespacial** | 2031-08 | Proposta completa de software/hardware mais pelo menos uma prova em órbita ou em voo — sem herança, sem vendas |
-| **Y5+ — Lunar/Marciano** | 2031+ | Narrativa de autonomia, parcerias de pesquisa, white paper |
+## O que fica fixo
 
-## Quatro trilhas compartilham uma única base de ativos
+Qualquer que seja o horizonte, três coisas não se movem:
 
-1. **Trilha B — Controle industrial** ([evernight](https://github.com/celestia-island/evernight) em palco principal): pipelines de sensores, gravação/replay, loops rápidos, nós embarcados.
-2. **Trilha E — Inteligência corporificada**: um serviço de estado do mundo, uma camada de políticas com pequenos modelos locais, visualização de gêmeos digitais.
-3. **Trilha K — Núcleo de tempo real kei**: um kernel determinístico com uma camada de personalidade ABI Linux — a resposta de longo prazo para execução limitada e previsível.
-4. **Trilha S — Aeroespacial**: redundância tripla modular em nível de sistema, herança de voo, trilha de certificação.
-
-Uma disciplina mantém todas as trilhas unidas: **protocolo de fio, estado do
-mundo, portões de segurança e o pipeline de gravação são ativos
-compartilhados.** Qualquer trilha que inicie um novo deve passar por revisão de
-arquitetura. E as linhas de produto nunca dependem do kei: se o kei atrasar, a
-receita não atrasa.
+- **Segurança antes de autonomia.** Um sistema autônomo que não sabe recusar
+  não é autônomo, é desprotegido. Veja os
+  [Princípios de Segurança](./safety.md).
+- **O ciclo permanece inteiro.** Toda capacidade é tão real quanto o ciclo
+  fechado a que pertence — veja [O Ciclo Fechado](./closed-loop.md).
+- **A estrutura vem primeiro.** A ordem entre dezenas de repositórios vem do
+  camamento, não da disciplina do momento — veja a
+  [Arquitetura em Camadas](./layered-architecture.md).
 
 ## Aprofundar-se
 
-- [Por que celestia-island](./why.md) — a declaração do problema por trás do horizonte.
-- [Princípios de Segurança](./safety.md) — a semântica de tempo real sobre a qual a narrativa se apoia.
-- [Mapa de Projetos](../ecosystem/projects.md) — onde vive hoje o trabalho de cada trilha.
+- [Por que celestia-island](./why.md) — a definição do problema por trás do horizonte.
+- [Princípios de Segurança](./safety.md) — a semântica de tempo real em que a narrativa se apoia.
+- [Mapa de Projetos](../ecosystem/projects.md) — onde mora o trabalho hoje.
